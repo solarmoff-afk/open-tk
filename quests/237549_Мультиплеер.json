@@ -1,0 +1,409 @@
+[
+  {
+    "id": 1,
+    "text": "Вы вошли в первый в приложении мультиплеерный квест, предназначенный для одновременного прохождения тремя игроками.\n\nАннотация\n\nТрех бывалых путешественников неожиданно вызывают на аудиенцию к Его Величеству Крегору II, Королю Имблинга и Девяти Пределов.\n\nОни впервые видят друг друга, но теперь воину, магу и любительнице пощипать чужие карманы придётся работать в одной упряжке: ведь задача, которую поставил перед ними король, может привести в замешательство кого угодно.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Создать профиль игрока",
+        "lua_if": "function lua_if()\n    return not g.player\nend",
+        "lua_do": "function lua_do()\n    g.player = {}\nend"
+      },
+      {
+        "lua_if": "function lua_if()\n    return g.player\nend",
+        "id": 1,
+        "text": "Войти в игру.",
+        "lua_do": "function lua_do()\n    local function onCompleteRequest(event)\n        local result = event.response\n        if result == \"true\" then\n            g.player.gameID = nil\n            g.player.personage = nil\n            showPage{id = 4}\n        elseif result == \"\" then\n            message(\"Извините, этот профиль удалён из базы\")\n            g.player = {}\n            personage = nil\n            showPage{id = 2}\n        else\n            message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к Интернету и попробуйте ещё раз\")\n            showPage{id = 1}\n        end\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-get-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=check_user<amp>user_id=\"..g.player.id}\n    ) \nend",
+        "no_transition": true
+      },
+      {
+        "text": "Установка страницы, запускаемой при загрузке.",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n    g.reloadFunctions = 7\n    autorun = 9\nend",
+        "calculate": true,
+        "run": [
+          7
+        ],
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "На этой странице создаётся профиль игрока. Это делается один раз при первом запуске квеста. Никнейм, введённый на этой странице, нельзя будет изменить.\n\nНикнейм должен быть уникальным в рамках всей игры. Если выйдет сообщение об ошибке, никнейм уже занят — введите другой.\n\nУчтите, что при сбросе глобальных данных с помощью меню первой страницы, вы навсегда потеряете доступ к своему профилю.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Введите никнейм",
+        "input_var": "name"
+      },
+      {
+        "lua_do": "function lua_do()\n    if name == \"\" then\n        message(\"Вы должны ввести никнейм\")\n        return\n    elseif utf8.find(name, \"<amp>\") or utf8.find(name, \"<plus>\") then\n        message(\"Используйте для никнейма только буквы латиницы, кириллицы и цифры\")\n        return\n    end\n    g.player.name = name\n    local function onCompleteRequest(event)\n        local result = event.response\n        if tonumber(result) then\n            message(\"Профиль игрока успешно создан\")\n            g.player.id = tonumber(result)\n            showPage{id = 4}\n        elseif result == \"false\" then\n            message(\"Ошибка записи данных. Попробуйте другой никнейм.\")\n            showPage{id = 2}\n        else\n            message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к Интернету и попробуйте ещё раз\")\n            showPage{id = 2}\n        end\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-insert-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=create_user<amp>name=\"..g.player.name}\n    )\nend",
+        "text": "Внести данные.",
+        "id": 2,
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Страница для autorun after",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\n    return g.current_id ~= 6\nend",
+        "lua_do": "function lua_do()\n    local function onCompleteRequest(event)\n        local result = event.response\n        chat = result\n        chatReturnPage = g.current_id\n        pages[6].text = \"Игровой чат:<s>\n<s>\n\"..chat\n        showPage{id = 6}\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-get-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=get_messages<amp>game_id=\"..g.player.gameID}\n    )\nend",
+        "text": "Игровой чат",
+        "id": 2,
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "На этой странице вы можете создать новую игру или присоединиться к уже существующей, введя идентификатор, полученный от другого игрока.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\n    local function onCompleteRequest(event)\n        local result = event.response\n        if tonumber(result) then\n            g.player.gameID = result\n            network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-change-data.php\",\n                \"POST\",\n                function()\n                     message(\"Игра #\"..g.player.gameID..\" успешно создана\")\n                     vars[\"autorun after\"] = 3\n                     showPage{id = 5}\n                end,\n                {body = \"action=set_game<amp>user_id=\"..g.player.id..\"<amp>game_id=\"..tonumber(result)}\n            )\n        elseif result == \"false\" then\n            message(\"Ошибка записи данных.\")\n            showPage{id = 4}\n        else\n            message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к интернету и попробуйте ещё раз\")\n            showPage{id = 4}\n        end\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-insert-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=create_game\"}\n    )\nend",
+        "text": "Создать новую игру.",
+        "id": 2,
+        "no_transition": true
+      },
+      {
+        "id": 4,
+        "text": "Введите № игры",
+        "input_var": "gameID"
+      },
+      {
+        "lua_do": "function lua_do()\n    if gameID == \"\" then\n        message(\"Идентификатор игры не может быть пустым!\")\n        return\n    end\n    local function onCompleteRequest(event)\n        local result = event.response\n        if result == \"true\" and tonumber(gameID) then\n            g.player.gameID = gameID\n            network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-change-data.php\",\n                \"POST\",\n                function()\n                    message(\"Вы успешно присоединились к игре #\"..g.player.gameID)\n                    vars[\"autorun after\"] = 3\n                    showPage{id = 5}\n                end,\n                {body = \"action=set_game<amp>user_id=\"..g.player.id..\"<amp>game_id=\"..tonumber(gameID)}\n            )\n        elseif result == \"false\" then\n            message(\"Присоединение к данной игре невозможно.\")\n            showPage{id = 4}\n        elseif result == \"\" then\n            message(\"Ошибка: игры с таким номером не существует.\")\n            showPage{id = 4}\n        else\n            message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к интернету и попробуйте ещё раз\")\n            showPage{id = 4}\n        end\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-get-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=check_join_enable<amp>game_id=\"..gameID}\n    )\nend",
+        "text": "Присоединиться к игре",
+        "id": 2,
+        "no_transition": true
+      },
+      {
+        "id": 7,
+        "text": "Первый запуск библиотеки функций.",
+        "run": [
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Текущая игра: #\"..g.player.gameID..\"<s>\n<s>\nНа следующей странице вы должны выбрать одного из трёх доступных в игре персонажей. Возможно некоторые из них уже заняты. Если в игру вошли более трёх человек, возможно, заняты уже все. В этом случае вы можете оставаться в качестве наблюдателя и комментатора.\"\nend",
+        "merge": true
+      },
+      {
+        "lua_do": "function lua_do()\n    local function onCompleteRequest(event)\n        local result = event.response\n        if tonumber(result) then\n            if string.sub(result, 1, 1) == \"0\" then\n                rogwardEnable = true\n            else\n                rogwardEnable = false\n            end\n\n            if string.sub(result, 2, 2) == \"0\" then\n                lillianEnable = true\n            else\n                lillianEnable = false\n            end\n\n            if string.sub(result, 3, 3) == \"0\" then\n                falkraftEnable = true\n            else\n                falkraftEnable = false\n            end\n            \n            showPage{id = 8}\n        elseif result == \"false\" then\n            message(\"Невозможно получить данные\")\n            showPage{id = 5}\n        else\n            message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к интернету и попробуйте ещё раз\")\n            showPage{id = 5}\n        end\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-get-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=check_personages<amp>game_id=\"..g.player.gameID}\n    )\nend",
+        "text": "Выбрать персонажа",
+        "id": 2,
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Игровой чат:\n\n",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Сообщение",
+        "input_var": "msg"
+      },
+      {
+        "id": 6,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "left_answer": true,
+        "id": 2,
+        "text": "Отправить сообщение",
+        "lua_do": "function lua_do()\n    if utf8.find(msg, \"<amp>\") or utf8.find(msg, \"<plus>\") then\n        message(\"В чате недопустимо использование знаков <amp> и <plus>\")\n        return\n    end\n    local function onCompleteRequest(event)\n        local result = event.response\n        if result == \"true\" then\n            local function onCompleteRequest(event)\n                local result = event.response\n                chat = result\n                pages[6].text = \"Игровой чат:<s>\n<s>\n\"..chat\n                showPage{id = 6}\n            end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-get-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=get_messages<amp>game_id=\"..g.player.gameID}\n    )\n        elseif result == \"false\" then\n            message(\"Ошибка записи данных.\")\n            showPage{id = 6}\n        else\n            message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к интернету и попробуйте ещё раз\")\n            showPage{id = 6}\n        end\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-change-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=send_message<amp>message=\"..g.player.name..\": \"..msg..\"<s>\n<s>\n<amp>game_id=\"..g.player.gameID}\n    )\nend",
+        "no_transition": true
+      },
+      {
+        "right_answer": true,
+        "lua_do": "function lua_do()\n    local function onCompleteRequest(event)\n        local result = event.response\n        if utf8.sub(result, 1, 22) ~= \"Unable to resolve host\" then\n            chat = result\n            pages[6].text = \"Игровой чат:<s>\n<s>\n\"..chat\n        else\n            pages[6].text = \"Нет подключения к Интернету\"\n        end\n        showPage{id = 6}\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-get-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=get_messages<amp>game_id=\"..g.player.gameID}\n    )\nend",
+        "text": "Обновить",
+        "id": 6,
+        "no_transition": true
+      },
+      {
+        "right_answer": false,
+        "left_answer": true,
+        "id": 6,
+        "text": "Очистить",
+        "lua_do": "function lua_do()\n    local function onCompleteRequest(event)\n        local result = event.response\n        if utf8.sub(result, 1, 22) ~= \"Unable to resolve host\" then\n            chat = \"\"\n            pages[6].text = \"Игровой чат:<s>\n<s>\n\"..chat\n        else\n            pages[6].text = \"Нет подключения к Интернету\"\n        end\n        showPage{id = 6}\n    end\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-change-data.php\",\n        \"POST\",\n        onCompleteRequest,\n        {body = \"action=clear_chat<amp>game_id=\"..g.player.gameID}\n    )\nend",
+        "no_transition": true
+      },
+      {
+        "right_answer": true,
+        "id": 6,
+        "middle_answer": false,
+        "text": "Закрыть чат",
+        "lua_do": "function lua_do()\n    showPage{id = chatReturnPage}\nend",
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Эта страница служит для автоматических действий, выполняемых при заходе в квест.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n    function createPersonage(name, pageToGo, chars)\n        if name ~= \"Rogward\" and name ~= \"Lillian\" and name ~= \"Falkraft\" then\n            message(\"Неправильное имя персонажа!\")\n            return\n        end\n\n        local function onCompleteRequest(event)\n            local result = event.response\n            if result == \"true\" then\n                local function onCompleteRequest(event)\n                    local result = event.response\n                    if tonumber(result) then\n                        message(\"Вы успешно выбрали персонажа\")\n                        g.player.personage = tonumber(result)\n                        local query = \"action=set_personage<amp>personage_id=\"..tonumber(result)..\"<amp>personage_name=\"..name..\"<amp>game_id=\"..g.player.gameID..\"<amp>user_id=\"..g.player.id\n                        network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-change-data.php\",\n                            \"POST\",\n                            function() end,\n                            {body = query}\n                        )\n                        personage = {}\n                        personage.name = name\n                        personage.chars = {}\n                        for k, v in pairs(chars) do\n                            personage.chars[k] = v\n                        end\n                        showPage{id = pageToGo}\n                    elseif result == \"false\" then\n                        message(\"Ошибка записи данных.\")\n                        showPage{id = g.current_id}\n                    else\n                        message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к Интернету и попробуйте ещё раз\")\n                        showPage{id = g.current_id}\n                    end\n                end\n                local query = \"action=create_personage<amp>name=\"..name\n                for k, v in pairs(chars) do\n                    query = query..\"<amp>\"..k..\"=\"..v\n                end\n               network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-insert-data.php\",\n                    \"POST\",\n                    onCompleteRequest,\n                    {body = query}\n                )\n            \n            elseif result == \"false\" then\n                message(\"Ошибка: кто-то другой уже выбрал этого персонажа.\")\n                vars[utf8.lower(name)..\"Enable\"] = false\n                showPage{id = g.current_id}\n            else\n                message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к Интернету и попробуйте ещё раз\")\n                showPage{id = g.current_id}\n            end\n        end\n        network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-get-data.php\",\n           \"POST\",\n           onCompleteRequest,\n           {body = \"action=check_pers_free<amp>personage=\"..name..\"<amp>game_id=\"..g.player.gameID}\n        )\n    end\nend",
+        "text": "Обновляемая библиотека функций",
+        "calculate": true,
+        "id": 7
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n    message(\"Обновлено\")\n    pages[6].text = \"Игровой чат:<s>\n<s>\n\"..(chat or \"\")\nend",
+        "text": "Возврат из чата на страницу, если квест был закрыт в нем.",
+        "calculate": true,
+        "id": 7
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n    function checkAndSet(query, pageToGo, trueMessage, falseMessage)\n        local function onCompleteRequest(event)\n            local result = event.response\n            if result == \"true\" then\n                message(trueMessage)\n                showPage{id = pageToGo}\n            elseif result == \"false\" then\n                 message(falseMessage)\n                 showPage{id = g.current_id}\n            else\n                 message(\"Похоже, сервер базы данных недоступен. Проверьте подключение к интернету и попробуйте ещё раз\")\n                 showPage{id = g.current_id}\n             end\n         end\n         network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-multiaction.php\",\n             \"POST\",\n             onCompleteRequest,\n             {body = query}\n         )\n    end\nend",
+        "text": "Запрос проверки и изменения.",
+        "id": 7,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Выберите доступного персонажа.",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\n    return rogwardEnable\nend",
+        "lua_do": "function lua_do()\n    createPersonage(\"Rogward\", 10, {class = \"fighter\", hp = 45, str = 17, dex = 10, con = 16, intel = 9, wis = 7, cha = 6, thac0 = 16, ac = 5})\nend",
+        "text": "Рогвард",
+        "id": 8,
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\n    return lillianEnable\nend",
+        "id": 8,
+        "text": "Лиллиан",
+        "lua_do": "function lua_do()\n    createPersonage(\"Lillian\", 11, {class = \"thief\", hp = 32, str = 10, dex = 17, con = 11, intel = 13, wis = 10, cha = 13, thac0 = 15, ac = 6})\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\n    return falkraftEnable\nend",
+        "lua_do": "function lua_do()\n    createPersonage(\"Falkraft\", 12, {class = \"wizard\", hp = 21, str = 9, dex = 8, con = 10, intel = 18, wis = 12, cha = 16, thac0 = 20, ac = 9})\nend",
+        "text": "Фалькрафат",
+        "id": 8,
+        "no_transition": true
+      },
+      {
+        "id": 8,
+        "text": "Не осталось ни одного доступного персонажа. Вы можете выйти из этой игры, чтобы присоединиться к другой, либо остаться в этой как участник игрового чата.",
+        "comment": true,
+        "lua_if": "function lua_if()\n    return not rogwardEnable and not lillianEnable and not falkraftEnable\nend"
+      },
+      {
+        "lua_if": "function lua_if()\n    return not rogwardEnable and not lillianEnable and not falkraftEnable\nend",
+        "id": 8,
+        "text": "Выйти из этой игры, чтобы присоединиться к другой",
+        "lua_do": "function lua_do()\n    vars[\"autorun after\"] = nil\n    g.player.gameID = nil\n    network.request(\"http://learn.de-sprache.ru/tq-multipleer/mp-change-data.php\",\n            \"POST\",\n            function()\n                message(\"Вы вышли из текущей игры\")\n                showPage{id = 4}\n            end,\n            {body = \"action=set_game<amp>user_id=\"..g.player.id..\"<amp>game_id=NULL\"}\n    )\nend",
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Страница для autorun",
+    "answers": []
+  },
+  {
+    "id": 10,
+    "text": "Характеристики вашего персонажа:\n\nИмя: Рогвард;\nКласс: Воин;\nЗдоровье: 45;\nМеткость: 16;\nКласс доспеха: 5;\nСила: 17;\nЛовкость: 10;\nВыносливость: 16;\nИнтеллект: 9;\nМудрость: 7;\nХаризма: 6.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Начать приключение",
+        "lua_do": "function lua_do()\n    checkAndSet(\"action=check_and_set<amp>check_table=games<amp>check_field=start<amp>check_id=\"..g.player.gameID..\"<amp>check_bits=6<amp>set_table=games<amp>set_field=start<amp>set_id=\"..g.player.gameID..\"<amp>value=1<amp>action_type=bor<amp>set_force=1\", 14, \"Начали!\", \"Похоже, не все игроки начали игру. Попробуйте ещё раз через некоторое время.\")\nend",
+        "no_transition": true
+      },
+      {
+        "id": 10,
+        "text": "Укажите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/rogward.png"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Характеристики вашего персонажа:\n\nИмя: Лиллиан;\nКласс: Вор;\nЗдоровье: 32;\nМеткость: 15;\nКласс доспеха: 6;\nСила: 10;\nЛовкость: 17;\nВыносливость: 11;\nИнтеллект: 13;\nМудрость: 10;\nХаризма: 13.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Начать приключение",
+        "lua_do": "function lua_do()\n    checkAndSet(\"action=check_and_set<amp>check_table=games<amp>check_field=start<amp>check_id=\"..g.player.gameID..\"<amp>check_bits=5<amp>set_table=games<amp>set_field=start<amp>set_id=\"..g.player.gameID..\"<amp>value=2<amp>action_type=bor<amp>set_force=1\", 14, \"Начали!\", \"Похоже, не все игроки начали игру. Попробуйте ещё раз через некоторое время.\")\nend",
+        "no_transition": true
+      },
+      {
+        "id": 11,
+        "text": "введите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/lillian.png"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Характеристики вашего персонажа:\n\nИмя: Фалькрафт;\nКласс: Маг;\nЗдоровье: 21;\nМеткость: 20;\nКласс доспеха: 9;\nСила: 9;\nЛовкость: 8;\nВыносливость: 10;\nИнтеллект: 18;\nМудрость: 12;\nХаризма: 16.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Начать приключение",
+        "lua_do": "function lua_do()\n    checkAndSet(\"action=check_and_set<amp>check_table=games<amp>check_field=start<amp>check_id=\"..g.player.gameID..\"<amp>check_bits=3<amp>set_table=games<amp>set_field=start<amp>set_id=\"..g.player.gameID..\"<amp>value=4<amp>action_type=bor<amp>set_force=1\", 14, \"Начали!\", \"Похоже, не все игроки начали игру. Попробуйте ещё раз через некоторое время.\")\nend",
+        "no_transition": true
+      },
+      {
+        "id": 12,
+        "text": "Укажите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/falkraft.png"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Король.",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Укажите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/king.png"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "ПРОЛОГ\n\n— Что? Серьёзно?! Драконья Бездна?! — Украшенный засаленными лохмами и двухнедельной щетиной воин, оглянулся, ища поддержки у остальных. — Вы меня поймите правильно, Ваше Величество: я никогда от хорошей драки не бегал… Но одно дело — хорошая драка, другое — переться туда, где ты гарантировано подохнешь!\n\nЕго Величество Крегор II хмуро молчал, опираясь обеими руками на гарду большого двуручного меча, традиционного атрибута власти правителей Имблинга и Девяти Пределов.\n\nВоин вновь оглянулся на двух других приглашённых: невысокую ладную кентрийку и молодого мага с внешностью утончённого эстета. Кентрийка исподлобья зыркала то на него, то на короля, а маг, похоже, витал в сферах, не имеющих непосредственной связи с реальностью.\n\n— Мне рекомендовали вас как лучших в своём деле, — процедил правитель. — Видимо, меня обманули…\n\n— Хех! Это вряд ли! — вояка самодовольно усмехнулся. — За пацана и деваху не поручусь, но что касается меня, то вам любой скажет, что Рогвард из Бьорна надерёт зад кому захочешь.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Далее…"
+      },
+      {
+        "id": 14,
+        "text": "введите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/rogward.png"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "— Ещё раз назовёшь меня девахой, — раздался тихий с хрипотцой голос, — и зад надерут тебе!\n\n— Ха! Она мне нравится! — заулыбался Рогварт. — Люблю людей с буйной фантазией.\n\nДевушка рефлекторно потянулась к метательным ножам, обычно закрепленным на поясе, забыв, что придя на аудиенцию, они сдали всё оружие стражнику у дверей в тронный зал.\n\n— Расслабься, дорогуша, — продолжал Рогварт. — Как же мне тебя прикажешь называть, ежели нас друг другу не представили?\n\n— Это моё упущение, — помощившись, сказал король. — Честно говоря, мне было не до протокола… Итак, сэр Рогвард из Бьорна был любезен представиться самолично. Имею также честь рекомендовать гостью нашего королевства леди Лиллиан бер Гаади…\n\n— Хм. Леди… — с сомнением буркнул Рогвард.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Далее…"
+      },
+      {
+        "id": 15,
+        "text": "введите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/lillian.png"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "— А также одного из лучших выпускников Академии сэра Фалькрафта Белого, — продолжил король, раздражённо зыркнув на воина. — Магистр Фалькрафт в неслыханно молодых летах получил свой цвет, но, по единодушному мнению преподавателей Академии, он более чем достоин этой чести.\n\nУслышав своё имя, маг выплыл из задумчивости и с совершенно очаровательной улыбкой поклонился всем присутствующим.\n\nРогвард скривил брезгливую мину. Лиллиан же чуть заметно поклонилась в ответ.",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Далее…"
+      },
+      {
+        "id": 16,
+        "text": "введите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/falkraft.png"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "— Так, все эти поклончики — это, конечно, хорошо, — опять встрял неугомонный Рогвард, — но давайте-ка вернёмся к сути дела: кто в здравом уме полезет в Драконью Бездну?! Поправьте, если я ошибаюсь, Ваше Величество, но кажется ни один из тех, кому хватило на это дури, так и не вернулся?\n\n— Насколько я знаю, да, — спокойно подтвердил король.\n\nРогвард молча повернулся к остальным и развёл руками, как бы говоря: «Что и требовалось доказать».\n\nТут неожиданно в разговор вступила кентрийка:\n\n— В чём состоит наша задача?\n\nРогвард вытаращил на неё глаза:\n\n— О! В полку идиотов-смертников прибыло!\n\n— В чём состоит наша задача? — не обращая ни малейшего внимания на реплику воина, повторила Лиллиан.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Далее…"
+      },
+      {
+        "id": 17,
+        "text": "введите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/king.png"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Король помедлил, прежде чем ответить.\n\n— Вы должны принести оттуда лютню…\n\nВозникла пауза. Первым, конечно, прервал молчание Рогвард:\n\n— Ваше Величество, что?!\n\n— Вы должны принести из Драконьей Бездны лютню.\n\n— Я расслышал это и в первый раз. Просто не поверил. Ваше Величество, у меня есть гениальная идея: давайте я сейчас смотаюсь в город на рынок, и у вас буквально через час будет то, что вам нужно…\n\n— Не пытайся казаться большим идиотом, чем ты есть, — осадила его кентрийка. — Речь идёт не об обычной лютне.\n\n— Спасибо, леди, — сказал король, которого уже явно начала утомлять словоохоливость воина. — Это действительно не совсем обычная лютня. Вернее, совсем не обычная. Единственная в своём роде…\n\n— Хм… Магическая реликвия, смею предположить, — подал голос Фалькрафт.\n\n— Совершенно верно. Я не могу раскрыть вам её природу, но предупрежу: ни в коем случае не вздумайте на ней играть! Это важно! Ни в коем случае!",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Далее…"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "— А лютни разве не для того предназначены?\n\n— Сэр Рогварт, — воин, похоже, довёл короля до точки кипения. — Я, конечно, ценю вашу квалификацию и потенциальную полезность для миссии, но, если вы не прекратите паясничать, я велю страже поместить вас в темницу. Не думаю, что при всех ваших боевых навыках вы голыми руками одолеете хорошо вооружённую охрану.\n\n— Можете рассчитывать и на мою помощь, — зыркнув на воина, сказала Лиллиан.\n\n— Благодарю вас, леди…\n\n— Ваше Величество, я не леди… Вы же знаете…\n\n— Знаю, Лиллиан, знаю. Я называю вас так исключительно из уважения. Позвольте мне этот каприз.\n\nКентрийка молча кивнула.",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Далее…"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "— Я готов участвовать в походе, — спокойно сказал молодой маг.\n\n— Я на это очень рассчитывал, магистр Фалькрафт. Благодарю вас.\n\n— Я тоже пойду.\n\n— Благодарю вас, леди.\n\nКороль вопросительно взглянул на Рогварда.\n\nРогварт стоял молча, оценивая, стоит ли ему открывать рот после королевского предупреждения.\n\nМонарх расценил его молчание по-своему:\n\n— Я готов заплатить пятьдесят тысяч золотом каждому после успешного завершения миссии. — Рогвард тихо присвиснул. — А также предоставить любое необходимое снаряжение либо оплатить его покупку. По возвращении вы сможете оставить его себе.\n\n— Я в деле, — с готовностью сказал воин.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Далее…"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "— Рад это слышать, — с облегчением вздохнул король. — Теперь к делу. Лютня, которую вам предстоит найти, инкрустирована своеобразным узором: по краям верхней деки изображены воющие волки, на противоположном от грифа крае — бегущий олень, по сторонам от струн — медведь и заяц, а чуть ближе к основанию грифа — две склонившие головы цапли. Охватывает всю композицию тело змеи, а её голова выходит под струны от основания грифа. Не думаю, что вы найдёте там какую-то другую лютню, но на всякий случай вам лучше знать в точности, как выглядит ваша цель. Ещё раз повторю: попытка сыграть на этой лютне будет чревата для вас непредсказуемыми и фатальными последствиями.\n\n— А картинки нет какой-нибудь? — осторожно спросил Рогвард.\n\n— Я предвосхитил ваш вопрос и попросил придворного живопица изобразить лютню по моему описанию. Вот что у него вышло, — король протянул гостям небольшую работу, выполненную акварелью.",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Далее…"
+      },
+      {
+        "id": 21,
+        "text": "Укажите команды для картинки",
+        "url": "http://188.120.236.127/zavr/multiplayer/images/lute.png"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "— А каковы магические силы этой реликвии, Ваше Величество? — подал голос молодой маг, сверля взглядом рисунок.\n\n— Магистр Фалькрафт, повторяю, я не могу говорить об этом.\n\n— Жаль. Очень жаль, — задумчиво промолвил маг.\n\n— Ваше Величество, что нас там может ждать? — спросила Лиллиан.\n\n— На этот вопрос, леди, у меня также нет ответа. К сожалению. Могу только сказать, что легко там точно не будет. На этом всё — можете идти.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Уйти."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "",
+    "answers": []
+  }
+]

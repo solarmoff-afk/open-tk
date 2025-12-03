@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор GHJ_456 написал еще 21213 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "198956",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ~¤LaNaRo¤~ написал еще 17210 слов в квесте \"Моя тайная жизнь в школе Тасман\"."
+      },
+      {
+        "targetbookid": "181854",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Моя тайная жизнь в школе Тасман\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Заря написал еще 16511 слов в квесте \"Персиковый сад\"."
+      },
+      {
+        "targetbookid": "187209",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Персиковый сад\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор JaysonXP написал еще 16343 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "195128",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ...  написал еще 16242 слов в квесте \"Однажды в лагере...\"."
+      },
+      {
+        "targetbookid": "159082",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Однажды в лагере...\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

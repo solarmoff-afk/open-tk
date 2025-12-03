@@ -1,0 +1,4612 @@
+[
+  {
+    "id": 1,
+    "text": "Коста- обычная планета, всего несколько миллионов лет назад она была необитаема, пока с космоса не упала звезда, яркая пылающая и обладающая невероятной магической энергией.... Благодаря этому на этой гиблой планете образовалась жизнь......\n\nВремя шло разные магические существа объединились. Так в 1 веке  появилось перво государство Тейн.\nНевероятно красивое место....\n\nНо к сожалению и на этой планете не всё так радужно...\n\nТак в 1764 году у бледной студентки родилась дочь без магических сил, её назвали Розой.... Невероятно умный человек... Может вы сможете помочь ей понять смысл её жизни.....\n",
+    "answers": [
+      {
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.6\n rocket.yScale = rocket.xScale\nrocket.y = 2240\nrocket.x = 530\nrect.icon.alpha = 0.3\nend",
+        "middle_answer": true,
+        "text": "❲ Начать ❳",
+        "id": 2,
+        "var_set": [
+          "global base_layer_alpha",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Я родилась в семье обычного стражника. Моя мать была служанкой в богатой дворянской семье, после моего рождения она ушла с работы и начала заниматься домом. Денег в семье хватило только на еду, но мы радовались,что она хотябы есть......\nВ один ясный день началась война, никто её не ожидал, моего отца быстро забрали на фронт....\nМоя матушка через пару месяцев узнала,что она ждёт ребенка. В газетах нас уверяли,что война закончится быстро, но шли месяцы еды начало не хватать, маме было очень плохо её не хотели брать на работу из-за её положения....Мне пришлось искать работу самой на тот момент мне было пять лет, меня пинали и били, но я всё равно приносила домой несколько монет....\nСпустя пару недель моя мать потеряла ребёнка....Я никогда не видела столько печали в её лице, она больше не улыбалась как раньше, как будто она умерла....\nОна нашла работу не такую хорошую,но всё же работу, официанткой в трактире...\nПрошло пять лет и война закончилась,но отец так и не вернулся.\nЗа всё время мы не получили ни одного письма.........",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/zBmnrctK/7911-1-Pic-Pic-AI-removed.png"
+        ],
+        "middle_answer": true,
+        "text": ".....",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.6\n rocket.yScale = rocket.xScale\nrocket.y = 2240\nrocket.x = 530\nrect.icon.alpha = 0.3\nend",
+        "id": 3
+      },
+      {
+        "var_str_set": [
+          "время1.1",
+          "утро",
+          "месяц",
+          "апрель",
+          "неделя",
+          "вторник"
+        ],
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "действия1",
+          12,
+          "время1",
+          1,
+          "день",
+          1,
+          "обуч",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "слтфб",
+          0,
+          "слтфс",
+          4,
+          "слтфм",
+          8,
+          "слт1",
+          0,
+          "слт2",
+          0,
+          "слтфб1",
+          1,
+          "слтфб2",
+          1,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфс1",
+          0,
+          "слтфс2",
+          0
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 900\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 270\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 130\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 180\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 130\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 90\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 900\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Оказалось он мертв уже давно, его труп похоронили в общей могиле на сервере. Туда очень трудно добраться, и людей там почти нет.....\nМоя мать утопала в горе, каждый день она пила и спускала деньги на алкоголь....\nСпустя год она встретила сера Дея...Он вытащил её из зависимости и она наконец начала жить снова...Я не могу назвать его своим отцом, но я его уважаю за то,что он помог моей матушке.\nДетей у них больше не было да и я не перестала работать, наконец нашла хорошую работу у плотника, хоть и он отказался меня брать из-за \nтого что я было девушкой,но я не сдалась. Он научил меня многому, но спустя время он стал мне отвратительн, тот ужас, что мне пришлось пережить из-за него я никогда не забуду....Я каждый вечер вспомнила эти ужасные руки....Я не стала говорить матушке, ей и так было плохо......\n\nА итоге я решила уйти из своего дома, хочу найти могилу отца, может я действительно сошла с ума....",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/zBmnrctK/7911-1-Pic-Pic-AI-removed.png"
+        ],
+        "middle_answer": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.6\n rocket.yScale = rocket.xScale\nrocket.y = 2070\nrocket.x = 530\nrect.icon.alpha = 0.3\nend",
+        "id": 4,
+        "text": "....."
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 900\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 270\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 130\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 180\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 130\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 90\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 900\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "                            Лор мира ",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/zBmnrctK/7911-1-Pic-Pic-AI-removed.png"
+        ],
+        "middle_answer": true,
+        "text": ".....",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.6\n rocket.yScale = rocket.xScale\nrocket.y = 480\nrocket.x = 530\nrect.icon.alpha = 0.3\nend",
+        "id": 5
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 900\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 270\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 130\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 180\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 130\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 90\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 900\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Обучение ",
+        "comment": true,
+        "lua_render": "function lua_render()\nanswerText.y = 320\nanswerText.x = 570\nanswerText.size = answerText.size*1.2\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/SNW86dKx/38-20240429213254.png"
+        ],
+        "instant": true,
+        "var_equal": [
+          "обуч",
+          1
+        ],
+        "id": 5,
+        "lua_render": "function lua_render()\nrect.x = 800\nrect.y = 320\nrect.width = 170\nanswerText.x = 100\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.1\n rocket.yScale = rocket.xScale\nrocket.y = 320\nrocket.x = 800\nend",
+        "var_sub": [
+          "обуч",
+          1
+        ],
+        "text": "    "
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nL6cw8Rb/38-20240429214154.png"
+        ],
+        "var_add": [
+          "обуч",
+          1
+        ],
+        "var_equal": [
+          "обуч",
+          0
+        ],
+        "id": 5,
+        "lua_render": "function lua_render()\nrect.x = 800\nrect.y = 320\nrect.width = 170\nanswerText.x = 100\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.1\n rocket.yScale = rocket.xScale\nrocket.y = 420\nrocket.x = 800\nend",
+        "text": "    ",
+        "instant": true
+      },
+      {
+        "id": 5,
+        "text": "  ",
+        "lua_render": "function lua_render()\nrect.x = 570\nrect.y = 320\nrect.width = 170\nanswerText.x = 100\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*0.8\n rocket.yScale = rocket.xScale\nrocket.y = 370\nrocket.x = 570\nend",
+        "answerIcon": [
+          "https://i.postimg.cc/XYYfnFVN/video-10858318.png"
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/zBmnrctK/7911-1-Pic-Pic-AI-removed.png"
+        ],
+        "id": 6,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.6\n rocket.yScale = rocket.xScale\nrocket.y = 780\nrocket.x = 530\nrect.icon.alpha = 0.3\nend",
+        "text": ".....",
+        "middle_answer": true
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 900\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 270\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 130\nrocket.x = 130\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 180\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 130\nrect.icon.alpha = 0.4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/hGFy3f0D/magicly-1714409158790-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 90\nrocket.xScale = rocket.xScale*6\n rocket.yScale = rocket.xScale\nrocket.y = 2200\nrocket.x = 900\nrect.icon.alpha = 0.4\nend",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "    ",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/x8v7JZ3g/IMG-20240508-171107-079-Pic-Pic-AI-removed.png"
+        ],
+        "id": 7,
+        "lua_render": "function lua_render()\nrect.x = 130\nrect.y = 250\nrect.width = 180\nanswerText.x = 190\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.4\n rocket.yScale = rocket.xScale rocket.x = 130\nrocket.y = 250\nend",
+        "text": " ",
+        "left_answer": true
+      },
+      {
+        "answerIcon": [
+          "https://i.ibb.co/zZQ6r9Z/scroll-1010122.png"
+        ],
+        "right_answer": true,
+        "id": 8,
+        "text": " ",
+        "lua_render": "function lua_render()\nx = 390\nrect.x = 390\nrect.y = 390\nrect.width = 180\nanswerText.x = 390\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\nrocket.yScale = rocket.xScale rocket.x = 390\nrocket.y = 390\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.ibb.co/JvN4B7D/map-7743302.png"
+        ],
+        "right_answer": true,
+        "id": 4,
+        "text": " ",
+        "lua_render": "function lua_render()\nx = 590\nrect.x = 590\nrect.y = 390\nrect.width = 180\nanswerText.x = 590\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\nrocket.yScale = rocket.xScale rocket.x = 590\nrocket.y = 390\nend"
+      },
+      {
+        "var_show": [
+          "действия1"
+        ],
+        "comment": true,
+        "id": 6,
+        "lua_render": "function lua_render()\nrect.x = 0\nrect.y = 0\nrect.width = 50\nrect.height = 50\nanswerText.x = 650\nanswerText.y = 70\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nanswerText.size = answerText.size*1\nend",
+        "text": "❲"
+      },
+      {
+        "var_show": [
+          "время1.1",
+          "- "
+        ],
+        "comment": true,
+        "id": 6,
+        "lua_render": "function lua_render()\nrect.x = 0\nrect.y = 0\nrect.width = 50\nrect.height = 80\nanswerText.x = 700\nanswerText.y = 70\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nanswerText.size = answerText.size*1\nend",
+        "text": "  "
+      },
+      {
+        "var_show": [
+          "день"
+        ],
+        "comment": true,
+        "id": 6,
+        "text": " день",
+        "lua_render": "function lua_render()\nrect.x = 0\nrect.y = 0\nrect.width = 50\nrect.height = 80\nanswerText.x = 850\nanswerText.y = 70\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nanswerText.size = answerText.size*1\nend"
+      },
+      {
+        "var_show": [
+          "неделя",
+          "-"
+        ],
+        "comment": true,
+        "id": 6,
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.x = 0\nrect.y = 0\nrect.width = 50\nrect.height = 80\nanswerText.x = 990\nanswerText.y = 70\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nanswerText.size = answerText.size*1\nend"
+      },
+      {
+        "var_show": [
+          "месяц",
+          "❳"
+        ],
+        "comment": true,
+        "id": 6,
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.x = 0\nrect.y = 0\nrect.width = 50\nrect.height = 80\nanswerText.x = 1200\nanswerText.y = 70\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nanswerText.size = answerText.size*1\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "                        「Инвентарь 」",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.ibb.co/59fd3CD/go-back-2997901.png"
+        ],
+        "id": 6,
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.x = 100\nrect.y = 200\nrect.width = 170\nanswerText.x = 100\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*0.6\n rocket.yScale = rocket.xScale\nrocket.y = 200\nrocket.x = 100\nend",
+        "left_answer": true
+      },
+      {
+        "id": 9,
+        "text": "ред.",
+        "lua_render": "function lua_render()\nrect.x = 879\nrect.y = 200\nrect.width = 100\nrect.height = 80\nanswerText.x = 1250\nanswerText.y = 175\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/GmPC5RG1/40-20240430111526-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 180\nrocket.xScale = rocket.xScale*22\n rocket.yScale = rocket.xScale\nrocket.y = 375\nrocket.x = 840\nrect.icon.alpha = 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/GmPC5RG1/40-20240430111526-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 90\nrocket.xScale = rocket.xScale*22\n rocket.yScale = rocket.xScale\nrocket.y = 187\nrocket.x = 377\nrect.icon.alpha = 1\nend",
+        "instant": true
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/GmPC5RG1/40-20240430111526-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 270\nrocket.xScale = rocket.xScale*22\n rocket.yScale = rocket.xScale\nrocket.y = 2140\nrocket.x = 650\nrect.icon.alpha = 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/GmPC5RG1/40-20240430111526-Pic-Pic-AI-removed.png"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "  ",
+        "lua_render": "function lua_render()\nlocal rocket = rect.icon rocket.rotation = 360\nrocket.xScale = rocket.xScale*22\n rocket.yScale = rocket.xScale\nrocket.y = 1950\nrocket.x = 190\nrect.icon.alpha = 1\nend",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "var_equal": [
+          "слтфб1",
+          1
+        ],
+        "id": 7,
+        "var_need": [
+          "слт1",
+          0
+        ],
+        "lua_render": "function lua_render()\ny = 400\nrect.y = 400\nanswerText.y = 400\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nrect.width = 870\nrect.height = 165\nend",
+        "text": "   "
+      },
+      {
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 570\nrect.y = 570\nanswerText.y = 570\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 570\nend",
+        "var_equal": [
+          "слтфб2",
+          1
+        ],
+        "id": 7,
+        "var_need": [
+          "слт2",
+          0
+        ],
+        "instant": true,
+        "text": "   "
+      },
+      {
+        "id": 7,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "var_sub": [
+          "слтфс1",
+          1
+        ],
+        "var_no_more": [
+          "слтфс1.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс1",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.y = 400\nrect.x = 288\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "var_sub": [
+          "слтфс2",
+          1
+        ],
+        "var_no_more": [
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс2",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 400\nrect.x = 738\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "var_sub": [
+          "слтфс3",
+          1
+        ],
+        "var_no_more": [
+          "слтфс3.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс3",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.y = 575\nrect.x = 289\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "text": " ",
+        "var_no_more": [
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс4",
+          1
+        ],
+        "var_sub": [
+          "слтфс4",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 575\nrect.x = 739\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true
+      },
+      {
+        "id": 7,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "right_answer": true,
+        "var_need": [
+          "слтфс1.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 490\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс1.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "var_need": [
+          "слтфс2.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс2.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "right_answer": true,
+        "var_need": [
+          "слтфс3.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс3.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "var_need": [
+          "слтфс4.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс4.1",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "                    「Журнал заданий」",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.ibb.co/59fd3CD/go-back-2997901.png"
+        ],
+        "id": 6,
+        "lua_render": "function lua_render()\nx = 135\nrect.x = 135\nrect.y = 200\nrect.width = 170\nanswerText.x = 135\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*0.6\n rocket.yScale = rocket.xScale rocket.x = 135\nrocket.y = 200\nend",
+        "text": " ",
+        "left_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "                     「Инвентарь 」",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.ibb.co/59fd3CD/go-back-2997901.png"
+        ],
+        "id": 7,
+        "text": " ",
+        "lua_render": "function lua_render()\nx = 135\nrect.x = 135\nrect.y = 200\nrect.width = 170\nanswerText.x = 135\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*0.6\n rocket.yScale = rocket.xScale rocket.x = 135\nrocket.y = 200\nend",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "слтфб"
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 10,
+        "var_need": [
+          "слтфб",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.8\n end",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_show": [
+          "слтфб"
+        ],
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.8\n end",
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 9,
+        "text": " ",
+        "instant": true,
+        "var_no_more": [
+          "слтфб",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "right_answer": true,
+        "var_need": [
+          "слтфс",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 9,
+        "text": " ",
+        "var_no_more": [
+          "слтфс",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "instant": true,
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": "  ",
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 9,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "text": "  ",
+        "var_no_more": [
+          "слтфм",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 9,
+        "var_sub": [
+          "слтфб1",
+          1
+        ],
+        "var_no_more": [
+          "слтф",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 920\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nend",
+        "text": "   ",
+        "var_need": [
+          "слтфб1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 9,
+        "instant": true,
+        "var_no_more": [
+          "слтф",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб2",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1090\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "var_sub": [
+          "слтфб2",
+          1
+        ],
+        "text": "   "
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 9,
+        "var_need": [
+          "слтфс1.1",
+          1
+        ],
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "слтфс1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 270\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "text": " ",
+        "var_sub": [
+          "слтфс1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 9,
+        "var_sub": [
+          "слтфс2",
+          1
+        ],
+        "var_no_more": [
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс2",
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " "
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 9,
+        "var_sub": [
+          "слтфс3",
+          1
+        ],
+        "var_no_more": [
+          "слтфс3.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс3",
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 270\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " "
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 9,
+        "var_sub": [
+          "слтфс4",
+          1
+        ],
+        "var_no_more": [
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс4",
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " "
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс1.1",
+          1
+        ],
+        "var_set": [
+          "слтфс1.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "var_sub": [
+          "слтфс2",
+          1
+        ],
+        "var_no_more": [
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "слтфс2",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 400\nrect.x = 738\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс3.1",
+          1
+        ],
+        "var_set": [
+          "слтфс3.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 7,
+        "var_need": [
+          "слтфс4.1",
+          1
+        ],
+        "right_answer": true,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "instant": true,
+        "var_set": [
+          "слтфс4.1",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "                     「Инвентарь 」",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.ibb.co/59fd3CD/go-back-2997901.png"
+        ],
+        "var_set": [
+          "слтпер1",
+          0
+        ],
+        "id": 7,
+        "lua_render": "function lua_render()\nx = 135\nrect.x = 135\nrect.y = 200\nrect.width = 170\nanswerText.x = 135\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*0.6\n rocket.yScale = rocket.xScale rocket.x = 135\nrocket.y = 200\nend",
+        "text": " ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "слтфб"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 10,
+        "var_need": [
+          "слтфб",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.8\n end",
+        "text": " ",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_show": [
+          "слтфб"
+        ],
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.8\n end",
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 10,
+        "text": " ",
+        "instant": true,
+        "var_no_more": [
+          "слтфб",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "var_need": [
+          "слтфс",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 10,
+        "instant": true,
+        "var_no_more": [
+          "слтфс",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "right_answer": true,
+        "text": " "
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "text": "  ",
+        "left_answer": true,
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "instant": true,
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 10,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "text": "  ",
+        "var_no_more": [
+          "слтфм",
+          0
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/Gp2Xy0PC/curve-arrow-6020590.png"
+        ],
+        "text": "  ",
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "id": 10,
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x =  830\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1\n rocket.yScale = rocket.xScale rocket.x = 830\nrocket.y = 600\nend",
+        "var_set": [
+          "слтпер",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 10,
+        "text": "   ",
+        "var_no_more": [
+          "слтфб1.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб1",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 920\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "instant": true,
+        "var_sub": [
+          "слтфб1",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 10,
+        "text": "   ",
+        "var_no_more": [
+          "слтфс1",
+          0,
+          "слтфс2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфм5",
+          0,
+          "слтфм6",
+          0,
+          "слтфм7",
+          0,
+          "слтфм8",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_equal": [
+          "слтфб1",
+          0
+        ],
+        "var_sub": [
+          "слтфб",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 920\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "instant": true,
+        "var_set": [
+          "слтфб1",
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "text": "---------------------",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 10,
+        "instant": true,
+        "var_no_more": [
+          "слтфб2.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб2",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1090\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "text": "   ",
+        "var_sub": [
+          "слтфб2",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 10,
+        "text": "   ",
+        "var_no_more": [
+          "слтфс3",
+          0,
+          "слтфс4",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфм5",
+          0,
+          "слтфм6",
+          0,
+          "слтфм7",
+          0,
+          "слтфм8",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_equal": [
+          "слтфб2",
+          0
+        ],
+        "var_sub": [
+          "слтфб",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1090\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "instant": true,
+        "var_set": [
+          "слтфб2",
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "text": "---------------------",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "var_need": [
+          "слтфс1",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 275\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс1.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "instant": true,
+        "var_set": [
+          "слтфс1.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "var_sub": [
+          ""
+        ],
+        "right_answer": true,
+        "text": " ",
+        "instant": true,
+        "var_need": [
+          "слтфс2",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 725\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс2",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс2.1",
+          1
+        ],
+        "var_set": [
+          "слтфс2.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс3",
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 275\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс3",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс3.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "instant": true,
+        "var_set": [
+          "слтфс3.1",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс4",
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 725\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс4",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс4.1",
+          1
+        ],
+        "var_set": [
+          "слтфс4.1",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "                           「Инвентарь 」",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.ibb.co/59fd3CD/go-back-2997901.png"
+        ],
+        "var_set": [
+          "слтпер1",
+          0
+        ],
+        "id": 7,
+        "text": " ",
+        "lua_render": "function lua_render()\nx = 135\nrect.x = 135\nrect.y = 200\nrect.width = 170\nanswerText.x = 135\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*0.6\n rocket.yScale = rocket.xScale rocket.x = 135\nrocket.y = 200\nend",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "слтфб"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 10,
+        "var_need": [
+          "слтфб",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.8\n end",
+        "instant": true,
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфб"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 11,
+        "instant": true,
+        "var_no_more": [
+          "слтфб",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.8\n end",
+        "text": " ",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "instant": true,
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "var_need": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 9,
+        "instant": true,
+        "var_no_more": [
+          "слтфс",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "text": " ",
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "text": "  ",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 11,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "text": "  ",
+        "var_no_more": [
+          "слтфм",
+          0
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/Gp2Xy0PC/curve-arrow-6020590.png"
+        ],
+        "var_equal": [
+          "слтпер1",
+          0
+        ],
+        "instant": true,
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "id": 11,
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x =  830\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1\n rocket.yScale = rocket.xScale rocket.x = 830\nrocket.y = 600\nend",
+        "text": "  ",
+        "var_set": [
+          "слтпер1",
+          1
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/Gp2Xy0PC/curve-arrow-6020590.png"
+        ],
+        "var_equal": [
+          "слтпер1",
+          1
+        ],
+        "text": "  ",
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "id": 11,
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x =  830\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1\n rocket.yScale = rocket.xScale rocket.x = 830\nrocket.y = 600\nend",
+        "instant": true,
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "слтфс1",
+          0,
+          "слтпер1",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 275\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_set": [
+          "слтфс1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "instant": true,
+        "right_answer": true,
+        "var_need": [
+          "слтфс1",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 275\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1",
+          0,
+          "слтфс3",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "text": " ",
+        "var_equal": [
+          "слтфс1.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс1.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс1.1",
+          1
+        ],
+        "var_set": [
+          "слтфс1.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с1.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_equal": [
+          "слтфс2",
+          0,
+          "слтпер1",
+          0
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 725\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс2",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "var_need": [
+          "слтфс2",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "var_sub": [
+          ""
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 725\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс2",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с2",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1",
+          0,
+          "слтфс3",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "text": " ",
+        "var_equal": [
+          "слтфс2.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс2.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс2.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "instant": true,
+        "var_set": [
+          "слтфс2.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с2.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "var_no_more": [
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_equal": [
+          "слтфс3",
+          0,
+          "слтпер1",
+          0
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 275\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс3",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "var_need": [
+          "слтфс3",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 275\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс3",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с3",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс2",
+          0,
+          "слтфс4",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "text": " ",
+        "var_equal": [
+          "слтфс3.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс3.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс3.1",
+          1
+        ],
+        "var_set": [
+          "слтфс3.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с3.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "var_no_more": [
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_equal": [
+          "слтфс4",
+          0,
+          "слтпер1",
+          0
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 725\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс4",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "var_need": [
+          "слтфс4",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "text": " ",
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 725\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс4",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с4",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс2",
+          0,
+          "слтфс4",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "text": " ",
+        "var_equal": [
+          "слтфс4.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс4.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс4.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nroct.rotation = 180\nend",
+        "instant": true,
+        "var_set": [
+          "слтфс4.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с4.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 11,
+        "text": "----------------------------",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 11,
+        "var_sub": [
+          "слтфб1",
+          1
+        ],
+        "var_no_more": [
+          "слтфб1.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб1",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 920\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "instant": true,
+        "text": "   "
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 11,
+        "var_sub": [
+          "слтфб2",
+          1
+        ],
+        "var_no_more": [
+          "слтфб2.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб2",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1090\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "instant": true,
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "гиги                            「Инвентарь 」",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/Gp2Xy0PC/curve-arrow-6020590.png"
+        ],
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "text": "  ",
+        "var_equal": [
+          "слтпер1",
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x =  830\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1\n rocket.yScale = rocket.xScale rocket.x = 830\nrocket.y = 600\nend",
+        "var_set": [
+          "слтпер1",
+          1
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/Gp2Xy0PC/curve-arrow-6020590.png"
+        ],
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "instant": true,
+        "var_equal": [
+          "слтпер1",
+          1
+        ],
+        "id": 12,
+        "text": "  ",
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x =  830\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1\n rocket.yScale = rocket.xScale rocket.x = 830\nrocket.y = 600\nend",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "слтфс1",
+          0,
+          "слтпер1",
+          0
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 270\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_need": [
+          "слтфс1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "instant": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 270\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1",
+          0,
+          "слтфс3",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_equal": [
+          "слтфс1.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс1.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс1.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "instant": true,
+        "var_set": [
+          "слтфс1.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с1.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "слтфс2",
+          0,
+          "слтпер1",
+          0
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс2",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "right_answer": true,
+        "var_sub": [
+          ""
+        ],
+        "var_need": [
+          "слтфс2",
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс2",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с2",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1",
+          0,
+          "слтфс3",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_equal": [
+          "слтфс2.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс2.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс2.1",
+          1
+        ],
+        "var_set": [
+          "слтфс2.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с2.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "слтфс3",
+          0,
+          "слтпер1",
+          0
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 270\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс3",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "right_answer": true,
+        "text": " ",
+        "var_need": [
+          "слтфс3",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 270\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс3",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с3",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс2",
+          0,
+          "слтфс4",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_equal": [
+          "слтфс3.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс3.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс3.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "instant": true,
+        "var_set": [
+          "слтфс3.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с3.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "слтфс4",
+          0,
+          "слтпер1",
+          0
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс4",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "right_answer": true,
+        "text": " ",
+        "var_need": [
+          "слтфс4",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс4",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с4",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс2",
+          0,
+          "слтфс4",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_equal": [
+          "слтфс4.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "text": " ",
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс4.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "var_need": [
+          "слтфс4.1",
+          1
+        ],
+        "var_set": [
+          "слтфс4.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с4.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 11,
+        "var_sub": [
+          "слтфб1",
+          1
+        ],
+        "var_no_more": [
+          "слтфб1.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб1",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 920\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "instant": true,
+        "text": "   "
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 11,
+        "var_sub": [
+          "слтфб2",
+          1
+        ],
+        "var_no_more": [
+          "слтфб2.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб2",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1090\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "instant": true,
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Переменные ",
+    "answers": [
+      {
+        "var_str_set": [
+          "время1.1",
+          "утро"
+        ],
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "действия1",
+          12,
+          "время1",
+          1,
+          "день",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "слот1",
+          1,
+          "слотб1",
+          1,
+          "слотм1",
+          0,
+          "слотм1.1",
+          0,
+          "слот1",
+          1,
+          "слот2",
+          2,
+          "слот3",
+          2,
+          "слотб2",
+          1,
+          "слотм1",
+          0,
+          "слотм1.1",
+          0,
+          "слота",
+          1,
+          "слотб",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "id": 10,
+        "text": "сбросить",
+        "lua_render": "function lua_render()\nrect.y = 770\nrect.x =  850\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "                            「Инвентарь 」гиги                            「Инвентарь 」",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.ibb.co/59fd3CD/go-back-2997901.png"
+        ],
+        "left_answer": true,
+        "id": 7,
+        "text": " ",
+        "lua_render": "function lua_render()\nx = 135\nrect.x = 135\nrect.y = 200\nrect.width = 170\nanswerText.x = 135\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*0.6\n rocket.yScale = rocket.xScale rocket.x = 135\nrocket.y = 200\nend",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфб"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 10,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_need": [
+          "слтфб",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.8\n end",
+        "instant": true,
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфб"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 11,
+        "instant": true,
+        "var_no_more": [
+          "слтфб",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 420\nrect.width = 900\nanswerText.y = 448\nanswerText.x = 1328\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.8\n end",
+        "text": " ",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "var_need": [
+          "слтфс",
+          1
+        ],
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфс"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 9,
+        "instant": true,
+        "var_no_more": [
+          "слтфс",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 270\nanswerText.y = 637\nanswerText.x = 456\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "right_answer": true,
+        "text": " "
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "text_color": [
+          0.67,
+          0.7,
+          0.97
+        ],
+        "id": 11,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nanswerText.size = answerText.size*0.7\nend",
+        "text": "  ",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "слтфм"
+        ],
+        "text_color": [
+          0.7,
+          0.72,
+          0.74
+        ],
+        "id": 11,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x = 590\nanswerText.y = 637\nanswerText.x = 647\nrect.width = 170\nrect.height = 165\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nanswerText.size = answerText.size*0.7\nend",
+        "var_no_more": [
+          "слтфм",
+          0
+        ],
+        "text": "  "
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/Gp2Xy0PC/curve-arrow-6020590.png"
+        ],
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x =  830\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1\n rocket.yScale = rocket.xScale rocket.x = 830\nrocket.y = 600\nend",
+        "var_equal": [
+          "слтпер1",
+          0
+        ],
+        "id": 11,
+        "text": "  ",
+        "instant": true,
+        "var_set": [
+          "слтпер1",
+          1
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/Gp2Xy0PC/curve-arrow-6020590.png"
+        ],
+        "text_color": [
+          0.74,
+          0.63,
+          0.35
+        ],
+        "lua_render": "function lua_render()\nrect.y = 600\nrect.x =  830\nanswerText.y = 740\nanswerText.x = 1170\nrect.width = 220\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1\n rocket.yScale = rocket.xScale rocket.x = 830\nrocket.y = 600\nend",
+        "var_equal": [
+          "слтпер1",
+          1
+        ],
+        "id": 11,
+        "instant": true,
+        "text": "  ",
+        "var_set": [
+          "слтпер1",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "слтфс1",
+          0,
+          "слтпер1",
+          0
+        ],
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 270\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "var_set": [
+          "слтфс1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 270\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "var_need": [
+          "слтфс1",
+          1
+        ],
+        "var_set": [
+          "слтфс1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1",
+          0,
+          "слтфс3",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "instant": true,
+        "var_equal": [
+          "слтфс1.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс1.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_need": [
+          "слтфс1.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "instant": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 150\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс1.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с1.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "text": " ",
+        "var_equal": [
+          "слтфс2",
+          0,
+          "слтпер1",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_set": [
+          "слтфс2",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_sub": [
+          ""
+        ],
+        "right_answer": true,
+        "var_need": [
+          "слтфс2",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "instant": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 920\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "text": " ",
+        "var_set": [
+          "слтфс2",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с2",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1",
+          0,
+          "слтфс3",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "instant": true,
+        "var_equal": [
+          "слтфс2.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс2.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "right_answer": true,
+        "text": " ",
+        "var_need": [
+          "слтфс2.1",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 350\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс2.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с2.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс1.1",
+          0,
+          "слтфс2.1",
+          0
+        ],
+        "right_answer": true,
+        "text": " ",
+        "var_equal": [
+          "слтфс3",
+          0,
+          "слтпер1",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 270\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_set": [
+          "слтфс3",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс3",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 270\nanswerText.y = 1100\nanswerText.x = 250\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "instant": true,
+        "var_set": [
+          "слтфс3",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с3",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс2",
+          0,
+          "слтфс4",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "instant": true,
+        "var_equal": [
+          "слтфс3.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс3.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_need": [
+          "слтфс3.1",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "text": " ",
+        "instant": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 680\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "right_answer": true,
+        "var_set": [
+          "слтфс3.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с3.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс3.1",
+          0,
+          "слтфс4.1",
+          0
+        ],
+        "right_answer": true,
+        "text": " ",
+        "var_equal": [
+          "слтфс4",
+          0,
+          "слтпер1",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_set": [
+          "слтфс4",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": " ",
+        "right_answer": true,
+        "var_need": [
+          "слтфс4",
+          1
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1100\nrect.x = 730\nanswerText.y = 900\nanswerText.x = 500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nlocal rocket = rect.icon rocket.rotation = 0 \nend",
+        "instant": true,
+        "var_set": [
+          "слтфс4",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с4",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "var_sub": [
+          "слтфс",
+          1
+        ],
+        "var_no_more": [
+          "слтфб1",
+          0,
+          "слтфб2",
+          0,
+          "слтфм1",
+          0,
+          "слтфм2",
+          0,
+          "слтфм3",
+          0,
+          "слтфм4",
+          0,
+          "слтфс2",
+          0,
+          "слтфс4",
+          0
+        ],
+        "bg_color": [
+          0.75,
+          0.76,
+          0.77
+        ],
+        "instant": true,
+        "var_equal": [
+          "слтфс4.1",
+          0,
+          "слтпер1",
+          1
+        ],
+        "right_answer": true,
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "text": " ",
+        "var_set": [
+          "слтфс4.1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "слтфс",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "right_answer": true,
+        "text": " ",
+        "var_need": [
+          "слтфс4.1",
+          1
+        ],
+        "lua_render": "function lua_render()\ny = 920\nrect.y = 985\nrect.x = 880\nrect.width = 175\nrect.height = 390\nanswerText.y = 900\nanswerText.x = 270\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.2\nroct.rotation = 180\nend",
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_set": [
+          "слтфс4.1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "с4.1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 11,
+        "text": "----------------------------",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 11,
+        "var_sub": [
+          "слтфб1",
+          1
+        ],
+        "var_no_more": [
+          "слтфб1.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб1",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 920\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "text": "   ",
+        "instant": true
+      },
+      {
+        "var_add": [
+          "слтфб",
+          1
+        ],
+        "id": 11,
+        "var_sub": [
+          "слтфб2",
+          1
+        ],
+        "var_no_more": [
+          "слтфб2.1",
+          0
+        ],
+        "bg_color": [
+          0.71,
+          0.74,
+          1
+        ],
+        "var_equal": [
+          "слтфб2",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.y = 1090\nrect.x = 500\nanswerText.y = 920\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.4\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*1.1\n rocket.yScale = rocket.xScale rocket.y = 400\nend",
+        "text": "   ",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": []
+  }
+]

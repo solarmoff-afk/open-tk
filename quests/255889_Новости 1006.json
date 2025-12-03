@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 112381 слов в квесте \"Из вора в лорды\"."
+      },
+      {
+        "targetbookid": "231522",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Из вора в лорды\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор The Father написал еще 110214 слов в квесте \"Агент 21\"."
+      },
+      {
+        "targetbookid": "255804",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Агент 21\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор seem03 написал еще 97066 слов в квесте \"Rising Force\"."
+      },
+      {
+        "targetbookid": "27628",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Rising Force\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mey_Igarasi написал еще 95615 слов в квесте \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "targetbookid": "239805",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Xant написал еще 91207 слов в квесте \"Легенды Сладена 2: Честь Короля\"."
+      },
+      {
+        "targetbookid": "143372",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Легенды Сладена 2: Честь Короля\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

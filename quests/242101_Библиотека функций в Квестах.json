@@ -1,0 +1,268 @@
+[
+  {
+    "id": 1,
+    "text": "...и прочие полезные (или не очень) штуки.",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.namesLibs = {}\ng.namesLibs[1] = {\"Удаление объекта с проверкой\", \"Вписать картинку в канвас по размеру\", \"Удобная и простая работа с картинками и текстом\"}\ng.namesLibs[2] = {\"Изменить отступы перед абзацами\", \"Поиск ошибки в коде по строке и имени переменной\"}\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 1
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 1,
+        "calculate": false,
+        "need": [
+          999
+        ],
+        "text": "   "
+      },
+      {
+        "id": 2,
+        "text": "    ",
+        "lua_text": "function lua_text()\nreturn g.namesLibs[1][1]\nend",
+        "lua_do": "function lua_do()\ng.curLib = 1\ncurFunc = 1\nend"
+      },
+      {
+        "id": 2,
+        "text": "   ",
+        "lua_text": "function lua_text()\nreturn g.namesLibs[1][2]\nend",
+        "lua_do": "function lua_do()\ng.curLib = 1\ncurFunc = 2\nend"
+      },
+      {
+        "id": 2,
+        "text": "   ",
+        "lua_text": "function lua_text()\nreturn g.namesLibs[1][3]\nend",
+        "lua_do": "function lua_do()\ng.curLib = 1\ncurFunc = 3\nend"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 1,
+        "calculate": false,
+        "text": "   "
+      },
+      {
+        "id": 2,
+        "text": "   ",
+        "lua_text": "function lua_text()\nreturn g.namesLibs[2][1]\nend",
+        "lua_do": "function lua_do()\ng.curLib = 2\ncurFunc = 1\nend"
+      },
+      {
+        "id": 2,
+        "text": "   ",
+        "lua_text": "function lua_text()\nreturn g.namesLibs[2][2]\nend",
+        "lua_do": "function lua_do()\ng.curLib = 2\ncurFunc = 2\nend"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 1,
+        "calculate": false,
+        "text": "   "
+      },
+      {
+        "id": 3,
+        "text": "Рисовалка фигур",
+        "lua_if": "function lua_if()\nreturn g.isAuthor == 1\nend",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\ng.noScroll = 1\ndialog{header = \"Внимание!\", text = \"Точки нужно отмечать в правильном порядке, как будто вы рисуете контур фигуры карандашом. Коэффициент симметричности может быть от 0 до 1. Чем он выше, тем ровнее будет фигура, однако тем меньше шанс, что сложная фигура нарисуется\"}\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ng.fullscreen = 1\ng.noScroll = 1\ng.blockSwipeLeftMenu = 1\nend",
+        "text": "Рисовалка",
+        "id": 4
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.allowCopy = 1\ng.fullscreen = 0\ng.noScroll = 0\ng.blockSwipeLeftMenu = 0\ng.library = {{}}\ng.library[1][1] = {\"removeObj\", [[--Удаляет объект с проверкой\nfunction removeObj(obj)\n  if type(obj) == \"table\" and obj.removeSelf then\n    obj:removeSelf()\n  end\n  obj = nil\nend]]}\ng.library[1][2] = {\"fitInCanvas\", \n[[--Вписывает картинку в канвас\nfunction fitInCanvas(obj, tag)\n  obj.x = canvas.width/2\n  obj.y = canvas.height/2\n  local xs = canvas.width/obj.width\n  local ys = canvas.height/obj.height\n  obj.xScale = tag == \"stretch\" and xs or \n    (tag == \"crop\" and math.max (xs, ys) \n    or math.min (xs, ys) )\n  obj.yScale = tag == \"stretch\" and ys or obj.xScale\nend]],\n[[tag бывает трёх видов:\n1. \"crop\" - обрезать\n2. \"stretch\" - растянуть\n3. \"original\" - вписать в канвас как есть]]}\nend",
+        "text": "   ",
+        "calculate": false,
+        "id": 1
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.library[1][3] = {\"textWindow\", [[function lua_do()\n--Упрощает работу с полотном\nfunction textWindow(text, nameImg, fontSize, widthText, x, y)\n  local window = images[nameImg]\n  local txt = display.newText({\n    parent = canvasGroup,\n    text = text,\n    fontSize = fontSize*window.contentWidth/100,\n    x = x and (window.x <plus> window.contentWidth*(x - 0.5)) or window.x,\n    y = y and (window.y <plus> window.contentWidth*(-y <plus> 0.5)) or window.y,\n    width = window.contentWidth*widthText,\n    align = \"center\"\n  })\n  txt.fill = {0, 0, 0}\n  window.text = txt\nend\n\nfunction iconWindow(nameIcon, nameWindow, x, y, width, height)\n  local img = images[nameIcon]\n  local window = images[nameWindow]\n  img.x = x and (window.x <plus> window.contentWidth*(x - 0.5)) or window.x\n  img.y = y and (window.y <plus> window.contentWidth*(-y <plus> 0.5)) or window.y\n  img.xScale = (width and width*window.contentWidth/img.width) or (height and height*window.contentHeight/img.height) or 1\n  img.yScale = height and height*window.contentHeight/img.height or img.xScale\nend\n\nfunction paintText(nameImg, r, g, b)\n  images[nameImg].text:setFillColor (r <= 1 and r or r/255, g <= 1 and g or g/255, b <= 1 and b or b/255)\nend\n\nfunction canvasImage(nameImg, x, y, width, height)\n  local img = images[nameImg]\n  img.x = x and x*canvas.width or img.x\n  img.y = y and (1 - y)*canvas.height or img.y\n  img.xScale = (width and width*canvas.width/img.width) or (height and height*canvas.height/img.height) or 1\n  img.yScale = height and height*canvas.height/img.height or img.xScale\nend\nend]], [[1. canvasImage(\"имя картинки\", x, y, ширина, высота)\n//Свободная картинка.\n\n2. textWindow(\"Текст\", \"имя картинки-окна\", размер шрифта, ширина, x, y)\n//Текст.\n\n3. paintText(\"имя картинки-окна\", r, g, b)\n//Так можно раскрасить текст, если вы не хотите, чтобы он был чёрным. r, g, b - цветовой код, можно указывать число от 0 до 255 или от 0 до 1.\n\n4. iconWindow(\"имя иконки\", \"имя картинки-окна\", x, y, ширина, высота)\n//Зависимая картинка. Работает так же, как и textWindow, но с изображением. С помощью этого удобно рисовать автарки персонажей рядом с текстовым окном.\n\n*Во всех функциях координаты и размеры - необязательные параметры. Если вы хотите пропустить один их них, замените его на nil или false. Можно и совсем не писать параметр, если после него ничего нет.]]}\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 1
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.library[2] = {}\ng.library[2][1] = {\"indentText\",\n[[function indentText(n, noChangeAnswers)\n  n = tonumber(n) or 0\n  local tab = \"\"\n  if n == 0 then\n    tab = \"<s>\n\"\n  else\n    for long = 1, n do\n      tab = tab .. \" \"\n    end\n  end\n\n  for i = 1, #pages do\n    local page = pages[i]\n    page.text = utf8.match(page.text, \"[^%s]<plus>.*\") or \"empty\"\n    local countMerges\n    if page.text == \"empty\" then\n      countMerges = 0\n    else\n      page.text = (n > 0 and tab or \"\") .. utf8.gsub(page.text, \"<s>\n<plus>%s*\", \"<s>\n\".. tab)\n      countMerges = 1\n    end\n\n    if not noChangeAnswers then\n      for j = 1, #page.answers do\n        answer = page.answers[j]\n        if answer.merge and countMerges == 0 then\n          answer.text = (n > 0 and tab or \"\") .. (utf8.match(answer.text, \"[^%s]<plus>.*\") or answer.text)\n          countMerges = 1\n        end\n        if utf8.find(answer.text, \"<s>\n\") then \n          answer.text = utf8.gsub (answer.text, \"<s>\n<plus>%s*\", \"<s>\n\".. tab)\n        end\n      end\n    end\n\n  end\nend]],\n[[Меняет отступы перед абзацами во всём квесте, учитывая мерджи и многострочные ответы.\nindentText(n) отступы из n пробелов\nindentText(0) отступы пустой строкой\n\nВторой аргумент функции отвечает за блокирование изменений ответов:\nindentText(3, true) заменить на отступы из трёх пробелов только в текстах страницы, не учитывая ответы]], }\nend",
+        "text": "Изменить отступы перед абзацами"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.library[2][2] = {\"findError\", [[--Ищет ошибку по сообщению об ошибке\nfunction findError(numString, word)\n  local function luaAnswer(answer)\n    return answer.lua_do or answer.lua_text or answer.lua_if\n  end\n\n  local function oneAnswer (text, errorLine, word)\n    local curLine = 1\n    for str in utf8.gmatch (text, \"<s>\n[^<s>\n]*\") do\n      curLine = curLine <plus> 1\n      if curLine == errorLine and utf8.find (str .. \" \", \"[^%a%d_]\" .. word .. \"[^%a%d_]\") then\n        return true\n      end\n    end\n    return false\n  end\n\n  local log = \"\"\n  for curPage = 1, #pages do\n    local answers = pages[curPage].answers\n    for curAnswer = 1, #answers do\n      local code = luaAnswer (answers[curAnswer]) \n      if code and oneAnswer (code, numString, word) then\n        log = log .. \"<s>\nСтраница \".. curPage .. \", ответ \" .. curAnswer\n      end\n    end\n  end\n  dialog {header = \"Результаты поиска\", text = #log > 0 and log:sub(2, -1) or \"Ошибки не найдено\"}\nend]]}\nend",
+        "calculate": false,
+        "text": "Поиск ошибки",
+        "id": 1
+      },
+      {
+        "id": 1,
+        "text": "Добавить сюда свою функцию",
+        "comment": false,
+        "url": "https://vk.com/id288654175"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 2,
+        "text": "   ",
+        "lua_text": "function lua_text()\nreturn g.library[g.curLib][curFunc][2]\nend",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn g.library[g.curLib][curFunc][3]\nend",
+        "lua_if": "function lua_if()\nreturn g.library[g.curLib][curFunc][3]\nend",
+        "id": 2,
+        "text": "   ",
+        "comment": true,
+        "merge": false
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "middle_answer": true,
+        "text": "Скопировать код",
+        "id": 2,
+        "lua_do": "function lua_do()\npasteboard.copy(\"string\", g.library[g.curLib][curFunc][2])\nmessage(\"Код скопирован в буфер обмена\")\nend"
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ncurFunc = curFunc - 1\nend",
+        "id": 2,
+        "text": "<",
+        "lua_if": "function lua_if()\nreturn curFunc > 1\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "lua_do": "function lua_do()\ncurFunc = curFunc <plus> 1\nend",
+        "id": 2,
+        "text": ">",
+        "lua_if": "function lua_if()\nreturn curFunc < #g.library[g.curLib]\nend",
+        "left_answer": false
+      },
+      {
+        "id": 1,
+        "text": "Все функции",
+        "middle_answer": true
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "    ",
+        "calculate": false,
+        "lua_do": "function lua_do()\ntimer.performWithDelay (25, function(event)\n  if #answers_objects > 1 then\n    local answer = answers_objects[1].text\n    \n    local header = display.newText ({\n    parent = answer.parent,\n      text = g.library[g.curLib][curFunc][1],\n      x = display.contentWidth*0.5,\n      y = display.contentWidth*0.05,\n      fontSize = answer.size*1.5\n    })\n   header.fill = {0, 0, 0}\n\n    if g.library[g.curLib][curFunc][3] then\n      local frame = display.newRoundedRect (answer.parent, answer.x, answer.y <plus> answer.height/2, answer.width*1.05, answer.height <plus> answer.width*0.05, answer.width/50)\n      frame:setFillColor (0.5, 0.7, 1, 0.3)\n      frame.strokeWidth = answer.width/75\n      frame:setStrokeColor (0.5, 0.7, 1)\n      frame:toBack()\n    end\n    timer.cancel (event.source)\n  end\nend, 0)\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nend",
+        "text": "Фигура"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Поле для рисования",
+        "calculate": true,
+        "lua_do": "function lua_do()\nwidget = require(\"widget\")\nfield = display.newRect (canvasGroup, canvas.width/2, canvas.height*0.55, canvas.width*0.9, canvas.height - canvas.width*0.61)\nfield.fill = {1}\nfield.strokeWidth = canvas.width/200\nfield.stroke = {0}\nfield:toBack()\nfield.isHitTestable = true\nprevTaps = taps\ntaps = {}\nhistoryTaps = historyTaps or {}\ntaps.circles = {}\ntaps._x, taps._y = {}, {}\nfield:addEventListener(\"tap\", function(event)\n  local tapCircle = display.newCircle (event.x, event.y, canvas.width*0.01)\n  tapCircle.fill = {1,0,0}\n  canvasGroup:insert(tapCircle)\n  table.insert(taps._x, event.x)\n  table.insert(taps._y, event.y)\n  table.insert(taps.circles, tapCircle)\nend)\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal w, vertices, figure\nw = 0.12*canvas.width\nvertices = {-0.5*w, -0.308*w, -0.345*w, -0.49*w, 0.008*w, -0.177*w, 0.264*w, -0.49*w, 0.5*w, -0.308*w, 0.264*w, 0.022*w, 0.5*w, 0.258*w, 0.264*w, 0.49*w, 0.008*w, 0.258*w, -0.231*w, 0.49*w, -0.5*w, 0.258*w, -0.231*w, 0.022*w, }\nfigure = display.newPolygon (0.3*canvas.width, canvas.height - canvas.width*0.12, vertices)\ncanvasGroup:insert(figure) \nfigure.fill = {1,0,0}\nlocal areaTap = display.newRect(canvasGroup, figure.x, figure.y, w*1.5, w*1.5)\nareaTap.isVisible = false\nareaTap.isHitTestable = true\nareaTap:addEventListener(\"tap\", function()\n    historyTaps = {}\n    pages[3].answers[1].lua_do = \"function lua_do()<s>\nend\"\n    showPage {id = 3, transition = \"instant\"}\nend)\nend",
+        "text": "\"Очистить\"\n"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "\"Готово\"\n",
+        "calculate": true,
+        "lua_do": "function lua_do()\n  function symmetry(t, width)\n      koef = tonumber(utf8.match (inp.text, \"[%d%.]<plus>\"))\n      for i = 1, #t-1 do\n        local a = t[i]/width\n        for j = i<plus>1, #t do\n          local b = t[j]/width\n          if math.abs(math.abs(a) - math.abs(b)) < koef then\n            t[j] = ((a*b) > 0 and a or -a)*width\n          end\n        end\n      end\n    end\n\nfunction round(a)\n  return math.round(1000*a)/1000\nend \n\nfunction createCode(width, taps_x, taps_y, center_x, center_y, color)\n  code = code .. \"<s>\n<s>\nw = \".. round(width/canvas.width) .. \"*canvas.width<s>\nvertices = {\"\n    for i = 1, #taps_x do\n      code = code .. round((taps_x[i] - center_x)/width) .. \"*w, \" .. round ((taps_y[i] - center_y)/width) .. \"*w, \"\n    end\n    code = code.. \"}<s>\nfigure = display.newPolygon (\" .. round(center_x/canvas.width) .. \"*canvas.width, \".. round(center_y/canvas.height) .. \"*canvas.height, vertices)<s>\ncanvasGroup:insert(figure) <s>\nfigure.fill = \" .. color\nend\n\nlocal w, vertices, figure\nw = 0.12*canvas.width\nvertices = {-0.5*w, -0.134*w, -0.146*w, 0.485*w, 0.5*w, -0.485*w, -0.146*w, 0.031*w, }\nfigure = display.newPolygon (canvas.width*0.11, canvas.height - canvas.width*0.12, vertices)\ncanvasGroup:insert(figure) \nfigure.fill = {0,0.75,0.1}\nlocal areaTap = display.newRect(canvasGroup, figure.x, figure.y, w*1.5, w*1.5)\nareaTap.isVisible = false\nareaTap.isHitTestable = true\nareaTap:addEventListener(\"tap\", function()\n    if #taps._x < 3 then\n      message(\"Выберите более двух точек\")\n      return\n    end\n\n    code = \"function lua_do()<s>\nlocal w, vertices, figure\"\n    for i = 1, #historyTaps do\n      local t = historyTaps[i]\n      createCode(t.width, t.taps_x, t.taps_y, t.center_x, t.center_y, t.color)\n    end\n    local center = {}\n    local width = math.max(unpack(taps._x)) - math.min(unpack(taps._x))\n    symmetry(taps._x, width)\n    symmetry(taps._y, width)\n    width = math.max(unpack(taps._x)) - math.min(unpack(taps._x))\n    center.x = math.min(unpack(taps._x)) <plus> width/2\n    center.y = math.min(unpack(taps._y)) <plus> (math.max(unpack(taps._y)) - math.min(unpack(taps._y)))/2\n    table.insert(historyTaps, {width = width, taps_x = table.copy(taps._x), taps_y = table.copy(taps._y), center_x = center.x, center_y = center.y, color = currentColor.color})\n\n    createCode(width, taps._x, taps._y, center.x, center.y, currentColor.color)\n    code = code .. \"<s>\nend\"\n    pages[3].answers[1].lua_do = code\n    --pasteboard.copy(\"string\", code)\n    showPage{id = 3, transition = \"instant\"}\n  end\n)\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninp = native.newTextField (canvas.width*0.55, canvas.width*0.1, canvas.width*0.83, canvas.width*0.07)\ncanvasGroup:insert(inp)\ninp.text = \"Коэффициент симметрии: \".. (koef or 0.05)\nend",
+        "text": "   ",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "\"Назад\"",
+        "calculate": true,
+        "lua_do": "function lua_do()\nif prevTaps then\nlocal w, vertices, figure\nw = 0.14*canvas.width\nvertices = {0.5*w, -0.134*w, 0.5*w, 0.157*w, -0.005*w, 0.157*w, -0.005*w, 0.429*w, -0.5*w, -0.016*w, -0.005*w, -0.429*w, -0.005*w, -0.134*w, }\nfigure = display.newPolygon (0.5*canvas.width, canvas.height - canvas.width*0.12, vertices)\ncanvasGroup:insert(figure) \nfigure.fill = {0,0.3,0.9}\nlocal areaTap = display.newRect(canvasGroup, figure.x, figure.y, w*1.5, w*1.5)\nareaTap.isVisible = false\nareaTap.isHitTestable = true\nareaTap:addEventListener(\"tap\", function()\n    if #taps.circles > 0 then\n      taps.circles[#taps.circles]: removeSelf()\n      table.remove(taps.circles)\n      table.remove(taps._x)\n      table.remove(taps._y)\n    else\n      taps = prevTaps\n      for i = 1, #taps._x do\n        local tapCircle = display.newCircle (taps._x[i], taps._y[i], canvas.width*0.01)\n        tapCircle.fill = {1,0,0}\n        canvasGroup:insert(tapCircle)\n        table.insert(taps.circles, tapCircle)\n      end\n    end\n  end\n)\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 3,
+        "text": "     ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nlocal colors = {\n  {  {1, 1, 1}, {1, 0, 0}, {1, 0.55, 0}, {1, 0.9, 0.1}, {0, 0.75, 0.1}, {0, 0.5, 0.2}  },\n  {  {0, 0.9, 1}, {0, 0.3, 0.9}, {0.7, 0, 1}, {0.4, 0.2, 0}, {0.6, 0.6, 0.6}, {0, 0, 0}  }\n}\ncurColorStr = curColorStr or \"{0,0,0}\"\nlocal function darker(a)\n  if a >= 0.5 then\n    return 0.7*a\n  else\n    return a <plus> (1-a)*0.3\n  end\nend\nfor row  = 1, 2 do\n  for i = 1, #colors[row] do\n    local width = canvas.width/10\n    local interval = width/2.5\n    local circle = display.newCircle (canvas.width/2 <plus> (i - #colors[row]/2)*(width<plus>interval) - 0.5*width,\n    canvas.width*0.1 <plus> canvas.width*0.1*(row < 2 and 1 or row*1.15), width/2)\n    circle.fill = colors[row][i]\n    circle.color = json.prettify(colors[row][i])\n    circle.color = \"{\".. circle.color:sub(2, -2).. \"}\"\n    circle.strokeWidth = width/10\n    circle.stroke = {darker(colors[row][i][1]), darker(colors[row][i][2]), darker(colors[row][i][3]), 0}\n    canvasGroup:insert(circle)\n    circle:addEventListener(\"tap\", \n    function(event)\n      currentColor.stroke.a = 0\n      currentColor = event.target\n      currentColor.stroke.a = 1\n      curColorStr = currentColor.color\n    end)\n    if circle.color == curColorStr then\n      currentColor = circle\n      currentColor.stroke.a = 1\n    end\n  end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 4,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfield = display.newRect (canvasGroup, canvas.width/2, canvas.height/2 <plus>canvas.width*0.15, canvas.width*0.9, canvas.height - canvas.width*0.5)\nfield.fill = {1}\nfield.strokeWidth = canvas.width/200\nfield.stroke = {0}\nfield:toBack()\nfield.isHitTestable = true\nfunction inField(x, y)\n  return math.max(field.x - field.width/2 <plus> currentSize/2, math.min(field.x <plus> field.width/2 - currentSize/2, x)),\n  math.max(field.y - field.height/2 <plus> currentSize/2, math.min(field.y <plus> field.height/2 - currentSize/2, y))\nend\nsumFigures = 0\nfigures = display.newGroup()\nfield:addEventListener(\"touch\", function(event)\n  local x, y = inField(event.x, event.y)\n  if event.phase == \"began\" then\n      prevX, prevY = x, y\n      local circle = display.newCircle (x, y, currentSize/2)\n      circle.fill = currentColor.color\n      figures:insert(circle)\n      sumFigures = sumFigures <plus> 1\n  else\n    if ((math.abs(prevX-x))^2 <plus> (math.abs(prevY-y))^2)^0.5 < canvas.width*0.6 then\n      local line = display.newLine (prevX, prevY, x, y)\n      line.stroke = currentColor.color\n      line.strokeWidth = currentSize\n      figures:insert(line)\n      prevX, prevY = x, y\n      local circle = display.newCircle (x, y, currentSize/2)\n      circle.fill = currentColor.color\n      figures:insert(circle)\n      sumFigures = sumFigures <plus> 2\n    end\n  end\n  if sumFigures > 499 then\n    local screen = display.captureBounds{\n      xMin = field.x - field.width/2,\n      xMax = field.x <plus> field.width/2,\n      yMin = field.y - field.height/2,\n      yMax = field.y <plus> field.height/2\n    }\n    screen.x = field.x\n    screen.y = field.y\n    figures:removeSelf()\n    figures = display.newGroup()\n    canvasGroup:insert(figures)\n    figures:insert(screen)\n    sumFigures = 1\n  end\nend)\nend",
+        "text": "    "
+      },
+      {
+        "id": 4,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nwidget = require(\"widget\")\nwidget.newButton({\n  label = \"Очистить холст\",\n  font = \"Roboto-Regular\",\n  fontSize = 35,\n  x = canvas.width*0.43,\n  y = canvas.height - canvas.width*0.12,\n  width = canvas.width*0.25,\n  height = canvas.width*0.15,\n  labelColor = {default = {1}},\n  onRelease = function()\n    showPage {id = 4, transition = \"instant\"}\n  end\n})\nend",
+        "text": "   ",
+        "need": [
+          999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal colors = {\n  {  {1, 1, 1}, {1, 0, 0}, {1, 0.55, 0}, {1, 0.9, 0.1}, {0, 0.75, 0.1}, {0, 0.5, 0.2}  },\n  {  {0, 0.9, 1}, {0, 0.3, 0.9}, {0.7, 0, 1}, {0.4, 0.2, 0}, {0.6, 0.6, 0.6}, {0, 0, 0}  }\n}\nlocal function darker(a)\n  if a >= 0.5 then\n    return 0.7*a\n  else\n    return a <plus> (1-a)*0.3\n  end\nend\nfor row  = 1, 2 do\n  for i = 1, #colors[row] do\n    local width = canvas.width/10\n    local interval = width/2.5\n    local circle = display.newCircle (canvas.width/2 <plus> (i - #colors[row]/2)*(width<plus>interval) - 0.5*width,\n    canvas.width*0.1*(row < 2 and 1 or row*1.15), width/2)\n    circle.fill = colors[row][i]\n    circle.color = colors[row][i]\n    circle.strokeWidth = width/10\n    circle.stroke = {darker(colors[row][i][1]), darker(colors[row][i][2]), darker(colors[row][i][3]), 0}\n    canvasGroup:insert(circle)\n    circle:addEventListener(\"tap\", \n    function(event)\n      currentColor.stroke.a = 0\n      currentColor = event.target\n      currentColor.stroke.a = 1\n    end)\n    if row == #colors and i == #colors[row] then\n      currentColor = circle\n      currentColor.stroke.a = 1\n    end\n  end\nend\nend",
+        "text": "   ",
+        "id": 4,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 4,
+        "calculate": true,
+        "lua_do": "function lua_do()\ncurrentSize = currentSize or 3\nwidget = require(\"widget\")\nsizeWidget = widget.newSlider{\n  x = canvas.width*0.6,\n  y = canvas.width*0.33,\n  width = canvas.width*0.7,\n  value = 1000*currentSize/canvas.width,\n  listener = function(event)\n    currentSize = (math.max(event.value, 1)/100)*canvas.width/10\n  end\n}\nbgWidget = display.newRect (canvasGroup, sizeWidget.x, sizeWidget.y, sizeWidget.width, canvas.width*0.1)\nbgWidget:addEventListener(\"tap\", function(event)\n  sizeWidget:setValue ( math.round(100*\n  ((event.x - bgWidget.x <plus> bgWidget.width/2)/bgWidget.width)\n) )\n  currentSize = (math.max(sizeWidget.value, 1)/100)*canvas.width/10\nend)\nbgWidget.isVisible = false\nbgWidget.isHitTestable = true\ncanvasGroup:insert(sizeWidget)\nlocal text = display.newText{\n  parent = canvasGroup,\n  text = \"Размер:\",\n  x = 0.14*canvas.width,\n  y = canvas.width*0.325,\n  fontSize = canvas.width/21\n}\ntext.fill = {0}\nend",
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  }
+]

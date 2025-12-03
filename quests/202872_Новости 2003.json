@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор _KessiKeyd_❤ написал еще 18853 слов в квесте \"      Тайна города\"."
+      },
+      {
+        "targetbookid": "186415",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"      Тайна города\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор *В£дЬмОчК@* написал еще 18174 слов в квесте \"Наёмница\"."
+      },
+      {
+        "targetbookid": "194653",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наёмница\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор К и м и к о  написал еще 18036 слов в квесте \"Радуга\n\"."
+      },
+      {
+        "targetbookid": "177649",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Радуга\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 16735 слов в квесте \"\"Приключение героя\" auto-RPG\"."
+      },
+      {
+        "targetbookid": "149500",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"\"Приключение героя\" auto-RPG\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор RiugoKacudo написал еще 15954 слов в квесте \"Тирания Аделя: Видение Смерти\n(Adel's Tyranny: Vision of Death) \"."
+      },
+      {
+        "targetbookid": "91777",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тирания Аделя: Видение Смерти\n(Adel's Tyranny: Vision of Death) \"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

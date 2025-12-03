@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 146013 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Valery Meadow написал еще 85510 слов в квесте \"Гелениум\"."
+      },
+      {
+        "targetbookid": "209914",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Гелениум\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор FriendlyManiac написал еще 85185 слов в квесте \"Maelstrom\"."
+      },
+      {
+        "targetbookid": "241047",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Maelstrom\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Kateivka написал еще 85061 слов в квесте \"Подкидыш\"."
+      },
+      {
+        "targetbookid": "240235",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Подкидыш\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ravendark написал еще 84898 слов в квесте \"ЧАРМИ\"."
+      },
+      {
+        "targetbookid": "246775",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"ЧАРМИ\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "text": "Автор SirVladPro\n\nВ этой игре вам предстоит развивать свою гильдию героев. Все для чего она создавалась это обучение сильных бойцов, чтобы потом пустить их в расход.\n\nКак и во всех играх подобного жанра вам не обязательно нужно находиться в игре для получения заработка",
+    "answers": [
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nautomatic={0,0,0,0,0,0,0}\nhero=1\nhero_lvl={1,0,0,0,0,0,0,0,0,0}\nlvl_r={256,128,64,32,16,8,4,2,1,0}\nmoney=0\ndungeon=1\nbutton={10,1,1,1}\nk=1\nchance=1\noffline_time=g.time\nend",
+        "text": "Начать",
+        "id": 2,
+        "addToHistory": [
+          8000,
+          9000,
+          10000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ваша гильдия героев",
+    "answers": [
+      {
+        "id": 2,
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nif k==10*button[3] then\nreturn \"Гильдия \".. k ..\" ур\"\nend\n\nif 25*(2^(k-1))>=10^3 then\nreturn \"Гильдия \" .. k .. \"/\" .. 10*button[3] .. \" ур<s>\n Героев необходимо \" .. string.format(\"%.1e\",25*2^(k*math.ceil(k/10)-1))\nelse\nreturn \"Гильдия \" .. k .. \"/\" .. 10*button[3] .. \" ур<s>\n Героев необходимо \" .. 25*2^(k*math.ceil(k/10)-1)\nend\n\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\n\nif hero>=25*2^(k*math.ceil(k/10)-1) and k<10*button[3] then\nhero=1\nhero_lvl={1,0,0,0,0,0,0,0,0,0}\nlvl_r={256,128,64,32,16,8,4,2,1,0}\nmoney=0\ndungeon=1\nbutton[1]=10\nbutton[2]=1\nk=k<plus>1\nchance=1\nshowPage{id = 2}\nend\n\nend",
+        "text": "Перерождение",
+        "update": [
+          0.2
+        ],
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nz=0\n\nfor i=1, 10 do\nz=z<plus>hero_lvl[i]*(i*button[3])^k\nend\n\n\nif money>=1000 then\ntext=\"Монеты \" .. string.format(\"%.1e\",money) .. \" [<plus>\"\nelse\ntext=\"Монеты \" .. money .. \" [<plus>\"\nend\n\nif z>=1000 then\ntext=text .. string.format(\"%.1e\",z) .. \"]<s>\nГерои \"\nelse\ntext=text .. z .. \"]<s>\nГерои \"\nend\n\nif hero>=1000 then\ntext=text .. string.format(\"%.1e\",hero) .. \"<s>\n<s>\n\"\nelse\ntext= text .. hero .. \"<s>\n<s>\n\"\nend\n\nfor i=1, 10 do\nif hero_lvl[i]>=1000 then\ntext= text .. \"Герои \" .. i .. \"-го уровня [<plus>\" .. string.format(\"%.1e\",hero_lvl[i]*(i*button[3])^k) .. \"]<s>\n\" .. string.format(\"%.1e\",hero_lvl[i]) .. \"<s>\n\"\nelse\ntext= text .. \"Герои \" .. i .. \"-го уровня [<plus>\" .. string.format(\"%.1e\",hero_lvl[i]*(i*button[3])^k) .. \"]<s>\n\" .. hero_lvl[i] .. \"<s>\n\"\nend\nend\n\nreturn text\nend",
+        "lua_do": "function lua_do()\n\nfor times=1, g.time-offline_time do\n\nfor i=1, 10 do\nmoney=money<plus>hero_lvl[i]*(i*button[3])^k\nend\n\n for i1=1, 9 do\nx=math.random(1,100000)\n   if lvl_r[i1]*hero_lvl[i1]*chance>=x then\nhero_lvl[i1<plus>1]=hero_lvl[i1<plus>1]<plus>math.ceil(hero_lvl[i1]/100)\nhero_lvl[i1]=hero_lvl[i1]-math.ceil(hero_lvl[i1]/100)\n   end\nend\n\nif automatic[1]==1 then\n\nx=1\nif button[x]<=money then\nrepeat\nmoney=money-button[x]\nbutton[x]=math.round(button[x]*1.1)\nhero=hero<plus>1\nhero_lvl[1]=hero_lvl[1]<plus>1\nuntil button[x]>=money\nend\nend\n\nend\n\noffline_time=g.time\nend",
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          1
+        ],
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nif g.isAuthor==1 then\nreturn true\nend\nend",
+        "id": 2,
+        "text": "Авто",
+        "lua_do": "function lua_do()\nif automatic[1]==0 then\nautomatic[1]=1\nelse\nautomatic[1]=0\nend\nend",
+        "instant": true
+      },
+      {
+        "id": 2,
+        "lua_if": "function lua_if()\nif automatic[1]==0 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nx=1\nif button[x]<=money then\nmoney=money-button[x]\nbutton[x]=math.round(button[x]*1.1)\nhero=hero<plus>1\nhero_lvl[1]=hero_lvl[1]<plus>1\nend\nend",
+        "middle_answer": true,
+        "instant": true,
+        "text": "Нанять героя 1-го уровня\n[1]",
+        "lua_text": "function lua_text()\nif button[1]>=1000 then\nreturn \"Нанять героя 1-го уровня<s>\n[\" .. string.format(\"%.1e\",button[1]) .. \"]\"\nelse\nreturn \"Нанять героя 1-го уровня<s>\n[\" .. button[1] .. \"]\"\nend\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Увеличить получаемый опыт героями<s>\nСейчас \" .. chance*100 .. \" %<s>\nЦена \" .. string.format(\"%.1e\",100*10^chance)\nend",
+        "middle_answer": false,
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nif money>=100*10^chance then\nrepeat\nmoney=money-100*10^chance\nchance=chance<plus>1\nuntil money<100*10^chance\nend\nend",
+        "text": "Увеличить получаемый опыт героями"
+      },
+      {
+        "id": 4,
+        "text": "Больше улучшений (серьезно?)",
+        "lua_if": "function lua_if()\nif button[3]>1 then\nreturn true\nend\nend",
+        "instant": true
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Рекруты\nНеобходим 5 ур",
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nif k<5 then\nreturn true\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif k>4 then\nreturn true\nend\nend",
+        "instant": true,
+        "id": 3,
+        "text": "Рекруты",
+        "comment": false,
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"Хмм умножать доход?<s>\nНеобходим \" .. button[3]*10 .. \" ур\"\nend",
+        "middle_answer": true,
+        "text": "Хмм степень в степени? \nНеобходим 10 ур",
+        "lua_if": "function lua_if()\nif k~=10*button[3] then\nreturn true\nend\nend",
+        "id": 2
+      },
+      {
+        "comment": false,
+        "id": 2,
+        "middle_answer": true,
+        "text": "Хмм умножать доход?",
+        "lua_if": "function lua_if()\nif k ==10*button[3] then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nhero=1\nhero_lvl={1,0,0,0,0,0,0,0,0,0}\nlvl_r={256,128,64,32,16,8,4,2,1,0}\nmoney=0\ndungeon=1\n\nbutton[1]=10\nbutton[2]=1\nbutton[3]=button[3]<plus>1\nchance=1\nk=1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif g.isAuthor==1 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\noffline_time=g.time-60^2\nend",
+        "instant": true,
+        "id": 2,
+        "text": "Чит пиздец"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Рекруты\n\nКороль готов менять своих крестьян на обученных бойцов! 5 к 6",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Гильдия",
+        "instant": true
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ntext=\"\"\nif hero_lvl[10]>=1000 then\ntext= text .. \"Герои 10-го уровня<s>\n\" .. string.format(\"%.1e\",hero_lvl[10])\nelse\ntext= text .. \"Герои 10-го уровня<s>\n\" .. hero_lvl[10]\nend\nreturn text\nend",
+        "id": 3
+      },
+      {
+        "lua_text": "function lua_text()\nif hero_lvl[10]<=1000 then\nreturn \"Обменять героев 10-го уровня \" .. hero_lvl[10] .. \"<s>\nНа героев 1-го уровня в количестве \" .. hero_lvl[10]<plus>math.floor(hero_lvl[10]/5)\nelse\nreturn \"Обменять героев 10-го уровня \" .. string.format(\"%.1e\",hero_lvl[10]) .. \"<s>\nНа героев 1-го уровня в количестве \" .. string.format(\"%.1e\",hero_lvl[10]<plus>math.floor(hero_lvl[10]/5))\nend\nend",
+        "id": 3,
+        "middle_answer": true,
+        "text": "Обмен",
+        "lua_do": "function lua_do()\nhero_lvl[1]=hero_lvl[1]<plus>hero_lvl[10]<plus>math.floor(hero_lvl[10]/5)\nhero=hero<plus>math.floor(hero_lvl[10]/5)\nhero_lvl[10]=0\nend",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Улучшения\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Выйти",
+        "instant": true,
+        "middle_answer": true
+      },
+      {
+        "id": 4,
+        "text": "Монеты",
+        "lua_text": "function lua_text()\nreturn \"Монеты \" .. string.format(\"%.1e\", money)\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nif automatic[1]==0 then\nreturn true\nend\nend",
+        "text": "Купить автоматическую покупку героев",
+        "id": 4,
+        "instant": true,
+        "lua_do": "function lua_do()\nif money>=10^50 then\nmoney=money-10^50\nautomatic[1]=1\nend\nend",
+        "lua_text": "function lua_text()\nreturn \"Купить автоматическую покупку героев<s>\n\" .. string.format(\"%.1e\",10^50)\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": []
+  }
+]

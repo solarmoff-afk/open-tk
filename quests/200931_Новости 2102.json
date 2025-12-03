@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор lll_Spider_lll\n написал еще 19220 слов в квесте \"Дневники войны<s>r\n\"."
+      },
+      {
+        "targetbookid": "192534",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Дневники войны<s>r\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор dannskoy\n написал еще 16224 слов в квесте \"Лабиринт времени\n\"."
+      },
+      {
+        "targetbookid": "149085",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Лабиринт времени\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор lll_Spider_lll\n написал еще 16159 слов в квесте \"Когда взойдёт солнце\"."
+      },
+      {
+        "targetbookid": "187180",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Когда взойдёт солнце\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Даяна Вольная написал еще 16156 слов в квесте \"Миссия в приоритете \"."
+      },
+      {
+        "targetbookid": "167322",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Миссия в приоритете \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Teppish написал еще 16143 слов в квесте \"И сердце растает\"."
+      },
+      {
+        "targetbookid": "177388",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"И сердце растает\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

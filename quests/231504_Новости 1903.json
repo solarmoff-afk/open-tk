@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Alex Guch написал еще 309650 слов в квесте \"   Otherworldly wandering's\"."
+      },
+      {
+        "targetbookid": "205206",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"   Otherworldly wandering's\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 253840 слов в квесте \"Трансформеры: Забытая история\"."
+      },
+      {
+        "targetbookid": "229881",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Трансформеры: Забытая история\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Annie написал еще 211219 слов в квесте \"Что скрывает город\"."
+      },
+      {
+        "targetbookid": "230820",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Что скрывает город\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Nirvana написал еще 157764 слов в квесте \"Корона и змея\"."
+      },
+      {
+        "targetbookid": "228888",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Корона и змея\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Джефф написал еще 152388 слов в квесте \"Живая среди мёртвых.\"."
+      },
+      {
+        "targetbookid": "229796",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Живая среди мёртвых.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

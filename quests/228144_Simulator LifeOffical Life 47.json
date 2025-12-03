@@ -1,0 +1,4768 @@
+[
+  {
+    "id": 1,
+    "text": "Симулятор жизни и ничего более.Работайте,станьте звездой,покупайте особняки и лимузины, а также занимайтесь хостингом.Путешествуйте по странам.Если же вам не нравится обычное дикое выживание можете поиграть в сюжетный режим там то будет лучше \n<===========================================\nversion 4.6\n☆Продолжение 2 ветки сюжета до 16 лет\n<===========================================\nПожалуйста прежде чем ставить плохой отзыв напишите причину.Мне важно\n<===========================================\n\nЕсли новичок то пройди обучение",
+    "answers": [
+      {
+        "bg_color": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "blackout": true,
+        "id": 139,
+        "text": "Сюжетный режим",
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "bg_color": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "var_add": [
+          "b",
+          100,
+          "cash",
+          500
+        ],
+        "blackout": true,
+        "id": 2,
+        "text": "Начать одиночную игру",
+        "right_answer": true,
+        "var_set": [
+          "sc"
+        ]
+      },
+      {
+        "bg_color": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 61,
+        "text": "Начать совместную игру *BETA*",
+        "blackout": true,
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "right_answer": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "blackout": true,
+        "middle_answer": true,
+        "text": "Справочник по версиям",
+        "id": 45,
+        "left_answer": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://c.radikal.ru/c06/2105/ad/ca7e176a364b.jpg\n\n",
+        "system": true
+      },
+      {
+        "bg_color": [
+          0,
+          0,
+          0
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 81,
+        "text": "Новости",
+        "blackout": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "text_color": [
+          1
+        ],
+        "id": 82,
+        "text": "Обучение",
+        "bg_color": [
+          0,
+          0,
+          0
+        ],
+        "blackout": true
+      },
+      {
+        "id": 113,
+        "text": "Профиль",
+        "blackout": true
+      },
+      {
+        "id": 113,
+        "text": "VK",
+        "url": "https://vk.com/club203796350"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Статистика\nP.S.\nВы никогда не станете милионером",
+    "answers": [
+      {
+        "var_show": [
+          "sc"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 2,
+        "text": "StarCoin:"
+      },
+      {
+        "var_show": [
+          "cash"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 2,
+        "text": "Cash:",
+        "bg_color": [
+          0.5,
+          1,
+          0.2
+        ],
+        "var_set": [
+          "cash"
+        ]
+      },
+      {
+        "var_show": [
+          "b"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 2,
+        "text": "Бодрость:",
+        "var_set": [
+          "b"
+        ]
+      },
+      {
+        "var_show": [
+          "skill"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 2,
+        "text": "Навык",
+        "var_set": [
+          "skill"
+        ]
+      },
+      {
+        "var_show": [
+          "sts"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 2,
+        "text": "Статус:",
+        "var_set": [
+          "sts"
+        ]
+      },
+      {
+        "var_show": [
+          "per"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 2,
+        "text": "Персонал",
+        "var_set": [
+          "per"
+        ]
+      },
+      {
+        "right_answer": false,
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/7/00805f06cc6c41b4386bed275b13c032-full.png"
+        ],
+        "id": 5,
+        "text": "Работать",
+        "bg_color": [
+          0.8,
+          0.8,
+          0.8
+        ],
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0.5,
+          1,
+          0.2
+        ],
+        "id": 9,
+        "text": "Магазин",
+        "right_answer": true,
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/7/c8514a42d81c2a732537b4745037fa32-full.png"
+        ]
+      },
+      {
+        "right_answer": false,
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/7/9452c724da95d1ec792be07b7b0e2f0f-full.png"
+        ],
+        "id": 3,
+        "text": "Обучение",
+        "bg_color": [
+          0.2,
+          0.7,
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 69,
+        "text": "Развлечения и отдых",
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "answerImage": [
+          "https://a.radikal.ru/a22/2102/45/e4bdc49d6438.png"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Инвестиции\n158\nВременно недоступно",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "id": 133,
+        "text": "Nokia3310",
+        "var_need": [
+          "nokia3310",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 60,
+        "text": "Благотворительность",
+        "bg_color": [
+          1,
+          0.8,
+          0.2
+        ],
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/17/0705794eb71a3b75ed93e8597aae5cde-full.png"
+        ]
+      },
+      {
+        "right_answer": false,
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/7/5c56519b72ee277bcf097032d3b2fb78-full.png"
+        ],
+        "id": 8,
+        "text": "Звездные дела",
+        "bg_color": [
+          1,
+          1,
+          0.5
+        ],
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          0.75,
+          0
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 16,
+        "text": "Онлайн-хостинг",
+        "right_answer": true,
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/7/2e3246526fce04a60d2d1422d5a9a292-full.png"
+        ]
+      },
+      {
+        "right_answer": false,
+        "answerImage": [
+          "https://d.radikal.ru/d28/2102/62/0824ef0b15c2.png"
+        ],
+        "id": 38,
+        "text": "Путешествия",
+        "bg_color": [
+          0.8,
+          1,
+          0.2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 40,
+        "var_more": [
+          "sts",
+          9999
+        ],
+        "need": -40,
+        "text": "Получить StarCoins"
+      },
+      {
+        "bg_color": [
+          0,
+          0.5,
+          1
+        ],
+        "id": 35,
+        "text": "Звездный магазин",
+        "right_answer": true,
+        "answerImage": [
+          "https://b.radikal.ru/b24/2102/1c/816dd5f3c945.png"
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          0,
+          0
+        ],
+        "text_color": [
+          0
+        ],
+        "id": 79,
+        "text": "Чит-коды\n#не использовать читерство это плохо#",
+        "left_answer": true
+      },
+      {
+        "id": 113,
+        "text": "Профиль"
+      },
+      {
+        "id": 192,
+        "text": "Блаженный Сон",
+        "var_need": [
+          "bescna",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Образование",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Эконом уроки\n500",
+        "var_add": [
+          "skill",
+          10
+        ],
+        "var_more": [
+          "cash",
+          499
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Обучение колледжа\n5000",
+        "var_add": [
+          "skill",
+          50
+        ],
+        "var_more": [
+          "cash",
+          4999
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Обучение университета\n30000",
+        "var_add": [
+          "skill",
+          100
+        ],
+        "var_more": [
+          "cash",
+          29999
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "<plus>50 знаний",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Далее",
+        "var_sub": [
+          "cash",
+          5000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Выбор заработка",
+    "answers": [
+      {
+        "var_add": [
+          "cash",
+          50
+        ],
+        "var_sub": [
+          "b",
+          10
+        ],
+        "id": 2,
+        "var_need": [
+          "b",
+          10
+        ],
+        "text": "Уборщик\n50",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "cash",
+          300
+        ],
+        "var_equal": [
+          "mod_work",
+          1
+        ],
+        "id": 2,
+        "text": "Консультант\n300",
+        "var_need": [
+          "skill",
+          30
+        ]
+      },
+      {
+        "var_need": [
+          "b",
+          20
+        ],
+        "var_add": [
+          "cash",
+          500
+        ],
+        "var_sub": [
+          "b",
+          20
+        ],
+        "id": 2,
+        "text": "Охранник\n500",
+        "var_more": [
+          "skill",
+          49
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "cash",
+          600
+        ],
+        "var_equal": [
+          "mod_work",
+          1
+        ],
+        "id": 2,
+        "var_need": [
+          "skill",
+          60
+        ],
+        "text": "Работник автомойки\n600"
+      },
+      {
+        "var_add": [
+          "cash",
+          700
+        ],
+        "var_equal": [
+          "mod_work",
+          1
+        ],
+        "id": 2,
+        "var_need": [
+          "skill",
+          70
+        ],
+        "text": "Мойщик стекол\n700",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "cash",
+          1000
+        ],
+        "var_sub": [
+          "b",
+          50
+        ],
+        "id": 2,
+        "var_need": [
+          "b",
+          50
+        ],
+        "text": "Продавец\n1000",
+        "var_more": [
+          "skill",
+          99
+        ]
+      },
+      {
+        "var_add": [
+          "cash",
+          1500
+        ],
+        "var_equal": [
+          "mod_work",
+          1
+        ],
+        "id": 2,
+        "var_need": [
+          "skill",
+          150
+        ],
+        "text": "Почтальон\n1500",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "cash",
+          5000
+        ],
+        "var_sub": [
+          "b",
+          60
+        ],
+        "id": 2,
+        "var_need": [
+          "b",
+          60
+        ],
+        "text": "Секретарь\n5000",
+        "var_more": [
+          "skill",
+          119
+        ]
+      },
+      {
+        "var_add": [
+          "cash",
+          9000
+        ],
+        "var_equal": [
+          "mod_work",
+          1
+        ],
+        "id": 2,
+        "var_need": [
+          "skill",
+          250
+        ],
+        "text": "Библиотекарь\n9000",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "cash",
+          10000
+        ],
+        "var_sub": [
+          "b",
+          40
+        ],
+        "id": 2,
+        "var_more": [
+          "skill",
+          299
+        ],
+        "text": "Врач\n10000",
+        "var_need": [
+          "b",
+          40
+        ]
+      },
+      {
+        "var_add": [
+          "cash",
+          13000
+        ],
+        "var_equal": [
+          "mod_work",
+          1
+        ],
+        "id": 2,
+        "var_need": [
+          "skill",
+          350
+        ],
+        "text": "Ветеренар\n13000",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "cash",
+          15000
+        ],
+        "var_sub": [
+          "b",
+          80
+        ],
+        "id": 2,
+        "var_more": [
+          "skill",
+          499
+        ],
+        "text": "Учитель\n15000",
+        "var_need": [
+          "b",
+          80
+        ]
+      },
+      {
+        "var_need": [
+          "b",
+          40
+        ],
+        "var_add": [
+          "cash",
+          50000
+        ],
+        "text": "Полиция\n50000",
+        "id": 2,
+        "var_sub": [
+          "b",
+          40
+        ],
+        "var_more": [
+          "skill",
+          999
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "cash",
+          80000
+        ],
+        "var_more": [
+          "skill",
+          2499
+        ],
+        "id": 2,
+        "var_sub": [
+          "b",
+          40
+        ],
+        "var_need": [
+          "b",
+          40
+        ],
+        "text": "Директор школы\n80000"
+      },
+      {
+        "var_need": [
+          "b",
+          50
+        ],
+        "var_add": [
+          "cash",
+          120000
+        ],
+        "var_more": [
+          "skill",
+          3499
+        ],
+        "id": 2,
+        "var_sub": [
+          "b",
+          50
+        ],
+        "text": "Мэр\n120000",
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "cash",
+          500000
+        ],
+        "var_sub": [
+          "b",
+          10
+        ],
+        "id": 2,
+        "var_more": [
+          "skill",
+          4999
+        ],
+        "var_need": [
+          "b",
+          10
+        ],
+        "text": "Депутат\n500000"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "<plus>100 знаний",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Далее",
+        "var_sub": [
+          "cash",
+          30000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "<plus>10 знаний",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Дальше",
+        "var_sub": [
+          "cash",
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Звезда",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Статус",
+        "comment": true,
+        "var_show": [
+          "sts"
+        ]
+      },
+      {
+        "id": 2,
+        "var_more": [
+          "sts",
+          500
+        ],
+        "var_add": [
+          "cash",
+          5000
+        ],
+        "text": "Общаться со знаменитостями"
+      },
+      {
+        "id": 2,
+        "text": "Сниматься в клипах со знаменитостями",
+        "var_add": [
+          "cash",
+          20000
+        ],
+        "var_more": [
+          "sts",
+          1500
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Идти на вечеринку знаменитостей",
+        "var_add": [
+          "cash",
+          50000
+        ],
+        "var_more": [
+          "sts",
+          3000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 8,
+        "text": "INSTAGRAM *BETA*",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "Выложить фотку\n10",
+        "var_add": [
+          "sts",
+          10
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Выложить клип \n50",
+        "var_add": [
+          "sts",
+          50
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Сделать обработки\n60",
+        "var_add": [
+          "sts",
+          60
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Магазин",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Cash:",
+        "comment": true,
+        "var_show": [
+          "cash"
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Купить квартиру\n20000",
+        "var_sub": [
+          "cash",
+          20000
+        ],
+        "var_more": [
+          "cash",
+          19999
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Купить авто\n50000",
+        "var_sub": [
+          "cash",
+          50000
+        ],
+        "var_more": [
+          "cash",
+          49999
+        ]
+      },
+      {
+        "var_add": [
+          "nokia3310",
+          1
+        ],
+        "id": 9,
+        "var_need": [
+          "cash",
+          500
+        ],
+        "text": "Купить Nokia3310\n500",
+        "var_sub": [
+          "cash",
+          500
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Купить еду\n500",
+        "var_sub": [
+          "cash",
+          500
+        ],
+        "var_more": [
+          "cash",
+          499
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Купить ПК\n10000",
+        "var_sub": [
+          "cash",
+          10000
+        ],
+        "var_more": [
+          "cash",
+          9999
+        ]
+      },
+      {
+        "id": 29,
+        "var_sub": [
+          "cash",
+          100000
+        ],
+        "text": "Купить лимузин\n100000",
+        "var_more": [
+          "cash",
+          99999
+        ]
+      },
+      {
+        "id": 30,
+        "var_sub": [
+          "cash",
+          500000
+        ],
+        "text": "Купить особняк\n500000",
+        "var_more": [
+          "cash",
+          499999
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "<plus>100 статуса",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "sts",
+          100
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "<plus>150 статуса",
+    "answers": [
+      {
+        "id": 2,
+        "text": "ok",
+        "var_add": [
+          "sts",
+          150
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "<plus>10 статуса",
+    "answers": [
+      {
+        "id": 2,
+        "text": "og",
+        "var_add": [
+          "sts",
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "<plus>100 статуса",
+    "answers": [
+      {
+        "id": 2,
+        "text": "OKAY",
+        "var_add": [
+          "sts",
+          100
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Бизнесы",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 16,
+    "text": "Хост",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "id": 17,
+        "var_sub": [
+          "cash",
+          20000
+        ],
+        "text": "Нанять персонала по коддингу\n20000",
+        "var_more": [
+          "cash",
+          19999
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          0.75,
+          0
+        ],
+        "var_less": [
+          "serv",
+          1
+        ],
+        "var_need": [
+          "cash",
+          4000
+        ],
+        "id": 21,
+        "text": "Открыть сервер\n4000",
+        "var_sub": [
+          "cash",
+          4000
+        ],
+        "var_set": [
+          "serv"
+        ]
+      },
+      {
+        "id": 26,
+        "bg_color": [
+          1,
+          0,
+          0
+        ],
+        "comment": false,
+        "var_sub": [
+          "cash",
+          5000
+        ],
+        "var_less": [
+          "prg",
+          1
+        ],
+        "text": "Создать приложение\n5000",
+        "var_need": [
+          "cash",
+          5000
+        ],
+        "var_set": [
+          "prg"
+        ]
+      },
+      {
+        "var_need": [
+          "cash",
+          500000
+        ],
+        "id": 78,
+        "var_less": [
+          "mg",
+          1
+        ],
+        "text": "Создать магазин игр\n500000",
+        "var_sub": [
+          "cash",
+          500000
+        ],
+        "var_set": [
+          "mg"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 18,
+        "text": "Ваш сервер",
+        "need": [
+          21
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Ваше приложение",
+        "need": [
+          26
+        ]
+      },
+      {
+        "id": 80,
+        "text": "Ваш магазин",
+        "need": [
+          78
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "<plus>1 персонал",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "per",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Статистика сервера\nЧтобы собрать прибыль нужно 3 персонала",
+    "answers": [
+      {
+        "var_show": [
+          "pop"
+        ],
+        "comment": true,
+        "id": 18,
+        "text": "Популярность:",
+        "var_set": [
+          "pop"
+        ]
+      },
+      {
+        "var_show": [
+          "kp"
+        ],
+        "comment": true,
+        "id": 18,
+        "text": "Колличество игроков:",
+        "var_set": [
+          "kp"
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Продать сервер",
+        "var_add": [
+          "cash",
+          4000
+        ],
+        "bg_color": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          0.5,
+          0
+        ],
+        "var_add": [
+          "kp",
+          50
+        ],
+        "id": 25,
+        "text": "Собрать прибыль",
+        "var_need": [
+          "per",
+          3
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 23,
+        "var_sub": [
+          "per",
+          1
+        ],
+        "text": "Собрать 2х прибыль",
+        "var_need": [
+          "per",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Статистика приложения",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Популярность:"
+      },
+      {
+        "id": 27,
+        "text": "Колличество людей:"
+      },
+      {
+        "id": 28,
+        "text": "Продать приложение"
+      },
+      {
+        "id": 29,
+        "text": "Собрать прибыль"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Статистика магазина",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 30,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 32,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "ВЫ КУПИЛИ СЕРВЕР",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Ок",
+        "var_add": [
+          "serv",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Популярность повышена",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "pop",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Вы собрали 100к",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "cash",
+          100000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "СЕРВЕР ПРОДАН",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_sub": [
+          "serv",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Прибыль собрана",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Ок",
+        "var_add": [
+          "cash",
+          50000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "ВЫ СОЗДАЛИ ПРИЛОЖЕНИЕ",
+    "answers": [
+      {
+        "id": 33,
+        "text": "Ок",
+        "var_add": [
+          "prg",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 29,
+    "text": "<plus>300 статуса",
+    "answers": [
+      {
+        "id": 2,
+        "text": "ок",
+        "var_add": [
+          "sts",
+          300
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "<plus>500 статуса",
+    "answers": [
+      {
+        "id": 2,
+        "text": "ок",
+        "var_add": [
+          "sts",
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 33,
+    "text": "Ваше приложение\nЧтобы собрать прибыль нужно 5 персонала",
+    "answers": [
+      {
+        "var_show": [
+          "pop2"
+        ],
+        "comment": true,
+        "id": 33,
+        "text": "Популярность:",
+        "var_set": [
+          "pop2"
+        ]
+      },
+      {
+        "var_show": [
+          "kl2"
+        ],
+        "comment": true,
+        "id": 33,
+        "text": "Колличество людей:",
+        "var_set": [
+          "kl2"
+        ]
+      },
+      {
+        "id": 36,
+        "text": "Продать приложение",
+        "var_add": [
+          "cash",
+          5000
+        ],
+        "bg_color": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          0.75,
+          0
+        ],
+        "var_add": [
+          "cash",
+          100000
+        ],
+        "id": 37,
+        "var_need": [
+          "per",
+          5
+        ],
+        "text": "Собрать прибыль"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 39,
+        "var_sub": [
+          "per",
+          1
+        ],
+        "text": "Собрать 2х прибыль",
+        "var_need": [
+          "per",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "И популярность",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "pop2",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Ассортимент\n",
+    "answers": [
+      {
+        "id": 35,
+        "text": "StarCoin в наличии:",
+        "comment": true,
+        "var_show": [
+          "sc"
+        ]
+      },
+      {
+        "id": 41,
+        "text": "1000000 cash = 1 SC",
+        "var_sub": [
+          "sc",
+          1
+        ],
+        "var_need": [
+          "sc",
+          1
+        ]
+      },
+      {
+        "id": 42,
+        "text": "5000 status = 3 SC",
+        "var_sub": [
+          "sc",
+          3
+        ],
+        "var_need": [
+          "sc",
+          3
+        ]
+      },
+      {
+        "id": 43,
+        "text": "10000 skill = 5 SC",
+        "var_sub": [
+          "sc",
+          5
+        ],
+        "var_need": [
+          "sc",
+          5
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "ВЫ ПРОДАЛИ ПРИЛОЖЕНИЕ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_sub": [
+          "prg",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Вы заработали 100к",
+    "answers": [
+      {
+        "id": 34,
+        "text": "Ок",
+        "var_add": [
+          "kl2",
+          50
+        ]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Карта путешествий",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          0,
+          0
+        ],
+        "var_more": [
+          "cash",
+          99999
+        ],
+        "id": 44,
+        "var_sub": [
+          "cash",
+          100000
+        ],
+        "text": "Лететь в Турцию\n100000",
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/17/549358bfe91ff1e911fdcf3788b38227-full.png"
+        ]
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "var_add": [
+          "sts",
+          1000
+        ],
+        "var_need": [
+          "cash",
+          500000
+        ],
+        "id": 46,
+        "text": "Лететь в Америку\n500000",
+        "var_sub": [
+          "cash",
+          500000
+        ],
+        "answerImage": [
+          "https://cdn1.worldpng.ru/uploads/2021/2/17/0341e5446e29754153b710ba8e57838f-full.png"
+        ]
+      },
+      {
+        "comment": false,
+        "var_sub": [
+          "cash",
+          700000
+        ],
+        "id": 70,
+        "var_need": [
+          "cash",
+          700000
+        ],
+        "text": "Лететь в Японию\n700000",
+        "answerImage": [
+          "https://b.radikal.ru/b17/2102/24/27a6e5dfb39a.png"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Вы заработали 200к",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "cash",
+          200000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Вы получили 1 StarCoin\nЗа статус 10000\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "sc",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Вы приобрели милион кеша",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "cash",
+          10000000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Вы приобрели 5000 статуса",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "sts",
+          5000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Вы приобрели 10к навыка",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок",
+        "var_add": [
+          "skill",
+          10000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Вы в Турции",
+    "answers": [
+      {
+        "var_show": [
+          "cash"
+        ],
+        "comment": true,
+        "id": 44,
+        "text": "Cash:",
+        "var_set": [
+          "cash"
+        ]
+      },
+      {
+        "var_show": [
+          "rt"
+        ],
+        "comment": true,
+        "id": 44,
+        "text": "Репутация в Турции:",
+        "var_set": [
+          "rt"
+        ]
+      },
+      {
+        "id": 49,
+        "text": "Идти в Турецкий магазин"
+      },
+      {
+        "id": 50,
+        "text": "Обучение Турции"
+      },
+      {
+        "id": 51,
+        "text": "Работа в Турции"
+      },
+      {
+        "id": 71,
+        "text": "Создать Турецкое общество",
+        "need": -71,
+        "var_need": [
+          "rt",
+          10
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          0,
+          0
+        ],
+        "var_add": [
+          "rt",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Лететь обратно"
+      },
+      {
+        "id": 72,
+        "text": "Ваше общество",
+        "need": [
+          71
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Навык:",
+        "comment": true,
+        "var_show": [
+          "skill"
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Статус:",
+        "comment": true,
+        "var_show": [
+          "sts"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Это справочник по версиям начиная с 1.6\n1.6\n★Страна Турция\n★Доступны путешествия\n★В Турции новые работы обучение магазин\n1.7\n★Страна Америка\n★В Америке новые работы обучение магазин\n1.8\n★Благотворительность\n1.9\n★Действия прижаты к правой стороне\n2.0\n★Новое главное меню\n★Бета тест совместного режима\n2.1\n★Шкала бодрости\n2.2\n★Исправление багов\n2.3\n★Страна Япония\n★Новая обложка\n2.4\n★Создание банды в Америке\n★Создание банды в Турции\n2.5\n★Магазин игр\n★Исправление багов\n2.6\n★Чит меню\n2.7\n★Фон обложки 2 версии\n2.8\n★Новости\n★Участники дискорда\n2.9\n★ BETA INSTAGRAM\n3.0\n★Сюжетный режим\n3.1\n★Достижения\n3.2\n★Оформление главного экрана\n3.3\n★Ваш профиль\n3.4\n★Система общения\n★Система телефонов\n★Nokia3310\n3.5\n★Новые достижения\n★Затемнение\n3.5\n☆Исправление грамматики в сюж.режиме\n3.6\n☆Исправление грамматики в одиночной игре\n3.7\n☆Удобное игровое меню\n3.9\n☆Фон\n4.0\n☆Release\n4.1\n☆Демо версия 2 ветки\n4.2\n☆Обложка \n4.3\n☆Прогресс инвестиций 1\n4.4\n☆Лето\n4.5\n☆Альфа версия 2 ветки\n4.6\n☆Бета версия 2 ветки",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Вы в Америке",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Cash",
+        "comment": true,
+        "var_show": [
+          "cash"
+        ]
+      },
+      {
+        "var_show": [
+          "ra"
+        ],
+        "comment": true,
+        "id": 46,
+        "text": "Репутация Америки",
+        "var_set": [
+          "ra"
+        ]
+      },
+      {
+        "id": 62,
+        "text": "Работа в Америке"
+      },
+      {
+        "id": 63,
+        "text": "Обучение в Америке"
+      },
+      {
+        "id": 64,
+        "text": "Магазин"
+      },
+      {
+        "id": 76,
+        "text": "Создать банду\n300000",
+        "need": -76,
+        "var_need": [
+          "ra",
+          15
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          0,
+          0
+        ],
+        "var_add": [
+          "ra",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Лететь обратно"
+      },
+      {
+        "id": 77,
+        "text": "Ваша банда",
+        "need": [
+          76
+        ]
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "<plus>500 статуса",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Ок",
+        "var_add": [
+          "sts",
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "<plus>700 статуса",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Ок",
+        "var_add": [
+          "sts",
+          700
+        ]
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Магазин",
+    "answers": [
+      {
+        "id": 47,
+        "text": "Купить сувениры\n10000",
+        "var_more": [
+          "cash",
+          9999
+        ],
+        "var_sub": [
+          "cash",
+          10000
+        ]
+      },
+      {
+        "var_add": [
+          "rt",
+          5
+        ],
+        "id": 48,
+        "var_more": [
+          "cash",
+          39999
+        ],
+        "var_sub": [
+          "cash",
+          40000
+        ],
+        "text": "Купить Турецкий флаг\n40000"
+      },
+      {
+        "id": 52,
+        "text": "Купить авто\n100000",
+        "var_more": [
+          "cash",
+          99999
+        ],
+        "var_sub": [
+          "cash",
+          100000
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Обучение",
+    "answers": [
+      {
+        "id": 53,
+        "text": "Стандартное обучение\n50000",
+        "var_more": [
+          "cash",
+          49999
+        ],
+        "var_sub": [
+          "cash",
+          50000
+        ]
+      },
+      {
+        "id": 54,
+        "text": "Професиональное обучение\n100000",
+        "var_more": [
+          "cash",
+          99999
+        ],
+        "var_sub": [
+          "cash",
+          100000
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "Работа",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Уборщик\n1000",
+        "var_add": [
+          "cash",
+          1000
+        ],
+        "var_more": [
+          "skill",
+          299
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Консультант\n8000",
+        "var_add": [
+          "cash",
+          8000
+        ],
+        "var_more": [
+          "skill",
+          499
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "<plus>1000 статуса",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Ок",
+        "var_add": [
+          "sts",
+          1000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "<plus>200 знаний",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Ок",
+        "var_add": [
+          "skill",
+          200
+        ]
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "<plus>300 знаний",
+    "answers": [
+      {
+        "id": 44,
+        "text": "ок",
+        "var_add": [
+          "skill",
+          300
+        ]
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "Магазин",
+    "answers": [
+      {
+        "id": 56,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 57,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 58,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 59,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 57,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 58,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 59,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 60,
+    "text": "Благотворительность",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Вложить в Дет.Дом\n500000",
+        "var_need": [
+          "cash",
+          500000
+        ],
+        "var_sub": [
+          "cash",
+          500000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Вложить в дом пристарелых\n500000",
+        "var_need": [
+          "cash",
+          500000
+        ],
+        "var_sub": [
+          "cash",
+          500000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Вложить в  приюты для животных\n500000",
+        "var_need": [
+          "cash",
+          500000
+        ],
+        "var_sub": [
+          "cash",
+          500000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "Меню",
+    "answers": [
+      {
+        "id": 65,
+        "text": "Сессия",
+        "room": [
+          30,
+          10
+        ]
+      },
+      {
+        "id": 61,
+        "text": "Сессия",
+        "comment": true,
+        "room": [
+          30,
+          10
+        ]
+      },
+      {
+        "id": 61,
+        "text": "Сессия",
+        "comment": true,
+        "room": [
+          30,
+          10
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "Работа",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Уборщик\n10000",
+        "var_add": [
+          "cash",
+          10000
+        ],
+        "var_need": [
+          "skill",
+          500
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Курьер\n30000",
+        "var_add": [
+          "cash",
+          30000
+        ],
+        "var_need": [
+          "skill",
+          1000
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "Обучение",
+    "answers": [
+      {
+        "var_add": [
+          "skill",
+          500
+        ],
+        "id": 46,
+        "var_need": [
+          "cash",
+          10000
+        ],
+        "var_sub": [
+          "cash",
+          10000
+        ],
+        "text": "Школьная программа\n10000"
+      },
+      {
+        "var_add": [
+          "skill",
+          600
+        ],
+        "id": 46,
+        "var_need": [
+          "cash",
+          50000
+        ],
+        "var_sub": [
+          "cash",
+          50000
+        ],
+        "text": "Дополнительное обучение\n50000"
+      },
+      {
+        "var_add": [
+          "skill",
+          900
+        ],
+        "id": 46,
+        "var_need": [
+          "cash",
+          100000
+        ],
+        "var_sub": [
+          "cash",
+          100000
+        ],
+        "text": "Высшее обучение\n100000"
+      },
+      {
+        "id": 46,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "Магазин",
+    "answers": [
+      {
+        "var_add": [
+          "sts",
+          1000
+        ],
+        "id": 46,
+        "text": "Купить флаг Америки\n100000",
+        "var_sub": [
+          "cash",
+          100000
+        ],
+        "var_need": [
+          "cash",
+          100000
+        ]
+      },
+      {
+        "var_add": [
+          "sts",
+          500
+        ],
+        "id": 46,
+        "text": "Купить сувениры\n50000",
+        "var_sub": [
+          "cash",
+          50000
+        ],
+        "var_need": [
+          "cash",
+          50000
+        ]
+      },
+      {
+        "var_add": [
+          "sts",
+          2000
+        ],
+        "id": 46,
+        "text": "Купить огнестрел\n100000",
+        "var_sub": [
+          "cash",
+          100000
+        ],
+        "var_need": [
+          "cash",
+          100000
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "Статистика",
+    "answers": [
+      {
+        "var_show": [
+          "scash"
+        ],
+        "comment": true,
+        "id": 65,
+        "text": "Cash:",
+        "var_set": [
+          "scash"
+        ]
+      },
+      {
+        "var_show": [
+          "sskill"
+        ],
+        "comment": true,
+        "id": 65,
+        "text": "Навык:",
+        "var_set": [
+          "sskill"
+        ]
+      },
+      {
+        "var_show": [
+          "ssts"
+        ],
+        "comment": true,
+        "id": 65,
+        "text": "Статус:",
+        "var_set": [
+          "ssts"
+        ]
+      },
+      {
+        "id": 66,
+        "text": "Работать"
+      },
+      {
+        "id": 67,
+        "text": "Магазин"
+      },
+      {
+        "id": 68,
+        "text": "Обучение"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "Работа",
+    "answers": [
+      {
+        "id": 65,
+        "text": "Уборщик\n50",
+        "var_add": [
+          "scash",
+          50
+        ]
+      },
+      {
+        "id": 65,
+        "text": "Консультант\n500",
+        "var_add": [
+          "scash",
+          500
+        ],
+        "var_need": [
+          "sskill",
+          50
+        ]
+      },
+      {
+        "id": 65,
+        "text": "Охранник\n1000",
+        "var_add": [
+          "scash",
+          1000
+        ],
+        "var_need": [
+          "sskill",
+          150
+        ]
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "Магазин",
+    "answers": [
+      {
+        "var_add": [
+          "ssts",
+          100
+        ],
+        "id": 65,
+        "var_sub": [
+          "scash",
+          500
+        ],
+        "var_need": [
+          "scash",
+          500
+        ],
+        "text": "Купить еду\n500"
+      },
+      {
+        "var_add": [
+          "ssts",
+          500
+        ],
+        "id": 65,
+        "var_sub": [
+          "scash",
+          10000
+        ],
+        "var_need": [
+          "scash",
+          10000
+        ],
+        "text": "Купить телевизор\n10000"
+      },
+      {
+        "id": 65,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "Обучение",
+    "answers": [
+      {
+        "var_add": [
+          "sskill",
+          50
+        ],
+        "id": 65,
+        "var_sub": [
+          "scash",
+          500
+        ],
+        "var_need": [
+          "scash",
+          500
+        ],
+        "text": "Эконом уроки\n500"
+      },
+      {
+        "id": 65,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "Развлечения и отдых ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Поспать\n10 бодрость",
+        "var_add": [
+          "b",
+          10
+        ]
+      },
+      {
+        "var_add": [
+          "b",
+          50
+        ],
+        "id": 2,
+        "var_need": [
+          "cash",
+          500
+        ],
+        "text": "Покушать\n50 бодрость\n500р",
+        "var_sub": [
+          "cash",
+          500
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Смотреть фильмы\n20 бодрость",
+        "var_add": [
+          "b",
+          20
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Сыворотка энергии\n500 бодрость\n100к",
+        "var_add": [
+          "b",
+          500
+        ],
+        "var_sub": [
+          "cash",
+          100000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "var_add": [
+          "b",
+          1000000
+        ],
+        "id": 191,
+        "var_sub": [
+          "cash",
+          5000000
+        ],
+        "text": "Сыворотка \"Без Сна\"\n1кк бодрость\n5кк",
+        "var_need": [
+          "cash",
+          5000000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "Вы в Японии",
+    "answers": [
+      {
+        "id": 70,
+        "text": "Cash:",
+        "comment": true,
+        "var_show": [
+          "cash"
+        ]
+      },
+      {
+        "var_show": [
+          "rya"
+        ],
+        "comment": true,
+        "id": 70,
+        "text": "Репутация в Японии:",
+        "var_set": [
+          "rya"
+        ]
+      },
+      {
+        "id": 73,
+        "text": "Работа в Японии"
+      },
+      {
+        "id": 74,
+        "text": "Обучение Японии"
+      },
+      {
+        "id": 75,
+        "text": "Магазин"
+      },
+      {
+        "bg_color": [
+          1,
+          0,
+          0
+        ],
+        "var_add": [
+          "rya",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Лететь обратно"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "Вы создали Турецкое общество",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Ок"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "Ваше общество",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Отжимать деньги у прохожих\n6000",
+        "var_add": [
+          "cash",
+          6000
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Грабить магазины\n30000",
+        "var_add": [
+          "cash",
+          30000
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Грабить автомобили\n40000",
+        "var_add": [
+          "cash",
+          40000
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "Работа",
+    "answers": [
+      {
+        "id": 70,
+        "text": "Уборщик\n5000",
+        "var_add": [
+          "cash",
+          5000
+        ],
+        "var_need": [
+          "skill",
+          500
+        ]
+      },
+      {
+        "id": 70,
+        "text": "Продавец\n8000",
+        "var_add": [
+          "cash",
+          8000
+        ],
+        "var_need": [
+          "skill",
+          1000
+        ]
+      },
+      {
+        "id": 70,
+        "text": "Громила\n10000",
+        "var_add": [
+          "cash",
+          10000
+        ],
+        "var_need": [
+          "skill",
+          1500
+        ]
+      },
+      {
+        "id": 70,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "Обучение",
+    "answers": [
+      {
+        "var_add": [
+          "skill",
+          1000
+        ],
+        "id": 70,
+        "var_need": [
+          "cash",
+          100000
+        ],
+        "text": "Эконом уроки\n100000",
+        "var_sub": [
+          "cash",
+          100000
+        ]
+      },
+      {
+        "var_add": [
+          "skill",
+          1000,
+          "rya",
+          5
+        ],
+        "id": 70,
+        "var_need": [
+          "cash",
+          500000
+        ],
+        "text": "Уроки Японского\n500000",
+        "var_sub": [
+          "cash",
+          500000
+        ]
+      },
+      {
+        "id": 70,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "Магазин",
+    "answers": [
+      {
+        "var_add": [
+          "sts",
+          300
+        ],
+        "id": 70,
+        "var_need": [
+          "cash",
+          50000
+        ],
+        "text": "Купить флаг Японии\n50000",
+        "var_sub": [
+          "cash",
+          50000
+        ]
+      },
+      {
+        "var_add": [
+          "sts",
+          800
+        ],
+        "id": 70,
+        "var_need": [
+          "cash",
+          60000
+        ],
+        "text": "Купить мангу\n60000",
+        "var_sub": [
+          "cash",
+          60000
+        ]
+      },
+      {
+        "var_add": [
+          "sts",
+          1000
+        ],
+        "id": 70,
+        "var_need": [
+          "cash",
+          100000
+        ],
+        "text": "Купить анимешные сувениры\n100000",
+        "var_sub": [
+          "cash",
+          100000
+        ]
+      },
+      {
+        "id": 70,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "Вы создали банду",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Ок"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "Ваша банда",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Воевать с другой бандой\n50000",
+        "var_add": [
+          "cash",
+          50000
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Грабить магазины\n80000",
+        "var_add": [
+          "cash",
+          80000
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Начать перестрелки\n20000",
+        "var_add": [
+          "cash",
+          20000
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "Вы создали магазин игр",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Ок",
+        "var_add": [
+          "mg",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "Чит меню",
+    "answers": [
+      {
+        "id": 2,
+        "text": "player.addvar:cash [50000000]",
+        "var_add": [
+          "cheat",
+          1,
+          "cash",
+          50000000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "player.addvar:skill [50000000]",
+        "var_add": [
+          "cheat",
+          1,
+          "skill",
+          50000000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "player.addvar:sts [50000000]",
+        "var_add": [
+          "cheat",
+          1,
+          "sts",
+          50000000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "player.addvar:b [50000000]",
+        "var_add": [
+          "cheat",
+          1,
+          "b",
+          50000000
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "var_show": [
+          "cheat"
+        ],
+        "comment": true,
+        "id": 79,
+        "text": "Использованно читов:",
+        "var_set": [
+          "cheat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "Ваш магазин игр\nДля работы требуется 5 персонала",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Персонал:",
+        "comment": true,
+        "var_show": [
+          "per"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Собрать прибыль",
+        "var_add": [
+          "cash",
+          400000
+        ],
+        "var_need": [
+          "per",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "cash",
+          800000
+        ],
+        "id": 2,
+        "var_sub": [
+          "per",
+          5
+        ],
+        "text": "Собрать прибыль х2",
+        "var_need": [
+          "per",
+          5
+        ]
+      },
+      {
+        "id": 84,
+        "text": "Посмотреть доступные игры"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 2,
+        "var_sub": [
+          "mg",
+          5
+        ],
+        "var_add": [
+          "cash",
+          300000
+        ],
+        "text": "Продать магазин"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "Последняя новость:\nВ 3.0 версии хочу добавить сюжетный режим и обновить обложку\nПоследняя новость:\nНачало разработки сюжетного режима\nПоследняя новость:\nСюжетный режим готов на 40%\nПоследняя новость:\nСюжетный режим готов на 60%\nПоследняя новость:\nКто сможет получить все 5 достижений\nПоследняя новость:\nКогда версия дойдет до 4.0 тогда будет офицальный выпуск из беты в Release",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "Эта небольшпя инструкция поможет выжить тебе в этом мире\n1.\nБез обучения нет денег\nНужно обучаться чтобы открыть новые более оплачиваемые работы\n2.\nСтатус не главное\nСтатус по большей части не нужен он создан для того чтобы в звездных делах появились новые вкладки которые принесут по 5-10 тысяч\n3.\nБез денег не едь за границу\nКрайне не советую ездить за границу без денег и навыков там вам нечего будет делать\n4.\nЧиты не выход\nНикогда не читери и не заходи в меню читов.Это плохо",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "Вы родились\nВ вашей жизни не произошло ничего сильно интересного\nВаш возраст:1",
+    "answers": [
+      {
+        "var_show": [
+          "sila"
+        ],
+        "comment": true,
+        "id": 83,
+        "text": "Сила:",
+        "var_set": [
+          "sila"
+        ]
+      },
+      {
+        "var_show": [
+          "inte"
+        ],
+        "comment": true,
+        "id": 83,
+        "text": "Интелект:",
+        "var_set": [
+          "inte"
+        ]
+      },
+      {
+        "var_show": [
+          "obsh"
+        ],
+        "comment": true,
+        "id": 83,
+        "text": "Общение:",
+        "var_set": [
+          "obsh"
+        ]
+      },
+      {
+        "id": 86,
+        "text": "Играть с игрушками\n[Сила]",
+        "var_add": [
+          "sila",
+          1
+        ]
+      },
+      {
+        "id": 86,
+        "text": "Читать книжки\n[Интелект]",
+        "var_add": [
+          "inte",
+          1
+        ]
+      },
+      {
+        "id": 86,
+        "text": "Общаться с детьми\n[Общение]",
+        "var_add": [
+          "obsh",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "Ваши игры",
+    "answers": [
+      {
+        "id": 84,
+        "text": "GRAND THEFT AUTO V",
+        "comment": true
+      },
+      {
+        "id": 84,
+        "text": "THE ELDER SCROLLS 5 SKYRIM",
+        "comment": true
+      },
+      {
+        "id": 84,
+        "text": "GRAND THEFT AUTO SAN ANDERAS",
+        "comment": true
+      },
+      {
+        "id": 84,
+        "text": "RED DEAD REDEMPTION 2",
+        "comment": true
+      },
+      {
+        "id": 80,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "Вы начинали заканчивать домашнее обучение.Родители пытались скопить на лечение Маши, но  у них плохо получалось.\nВаш возраст:8\nВозраст сестры:5 [Болеет]",
+    "answers": [
+      {
+        "id": 85,
+        "text": "Сила:",
+        "comment": true,
+        "var_show": [
+          "sila"
+        ]
+      },
+      {
+        "id": 85,
+        "text": "Интелект:",
+        "comment": true,
+        "var_show": [
+          "inte"
+        ]
+      },
+      {
+        "id": 85,
+        "text": "Общение:",
+        "comment": true,
+        "var_show": [
+          "obsh"
+        ]
+      },
+      {
+        "id": 89,
+        "text": "Год спустя"
+      },
+      {
+        "id": 92,
+        "text": "Отдать заработанные деньги",
+        "var_need": [
+          "cash",
+          1000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "Вы жили уже 2 год немного учились говорить\nВаш возраст:2",
+    "answers": [
+      {
+        "id": 90,
+        "text": "Год спустя"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "Вы начали немного играть с сестрой пусть она была и маленькая\nВаш возраст:4\nВозраст сестры:1",
+    "answers": [
+      {
+        "id": 88,
+        "text": "Еще 1 год"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "Родители купили вам коробочку сока.\n\"Впервые пробую сок.Он такой вкусный\"\nВаш возраст:5\nВозраст сестры:2",
+    "answers": [
+      {
+        "id": 91,
+        "text": "Спустя год"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "Ваша сестра....\nУ нее была сильная пневмания для ее лечения требовалась большая сумма.....\nВаша семья была бедна......\nНе смогла набрать столько......\nОна умерла\nВаш возраст:9",
+    "answers": [
+      {
+        "id": 93,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "Вам 3 года и у вас появилась сестра почему-то родители плакали\nВаш возраст:3\nВозраст сестры:0",
+    "answers": [
+      {
+        "id": 87,
+        "text": "Прожать год"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "На школу у вашей семьи не было денег поэтому вас решил обучать мать\n\"Мама хорошо учит\"\nВаш возраст:6\nВозраст сестры:3",
+    "answers": [
+      {
+        "id": 91,
+        "text": "Сила:",
+        "comment": true,
+        "var_show": [
+          "sila"
+        ]
+      },
+      {
+        "id": 91,
+        "text": "Интелект:",
+        "comment": true,
+        "var_show": [
+          "inte"
+        ]
+      },
+      {
+        "id": 91,
+        "text": "Общение:",
+        "comment": true,
+        "var_show": [
+          "obsh"
+        ]
+      },
+      {
+        "id": 95,
+        "text": "Гулять на улице\n[Сила]",
+        "var_add": [
+          "sila",
+          1
+        ]
+      },
+      {
+        "id": 95,
+        "text": "Учить уроки\n[Интелект]",
+        "var_add": [
+          "inte",
+          1
+        ]
+      },
+      {
+        "id": 95,
+        "text": "Общаться с сестрой\n[Общение]",
+        "var_add": [
+          "obsh",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "Сестра болела....\nНужна была большая сумма.....\n1000 рублей.....\nИм не хватало еще 100.....\nНо благодоря вашим работам вы смогли.....\nВылечить сестру\nВаш возраст:9",
+    "answers": [
+      {
+        "id": 93,
+        "text": "Год "
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "Вам наступило 10 лет и на эту великую дату родители решили собрать деньги и подарить вам подарок.\nПодарок этот школа\nВаш возраст:10",
+    "answers": [
+      {
+        "id": 94,
+        "text": "Год спустя"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "Вы начинали усердно учиться в школе.Пока все шло вполне хорошо.\nВаш возраст:11",
+    "answers": [
+      {
+        "id": 97,
+        "text": "Спустя год"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "Я продолжал обучаться но вдруг сестра заболелела для ее лечения нужны были большие деньги.\n\"Мама с папой плакали,а сестра лежала\"\nВаш возраст:7\nВозраст сестры:4 [Болеет]",
+    "answers": [
+      {
+        "id": 85,
+        "text": "Еще год"
+      },
+      {
+        "id": 96,
+        "var_need": [
+          "sila",
+          2
+        ],
+        "text": "Работать грузчиком"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "Вы стали подрабатывать грузчиком и заработали неплохую сумму за год около 100 рублей.\nВаш возраст:7\nВозраст сестры:4 [Болеет]",
+    "answers": [
+      {
+        "id": 85,
+        "text": "Год спустя",
+        "var_add": [
+          "cash",
+          1000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "А вот и первые школьные проблемы.Вас хочет избить местный хулиган.Что вы предпочтете делать.\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 98,
+        "text": "Избить хулигана",
+        "var_need": [
+          "sila",
+          2
+        ]
+      },
+      {
+        "id": 99,
+        "text": "Договориться",
+        "var_need": [
+          "obsh",
+          1
+        ]
+      },
+      {
+        "id": 100,
+        "text": "Ничего не делать"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "text": "Вы решили отомстить и избить хулигана.Вы случайно перестарались.\nИ.....\nУбили....\nЕго.....\nВас выгнали из школы и посадили в тюрьму.\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 101,
+        "text": "Отбыть срок"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "text": "Вы смогли договоритьсяя с хулиганом.Но при этом он решил избить вашего одноклассника.\nИ....\nУмер....\nМиша.....\nВаш одноклассник.....\nЭто был ваш лучший друг.....\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 102,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "text": "Вы решили просто поддаться.Вас толкнул хулиган.\nИ....\nВы.....\nУдарились головой о железный стул....\nВаш.....\nЖизненный......\nПуть......\nОкончен......\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Смерть"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "text": "Вы отбыли и вышли из тюрьмы\nВаш возраст:15",
+    "answers": [
+      {
+        "id": 109,
+        "text": "Ок"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "text": "Вы решили уже уходить из школы.Она была дорогая 300 рублей в год.\n*сирена*\n*Диктор* ВНИМАНИЕ ГРАЖДАНЕ СЕГОДНЯ В 21:00 СОСТОИТСЯ КАЗНЬ НАРУШИТЕЛЯ ЗАКОНА.\nВы решили пойти на казнь\nВаш возраст:13",
+    "answers": [
+      {
+        "id": 103,
+        "text": "На казнь"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "text": "Казнили хулигана того самого которого вы встретили.\n*Диктор* ВНИМАНИЕ ХАРАКТЕРИСТИКИ ПРЕСТУПНИКА ИМЯ:АЛЕКСЕЙ ВОЗРАСТ: 19 ПРЕСТУПЛЕНИЕ УБИЙСТВО РЕБЕНКА\n*Большая пила упала на шею алексея*\nВаш возраст:13",
+    "answers": [
+      {
+        "id": 104,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "text": "Вам 14 лет самое время для больших гулянок.Вас пригласили на дискотеку.Вы решили пойти.Ваши действия на дискотеке\nВаш возраст:14",
+    "answers": [
+      {
+        "id": 105,
+        "text": "Искать пару"
+      },
+      {
+        "id": 106,
+        "text": "Пить алкоголь"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "text": "Вы немного поискали  и вдруг нашли.Ее звали Маша как и вашу сестру.Она была невероятно красивой.\nВаш возраст:14",
+    "answers": [
+      {
+        "id": 107,
+        "text": "Поговорить"
+      },
+      {
+        "id": 106,
+        "text": "Пить алкоголь"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "text": "Вы пили водку и  в итоге вы проснулись дома на кровати\nВаш возраст:14",
+    "answers": [
+      {
+        "id": 109,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "text": "Вы поговорили с Машей.И потом все было как в тумане.Вы проснулись дома но кровати\nВаш возраст:14",
+    "answers": [
+      {
+        "id": 109,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "text": "Пены становилось все больше но вы продолжали игнорировать ее в итоге она умерла.\nВаш возраст:15",
+    "answers": [
+      {
+        "id": 114,
+        "text": "На похоронах"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "text": "Вы читали старые газеты записки долги.Но вдруг\nВаша мать упала на пол у нее пошла пена из зо рта.Возможно из-за нервов ведь ей приходилось работать на 3 работах\nВаш возраст:15",
+    "answers": [
+      {
+        "id": 108,
+        "text": "Игнорировать"
+      },
+      {
+        "id": 110,
+        "text": "Подойти"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "text": "Вы выбросили газеты и подбежали  к матери.Пены становилось больше.У нее начались судороги\nВаш возраст:15",
+    "answers": [
+      {
+        "id": 111,
+        "text": "Еще год"
+      },
+      {
+        "id": 112,
+        "text": "Первая помощь",
+        "var_need": [
+          "inte",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "text": "Ваша мать лежала в больнице вы все сильно плакали но это не помогало\nВаш возраст:16",
+    "answers": [
+      {
+        "id": 116,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "text": "Вы сделали действия первой помощи но навыков не хватало и когда пришел отец вы отнесли мать в больницу\nВаш возраст:15",
+    "answers": [
+      {
+        "id": 111,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "text": "Ваш профиль",
+    "answers": [
+      {
+        "id": 129,
+        "text": "Рынок"
+      },
+      {
+        "id": 123,
+        "text": "Достижения",
+        "right_answer": true
+      },
+      {
+        "id": 113,
+        "text": "Ваши моды\n*Недоступен*",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "id": 113,
+        "text": "Ваши дополнения\n*Недоступен*",
+        "comment": true,
+        "right_answer": true
+      },
+      {
+        "id": 1,
+        "text": "Выйти"
+      },
+      {
+        "id": 2,
+        "text": "Выйти в одиночную игру"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "text": "Ваша...\nМать....\nПогибла...\nОт приступа неизвестной болезеи.....\nВам всего 15 лет......",
+    "answers": [
+      {
+        "id": 115,
+        "text": "Спустя год"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "text": "Вы сильно сожелели что не помогли матери вас это гнобило.....\nВы взяли нож и вставили его себе в горло",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Смерть"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "text": "В итоге врачи не смогли вылечить вашу мать и она умерла в больнице.\nВаш возраст:17",
+    "answers": [
+      {
+        "id": 117,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "text": "Вы решили покончить с этим.\nПоднялись....\nНа крышу....\nИ встали......\nНа край.....\nВаш возраст:18",
+    "answers": [
+      {
+        "id": 118,
+        "text": "Прыгнуть"
+      },
+      {
+        "id": 119,
+        "text": "Уговаривать себя не прыгать"
+      },
+      {
+        "id": 120,
+        "text": "Не прыгать",
+        "var_more": [
+          "obsh",
+          0
+        ],
+        "var_need": [
+          "inte",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "text": "Вы покончили с жизнью",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Смерть"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "text": "Вы пытались сопротивляться и смогли все таки жизнь не так плоха\nВаш возраст:18",
+    "answers": [
+      {
+        "id": 120,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "text": "Вы решили не прыгать и прожили еще один такой же год.\nВам уже 19 нужно бы уезжать от отца\nВаш возраст:19",
+    "answers": [
+      {
+        "id": 121,
+        "text": "Уехать"
+      },
+      {
+        "id": 122,
+        "text": "Не уезжать"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "text": "Вы уехали от отца взяли свои деньги и поскорее съехали",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Самостоятельная жизнь"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "text": "Вы остались у отца и в итоге прожили такую же жизнь.Правда через 4 года ваш отец умер от чумы а вы с сестрой остались дальше жить.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "text": "Достижения",
+    "answers": [
+      {
+        "id": 124,
+        "text": "Самоубийство",
+        "need": [
+          118
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 125,
+        "text": "Читер",
+        "need": [
+          79
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 126,
+        "text": "Пацифист",
+        "need": [
+          120
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 127,
+        "text": "Звезда кооператива",
+        "need": [
+          61
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 128,
+        "text": "Ну че пацаны аниме?",
+        "need": [
+          70
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 137,
+        "text": "Один за одного",
+        "need": [
+          98
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 138,
+        "text": "Все мои волки делают АУФ",
+        "need": [
+          136
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 113,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "text": "Вы решили пойти легким путем и получили это достижение",
+    "answers": [
+      {
+        "id": 123,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "text": "Вы решили быть жуликом и открыли чит меню.Ай ай ай как не стыдно теперь живите с этим достижением",
+    "answers": [
+      {
+        "id": 123,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "text": "Вы не умерли за весь сюжетный режим поздравляю",
+    "answers": [
+      {
+        "id": 123,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "text": "Вы решили зайти в замшелый сетевой режим?\nАга ясно ну тогда держите достижение",
+    "answers": [
+      {
+        "id": 123,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "text": "Решил в Японию уехать?\nНу тогда даю совет\nОторвись от этого квеста и сходи посмотри анимешку",
+    "answers": [
+      {
+        "id": 123,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "text": "Рынок",
+    "answers": [
+      {
+        "id": 130,
+        "text": "Модификации",
+        "comment": false,
+        "left_answer": true
+      },
+      {
+        "id": 129,
+        "text": "Дополнения",
+        "comment": true,
+        "right_answer": true
+      },
+      {
+        "id": 129,
+        "text": "Топ модов и дополнений",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 113,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "text": "Модификации",
+    "answers": [
+      {
+        "id": 131,
+        "text": "Work"
+      },
+      {
+        "id": 132,
+        "text": "Magazine"
+      },
+      {
+        "id": 129,
+        "text": "Назад"
+      },
+      {
+        "id": 130,
+        "text": "Убрать модификации",
+        "instant": true,
+        "var_random": [
+          "mod_work",
+          0,
+          0,
+          "mod",
+          0,
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "mod"
+        ],
+        "comment": true,
+        "id": 130,
+        "text": "Установленно модов:",
+        "var_set": [
+          "mod"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "text": "Информация\nНазвание:Work\nВерсия мода:1.0\nОписание:Добавляет 6 новых работ\nСписок обновлений:\n★Консультант\n★Мойщик машин\n★Почтальон\n★Библиотекарь\n★Ветеринар\n★Мойщик стекол",
+    "answers": [
+      {
+        "var_add": [
+          "mod",
+          1
+        ],
+        "blackout": true,
+        "id": 130,
+        "text": "Установить мод",
+        "var_random": [
+          "mod_work",
+          1,
+          1
+        ],
+        "var_set": [
+          "mod_work"
+        ]
+      },
+      {
+        "id": 130,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 133,
+    "text": "Ваши общения",
+    "answers": [
+      {
+        "id": 134,
+        "text": "Маша Алиева"
+      },
+      {
+        "id": 135,
+        "text": "Миша Меринов",
+        "need": [
+          98
+        ]
+      },
+      {
+        "id": 136,
+        "text": "Настя Мирная"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "text": "Чат\nМАША АЛИЕВА ДОБАВИЛА ВАС В ЧЕРНЫЙ СПИСОК",
+    "answers": [
+      {
+        "id": 133,
+        "text": "Выйти"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "text": "Чат",
+    "answers": [
+      {
+        "id": 135,
+        "text": "Дружба:",
+        "comment": true,
+        "var_show": [
+          "FMM"
+        ]
+      },
+      {
+        "id": 135,
+        "text": "Общаться",
+        "var_add": [
+          "FMM",
+          5
+        ]
+      },
+      {
+        "id": 133,
+        "text": "Выйти"
+      },
+      {
+        "id": 135,
+        "text": "Принять подарок",
+        "var_add": [
+          "cash",
+          100
+        ],
+        "var_need": [
+          "FMM",
+          300
+        ]
+      },
+      {
+        "var_add": [
+          "FMM",
+          10
+        ],
+        "id": 135,
+        "var_sub": [
+          "b",
+          10
+        ],
+        "var_need": [
+          "FMM",
+          100
+        ],
+        "text": "Гулять"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "text": "Чат",
+    "answers": [
+      {
+        "id": 136,
+        "text": "Дружба:",
+        "comment": true,
+        "var_show": [
+          "FNM"
+        ]
+      },
+      {
+        "id": 136,
+        "text": "Общаться",
+        "var_add": [
+          "FNM",
+          5
+        ]
+      },
+      {
+        "id": 133,
+        "text": "Выйти"
+      },
+      {
+        "id": 136,
+        "text": "Идти на потасовку",
+        "var_add": [
+          "FNM",
+          10
+        ]
+      },
+      {
+        "id": 136,
+        "text": "Идти к ней домой",
+        "var_add": [
+          "D",
+          1,
+          "FNM",
+          30
+        ],
+        "var_less": [
+          "D",
+          1
+        ]
+      },
+      {
+        "id": 136,
+        "text": "Знакомиться с родителями",
+        "var_add": [
+          "R",
+          1,
+          "FNM",
+          50
+        ],
+        "var_less": [
+          "R",
+          1
+        ]
+      },
+      {
+        "id": 136,
+        "text": "Стать парой",
+        "var_add": [
+          "P",
+          1,
+          "FNM",
+          50
+        ],
+        "var_less": [
+          "P",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "text": "Вы остались жить с лучшим другом.\nПолучили это достижение и новый контакт.",
+    "answers": [
+      {
+        "id": 123,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "text": "Вы решили пообщаться с Настей Мирной и автоматически вошли в ее с Ашотиком стаю",
+    "answers": [
+      {
+        "id": 123,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "text": "Выберете историю",
+    "answers": [
+      {
+        "id": 83,
+        "text": "Андрей\nEasy",
+        "initSounds": [
+          "gg",
+          "https://rus.megapesni.com/classical/43543-ludwig-van-beethoven-k-jelize-bagatel-lja-minor.html"
+        ]
+      },
+      {
+        "id": 140,
+        "text": "Алексей\nNormal"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "text": "Вы родились\nВаш возраст:0",
+    "answers": [
+      {
+        "id": 141,
+        "text": "Прожить год"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "text": "Вы начинайте немного шевелиться\nВаш возраст:1",
+    "answers": [
+      {
+        "id": 142,
+        "text": "Лежать еще 1 год"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "text": "Вы хотите есть.Никто не приходит\nВаш возраст:2",
+    "answers": [
+      {
+        "id": 143,
+        "text": "Заплакать"
+      },
+      {
+        "id": 144,
+        "text": "Лежать молча"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "text": "Вы стали кричать и плакать на весь дом.\nПришел отец и сломал вам руку.\nВаш возраст:2",
+    "answers": [
+      {
+        "id": 145,
+        "text": "Еще год",
+        "var_add": [
+          "Travma",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "text": "Вы лежали молча.Хотелось очень сильно есть.\nВаш возраст:2",
+    "answers": [
+      {
+        "id": 145,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "text": "Вы потихоньку могли ползать по кроватке\nВаш возраст:3",
+    "answers": [
+      {
+        "id": 146,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "text": "Вы впервые смогли встать на ноги.\nВаш возраст:4",
+    "answers": [
+      {
+        "id": 147,
+        "text": "Идти к маме"
+      },
+      {
+        "id": 148,
+        "text": "Идти к папе"
+      },
+      {
+        "id": 149,
+        "text": "Продолжать лежать"
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "text": "Вы подошли к маме.\nОна сильно кричала на вас.И обожгла вас сигаретой.\nВаш возраст:4",
+    "answers": [
+      {
+        "id": 149,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "text": "Вы пошли к папе.Он спал.Вы решили его не будить\nВаш возраст:4",
+    "answers": [
+      {
+        "id": 149,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "text": "Вы вполне хорошо осваивались.Стали взрослеть\nВаш возраст:5",
+    "answers": [
+      {
+        "id": 150,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "text": "Мать поручила вам сходить в магазин за пивом\nВаш возраст:6",
+    "answers": [
+      {
+        "id": 151,
+        "text": "Пойти в магазин"
+      },
+      {
+        "id": 152,
+        "text": "Не идти "
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "text": "Вы еле как тащились по улице в магазин потому что еще толком не умели ходить.\nУ вас в кармане 9 рублей.\nВаш возраст:6",
+    "answers": [
+      {
+        "id": 153,
+        "text": "В магазине"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "text": "Мать взяла вас за голову и кинула к стене.У вас сотрясение мозга.\nВам пришлось идти.\nВаш возраст:6",
+    "answers": [
+      {
+        "id": 151,
+        "text": "В магазин"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "text": "В магазине вам не продали пиво поскольку вам нет 18.\nКассирша вызвала полицию.\nВаш возраст:6",
+    "answers": [
+      {
+        "id": 154,
+        "text": "Ждать приезда полиции"
+      },
+      {
+        "id": 155,
+        "text": "Бежать домой"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "text": "Приехала полиция.\nЗа покупку алкогольных напитков до 18 лет выписывается штраф в размере 1500 рублей.\nТакже можно отплатить 100 рублей ударом СШ (СудорожногоШокера)\nТоесть 15 ударов.\nПоскольку денег у вас не хватило пришлось вам платить ударами.\nВы не выдержали и 3 ударов СШ.\nУ вас остановилось сердце.\nВы погибли",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Смерть"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "text": "Вы прибежали домой.Но дома никого не было\nВаш возраст:6",
+    "answers": [
+      {
+        "id": 156,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "text": "В этом году все прошло спокойно.\nСравнительно\nВаш возраст:7",
+    "answers": [
+      {
+        "id": 157,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "text": "Вы решили погулять\nСобрались\nВзяли...\nВы ничего не взяли потому что у вас ничего не было\nВаш возраст:8",
+    "answers": [
+      {
+        "id": 163,
+        "text": "На площадке"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "text": "Выбор вклада",
+    "answers": [
+      {
+        "id": 159,
+        "text": "Приложение VK"
+      },
+      {
+        "id": 160,
+        "text": "Магазин Five"
+      },
+      {
+        "id": 161,
+        "text": "Сервер ARIZONA"
+      },
+      {
+        "id": 162,
+        "text": "Ютуб канал YouNG"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "text": "Вк",
+    "answers": [
+      {
+        "id": 159,
+        "text": "Вложить 50000",
+        "launchtimer": [
+          "vk",
+          500
+        ]
+      },
+      {
+        "id": 159,
+        "text": "Забрать 70000",
+        "timer": [
+          "vk",
+          0
+        ]
+      },
+      {
+        "id": 158,
+        "text": "Назад"
+      },
+      {
+        "id": 166,
+        "text": "Время"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 161,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 162,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 163,
+    "text": "Вы дошли до площадки.\nК вам довольно старый мужчина лет 40\nИ спросил: \"Как тебя зовут?\"\nВаш возраст:8",
+    "answers": [
+      {
+        "id": 170,
+        "text": "Ответить"
+      },
+      {
+        "id": 165,
+        "text": "Хранить молчание"
+      },
+      {
+        "id": 167,
+        "text": "Бежать"
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "text": "Мужчина привел вас к фургону.\n—Там шоколадка/сказал он\nВы залезли в фургон в попытках найти шоколадку как вдруг двери закрылись\nВаш возраст:8",
+    "answers": [
+      {
+        "id": 171,
+        "text": "Спустя долгое время"
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "text": "Вы решили молчать\nНо мужчина был настойчив он продолжал спрашивать\nВаш возраст:8",
+    "answers": [
+      {
+        "id": 170,
+        "text": "Ответить"
+      },
+      {
+        "id": 167,
+        "text": "Бежать"
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 167,
+    "text": "Вы резко дернулись и побежали в сторону дома.\nМужчина бежал за вами.\nВаш возрас:8",
+    "answers": [
+      {
+        "id": 168,
+        "text": "Бежать к переулку"
+      },
+      {
+        "id": 169,
+        "text": "Бежать напрямую"
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "text": "Вы забежали в переулок\nМужчина забежал за вами \nВаш возраст:8",
+    "answers": [
+      {
+        "id": 172,
+        "text": "Попробовать пересечь забор",
+        "var_not": [
+          "Travma",
+          1
+        ]
+      },
+      {
+        "id": 173,
+        "text": "Попробовать пересечь забор",
+        "var_equal": [
+          "Travma",
+          1
+        ]
+      },
+      {
+        "id": 169,
+        "text": "Бежать напрямую"
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "text": "Поскольку он был намного сильнее вас он догнал вас и засунул в фургон \nВаш возраст:8",
+    "answers": [
+      {
+        "id": 171,
+        "text": "Спустя время"
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "text": "Вы назвали ему ваше имя\nОн предложил пойти за шоколадкой\nВы согласились ведь очень хотели ее\nВаш возраст:8",
+    "answers": [
+      {
+        "id": 164,
+        "text": "Спустя 10 минут"
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "text": "Вы сидели в фургоне и плакали\nФургон остановился\nМужчина взял вас на руки и повел к Рековскому мясокомбинату\n.............",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Смерть"
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "text": "Вы от большого адреналина с легкостью перепрыгнули забор.Мужчина отстал и вы пошли домой.\nВы шли и думали:\"Как я так могу.Мне же всего 8 лет\"\nВаш возраст:8",
+    "answers": [
+      {
+        "id": 174,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "text": "У вас был большой адреналин вы уже стали перелазить но вдруг.\nРука которую вам сломал ваш отец начала болеть и вы упали на бетон тем самым сломав себе шею.\nВаш возраст:8",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Смерть"
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "text": "Все прошло лучше не куда\nРодителям дали денег на образование\nИ вы пойдёте в школу\nВ следующем году\nВаш возраст:9",
+    "answers": [
+      {
+        "id": 175,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "text": "Поскольку вы не умели даже читать ваша успеваемость съехала на нет\nВаш возраст:10",
+    "answers": [
+      {
+        "id": 176,
+        "text": "Еще год"
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "text": "Вы подумали:\nМожет мне стоит усердно учиться и стать отличником или же быть сильным негодяем\nВаш возраст:11",
+    "answers": [
+      {
+        "id": 177,
+        "text": "Путь:Отличник"
+      },
+      {
+        "id": 178,
+        "text": "Путь:Негодяй"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "text": "Вы стали уссердно учиться\nНо хорошая продуктивность пошла только в конце\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 179,
+        "text": "Как вдруг"
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "text": "Вы сразу показали авторитет в школе\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 183,
+        "text": "Как вдруг"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "text": "Вы шли со своим лучшим другом по корридору\nИ к вам подошел хулиган",
+    "answers": [
+      {
+        "id": 180,
+        "text": "Наблюдать"
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "text": "Вы плохо слышали о чем говорили эти двоя\nНо по видимому хулиган угрожал вам и вашему другу\n\nДруг не выдержал и толкнул хулигана",
+    "answers": [
+      {
+        "id": 181,
+        "text": "Остаться"
+      },
+      {
+        "id": 182,
+        "text": "Бежать"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "text": "Вы остались посмотреть\nХулиган ударился о стул и перестал двигаться\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 186,
+        "text": "Новый год"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "text": "Вы убежали с места проишествия\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 186,
+        "text": "Через год"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "text": "Как вдруг вы шли по корридору и увидели двух ботаников\nВы подошли к ним и стали всячески подшучивать",
+    "answers": [
+      {
+        "id": 184,
+        "text": "ТОЛЧОК!!!"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "text": "Один из ботаников толкнул вас\nВ падении вы увидели только удивленные взгляды людей\nВы упали на землю ударившись о чтото\nВаш возраст:12",
+    "answers": [
+      {
+        "id": 185,
+        "text": "Через год"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "text": "Вы лежали в реанимации\nВрачи хотели отключать вас от аппаратов\nНет не подумайте\n\nВы были в сознании\nПросто родители перестали оплачивать вам жизнь\nВаш возраст:13",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Белый свет"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "text": "Все прошло идеально\nВы стали хорошо учится\nИ стали побеждать на олимпиадах\nВаш возраст:13",
+    "answers": [
+      {
+        "id": 187,
+        "text": "Через 2 года"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "text": "Вы решили пойти на вечеринку\nВ свое пятнадцатилетие\nВаш возраст:15",
+    "answers": [
+      {
+        "id": 188,
+        "text": "Пить алкоголь"
+      },
+      {
+        "id": 189,
+        "text": "Искать пару",
+        "need": -189
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "text": "Проснулись вы утром у себя дома\nВаш возраст:15",
+    "answers": [
+      {
+        "id": 190,
+        "text": "Спустя год"
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "text": "Вы подошли к одной симпатичной девушке\nПосле небольшого разговора вы узнали\nЭто оказался Сергей",
+    "answers": [
+      {
+        "id": 187,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 191,
+    "text": "Вы приняли участие в эксперементальной сыворотке \"Без Сна\" которая позволит вам никогда не засыпать и служить вечно\nПодпишите бумагу о разрешении  изучении вашего тела\n(У вас нет выбора ведь вы уже заплатили сумму) \n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Подписать",
+        "var_add": [
+          "bescna",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Отказаться",
+        "right_answer": true
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "text": "После этой сыворотки вы чувствуете себя странно поэтому вы решили обратиться к ученым\nОни положили вастна операционный стол и стали изучать\nВы смогли уснуть",
+    "answers": [
+      {
+        "id": 193,
+        "text": "Проснуться"
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 194,
+    "text": "",
+    "answers": []
+  }
+]

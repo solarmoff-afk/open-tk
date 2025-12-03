@@ -1,0 +1,754 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Ярослав Зверев.\n\nНаряжайте ёлку, получайте конфеты и покупайте украшения! Эта простая игра на память поможет создать праздничное настроение.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Начать",
+        "lua_do": "function lua_do()\n  g.range = {\n{x = 0.340062, y = 0.804113},\n{x = 0.240683, y = 0.685065},\n{x = 0.374224, y = 0.566017},\n{x = 0.498447, y = 0.787879},\n{x = 0.690994, y = 0.787879},\n{x = 0.771739, y = 0.679654},\n{x = 0.563665, y = 0.541126},\n{x = 0.178571, y = 0.493506},\n{x = 0.068323, y = 0.375541},\n{x = 0.343168, y = 0.288961},\n{x = 0.343168, y = 0.172078},\n{x = 0.822981, y = 0.495671},\n{x = 0.67236, y = 0.281385},\n{x = 0.881988, y = 0.36039},\n{x = 0.681677, y = 0.147186},\n{x = 0.962733, y = 0.231602},\n  }\n  g.sweets = g.sweets or 0\n  g.decor = g.decor or {}\n  if not g.pDifficulty then\n  g.pDifficulty = {}\n  g.pDifficulty[1] = {\n    sum = 5, \n    maxUrl = 2, \n    time = 4\n  }\n  g.pDifficulty[2] = {\n    sum = 6, \n    maxUrl = 3, \n    time = 8\n  }\n  g.pDifficulty[3] = {\n    sum = 8, \n    maxUrl = 3, \n    time = 10\n  }\n  g.pDifficulty[4] = {\n    sum = 10, \n    maxUrl = 4, \n    time = 12\n  }\n  end\n  difficulty = 1\n  sum = 5\n  maxUrl = 2\n  time = 4\n  combo = 0\n  imgToys = {\n\"https://images.vfl.ru/ii/1609511984/e58245e2/32828995.png\",\n\"https://images.vfl.ru/ii/1607284593/a0227a87/32574199.png\",\n\"https://images.vfl.ru/ii/1607284576/7892f650/32574189.png\",\n\"https://images.vfl.ru/ii/1607284634/159c84fc/32574210.png\",\n\"https://images.vfl.ru/ii/1609174423/64db14e2/32798384.png\",\n\"https://images.vfl.ru/ii/1607284611/212117cc/32574204.png\",\n\"https://images.vfl.ru/ii/1607284622/e8b975b8/32574207.png\",\n\"https://images.vfl.ru/ii/1609174462/a0c2be0c/32798398.png\",\n\"https://images.vfl.ru/ii/1609174449/b40620c3/32798397.png\",\n\"https://images.vfl.ru/ii/1609174388/0e65c786/32798380.png\",\n\"https://images.vfl.ru/ii/1609174437/05bc6a26/32798396.png\",\n\"https://images.vfl.ru/ii/1609174372/ef3fc855/32798370.png\",\n\"https://images.vfl.ru/ii/1609277905/f68456d0/32810870.png\",\n\"https://images.vfl.ru/ii/1609174354/daa9b737/32798369.png\",\n\"https://images.vfl.ru/ii/1609174335/60c953a7/32798366.png\",\n\"https://images.vfl.ru/ii/1609174410/35997641/32798383.png\",\n  }\n  if not g.open then\n    g.open = {}\n    for i = 1, 4 do\n      g.open[i] = 0\n    end\n    local t = {8, 12, 16, 5, 18, 20, 13, 27, 10, 23, 19, 35}\n    for i = 5, 16 do\n      g.open[i] = t[i - 4]\n    end\n  end\n  first = true\n  curGame = 0\n  g.fullscreen = 0\n  g.background = \"https://images.vfl.ru/ii/1609506689/cb65e488/32828507.jpg\"\n  g.defaultBgAnswerImage = \"https://images.vfl.ru/ii/1609362074/03de5640/32820660.jpg\"\nend",
+        "addToHistory": [
+          3
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "",
+        "system": true
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "need": [
+          999
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "place",
+        "url": "https://images.vfl.ru/ii/1607278013/dcaac66d/32572819.jpg"
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  images.place.isVisible = false\n  function scale (t1, v, t2)\n    local s = v/t1\n    return t2*s\n  end\n  bg = display.newImage (\"https://images.vfl.ru/ii/1607278013/dcaac66d/32572819.jpg\")\n  bg.width = scale (bg.height, canvas.height, bg.width)\n  bg.height = canvas.height\n  bg.y = bg.height/2\n  bg.x = bg.width/2\nend",
+        "text": "Отрисовка фона"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  if g.decor.gift and gift_on then\n    rGift = display.newImage (\"https://images.vfl.ru/ii/1607670206/edb33c69/32623173.png\")\n    rGift.height = scale (rGift.width, 0.185*canvas.width, rGift.height)\n    rGift.width = 0.185*canvas.width\n    rGift.x = 0.17*canvas.width\n    rGift.y = (1 - 0.0095)*canvas.height - rGift.height/2\n  end\n  if g.decor.star and star_on then\n    rStar = {}\n    for i = 1, 2 do\n      rStar[i] = display.newImage (\"https://images.vfl.ru/ii/1607670248/17266b0c/32623178.png\")\n      rStar[i].isVisible = false\n    end\n  end\n  if g.decor.tinsel and tinsel_on then\n    rTinsel = {}\n    for i = 1, 2 do\n      rTinsel[i] = display.newImage (\"https://images.vfl.ru/ii/1607670225/e992ccf5/32623175.png\")\n      rTinsel[i].height = scale (rTinsel[i].width, 0.4*canvas.width, rTinsel[i].height)\n      rTinsel[i].width = 0.4*canvas.width\n      rTinsel[i].y = rTinsel[i].height/2\n    end\n    rTinsel[1].x = rTinsel[1].width/2\n    rTinsel[2].x = canvas.width - rTinsel[2].width/2\n    rTinsel[1].xScale = -1\n  end\n  if g.decor.paper and paper_on then\n    rPaper = {}\n    rPaper[1] = display.newImage (\"https://images.vfl.ru/ii/1615133535/3ba696fd/33589969.png\")\n    rPaper[1].xScale = canvas.width/6/rPaper[1].width\n    rPaper[1].yScale = rPaper[1].xScale\n    rPaper[1].x = 0.9*canvas.width\n    if tinsel_on then\n      rPaper[1].y = rTinsel[2].height <plus> rPaper[1].height*rPaper[1].yScale*0.6\n    else\n      rPaper[1].y = 0.33*canvas.height\n    end\n    rPaper[2] = display.newImage (\"https://images.vfl.ru/ii/1615133515/0fb10f76/33589967.png\")\n    rPaper[2].xScale = canvas.width/6.5/rPaper[2].width\n    rPaper[2].yScale = rPaper[2].xScale\n    rPaper[2].x = 0.9*canvas.width\n    rPaper[2].y = rPaper[1].y <plus> (rPaper[1].height*rPaper[1].yScale <plus> rPaper[2].height*rPaper[2].yScale)*0.6\n  end\n  rWin = display.newImage (\"https://images.vfl.ru/ii/1607672416/aab99fae/32623471.png\")\n  rWin.isVisible = false\nend",
+        "calculate": false,
+        "text": "Отрисовка декораций",
+        "id": 2
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "Отрисовка ёлки и игрушек",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction tree (index)\n  local g; local t; local n\n  if index == \"key\" then\n    g = \"groupKey\"\n    t = \"tableKey\"\n    n = 1\n  else\n    g = \"groupAnswer\"\n    t = \"tableAnswer\"\n    n = 2\n  end\n  vars[t] = {}\n  vars[t].tree = display.newImage (\"https://images.vfl.ru/ii/1607279841/ef911cfe/32573159.png\")\n  vars[t].tree.height = scale (vars[t].tree.width, 0.9*canvas.width, vars[t].tree.height)\n  vars[t].tree.width = 0.9*canvas.width\n  if vars[t].tree.height > 0.85*canvas.height then\n    vars[t].tree.width = scale (vars[t].tree.height, 0.85*canvas.height, vars[t].tree.width)\n    vars[t].tree.height = 0.85*canvas.height\n  end\n  vars[t].tree.x = (n-0.5)*canvas.width\n  vars[t].tree.y = 0.94*canvas.height - vars[t].tree.height/2\n  vars[g] = display.newGroup ()\n  vars[g]:insert (vars[t].tree)\n\n  vars[t].toys = {}\n  local x = vars[t].tree.x - vars[t].tree.width/2\n  local y = vars[t].tree.y <plus> vars[t].tree.height/2\n  for i = 1, #vars[index] do\n    vars[t].toys[i] = display.newImage (vars[index][i].url)\n    if vars[t].toys[i].height > 2*vars[t].toys[i].width then\n      k = 0.08\n    else\n      k = 0.09\n    end\n    vars[t].toys[i].height = scale (vars[t].toys[i].width, k*vars[t].tree.width, vars[t].toys[i].height)\n    vars[t].toys[i].width = k*vars[t].tree.width\n    vars[t].toys[i].x = x <plus> vars[index][i].x*vars[t].tree.width\n    vars[t].toys[i].y = y - vars[index][i].y*vars[t].tree.height <plus> vars[t].toys[i].height/2\n    vars[g]:insert (vars[t].toys[i])\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction effects ()\nif win then\n  local index = rWin\nindex.isVisible = true\nindex.width = scale (index.height, 0.1*canvas.height, index.width)\nindex.height = 0.1*canvas.height\nindex.x = 0.78*canvas.width\nindex.y = 0.14*canvas.height\ntransition.scaleTo (index, {xScale = 1.65, yScale = 1.65, time = 1500})\nend\nend\nend",
+        "text": "Спецэффекты",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction tapButton (event)\n    transition.scaleBy (button, {\n      xScale = -0.2,\n      yScale = -0.2,\n      time = 100\n    })\n    transition.scaleBy (button, {\n      xScale = 0.02,\n      yScale = 0.02,\n      time = 200,\n      delay = 200\n    })\n  curGame = curGame <plus> 1\n  if curGame == 1 then\n    sumGames = math.random(4, 6)\n    bonusGame = math.random (sumGames)\n  elseif curGame == sumGames then\n    curGame = 0\n  end\n  flag = true\n  win = true\n  for i = 1, #key do\n    if key[i].url ~= answer[i].url then\n      win = false\n      break\n    end\n  end\n  effects ()\n  final = {}\n  if win then\n    combo = combo <plus> 1\n\n    if combo < 2 then\n      g.sweets = g.sweets <plus> difficulty\n      final.header = \"Всё верно!\"\n      if difficulty == 1 then\n        final.text = \"Вы получили 1 конфету.\"\n      else\n        final.text = \"Вы получили \".. difficulty .. \" конфеты.\"\n      end\n\n    elseif combo > 1 and combo < 4 then\n      g.sweets = g.sweets <plus> difficulty*combo\n      final.header = \"Комбо х\".. combo .. \"!\"\n      if combo*difficulty < 5 then\n        final.text = \"Вы получили \".. difficulty*combo .. \" конфеты.\"\n      else\n        final.text = \"Вы получили \".. difficulty*combo .. \" конфет.\"\n      end\n\n    else\n      combo = 1\n      g.sweets = g.sweets <plus> difficulty\n      final.header = \"Всё верно!\"\n      if difficulty == 1 then\n        final.text = \"Вы получили 1 конфету.\"\n      else\n        final.text = \"Вы получили \".. difficulty .. \" конфеты.\"\n      end\n    end\n  else\n    combo = 0\n    final.header = \"Промах!\"\n    final.text = \"Попробуйте ещё раз.\"\n  end\n  final.answers = {}\n  final.answers[1] = {\n    text = \"Продолжить игру\",\n    pressListener = \n    function ()\n      showPage {id = 2, transition = \"instant\"}\n      hideDialog ()\n    end\n  }\n  final.answers[2] = {\n    text = \"Ёлочные игрушки\",\n    pressListener = \n      function ()\n        showPage {id = 5}\n        hideDialog ()\n      end\n  }\n  final.answers[3] = {\n    text = \"Магазин\",\n    pressListener = \n      function ()\n        g.fullscreen = 0\n        showPage {id = 6}\n        hideDialog ()\n      end\n  }\n  final.answers[4] = {\n    text = \"Меню\",\n    pressListener = \n      function ()\n        g.fullscreen = 0\n        showPage {id = 7}\n        hideDialog ()\n      end\n  }\n  dialog (final)\nend\n\nfunction endButton ()\nif canvas.width then\n  button.isVisible = true\n  button.width = 0.19*canvas.width\n  button.height = button.width\n  button.x = 0.88*canvas.width\n  button.y = 0.94*canvas.height\n  button:addEventListener (\"tap\", tapButton)\nend\nend\nend",
+        "text": "Отрисовка кнопки",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction find (x, y)\n  for i = 1, #answer do\n    if tableAnswer.toys[i].x == x and tableAnswer.toys[i].y == y then\n      return i\n    end\n  end\nend\n\nfunction tapToy (event)\n  if curToy == 0 then\n    curToy = find (event.target.x, event.target.y)\n    options = {\n      xScale = -0.2,\n      yScale = -0.2,\n      time = 100\n    }\n    transition.scaleBy (tableAnswer.toys[curToy], options)\n    options = nil\n\n  elseif curToy == find (event.target.x, event.target.y) then\n    options = {\n      xScale = 0.2,\n      yScale = 0.2,\n      time = 100\n    }\n    transition.scaleBy (tableAnswer.toys[curToy], options)\n    curToy = 0\n    options = nil\n  \n  else\n    options = {\n      xScale = 0.2,\n      yScale = 0.2,\n      time = 100\n    }\n    transition.scaleBy (tableAnswer.toys[curToy], options)\n    curToy2 = find (event.target.x, event.target.y)\n    T = {\"curToy\", \"curToy2\"}\n\n    changeX = (tableAnswer.toys[curToy].x - tableAnswer.toys[curToy2].x)/canvas.height\n    changeY = (tableAnswer.toys[curToy].y - tableAnswer.toys[curToy2].y)/canvas.height\n    fs = ( \n      (changeX)^2 <plus> \n      (changeY)^2\n    )^0.5\n    if fs < 0.25 then\n      fv = 0.15/350\n    elseif fs > 0.7 then\n      fv = 0.15/200\n    else\n      fv = 0.15/250\n    end\n    ft = fs/fv\n    for i = 1, 2 do\n      if i == 1 then\n        another = 2\n      else\n        another = 1\n      end\n      options = {\n        x = tableAnswer.toys[ vars[ T[another] ] ].x,\n        y = tableAnswer.toys[ vars[ T[another] ] ].y - tableAnswer.toys[ vars[ T[another] ] ].height/2 <plus> tableAnswer.toys[ vars[ T[i] ] ].height/2,\n        time = ft\n      }\n      transition.to (tableAnswer.toys[ vars[ T[i] ] ], options)\n    end\n\n  answer[curToy].url, answer[curToy2].url = answer[curToy2].url, answer[curToy].url\n  curToy = 0\n  T = nil\n  another = nil\n  curToy2 = nil\n  ft = nil\n  fs = nil\n  fv = nil\n  changeX = nil\n  changeY = nil\n  end\n\nend\nend",
+        "text": "Перетаскивание игрушек",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  function setting ()\n    tc = {}\n    for i = 1, #g.range do\n      tc[i] = i\n    end\n    tu = {}\n    j = 1\n    for i = 1, #g.open do\n      if g.open[i] == 0 then\n        tu[j] = i\n        j = j <plus> 1\n      end\n    end\n    if maxUrl < #tu then\n      for i = 1, #tu - maxUrl do\n        table.remove (tu, math.random(#tu) )\n      end\n    end\n    key = {}\n\n    for i = 1, sum do\n      myR = math.random (#tc)\n      key[i] = table.copy2 (g.range[ tc[myR] ] )\n      table.remove (tc, myR)\n      key[i].url = imgToys[ tu[math.random(#tu)] ]\n    end\n    myR = nil\n    tc = nil\n    tu = nil\n\n    answer = {}\n    answer = table.copy2 (key)\n    for i = 1, math.random (sum, 2*sum) do\n      a1 = math.random(#answer)\n      a2 = math.random(#answer) \n      answer[a1].url, answer[a2].url = answer[a2].url, answer[a1].url\n    end\n    a1 = nil\n    a2 = nil\n  end\nend",
+        "text": "Создание key и answer (правильный ответ и ответ игрока)"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction everySec ()\nif canvas.width then\nif g.current_id == 2 then\n  sec = sec - 1\n  if sec == 0 then\n    options = {\n      time = 750,\n      x = -canvas.width\n    }\n    transition.moveBy (groupKey, options)\n    transition.moveBy (groupAnswer, options)\n    timer.performWithDelay (850, function () endButton () end)\n    options = nil\n  end\nend\nend\nend\nend",
+        "text": "Каждую секунду",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction myMain ()\n  setting ()\n\n  tree (\"key\")\n  tree (\"answer\")\n  if g.decor.star and star_on then\n    for i = 1, 2 do\n      rStar[i].isVisible = true\n      rStar[i].height = scale (rStar[i].width, 0.2*tableKey.tree.width, rStar[i].height) \n      rStar[i].width = 0.2*tableKey.tree.width\n      rStar[i].x = (i - 0.5)*canvas.width\n      rStar[i].y = tableKey.tree.y - tableKey.tree.height/2\n    end\n    groupKey:insert (rStar[1])\n    groupAnswer:insert (rStar[2]) \n  end\n\n  button = display.newImage (\"https://images.vfl.ru/ii/1607539935/53d6a959/32608113.png\")\n  button.isVisible = false\n\n  sec = time\n  timer.performWithDelay (1000, everySec, time)\n\n  curToy = 0\n  if answer then\n  for i = 1, #answer do\n    tableAnswer.toys[i]: addEventListener (\"tap\", tapToy)\n  end\n  end\nend\nend",
+        "text": "Главная функция",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  if myMain then\n    myMain ()\n  else\n    showPage {id = 2, transition = \"instant\"}\n  end\nend",
+        "calculate": false,
+        "text": "Проверка и запуск игры",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Страница с картинками",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Красно-жёлтое:",
+        "comment": true,
+        "text_color": [
+          1,
+          0.4,
+          0.2
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Красный шар с полосками:\nhttps://images.vfl.ru/ii/1607284345/b5ffdb91/32574118.png\n\nКрасный шар с завитками:\nhttps://images.vfl.ru/ii/1607284576/7892f650/32574189.png\n\nЖёлтый шар:\nhttps://images.vfl.ru/ii/1607284593/a0227a87/32574199.png\n\nКрасная шишка:\nhttps://images.vfl.ru/ii/1607284611/212117cc/32574204.png\n\nЖёлтая шишка:\nhttps://images.vfl.ru/ii/1607284622/e8b975b8/32574207.png\n\nКрасный колокольчик:\nhttps://images.vfl.ru/ii/1607284634/159c84fc/32574210.png",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Новое:",
+        "comment": true,
+        "text_color": [
+          1,
+          0.4,
+          0.2
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Снежинка синяя:\nhttps://images.vfl.ru/ii/1609174335/60c953a7/32798366.png\n\nСказка о ёлке:\nhttps://images.vfl.ru/ii/1609174354/daa9b737/32798369.png\n\nОранжевые цветочки:\nhttps://images.vfl.ru/ii/1609174372/ef3fc855/32798370.png\n\nФиолетовый с узорами:\nhttps://images.vfl.ru/ii/1609174388/0e65c786/32798380.png\n\nСнеговик:\nhttps://images.vfl.ru/ii/1609174410/35997641/32798383.png\n\nСнежинка красная:\nhttps://images.vfl.ru/ii/1609174423/64db14e2/32798384.png\n\nРозовый текстурный:\nhttps://images.vfl.ru/ii/1609174437/05bc6a26/32798396.png\n\nФиолетовый с волнами\nhttps://images.vfl.ru/ii/1609174449/b40620c3/32798397.png\n\nКрасная фигура:\nhttps://images.vfl.ru/ii/1609174462/a0c2be0c/32798398.png\n\nСиний:\nhttps://images.vfl.ru/ii/1609277905/f68456d0/32810870.png\n",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "Декорации:",
+        "comment": true,
+        "text_color": [
+          1,
+          0.4,
+          0.2
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Подарок:\nhttps://images.vfl.ru/ii/1607670206/edb33c69/32623173.png\n\nМишура:\nhttps://images.vfl.ru/ii/1607670225/e992ccf5/32623175.png\n\nЗвезда:\nhttps://images.vfl.ru/ii/1607670248/17266b0c/32623178.png",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "a3",
+        "url": "https://images.vfl.ru/ii/1607284576/7892f650/32574189.png"
+      },
+      {
+        "id": 2,
+        "text": "a4",
+        "url": "https://images.vfl.ru/ii/1607284593/a0227a87/32574199.png"
+      },
+      {
+        "id": 2,
+        "text": "a5",
+        "url": "https://images.vfl.ru/ii/1607284611/212117cc/32574204.png"
+      },
+      {
+        "id": 2,
+        "text": "a6",
+        "url": "https://images.vfl.ru/ii/1607284622/e8b975b8/32574207.png"
+      },
+      {
+        "id": 2,
+        "text": "a7",
+        "url": "https://images.vfl.ru/ii/1607284634/159c84fc/32574210.png"
+      },
+      {
+        "id": 3,
+        "text": "Ёлка",
+        "url": "https://images.vfl.ru/ii/1607279841/ef911cfe/32573159.png"
+      },
+      {
+        "id": 3,
+        "text": "Кнопка",
+        "url": "https://images.vfl.ru/ii/1607539935/53d6a959/32608113.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1607670206/edb33c69/32623173.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1607670225/e992ccf5/32623175.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1607670248/17266b0c/32623178.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174335/60c953a7/32798366.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174354/daa9b737/32798369.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174372/ef3fc855/32798370.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174388/0e65c786/32798380.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174410/35997641/32798383.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174423/64db14e2/32798384.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174437/05bc6a26/32798396.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174462/a0c2be0c/32798398.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609174449/b40620c3/32798397.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609277905/f68456d0/32810870.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609239624/85db1b39/32805236.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1609511984/e58245e2/32828995.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1615133535/3ba696fd/33589969.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1615133515/0fb10f76/33589967.png"
+      },
+      {
+        "id": 3,
+        "text": "local _x = math.round (event.target.x/canvas.width <plus> 0.5)\n  local _y = math.round ((event.target.y - (canvas.height - canvas.width)/2)\n/canvas.width <plus> 0.5)\n  message (\"x = \".. event.target.x .. \"; y = \".. event.target.y)\n  local _ = 1\n  for y = 1, 4 do\n  for x = 1, 4 do\n   if x == _x and y == _y then\n     super_i = _\n     break\n   end\n    _ = _ <plus> 1\n  end\n  end\n  _ = 1\n  for i = 1, #g.open do\n    if i == super_i then\n      super_j = _\n      break\n    end\n    if g.open[i] > 0 then\n      _ = _ <plus> 1\n    end\n  end",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ng.sweets = g.sweets <plus> 400\n--g.disableAuthorButton = 1\nend",
+        "text": "<plus>Конфеты",
+        "id": 3,
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Правила.<s>r\n<s>r\nВ течении нескольких секунд Вы сможете смотреть на ёлку и запоминать расположение игрушек.<s>r\n<s>r\nПосле этого появится другая ёлка, которую нужно будет нарядить точно так же. <s>r\n<s>r\nДля этого кликните по одной игрушке, а затем по другой, чтобы поменять их местами. <s>r\n<s>r\nКогда закончите, нажмите на кнопку с галочкой.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Далее",
+        "addToHistory": [
+          8,
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 5,
+        "text": "place1",
+        "url": "https://images.vfl.ru/ii/1609187044/c05282b2/32799922.jpg"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  images.place1.isVisible = false\n  function scale (t1, v, t2)\n    local s = v/t1\n    return t2*s\n  end\n  bg = display.newImage (\"https://images.vfl.ru/ii/1609187044/c05282b2/32799922.jpg\")\n  bg.height = scale (bg.width, canvas.width, bg.height)\n  bg.width = canvas.width\n  if bg.height < canvas.height then\n    bg.width = scale (bg.height, canvas.height, bg.width)\n    bg.height = canvas.height\n  end\n  bg.y = bg.height/2\n  bg.x = bg.width/2\n  p = 0\nend",
+        "text": "Фон",
+        "id": 5,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction buy ()\n  g.sweets = g.sweets - g.open[super_i]\n  g.open[super_i] = 0\n  showPage {id = 5, transition = \"instant\"}\nend\nend",
+        "text": "Функция покупки",
+        "id": 5,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 5,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction myTap (event)\nevent.target.x = 10000\nfor j = 1, #groupBuy do\n    if groupBuy[j] and groupBuy[j].x == 10000 then\n      super_j = j\n      _sum = 0\n      for i = 1, #g.open do\n        if g.open[i] > 0 then\n          _sum = _sum <plus> 1\n          if _sum == j then\n            super_i = i\n            break\n          end\n        end\n      end\n      break\n    end\nend   \nevent.target.x = 0\n\nif g.sweets >= g.open[super_i] then\ndialog ({\n  header = \"Подтверждение\",\n  text = \"Вы точно хотите купить ёлочную игрушку за \".. g.open[super_i] .. \" конфет?\",\n  answers = {\n    {text = \"Да\", pressListener = function () buy() hideDialog () end},\n    {text = \"Нет\"}\n  }\n})\nelse\n  message (\"Недостаточно конфет для покупки\")\nend\nend\nend",
+        "text": "Функция клика"
+      },
+      {
+        "super_calculate": true,
+        "id": 5,
+        "text": "Игрушки",
+        "calculate": false,
+        "lua_do": "function lua_do()\nlocal i = 1\nrToys = {}\nlocal j = 1\nprices = {img = {}, text = {} }\ngroupBuy = {}\nfor y = 1, 4 do\n  rToys[y] = {}\n  for x = 1, 4 do\n    rToys[y][x] = display.newImage (imgToys[i])\n    rToys[y][x].width = scale (rToys[y][x].height, canvas.width/4*0.85, rToys[y][x].width)\n    rToys[y][x].height = canvas.width/4*0.85\n    rToys[y][x].x = (x - 0.5)*canvas.width/4\n    rToys[y][x].y = canvas.height/2 <plus> (y-2.5)*canvas.width/4\n    if g.open[i] > 0 then\n      prices.img[j] = display.newImage (\"https://images.vfl.ru/ii/1609239624/85db1b39/32805236.png\")\n      prices.img[j].width = scale (prices.img[j].height, 0.7*canvas.width/4, prices.img[j].width)\n      prices.img[j].height = 0.7*canvas.width/4\n      prices.img[j].x = rToys[y][x].x <plus> canvas.width/8*0.6\n      prices.img[j].y = rToys[y][x].y <plus> canvas.width/8*0.6\n      groupBuy[j] = display.newGroup ()\n      groupBuy[j]:insert (rToys[y][x])\n      groupBuy[j]:insert (prices.img[j])\n      local options = {\n        text = g.open[i],\n        x = prices.img[j].x,\n        y = prices.img[j].y,\n        font = \"Roboto-Light\",\n        fontSize = math.round (0.0764*canvas.width),\n        parent = canvasGroup,\n      }\n      prices.text[j] = display.newText (options)\n      groupBuy[j]:addEventListener (\"tap\", myTap)\n      j = j <plus> 1\n    end\n    i = i <plus> 1\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction rSweets ()\n  rS = {}\n  rS.img = display.newImage (\"https://images.vfl.ru/ii/1607672416/aab99fae/32623471.png\")\n  rS.img.width = scale (rS.img.height, 0.125*canvas.height, rS.img.width)\n  rS.img.height = 0.125*canvas.height\n  local top_field = (canvas.height-canvas.width)/2\n  if rS.img.height > top_field then\n    rS.img.width = scale (rS.img.height, 0.9*top_field, rS.img.width)\n    rS.img.height = 0.9*top_field\n  end\n  rS.img.y = top_field/2\n  local options = {\n    text = g.sweets,\n    x = canvas.width/2 - rS.img.width*0.5625,\n    y = rS.img.y,\n    parent = canvasGroup,\n    font = \"Roboto-Regular\",\n    fontSize = math.round (0.64*rS.img.height),\n  }\n  rS.text = display.newText (options)\n  rS.text:setFillColor (0.84706, 0.15686, 0.15686)\n  rS.img.x = rS.text.x <plus> rS.text.width/2 <plus> 0.625*rS.img.width\nend\nrSweets ()\nend",
+        "calculate": false,
+        "text": "Конфеты",
+        "id": 5
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ng.fullscreen = 0\nend",
+        "text": "В меню",
+        "no_transition": false,
+        "right_answer": false,
+        "id": 7,
+        "middle_answer": true,
+        "left_answer": false,
+        "addToHistory": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Магазин.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n  date = os.date( \"*t\" )\n  if date.month == 12 and date.day == 31 and (not g.newYear) then\n    flag = false\n    g.newYear = true\n    dialog ({\n      header = \"С наступающим Новым годом!\",\n      text = \"Пусть жизнь будет такой же сладкой, как этот подарок - 5 конфет.\"\n    })\n    g.sweets = g.sweets <plus> 5\n  elseif not (date.month == 12 and date.day == 31) then\n    g.newYear = false\n  end\n  if curGame == bonusGame and flag then\n    bonus = math.random(3)\n    g.sweets = g.sweets <plus> bonus\n    dialog ({header = \"Вам подарок!\", \n    text = \"В нём \" .. bonus .. (bonus > 1 and \" конфеты.\" or \" конфета.\")\n    })\n    flag = false\n  end\nend",
+        "text": "Случайный бонус",
+        "id": 6,
+        "calculate": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Конфеты: \".. g.sweets\nend",
+        "middle_answer": true,
+        "id": 6,
+        "text": "    ",
+        "comment": true,
+        "answerImage": [
+          "https://images.vfl.ru/ii/1607672416/aab99fae/32623471.png"
+        ]
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn not g.decor.gift and g.sweets >= 30\nend",
+        "lua_do": "function lua_do()\ng.decor.gift = true\ng.sweets = g.sweets - 30\ngift_on = true\nend",
+        "text": "Подарок под ёлкой (купить за 30 конфеты)",
+        "id": 6,
+        "addToHistory": [
+          16
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Подарок под ёлкой (30 конфет)",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not g.decor.gift and g.sweets < 30\nend"
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nreturn g.decor.gift\nend",
+        "lua_do": "function lua_do()\ngift_on = not gift_on\nend",
+        "id": 6,
+        "text": "Подарок под ёлкой (установлен)",
+        "lua_text": "function lua_text()\nreturn \"Подарок под ёлкой (\".. (gift_on and \"показывается)\" or \"убран в шкаф)\")\nend",
+        "comment": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not g.decor.star and g.sweets >= 45\nend",
+        "comment": false,
+        "id": 6,
+        "text": "Верхушка для ёлки (купить за 45 конфет)",
+        "lua_do": "function lua_do()\ng.decor.star = true\ng.sweets = g.sweets - 45\nstar_on = true\nend",
+        "addToHistory": [
+          17
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Верхушка для ёлки (45 конфет)",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not g.decor.star and g.sweets < 45\nend"
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn g.decor.star\nend",
+        "id": 6,
+        "text": "Верхушка для ёлки (куплено)",
+        "lua_text": "function lua_text()\nreturn \"Верхушка для ёлки (\".. (star_on and \"показывается)\" or \"убрана в шкаф)\")\nend",
+        "lua_do": "function lua_do()\nstar_on = not star_on\nend"
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn not g.decor.tinsel and g.sweets >= 70\nend",
+        "lua_do": "function lua_do()\ng.decor.tinsel = true\ng.sweets = g.sweets - 70\ntinsel_on = true\nend",
+        "text": "Мишура (купить за 70 конфет)",
+        "id": 6,
+        "addToHistory": [
+          18
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Мишура (70 конфет)",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not g.decor.tinsel and g.sweets < 70\nend"
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nreturn g.decor.tinsel\nend",
+        "id": 6,
+        "lua_do": "function lua_do()\ntinsel_on = not tinsel_on\nend",
+        "text": "Мишура (куплено)",
+        "lua_text": "function lua_text()\nreturn \"Мишура (\".. (tinsel_on and \"показывается)\" or \"убрана в шкаф)\")\nend",
+        "addToHistory": [
+          21
+        ]
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nreturn g.decor.paper\nend",
+        "lua_text": "function lua_text()\nreturn \"Вытынанки (\".. (paper_on and \"показываются)\" or \"убраны в шкаф)\")\nend",
+        "id": 6,
+        "text": "Вытынанки (куплено)",
+        "lua_do": "function lua_do()\npaper_on = not paper_on\nend",
+        "addToHistory": [
+          21
+        ]
+      },
+      {
+        "id": 6,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": false,
+        "id": 5,
+        "text": "Ёлочные игрушки",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nend",
+        "addToHistory": [
+          11
+        ]
+      },
+      {
+        "id": 6,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "id": 7,
+        "text": "В меню",
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "addToHistory": [
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Меню.",
+    "answers": [
+      {
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n  function setPD (num)\n    for k, v in pairs (g.pDifficulty[num]) do\n      vars[k] = v\n    end\n  end\nend",
+        "calculate": true,
+        "text": "Функция установки параметров сложности",
+        "id": 7
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n  local full = 0\n  for k, v in pairs (g.decor) do\n    full = full <plus> 1\n  end\n  if full == 3 then\n    full = true\n    for i = 1, #g.open do\n      if g.open[i] ~= 0 then\n        full = false\n        break\n      end\n    end\n    if full then\n      g.decor.paper = true\n      paper_on = true\n      dialog ({header = \"Поздравляем!\", text = \"Вы купили все украшения в игре и получаете бонусное украшение - бумажные вытынанки.\"})\n    end\n  end\nend",
+        "calculate": true,
+        "text": "Полное прохождение",
+        "id": 6
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n  td = {\"низкая\", \"средняя\", \"высокая\", \"очень высокая\"}\nend",
+        "calculate": true,
+        "id": 7,
+        "text": "Названия"
+      },
+      {
+        "answerIcon": [
+          "https://images.vfl.ru/ii/1609507832/1cda592a/32828564.png"
+        ],
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn \"Сложность: \" .. td[difficulty]\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nif difficulty == 4 then\n  difficulty = 1\nelse\n  difficulty = difficulty <plus> 1\nend\nsetPD (difficulty)\nend",
+        "text": "Сложность: низкая",
+        "id": 7,
+        "addToHistory": [
+          13
+        ]
+      },
+      {
+        "id": 7,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "id": 6,
+        "text": "Зайти в магазин",
+        "addToHistory": [
+          10,
+          15
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not first\nend",
+        "id": 2,
+        "text": "Продолжить игру",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nend",
+        "addToHistory": [
+          14
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nreturn first\nend",
+        "id": 2,
+        "text": "Начать игру",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nfirst = false\nend",
+        "addToHistory": [
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "",
+    "answers": []
+  }
+]

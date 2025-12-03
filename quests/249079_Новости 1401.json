@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 214714 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Джефф написал еще 159029 слов в квесте \"Любовь машины.\"."
+      },
+      {
+        "targetbookid": "232802",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Любовь машины.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Waffle написал еще 140882 слов в квесте \"Тёмные дни\"."
+      },
+      {
+        "targetbookid": "239163",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тёмные дни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ветер Востока (Sharhan A.) написал еще 116638 слов в квесте \"Алхимик: Начало.\"."
+      },
+      {
+        "targetbookid": "246570",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Алхимик: Начало.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 113116 слов в квесте \"Трансформеры: Забытая история\"."
+      },
+      {
+        "targetbookid": "229881",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Трансформеры: Забытая история\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

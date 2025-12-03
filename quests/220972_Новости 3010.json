@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор AntiHero написал еще 20942 слов в квесте \"Кровавый Ворон\"."
+      },
+      {
+        "targetbookid": "206513",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Кровавый Ворон\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mora Fox написал еще 18610 слов в квесте \"Четыре принца и я<s>r\n\"."
+      },
+      {
+        "targetbookid": "180489",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Четыре принца и я<s>r\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор _KessiKeyd_❤ написал еще 17686 слов в квесте \"   После того...\"."
+      },
+      {
+        "targetbookid": "210474",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"   После того...\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Elizabeth написал еще 17511 слов в квесте \"Студенческая жизнь\"."
+      },
+      {
+        "targetbookid": "105086",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Студенческая жизнь\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор dannskoy\n написал еще 15084 слов в квесте \"Тяжкое время: часть первая\"."
+      },
+      {
+        "targetbookid": "155456",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тяжкое время: часть первая\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

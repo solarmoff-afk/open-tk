@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Froga написал еще 99127.6 слов в квесте \"Ночь в лесу\"."
+      },
+      {
+        "targetbookid": "267171",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ночь в лесу\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 34871.4 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор masha katsuba написал еще 31906.6 слов в квесте \"Границы света и тьмы\"."
+      },
+      {
+        "targetbookid": "230986",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Границы света и тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Юлия  написал еще 24792.4 слов в квесте \"Страницы моей реальности \"."
+      },
+      {
+        "targetbookid": "267050",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Страницы моей реальности \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор bestmean написал еще 20085.2 слов в квесте \"Школа\n\n\"."
+      },
+      {
+        "targetbookid": "266481",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Школа\n\n\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

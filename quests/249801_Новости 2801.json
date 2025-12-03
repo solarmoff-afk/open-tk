@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Viktorianayt написал еще 195377 слов в квесте \"Академия стихий \"."
+      },
+      {
+        "targetbookid": "249231",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Академия стихий \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор masha katsuba написал еще 167333 слов в квесте \"Границы тьмы\"."
+      },
+      {
+        "targetbookid": "230986",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Границы тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 159971 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "248757",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор A написал еще 123557 слов в квесте \"Ее волосы были цвета сахарной ваты\"."
+      },
+      {
+        "targetbookid": "235768",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ее волосы были цвета сахарной ваты\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ..? написал еще 111264 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "247949",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

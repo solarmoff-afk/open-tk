@@ -1,0 +1,6451 @@
+[
+  {
+    "id": 1,
+    "text": "Пожалуйста! Включите ночной режим! Спасибо!\n\n\nУдачи путник, только покорив всех богов, ты сможешь посесть трон Бога над Богами! ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Первая версия (старая) ",
+        "var_add": [
+          "ph",
+          1
+        ],
+        "var_set": [
+          "g",
+          0,
+          "Hp",
+          20,
+          "ph",
+          15,
+          "atk",
+          0,
+          "Lord",
+          0,
+          "F",
+          0,
+          "m",
+          0,
+          "q",
+          0,
+          "w",
+          0,
+          "Fire",
+          0,
+          "C",
+          0,
+          "H",
+          0,
+          "v",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Начать квест! ",
+        "var_set": [
+          "хп",
+          5,
+          "атк",
+          1,
+          "пх",
+          5,
+          "й",
+          3,
+          "ц",
+          15,
+          "ур",
+          1,
+          "предмет",
+          1,
+          "п",
+          2,
+          "ап",
+          0,
+          "xp",
+          1,
+          "кар",
+          0,
+          "уд",
+          34,
+          "ланка",
+          1,
+          "золото",
+          0,
+          "шлем",
+          0,
+          "рус",
+          0,
+          "weak",
+          9,
+          "mp",
+          0,
+          "reload",
+          0,
+          "pm",
+          0,
+          "ключ",
+          0,
+          "lvl",
+          0,
+          "vlv",
+          10,
+          "хпп",
+          0,
+          "р",
+          1,
+          "рр",
+          1,
+          "рог",
+          0,
+          "heal",
+          5,
+          "храм",
+          0,
+          "оск",
+          0
+        ]
+      },
+      {
+        "id": 43,
+        "text": "Информация (прочитай пожалуйста)\nОЧЕНЬ ВАЖНО"
+      },
+      {
+        "id": 44,
+        "text": "Достижения "
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Перед вами Лорд Скелетов\n",
+    "answers": [
+      {
+        "var_show": [
+          "Hp",
+          "Hp"
+        ],
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 2,
+        "text": "\n----",
+        "merge": true
+      },
+      {
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 2,
+        "text": "\n\n*Король Скелетов готовит заклинание - [Лечение] ",
+        "var_more": [
+          "m",
+          3
+        ],
+        "merge": true
+      },
+      {
+        "var_random_from_weight": [
+          "Lord",
+          0,
+          20,
+          1,
+          30,
+          2,
+          30,
+          3,
+          20
+        ],
+        "var_random": [
+          "atk",
+          1,
+          3
+        ],
+        "id": 2,
+        "var_more": [
+          "Hp",
+          0,
+          "ph",
+          0
+        ],
+        "var_sub": [
+          "Hp",
+          "atk"
+        ],
+        "text": "Атака"
+      },
+      {
+        "id": 4,
+        "var_more": [
+          "Hp",
+          0,
+          "ph",
+          0
+        ],
+        "text": "Заклинание"
+      },
+      {
+        "var_add": [
+          "C",
+          1
+        ],
+        "var_equal": [
+          "C",
+          0
+        ],
+        "id": 2,
+        "text": "<plus>Скритность",
+        "var_need": [
+          "ph",
+          0,
+          "Hp",
+          0
+        ],
+        "var_no_more": [
+          "ph",
+          15,
+          "Hp",
+          30
+        ]
+      },
+      {
+        "var_show": [
+          "ph"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 2,
+        "text": "Ваше Hp - - - "
+      },
+      {
+        "var_add": [
+          "ph",
+          15
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 1,
+        "text": "Победа",
+        "var_no_more": [
+          "Hp",
+          0
+        ],
+        "var_set": [
+          "SS",
+          5,
+          "DD",
+          5,
+          "FF",
+          5
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Поражение",
+        "var_no_more": [
+          "ph",
+          0
+        ],
+        "text_color": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Инфо",
+        "var_add": [
+          "ph",
+          1
+        ],
+        "var_more": [
+          "Hp",
+          0,
+          "ph",
+          0
+        ]
+      },
+      {
+        "calculate": true,
+        "var_add": [
+          "m",
+          1
+        ],
+        "var_random": [
+          "F",
+          1,
+          3
+        ],
+        "id": 2,
+        "var_sub": [
+          "ph",
+          "F"
+        ],
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "C",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "Hp",
+          4
+        ],
+        "var_sub": [
+          "m",
+          5
+        ],
+        "id": 2,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_more": [
+          "m",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "ph",
+          5
+        ],
+        "var_equal": [
+          "q",
+          1
+        ],
+        "id": 2,
+        "calculate": true,
+        "var_sub": [
+          "q",
+          1
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "calculate": true,
+        "id": 2,
+        "var_more": [
+          "ph",
+          15
+        ],
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "ph",
+          15
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "m",
+          1
+        ],
+        "var_random": [
+          "F",
+          0,
+          3
+        ],
+        "id": 2,
+        "calculate": true,
+        "var_sub": [
+          "ph",
+          "F"
+        ],
+        "var_equal": [
+          "C",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "\n*Король Скелетов совершил промах! ",
+        "merge": true,
+        "var_equal": [
+          "F",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Рестарт"
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "w",
+          1
+        ],
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Екипировка:\nМеч  урон:1-3\n\n\nЛорд Скелетов:\nУрон:1-3\n Hp:20",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Выбор заклинания:\n",
+    "answers": [
+      {
+        "var_add": [
+          "q",
+          1,
+          "w",
+          0
+        ],
+        "var_equal": [
+          "H",
+          0
+        ],
+        "id": 2,
+        "text": "Лечение\n[Hp: <plus>5]",
+        "var_more": [
+          "v",
+          0
+        ],
+        "var_sub": [
+          "v",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "Fire",
+          1
+        ],
+        "var_equal": [
+          "H",
+          0
+        ],
+        "id": 2,
+        "var_sub": [
+          "v",
+          1,
+          "Hp",
+          5
+        ],
+        "var_more": [
+          "v",
+          0
+        ],
+        "text": "Огненная стрела\n[Урон: 5]"
+      },
+      {
+        "id": 2,
+        "text": "Назад\n[Будет пропущен ход] "
+      },
+      {
+        "id": 4,
+        "text": "Мана: ",
+        "comment": true,
+        "var_show": [
+          "v"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Выбирите цель:\n\n",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Паук ",
+        "var_sub": [
+          "DD",
+          3
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Паук",
+        "var_sub": [
+          "SS",
+          2
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Паук",
+        "var_sub": [
+          "FF",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Перед вами 3 паука",
+    "answers": [
+      {
+        "var_show": [
+          "DD"
+        ],
+        "id": 6,
+        "text": "Паук\n--- Hp ",
+        "var_more": [
+          "DD",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "SS"
+        ],
+        "id": 6,
+        "text": "\nПаук\n--- Hp ",
+        "var_more": [
+          "SS",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "FF"
+        ],
+        "id": 6,
+        "text": "\nПаук\n--- Hp ",
+        "var_more": [
+          "FF",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "var_add": [
+          "m",
+          1
+        ],
+        "var_equal": [
+          "C",
+          1
+        ],
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "ph",
+          "F"
+        ],
+        "var_random": [
+          "F",
+          0,
+          3
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Атака"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Украдено маны:  ",
+    "answers": [
+      {
+        "id": 7,
+        "text": "---",
+        "var_show": [
+          "m"
+        ],
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "Забрать",
+        "var_set": [
+          "m",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Скилы\n\n\n\n",
+    "answers": [
+      {
+        "var_add": [
+          "хп",
+          3,
+          "пх",
+          3,
+          "атк",
+          1,
+          "mp",
+          1,
+          "pm",
+          1
+        ],
+        "id": 8,
+        "var_more": [
+          "ур",
+          10
+        ],
+        "text": "Прокачать всё",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.9,
+          0.6,
+          0.6
+        ],
+        "var_add": [
+          "атк",
+          1
+        ],
+        "id": 8,
+        "instant": true,
+        "text": "Прокачать атаку"
+      },
+      {
+        "bg_color": [
+          0.8,
+          0.9,
+          1
+        ],
+        "var_add": [
+          "mp",
+          2,
+          "pm",
+          2
+        ],
+        "id": 8,
+        "instant": true,
+        "text": "Прокачать ману"
+      },
+      {
+        "bg_color": [
+          0.7,
+          0.9,
+          0.6
+        ],
+        "var_add": [
+          "хп",
+          2,
+          "пх",
+          2
+        ],
+        "id": 8,
+        "instant": true,
+        "text": "Прокачать жизни"
+      },
+      {
+        "id": 11,
+        "text": "Предметы",
+        "bg_color": [
+          0.9,
+          0.9,
+          0.2
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Рейд",
+        "var_set": [
+          "кр",
+          "ц",
+          "к",
+          "й",
+          "r",
+          0
+        ],
+        "left_answer": false
+      },
+      {
+        "bg_color": [
+          1,
+          0
+        ],
+        "right_answer": false,
+        "var_more": [
+          "ур",
+          5
+        ],
+        "var_random": [
+          "dr",
+          "хп",
+          "ц"
+        ],
+        "id": 10,
+        "instant": true,
+        "text": "Пещера дракона ",
+        "var_set": [
+          "dr",
+          0,
+          "rd",
+          0,
+          "золл",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 24,
+        "text": "Лабиринт",
+        "var_equal": [
+          "ключ",
+          1
+        ],
+        "var_set": [
+          "лаб",
+          0,
+          "минотавр",
+          21000,
+          "мин",
+          375
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "id": 14,
+        "var_more": [
+          "ур",
+          10
+        ],
+        "text": "Божий Кров",
+        "var_set": [
+          "1",
+          21000,
+          "1а",
+          765
+        ]
+      },
+      {
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          -1,
+          1,
+          -1
+        ],
+        "id": 8,
+        "text": "Здоровья "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          -1
+        ],
+        "id": 8,
+        "text": "Урон"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 8,
+        "text": "Мана: "
+      },
+      {
+        "var_show": [
+          "xp",
+          "ед."
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Опыт: "
+      },
+      {
+        "var_show": [
+          "золото"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Золото: "
+      },
+      {
+        "id": 23,
+        "text": "Способности",
+        "instant": true,
+        "bg_color": [
+          0.9,
+          0.9,
+          1
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Магазин ",
+        "bg_color": [
+          0.9,
+          0.9,
+          0.7
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Русская рулетка",
+        "var_set": [
+          "пуля",
+          7,
+          "ставка",
+          0
+        ],
+        "var_equal": [
+          "рус",
+          1
+        ]
+      },
+      {
+        "id": 35,
+        "text": "Интересные места",
+        "bg_color": [
+          0.4,
+          0.6,
+          0.6
+        ],
+        "text_color": [
+          0.8,
+          0.8,
+          0.6
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Информация "
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "mp",
+          "pm"
+        ]
+      },
+      {
+        "var_show": [
+          "lvl"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Level:"
+      },
+      {
+        "calculate": true,
+        "var_add": [
+          "lvl",
+          1
+        ],
+        "super_calculate": false,
+        "id": 8,
+        "var_need": [
+          "хпп",
+          "vlv"
+        ],
+        "text": "Новый ответ. введите текст",
+        "var_mult": [
+          "vlv",
+          1.6
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "reload",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Способность\n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "уд"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 9,
+        "text": "Карающий удар\nПасивный\nШанс: 20%\nДоп.урон: <plus>"
+      },
+      {
+        "var_show": [
+          "xp",
+          "ед."
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Опыт: "
+      },
+      {
+        "id": 23,
+        "text": "Уйти"
+      },
+      {
+        "var_sub": [
+          "кар",
+          3
+        ],
+        "var_add": [
+          "уд",
+          16
+        ],
+        "super_calculate": false,
+        "id": 9,
+        "calculate": true,
+        "var_equal": [
+          "кар",
+          3
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "уд",
+          160
+        ],
+        "super_calculate": false,
+        "id": 9,
+        "var_sub": [
+          "кар",
+          30
+        ],
+        "var_equal": [
+          "кар",
+          30
+        ],
+        "calculate": true
+      },
+      {
+        "calculate": true,
+        "var_add": [
+          "уд",
+          1600
+        ],
+        "super_calculate": false,
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "кар",
+          300
+        ],
+        "var_sub": [
+          "кар",
+          300
+        ]
+      },
+      {
+        "var_max": [
+          "кар",
+          3
+        ],
+        "var_add": [
+          "кар",
+          3
+        ],
+        "var_sub": [
+          "xp",
+          3
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Прокачать ",
+        "var_more": [
+          "xp",
+          2
+        ]
+      },
+      {
+        "var_sub": [
+          "xp",
+          30
+        ],
+        "instant": true,
+        "id": 9,
+        "text": "Прокачать на 10",
+        "var_more": [
+          "xp",
+          29
+        ],
+        "var_set": [
+          "кар",
+          30
+        ]
+      },
+      {
+        "text": "Прокачать на 100",
+        "var_more": [
+          "xp",
+          299
+        ],
+        "id": 9,
+        "instant": true,
+        "var_sub": [
+          "xp",
+          300
+        ],
+        "var_set": [
+          "кар",
+          300
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Пещера  Дракона\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_random": [
+          "rd",
+          "атк",
+          "й"
+        ],
+        "id": 13,
+        "instant": true,
+        "text": "Войти",
+        "var_set": [
+          "редкость",
+          0,
+          "вкл",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "золл",
+          1,
+          50,
+          2,
+          25,
+          3,
+          15,
+          4,
+          10
+        ],
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Предметы\n\n\n",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 11,
+        "text": " [Божественный Свет] \nХп<plus>500    Урон <plus>200     Реген кольца <plus>50",
+        "var_more": [
+          "ланка",
+          4
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 11,
+        "text": " [Пламя Феникса] \nЧто оно делает??? ",
+        "var_more": [
+          "пламя",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 11,
+        "text": " [Корона Бога Войны] \nХп<plus>300            Реген кольца <plus>30",
+        "var_more": [
+          "ланка",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 11,
+        "text": " [Корона Бога Смерти] \nХп<plus>100            Реген кольца <plus>10",
+        "var_more": [
+          "ланка",
+          2
+        ]
+      },
+      {
+        "var_show": [
+          "р"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 11,
+        "text": " [Рог Минотавра]\nУвеличение Атаки в ход <plus>",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "var_max": [
+          "рр",
+          70
+        ],
+        "var_show": [
+          "рр"
+        ],
+        "var_add": [
+          "рр",
+          1
+        ],
+        "var_equal": [
+          "рог",
+          1
+        ],
+        "id": 11,
+        "instant": true,
+        "text": "Прокачать Рог\nПрогрес:\n"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 11,
+        "text": " [Корона Бога Бессмертия] \nХп<plus>100            Реген кольца <plus>10",
+        "var_more": [
+          "ланка",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 11,
+        "text": "[Шлем крестоносца]\nХп <plus>100           Атака <plus>5",
+        "var_equal": [
+          "шлем",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "п"
+        ],
+        "comment": true,
+        "var_equal": [
+          "предмет",
+          1
+        ],
+        "id": 11,
+        "text": "[Кольцо регенерации] \nРеген в ход <plus>",
+        "text_color": [
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "var_max": [
+          "ап",
+          9
+        ],
+        "var_show": [
+          "ап"
+        ],
+        "var_add": [
+          "ап",
+          1
+        ],
+        "var_equal": [
+          "предмет",
+          1
+        ],
+        "id": 11,
+        "instant": true,
+        "text": "Прокачать кольцо\nПрогрес:\n"
+      },
+      {
+        "id": 8,
+        "text": "Назад"
+      },
+      {
+        "var_equal": [
+          "ап",
+          9
+        ],
+        "var_sub": [
+          "ап",
+          9
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 11,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "п",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "р",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "var_equal": [
+          "рр",
+          70
+        ],
+        "id": 11,
+        "var_sub": [
+          "рр",
+          70
+        ],
+        "calculate": true,
+        "super_calculate": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Подземелье\n",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Вы встретили крысу ",
+        "var_show": [
+          "ур",
+          "ур."
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "к"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          -1
+        ],
+        "id": 12,
+        "text": "Атака: "
+      },
+      {
+        "var_show": [
+          "кр"
+        ],
+        "comment": true,
+        "text_color": [
+          -1,
+          1,
+          -1
+        ],
+        "id": 12,
+        "text": "Здоровья: "
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          0.9
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "var_sub": [
+          "кр",
+          60
+        ]
+      },
+      {
+        "var_more": [
+          "кр",
+          0
+        ],
+        "var_sub": [
+          "кр",
+          "атк",
+          "хп",
+          "к"
+        ],
+        "id": 12,
+        "var_need": [
+          "хп",
+          1
+        ],
+        "instant": true,
+        "text": "Атака"
+      },
+      {
+        "var_set": [
+          "хп",
+          "пх"
+        ],
+        "bg_color": [
+          -1,
+          1,
+          -1
+        ],
+        "var_add": [
+          "ур",
+          1,
+          "xp",
+          "ур",
+          "п",
+          1,
+          "золото",
+          1,
+          "хпп",
+          "ур"
+        ],
+        "id": 8,
+        "var_less": [
+          "кр",
+          1
+        ],
+        "var_more": [
+          "хп",
+          0
+        ],
+        "text": "Победа",
+        "var_mult": [
+          "й",
+          2,
+          "ц",
+          2
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "text": "Заклинания",
+        "id": 29,
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "instant": true,
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          -1,
+          1,
+          -1
+        ],
+        "id": 12,
+        "text": "Здоровья "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          -1
+        ],
+        "id": 12,
+        "text": "Атака"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 8,
+        "text": "Мана: "
+      },
+      {
+        "var_add": [
+          "хп",
+          "п"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "предмет",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "кр",
+          "уд"
+        ],
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_sub": [
+          "reload",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Это ",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7
+        ],
+        "id": 13,
+        "text": "Старший дракон:\n",
+        "var_equal": [
+          "редкость",
+          1
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Пещерный дракон:\n\n\n",
+        "var_less": [
+          "редкость",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "dr"
+        ],
+        "comment": true,
+        "text_color": [
+          -1,
+          1,
+          -1
+        ],
+        "id": 13,
+        "text": "Здоровья :  "
+      },
+      {
+        "var_show": [
+          "rd"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          -1
+        ],
+        "id": 12,
+        "text": "Атака"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "var_sub": [
+          "dr",
+          60
+        ]
+      },
+      {
+        "var_need": [
+          "хп",
+          1
+        ],
+        "var_more": [
+          "dr",
+          0
+        ],
+        "id": 13,
+        "var_sub": [
+          "dr",
+          "атк",
+          "хп",
+          "rd"
+        ],
+        "instant": true,
+        "text": "Атака"
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "instant": true,
+        "id": 30,
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30,
+          "dr",
+          0
+        ],
+        "text": "Заклинания",
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "bg_color": [
+          -1,
+          1,
+          -1
+        ],
+        "var_add": [
+          "xp",
+          5,
+          "п",
+          1,
+          "xp",
+          "ур",
+          "золото",
+          "золл",
+          "хпп",
+          "ур",
+          "хпп",
+          5
+        ],
+        "text": "Победа",
+        "var_less": [
+          "dr",
+          1
+        ],
+        "var_more": [
+          "хп",
+          0
+        ],
+        "id": 8,
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          -1,
+          1,
+          -1
+        ],
+        "id": 12,
+        "text": "Здоровья "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          -1
+        ],
+        "id": 12,
+        "text": "Атака"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 8,
+        "text": "Мана: "
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_add": [
+          "хп",
+          "п"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "предмет",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "dr",
+          "уд"
+        ],
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "вкл",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 13,
+        "var_more": [
+          "dr",
+          2300
+        ],
+        "calculate": true,
+        "var_set": [
+          "вкл",
+          0,
+          "редкость",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 12,
+        "var_sub": [
+          "reload",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Божий Кров\n\n\n\nБросить вызов:\n",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_equal": [
+          "ланка",
+          1
+        ],
+        "id": 15,
+        "text": "Бог Бессмертия ",
+        "var_set": [
+          "rr",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_equal": [
+          "ланка",
+          2
+        ],
+        "id": 16,
+        "text": "Бог Смерти",
+        "var_set": [
+          "2",
+          25000,
+          "2а",
+          2100,
+          "rr",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1
+        ],
+        "var_equal": [
+          "ланка",
+          3
+        ],
+        "id": 17,
+        "text": "Бог Войны",
+        "var_set": [
+          "3",
+          48000,
+          "3а",
+          2350,
+          "rr",
+          0,
+          "Fe",
+          0,
+          "щит",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1
+        ],
+        "var_equal": [
+          "ланка",
+          4
+        ],
+        "id": 18,
+        "text": "Высшая Сущность",
+        "var_set": [
+          "4",
+          99000,
+          "4а",
+          3750,
+          "rr",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_equal": [
+          "ланка",
+          5
+        ],
+        "id": 22,
+        "text": "Врата в Рай",
+        "text_color": [
+          0,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Бог Бессмертия\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "1"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "1а"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rr",
+          2
+        ],
+        "id": 15,
+        "text": "Бога переполняет Безсмертие, Его хп увеличено! ",
+        "text_color": [
+          0,
+          0.8,
+          0.8
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_sub": [
+          "1",
+          60
+        ],
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "1",
+          "атк",
+          "хп",
+          "1а"
+        ],
+        "id": 15,
+        "instant": true,
+        "var_more": [
+          "хп",
+          0,
+          "1",
+          0
+        ],
+        "text": "Атака "
+      },
+      {
+        "var_less": [
+          "1",
+          1
+        ],
+        "bg_color": [
+          0,
+          1
+        ],
+        "var_add": [
+          "хп",
+          100,
+          "п",
+          10,
+          "xp",
+          90,
+          "пх",
+          100,
+          "золото",
+          25,
+          "хпп",
+          90
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Победа! ",
+        "var_more": [
+          "хп",
+          0
+        ],
+        "var_set": [
+          "ланка",
+          2,
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "id": 27,
+        "instant": true,
+        "text": "Заклинания",
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 15,
+        "text": "Мана:"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "хп",
+          "п"
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "1",
+          "уд"
+        ],
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_sub": [
+          "reload",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "var_random": [
+          "rr",
+          1,
+          7
+        ],
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "1",
+          2000
+        ],
+        "var_equal": [
+          "rr",
+          2
+        ],
+        "id": 15,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Бог Смерти\n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "2"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "2а"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rr",
+          3
+        ],
+        "id": 16,
+        "text": "Бог Смерти использует Крик смерти, Вы потеряли 400 хп! ",
+        "text_color": [
+          1,
+          0.1,
+          0.2
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_sub": [
+          "2",
+          60
+        ],
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "bg_color": [
+          0,
+          1
+        ],
+        "var_add": [
+          "хп",
+          100,
+          "пх",
+          100,
+          "п",
+          10,
+          "xp",
+          160,
+          "золото",
+          50,
+          "хпп",
+          160
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "2",
+          1
+        ],
+        "text": "Победа! ",
+        "var_more": [
+          "хп",
+          0
+        ],
+        "var_set": [
+          "ланка",
+          3,
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_more": [
+          "хп",
+          0
+        ],
+        "id": 16,
+        "instant": true,
+        "var_sub": [
+          "хп",
+          "2а",
+          "2",
+          "атк"
+        ],
+        "text": "Атака"
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 28,
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "instant": true,
+        "text": "Заклинания",
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 15,
+        "text": "Мана:"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "хп",
+          "п"
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "2",
+          "уд"
+        ],
+        "super_calculate": false
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 16,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_sub": [
+          "reload",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 16,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_random": [
+          "rr",
+          1,
+          6
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "var_equal": [
+          "rr",
+          3
+        ],
+        "id": 16,
+        "calculate": true,
+        "super_calculate": false,
+        "var_sub": [
+          "хп",
+          400
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Бог Войны\n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "3"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "3а"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "var_show": [
+          "щит"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 17,
+        "text": "Щит: "
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.7
+        ],
+        "id": 17,
+        "text": "Бог Войны блокирует использование заклинаний, перезарядка сброшена! ",
+        "var_equal": [
+          "Fe",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.7
+        ],
+        "id": 17,
+        "text": "Бог Войны черпает силу с войны, атака увеличена! ",
+        "var_equal": [
+          "rr",
+          4
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rr",
+          3
+        ],
+        "id": 17,
+        "text": "Бог Войны использовал заклинание \"щит\" ",
+        "text_color": [
+          0,
+          0.9,
+          0.9
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "comment": true,
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_sub": [
+          "3",
+          60
+        ],
+        "var_less": [
+          "щит",
+          1
+        ]
+      },
+      {
+        "var_more": [
+          "щит",
+          0
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 12,
+        "var_sub": [
+          "щит",
+          60
+        ],
+        "text": "Карающий удар! ",
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "var_sub": [
+          "хп",
+          "3а",
+          "3",
+          "атк"
+        ],
+        "id": 17,
+        "text": "Атака",
+        "var_less": [
+          "щит",
+          1
+        ],
+        "var_more": [
+          "хп",
+          0
+        ]
+      },
+      {
+        "var_more": [
+          "хп",
+          0,
+          "щит",
+          0
+        ],
+        "id": 17,
+        "var_sub": [
+          "хп",
+          "3а",
+          "щит",
+          "атк"
+        ],
+        "instant": true,
+        "text": "Атака"
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 31,
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "instant": true,
+        "text": "Заклинания",
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "bg_color": [
+          0,
+          1
+        ],
+        "var_add": [
+          "хп",
+          300,
+          "пх",
+          300,
+          "п",
+          30,
+          "xp",
+          300,
+          "золото",
+          75,
+          "хпп",
+          300
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "3",
+          1
+        ],
+        "text": "Победа! ",
+        "var_more": [
+          "хп",
+          0
+        ],
+        "var_set": [
+          "ланка",
+          4,
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 15,
+        "text": "Мана:"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "хп",
+          "п"
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false,
+        "id": 12,
+        "var_sub": [
+          "3",
+          "уд"
+        ],
+        "var_less": [
+          "щит",
+          1
+        ],
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "r",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "щит",
+          "уд"
+        ],
+        "var_more": [
+          "щит",
+          0
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_sub": [
+          "reload",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "var_random": [
+          "Fe",
+          1,
+          7
+        ],
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "Fe",
+          3
+        ],
+        "id": 17,
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "var_random": [
+          "rr",
+          1,
+          6
+        ],
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "var_less": [
+          "щит",
+          0
+        ],
+        "var_set": [
+          "щит",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "щит",
+          750
+        ],
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "rr",
+          3
+        ]
+      },
+      {
+        "var_add": [
+          "3а",
+          200
+        ],
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "var_equal": [
+          "rr",
+          4
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "var_less": [
+          "3а",
+          0
+        ],
+        "var_set": [
+          "3а",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Высшая Сущность\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "4"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "4а"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0.8,
+          0.7
+        ],
+        "id": 18,
+        "text": "Сущноность украла 200 ед. Маны! ",
+        "var_equal": [
+          "rr",
+          4
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0.9,
+          0.8
+        ],
+        "id": 18,
+        "text": "Сущность засияла смертью, вы получили 600 урона! ",
+        "var_equal": [
+          "rr",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0.8,
+          0.7
+        ],
+        "id": 18,
+        "text": "Сущность собирает силу с небес, атака увеличена! ",
+        "var_equal": [
+          "rr",
+          6
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.7
+        ],
+        "id": 17,
+        "text": "Сущность блокирует использование заклинаний, перезарядка сброшена! ",
+        "var_equal": [
+          "Fe",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "var_sub": [
+          "4",
+          60
+        ]
+      },
+      {
+        "text": "Атака",
+        "id": 18,
+        "var_sub": [
+          "хп",
+          "4а",
+          "4",
+          "атк"
+        ],
+        "var_more": [
+          "хп",
+          0
+        ],
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 31,
+        "text": "Заклинания",
+        "var_less": [
+          "reload",
+          1
+        ],
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "instant": true,
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "bg_color": [
+          0,
+          1
+        ],
+        "var_add": [
+          "хп",
+          500,
+          "пх",
+          500,
+          "п",
+          50,
+          "xp",
+          900,
+          "золото",
+          100,
+          "атк",
+          200,
+          "хпп",
+          900
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "4",
+          1
+        ],
+        "text": "Победа! ",
+        "var_more": [
+          "хп",
+          0
+        ],
+        "var_set": [
+          "ланка",
+          5,
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 15,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 15,
+        "text": "Атака:"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 15,
+        "text": "Мана:"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "хп",
+          "п"
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "4",
+          "уд"
+        ],
+        "super_calculate": false
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_sub": [
+          "reload",
+          1
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "Fe",
+          3
+        ],
+        "id": 17,
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_random": [
+          "Fe",
+          1,
+          5
+        ]
+      },
+      {
+        "var_random": [
+          "rr",
+          1,
+          7
+        ],
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "rr",
+          2
+        ],
+        "id": 18,
+        "calculate": true,
+        "super_calculate": false,
+        "var_sub": [
+          "хп",
+          600
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "rr",
+          4
+        ],
+        "id": 18,
+        "calculate": true,
+        "super_calculate": false,
+        "var_sub": [
+          "mp",
+          200
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 18,
+        "calculate": true,
+        "var_less": [
+          "4а",
+          0
+        ],
+        "var_set": [
+          "4а",
+          0
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_add": [
+          "4а",
+          650
+        ],
+        "var_equal": [
+          "rr",
+          6
+        ],
+        "id": 18,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Приветствую вас в магазине!\nЗдесь можно приобрести различные предметы и артефакты. \nВнимание, вы сможете увидеть предмет здесь только тогда, когда накопите достаточно золота. Чем больше золота, тем больше предметов будет доступно! \n\n",
+    "answers": [
+      {
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "var_more": [
+          "золото",
+          99
+        ],
+        "var_equal": [
+          "ключ",
+          0
+        ],
+        "id": 19,
+        "var_sub": [
+          "золото",
+          100
+        ],
+        "text": "[Золотой ключ]\nОткрывает лабиринты",
+        "var_set": [
+          "ключ",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1
+        ],
+        "var_more": [
+          "золото",
+          99
+        ],
+        "var_add": [
+          "хп",
+          50,
+          "пх",
+          50,
+          "атк",
+          5
+        ],
+        "var_equal": [
+          "шлем",
+          0
+        ],
+        "id": 19,
+        "text": "[Шлем крестоносца] \nХп <plus>100\nАтака <plus>5",
+        "var_sub": [
+          "золото",
+          100
+        ],
+        "var_set": [
+          "шлем",
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "золото",
+          30
+        ],
+        "var_equal": [
+          "рус",
+          0
+        ],
+        "id": 19,
+        "var_more": [
+          "золото",
+          29
+        ],
+        "text": "Открыть русскую рулетку",
+        "var_set": [
+          "рус",
+          1,
+          "ставка",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "портал",
+          0
+        ],
+        "bg_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "var_add": [
+          "оск",
+          1
+        ],
+        "text_color": [
+          1,
+          0.5,
+          0.5
+        ],
+        "id": 19,
+        "var_more": [
+          "золото",
+          9
+        ],
+        "var_sub": [
+          "золото",
+          10
+        ],
+        "text": "Огненный Осколок"
+      },
+      {
+        "id": 8,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Если выпадет число 6 то вы победили и вы получаете утроенный выиграш! \nВсего 6 чисел, шанс 1 до 6, и питай удачу! \n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "пуля"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 20,
+        "text": "Выпало:",
+        "var_less": [
+          "пуля",
+          6
+        ]
+      },
+      {
+        "var_show": [
+          "пуля"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 20,
+        "text": "Выпало:",
+        "var_equal": [
+          "пуля",
+          6
+        ]
+      },
+      {
+        "var_show": [
+          "ставка"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 20,
+        "text": "Ставка:"
+      },
+      {
+        "var_sub": [
+          "золото",
+          5
+        ],
+        "var_add": [
+          "ставка",
+          5
+        ],
+        "var_more": [
+          "золото",
+          4
+        ],
+        "id": 20,
+        "instant": true,
+        "text": "Поставить 5 монет",
+        "var_set": [
+          "пуля",
+          7
+        ]
+      },
+      {
+        "var_sub": [
+          "золото",
+          20
+        ],
+        "var_add": [
+          "ставка",
+          20
+        ],
+        "text": "Поставить 20 монет",
+        "id": 20,
+        "var_more": [
+          "золото",
+          19
+        ],
+        "instant": true,
+        "var_set": [
+          "пуля",
+          7
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          0,
+          0
+        ],
+        "var_random": [
+          "пуля",
+          1,
+          6
+        ],
+        "id": 20,
+        "var_more": [
+          "ставка",
+          0
+        ],
+        "text_color": [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "text": "Крутить барабан! "
+      },
+      {
+        "id": 8,
+        "text": "Уйти"
+      },
+      {
+        "id": 8,
+        "text": "Забрать деньги ",
+        "var_add": [
+          "золото",
+          "ставка"
+        ],
+        "text_color": [
+          0,
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "золото"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 20,
+        "text": "Золото: "
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "var_less": [
+          "пуля",
+          6
+        ],
+        "text": "Новый ответ. введите текст",
+        "id": 20,
+        "var_set": [
+          "ставка",
+          0
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "super_calculate": false,
+        "id": 20,
+        "calculate": true,
+        "var_equal": [
+          "пуля",
+          6
+        ],
+        "var_mult": [
+          "ставка",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Характеристики дракона ростут вместе с уровнем крыс рейда, и характеристиками вашего персонажа! Чем меньше уровень рейда, и меньше ваши характеристики, тем слабее дракон!\n*********************************************************\nЧем выше уровень рейда, тем больше опыта даст убийство дракона!\n*********************************************************\n\"Пещера Дракона\" будет открыта после убийства крысы 5-го уровня\n*********************************************************\n\"Божий Кров\" будет открыт после убийства крысы 10-го уровня\n*********************************************************\nКаждый следующий Бог в локации\" Божий Кров\" будет открыт после победы над предыдущим Богом\n*********************************************************\nВ разделе \"Интересные места\" появляеться что-то новое по мере роста вашего уровня\n*********************************************************\nДраконы делятся на два типа:\" пещерный\" и \"старший\"\n*********************************************************\nКаждая победа над любым драконом, улутшает \"Кольцо регенерации\" на 1 уровень!\n*********************************************************\nТипы редкости предметов:\n",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Обычный ",
+        "comment": true
+      },
+      {
+        "id": 21,
+        "text": "Редкий ",
+        "comment": true,
+        "text_color": [
+          1,
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Епический",
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Легендарный ",
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Это конец путешествия человек!\nТы стал абсолютным Богом среди Богов!\n Это победа! ",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Закончить игру ",
+        "bg_color": [
+          0,
+          0,
+          0
+        ],
+        "blackout": true
+      },
+      {
+        "id": 8,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Выбрать способность\n\n\n\n",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Карающий удар",
+        "instant": true,
+        "text_color": [
+          1,
+          0,
+          0.9
+        ]
+      },
+      {
+        "comment": false,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 40,
+        "instant": true,
+        "text": "Исцеление "
+      },
+      {
+        "id": 23,
+        "text": "Удар молнии - Недоступно",
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Слабость",
+        "instant": true,
+        "text_color": [
+          0.8,
+          0,
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "        Лабиринт\n\n",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Старый Минотавр",
+        "merge": true,
+        "text_color": [
+          0.4,
+          0.5,
+          0.3
+        ]
+      },
+      {
+        "var_show": [
+          "минотавр"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 24,
+        "text": "Hp: "
+      },
+      {
+        "var_show": [
+          "мин"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 24,
+        "text": "Атака: ",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает мощь предков, его атака увеличена! ",
+        "var_equal": [
+          "лаб",
+          7
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает мощь предков, его атака увеличена! ",
+        "var_equal": [
+          "лаб",
+          14
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "var_sub": [
+          "минотавр",
+          60
+        ]
+      },
+      {
+        "text": "Атака",
+        "id": 24,
+        "instant": true,
+        "var_sub": [
+          "хп",
+          "мин",
+          "минотавр",
+          "атк"
+        ],
+        "var_more": [
+          "хп",
+          0,
+          "минотавр",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          -1,
+          1,
+          -1
+        ],
+        "var_add": [
+          "xp",
+          "ур",
+          "п",
+          1,
+          "золото",
+          11,
+          "хпп",
+          "ур",
+          "xp",
+          9,
+          "хпп",
+          9
+        ],
+        "var_more": [
+          "хп",
+          0
+        ],
+        "var_less": [
+          "минотавр",
+          1
+        ],
+        "text": "Победа",
+        "id": 33,
+        "var_set": [
+          "хп",
+          "пх",
+          "минос",
+          35000,
+          "ми",
+          720
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "id": 32,
+        "instant": true,
+        "text": "Заклинания",
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 24,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_sub": [
+          "reload",
+          1
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 24,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          -1
+        ],
+        "id": 8,
+        "text": "Урон"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 8,
+        "text": "Мана: "
+      },
+      {
+        "var_add": [
+          "хп",
+          "п"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "предмет",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "минотавр",
+          "уд"
+        ],
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "var_random": [
+          "лаб",
+          1,
+          20
+        ],
+        "id": 24,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "мин",
+          125
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "лаб",
+          7
+        ]
+      },
+      {
+        "var_add": [
+          "мин",
+          125
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_equal": [
+          "лаб",
+          14
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "var_less": [
+          "мин",
+          0
+        ],
+        "calculate": true,
+        "id": 24,
+        "var_set": [
+          "мин",
+          0
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Герой и его армия ",
+    "answers": [
+      {
+        "var_show": [
+          "па"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 25,
+        "text": "Паладин\nЗдоровье: "
+      },
+      {
+        "var_show": [
+          "паа"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 25,
+        "text": "Атака: "
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.6,
+          0.6
+        ],
+        "id": 25,
+        "text": "Паладин использовал массовое исцеление! ",
+        "var_equal": [
+          "0",
+          2
+        ],
+        "shadow_color": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.6,
+          0.6
+        ],
+        "id": 25,
+        "text": "Паладин Поднимает Боевой дух! Атака увеличена! ",
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "var_equal": [
+          "0",
+          3
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Рыцарь\nЗдоровье: ",
+        "comment": true,
+        "var_show": [
+          "рицарь"
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Атака: ",
+        "comment": true,
+        "var_show": [
+          "риц"
+        ]
+      },
+      {
+        "var_more": [
+          "па",
+          0,
+          "хп",
+          0,
+          "рицарь",
+          0
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Атаковать Паладина ",
+        "var_sub": [
+          "па",
+          "атк",
+          "хп",
+          "паа",
+          "хп",
+          "риц"
+        ]
+      },
+      {
+        "var_sub": [
+          "па",
+          "атк",
+          "хп",
+          "паа"
+        ],
+        "text": "Атаковать Паладина ",
+        "id": 25,
+        "instant": true,
+        "var_less": [
+          "рицарь",
+          1
+        ],
+        "var_more": [
+          "па",
+          0,
+          "хп",
+          0
+        ]
+      },
+      {
+        "var_sub": [
+          "рицарь",
+          "атк",
+          "хп",
+          "паа",
+          "хп",
+          "риц"
+        ],
+        "id": 25,
+        "instant": true,
+        "var_more": [
+          "рицарь",
+          0,
+          "хп",
+          0,
+          "па",
+          0
+        ],
+        "text": "Атаковать Рицаря"
+      },
+      {
+        "text": "Атаковать Рицаря",
+        "var_more": [
+          "рицарь",
+          0,
+          "хп",
+          0
+        ],
+        "id": 25,
+        "instant": true,
+        "var_less": [
+          "па",
+          1
+        ],
+        "var_sub": [
+          "рицарь",
+          "атк",
+          "хп",
+          "риц"
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1
+        ],
+        "var_add": [
+          "xp",
+          "ур",
+          "xp",
+          "ур",
+          "золото",
+          5
+        ],
+        "text": "Победа! ",
+        "id": 8,
+        "var_more": [
+          "хп",
+          1
+        ],
+        "var_less": [
+          "рицарь",
+          1,
+          "па",
+          1
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "instant": true,
+        "id": 36,
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "text": "Заклинания",
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_random": [
+          "0",
+          1,
+          5
+        ],
+        "super_calculate": false,
+        "id": 25,
+        "calculate": true,
+        "var_sub": [
+          "reload",
+          1
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_add": [
+          "па",
+          250,
+          "рицарь",
+          250
+        ],
+        "var_equal": [
+          "0",
+          2
+        ],
+        "id": 25,
+        "calculate": true,
+        "super_calculate": false,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_add": [
+          "паа",
+          100,
+          "риц",
+          100
+        ],
+        "var_equal": [
+          "0",
+          3
+        ],
+        "id": 25,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 25,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 25,
+        "text": "Атака: "
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 8,
+        "text": "Мана: "
+      },
+      {
+        "var_add": [
+          "хп",
+          "п"
+        ],
+        "super_calculate": false,
+        "id": 25,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 25,
+        "calculate": true,
+        "var_less": [
+          "рицарь",
+          1
+        ],
+        "var_set": [
+          "рицарь",
+          0,
+          "риц",
+          0
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Способность\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "weak"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Слабость\nАктивный\nЦена: 37 ед. маны\n Ослабляет на:"
+      },
+      {
+        "var_show": [
+          "xp",
+          "ед."
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Опыт: "
+      },
+      {
+        "id": 23,
+        "text": "Уйти"
+      },
+      {
+        "var_add": [
+          "weak",
+          7
+        ],
+        "instant": true,
+        "id": 26,
+        "var_sub": [
+          "xp",
+          3
+        ],
+        "text": "Прокачать ",
+        "var_more": [
+          "xp",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "weak",
+          70
+        ],
+        "instant": true,
+        "id": 26,
+        "text": "Прокачать на 10",
+        "var_more": [
+          "xp",
+          29
+        ],
+        "var_sub": [
+          "xp",
+          30
+        ]
+      },
+      {
+        "var_add": [
+          "weak",
+          700
+        ],
+        "var_sub": [
+          "xp",
+          300
+        ],
+        "id": 26,
+        "text": "Прокачать на 100",
+        "var_more": [
+          "xp",
+          299
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Заклинания:",
+    "answers": [
+      {
+        "instant": true,
+        "var_show": [
+          "weak"
+        ],
+        "var_more": [
+          "mp",
+          36
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 15,
+        "var_sub": [
+          "1а",
+          "weak",
+          "mp",
+          37
+        ],
+        "text": "[Слабость]  цена: 37\nОслабляет на ",
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "var_more": [
+          "mp",
+          29
+        ],
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "isBack": true,
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Заклинания\n\n",
+    "answers": [
+      {
+        "instant": true,
+        "var_show": [
+          "weak"
+        ],
+        "var_more": [
+          "mp",
+          36
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 16,
+        "var_sub": [
+          "2а",
+          "weak",
+          "mp",
+          37
+        ],
+        "text": "[Слабость] цена: 37\nОслабляет на ",
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "var_more": [
+          "mp",
+          29
+        ],
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "isBack": true,
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Заклинания\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "weak"
+        ],
+        "text_color": [
+          0.9,
+          0,
+          1
+        ],
+        "id": 29,
+        "text": "[Слабость] цена: 37\nОслабляет на ",
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ],
+        "backstepCount": 1,
+        "isBack": true,
+        "var_more": [
+          "mp",
+          36
+        ],
+        "instant": true,
+        "var_sub": [
+          "к",
+          "weak",
+          "mp",
+          37
+        ]
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "instant": true,
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "isBack": true,
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ],
+        "var_more": [
+          "mp",
+          29
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Заклинания\n\n\n\n\n",
+    "answers": [
+      {
+        "text": "[Слабость] цена: 37\nОслабляет на ",
+        "var_show": [
+          "weak"
+        ],
+        "instant": true,
+        "text_color": [
+          1,
+          0,
+          0.9
+        ],
+        "id": 13,
+        "var_sub": [
+          "rd",
+          "weak",
+          "mp",
+          37
+        ],
+        "var_more": [
+          "mp",
+          36
+        ],
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "var_more": [
+          "mp",
+          29
+        ],
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "isBack": true,
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Заклинания\n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "weak"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 31,
+        "var_more": [
+          "mp",
+          36
+        ],
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ],
+        "isBack": true,
+        "backstepCount": 1,
+        "instant": true,
+        "var_sub": [
+          "3а",
+          "weak",
+          "mp",
+          37,
+          "4а",
+          "weak"
+        ],
+        "text": "[Слабость] цена: 37\nОслабляет на "
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "var_more": [
+          "mp",
+          29
+        ],
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "isBack": true,
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Заклинания\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "weak"
+        ],
+        "text_color": [
+          1,
+          0,
+          0.9
+        ],
+        "id": 32,
+        "var_sub": [
+          "мин",
+          "weak",
+          "mp",
+          37,
+          "ми",
+          "weak"
+        ],
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ],
+        "var_more": [
+          "mp",
+          36
+        ],
+        "isBack": true,
+        "text": "[Слабость] цена: 37\nОслабляет на ",
+        "instant": true,
+        "backstepCount": 1
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "var_more": [
+          "mp",
+          29
+        ],
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "isBack": true,
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Лабиринт\n\n",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.5,
+          0.3
+        ],
+        "id": 33,
+        "text": "Минотавр Предок ",
+        "merge": false
+      },
+      {
+        "var_show": [
+          "минос"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 24,
+        "text": "Hp: "
+      },
+      {
+        "var_show": [
+          "ми"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 24,
+        "text": "Атака: ",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает мощь предков, его атака увеличена! ",
+        "var_equal": [
+          "лаб",
+          7
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает мощь предков, его атака увеличена! ",
+        "var_equal": [
+          "лаб",
+          14
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает мощь предков, его атака увеличена! ",
+        "var_equal": [
+          "лаб",
+          18
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает мощь предков, его атака увеличена! ",
+        "var_equal": [
+          "лаб",
+          17
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает наносит двойной урон! ",
+        "var_equal": [
+          "лаб",
+          4
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.3,
+          0,
+          5
+        ],
+        "id": 24,
+        "text": "Минотавр созывает наносит двойной урон! ",
+        "var_equal": [
+          "лаб",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.4,
+          0.4
+        ],
+        "id": 24,
+        "text": "Сила предков оберегает Минотавра, его хп увеличено! ",
+        "var_equal": [
+          "лаб",
+          11
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          1
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "var_sub": [
+          "минос",
+          60
+        ]
+      },
+      {
+        "var_sub": [
+          "хп",
+          "ми",
+          "минос",
+          "атк"
+        ],
+        "id": 33,
+        "instant": true,
+        "var_more": [
+          "хп",
+          0,
+          "минос",
+          0
+        ],
+        "text": "Атака"
+      },
+      {
+        "bg_color": [
+          -1,
+          1,
+          -1
+        ],
+        "var_add": [
+          "xp",
+          "ур",
+          "п",
+          3,
+          "золото",
+          15,
+          "хпп",
+          "ур",
+          "xp",
+          25,
+          "хпп",
+          25
+        ],
+        "var_more": [
+          "хп",
+          0
+        ],
+        "var_less": [
+          "минос",
+          1
+        ],
+        "text": "Победа",
+        "id": 8,
+        "var_set": [
+          "хп",
+          "пх",
+          "минос",
+          50000,
+          "ми",
+          1220,
+          "рог",
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "instant": true,
+        "id": 32,
+        "text": "Заклинания",
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 24,
+        "var_sub": [
+          "reload",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 24,
+        "text": "Здоровья: "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          -1
+        ],
+        "id": 8,
+        "text": "Урон"
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 8,
+        "text": "Мана: "
+      },
+      {
+        "var_add": [
+          "хп",
+          "п"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "предмет",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "минос",
+          "уд"
+        ],
+        "super_calculate": false
+      },
+      {
+        "var_random": [
+          "лаб",
+          1,
+          20
+        ],
+        "id": 24,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false
+      },
+      {
+        "var_add": [
+          "ми",
+          175
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_equal": [
+          "лаб",
+          14
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_add": [
+          "ми",
+          225
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "лаб",
+          7
+        ]
+      },
+      {
+        "var_add": [
+          "ми",
+          175
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_equal": [
+          "лаб",
+          17
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_add": [
+          "ми",
+          175
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "лаб",
+          18
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_equal": [
+          "лаб",
+          4
+        ],
+        "var_sub": [
+          "хп",
+          "ми"
+        ]
+      },
+      {
+        "var_sub": [
+          "хп",
+          "ми"
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_equal": [
+          "лаб",
+          2
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_add": [
+          "минос",
+          3500
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "лаб",
+          11
+        ],
+        "calculate": true
+      },
+      {
+        "var_add": [
+          "атк",
+          "р"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "рог",
+          1
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 33,
+        "calculate": true,
+        "var_less": [
+          "ми",
+          0
+        ],
+        "var_set": [
+          "ми",
+          0
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Лабиринт\n\n",
+    "answers": [
+      {
+        "id": 33,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          33
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Интересные места\n\n\n\n\n",
+    "answers": [
+      {
+        "var_div": [
+          "па",
+          2,
+          "паа",
+          2
+        ],
+        "var_more": [
+          "lvl",
+          7
+        ],
+        "id": 25,
+        "text": "Напасть на Паладина",
+        "shadow_color": [
+          1,
+          0.5,
+          0.3
+        ],
+        "var_set": [
+          "па",
+          "ц",
+          "паа",
+          "й",
+          "рицарь",
+          "хп",
+          "риц",
+          "атк",
+          "0",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.8
+        ],
+        "id": 35,
+        "text": "    Храм Огня\n Портал закрыт",
+        "var_equal": [
+          "портал",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "победа",
+          0
+        ],
+        "var_not": [
+          "портал",
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          1
+        ],
+        "id": 41,
+        "text": "    Храм Огня\n Портал открыт",
+        "bg_color": [
+          1,
+          0.9,
+          0.8
+        ],
+        "var_set": [
+          "фен",
+          30000,
+          "фе",
+          900,
+          "вос",
+          1,
+          "шрек",
+          0,
+          "баф",
+          450
+        ]
+      },
+      {
+        "id": 37,
+        "text": "Костёр",
+        "bg_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "var_equal": [
+          "портал",
+          0
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Заклинания\n\n\n",
+    "answers": [
+      {
+        "var_more": [
+          "mp",
+          36
+        ],
+        "var_show": [
+          "weak"
+        ],
+        "instant": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 39,
+        "text": "[Слабость] цена: 37\nОслабляет на ",
+        "var_sub": [
+          "mp",
+          37
+        ],
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "var_more": [
+          "mp",
+          29
+        ],
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "isBack": true,
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "                 Костёр\n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "оск"
+        ],
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.4,
+          0.4
+        ],
+        "id": 37,
+        "text": "Осколков ",
+        "var_equal": [
+          "портал",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          0
+        ],
+        "comment": true,
+        "var_equal": [
+          "Fe",
+          4
+        ],
+        "id": 37,
+        "text": "Осколок обрёл форму феникса! ",
+        "shadow_color": [
+          0,
+          0,
+          0
+        ],
+        "var_set": [
+          "портал",
+          1
+        ]
+      },
+      {
+        "var_random": [
+          "Fe",
+          1,
+          5
+        ],
+        "bg_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "var_sub": [
+          "оск",
+          1
+        ],
+        "var_equal": [
+          "портал ",
+          0
+        ],
+        "id": 35,
+        "instant": true,
+        "var_more": [
+          "оск",
+          0
+        ],
+        "text": "Бросить осколок в костёр"
+      },
+      {
+        "id": 35,
+        "text": "Уйти"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "Fe",
+          4
+        ],
+        "id": 37,
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "портал",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Яма чертей\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "черт",
+          "чертей"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 38,
+        "text": "Перед вами"
+      },
+      {
+        "id": 38,
+        "text": "Атака: 2",
+        "comment": true,
+        "text_color": [
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Выбор цели:\n\n\n\n",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Паладин ",
+        "var_sub": [
+          "паа",
+          "weak"
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Рыцарь",
+        "var_sub": [
+          "риц",
+          "weak"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "  Способность\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "heal",
+          "единиц здоровья"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 40,
+        "text": "Исцеление\nЛечит "
+      },
+      {
+        "var_show": [
+          "xp",
+          "ед."
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Опыт: "
+      },
+      {
+        "id": 23,
+        "text": "Уйти",
+        "instant": true
+      },
+      {
+        "var_add": [
+          "heal",
+          7
+        ],
+        "text": "Прокачать ",
+        "id": 40,
+        "instant": true,
+        "var_sub": [
+          "xp",
+          3
+        ],
+        "var_more": [
+          "xp",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "heal",
+          70
+        ],
+        "var_more": [
+          "xp",
+          29
+        ],
+        "id": 40,
+        "instant": true,
+        "text": "Прокачать на 10",
+        "var_sub": [
+          "xp",
+          30
+        ]
+      },
+      {
+        "var_add": [
+          "heal",
+          700
+        ],
+        "var_more": [
+          "xp",
+          299
+        ],
+        "id": 40,
+        "var_sub": [
+          "xp",
+          300
+        ],
+        "text": "Прокачать на 100",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Огненный Храм посреди которого парит Феникс!\nОчень жаркое место, Феникс постоянно черпает силу с огней храма! \n\n\n\n\n",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.4,
+          0.1
+        ],
+        "id": 41,
+        "text": "Феникс",
+        "var_equal": [
+          "вос",
+          1
+        ],
+        "merge": false
+      },
+      {
+        "shadow_color": [
+          1,
+          0,
+          0.4
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.2,
+          0.2
+        ],
+        "id": 41,
+        "text": "Перерождённый Феникс",
+        "var_equal": [
+          "вос",
+          5
+        ],
+        "merge": false
+      },
+      {
+        "var_show": [
+          "фен"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 41,
+        "text": "Hp: "
+      },
+      {
+        "var_show": [
+          "фе"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 41,
+        "text": "Атака: "
+      },
+      {
+        "var_show": [
+          "баф",
+          "Урона!"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.2,
+          0.1
+        ],
+        "id": 41,
+        "text": "Феникс Воспламенился! Вам нанесено ",
+        "var_equal": [
+          "шрек",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          -1,
+          0.9
+        ],
+        "id": 12,
+        "text": "Карающий удар! ",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "var_sub": [
+          "фен",
+          60
+        ]
+      },
+      {
+        "text": "Атаковать ",
+        "id": 41,
+        "instant": true,
+        "var_sub": [
+          "фен",
+          "атк",
+          "хп",
+          "фе"
+        ],
+        "var_more": [
+          "фен",
+          0,
+          "хп",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1
+        ],
+        "var_add": [
+          "xp",
+          400,
+          "xp",
+          "ур",
+          "золото",
+          25
+        ],
+        "text": "Победа! ",
+        "id": 8,
+        "var_more": [
+          "хп",
+          1
+        ],
+        "var_less": [
+          "фен",
+          1
+        ],
+        "var_set": [
+          "хп",
+          "пх",
+          "победа",
+          1,
+          "пламя",
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "var_less": [
+          "reload",
+          1
+        ],
+        "var_more": [
+          "хп",
+          0,
+          "mp",
+          30
+        ],
+        "id": 42,
+        "text": "Заклинания",
+        "instant": true,
+        "var_set": [
+          "reload",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Уйти",
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "var_max": [
+          "хп",
+          "пх"
+        ],
+        "var_show": [
+          "хп"
+        ],
+        "comment": true,
+        "text_color": [
+          -1,
+          1,
+          -1
+        ],
+        "id": 12,
+        "text": "Здоровья "
+      },
+      {
+        "var_show": [
+          "атк"
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 41,
+        "text": "Атака "
+      },
+      {
+        "var_show": [
+          "mp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.4,
+          0.9
+        ],
+        "id": 8,
+        "text": "Мана: "
+      },
+      {
+        "var_add": [
+          "хп",
+          "пх"
+        ],
+        "super_calculate": false,
+        "id": 41,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_random_from_weight": [
+          "r",
+          0,
+          80,
+          1,
+          20
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_add": [
+          "атк",
+          1
+        ],
+        "super_calculate": false,
+        "id": 41,
+        "calculate": true,
+        "var_equal": [
+          "рог",
+          1
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "фен",
+          "уд"
+        ],
+        "var_equal": [
+          "r",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 41,
+        "var_sub": [
+          "reload",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 24,
+        "calculate": true,
+        "var_more": [
+          "хп",
+          "пх"
+        ],
+        "var_set": [
+          "хп",
+          "пх"
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 41,
+        "calculate": true,
+        "var_less": [
+          "фе",
+          0
+        ],
+        "var_set": [
+          "фе",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "фе",
+          30
+        ],
+        "super_calculate": false,
+        "id": 41,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "вос",
+          1
+        ],
+        "id": 41,
+        "calculate": true,
+        "var_less": [
+          "фен",
+          1
+        ],
+        "var_set": [
+          "вос",
+          0,
+          "фен",
+          15000,
+          "фе",
+          1200
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 41,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_random": [
+          "шрек",
+          1,
+          5
+        ]
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 41,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "шрек",
+          2
+        ],
+        "var_sub": [
+          "хп",
+          "баф"
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "баф",
+          450
+        ],
+        "var_equal": [
+          "вос",
+          0
+        ],
+        "id": 41,
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "вос",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Заклинания:\n\n",
+    "answers": [
+      {
+        "var_sub": [
+          "mp",
+          37,
+          "фе",
+          "weak"
+        ],
+        "var_show": [
+          "weak"
+        ],
+        "instant": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 41,
+        "text": "[Слабость] цена: 37\nОслабляет на ",
+        "var_more": [
+          "mp",
+          36
+        ],
+        "bg_color": [
+          1,
+          0.9,
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "heal"
+        ],
+        "var_add": [
+          "хп",
+          "heal"
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 29,
+        "instant": true,
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "text": "[Исцеление] цена: 30\nИсцеляет на ",
+        "isBack": true,
+        "backstepCount": 1,
+        "var_sub": [
+          "mp",
+          30
+        ],
+        "var_more": [
+          "mp",
+          29
+        ]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Привет, мне очень нужна твоя поддержка для розвития проекта! Неленись, оставь отзыв в комментариях если хочешь ещё что-то подобного.\n\n Прошёл квест полностью? Напиши это в оментариях и я лично тебя за это похвалю. Незабуть оставить текст с последней кнопки в квесте.\n\nСпасибо что ты здесь, удачи!\n\n!!! !! Новости!!!!! \n\n  Я ДОДЕЛАЛ ЭТОТ КВЕСТ НО ВЫЛОЖИЛ КАК ОТДЕЛЬНЫЙ, ТАК КАК СЛИШКОМ МНОГО ЧЕГО БЫЛО ЗДЕЛАНО. НОВУЮ ВЕРСИЮ МОЖНО НАЙТИ ПО НОМЕРУ: 235439\nВ НОВОЙ ВЕРСИИ:\n— Добавлено заклинание \"Молния\" \n— Добавлены робочие достижения \n— Добавлено куча контента в \"Интересные места\" (большинство которых открываються на повторном прохождении) \n— Добавлена Истинная Концовка \n— При прохождении квеста второй раз, открывается новый контент, а также немного изменяется старый, также открывается доступ к Истинной Концовке\n— Добавлены новые артефакты \n— Добавлены новые предметы в магазин \n— Добавлен ограничитель по уровням\n— Незаметные исправления багов \n",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Номер новой версии квеста : 235439",
+        "comment": true,
+        "text_color": [
+          1,
+          0.6,
+          0.4
+        ]
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          0.6,
+          0.4
+        ],
+        "id": 1,
+        "text": "Перейти ",
+        "targetbookid": 235439
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "       Достижения\n\n\n",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "",
+    "answers": []
+  }
+]

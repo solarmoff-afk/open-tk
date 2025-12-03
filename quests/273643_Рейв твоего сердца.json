@@ -1,0 +1,1423 @@
+[
+  {
+    "id": 1,
+    "text": "Посетите легендарную дискотеку и найдите новых знакомых, а может, и любовь всей своей жизни!\n\nВас ждут динамичные мини-игры, визуальная новелла с процедурно генерируемыми событиями и зажигательная атмосфера вечеринки.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\ng.noScroll = 1\ng.blockSwipeLeftMenu = 1\nplayer = {}\nplayer.points = 0\ng.censore = true\nend"
+      },
+      {
+        "id": 26,
+        "text": "Достижения",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nend"
+      },
+      {
+        "id": 1,
+        "text": "Связь с автором",
+        "url": "https://vk.com/id_first1"
+      },
+      {
+        "initSounds": [
+          "patimaker",
+          "https://shaba-games.ru/yaroslav/rave/patimaker.mp3",
+          "aqua",
+          "https://shaba-games.ru/yaroslav/rave/aqua.mp3",
+          "club",
+          "https://shaba-games.ru/yaroslav/rave/club.mp3"
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n if anim and anim.removeSelf then\n   anim:removeSelf()\n end\nend"
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 5,
+        "url": "https://i.ibb.co/p3h6SB6/sketch-1720973930332.png",
+        "text": "девочки right big top"
+      },
+      {
+        "id": 5,
+        "text": "мальчики left big top",
+        "comment": false,
+        "url": "https://i.ibb.co/SJPWm59/sketch-1720897671179.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ввод имени",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 3,
+        "calculate": false,
+        "lua_do": "function lua_do()\nbackgrounds = {\n\"https://i.ibb.co/JyvvBNr/IMG-20240711-164001-copy-595x998.jpg\",\n\"https://i.postimg.cc/Hx7t8kmV/IMG-20240711-162456-copy-649x1000.jpg\"\n}\nend",
+        "text": "Данные"
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    --фон\n    group = display.newGroup()\n    local bg = display.newRect(group, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\n    bg.fill = {\n      type = \"gradient\",\n      color1 = {120/255, 130/255, 255/255},\n      color2 = {148/255, 0/255, 255/255}, \n      direction = 45\n    }\n\n    --ввод имени\n    local y = 0\n    local offset = 0.1 * canvas.width\n    local text = drawText(\"Имя: \", offset, y)\n    local indent = (canvas.height - text.height*7) / 6\n    text.y = 2*indent <plus> text.height/2\n    text.x = text.x <plus> text.width / 2\n    y = text.y <plus> text.height * 2\n    \n    input = native.newTextField(canvas.width/2, y, canvas.width * 0.8, text.height)\n    group:insert(input)\n    y = y <plus> text.height <plus> indent\n\n    --ввод пола\n    local text = drawText(\"Пол: \", offset, y)\n    text.x = text.x <plus> text.width / 2\n    y = y <plus> text.height*2\n\n    local boxWidth = canvas.width * 0.07\n    local boxIndent = canvas.width * 0.025\n    local drawCheckBox = function (x, y)\n        local lineWidth = canvas.width * 0.01\n        local frame = display.newRect(group, x, y, boxWidth, boxWidth)\n        frame.fill = {0, 0}\n        frame.stroke = {0}\n        frame.strokeWidth = lineWidth\n        frame.isHitTestable = true\n\n        local active = display.newRect(group, x, y, boxWidth - lineWidth * 2, boxWidth - lineWidth * 2)\n        active.fill = {0}\n        frame.active = active\n        return frame\n    end\n\n    local text = drawText(\"М\", canvas.width * 0.25, y)\n    text.x = text.x - text.width / 2 - boxIndent\n\n    checkBox1 = drawCheckBox(canvas.width * 0.25 <plus> boxWidth / 2 <plus> boxIndent, y)    checkBox1:addEventListener(\"tap\", function(event)\n        local checkBox = event.target\n        checkBox.active.isVisible = true\n        checkBox.other.isVisible = false\n        player.gender = \"male\"\n    end)\n\n    local text = drawText(\"Ж\", canvas.width * 0.75, y)\n    text.x = text.x - text.width / 2 - boxIndent\n\n    checkBox2 = drawCheckBox(canvas.width * 0.75 <plus> boxWidth / 2 <plus> boxIndent, y)    checkBox2:addEventListener(\"tap\", function(event)\n        local checkBox = event.target\n        checkBox.active.isVisible = true\n        checkBox.other.isVisible = false\n        player.gender = \"female\"\n    end)\n    checkBox2.other = checkBox1.active\n    checkBox1.other = checkBox2.active\n    checkBox2.active.isVisible = false\n \n    player.gender = \"male\"\n\nend",
+        "text": "    "
+      },
+      {
+        "instant": true,
+        "id": 2,
+        "text": "Далее",
+        "lua_do": "function lua_do()\n    local name = input.text\n    if name ~= '' then\n        player.name = name\n        disco = {}\n        disco.bg = backgrounds[math.random(#backgrounds)]\n        disco.music = {\"aqua\", \"club\", \"patimaker\"}\n        showPage{id = 4, transition = 'instant'}\n    else\n        dialog{\n            header = \"Кто ты, \".. (player.gender == \"male\" and \"дорогой\" or \"дорогая\").. \"?\",\n            text = \"Введи имя персонажа\"\n        }\n    end\nend",
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Общее",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 3,
+        "text": "Текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawText(text, x, y)\n  return display.newText{\n    parent = group,\n    text = text,\n    fontSize = g.fontSize,\n    x = x,\n    y = y\n  }\nend\nend"
+      },
+      {
+        "comment": false,
+        "super_calculate": true,
+        "id": 3,
+        "text": "Фон",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    function drawBg(url)\n        local bg = display.newImage (url)\n        --if not bg then\n            --bg = display.newImage(canvasGroup, nameForImages(url), system.DocumentsDirectory)\n        --end\n        bg.x = canvas.width/2\n        bg.y = canvas.height/2\n        local xs = canvas.width/bg.width\n        local ys = canvas.height/bg.height\n        bg.xScale = math.max (xs, ys)\n        bg.yScale = bg.xScale\n        return bg\n    end\nend"
+      },
+      {
+        "comment": false,
+        "super_calculate": true,
+        "id": 3,
+        "text": "Удалить анимацию с фона",
+        "lua_do": "function lua_do()\n    function removeAnim()\n        if anim and anim.removeSelf then\n            anim:removeSelf()\n         end\n    end\nend",
+        "calculate": false
+      },
+      {
+        "comment": false,
+        "super_calculate": true,
+        "id": 3,
+        "text": "Фоновая анимация звездопада",
+        "lua_do": "function lua_do()\nfunction drawAnim()\n  local colors = {\n      {0.8156862745098, 0.25098039215686, 0.87843137254902},\n      {0.97254901960784, 0.72156862745098, 0},\n      {1,0,0}, \n      {0, 0.52549019607843, 0.87058823529412},\n      {0.76862745098039, 0.4156862745098, 0.14901960784314},\n      {0.2, 0.8, 0.4},\n      {0, 1, 0},\n      {0, 0, 1},\n      {1, 69/255, 0},\n      {64/255, 224/255, 208/255},\n      {1, 0, 1}\n    }\n  local color1 = colors[math.random (#colors)]\n  local color2 = colors[math.random (#colors)]\n  animData = {\n    absolutePosition = true,\n    angle = 90,\n    angleVariance = 24,\n    blendFuncDestination = 771,\n    blendFuncSource = 774 ,\n    configName = \"fire\",\n    duration = -1,\n    emitterType = 0,\n    finishColorAlpha = 0,\n    finishColorBlue = color2[3],\n    finishColorGreen = color2[2],\n    finishColorRed = color2[1],\n    finishColorVarianceAlpha = 0,\n    finishColorVarianceBlue = color2[3],\n    finishColorVarianceGreen = color2[2],\n    finishColorVarianceRed = color2[1],\n    finishParticleSize = 16,\n    finishParticleSizeVariance = 0,\n    gravityx = 0,\n    gravityy = -40,\n    maxParticles = 420,\n    maxRadius = 0,\n    maxRadiusVariance = 0,\n    minRadius = 0,\n    minRadiusVariance = 0,\n    particleLifespan = 2.1,\n    particleLifespanVariance = 0,\n    radialAccelVariance = 0,\n    radialAcceleration = 0,\n    rotatePerSecond = 0,\n    rotatePerSecondVariance = 0,\n    rotationEnd = 0,\n    rotationEndVariance = 0,\n    rotationStart = 0,\n    rotationStartVariance = 0,\n    sourcePositionVariancex = display.contentWidth / 2,\n    sourcePositionVariancey = display.contentHeight / 2,\n    speed = 90,\n    speedVariance = 39,\n    startColorAlpha = 1,\n    startColorBlue = color1[3],\n    startColorGreen = color1[2],\n    startColorRed = color1[1],\n    startColorVarianceAlpha = 0,\n    startColorVarianceBlue = color1[3],\n    startColorVarianceGreen = color1[2],\n    startColorVarianceRed = color1[1],\n    startParticleSize = 12,\n    startParticleSizeVariance = 2,\n    tangentialAccelVariance = 0,\n    tangentialAcceleration = 0,\n    textureFileName = nameForImages(\"https://images.vfl.ru/ii/1646572893/713b6129/38349893.png\"),\n    textureImageData = \"\",\n    yCoordFlipped = -1,\n}    \n    removeAnim()\n    anim = display.newEmitter(animData, system.TemporaryDirectory)\n    anim.x = canvas.width/ 2\n    anim.y = canvas.height / 2\nend\nend",
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 3,
+        "text": "Генерация случайного текста",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    function genText(arr)\n        local text = ''\n        for _, words in pairs(arr) do\n            text = text .. words[math.random(#words)]\n        end\n        return text\n    end\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 3,
+        "text": "Бабл с текстом",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    function drawBubble(text)\n        local text = display.newText{\n            parent = canvasGroup,\n            text = text,\n            fontSize = g.fontSize,\n            x = canvas.width / 2,\n            y = 0.15 * canvas.width,\n            width = 0.8 * canvas.width\n        }\n        text.y = text.y <plus> text.height / 2\n\n        local bubble = display.newRoundedRect(canvasGroup, text.x, text.y, 0.9 * canvas.width, text.height <plus> 0.05 * canvas.width, 0.1 * canvas.width)\n        bubble.fill = {148/255, 0/255, 211/255}\n        text:toFront()\n        return bubble\n    end\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 3,
+        "text": "Персонаж",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawCharacter(url)\n  local size = 0.65\n  local pos = 0.6\n  if url == \"https://i.ibb.co/p3h6SB6/sketch-1720973930332.png\" or url == \"https://i.ibb.co/wLq9rfb/sketch-1720973891335.png\" then\n    size, pos = 0.85, 0.75\n  end\n  local character = display.newImage(url)\n  character.yScale = size*canvas.height / character.height\n  character.xScale = character.yScale\n  character.x = 0.6*canvas.width\n  character.y = pos*canvas.height\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction prepareText(text)\n  if utf8.find(text, \"#\") then\n    if characters[player.target].gender == \"female\" then\n      text = utf8.gsub(text, \"#(.)\", \"%1\")\n    else\n      text = utf8.gsub(text, \"#(.)\", \"\")\n    end\n  end\n  \n  if utf8.find(text, \"*\") then\n    if player.gender == \"female\" then\n      text = utf8.gsub(text, \"*(.)\", \"%1\")\n    else\n      text = utf8.gsub(text, \"*(.)\", \"\")\n    end\n  end\n\n  if utf8.find(text, \"@\") then\n    if player.gender == \"male\" then\n      text = utf8.gsub(text, \"@(.)\", \"%1\")\n    else\n      text = utf8.gsub(text, \"@(.)\", \"\")\n    end\n  end\n\n  return text\nend\nend",
+        "calculate": false,
+        "text": "Обработать текст на мужской/женский род",
+        "id": 3
+      },
+      {
+        "comment": true,
+        "super_calculate": true,
+        "id": 3,
+        "text": "Зарандомить кого-то, кроме цели гг",
+        "lua_do": "function lua_do()\nfunction selectNewTarget()\n  local r = {1,2,3,4,5,6}\n  table.remove(r, player.target)\n  return r[math.random(#r)]\nend\nend",
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Предисловие к дискотеке",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "данные",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    texts = {\n        {'Бум — и ', 'Как-то в четверг ', 'По советам друзей ', 'По настоянию старого друга ', \"Накануне Нового года \", \"\"},\n        {'Вы оказались ', 'Вы оказались ', 'Вы очутились ', 'Вы появились '},\n        {'на дискотеке. ', 'на танцполе. ', 'на вечеринке. ', 'в клубе. ', \"посреди танцующих людей. \", \"между мерцающих огней дискотеки. \"},\n       {\"Ваша цель\", \"Ваша мечта\", \"Вершина устремлений\", \"Ваша задача\"},\n       {\" проста\", \" банальна\", \" грандиозна\", \" знакома каждому\", \" великолепна\", \" незамысловата\", \" понятна всем\"},\n       {\" — \"},\n       {\"найти любовь.\", \"обрести личное счастье.\", \"подцепить, уломать и вот это всё.\", \"очаровать или очароваться.\"}\n    }\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "генерация имен",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction genLetter(letters)\n  local pos = math.random(utf8.len(letters))\n  return utf8.sub(letters, pos, pos)\nend\n\nfunction genName(gender)\n  local len = math.random(4, 6)\n  local consonants = \"бвгдклмнпрстх\"\n  local vowels = \"аеиоуа\"\n  local isCons = true\n  local name = \"\"\n  for i = 1, len do\n    if isCons then\n      name = genLetter(consonants) .. name\n    else\n      name = genLetter(vowels) .. name\n    end\n    isCons = not isCons\n  end\n\n  if gender == \"female\" then\n    name = utf8.sub(name, 2, -1) .. genLetter(vowels)\n  end\n\n  name = utf8.upper(utf8.sub(name, 1,1)) .. utf8.sub(name, 2, -1)\n  return name\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local text = genText(texts)\n    drawBubble(text)\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 4
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\n    characters = {}\n    local male_characters = {}\n    for i = 1, 4 do\n      local character = {}\n      character.gender = \"male\"\n      character.name = genName(\"male\")\n      local r = math.random(#male_images)\n      character.url = male_images[r]\n      table.remove(male_images, r)\n      table.insert(male_characters, character)\n    end\n\n    local female_characters = {}\n    for i = 1, 4 do\n      local character = {}\n      character.gender = \"female\"\n      character.name = genName(\"female\")\n      local r = math.random(#female_images)\n      character.url = female_images[r]\n      table.remove(female_images, r)\n      table.insert(female_characters, character)\n    end\n\n    if g.censore then\n        local oppositeGenderCharacters\n        if player.gender == \"male\" then\n          oppositeGenderCharacters = female_characters\n        else\n          oppositeGenderCharacters = male_characters\n        end\n        for i = 1, 4 do\n          table.insert(characters, oppositeGenderCharacters[i])\n        end\n    else\n        table.insert(characters, male_characters[1])\n        table.insert(characters, female_characters[1])\n        table.insert(characters, female_characters[2])\n        table.insert(characters, male_characters[2])\n        table.insert(characters, male_characters[3])\n        table.insert(characters, female_characters[3])\n    end\nend",
+        "text": "Далее",
+        "id": 6,
+        "instant": true
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nmale_images = {\"https://i.ibb.co/cYh9rcq/sketch-1720899276404.png\",\n\"https://i.ibb.co/PT6RBjH/sketch-1720897606607.png\",\n\"https://i.ibb.co/wLq9rfb/sketch-1720973891335.png\",\n\"https://i.ibb.co/SJPWm59/sketch-1720897671179.png\",\n\"https://i.ibb.co/yQT8QVN/sketch-1720897719771.png\"}\n\nfemale_images = {\"https://i.ibb.co/p3h6SB6/sketch-1720973930332.png\",\n\"https://i.ibb.co/HVB8HjQ/sketch-1720899434172.png\",\n\"https://i.ibb.co/vXRxsWr/sketch-1720903473751.png\",\n\"https://i.ibb.co/NLLDyP8/sketch-1720903197614.png\",\n\"https://i.ibb.co/pfP13dC/sketch-1720902989070.png\"}\nend",
+        "text": "картинки персонажей",
+        "id": 4,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "[url=https://ibb.co/K994rkM][img]https://i.ibb.co/NLLDyP8/sketch-1720903197614.png[/img][/url]картинки<s>r\nhttps://i.ibb.co/JyvvBNr/IMG-20240711-164001-copy-595x998.jpg<s>r\nhttps://i.postimg.cc/Hx7t8kmV/IMG-20240711-162456-copy-649x1000.jpg<s>r\n\nминус\nhttps://i.yapx.ru/XuG1A.jpg",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "url": "https://i.ibb.co/JyvvBNr/IMG-20240711-164001-copy-595x998.jpg"
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "url": "https://i.postimg.cc/Hx7t8kmV/IMG-20240711-162456-copy-649x1000.jpg"
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1646572893/713b6129/38349893.png"
+      },
+      {
+        "id": 5,
+        "text": "девочки:\n\"https://i.ibb.co/p3h6SB6/sketch-1720973930332.png\",\n\"https://i.ibb.co/HVB8HjQ/sketch-1720899434172.png\",\n\"https://i.ibb.co/vXRxsWr/sketch-1720903473751.png\",\n\"https://i.ibb.co/NLLDyP8/sketch-1720903197614.png\",\n\"https://i.ibb.co/pfP13dC/sketch-1720902989070.png\"",
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "девочки",
+        "comment": false,
+        "url": "https://i.ibb.co/p3h6SB6/sketch-1720973930332.png"
+      },
+      {
+        "id": 5,
+        "text": "девочки",
+        "comment": false,
+        "url": "https://i.ibb.co/HVB8HjQ/sketch-1720899434172.png"
+      },
+      {
+        "id": 5,
+        "text": "девочки",
+        "comment": false,
+        "url": "https://i.ibb.co/vXRxsWr/sketch-1720903473751.png"
+      },
+      {
+        "id": 5,
+        "text": "девочки",
+        "comment": false,
+        "url": "https://i.ibb.co/NLLDyP8/sketch-1720903197614.png"
+      },
+      {
+        "id": 5,
+        "text": "девочки",
+        "comment": false,
+        "url": "https://i.ibb.co/pfP13dC/sketch-1720902989070.png"
+      },
+      {
+        "id": 5,
+        "text": "мальчики\n\"https://i.ibb.co/cYh9rcq/sketch-1720899276404.png\",\n\"https://i.ibb.co/PT6RBjH/sketch-1720897606607.png\",\n\"https://i.ibb.co/wLq9rfb/sketch-1720973891335.png\",\n\"https://i.ibb.co/SJPWm59/sketch-1720897671179.png\",\n\"https://i.ibb.co/yQT8QVN/sketch-1720897719771.png\"",
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "мальчики",
+        "comment": false,
+        "url": "https://i.ibb.co/cYh9rcq/sketch-1720899276404.png"
+      },
+      {
+        "id": 5,
+        "text": "мальчики",
+        "comment": false,
+        "url": "https://i.ibb.co/PT6RBjH/sketch-1720897606607.png"
+      },
+      {
+        "id": 5,
+        "text": "мальчики",
+        "comment": false,
+        "url": "https://i.ibb.co/wLq9rfb/sketch-1720973891335.png"
+      },
+      {
+        "id": 5,
+        "text": "мальчики",
+        "comment": false,
+        "url": "https://i.ibb.co/SJPWm59/sketch-1720897671179.png"
+      },
+      {
+        "id": 5,
+        "text": "мальчики",
+        "comment": false,
+        "url": "https://i.ibb.co/yQT8QVN/sketch-1720897719771.png"
+      },
+      {
+        "id": 5,
+        "text": "1",
+        "comment": false,
+        "lua_do": "function lua_do()\ng.play_sound_once = disco.music[1] \nend"
+      },
+      {
+        "id": 5,
+        "text": "2",
+        "comment": false,
+        "lua_do": "function lua_do()\ng.play_sound_once = disco.music[2] \nend"
+      },
+      {
+        "id": 5,
+        "text": "3",
+        "comment": false,
+        "lua_do": "function lua_do()\ng.play_sound_once = disco.music[3] \nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Выбор объекта любви",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    texts = {\n        {\"Необходимо \", \"Стоит \", \"Нужно \", \"Важно \", \"Время \"},\n        {\"выбрать \", \"определить \", \"присмотреть \"},\n        {\"жертву \", \"самого красивого \", \"самого привлекательного \", \"самого классного \", \"самого притягательного \", \"самого сексуального \"},\n        {\"на этой вечеринке\", \"на этой тусе\", \"здесь\", \"на дискотеке\"},\n    }\nend",
+        "text": "данные"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawCharacter(bubble, i, x, y, characterWidth, indent)\n    local character = display.newImage(characters[i].url)\n    character.xScale = characterWidth / character.width\n    character.yScale = character.xScale\n    character.x = indent / 2 <plus> characterWidth * (0.5 <plus> x)\n    character.y = bubble.y <plus> bubble.height/2 <plus> indent/2 <plus> character.contentHeight/2 <plus> characterWidth * y\n    return character\nend\n\ncurrentCharacter = 0\n\nfunction drawCharacters(bubble)\n  local indent = 0.15 * canvas.width\n  local height = canvas.height - bubble.y - bubble.height/2 - indent\n  local width = canvas.width - indent\n  local characterWidth = math.min(width/2, height/3 )\n\n  for i = 1, #characters do\n    local x = 1 - i % 2\n    local y = i - x\n    y = (y - y % 2) / 2\n    local filledCharacter = drawCharacter(bubble, i, x, y, characterWidth, indent)\n    filledCharacter:setFillColor(1, 0.8, 0)\n    local character = drawCharacter(bubble, i, x, y, characterWidth, indent)\n    character.id = i\n    character:addEventListener(\"tap\", \n    function(event)\n      if activeCharacter and activeCharacter.removeSelf then\n        activeCharacter.isVisible = true\n      end\n      activeCharacter = event.target\n      activeCharacter.isVisible = false\n      currentCharacter = activeCharacter.id\n      return true\n    end)\n\n    local text = drawText(characters[i].name, character.x, character.y - character.contentHeight/2)\n    text.y = text.y - text.height/2\n    canvasGroup:insert(text)\n    local frame = display.newRoundedRect(canvasGroup, text.x, text.y, text.width <plus> canvas.width*0.025, text.height, text.width * 0.15)\n    frame.fill = {148/255, 0/255, 211/255}\n    text:toFront()\n  end\nend\nend",
+        "calculate": false,
+        "text": "нарисовать панель со всеми персонажами",
+        "id": 4
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local text = genText(texts)\n    local bubble = drawBubble(text)\n    drawCharacters(bubble)\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 6,
+        "text": "Далее",
+        "no_transition": true,
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_render": "function lua_render()\nlocal block = display.newRect (canvasGroup, rect.x, rect.y, rect.contentWidth, rect.contentHeight)\nblock.fill = {0,0}\nblock.isHitTestable = true\nblock:addEventListener(\"tap\", function(event ) return true end)\nend",
+        "lua_do": "function lua_do()\n    if currentCharacter > 0 then\n        player.target = currentCharacter\n        player.history = {}\n        disco.events = {7,8}\n        local page = disco.events[math.random(2)]\n        table.insert(player.history, page)\n        showPage{id = page, transition = 'instant'}\n    else\n        dialog{\n            header = \"Ай-яй-яй\",\n            text = \"Выберите персонажа\"\n        }\n    end\nend",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "harlem shake — обучение",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local text = \"Трясите телефон, когда на экране зелёный кружок, и не трясите, когда красный\"\n    drawBubble(text)\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "Далее",
+        "instant": true,
+        "lua_do": "function lua_do()\ng.play_sound_once = disco.music[math.random(#disco.music)]\ndrawAnim()\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "нажимаемые картинки — обучение",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local text = \"Нажимайте на кружочки с циферками как можно быстрее\"\n    drawBubble(text)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Начать",
+        "lua_do": "function lua_do()\ng.play_sound_once = disco.music[math.random(#disco.music)]\ndrawAnim()\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "нажимаемые картинки",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n  function drawHeader(time)\n    local text = display.newText{\n      parent = canvasGroup,\n      text = \"Ваш результат: \" .. tostring(time) .. \" секунд\",\n      fontSize = g.fontSize,\n      x = canvas.width/2,\n      y = canvas.height/2\n    }\n    local rect = display.newRoundedRect (canvasGroup, text.x, text.y, text.width <plus> canvas.width*0.02, text.height, canvas.width*0.1)\n    rect:setFillColor(148/255, 0/255, 211/255)\n    text:toFront()\n  end\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    function drawTarget(number)\n        local group = display.newGroup()\n        canvasGroup:insert(group)\n        local target = display.newCircle(\n            group,\n            math.random(0.1*canvas.width, 0.9*canvas.width),\n            math.random(0.2*canvas.width, canvas.height - 0.1*canvas.width),\n            0.075 * canvas.width\n        )\n        target.strokeWidth =  0.007 * canvas.width\n        target.stroke = {148/255, 0/255, 211/255}\n\n        local text = display.newText{\n            parent = group,\n            text = tostring(number),\n            fontSize = g.fontSize,\n            x = target.x,\n            y = target.y\n        }\n        text:setFillColor(148/255, 0/255, 211/255)\n\n        group.number = number\n        group:addEventListener(\"tap\", \n        function(event)\n            local target = event.target\n            if target.number >= 10 then\n                time = os.time() - start_time\n                showPage{id=11, transition=\"instant\"}\n            else\n                drawTarget(target.number <plus> 1)\n            end\n            target:removeSelf()\n        end)\n    end\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local target = drawTarget(1)\n    start_time = os.time()\n    time = nil\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "сюжетец",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "id": 13,
+        "text": "неудача",
+        "run": [
+          13
+        ],
+        "lua_if": "function lua_if()\nreturn player.points == 0\nend"
+      },
+      {
+        "id": 12,
+        "text": "первый успех (1 б)",
+        "run": [
+          12
+        ],
+        "lua_if": "function lua_if()\nreturn player.points == 1 and not player.hello\nend"
+      },
+      {
+        "id": 14,
+        "text": "застрял на 1 б\nразговоры о музыке, танцах, дискотеке",
+        "lua_if": "function lua_if()\nreturn player.points == 1 and player.hello\nend",
+        "run": [
+          14
+        ]
+      },
+      {
+        "id": 16,
+        "text": "2-3 б\nразговоры об интересах",
+        "lua_if": "function lua_if()\nreturn player.points == 2 or player.points == 3\nend",
+        "run": [
+          16
+        ]
+      },
+      {
+        "id": 18,
+        "text": "4-5 б\nразговоры о мечтах, вечном, прекрасном",
+        "lua_if": "function lua_if()\nreturn player.points == 4 or player.points == 5\nend",
+        "run": [
+          18
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local text = prepareText(genText(texts))\n    drawCharacter(url)\n    drawBubble(text)\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"points = \".. player.points\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "need": [
+          999
+        ],
+        "lua_if": "function lua_if()\nreturn g.isAuthor == 1\nend"
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "need": [
+          999
+        ],
+        "lua_do": "function lua_do()\nplayer.points = 2\nplayer.hello = true\nplayer.history = {8}\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "финал игры 1 (про нажимаемые картинки) ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  function drawHeader(time)\n    local txt =  \"Ваш результат: \" .. tostring(time) .. \" секунд. \"\n    local texts\n    if time < 7 then\n      texts = {\"Восхитительно!\", \"Замечательно!\", \"Поразительно!\", \"Невероятно!\"}\n    elseif time < 9 then\n      texts = {\"Неплохо!\", \"Хорошо!\", \"Отлично!\"}\n    elseif time < 11 then\n      texts = {\"Могло быть и лучше.\", \"Вторичненько.\", \"Почти неплохо.\"}\n    else\n      texts = {\"Отстой.\", \"Ужасно.\", \"Как так?\"}\n    end\n    txt = txt .. texts[math.random(#texts)]\n    local text = display.newText{\n      parent = canvasGroup,\n      text = txt,\n      fontSize = g.fontSize,\n      width = 0.8 * canvas.width,\n      x = canvas.width/2,\n      y = canvas.height * 0.25\n    }\n    local rect = display.newRoundedRect (canvasGroup, text.x, text.y, text.width <plus> canvas.width*0.08, text.height <plus> canvas.width*0.05, canvas.width*0.1)\n    rect:setFillColor(148/255, 0/255, 211/255)\n    text:toFront()\n  end\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 4
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local header = drawHeader(time)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nif time > 8 then\n  --0 очков\nelse\n  player.points = player.points <plus> 1\nend\nremoveAnim()\ng.play_sound_once = \"\"\nend",
+        "text": "Далее",
+        "id": 10,
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "успех 1\n1 балл",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "event 1",
+        "calculate": false,
+        "lua_do": "function lua_do()\ntexts = {\n  {\"— \"},\n  {\"Хай! \", \"Привет. \", \"Салют! \", \"Бонжур! \"},\n  {\"Раньше тебя здесь не видел#а. \", \"Хорошо танцуешь. \", \"Классно двигаешься. \", \"\"},\n  {\"Как тебя зовут?\"},\n}\nurl = characters[player.target].url\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 15,
+        "text": "— Не важно",
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Ну, \", \"Э-э... \", \"М-м, \"},\n  {\"ок.\", \"ладно.\", \"понятно.\"},\n  {\" Я тогда пойду.\", \" Пока.\", \"\"}\n}\ntext = genText(texts)\nurl = characters[player.target].url\nplayer.target = selectNewTarget()\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_text": "function lua_text()\nlocal texts = {\n \". А тебя?\", \". А ты?\", \"\"\n}\nreturn \"— \" .. player.name .. texts[math.random(#texts)]\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Очень приятно. \", \"Приятно познакомиться. \", \"\"},\n  {\"А меня — \", \"А я \", \"А меня зовут \"},\n  {characters[player.target].name .. \".\"},\n  {\" Будем знакомы!\", \"\", \"\"}\n}\ntext = genText(texts)\nurl = characters[player.target].url\nplayer.points = player.points <plus> 1\nplayer.hello = true\nend",
+        "text": "   ",
+        "comment": false,
+        "id": 15
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "неудача 1\n(0 баллов)",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 12,
+        "calculate": false,
+        "lua_do": "function lua_do()\nevent = 1 --math.random(3)\nnewTarget = selectNewTarget()\nurl = characters[newTarget].url\nend",
+        "text": "randoming event"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "super_calculate": true,
+        "id": 4,
+        "text": "event 1",
+        "calculate": false,
+        "lua_do": "function lua_do()\ntexts = {\n  {\"— \"},\n  {\"Хай! \", \"Хэй! \", \"Эй! \", \"Хой! \", \"\"},\n  {\"Ты \"},\n  {\"точно знаешь, что ты \", \"уверен, что \", \"думаешь, что \", \"что \"},\n  {\"делаешь \", \"забыл \", \"делаешь \"},\n  {\"на танцполе?\", \"на дискотеке?\", \"здесь?\"},\n}\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 15,
+        "text": "хороший ответ",
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Я знаю,\", \"Конечно,\", \"Да,\"},\n  {\" я не \"},\n  {\"профессионал\", \"лучший танцор\", \"танцор диско\"},\n  {\", но я \"},\n  {\"пытаюсь.\", \"наслаждаюсь музыкой.\", \"кайфую здесь.\", \"просто отдыхаю на дискотеке.\"}\n}\nreturn genText(texts)\nend",
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Хм, ну, \", \"Просто \"},\n  {\"советую не стесняться. \", \"двигайся в такт музыке — и всё. \", \"позволь своему телу двигаться. \", \"почувствуй ритм телом. \"},\n  {\"Я думаю, ты сможешь.\", \" Ты сможешь.\", \"Хорошо?\", \"Ты можешь лучше.\", \"У тебя получится.\"}\n}\ntext = genText(texts)\nplayer.target = newTarget\nplayer.points = player.points <plus> 1\nplayer.hello = true\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Вообще-то я танцую\", \"Я танцую\"},\n  {\", чел.\", \".\"},\n  {\" Кто этого не видит — \", \" Если этого не видно — \"},\n  {\"стоит подобрать очки\", \"глаза разуйте\", \"очки носить надо\"},\n  {\".\"}\n}\nreturn genText(texts)\nend",
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Чел, \", \"Да \", \"Просто \"},\n  {\"ты двигаешься медленнее \"},\n  {\"моей бабушки.\", \"моей черепахи.\", \"моего шкафа.\"},\n  {\"Ну, ок, я пошёл\", \"\"}\n}\ntext = genText(texts)\nend",
+        "text": "плохой ответ",
+        "id": 15,
+        "lua_if": "function lua_if()\nreturn event == 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "застрял на 1 б",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nevent = math.random(2)\nurl = characters[player.target].url\nend",
+        "calculate": false,
+        "text": "randoming event",
+        "id": 12
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "super_calculate": true,
+        "id": 4,
+        "text": "event 1",
+        "lua_do": "function lua_do()\ntexts = {\n  {\"— \"},\n  {\"Классные движения. \", \"Красиво танцуешь. \", \"Хорошо двигаешься.\", \"\"},\n  {\"Ты любишь \", \"Тебе нравятся \", \"Тебе по душе \"},\n  {\"такие вечеринки?\", \"дискотеки?\", \"подобные тусы?\", \"танцы?\"},\n}\nend",
+        "calculate": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 2\nend",
+        "super_calculate": true,
+        "id": 4,
+        "text": "event 2",
+        "calculate": false,
+        "lua_do": "function lua_do()\ntexts = {\n  {\"— \"},\n  {\"Классные движения. \", \"Красиво танцуешь. \", \"Хорошо двигаешься.\", \"\"},\n  {\"Ты часто ходишь на \"},\n  {\"такие вечеринки?\", \"дискотеки?\", \"подобные тусы?\", \"танцы?\"},\n}\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Прекрасно. \", \"Прелестно. \", \"Шикарно. \", \"Рад#а слышать. \"},\n  {\"Я тоже люблю.\", \"Мне здесь тоже очень нравится.\", \"Найден общий интерес.\"}\n}\ntext = prepareText(genText(texts))\nplayer.points = player.points <plus> 1\nend",
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 15,
+        "text": "хороший ответ",
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Да, конечно. \", \"Они всегда такие весёлые.\", \"Они просто супер.\", \"Здесь классно.\"},\n}\nreturn genText(texts)\nend",
+        "comment": false
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_if": "function lua_if()\nreturn event == 2\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Прекрасно. \", \"Прелестно. \", \"Шикарно. \", \"Рад#а слышать. \"},\n  {\"Я тоже люблю.\", \"Мне здесь тоже очень нравится.\", \"Найден общий интерес.\"}\n}\ntext = prepareText(genText(texts))\nplayer.points = player.points <plus> 1\nend",
+        "text": "хороший ответ",
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Да, конечно. \", \"Довольно часто. \", \"Хотелось бы чаще. \"}, \n  {\"Они всегда такие весёлые.\", \"Они просто супер.\", \"Здесь классно.\"},\n}\nreturn genText(texts)\nend",
+        "id": 15
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Нет, это не моё. \", \"Нет, я не думаю. \", \"Я бы так не сказал*а. \"},\n  {\"Предпочитаю сидеть дома.\", \"Обычно выбираю домашний уют.\", \"\"}\n}\nreturn genText(texts)\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Понял. \", \"В этом мы непохожи. \", \"Ну, каждому своё. \"},\n  {\"Я люблю движ.\", \"Мне нравятся рейвы.\"}\n}\ntext = prepareText(genText(texts))\nend",
+        "text": "плохой ответ",
+        "id": 15,
+        "comment": false
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_if": "function lua_if()\nreturn event == 2\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Понял. \", \"В этом мы непохожи. \", \"Ну, каждому своё. \"},\n  {\"Я люблю движ.\", \"Мне нравятся рейвы.\"}\n}\ntext = prepareText(genText(texts))\nend",
+        "text": "плохой ответ",
+        "id": 15,
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Нет, это не моё. \", \"Нет, я не думаю. \", \"Я бы так не сказал*а. \"},\n  {\"Предпочитаю сидеть дома.\", \"Обычно выбираю домашний уют.\", \"\"}\n}\nreturn genText(texts)\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "сюжет ответочка, если надо",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg) drawCharacter(url)\n    drawBubble(text)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 15,
+        "text": "Далее",
+        "lua_do": "function lua_do()\n  local page\n  if #player.history == 1 then\n    if player.history[1] == 7 then\n      page = 8\n    else\n      page = 7\n    end\n  elseif #player.history < 3 then\n    page = disco.events[math.random(2)]\n  else\n    --концовочка\n    if player.points >= 5 then\n      page = 17\n    elseif player.points >= 3 then\n      page = 21\n    else\n      page = 22\n    end    \n  end\n\n  table.insert(player.history, page)\n  showPage{id = page, transition = 'instant'}\nend",
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "2-3 б\nразговоры об интересах",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nevent = math.random(2)\nurl = characters[player.target].url\nend",
+        "text": "randoming event",
+        "id": 12,
+        "calculate": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "super_calculate": true,
+        "id": 4,
+        "text": "event 1",
+        "calculate": false,
+        "lua_do": "function lua_do()\ntexts = {\n  {\"— \"},\n  {\"Какое у тебя хобби?\", \"Чем ты увлекаешься?\", \"Есть ли у тебя хобби?\", \"Что тебе нравится делать?\", \"Чем тебе нравится заниматься?\"},\n}\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 2\nend",
+        "super_calculate": true,
+        "id": 4,
+        "text": "event 2",
+        "lua_do": "function lua_do()\ntexts = {\n  {\"— \"},\n  {\"В каком месте ты бы хотел*а побывать?\", \"Где ты бы хотел*а побывать?\", \"Куда бы ты хотел*а съездить?\"},\n}\nend",
+        "calculate": false
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"О, это классно. \", \"Прелестно. \", \"Интересные хобби. \", \"Замечательно. \"},\n  {\"А я люблю кататься на скейте.\", \"Мне вот нравится вышивать крестиком.\", \"А я увлекаюсь историей и реконструкцией.\", \"Найден общий интерес.\", \"Думаю, у нас много общего.\"}\n}\ntext = prepareText(genText(texts))\nplayer.points = player.points <plus> 1\nend",
+        "text": "хороший ответ",
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Я люблю \", \"Мне нравится \"},\n  {\"конный спорт\", \"дайвинг\", \"играть в шахматы\", \"играть в видеоигры\", \"читать книги\", \"играть на гитаре\", \"программировать\"},\n  {\" и слушать музыку.\", \".\", \" и смотреть сериалы.\", \" и теннис.\"}\n}\nreturn genText(texts)\nend",
+        "id": 15
+      },
+      {
+        "id": 15,
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"О, это классно. \", \"Прелестно. \", \"Интересный выбор. \", \"Замечательно. \"},\n  {\"Я тоже хочу туда.\", \"Найден общий интерес.\", \"Думаю, у нас много общего.\", \"\"}\n}\ntext = prepareText(genText(texts))\nplayer.points = player.points <plus> 1\nend",
+        "text": "хороший ответ",
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Я думаю, \"},\n  {\"Китай\", \"США\", \"Бразилия\", \"Египет\", \"Париж\", \"Лондон\", \"Карелия\"},\n  {\". Может, ещё Пакистан.\", \". Может, ещё Япония.\", \". Может, ещё Норвегия.\", \". Может, ещё Финляндия.\", \".\", \".\", \".\"}\n}\nreturn genText(texts)\nend",
+        "lua_if": "function lua_if()\nreturn event == 2\nend"
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Э-э... ну, ладно. \", \"Ну, ладно. \", \"Понял#а. \"},\n  {\"Каждому своё.\", \"\"}\n}\ntext = prepareText(genText(texts))\nend",
+        "text": "плохой ответ",
+        "id": 15,
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Я не знаю. \", \"\"},\n  {\"Не думаю, что у меня есть хобби.\", \"Меня ничего не увлекает.\", \"Больше всего мне нравится спать.\"}\n}\nreturn genText(texts)\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Я не знаю. \", \"\"},\n  {\"Не думаю, что хочу куда-то.\", \"Мне и здесь хорошо.\", \"Больше всего мне нравится спать.\"}\n}\nreturn genText(texts)\nend",
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Э-э... ну, ладно. \", \"Ну, ладно. \", \"Понял#а. \"},\n  {\"Каждому своё.\", \"\"}\n}\ntext = prepareText(genText(texts))\nend",
+        "text": "плохой ответ",
+        "id": 15,
+        "lua_if": "function lua_if()\nreturn event == 2\nend"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Лучшая концовочка!",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "data",
+        "calculate": false,
+        "lua_do": "function lua_do()\n  texts = {\n    {\"— \" .. player.name .. \", ты \", \"— Знаешь, ты \"},\n    {\"очень классн@ы@й*а*я\", \"так@о@й*а*я мил@ы@й*а*я\", \"просто милашка\", \"очень интересный человек\", \"замечатаельн@ы@й*а*я\"},\n    {\".\"},\n    {\" Сердце бьётся так быстро.\", \" Со мной никогда такого не было.\", \"\", \" Я больше не могу скрывать свои чувства.\"},\n    {\" Я люблю тебя.\", \" Мне кажется, я влюблен#а.\", \" Ты мне очень нравишься.\"}\n  }\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg) \n    drawCharacter (characters[player.target].url)\n    local text = prepareText(genText(texts))\n    drawBubble(text)\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 4
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 24,
+        "text": "Сбежать",
+        "no_transition": false
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "text": "реплика",
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"И я тебя люблю.\", \"Я тоже тебя люблю.\", \"Ты мне тоже нравишься.\", \"Ты тоже милашка.\"},\n}\nreturn genText(texts)\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "text": "Поцеловать",
+        "no_transition": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "4-5 б\nразговоры о мечтах, вечном, прекрасном",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 12,
+        "text": "randoming event",
+        "calculate": false,
+        "lua_do": "function lua_do()\nevent = 1 --math.random(3)\nurl = characters[player.target].url\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "super_calculate": true,
+        "id": 4,
+        "text": "event 1",
+        "lua_do": "function lua_do()\ntexts = {\n  {\"— \"},\n  {\"Какая у тебя главная мечта?\", \"О чём ты мечтаешь?\", \"Есть ли у тебя мечта?\", \"Какие у тебя мечты и планы в жизни?\", \"У тебя есть какая-то мечта или цель?\"},\n}\nend",
+        "calculate": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event == 1\nend",
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Я не знаю. \", \"\"},\n  {\"Не думаю, что у меня есть мечты.\", \"Я обычно не мечтаю.\", \"У меня нет мечты.\", \"Мне хочется выспаться.\"}\n}\nreturn genText(texts)\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"Э-э... ну, хорошо. \", \"Ну, ладно. \", \"Понял#а. \"},\n  {\"Каждому своё.\", \"\"}\n}\ntext = prepareText(genText(texts))\nend",
+        "text": "плохой ответ",
+        "id": 15,
+        "comment": false
+      },
+      {
+        "id": 15,
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal texts = {\n  {\"— \"},\n  {\"О, это замечательно. \", \"Прекрасно. \", \"Интересненько. \", \"Замечательно. \", \"Звучит классно. \"},\n  {\"Надеюсь, у тебя всё получится.\", \"Думаю, у тебя получится осуществить мечту.\", \"Когда-нибудь твоя мечта обязательно сбудется.\"}\n}\ntext = prepareText(genText(texts))\nplayer.points = player.points <plus> 1\nend",
+        "text": "хороший ответ",
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Я хочу \", \"Думаю, что я хочу \", \"Мне хочется \", \"Моя мечта — \"},\n  {\"учиться за границей.\", \"побывать в Париже.\", \"стать писателем.\", \"сняться в фильме.\", \"посетить все города России.\", \"снять свой фильм.\", \"увидеть северное сияние.\"},\n}\nreturn genText(texts)\nend",
+        "lua_if": "function lua_if()\nreturn event == 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "harlem shake",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nlocal listener =\nfunction(event)\n  if event.isShake then\n    isShake = true\n  else\n    isShake = false\n  end\n     \n  return true\nend\n \nRuntime:addEventListener( \"accelerometer\", listener)\nend",
+        "text": "Акселерометр",
+        "id": 19,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  drawBg(disco.bg)\n  points = 0\n  circle = display.newCircle (canvasGroup, canvas.width/2, canvas.height/2, canvas.width*0.3)\n  header = display.newText{\n    parent = canvasGroup,\n    text = \"1\",\n    fontSize = g.fontSize * 2,\n    x = circle.x,\n    y = circle.y\n  }\n  myTimer = timer.performWithDelay(3000, \n  function(event)\n    if g.current_id ~= 19 then\n      timer.cancel(event.source)\n    end\n    local colors = {\n      {0, 0.6, 0}, {0.7, 0, 0}\n    }\n    currentMode = math.random(2)\n    circle.fill = colors[currentMode]\n    header.text = tostring(event.count)\n  end, 10)\n\n  timer.performWithDelay(1500,   \n  function()\n    timer.performWithDelay(3000, \n    function(event)\n      if g.current_id ~= 19 then\n        timer.cancel(event.source)\n      end\n      if (currentMode == 1 and isShake) or (currentMode == 2 and not isShake) then\n        points = points <plus> 1\n      end\n      if event.count == 10 then\n        showPage{id = 20, transition = \"instant\"}\n      end\n    end, 10)\n  end)\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "конец игры про shake",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  function drawHeader(points)\n    local txt =  \"Ваш результат: \" .. tostring(points) .. \"/10 очков. \"\n    local texts\n    if points > 8 then\n      texts = {\"Восхитительно!\", \"Замечательно!\", \"Поразительно!\", \"Невероятно!\"}\n    elseif points > 6 then\n      texts = {\"Неплохо!\", \"Хорошо!\", \"Отлично!\"}\n    elseif points > 4 then\n      texts = {\"Могло быть и лучше.\", \"Вторичненько.\", \"Почти неплохо.\"}\n    else\n      texts = {\"Отстой.\", \"Ужасно.\", \"Как так?\"}\n    end\n    txt = txt .. texts[math.random(#texts)]\n    local text = display.newText{\n      parent = canvasGroup,\n      text = txt,\n      fontSize = g.fontSize,\n      x = canvas.width/2,\n      y = canvas.height * 0.25,\n      width = 0.8 * canvas.width,\n    }\n    local rect = display.newRoundedRect (canvasGroup, text.x, text.y, text.width <plus> canvas.width*0.08, text.height <plus> canvas.width*0.05, canvas.width*0.1)\n    rect:setFillColor(148/255, 0/255, 211/255)\n    text:toFront()\n  end\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg)\n    local header = drawHeader(points)\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nif points >= 7 then\n  player.points = player.points <plus> 1\nend\nremoveAnim()\ng.play_sound_once = \"\"\nend",
+        "text": "Далее",
+        "instant": true,
+        "id": 10
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Нормальная концовка\nдружба и надежды",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  texts = {\n    {\"— \" .. player.name .. \", ты \", \"— Знаешь, ты \"},\n    {\"хорош@и@й*а*я собеседни@к*ц*а. \", \"интересный человек. \", \"весёл@ы@й*а*я. \", \"прикольн@ы@й*а*я. \"},\n    {\"Я бы хотел#а \"},\n    {\"продолжать общение и дальше.\", \"погулять как-нибудь вместе.\", \"потусить где-нибудь вместе.\", \"зависнуть где-то ещё вместе.\", \"дружить с тобой.\"}\n  }\nend",
+        "text": "data"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg) \n    drawCharacter (characters[player.target].url)\n    local text = prepareText(genText(texts))\n    drawBubble(text)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "lua_text": "function lua_text()\nlocal texts = {\n  {\"— \"},\n  {\"Хорошая идея.\", \"Отличное предложение!\", \"Я бы тоже этого хотел.\"},\n}\nreturn genText(texts)\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 25,
+        "text": "реплика",
+        "comment": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "плохая концовка(",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "data",
+        "calculate": false,
+        "lua_do": "function lua_do()\n  texts = {\n    {\"Итак, \", \"Подводя итог, \", \"Глядя на танцующие парочки, Вы задумались: \"},\n    {\"на этой дискотеке \", \"на этой вечеринке \", \"в этом клубе \"},\n    {\"Вы никого не нашли. \", \"Вы не смогли найти любовь. \", \"Вы не смогли обрести счастье. \", \"Вы ни с кем толком не познакомились. \"},\n   {\"Ну, может, \", \"Что ж, может, \", \"Может быть, \"},\n   {\"в другой раз.\", \"в следующий раз.\", \"когда-нибудь ещё.\"}\n  }\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg) \n    local text = prepareText(genText(texts))\n    drawBubble(text)\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "финал хорошей концовочки",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  texts = {\n    {\"Дискотека уже закончилась, \", \"Вечеринка уже закончилась, \", \"Все уже разошлись, \"},\n    {\"а вы \", \"но вы \"},\n    {\"всё ещё кружились в медленном танце. \", \"по-прежнему танцевали вместе. \", \"всё ещё стояли, обнимались и говорили обо всём на свете. \"},\n    {\"В этот момент вы знали: \", \"Вы знали: \"},\n    {\"вы не одиноки.\", \"счастье есть.\", \"любовь существует.\"}\n  }\nend",
+        "text": "data"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg) \n    drawCharacter (characters[player.target].url)\n    local text = prepareText(genText(texts))\n    drawBubble(text)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 1,
+        "text": "Конец",
+        "lua_do": "function lua_do()\ng.lastCharacterUrl = characters[player.target].url\nend",
+        "no_transition": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "убежал от любви",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  texts = {\n    {\"Вы \"},\n    {\"внезапно \", \"отчётливо \", \"вдруг \", \"\"},\n    {\"поняли: \", \"поняли, что \", \"осознали, что \"},\n    {\"этот человек Вам \"},    \n    {\"совершенно \", \"совсем \", \"никаким образом \", \"\"},\n    {\"не подходит. \", \"не нравится. \", \"не симпатичен. \"},\n    {\"Коротко объяснившись, \", \"Тактично объяснив ситуацию, \", \"Введя собеседника в положение дел, \"}, \n    {\"Вы \"}, \n    {\"покинули \", \"поспешили покинуть \"},\n    {\"это место. \", \"дискотеку. \", \"клуб. \"},\n    {\"Сегодня Вы так и не нашли \", \"Вы так и не нашли \"},\n    {\"любовь своей жизни\", \"счастье\", \"подходящего человека\", \"спутника жизни\"},\n    {\", но не стоит \"},\n    {\"расстраиваться. \", \"отчаиваться. \", \"грустить. \", \"печалиться. \"},\n    {\"Возможно, \", \"Быть может, \", \"Может быть, \"},\n    {\"всё ещё впереди.\"}\n  }\nend",
+        "calculate": false,
+        "text": "data",
+        "id": 4
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg) \n    local text = prepareText(genText(texts))\n    drawBubble(text)\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 1,
+        "text": "Конец",
+        "no_transition": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "финал концовки про дружбу... или не только дружбу?",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  texts = {\n    {\"Итак, \", \"По крайней мере, \", \"Во всяком случае, \"},\n    {\"на этой дискотеке \", \"на этой вечеринке \", \"в этом клубе \"},\n    {\"Вы обрели нового друга. \", \"Вы нашли друга. \"},\n    {\"Или не только?..\", \"А может, что-то большее?\", \"А может, что-то ещё?\"}\n  }\nend",
+        "calculate": false,
+        "text": "data",
+        "id": 4
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg(disco.bg) \n    drawCharacter (characters[player.target].url)\n    local text = prepareText(genText(texts))\n    drawBubble(text)\nend"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 1,
+        "text": "Конец",
+        "lua_do": "function lua_do()\ng.lastCharacterUrl = characters[player.target].url\nend",
+        "no_transition": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Достижения",
+    "answers": [
+      {
+        "id": 3,
+        "text": "общее",
+        "run": [
+          3
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    drawBg (\"https://i.ibb.co/JyvvBNr/IMG-20240711-164001-copy-595x998.jpg\")\n\n    local achieves = {22, 24, 25, 23}\n    local texts = {\"Один, как волк\", \"Побег от любви\", \"Дружба?\", \"Идиллия\"}\n   local count = 0\n   local txt = \"\"\n   for i = 1, #achieves do\n     if isGlobalHistoryContain(achieves[i]) then\n       count = count <plus> 1\n       txt = txt .. (txt ~= \"\" and \"<s>\n\" or \"\").. \"♡ \".. texts[i]\n     end\n   end\n\n    txt = \"Открыто концовок: \".. count.. \"/4<s>\nОткрытые концовки:<s>\n\".. txt\n    drawBubble(txt)\n    if g.lastCharacterUrl then\n      drawCharacter (g.lastCharacterUrl)\n    end\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "bg_color": [
+          0.58,
+          0,
+          0.83
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 1,
+        "text": "Назад",
+        "no_transition": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  }
+]

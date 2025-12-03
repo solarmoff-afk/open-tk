@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 29345 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ana Ray написал еще 29301 слов в квесте \"Поцелуй меня на удачу\"."
+      },
+      {
+        "targetbookid": "164210",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Поцелуй меня на удачу\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ViRei написал еще 26485 слов в квесте \"Rise Of Pigmothers \"."
+      },
+      {
+        "targetbookid": "44478",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Rise Of Pigmothers \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ани Руф написал еще 24211 слов в квесте \"Дневники иного мира\"."
+      },
+      {
+        "targetbookid": "157443",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Дневники иного мира\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 23334 слов в квесте \"Тайны Блэкарда\"."
+      },
+      {
+        "targetbookid": "158580",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тайны Блэкарда\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

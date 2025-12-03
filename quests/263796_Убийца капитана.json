@@ -1,0 +1,8251 @@
+[
+  {
+    "id": 1,
+    "text": "Титульная.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начинка ",
+        "var_equal": [
+          "к",
+          12
+        ]
+      },
+      {
+        "var_str_set": [
+          "global defaultBgAnswerImage",
+          "https://i.postimg.cc/PJ3S8M5s/image.png"
+        ],
+        "var_equal": [
+          "c",
+          1
+        ],
+        "id": 2,
+        "text": "Бетка",
+        "widget": [
+          "id1",
+          "https://i.postimg.cc/BnsqNhfr/1222.png",
+          "",
+          "id2",
+          "https://i.postimg.cc/G38hp8j5/211.png",
+          "",
+          "id3",
+          "https://i.postimg.cc/4x5X0zJm/12.png",
+          "",
+          "id4",
+          "https://i.postimg.cc/ncqFvygK/1.png",
+          ""
+        ],
+        "var_set": [
+          "гс",
+          4,
+          "приор",
+          2,
+          "global image_part_of_screen",
+          0.6
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://i.postimg.cc/VvY5XN51/image.png",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://i.postimg.cc/Bv4nrfnJ/image.png",
+        "system": true
+      },
+      {
+        "id": 11,
+        "text": "Боевка.",
+        "var_equal": [
+          "йй",
+          11
+        ],
+        "var_set": [
+          "ighp1",
+          59,
+          "ighp2",
+          60,
+          "ighp3",
+          60,
+          "ihp",
+          100,
+          "global image_part_of_screen",
+          1,
+          "гщит1",
+          4,
+          "гатк1",
+          3,
+          "global fullscreen",
+          0
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Выбор внешнего вида.",
+        "var_set": [
+          "сет",
+          3,
+          "скин",
+          1,
+          "каст",
+          0,
+          "global fullscreen",
+          0
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "global fullscreen_on_first_page",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Укажите команды для картинки stretch",
+        "url": "https://i.postimg.cc/25CvdZ2y/5.png"
+      },
+      {
+        "id": 34,
+        "text": "Новэльнята",
+        "var_equal": [
+          "йй",
+          11
+        ],
+        "var_set": [
+          "global fullscreen",
+          1,
+          "нвоп",
+          1,
+          "до",
+          1,
+          "текст",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "        ",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Кальки",
+        "run": [
+          10
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Виджеты.",
+        "run": [
+          6
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Фоны",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Визуал.",
+        "run": [
+          3
+        ]
+      },
+      {
+        "id": 22,
+        "text": "скины и оекалоры",
+        "run": [
+          22
+        ]
+      },
+      {
+        "id": 5,
+        "text": "События рыцарки.",
+        "run": [
+          5
+        ]
+      },
+      {
+        "id": 7,
+        "text": "События водопроводки.",
+        "run": [
+          7
+        ]
+      },
+      {
+        "id": 8,
+        "text": "События нарколыг.",
+        "run": [
+          8
+        ]
+      },
+      {
+        "id": 9,
+        "text": "События банжита с дороги.",
+        "run": [
+          9
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Автопортрет",
+        "var_equal": [
+          "е",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": [
+      {
+        "id": 3,
+        "text": "эллара stretch",
+        "url": "https://i.postimg.cc/sgKWLtjK/image.png",
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "text": "эллара stretch",
+        "url": "https://i.postimg.cc/sgKWLtjK/image.png",
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          3
+        ]
+      },
+      {
+        "id": 3,
+        "text": "эллара stretch",
+        "url": "https://i.postimg.cc/sgKWLtjK/image.png",
+        "var_equal": [
+          "с5",
+          13
+        ]
+      },
+      {
+        "id": 3,
+        "text": "эллара stretch",
+        "url": "https://i.postimg.cc/sgKWLtjK/image.png",
+        "var_equal": [
+          "с5",
+          14
+        ]
+      },
+      {
+        "var_need": [
+          "с5",
+          19
+        ],
+        "id": 3,
+        "url": "https://i.postimg.cc/sgKWLtjK/image.png",
+        "text": "эллара stretch",
+        "var_no_more": [
+          "с5",
+          22
+        ]
+      },
+      {
+        "id": 3,
+        "text": "эллара stretch",
+        "url": "https://i.postimg.cc/sgKWLtjK/image.png",
+        "var_equal": [
+          "с5",
+          24
+        ]
+      },
+      {
+        "var_need": [
+          "с5",
+          1
+        ],
+        "id": 3,
+        "url": "https://i.postimg.cc/Y9Cq9Qzn/image.png",
+        "text": "бандит stretch",
+        "var_no_more": [
+          "с5",
+          3
+        ]
+      },
+      {
+        "var_need": [
+          "с5",
+          8
+        ],
+        "id": 3,
+        "url": "https://i.postimg.cc/Y9Cq9Qzn/image.png",
+        "text": "бандит stretch",
+        "var_no_more": [
+          "с5",
+          10
+        ]
+      },
+      {
+        "text": "бандит stretch",
+        "id": 3,
+        "url": "https://i.postimg.cc/Y9Cq9Qzn/image.png",
+        "var_need": [
+          "с5",
+          15
+        ],
+        "var_no_more": [
+          "с5",
+          16
+        ]
+      },
+      {
+        "id": 3,
+        "text": "stretch генри",
+        "url": "https://i.postimg.cc/XNh7jGGL/image.png",
+        "var_equal": [
+          "гс",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 3,
+        "url": "https://i.postimg.cc/XNh7jGGL/image.png",
+        "var_need": [
+          "ис",
+          4
+        ],
+        "text": "stretch генри"
+      },
+      {
+        "id": 3,
+        "text": "катрин stretch",
+        "url": "https://i.postimg.cc/L614n9jp/image.png",
+        "var_equal": [
+          "опп",
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "нач стражи stretch",
+        "url": "https://i.postimg.cc/YCBrF5xm/image.png",
+        "var_equal": [
+          "гс",
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "text": "нач стражи stretch",
+        "url": "https://i.postimg.cc/YCBrF5xm/image.png",
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1
+        ]
+      },
+      {
+        "url": "https://i.postimg.cc/YCBrF5xm/image.png",
+        "id": 3,
+        "text": "нач стражи stretch",
+        "var_need": [
+          "с5",
+          17
+        ],
+        "var_no_more": [
+          "с5",
+          18
+        ]
+      },
+      {
+        "url": "https://i.postimg.cc/wMS60Z8Z/image.png",
+        "id": 3,
+        "text": "stretch просто баба",
+        "var_need": [
+          "с5",
+          4
+        ],
+        "var_no_more": [
+          "с5",
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": [
+      {
+        "id": 4,
+        "text": "мастерская stretch",
+        "url": "https://i.postimg.cc/02BqTTqv/image.png",
+        "var_equal": [
+          "гс",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 4,
+        "url": "https://i.postimg.cc/02BqTTqv/image.png",
+        "var_need": [
+          "ис",
+          4
+        ],
+        "text": "мастерская stretch"
+      },
+      {
+        "id": 4,
+        "text": "казарма stretch",
+        "url": "https://i.postimg.cc/rwRLMf8r/image.png",
+        "var_equal": [
+          "с5",
+          23
+        ]
+      },
+      {
+        "id": 4,
+        "text": "казарма stretch",
+        "url": "https://i.postimg.cc/rwRLMf8r/image.png",
+        "var_equal": [
+          "гс",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "казарма stretch",
+        "url": "https://i.postimg.cc/rwRLMf8r/image.png",
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1
+        ]
+      },
+      {
+        "text": "сантехник stretch",
+        "id": 4,
+        "url": "https://i.postimg.cc/BQpDkMng/image.png",
+        "var_need": [
+          "с3",
+          1
+        ],
+        "var_no_more": [
+          "с3",
+          7
+        ]
+      },
+      {
+        "text": "ворота stretch",
+        "id": 4,
+        "url": "https://i.postimg.cc/HkPMsn58/image.png",
+        "var_need": [
+          "с1",
+          1
+        ],
+        "var_no_more": [
+          "с1",
+          11
+        ]
+      },
+      {
+        "var_need": [
+          "с4",
+          1
+        ],
+        "id": 4,
+        "url": "https://i.postimg.cc/HkPMsn58/image.png",
+        "text": "ворота stretch",
+        "var_no_more": [
+          "с4",
+          5
+        ]
+      },
+      {
+        "var_not": [
+          "слежка",
+          1
+        ],
+        "var_equal": [
+          "гс",
+          3
+        ],
+        "id": 4,
+        "text": "ворота stretch",
+        "url": "https://i.postimg.cc/HkPMsn58/image.png"
+      },
+      {
+        "text": "ратуша stretch",
+        "id": 4,
+        "url": "https://i.postimg.cc/634fNRmQ/image.png",
+        "var_need": [
+          "с1",
+          12
+        ],
+        "var_no_more": [
+          "с1",
+          18
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Трактир stretch",
+        "url": "https://i.postimg.cc/VL8s0yg0/image.png",
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Трактир stretch",
+        "url": "https://i.postimg.cc/VL8s0yg0/image.png",
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          3
+        ]
+      },
+      {
+        "url": "https://i.postimg.cc/DwDwZSMn/image.png",
+        "id": 4,
+        "text": "порт stretch",
+        "var_need": [
+          "с5",
+          15
+        ],
+        "var_no_more": [
+          "с5",
+          22
+        ]
+      },
+      {
+        "id": 4,
+        "text": "южный берег stretch",
+        "url": "https://i.postimg.cc/9FLf68P4/image.png",
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          2
+        ]
+      },
+      {
+        "url": "https://i.postimg.cc/9FLf68P4/image.png",
+        "id": 4,
+        "text": "южный берег stretch",
+        "var_need": [
+          "с5",
+          8
+        ],
+        "var_no_more": [
+          "с5",
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": [
+      {
+        "id": 5,
+        "text": "\nСтражники в Мираполе всегда нужны. \n\nСтоишь, где скажут, караулишь, что скажут. Если прикажут,  машешь оружием. Ничего сложного.\n\nПлатят 10 золотых за смену.\n\nПойти в найм на смену?\n",
+        "var_equal": [
+          "гс",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "var_set": [
+          "гс",
+          0
+        ],
+        "bgAnswerImage": [
+          "https://i.postimg.cc/PJ3S8M5s/image.png"
+        ],
+        "var_equal": [
+          "гс",
+          1
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_random_from": [
+          "с1",
+          1,
+          18
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://i.postimg.cc/PJ3S8M5s/image.png"
+        ],
+        "var_equal": [
+          "гс",
+          1
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "var_no_more": [
+          "с1",
+          2
+        ],
+        "var_equal": [
+          "с1",
+          1
+        ],
+        "text": "Кальк 1",
+        "var_random": [
+          "с2",
+          1,
+          5
+        ],
+        "id": 5,
+        "calculate": true,
+        "super_calculate": false,
+        "merge": false
+      },
+      {
+        "var_no_more": [
+          "с1",
+          18
+        ],
+        "super_calculate": false,
+        "text": "Кальк 2",
+        "var_random": [
+          "с2",
+          7,
+          9
+        ],
+        "id": 5,
+        "calculate": true,
+        "var_equal": [
+          "с1",
+          18
+        ],
+        "merge": false
+      },
+      {
+        "id": 5,
+        "text": "\nАлекса поставили в караул возле городских ворот.\n",
+        "merge": true,
+        "var_equal": [
+          "с1",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "с2",
+          1
+        ],
+        "id": 5,
+        "text": "\nСмена прошла  спокойно и скучно. Алекс получил свои деньги.\n\nПолучено монет: 10",
+        "merge": true
+      },
+      {
+        "var_add": [
+          "gold",
+          10
+        ],
+        "var_equal": [
+          "с2",
+          1
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Смена прошла  спокойно и скучно. Алекс получил свои деньги.\n",
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с2",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "с2",
+          2
+        ],
+        "id": 5,
+        "text": "\nАлекс арестовал нищего, который пытался пробраться в город.\n\nЗа заслуги Алекс получили премию от начальника стражи.\n\nПолучено монет: 15",
+        "merge": true
+      },
+      {
+        "var_add": [
+          "gold",
+          15
+        ],
+        "var_equal": [
+          "с2",
+          2
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Алекс арестовал нищего, который пытался пробраться в город.\n\nЗа заслуги Алекс получили премию от начальника стражи.\n\nПолучено монет: 15",
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с2",
+          2
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "с2",
+          3
+        ],
+        "id": 5,
+        "text": "\nАлекс задержал торговца, который пытается  провести запрещенные товары.\n\nОн предлагает Алексу закрыть на это глаза и пропустить его за три десятка золотых монет. \nПропустить торговца?\n",
+        "merge": true
+      },
+      {
+        "var_set": [
+          "с2",
+          0
+        ],
+        "var_random": [
+          "с1",
+          4,
+          5
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_equal": [
+          "с2",
+          3
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с2",
+          3
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          3,
+          "с2",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "с1",
+          3
+        ],
+        "id": 5,
+        "text": "\nАлекс арестовал торговца. \n\nНачальник стражи выразил ему благодарность.\n\nПолучено монет: 10\n",
+        "merge": true
+      },
+      {
+        "var_add": [
+          "gold",
+          10
+        ],
+        "var_equal": [
+          "с1",
+          3
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Алекс арестовал торговца. \n\nНачальник стражи выразил ему благодарность.\n\nПолучено монет: 10",
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          3
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "с1",
+          4
+        ],
+        "id": 5,
+        "text": "\nАлекс пропустил торговца. \n\nОстаток смены прошел спокойно.\n\nПолучено монет: 40",
+        "merge": true
+      },
+      {
+        "var_add": [
+          "gold",
+          40
+        ],
+        "var_equal": [
+          "с1",
+          4
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Алекс пропустил торговца. \n\nОстаток смены прошел спокойно.\n\nПолучено монет: 40",
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          4
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "var_show": [
+          "выговор",
+          "/ 5"
+        ],
+        "comment": true,
+        "var_equal": [
+          "с1",
+          5
+        ],
+        "id": 5,
+        "text": "\nНапарник увидел, как Алекс берет деньги и пропускает торговца.\n\nНапарник доложил об этом начальнику стражи. \n\nАлекс получили выговор. Если будет слишком много выговоров, Алекса лишат возможности наниматься на службу.\n\nНарушений и выговоров: ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "выговор",
+          "/ 5"
+        ],
+        "comment": true,
+        "id": 5,
+        "text": "Напарник увидел, как Алекс берет деньги и пропускает торговца.\n\nНапарник доложил об этом начальнику стражи. \n\nАлекс получили выговор. Если будет слишком много выговоров, Алекса лишат возможности наниматься на службу.\n\nНарушений и выговоров: ",
+        "var_equal": [
+          "с1",
+          5
+        ],
+        "var_add": [
+          "выговор",
+          1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          5
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "с2",
+          4
+        ],
+        "id": 5,
+        "text": "\nПри проверке торгового каравана, Алекс  нашел спрятавшегося среди скота ребенка. \n\nОн жалобно попросил Алекса не выдавать его.\n\nСообщить владельцу каравана о найденном ребенке?\n\n",
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с2",
+          4
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_set": [
+          "с2",
+          0,
+          "с1",
+          6
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с2",
+          4
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          7,
+          "с2",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "с1",
+          6
+        ],
+        "id": 5,
+        "text": "\nВладелец каравана поблагодарил Алекса  и дал ему десять монет за бдительность. \n\nСмена закончилась благополучно.\n\nПолучено монет: 20",
+        "merge": true
+      },
+      {
+        "var_add": [
+          "gold",
+          20
+        ],
+        "var_equal": [
+          "с1",
+          6
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Владелец каравана поблагодарил Алекса  и дал ему десять монет за бдительность. \n\nСмена закончилась благополучно.\n\nПолучено монет: 20",
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          6
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "var_show": [
+          "выговор",
+          "/ 5"
+        ],
+        "var_equal": [
+          "с1",
+          7
+        ],
+        "id": 5,
+        "text": "\nОказалось, что мальчишка был послан начальником городской стражи для проверки охраны. \n\nИ Алекс эту проверку не прошел. Начальник стражи сделал ему предупреждение.\n\nЕсли Алекс будет замечен за грязными делами много раз, он не сможет наниматься на городскую службу.  \n\nНарушений и выговоров: ",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "var_show": [
+          "выговор",
+          "/ 5"
+        ],
+        "var_add": [
+          "выговор",
+          1
+        ],
+        "var_equal": [
+          "с1",
+          7
+        ],
+        "id": 5,
+        "text": "Оказалось, что мальчишка был послан начальником городской стражи для проверки охраны. \n\nИ Алекс эту проверку не прошел. Начальник стражи сделал ему предупреждение.\n\nЕсли Алекс будет замечены за грязными делами много раз, он не сможет наниматься на городскую службу.  \n\nНарушений и выговоров: ",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          7
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "var_set": [
+          "c2",
+          4
+        ],
+        "var_equal": [
+          "с2",
+          5,
+          "провалслежки",
+          1
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "text": "\nК Алексу обратился его напарник: \"Не желаешь заработать лишних денег?\"\n",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_not": [
+          "провалслежки",
+          1
+        ],
+        "var_equal": [
+          "с2",
+          5
+        ],
+        "id": 5,
+        "text": "\nК Алексу обратился его напарник: \"Не желаешь заработать лишних денег?\"\n",
+        "merge": true
+      },
+      {
+        "var_not": [
+          "провалслежки",
+          1
+        ],
+        "var_equal": [
+          "с2",
+          5
+        ],
+        "id": 2,
+        "text": "Желаю.",
+        "var_set": [
+          "с1",
+          9,
+          "с2",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с2",
+          5
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_not": [
+          "провалслежки",
+          1
+        ],
+        "var_set": [
+          "с1",
+          8,
+          "с2",
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nСмена прошла спокойно и скучно. Алекс  получили свои деньги.\n\nПолучено монет: 10",
+        "var_equal": [
+          "с2",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "\nСмена прошла спокойно и скучно. Алекс  получили свои деньги.\n\nПолучено монет: 10",
+        "merge": true,
+        "var_equal": [
+          "с1",
+          8
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "gold",
+          10
+        ],
+        "var_equal": [
+          "с1",
+          8
+        ],
+        "id": 5,
+        "text": "Смена прошла спокойно и скучно. Алекс  получили свои деньги.\n\nПолучено монет: 10",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с2",
+          5
+        ],
+        "var_add": [
+          "gold",
+          10
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "text": "Смена прошла спокойно и скучно. Алекс  получили свои деньги.\n\nПолучено монет: 10",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с2",
+          5
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "с1",
+          8
+        ],
+        "id": 2,
+        "text": "Продолжить.",
+        "middle_answer": true,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nНапарник: \"Сегодня мой друг будет завозить очень интересный груз, нужно закрыть на него глаза, плачу три десятка  монет.\"\n\nПринять предложение напарника?",
+        "var_equal": [
+          "с1",
+          9
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с1",
+          9
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_set": [
+          "с1",
+          10,
+          "с2",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с1",
+          9
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          8,
+          "с2",
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nАлекс заглянул в повозку с грузом. Друг стражника перевозил запрещенные травы, одурманивающие людей. \n",
+        "var_equal": [
+          "с1",
+          10
+        ],
+        "merge": true
+      },
+      {
+        "var_set": [
+          "с1",
+          11,
+          "с2",
+          0
+        ],
+        "var_equal": [
+          "с1",
+          10
+        ],
+        "id": 2,
+        "text": "Пропустить.",
+        "var_random": [
+          "событие"
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с1",
+          10
+        ],
+        "id": 2,
+        "text": "Арестовать.",
+        "var_set": [
+          "с1",
+          12,
+          "с2",
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nАлекс задержал повозку и стражника. Начальник стражи выразил Алексу особую благодарность.\n\nПолучено монет: 20",
+        "var_equal": [
+          "с1",
+          12
+        ],
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "gold",
+          20
+        ],
+        "var_equal": [
+          "с1",
+          12
+        ],
+        "id": 5,
+        "text": "Алекс задержал повозку и стражника. Начальник стражи выразил Алексу особую благодарность.\n\nПолучено монет: 20",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          12
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nАлекс пропустил повозку.\nВсе прошло гладко, но это отразиться на жизни города.\n\nПолучено монет: 40",
+        "var_equal": [
+          "с1",
+          11
+        ],
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "gold",
+          40
+        ],
+        "var_equal": [
+          "с1",
+          11
+        ],
+        "id": 5,
+        "text": "Алекс пропустил повозку.\nВсе прошло гладко, но это отразиться на жизни города.\n\nПолучено монет: 40",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          11
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "трава",
+          1,
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nАлекса поставили в караул возле городской ратуши. \n\n",
+        "var_equal": [
+          "с1",
+          18
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "\nСмена прошла спокойно и скучно. Алекс  получили свои деньги.\n\nПолучено монет: 10",
+        "var_equal": [
+          "с2",
+          7
+        ],
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "gold",
+          10
+        ],
+        "var_equal": [
+          "с2",
+          7
+        ],
+        "id": 5,
+        "text": "Смена прошла спокойно и скучно. Алекс  получили свои деньги.\n\nПолучено монет: 10",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с2",
+          7
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nВозле ратуши собралась толпа, демонстрирующая свое недовольство. Ситуация опасная.\n\nНачальник стражи приказывает разогнать демонстрантов за двойную плату.  Если Алекс согласится, то может потерять часть здоровья.  \n\nПринять участие в разгоне толпы?\n\n",
+        "var_equal": [
+          "с2",
+          8
+        ],
+        "merge": true
+      },
+      {
+        "var_set": [
+          "с1",
+          13,
+          "с2",
+          0
+        ],
+        "var_random": [
+          "событие"
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_equal": [
+          "с2",
+          8
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с2",
+          8
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          14,
+          "с2",
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nНе раз получив по шлему, Алексу и его  товарищам удалось разогнать толпу.\n\nНачальник стражи заплатил двойной оклад.\n\nПолучено монет: 20\n\nПотеряно здоровья: 10",
+        "var_equal": [
+          "с1",
+          13
+        ],
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "calculate": true,
+        "var_add": [
+          "gold",
+          20
+        ],
+        "var_equal": [
+          "с1",
+          13
+        ],
+        "id": 5,
+        "var_sub": [
+          "hp",
+          10
+        ],
+        "text": "Не раз получив по шлему, Алексу и его  товарищам удалось разогнать толпу.\n\nНачальник стражи заплатил двойной оклад.\n\nПолучено монет: 20\n\nПотеряно здоровья: 10",
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с1",
+          13
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nДемонстранты закидывали помидорами ратушу целый день.\n\nНачальник стражи отказался платить Алексу.\n",
+        "var_equal": [
+          "с1",
+          14
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с1",
+          14
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nПеред входом в ратушу, Алекс остановил человека, у которого не было пропуска. Он утверждал, что забыл пропуск дома, а его ждет срочная работа.\n\nПропустить человека?",
+        "var_equal": [
+          "с2",
+          9
+        ],
+        "merge": true
+      },
+      {
+        "var_set": [
+          "с2",
+          0
+        ],
+        "var_random": [
+          "с1",
+          15,
+          16
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_equal": [
+          "с2",
+          9
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с2",
+          9
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          17,
+          "с2",
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "\nКак оказалось, это был казначей. В конце дня, он отблагодарил Алекса. \n\nПолучено монет: 20",
+        "var_equal": [
+          "с1",
+          15
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "\nКак оказалось, это был казначей. Он вернулся с пропуском и сильно ругался. \nОстаток смены прошел спокойно.\n\nПолучено монет: 10",
+        "var_equal": [
+          "с1",
+          17
+        ],
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "gold",
+          10
+        ],
+        "var_equal": [
+          "с1",
+          17
+        ],
+        "id": 5,
+        "text": "\nКак оказалось, это был казначей. Он вернулся с пропуском и сильно ругался. \nОстаток смены прошел спокойно.\n\nПолучено монет: 10",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "gold",
+          20
+        ],
+        "var_equal": [
+          "с1",
+          15
+        ],
+        "id": 5,
+        "text": "Как оказалось, это был казначей. В конце дня, он отблагодарил Алекса. \n\nПолучено монет: 20",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_show": [
+          "выговор",
+          "/ 5"
+        ],
+        "var_equal": [
+          "с1",
+          16
+        ],
+        "id": 5,
+        "text": "\nЭто оказался проверяющий начальника стражи. Его визит был проверкой.  Алекс  эту проверку не прошел. Начальник стражи сделал ему предупреждение. Если Алекс еще раз будет замечен за грязными делами, он не сможет наниматься на городскую службу.  \n\nВыговоров и нарушений:",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "var_show": [
+          "выговор",
+          "/ 5"
+        ],
+        "var_add": [
+          "выговор",
+          1
+        ],
+        "var_equal": [
+          "с1",
+          16
+        ],
+        "id": 5,
+        "text": "Это оказался проверяющий начальника стражи. Его визит был проверкой.  Алекс  эту проверку не прошел. Начальник стражи сделал ему предупреждение. Если Алекс еще раз будет замечен за грязными делами, он не сможете наниматься на городскую службу.  \n\nВыговоров и нарушений:",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_set": [
+          "с1",
+          0,
+          "с2",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ],
+        "text": "Продолжить.",
+        "middle_answer": true,
+        "var_need": [
+          "с1",
+          15
+        ],
+        "id": 2,
+        "var_no_more": [
+          "с1",
+          17
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "widget_show": [
+          "id1",
+          "hp",
+          "id2",
+          "st",
+          "id3",
+          "rp",
+          "id4",
+          "gold"
+        ],
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": [
+      {
+        "id": 7,
+        "text": "\nВодопроводчик Генри просит у Алекса  помощи и обещает хорошо заплатить.\n\nПомочь Генри?",
+        "merge": true,
+        "var_equal": [
+          "гс",
+          2
+        ]
+      },
+      {
+        "var_set": [
+          "гс",
+          0
+        ],
+        "bgAnswerImage": [
+          "https://i.postimg.cc/PJ3S8M5s/image.png"
+        ],
+        "var_equal": [
+          "гс",
+          2
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_random_from": [
+          "с3",
+          1,
+          3,
+          6
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://i.postimg.cc/PJ3S8M5s/image.png"
+        ],
+        "var_equal": [
+          "гс",
+          2
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "\nСточный колодец засорился необходимо его почистить.\n\nГенри заплатит полсотни монет, если Алекс справится с этим заданием. Репутация  Алекса от этого пострадает.\n\nПочистить колодец?",
+        "merge": true,
+        "var_equal": [
+          "с3",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "с3",
+          1
+        ],
+        "id": 2,
+        "text": "Да.",
+        "left_answer": true,
+        "var_set": [
+          "с3",
+          2
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с3",
+          1
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с3",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "\nАлекс справился с задачей.\n\nГенри отблагодарил его деньгами за отличную работу. \n\nПолучено монет: 50\n\nПотеряно выносливости: 10\n\nПотеряно репутации: 5\n",
+        "merge": true,
+        "var_equal": [
+          "с3",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "с3",
+          2
+        ],
+        "var_sub": [
+          "st",
+          10,
+          "rp",
+          5
+        ],
+        "var_add": [
+          "gold",
+          50
+        ],
+        "super_calculate": false,
+        "id": 7,
+        "text": "Алекс справился с задачей.\n\nГенри отблагодарил его деньгами за отличную работу. \n\nПолучено монет: 50\n\nПотеряно выносливости: 10\n\nПотеряно репутации: 5\n",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с3",
+          2
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "\nГномы в очередной раз повеселились и взорвали водопроводный колодец, оставив город без воды. \n\nВодопроводчику Генри нужны рабочие для восстановления колодцев. Генри обещает сотню монет, но предупреждает, что работа предстоит тяжелая и опасная.\n\nПринять участие в работе?",
+        "merge": true,
+        "var_equal": [
+          "с3",
+          3
+        ]
+      },
+      {
+        "var_random": [
+          "с3",
+          4,
+          5
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_equal": [
+          "с3",
+          3
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с3",
+          3
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "\nБригада Алекса смогла в кротчайшие сроки восстановить колодец.\n\nГенри остался доволен. \n\nПолучено монет: 100 \n\nПотеряно выносливости: 50",
+        "merge": true,
+        "var_equal": [
+          "с3",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "gold",
+          100
+        ],
+        "id": 7,
+        "var_sub": [
+          "st",
+          50
+        ],
+        "var_min": [
+          "st",
+          1
+        ],
+        "var_equal": [
+          "с3",
+          4
+        ],
+        "text": "Бригада Алекса смогла в кротчайшие сроки восстановить колодец.\n\nГенри остался доволен. \n",
+        "calculate": true,
+        "super_calculate": false,
+        "merge": false
+      },
+      {
+        "id": 7,
+        "text": "\nБез происшествий на такой рабе не обошлось, один из неаккуратных товарищей уронил Алексу  на ногу трубу.\n\n Тем не менее, бригада смогла в кротчайшие сроки восстановить колодец.\n\nГенри остался доволен. \n\nПолучено монет: 100\n\nПотеряно выносливости: 50\n\nПотеряно здоровья: 10",
+        "merge": true,
+        "var_equal": [
+          "с3",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "gold",
+          100
+        ],
+        "id": 7,
+        "var_sub": [
+          "st",
+          50,
+          "hp",
+          20
+        ],
+        "var_min": [
+          "st",
+          1
+        ],
+        "var_equal": [
+          "с3",
+          5
+        ],
+        "text": "Бригада Алекса смогла в кротчайшие сроки восстановить колодец.\n\nГенри остался доволен. \n",
+        "calculate": true,
+        "super_calculate": false,
+        "merge": false
+      },
+      {
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ],
+        "middle_answer": true,
+        "id": 2,
+        "text": "Продолжить.",
+        "var_need": [
+          "с3",
+          4
+        ],
+        "var_no_more": [
+          "с3",
+          5
+        ]
+      },
+      {
+        "id": 7,
+        "text": "\nВодопроводчик Генри просит Алекса провести ревизию одного из колодцев  и убедится, что он работает исправно. Это не отнимет много сил, но и заплатят за это всего двадцать монет.\n\nПровести ревизию?",
+        "merge": true,
+        "var_equal": [
+          "с3",
+          6
+        ]
+      },
+      {
+        "var_equal": [
+          "с3",
+          6
+        ],
+        "id": 2,
+        "text": "Да.",
+        "left_answer": true,
+        "var_set": [
+          "с3",
+          7
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с3",
+          6
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "\nАлекс сообщил Генри о результатах ревизии и получил свою награду.\n\nПолучено монет: 20",
+        "merge": true,
+        "var_equal": [
+          "с3",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "с3",
+          7
+        ],
+        "var_add": [
+          "gold",
+          20
+        ],
+        "super_calculate": false,
+        "id": 7,
+        "text": "Алекс сообщил Генри о результатах ревизии и получил свою награду.\n\nПолучено монет: 20",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с3",
+          7
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "3",
+    "answers": [
+      {
+        "var_not": [
+          "слежка",
+          1
+        ],
+        "var_equal": [
+          "гс",
+          3
+        ],
+        "id": 8,
+        "text": "\nПатрулируя улицы города, Алекс обнаружил подозрительного мужчину, он был странно одет и постоянно оглядывался по сторонам. \n\nПроследить за ним?\n",
+        "merge": true
+      },
+      {
+        "var_not": [
+          "слежка",
+          1
+        ],
+        "var_equal": [
+          "гс",
+          3
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_set": [
+          "гс",
+          0,
+          "с4",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "гс",
+          3
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_not": [
+          "слежка",
+          1
+        ],
+        "var_set": [
+          "с1",
+          0,
+          "с4",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "\nАлекс начал издалека следить за действиями мужчины. \n\nДолго ждать не пришлось, уже через десять минут мужчина передал стражу у ворот подозрительную записку. Стражник быстро спрятал его в сумку. Мужчина начал удаляться.\n\n\n",
+        "var_equal": [
+          "с4",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с4",
+          1
+        ],
+        "id": 2,
+        "text": "Поймать и допросить мужчину.",
+        "left_answer": true,
+        "var_set": [
+          "с4",
+          2
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с4",
+          1
+        ],
+        "id": 2,
+        "text": "Заставить стражника показать сумку. ",
+        "var_set": [
+          "с4",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "\nАлекс настиг мужчину в безлюдном переулке. Рыцарь, предъявив лицензию, спросил у мужчины про записку. \n\nМужчина отказался отвечать, пока не получил удар в живот. Избегая удара по лицу, мужчина объяснил, что является просто курьером и передаёт такие записки за большие деньги, но ни нанимателя ни получателя не знает. \n\nАлекс вернулся к воротам, но стражника получившего записку уже не было, его смена закончилась. \n",
+        "var_equal": [
+          "с4",
+          2
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с4",
+          2
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с4",
+          0,
+          "гс",
+          "рс",
+          "провалслежки",
+          1,
+          "приор",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "\nАлекс подошёл к стражнику и, представившись проверяющим, попросил стражника отдать записку.\n\nСтражник сказал, что у него нет записки. \n\n",
+        "var_equal": [
+          "с4",
+          3
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с4",
+          3
+        ],
+        "id": 2,
+        "text": "Отобрать силой. ",
+        "left_answer": true,
+        "var_set": [
+          "с4",
+          4
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с4",
+          3
+        ],
+        "id": 2,
+        "text": "Начать слежку.",
+        "var_set": [
+          "с4",
+          5
+        ]
+      },
+      {
+        "id": 8,
+        "text": "\nВывернув стражнику руку, Алекс изъял записку. На помощь первому прибежал второй стражник, но Алекс успокоил его, показав лицензию. \n\nВ бумаге не было ни слова на знакомом Алексу языке. Очевидно, это было зашифрованное сообщение. \n\nАлекс отвёл стражника к начальнику стражи и отдал ему зашифрованное послание. \n\nАлекса наградили за бдительность.\n\nПолучено монет: 100\n\nПолучено репутации: 10\n\n",
+        "var_equal": [
+          "с4",
+          4
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с4",
+          4
+        ],
+        "var_add": [
+          "gold",
+          100,
+          "rp",
+          10
+        ],
+        "super_calculate": false,
+        "id": 8,
+        "text": "\nВывернув стражнику руку, Алекс изъял записку. На помощь первому прибежал второй стражник, но Алекс успокоил его, показав лицензию. \n\nВ бумаге не было ни слова на знакомом Алексу языке. Очевидно, это было зашифрованное сообщение. \n\nАлекс отвёл стражника к начальнику стражи и отдал ему зашифрованное послание. \n\nАлекса наградили за бдительность.\n\nПолучено монет: 100\n\nПолучено репутации: 10\n\n",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с4",
+          4
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с4",
+          0,
+          "гс",
+          "рс",
+          "слежка",
+          1,
+          "приор",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "\nАлекс извинился и, сделав вид что  ушел, начал слежку. \n\nПосле смены, стражник отправился в трактир, где смог затеряться среди толпы и исчезнуть. Видимо он догадался, что Алекс следит за ним.\n\n",
+        "var_equal": [
+          "с4",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "с4",
+          5
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с4",
+          0,
+          "гс",
+          "рс",
+          "провалслежки",
+          1,
+          "приор",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "трава",
+          1
+        ],
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1
+        ],
+        "id": 8,
+        "text": "\nАлекса вызвал к себе начальник стражи. Он ещё раз поблагодарил Алекса за записку с зашифрованным сообщением. Она помогла властям выйти на целую банду по торговле запрещённой травой и арестовать ее. Теперь в городе стало гораздо лучше. \n\nПолучено монет: 100\n\nПолучено славы:10\n\n",
+        "merge": true
+      },
+      {
+        "var_add": [
+          "gold",
+          100,
+          "rp",
+          10
+        ],
+        "id": 8,
+        "text": "\nАлекса вызвал к себе начальник стражи. Он ещё раз поблагодарил Алекса за записку с зашифрованным сообщением. Она помогла властям выйти на целую банду по торговле запрещённой травой и арестовать ее. Теперь в городе стало гораздо лучше. \n\nПолучено монет: 100\n\nПолучено славы:10\n\n",
+        "var_not": [
+          "трава",
+          1
+        ],
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1
+        ],
+        "merge": false,
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "провалслежки",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "трава",
+          1
+        ],
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1
+        ],
+        "id": 2,
+        "text": "Продолжить.",
+        "middle_answer": true,
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "провалслежки",
+          1,
+          "приор",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Алекса вызвал к себе начальник стражи. Он ещё раз поблагодарил Алекса за ту записку с зашифрованным сообщением. Она помогла властям выйти на целую банду по торговле запрещённой травой и арестовать ее.\n\nНо, как оказалось бандиты сдали всех своих подельников, в том числе и Алекса,который пропускал повозки с запрещенной травой.\n\nПока доказательств для ареста недостаточно, но лицензию у Алекса отберут на время расследования.\n\n \n\nПотеряно: лицензия стража.\n\nПотеряно славы: 20\n",
+        "merge": true,
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1,
+          "трава",
+          1
+        ]
+      },
+      {
+        "merge": false,
+        "calculate": true,
+        "text": "\nАлекса вызвал к себе начальник стражи. Он ещё раз поблагодарил Алекса за ту записку с зашифрованным сообщением. Она помогла властям выйти на целую банду по торговле запрещённой травой и арестовать ее.\n\nНо, как оказалось бандиты сдали всех своих подельников, в том числе и Алекса,  который пропускал повозки с запрещенной травой.\n\nПока доказательств для ареста недостаточно, но лицензию у Алекса отберут на время расследования.\n\n \n\nПотеряно: лицензия стража.\n\nПотеряно славы: 20\n",
+        "super_calculate": false,
+        "id": 8,
+        "var_sub": [
+          "rp",
+          20
+        ],
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1,
+          "трава",
+          1
+        ],
+        "var_set": [
+          "провалслежки",
+          1,
+          "банрыцарки",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "гс",
+          3,
+          "слежка",
+          1,
+          "трава",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "провалслежки",
+          1,
+          "банрыцарки",
+          1,
+          "приор",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "е",
+    "answers": [
+      {
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 9,
+        "text": "\nСледуя к городу по просёлочной дороге Алекс услышал женский крик. Рыцарское нутро не на шутку возбудилось.\n\nОбнажив отцовский меч, Алекс выдвинулся к источнику звуков. \n\n",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "с5",
+          1,
+          "гс",
+          0
+        ],
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 2,
+        "text": "Продолжить.",
+        "middle_answer": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          1
+        ],
+        "id": 9,
+        "text": "\nПродравшись через заросли кустарника, Алекс обнаружил, напавшего на девушку, разбойника. \n\nРазбойник оказался крайне раздосадован появлением Алекса и, вооружившись двумя кинжалами, попросил рыцаря удалиться. \n\nВступить в бой с разбойником?",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "с5",
+          2
+        ],
+        "var_equal": [
+          "с5",
+          1
+        ],
+        "id": 2,
+        "text": "Да.",
+        "left_answer": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с5",
+          1
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с5",
+          3
+        ],
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          2
+        ],
+        "id": 9,
+        "text": "\nАлекс вступил в бой с пьяным разбойником.  Сражение было недолгим, парировав удар, Алекс знатно приложил гардой по лицу противника.  Обидчик упал на землю, потеряв сознание. \n\n",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "с5",
+          4
+        ],
+        "var_equal": [
+          "с5",
+          2
+        ],
+        "id": 2,
+        "text": "Продолжить.",
+        "middle_answer": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          3
+        ],
+        "id": 9,
+        "text": "\nВсе твердо взвесив, Алекс решил избежать лишних дырок в своем теле и начал ретироваться. По мнению пьяного разбойника рыцарь отступал слишком медленно. \n\nСкакнув как молодой сайгак, разбойник бросился на Алекса, но запнулся за камень и упал прямо у ног оппонента.\n\nПользуясь моментом Алекс благородно огрел разбойника по голове рукояткой меча. Дебошир больше не вставал. \n",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "с5",
+          4
+        ],
+        "var_equal": [
+          "с5",
+          3
+        ],
+        "id": 2,
+        "text": "Продолжить.",
+        "middle_answer": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          4
+        ],
+        "id": 9,
+        "text": "\nДевушка восхищённо вскрикнула от радости. Она поблагодарила своего спасителя и взяв за руку повела в свою деревню. \n\nОна привела его на постоялый двор, где накормила и напоила. В благодарность, она договорилась с хозяином двора, что бы тот завтра отвез Алекса в город. \n\nНо, это ещё не все.\n\nДевушка: \"Приходи ко мне вечером домой у меня будет ещё один подарок для тебя.\"\n\nПосле этих слов она ушла.\n\nХозяин трактира сказал, что можно поехать уже сегодня, если Алекс не собирается идти за вечерним подарком. \n\nОстаться до вечера?",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "с5",
+          5
+        ],
+        "var_equal": [
+          "с5",
+          4
+        ],
+        "id": 2,
+        "text": "Да.",
+        "left_answer": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с5",
+          4
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с5",
+          0,
+          "гс"
+        ],
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          5
+        ],
+        "id": 9,
+        "text": "\nВечером Алекс пришел к дому девушки, имя которой он даже не спросил. Но это было не важно, Алекс предвкушал подарок.\n\nОн постучался в дверь. На пороге Алекса встретила, одетая в красивое платье, девушка. Взяв за руку, она повела его по лестнице на второй этаж. \n\nДевушка: \"Ну что, ты готов?\"\n\n",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "с5",
+          6
+        ],
+        "var_equal": [
+          "с5",
+          5
+        ],
+        "id": 2,
+        "text": "Да.",
+        "left_answer": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с5",
+          5
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с5",
+          7
+        ],
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          6
+        ],
+        "id": 9,
+        "text": "\nОказавшись на втором этаже, Алекс был в восторге. \n\nТам его ждал огромный, красиво украшенный пирог. \n\nДевушка: \"Мы с мужем делали его для тебя целый день. Спасибо, что спас меня.\"\n\nАлекс: \"Черт возьми, это лучшее, что я мог получить на втором этаже от девушки, которую спас. Я в восторге.\" \n\nДевушка: \"Но, будь осторожен. Это был очень опасный бандит. Воин он оказался никудышный, но если он поймает тебя со своей бандой, то быть беде.\"\n\nПопрощавшись с девушкой Алекс отправился в город. \n",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          7
+        ],
+        "id": 9,
+        "text": "Девушка силой затащила Алекса в дверь.\n\nОказавшись на втором этаже, Алекс был в восторге. \n\nТам его ждал огромный, красиво украшенный пирог. \n\nДевушка: \"Мы с мужем делали его для тебя целый день. Спасибо, что спас меня.\"\n\nАлекс: \"Черт возьми, это лучшее, что я мог получить на втором этаже от девушки, которую спас. Я в восторге.\" \n\nДевушка: \"Но, будь осторожен. Это был очень опасный бандит. Воин он оказался никудышный, но если он поймает тебя со своей бандой, то быть беде.\"\n\nПопрощавшись с девушкой Алекс отправился в город. ",
+        "merge": true,
+        "var_no_more": [
+          "ис",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "с5",
+          0,
+          "ис",
+          1,
+          "гс",
+          "рс",
+          "приор",
+          1
+        ],
+        "middle_answer": true,
+        "id": 2,
+        "text": "Продолжить.",
+        "var_need": [
+          "с5",
+          6
+        ],
+        "var_no_more": [
+          "ис",
+          0,
+          "с5",
+          7
+        ]
+      },
+      {
+        "merge": true,
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          1
+        ],
+        "id": 9,
+        "text": "Алекс зашёл в трактир немного отдохнуть и перекусить. \n\nВнезапно, к нему за стол подсела эльфийка и прошептала: \"У меня есть для вас особое задание. Если вам интересно, приходите на южный берег сегодня вечером, я все расскажу с глазу на глаз.\"\n\n",
+        "var_need": [
+          "ис",
+          1
+        ],
+        "var_no_more": [
+          "ис",
+          2
+        ]
+      },
+      {
+        "var_set": [
+          "гс",
+          "рс",
+          "ис",
+          2,
+          "приор",
+          1
+        ],
+        "middle_answer": true,
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          1
+        ],
+        "id": 2,
+        "text": "Продолжить.",
+        "var_need": [
+          "ис",
+          1
+        ],
+        "var_no_more": [
+          "ис",
+          1
+        ]
+      },
+      {
+        "merge": true,
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          2
+        ],
+        "id": 9,
+        "text": "Хотите посетить  южный берег вечером и узнать про задание от эльфийки?\n\n",
+        "var_need": [
+          "ис",
+          2
+        ],
+        "var_no_more": [
+          "ис",
+          2
+        ]
+      },
+      {
+        "var_set": [
+          "гс",
+          0,
+          "с5",
+          8
+        ],
+        "var_need": [
+          "ис",
+          2
+        ],
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          2
+        ],
+        "id": 2,
+        "text": "Да.",
+        "left_answer": true,
+        "var_no_more": [
+          "ис",
+          2
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_set": [
+          "гс",
+          "рс",
+          "приор",
+          1
+        ],
+        "var_equal": [
+          "гс",
+          4,
+          "ис",
+          2
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_need": [
+          "ис",
+          2
+        ],
+        "var_no_more": [
+          "ис",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nНа южном берегу Алекса ждала отнюдь не эльфийка. \nОказалось, что эта была засада. Алекса схватили разбойники. \nПеред ним встал их главарь со словами: \"Помнишь меня?\"\n\nЭто был тот самый разбойник, от которого Алекс спас девушку. \n\nРазбойник: \"Знатно ты меня тогда унизил. Никто не унижает  Джека Боуза без последствий. Выбирай как умирать будешь? Быстро или медленно?\"\n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          8
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          8
+        ],
+        "id": 2,
+        "text": "Быстро.",
+        "var_set": [
+          "гс",
+          0,
+          "с5",
+          9
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с5",
+          8
+        ],
+        "id": 2,
+        "text": "Медленно.",
+        "var_set": [
+          "гс",
+          0,
+          "с5",
+          10
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nОтчаявшись, Алекс выбрал быструю смерть. Разбойники связали Алекса по рукам и ногам. \n\nДля надёжности, они слегка утяжелили Алекса, привязав к ногам булыжник, и скинули в воду с обрыва. \n\nБерег у обрыва весь усеян скалами, поэтому вероятность кануть в небытие не достигнув воды очень велика. \n\nНо Алексу повезло, да не просто повезло, а очень сильно повезло. \n\nСам он упал в воду, а вот привязанный к нему булыжник ударился об скалу и раскололся на мелкие кусочки.\n\nРыцарь все ещё был связан, но без булыжника он ещё мог бороться за жизнь. \n\nСильные волны вышвыривали его на скалы, а потом забирали обратно в море. \n\nБорьба за жизнь была трудной, но недолгой. Алекса спасли стражи, подплывшие к нему на лодке. \n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          9
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          11
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nКак оказалось, Алекс бы сгинул в море, если бы стражников своевременно не оповестили о расправе над ним.  \n\nСтражу предупредила загадочная эльфийка. \n\nКогда стражи прибыли на берег, Алекс уже наслаждался морем, а бандиты пустились в бегство, и стражи начали спасать Алекса.\n\nПо итогу обидчики на свободе, но Алекс знает их в лицо, а значит их поимка -  дело времени. \n\nТеперь за Алексом будут следить, чтобы предотвратить повторное нападение на него.\n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          11
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          11
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          0,
+          "гс",
+          "рс",
+          "ис",
+          3,
+          "приор",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nРассчитывая на спасительное чудо, Алекс выбрал медленную смерть. \n\nРазбойники приготовили для Алекса петлю в заброшенном доме. Они связали рыцаря по рукам и ногам и повесили без вздергивания. \n\nАлекс весел в петле и медленно задыхался. \n\nВнезапно в дом ворвался целый отряд стражи.\n\nБандиты пустились наутёк через все щели в доме. Начался хаос. К счастью для Алекса, добрые люди ещё в разгар паники оперативно перерезали верёвку. \n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          10
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          10
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          12
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nКак оказалось, Алекса удалось спасти благодаря своевременному предупреждению. \n\nСтражу предупредила загадочная эльфийка. \n\nПо итогу много бандитов задержали. Главарь разбойников все ещё на свободе, но Алекс знает их в лицо, а значит их поимка -  дело времени. Теперь за Алексом будут следить, чтобы предотвратить повторное нападение на него.\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          12
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          12
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          0,
+          "гс",
+          "рс",
+          "ис",
+          3,
+          "приор",
+          1
+        ]
+      },
+      {
+        "var_no_more": [
+          "ис",
+          3
+        ],
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 9,
+        "var_need": [
+          "ис",
+          3
+        ],
+        "text": "\nВ очередной раз заглянув в трактир, Алекс увидел свою старую знакомую. \n\nЭльфийка, тоже увидела Алекса и поспешила к нему.\n\nАлекс: \"Спасибо, что спасла меня. Но, я не понимаю зачем? Ты же заодно с бандитами?\" \n\nЭльфийка: \"Да я была с ними заодно.  Но, я  не думала, что вас хотят убить. До этого, они только вымогали деньги или просто били. Я не хотела допустить убийства. Поэтому когда узнала об их планах, оповестила  стражу. \n\nНо, теперь у меня проблемы. Бандиты  узнали, что это я предупредила стражу. Они похитили мою сестру и сказали, что если я не приведу вас ещё раз, то они ее убьют.\"\n\nАлекс: \"Почему ты не пойдешь снова к страже?\"\n\nЭльфийка: \" Потому что, бандиты сейчас следят за мной.\"\n\nЭльфийка заплакала. \n\nАлекс огляделся. \n\nЕго ребята приглядывали за ним, как и пара бандитских рож за эльфийкой. \n\nПомочь эльфийке?",
+        "merge": true
+      },
+      {
+        "var_no_more": [
+          "ис",
+          3
+        ],
+        "var_set": [
+          "гс",
+          0,
+          "с5",
+          13
+        ],
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_need": [
+          "ис",
+          3
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_no_more": [
+          "ис",
+          3
+        ],
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_need": [
+          "ис",
+          3
+        ],
+        "var_set": [
+          "с5",
+          14,
+          "гс",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Алекс: \"Прости, но нет. Я сейчас в безопасности, а связываться с бандитами ещё раз, я не буду. \"\n\nПосле этих слов, Алекс покинул трактир.\n\n \n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          14
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          14
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "эллараброшена",
+          1,
+          "конецис",
+          1,
+          "гс",
+          "рс",
+          "приор",
+          1,
+          "с5",
+          0,
+          "ис",
+          4
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nАлекс взял вилку и нацарапал на деревянной кружке с элем надпись: «Время пришло». \n\nВзяв за руку эльфийку, он прошел мимо своего шпиона  и поставил кружку ему на стол со словами: \"Угощайся дружище, я ещё и глотка не сделал, у меня срочные дела появились.\"",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          13
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          13
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          24
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nЭльфийка и Алекс медленно пошли по вечернему городу. \n\nАлекс: \"Скажи хоть как зовут тебя?\" \n\nЭльфийка: \"Эллара, а вас?\"\n\nАлекс: \"Алекс. Где нас ждут?\".\n\nЭльфийка: \"В порту, на корабле.\" \n\nАлекс: \"Они собираются убить меня и уплыть?\"\n\nЭльфийка: \"Да, они сильно засветились, в городе для них теперь слишком опасно.\" \n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          24
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          24
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          15
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nАлекс и Эллара подошли к порту.  Алекс огляделся, стражниками даже не пахло, а два бандита уже шли прямо за ними.\n\nПорт был закрыт, но для бандитов открыть ворота не составило труда. Охрана порта на своих местах отсутствоаала.\n\nБандиты попросили Алекса не тратить время, и  даже не разоружив пригласили на борт. \n\nАлекс зашёл на корабль. На палубе его встретил Джек. \n\nДжек: \"Ну что, счастливчик. Повезло тебе в прошлый раз, что эльфийка решила кинуть нас. Бросьте ее к сестре. Плавание будет долгим, нужно будет развлекаться.\"\n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          15
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          15
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          16
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nБандиты увели Эллару в трюм. \n\nАлекс повернул голову в сторону берега и увидел, как стражи уже вырубили стоявших на стрёме бандитов и тихо подбирались к кораблю, пока остальные разбойники заняты \"выступлением\" своего главаря. \n\nДжек: \"Как хочешь умереть в этот раз?\"\n\nАлекс: \"В бою.\"\n\nСтража ворвалась на корабль.  Часть бандитов принялась убегать и прыгать за борт, остальные приняли бой. \n\nДжек начал убегать на капитанский мостик, Алекс последовал за ним. \n\nОказавшись на мостике вдвоем, Джек развернулся обнажив клинки.\n\nДжек: \"Давай закончим это здесь и сейчас.\"\n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          16
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          16
+        ],
+        "middle_answer": true,
+        "text": "Бой.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          17
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nРаненый Джек упал на пол без сил. Бой закончился…\n\nКогда все успокоилось на место битвы прибыл начальник стражи. Прямо на месте он решал кого отправлять под суд, кого на виселицу, а кого на север трудиться на рудниках.\n\nКогда дело дошло Эллары, то начальник приказал отдать ее под суд.\n\nВступиться за эльфийку?",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          17
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          17
+        ],
+        "id": 2,
+        "text": "Да.",
+        "var_set": [
+          "с5",
+          18
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с5",
+          17
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_set": [
+          "с5",
+          19
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nПроходя мимо Алекса, Эллара улыбнулась ему и прошептала: \"Я рада, что все закончилось. Прощай.\"\n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          19
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          19
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "эллараброшена",
+          2,
+          "конецис",
+          1,
+          "гс",
+          "рс",
+          "приор",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nАлекс: \"Господин начальник, эльфийка нам здорово помогла и  спасла мне жизнь. Может закроем глаза на ее нарушения.\"\n\nНачальник стражи: \"Ладно, герой дня. Эльфийку отпускаю. Но, под твою ответственность\".\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          18
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          18
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          20
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nЭллара: \"Спасибо большое, Алекс. Я рада, что все закончилось. Скажи, мы ещё увидимся?\" ",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          20
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          20
+        ],
+        "id": 2,
+        "text": "\"Ты сумасшедшая? От тебя же одни проблемы! Тебе лучше держаться от меня подальше.\"",
+        "var_set": [
+          "с5",
+          21
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "с5",
+          20
+        ],
+        "id": 2,
+        "text": "\"Конечно, только не на южном берегу.\"",
+        "var_set": [
+          "с5",
+          22
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nЭллара: \"Я так и думала, прощай, Алекс\".\n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          21
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          21
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          23,
+          "эллараброшена",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nЭллара: \"Отлино, значит ещё встретимся, до скорого.\"\n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          22
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          22
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "с5",
+          23
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\nАлекса приставили к награде за поимку опасного преступника.\n\nПолучено монет: 1000\n\nПолучено славы: 40 \n\n",
+        "merge": true,
+        "var_equal": [
+          "с5",
+          23
+        ]
+      },
+      {
+        "var_equal": [
+          "с5",
+          23
+        ],
+        "var_add": [
+          "gold",
+          1000,
+          "rp",
+          40
+        ],
+        "super_calculate": false,
+        "id": 9,
+        "text": "\nАлекса приставили к награде за поимку опасного преступника.\n\nПолучено монет: 1000\n\nПолучено славы: 40 \n\n",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "var_equal": [
+          "с5",
+          23
+        ],
+        "middle_answer": true,
+        "text": "Продолжить.",
+        "id": 2,
+        "var_set": [
+          "элларасимпатия",
+          1,
+          "конецис",
+          1,
+          "гс",
+          "рс",
+          "с5",
+          0,
+          "приор",
+          1,
+          "ис",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 7,
+        "text": "\nВодопроводчик Генри просит у Алекса  помощи и обещает хорошо заплатить.\n\nПомочь Генри?",
+        "var_need": [
+          "ис",
+          4
+        ],
+        "merge": true
+      },
+      {
+        "var_set": [
+          "гс",
+          0
+        ],
+        "text": "Да.",
+        "bgAnswerImage": [
+          "https://i.postimg.cc/PJ3S8M5s/image.png"
+        ],
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "var_random_from": [
+          "с3",
+          1,
+          3,
+          6
+        ],
+        "var_need": [
+          "ис",
+          4
+        ],
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://i.postimg.cc/PJ3S8M5s/image.png"
+        ],
+        "var_equal": [
+          "гс",
+          4
+        ],
+        "id": 2,
+        "text": "Нет.",
+        "var_need": [
+          "ис",
+          4
+        ],
+        "var_set": [
+          "с1",
+          0,
+          "с3",
+          0,
+          "гс",
+          "рс",
+          "приор",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": [
+      {
+        "var_random_from_weight": [
+          "рс",
+          1,
+          25,
+          2,
+          25,
+          3,
+          25,
+          4,
+          25
+        ],
+        "var_not": [
+          "конецис",
+          1
+        ],
+        "var_less": [
+          "банрыцарки",
+          1
+        ],
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "text": "К1",
+        "var_no_more": [
+          "провалслежки",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "банрыцарки",
+          1
+        ],
+        "var_random_from_weight": [
+          "рс",
+          1,
+          25,
+          2,
+          25,
+          3,
+          25
+        ],
+        "text": "К2",
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "var_equal": [
+          "конецис",
+          1
+        ],
+        "var_no_more": [
+          "провалслежки",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "рс",
+          1,
+          25,
+          2,
+          25,
+          4,
+          25
+        ],
+        "var_not": [
+          "банрыцарки",
+          1
+        ],
+        "var_equal": [
+          "провалслежки",
+          1
+        ],
+        "super_calculate": false,
+        "id": 10,
+        "text": "К3",
+        "calculate": true,
+        "var_no_more": [
+          "конецис",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "рс",
+          3,
+          25,
+          2,
+          25,
+          4,
+          25
+        ],
+        "var_not": [
+          "провалслежки",
+          1
+        ],
+        "calculate": true,
+        "var_equal": [
+          "банрыцарки",
+          1
+        ],
+        "id": 10,
+        "text": "К4",
+        "super_calculate": false,
+        "var_no_more": [
+          "конецис",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "конецис",
+          1
+        ],
+        "var_not": [
+          "банрыцарки",
+          1
+        ],
+        "text": "К5",
+        "var_equal": [
+          "провалслежки",
+          1
+        ],
+        "id": 10,
+        "calculate": true,
+        "super_calculate": false,
+        "var_random_from_weight": [
+          "рс",
+          1,
+          25,
+          2,
+          25
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "рс",
+          3,
+          25,
+          2,
+          25
+        ],
+        "var_not": [
+          "провалслежки",
+          1
+        ],
+        "super_calculate": false,
+        "var_equal": [
+          "банрыцарки",
+          1
+        ],
+        "id": 10,
+        "text": "К6",
+        "calculate": true,
+        "var_need": [
+          "конецис",
+          1
+        ]
+      },
+      {
+        "var_need": [
+          "банрыцарки",
+          1
+        ],
+        "var_not": [
+          "конецис",
+          1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "id": 10,
+        "text": "К7",
+        "var_equal": [
+          "провалслежки",
+          1
+        ],
+        "var_random_from_weight": [
+          "рс",
+          4,
+          25,
+          2,
+          25
+        ]
+      },
+      {
+        "calculate": true,
+        "var_equal": [
+          "провалслежки",
+          1
+        ],
+        "var_more": [
+          "конецис",
+          1
+        ],
+        "super_calculate": false,
+        "id": 10,
+        "text": "К7",
+        "var_need": [
+          "банрыцарки",
+          1
+        ],
+        "var_set": [
+          "рс",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Ход боя:",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Кальки.",
+        "run": [
+          20
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Абилки твои",
+        "run": [
+          17
+        ],
+        "var_equal": [
+          "этап",
+          0
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Выбор противника.",
+        "run": [
+          19
+        ],
+        "var_equal": [
+          "этап",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Начать защиту.",
+        "var_equal": [
+          "этап",
+          2
+        ],
+        "var_set": [
+          "этап",
+          3
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Начать Атаку ",
+        "var_equal": [
+          "этап",
+          3
+        ],
+        "var_set": [
+          "этап",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Визуал.",
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 29,
+        "text": "враг левого щита ",
+        "run": [
+          29
+        ]
+      },
+      {
+        "id": 30,
+        "text": "враг левый атака",
+        "run": [
+          30
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хп левого от 1 до 10",
+        "run": [
+          31
+        ]
+      },
+      {
+        "id": 32,
+        "text": "хп левого единицы ",
+        "run": [
+          32
+        ]
+      },
+      {
+        "id": 33,
+        "text": "хп левого десяткт",
+        "run": [
+          33
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "yyy",
+    "answers": [
+      {
+        "id": 12,
+        "text": "рамка средний противник stretch",
+        "var_need": [
+          "ighp2",
+          1
+        ],
+        "url": "https://i.postimg.cc/63vWKvm0/image.png"
+      },
+      {
+        "id": 12,
+        "text": "Рамка гг stretch",
+        "var_need": [
+          "ihp",
+          1
+        ],
+        "url": "https://i.postimg.cc/k5DMjZNL/image.png"
+      },
+      {
+        "id": 12,
+        "text": "рамка врага левая stretch",
+        "var_need": [
+          "ighp1",
+          1
+        ],
+        "url": "https://i.postimg.cc/2SkSW31k/image.png"
+      },
+      {
+        "id": 12,
+        "text": "рамка врага правая stretch",
+        "var_need": [
+          "ighp3",
+          1
+        ],
+        "url": "https://i.postimg.cc/VkKLW1tj/image.png"
+      },
+      {
+        "id": 12,
+        "text": "Урон по гг левый stretch",
+        "url": "https://i.postimg.cc/prKLfFQT/image.png",
+        "var_equal": [
+          "этап",
+          3
+        ]
+      },
+      {
+        "id": 12,
+        "text": "стрелка левая с мечом stretch ",
+        "url": "https://i.postimg.cc/6QSWF0Yq/image.png",
+        "var_equal": [
+          "этап",
+          3
+        ]
+      },
+      {
+        "id": 12,
+        "text": "стрелка врага центральная stretch ",
+        "url": "https://i.postimg.cc/tJd9ZHyn/image.png",
+        "var_equal": [
+          "этап",
+          3
+        ]
+      },
+      {
+        "id": 12,
+        "text": "стрелка гг левая с мечом stretch",
+        "url": "https://i.postimg.cc/X78Vn3QT/image.png",
+        "var_equal": [
+          "этап",
+          2,
+          "цель",
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "стрелка гг левая с мечом stretch pulsate",
+        "url": "https://i.postimg.cc/X78Vn3QT/image.png",
+        "var_equal": [
+          "этап",
+          1,
+          "цель",
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "дамаг по левому врагу stretch",
+        "url": "https://i.postimg.cc/8zXNr484/image.png",
+        "var_equal": [
+          "этап",
+          2
+        ]
+      },
+      {
+        "id": 12,
+        "text": "центр стрелка гг с мечом stretch",
+        "url": "https://i.postimg.cc/760kdy5t/image.png",
+        "var_equal": [
+          "этап",
+          2,
+          "цель",
+          2
+        ]
+      },
+      {
+        "id": 12,
+        "text": "центр стрелка гг с мечом stretch pulsate",
+        "url": "https://i.postimg.cc/760kdy5t/image.png",
+        "var_equal": [
+          "этап",
+          1,
+          "цель",
+          2
+        ]
+      },
+      {
+        "id": 12,
+        "text": "дамаг по гг stretch",
+        "url": "https://i.postimg.cc/MHwS8rR6/image.png",
+        "var_equal": [
+          "этап",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": [
+      {
+        "var_show": [
+          "ihp"
+        ],
+        "comment": true,
+        "id": 13,
+        "text": "  ",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 13,
+        "text": "В1",
+        "var_show": [
+          "ighp1"
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 13,
+        "text": "В2",
+        "var_show": [
+          "ighp2"
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 13,
+        "text": "В3",
+        "var_show": [
+          "ighp3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "этап",
+    "answers": [
+      {
+        "right_answer": true,
+        "var_random": [
+          "dmg",
+          6,
+          10
+        ],
+        "id": 11,
+        "text": "Удар мечом. \nНанесет выбранному противнику 6 - 10 ед. урона вблизи.",
+        "var_equal": [
+          "п",
+          1
+        ],
+        "var_set": [
+          "этап",
+          1,
+          "та",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "п",
+          2
+        ],
+        "id": 11,
+        "var_sub": [
+          "ighp1",
+          4,
+          "ighp2",
+          4,
+          "ighp3",
+          4
+        ],
+        "text": "Размашистый удар. \nНанесет всем противникам от 4 ед. урона.",
+        "var_set": [
+          "этап",
+          2
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "п",
+          3
+        ],
+        "id": 11,
+        "text": "Удар кулаком. \nВыведет противника из строя на 1 ход.\n2 ед. урона.",
+        "var_set": [
+          "та",
+          2,
+          "dmg",
+          2,
+          "этап",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "п",
+          4
+        ],
+        "id": 11,
+        "text": "Сильный удар.\nНанесет доп. урон х 2, но не меньше 1 ед. урона.",
+        "var_mult": [
+          "dmg",
+          2
+        ],
+        "var_set": [
+          "dmg",
+          "dd",
+          "этап",
+          1,
+          "та",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "dd",
+          2
+        ],
+        "var_equal": [
+          "п",
+          5
+        ],
+        "id": 11,
+        "text": "Концентрация. \nУведичит доп. урон. на 2 ед.",
+        "var_set": [
+          "этап",
+          2
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "ihp",
+          10
+        ],
+        "var_equal": [
+          "п",
+          6
+        ],
+        "id": 11,
+        "text": "Второе дыхание.\nВосстановит вам 10 ед. здоровья.",
+        "var_set": [
+          "этап",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "calculate": true,
+        "var_equal": [
+          "fg1",
+          1
+        ],
+        "id": 15,
+        "var_need": [
+          "ighp1",
+          1
+        ],
+        "var_sub": [
+          "ihp",
+          4
+        ],
+        "text": "Атака."
+      },
+      {
+        "super_calculate": false,
+        "calculate": true,
+        "var_equal": [
+          "fg1",
+          2
+        ],
+        "id": 15,
+        "var_need": [
+          "ighp1",
+          1
+        ],
+        "text": "Слабая атака.",
+        "var_sub": [
+          "ihp",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "ighp1",
+          0
+        ],
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "var_need": [
+          "ighp2",
+          1
+        ],
+        "text": "Хил."
+      },
+      {
+        "var_sub": [
+          "ihp",
+          5
+        ],
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "text": "Атака.",
+        "var_need": [
+          "ighp3",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Выбор цели.",
+        "comment": true
+      },
+      {
+        "var_set": [
+          "заглушка",
+          1
+        ],
+        "var_sub": [
+          "цель",
+          1
+        ],
+        "text": "<-",
+        "id": 11,
+        "var_need": [
+          "цель",
+          2
+        ],
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "цель",
+          1
+        ],
+        "var_set": [
+          "заглушка",
+          1
+        ],
+        "id": 11,
+        "instant": true,
+        "text": "->",
+        "var_no_more": [
+          "цель",
+          2
+        ]
+      },
+      {
+        "text": "Атаковать.",
+        "var_equal": [
+          "цель",
+          1
+        ],
+        "id": 11,
+        "var_sub": [
+          "ighp1",
+          "dmg"
+        ],
+        "var_min": [
+          "ighp1",
+          0
+        ],
+        "var_set": [
+          "этап",
+          2,
+          "заглушка",
+          0
+        ]
+      },
+      {
+        "text": "Атаковать.",
+        "var_equal": [
+          "цель",
+          2
+        ],
+        "id": 11,
+        "var_sub": [
+          "ighp2",
+          "dmg"
+        ],
+        "var_min": [
+          "ighp2",
+          0
+        ],
+        "var_set": [
+          "этап",
+          2,
+          "заглушка",
+          0
+        ]
+      },
+      {
+        "text": "Атаковать.",
+        "var_equal": [
+          "цель",
+          3
+        ],
+        "id": 11,
+        "var_sub": [
+          "ighp3",
+          "dmg"
+        ],
+        "var_min": [
+          "ighp3",
+          0
+        ],
+        "var_set": [
+          "этап",
+          2,
+          "заглушка",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "",
+    "answers": [
+      {
+        "id": 14,
+        "right_answer": true,
+        "run": [
+          14
+        ],
+        "text": "Правые"
+      },
+      {
+        "id": 18,
+        "text": "Левые",
+        "run": [
+          18
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "нгго",
+    "answers": [
+      {
+        "left_answer": true,
+        "var_random": [
+          "dmg",
+          6,
+          10
+        ],
+        "id": 11,
+        "text": "Удар мечом. \nНанесет выбранному противнику 6 - 10 ед. урона вблизи.",
+        "var_equal": [
+          "л",
+          1
+        ],
+        "var_set": [
+          "этап",
+          1,
+          "та",
+          1
+        ]
+      },
+      {
+        "left_answer": true,
+        "var_equal": [
+          "л",
+          2
+        ],
+        "id": 11,
+        "text": "Размашистый удар. \nНанесет всем противникам от 4 ед. урона.",
+        "var_sub": [
+          "ighp1",
+          4,
+          "ighp2",
+          4,
+          "ighp3",
+          4
+        ],
+        "var_set": [
+          "этап",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "л",
+          3
+        ],
+        "id": 11,
+        "text": "Удар кулаком. \nВыведет противника из строя на 1 ход.\n2 ед. урона.",
+        "left_answer": true,
+        "var_set": [
+          "та",
+          2,
+          "dmg",
+          2,
+          "этап",
+          1
+        ]
+      },
+      {
+        "left_answer": true,
+        "var_equal": [
+          "л",
+          4
+        ],
+        "id": 11,
+        "text": "Сильный удар.\nНанесет доп. урон х 2, но не меньше 1 ед. урона.",
+        "var_set": [
+          "dmg",
+          "dd",
+          "этап",
+          1,
+          "та",
+          1
+        ],
+        "var_mult": [
+          "dmg",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "dd",
+          2
+        ],
+        "var_equal": [
+          "л",
+          5
+        ],
+        "id": 11,
+        "text": "Концентрация. \nУведичит доп. урон. на 2 ед.",
+        "left_answer": true,
+        "var_set": [
+          "этап",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "ihp",
+          10
+        ],
+        "var_equal": [
+          "л",
+          6
+        ],
+        "id": 11,
+        "text": "Второе дыхание.\nВосстановит вам 10 ед. здоровья.",
+        "left_answer": true,
+        "var_set": [
+          "этап",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Атаки",
+        "run": [
+          16
+        ],
+        "var_equal": [
+          "та",
+          1
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Станы",
+        "run": [
+          16
+        ],
+        "var_equal": [
+          "та",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 20,
+        "text": "Рандом левый",
+        "var_random": [
+          "л",
+          1,
+          6
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 20,
+        "text": "Рандом правый",
+        "calculate": true,
+        "var_random": [
+          "п",
+          1,
+          6
+        ]
+      },
+      {
+        "id": 26,
+        "var_not": [
+          "заглушка",
+          1
+        ],
+        "run": [
+          26
+        ],
+        "text": "Кальки выбора цели"
+      },
+      {
+        "id": 21,
+        "text": "Кальки первого рейда.",
+        "run": [
+          21
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Абилки противников.",
+        "run": [
+          15
+        ],
+        "var_equal": [
+          "этап",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 21,
+        "text": "1 враг",
+        "var_random": [
+          "fg1",
+          1,
+          2
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 21,
+        "text": "2 враг",
+        "calculate": true,
+        "var_random": [
+          "fg2",
+          1,
+          2
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 21,
+        "calculate": true,
+        "var_random": [
+          "fg3",
+          1,
+          2
+        ],
+        "text": "3 враг"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "",
+    "answers": [
+      {
+        "id": 22,
+        "text": "меч с шипами stretch",
+        "url": "https://i.postimg.cc/Hk86BRgh/2.png",
+        "var_equal": [
+          "каст",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "tопор stretch",
+        "url": "https://i.postimg.cc/9FT7R0fn/image.png",
+        "var_equal": [
+          "каст",
+          3
+        ]
+      },
+      {
+        "id": 3,
+        "text": "меч1 stretch",
+        "url": "https://i.postimg.cc/HWvpDcq7/1.png",
+        "var_equal": [
+          "каст",
+          2
+        ]
+      },
+      {
+        "id": 3,
+        "text": "ультра рыцарь stretch",
+        "url": "https://i.postimg.cc/zG2Jp7nt/3.png",
+        "var_equal": [
+          "сет",
+          3,
+          "скин",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Рыц зеленый stretch",
+        "url": "https://i.postimg.cc/3JVB41vC/image.png",
+        "var_equal": [
+          "сет",
+          3,
+          "скин",
+          2
+        ]
+      },
+      {
+        "id": 22,
+        "text": "рыц красный stretch",
+        "url": "https://i.postimg.cc/Gp1xzpz4/image.png",
+        "var_equal": [
+          "сет",
+          3,
+          "скин",
+          3
+        ]
+      },
+      {
+        "id": 22,
+        "text": "рыц син stretch",
+        "url": "https://i.postimg.cc/Cx84j8Cy/3.png",
+        "var_equal": [
+          "сет",
+          3,
+          "скин",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "пятна зел stretch",
+        "url": "https://i.postimg.cc/HkQRhYPc/3.png",
+        "var_equal": [
+          "сет",
+          3,
+          "пятн",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "пятна син stretch",
+        "url": "https://i.postimg.cc/MG54zswz/image.png",
+        "var_equal": [
+          "сет",
+          3,
+          "пятн",
+          2
+        ]
+      },
+      {
+        "id": 22,
+        "text": "пятна фиолет stretch",
+        "url": "https://i.postimg.cc/8CN982qy/image.png",
+        "var_equal": [
+          "сет",
+          3,
+          "пятн",
+          3
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Алекс 2 stretch",
+        "url": "https://i.postimg.cc/jq1HnB4L/2.png",
+        "var_equal": [
+          "сет",
+          2
+        ]
+      },
+      {
+        "id": 22,
+        "text": "зеленоволосый stretch",
+        "url": "https://i.postimg.cc/wTzM7VRS/2.png",
+        "var_equal": [
+          "сет",
+          2,
+          "волос",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "красноволосый stretch",
+        "url": "https://i.postimg.cc/yYTd9ZFW/2.png",
+        "var_equal": [
+          "сет",
+          2,
+          "волос",
+          2
+        ]
+      },
+      {
+        "id": 22,
+        "text": "рыжий stretch",
+        "url": "https://i.postimg.cc/Dwyzcwg6/2.png",
+        "var_equal": [
+          "сет",
+          2,
+          "волос",
+          3
+        ]
+      },
+      {
+        "id": 22,
+        "text": "красная броня stretch",
+        "url": "https://i.postimg.cc/T3RKH9Rr/image.png",
+        "var_equal": [
+          "сет",
+          2,
+          "броня",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Призрочная броня stretch",
+        "url": "https://i.postimg.cc/Rh70g3ys/image.png",
+        "var_equal": [
+          "сет",
+          2,
+          "броня",
+          2
+        ]
+      },
+      {
+        "id": 22,
+        "text": "синяя броня stretch",
+        "url": "https://i.postimg.cc/qBygJYqs/image.png",
+        "var_equal": [
+          "сет",
+          2,
+          "броня",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "сет",
+          1
+        ],
+        "id": 24,
+        "text": "краш 1 stretch",
+        "url": "https://i.postimg.cc/FFSBHnRm/2.png",
+        "var_no_more": [
+          "облик",
+          0
+        ]
+      },
+      {
+        "id": 24,
+        "text": "краш 2 stretch",
+        "url": "https://i.postimg.cc/SRcT1j5j/1.png",
+        "var_equal": [
+          "сет",
+          1,
+          "облик",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "скин с рогами stretch",
+        "url": "https://i.postimg.cc/tTs6z61s/4.png",
+        "var_equal": [
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "броня 1 stretch",
+        "url": "https://i.postimg.cc/zf9yNGDM/4.png",
+        "var_equal": [
+          "броняк",
+          1,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "глаз синий stretch",
+        "url": "https://i.postimg.cc/133ncdYW/4.png",
+        "var_equal": [
+          "глаза",
+          1,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "глаз желтый stretch",
+        "url": "https://i.postimg.cc/3N2pVDgn/4.png",
+        "var_equal": [
+          "глаза",
+          2,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "глаз зеленый stretch",
+        "url": "https://i.postimg.cc/5NM8vnVG/4.png",
+        "var_equal": [
+          "глаза",
+          3,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "броня 2 stretch",
+        "url": "https://i.postimg.cc/HLjMHNwJ/4.png",
+        "var_equal": [
+          "броняк",
+          2,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "броня 3 stretch",
+        "url": "https://i.postimg.cc/Hs28Mm3c/4-2.png",
+        "var_equal": [
+          "броняк",
+          3,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "рога 1 stretch",
+        "url": "https://i.postimg.cc/13m67X4r/4.png",
+        "var_equal": [
+          "рога",
+          1,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "рога красные stretch",
+        "url": "https://i.postimg.cc/RhxJ7Vjf/4.png",
+        "var_equal": [
+          "рога",
+          2,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "рога стние stretch",
+        "url": "https://i.postimg.cc/y8LRMKZ4/4.png",
+        "var_equal": [
+          "рога",
+          3,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "маска синяя stretch",
+        "url": "https://i.postimg.cc/vmjVmvh0/4.png",
+        "var_equal": [
+          "маска",
+          1,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "маска фиолетовая stretch",
+        "url": "https://i.postimg.cc/zvwb0YrQ/4.png",
+        "var_equal": [
+          "маска",
+          2,
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 22,
+        "text": "маска желтая stretch",
+        "url": "https://i.postimg.cc/6pb7HhkB/4.png",
+        "var_equal": [
+          "глаза",
+          4,
+          "сет",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Выбор внешнего вида.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Облик.",
+        "comment": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "сет",
+          2
+        ],
+        "id": 23,
+        "var_sub": [
+          "сет",
+          1
+        ],
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "сет",
+          1
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "сет",
+          3
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Цвет.",
+        "comment": true,
+        "var_equal": [
+          "сет",
+          3
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Цвет брони.",
+        "comment": true,
+        "var_equal": [
+          "сет",
+          2
+        ]
+      },
+      {
+        "var_sub": [
+          "скин",
+          1
+        ],
+        "var_need": [
+          "скин",
+          2
+        ],
+        "var_equal": [
+          "сет",
+          3
+        ],
+        "id": 23,
+        "text": "<-",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "скин",
+          1
+        ],
+        "var_equal": [
+          "сет",
+          3
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "скин",
+          3
+        ]
+      },
+      {
+        "text": "<-",
+        "var_sub": [
+          "броня",
+          1
+        ],
+        "var_equal": [
+          "сет",
+          2
+        ],
+        "id": 23,
+        "instant": true,
+        "var_need": [
+          "броня",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "броня",
+          1
+        ],
+        "var_equal": [
+          "сет",
+          2
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "броня",
+          2
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Цвет волос.",
+        "comment": true,
+        "var_equal": [
+          "сет",
+          2
+        ]
+      },
+      {
+        "text": "<-",
+        "var_need": [
+          "волос",
+          1
+        ],
+        "var_equal": [
+          "сет",
+          2
+        ],
+        "id": 23,
+        "var_sub": [
+          "волос",
+          1
+        ],
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "волос",
+          1
+        ],
+        "var_equal": [
+          "сет",
+          2
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "волос",
+          2
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Пятна на стали.",
+        "comment": true,
+        "var_equal": [
+          "сет",
+          3
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "пятн",
+          1
+        ],
+        "var_equal": [
+          "сет",
+          3
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "пятн",
+          2
+        ]
+      },
+      {
+        "var_sub": [
+          "пятн",
+          1
+        ],
+        "instant": true,
+        "var_equal": [
+          "сет",
+          3
+        ],
+        "id": 23,
+        "var_need": [
+          "пятн",
+          1
+        ],
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "id": 23,
+        "text": "Вид.",
+        "comment": true,
+        "var_equal": [
+          "сет",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "облик",
+          1
+        ],
+        "var_set": [
+          "облик",
+          1
+        ],
+        "var_equal": [
+          "сет",
+          1
+        ],
+        "id": 23,
+        "instant": true,
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "облик",
+          1,
+          "сет",
+          1
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_set": [
+          "облик",
+          0
+        ]
+      },
+      {
+        "id": 48,
+        "text": "сет 4",
+        "run": [
+          48
+        ],
+        "var_equal": [
+          "сет",
+          4
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Снаряжение.",
+        "comment": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "каст",
+          1
+        ],
+        "id": 23,
+        "var_sub": [
+          "каст",
+          1
+        ],
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "каст",
+          1
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "каст",
+          2
+        ]
+      },
+      {
+        "id": 22,
+        "text": "скины и оекалоры",
+        "run": [
+          22
+        ]
+      },
+      {
+        "var_str_set": [
+          "global defaultBgAnswerImage",
+          "https://i.postimg.cc/PJ3S8M5s/image.png",
+          "global side_menu",
+          27
+        ],
+        "id": 2,
+        "text": "Начать.",
+        "widget": [
+          "id1",
+          "https://i.postimg.cc/BnsqNhfr/1222.png",
+          "",
+          "id2",
+          "https://i.postimg.cc/G38hp8j5/211.png",
+          "",
+          "id3",
+          "https://i.postimg.cc/4x5X0zJm/12.png",
+          "",
+          "id4",
+          "https://i.postimg.cc/ncqFvygK/1.png",
+          ""
+        ],
+        "var_set": [
+          "гс",
+          4,
+          "приор",
+          2,
+          "global image_part_of_screen",
+          0.6
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Кнопки",
+        "run": [
+          25
+        ]
+      },
+      {
+        "id": 24,
+        "text": "фон stretch",
+        "url": "https://i.postimg.cc/fTjqxtmr/image.png"
+      },
+      {
+        "id": 24,
+        "text": "Контур 1 stretch",
+        "url": "https://i.postimg.cc/SKtvJBCQ/3.png",
+        "var_equal": [
+          "контур",
+          1
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Контур 2 stretch",
+        "url": "https://i.postimg.cc/cL0jjMdW/1.png",
+        "var_equal": [
+          "контур",
+          2
+        ]
+      },
+      {
+        "id": 24,
+        "text": "глаза 1 stretch",
+        "url": "https://i.postimg.cc/FHxtsCT1/1.png",
+        "var_equal": [
+          "глаз",
+          1
+        ]
+      },
+      {
+        "id": 24,
+        "text": "контур 2 stretch",
+        "url": "https://i.postimg.cc/9XwvqQL6/2.png",
+        "var_equal": [
+          "контур",
+          3
+        ]
+      },
+      {
+        "id": 24,
+        "text": "stretch",
+        "url": "https://i.postimg.cc/VsScBRkH/3.png",
+        "var_equal": [
+          "нос",
+          1
+        ]
+      },
+      {
+        "id": 24,
+        "text": "нос 2 stretch",
+        "url": "https://i.postimg.cc/tRLGrx1R/2.png",
+        "var_equal": [
+          "нос",
+          2
+        ]
+      },
+      {
+        "id": 24,
+        "text": "нос 3 stretch",
+        "url": "https://i.postimg.cc/rz6jScwc/1.png",
+        "var_equal": [
+          "нос",
+          3
+        ]
+      },
+      {
+        "id": 24,
+        "text": "рот 1 stretch",
+        "url": "https://i.postimg.cc/fRCFhtb9/3.png",
+        "var_equal": [
+          "рот",
+          1
+        ]
+      },
+      {
+        "id": 24,
+        "text": "рот 2 stretch",
+        "url": "https://i.postimg.cc/nrmg83sF/2.png",
+        "var_equal": [
+          "рот",
+          2
+        ]
+      },
+      {
+        "id": 24,
+        "text": "рот 3 stretch",
+        "url": "https://i.postimg.cc/SRYV2jqD/1.png",
+        "var_equal": [
+          "рот",
+          3
+        ]
+      },
+      {
+        "id": 24,
+        "text": "глаза 1 stretch",
+        "url": "https://i.postimg.cc/V66KwDhy/4.png",
+        "var_equal": [
+          "глаз",
+          2
+        ]
+      },
+      {
+        "id": 24,
+        "text": "глаз 3 stretch",
+        "url": "https://i.postimg.cc/Ss2t8gf6/3.png",
+        "var_equal": [
+          "глаз",
+          3
+        ]
+      },
+      {
+        "id": 24,
+        "text": "глаз 4 stretch",
+        "url": "https://i.postimg.cc/sDFbPC8v/2.png",
+        "var_equal": [
+          "глаз",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Контур лица.",
+        "comment": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "контур",
+          2
+        ],
+        "id": 24,
+        "var_sub": [
+          "контур",
+          1
+        ],
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "контур",
+          1
+        ],
+        "id": 24,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "контур",
+          2
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Глаза.",
+        "comment": true
+      },
+      {
+        "var_need": [
+          "глаз",
+          2
+        ],
+        "instant": true,
+        "id": 24,
+        "text": "<-",
+        "var_sub": [
+          "глаз",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "глаз",
+          1
+        ],
+        "id": 24,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "глаз",
+          3
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Нос.",
+        "comment": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "нос",
+          2
+        ],
+        "id": 24,
+        "var_sub": [
+          "нос",
+          1
+        ],
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "нос",
+          1
+        ],
+        "id": 24,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "нос",
+          2
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Рот.",
+        "comment": true
+      },
+      {
+        "var_need": [
+          "рот",
+          2
+        ],
+        "instant": true,
+        "id": 24,
+        "text": "<-",
+        "var_sub": [
+          "рот",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "рот",
+          1
+        ],
+        "id": 24,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "рот",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "",
+    "answers": [
+      {
+        "var_need": [
+          "ighp2",
+          1
+        ],
+        "super_calculate": false,
+        "id": 26,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "цель",
+          2
+        ]
+      },
+      {
+        "var_no_more": [
+          "ighp2",
+          0
+        ],
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 26,
+        "var_need": [
+          "ighp1",
+          1
+        ],
+        "calculate": true,
+        "var_set": [
+          "цель",
+          1
+        ]
+      },
+      {
+        "var_set": [
+          "цель",
+          3
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "var_need": [
+          "ighp3",
+          1
+        ],
+        "var_no_more": [
+          "ighp1",
+          0,
+          "ighp2",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Меню ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Изменить внешность."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 29,
+    "text": "",
+    "answers": [
+      {
+        "id": 29,
+        "text": " 1 щит лев stretch",
+        "url": "https://i.postimg.cc/bvfy7v5S/1.png",
+        "var_equal": [
+          "гщит1",
+          1
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 10 щит лев stretch",
+        "url": "https://i.postimg.cc/fRmZfNbz/10.png",
+        "var_equal": [
+          "гщит1",
+          10
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 2 щит лев stretch",
+        "url": "https://i.postimg.cc/vm7YbsRq/2.png",
+        "var_equal": [
+          "гщит1",
+          2
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 3 щит лев stretch",
+        "url": "https://i.postimg.cc/SsyyKvky/3.png",
+        "var_equal": [
+          "гщит1",
+          3
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 4 щит лев stretch",
+        "url": "https://i.postimg.cc/ZRVJvx56/4.png",
+        "var_equal": [
+          "гщит1",
+          4
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 5 щит лев stretch",
+        "url": "https://i.postimg.cc/HsJTj5D7/5.png",
+        "var_equal": [
+          "гщит1",
+          5
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 6 щит лев stretch",
+        "url": "https://i.postimg.cc/HnNHBW5x/6.png",
+        "var_equal": [
+          "гщит1",
+          6
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 7 щит лев stretch",
+        "url": "https://i.postimg.cc/PrBTDxTV/7.png",
+        "var_equal": [
+          "гщит1",
+          7
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 8 щит лев stretch",
+        "url": "https://i.postimg.cc/QNYXXmP3/8.png",
+        "var_equal": [
+          "гщит1",
+          8
+        ]
+      },
+      {
+        "id": 29,
+        "text": " 9 щит лев stretch",
+        "url": "https://i.postimg.cc/J00MNHsv/9.png",
+        "var_equal": [
+          "гщит1",
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "",
+    "answers": [
+      {
+        "id": 30,
+        "text": "лев атк 10 stretch",
+        "url": "https://i.postimg.cc/C53XRRkj/10.png",
+        "var_equal": [
+          "гатк1",
+          10
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 3 stretch",
+        "url": "https://i.postimg.cc/dtdt4dHc/3.png",
+        "var_equal": [
+          "гатк1",
+          3
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 4 stretch",
+        "url": "https://i.postimg.cc/wjX8sQW3/4.png",
+        "var_equal": [
+          "гатк1",
+          4
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 5 stretch",
+        "url": "https://i.postimg.cc/DZztHk7b/5.png",
+        "var_equal": [
+          "гатк1",
+          5
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 6 stretch",
+        "url": "https://i.postimg.cc/gJBfPS0t/6.png",
+        "var_equal": [
+          "гатк1",
+          6
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 7 stretch",
+        "url": "https://i.postimg.cc/wB9K5RP2/7.png",
+        "var_equal": [
+          "гатк1",
+          7
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 8 stretch",
+        "url": "https://i.postimg.cc/3w1stJQT/8.png",
+        "var_equal": [
+          "гатк1",
+          8
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 9 stretch",
+        "url": "https://i.postimg.cc/NGZj6bxx/9.png",
+        "var_equal": [
+          "гатк1",
+          9
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 1 stretch",
+        "url": "https://i.postimg.cc/BZjvPR26/1.png",
+        "var_equal": [
+          "гатк1",
+          1
+        ]
+      },
+      {
+        "id": 30,
+        "text": "лев атк 2 stretch",
+        "url": "https://i.postimg.cc/8cJxkRJp/2.png",
+        "var_equal": [
+          "гатк1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "",
+    "answers": [
+      {
+        "id": 31,
+        "text": "хпл stretch 1",
+        "url": "https://i.postimg.cc/Jh0fdCrH/1.png",
+        "var_equal": [
+          "ighp1",
+          1
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 2",
+        "url": "https://i.postimg.cc/JnfCkYWD/2.png",
+        "var_equal": [
+          "ighp1",
+          2
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 3",
+        "url": "https://i.postimg.cc/YCrKYmT3/3.png",
+        "var_equal": [
+          "ighp1",
+          3
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 4",
+        "url": "https://i.postimg.cc/2jWDDY44/4.png",
+        "var_equal": [
+          "ighp1",
+          4
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 5",
+        "url": "https://i.postimg.cc/m2GGZnwK/5.png",
+        "var_equal": [
+          "ighp1",
+          5
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 6",
+        "url": "https://i.postimg.cc/wjwKVjpd/6.png",
+        "var_equal": [
+          "ighp1",
+          6
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 7",
+        "url": "https://i.postimg.cc/Fz05gb9P/7.png",
+        "var_equal": [
+          "ighp1",
+          7
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 8",
+        "url": "https://i.postimg.cc/fbP6Gqy2/8.png",
+        "var_equal": [
+          "ighp1",
+          8
+        ]
+      },
+      {
+        "id": 31,
+        "text": "хпл stretch 9",
+        "url": "https://i.postimg.cc/Wb6cd7Yz/9.png",
+        "var_equal": [
+          "ighp1",
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": [
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          11
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          21
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          31
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          41
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          51
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          61
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          71
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          81
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 1",
+        "url": "https://i.postimg.cc/0yQX9GLL/1.png",
+        "var_equal": [
+          "ighp1",
+          91
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          12
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          22
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          32
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          42
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          52
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          62
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          72
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          82
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 2",
+        "url": "https://i.postimg.cc/FsGntCny/2.png",
+        "var_equal": [
+          "ighp1",
+          92
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          13
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          23
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          33
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          43
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          53
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          63
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          73
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          83
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 3",
+        "url": "https://i.postimg.cc/W4xHWDYx/3.png",
+        "var_equal": [
+          "ighp1",
+          93
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          14
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          24
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          34
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          44
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          54
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          64
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          74
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          84
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 4",
+        "url": "https://i.postimg.cc/Dy7YM35f/4.png",
+        "var_equal": [
+          "ighp1",
+          94
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          15
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          25
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          35
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          45
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          55
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          65
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          75
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          85
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 5",
+        "url": "https://i.postimg.cc/y6mbj8mr/5.png",
+        "var_equal": [
+          "ighp1",
+          95
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          16
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          26
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          36
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          46
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          56
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          66
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          76
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          86
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 6",
+        "url": "https://i.postimg.cc/fyNgsGNK/6.png",
+        "var_equal": [
+          "ighp1",
+          96
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          17
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          27
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          37
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          47
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          57
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          67
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          77
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          87
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 7",
+        "url": "https://i.postimg.cc/Qt5nRXRC/7.png",
+        "var_equal": [
+          "ighp1",
+          97
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          18
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          28
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          38
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          48
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          58
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          68
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          78
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          88
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 8",
+        "url": "https://i.postimg.cc/D0PpwxfK/8.png",
+        "var_equal": [
+          "ighp1",
+          98
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          19
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          29
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          39
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          49
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          59
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          69
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          79
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          89
+        ]
+      },
+      {
+        "id": 32,
+        "text": "лед stretch 9",
+        "url": "https://i.postimg.cc/NjzJF9tL/9.png",
+        "var_equal": [
+          "ighp1",
+          99
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "",
+    "answers": [
+      {
+        "text": "лд stretch 2",
+        "id": 33,
+        "url": "https://i.postimg.cc/SKc64JNB/2.png",
+        "var_need": [
+          "ighp1",
+          20
+        ],
+        "var_no_more": [
+          "ighp1",
+          29
+        ]
+      },
+      {
+        "text": "лд stretch 1",
+        "id": 11,
+        "url": "https://i.postimg.cc/cLg7DDq4/1.png",
+        "var_need": [
+          "ighp1",
+          10
+        ],
+        "var_no_more": [
+          "ighp1",
+          19
+        ]
+      },
+      {
+        "text": "лд stretch 3",
+        "id": 33,
+        "url": "https://i.postimg.cc/C1HsGd3G/3.png",
+        "var_need": [
+          "ighp1",
+          30
+        ],
+        "var_no_more": [
+          "ighp1",
+          39
+        ]
+      },
+      {
+        "text": "лд stretch 4",
+        "id": 33,
+        "url": "https://i.postimg.cc/nr3KWgcM/4.png",
+        "var_need": [
+          "ighp1",
+          40
+        ],
+        "var_no_more": [
+          "ighp1",
+          49
+        ]
+      },
+      {
+        "text": "лд stretch 5",
+        "id": 33,
+        "url": "https://i.postimg.cc/MH6bdqwh/5.png",
+        "var_need": [
+          "ighp1",
+          50
+        ],
+        "var_no_more": [
+          "ighp1",
+          59
+        ]
+      },
+      {
+        "text": "лд stretch 6",
+        "id": 33,
+        "url": "https://i.postimg.cc/RV0LtSXt/6.png",
+        "var_need": [
+          "ighp1",
+          60
+        ],
+        "var_no_more": [
+          "ighp1",
+          69
+        ]
+      },
+      {
+        "text": "лд stretch 7",
+        "id": 33,
+        "url": "https://i.postimg.cc/pVCByhYx/7.png",
+        "var_need": [
+          "ighp1",
+          70
+        ],
+        "var_no_more": [
+          "ighp1",
+          79
+        ]
+      },
+      {
+        "text": "лд stretch 8",
+        "id": 33,
+        "url": "https://i.postimg.cc/kg0QLx9N/8.png",
+        "var_need": [
+          "ighp1",
+          80
+        ],
+        "var_no_more": [
+          "ighp1",
+          89
+        ]
+      },
+      {
+        "text": "лд stretch 9",
+        "id": 33,
+        "url": "https://i.postimg.cc/PrFzzgRR/9.png",
+        "var_need": [
+          "ighp1",
+          90
+        ],
+        "var_no_more": [
+          "ighp1",
+          99
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Диалоги",
+    "answers": [
+      {
+        "id": 45,
+        "text": "Визуал",
+        "run": [
+          45
+        ]
+      },
+      {
+        "id": 47,
+        "text": "Диалог с элларой.",
+        "run": [
+          47
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Гамаплей.",
+        "run": [
+          46
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          11
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          21
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          31
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          41
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          51
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          61
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          71
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          81
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          91
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "",
+    "answers": [
+      {
+        "id": 37,
+        "text": "2",
+        "run": [
+          37
+        ]
+      },
+      {
+        "id": 38,
+        "text": "3",
+        "run": [
+          38
+        ]
+      },
+      {
+        "id": 39,
+        "text": "4",
+        "run": [
+          39
+        ]
+      },
+      {
+        "id": 40,
+        "text": "5",
+        "run": [
+          40
+        ]
+      },
+      {
+        "id": 41,
+        "text": "6",
+        "run": [
+          41
+        ]
+      },
+      {
+        "id": 42,
+        "text": "7",
+        "run": [
+          42
+        ]
+      },
+      {
+        "id": 43,
+        "text": "8",
+        "run": [
+          43
+        ]
+      },
+      {
+        "id": 44,
+        "text": "9",
+        "run": [
+          44
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          12
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          22
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          32
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          42
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          52
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          62
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          72
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          82
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          92
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          13
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          23
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          33
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          43
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          53
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          63
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          73
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          83
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          93
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          14
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          24
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          34
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          44
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          54
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          64
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          74
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          84
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          94
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          15
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          25
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          35
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          45
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          55
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          65
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          75
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          85
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          95
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          16
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          26
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          36
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          46
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          56
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          66
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          76
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          86
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          96
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          17
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          27
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          37
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          47
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          57
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          67
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          77
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          87
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          97
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          18
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          28
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          38
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          48
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          58
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          68
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          78
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          88
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          98
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          19
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          29
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          39
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          49
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          59
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          69
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          79
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "ighp1",
+          89
+        ],
+        "super_calculate": false,
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_equal": [
+          "ighp1",
+          99
+        ],
+        "id": 35,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "хпед1",
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 46,
+    "text": "",
+    "answers": [
+      {
+        "var_equal": [
+          "текст",
+          1
+        ],
+        "id": 34,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "нвоп",
+          2,
+          "до",
+          2,
+          "текст",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "текст",
+          2
+        ],
+        "id": 34,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "нвоп",
+          2,
+          "до",
+          2,
+          "текст",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "текст",
+          3
+        ],
+        "id": 34,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "нвоп",
+          2,
+          "до",
+          2,
+          "текст",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "текст",
+          4
+        ],
+        "id": 34,
+        "instant": true,
+        "text": "Поблагодарить.",
+        "var_set": [
+          "нвоп",
+          1,
+          "до",
+          1,
+          "текст",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "текст",
+          4
+        ],
+        "id": 34,
+        "instant": true,
+        "text": "Осудить. ",
+        "var_set": [
+          "нвоп",
+          1,
+          "до",
+          1,
+          "текст",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 48,
+    "text": "",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Цвет глаз.",
+        "comment": true
+      },
+      {
+        "var_need": [
+          "глаза",
+          1
+        ],
+        "instant": true,
+        "id": 23,
+        "var_sub": [
+          "глаза",
+          1
+        ],
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "глаза",
+          1
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "глаза",
+          3
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Броня.",
+        "comment": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "броняк",
+          1
+        ],
+        "id": 23,
+        "text": "<-",
+        "var_sub": [
+          "броняк",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "броняк",
+          1
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "броняк",
+          2
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Рога.",
+        "comment": true
+      },
+      {
+        "var_need": [
+          "рога",
+          1
+        ],
+        "instant": true,
+        "id": 23,
+        "var_sub": [
+          "рога",
+          1
+        ],
+        "text": "<-",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "рога",
+          1
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "рога",
+          2
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Маска.",
+        "comment": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "маска",
+          1
+        ],
+        "id": 23,
+        "text": "<-",
+        "var_sub": [
+          "маска",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "маска",
+          1
+        ],
+        "id": 23,
+        "text": "->",
+        "instant": true,
+        "var_no_more": [
+          "маска",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "",
+    "answers": []
+  }
+]

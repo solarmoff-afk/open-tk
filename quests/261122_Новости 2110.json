@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор HeSLHoG написал еще 118740 слов в квесте \"Академия греха\"."
+      },
+      {
+        "targetbookid": "260571",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Академия греха\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор VaveStrike написал еще 103235 слов в квесте \"Метро 2033\"."
+      },
+      {
+        "targetbookid": "260781",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Метро 2033\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Postnik написал еще 92030 слов в квесте \"Миден \nВерсия 0.2\"."
+      },
+      {
+        "targetbookid": "260843",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Миден \nВерсия 0.2\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 90913 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Snoy написал еще 83883 слов в квесте \"меж двух огней\"."
+      },
+      {
+        "targetbookid": "257153",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"меж двух огней\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

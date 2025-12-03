@@ -1,0 +1,1025 @@
+[
+  {
+    "id": 1,
+    "text": "   Твоим клиентом может стать один из 600 героев и героинь. Собирай вещи, наряжай своего участника и отправляйся на показ мод, соревноваться с другими кутерье. Стань знаменитым кутерье в геройском мире!",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Начать",
+        "lua_do": "function lua_do()\ngold = 200\nrek = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": " ... наборы ...",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   status = status or 0\n   packName = { \"Сумка\", \"Сумочка\", \"Чемодан\", \"Чемоданчик\", \"Саквояж\", \"Сундук\", \"Сундучок\", \"Баул\", \"Портфель\", \"Пакет\", \"Посылка\", \"Дипломат\", \"Шкатулка\", \"Ящик\", \"Ящичек\", \"Коробка\", \"Коробок\", \"Футляр\", \"Ларец\", \"Табакерка\", \"Мешочек\", \"Мешок\", \"Корзина\", \"Корзинка\", \"Короб\", \"Коробочка\" }\n   persName = { \" брючника\", \" портного\", \" швеца\", \" сапожника\", \" шляпника\", \" закройщика\", \" костюмера\", \" модельера\", \" кутюрье\" }\nend",
+        "text": "   "
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   texKa4M1 = { \"Абсурдный \", \"Восковый \", \"Вязанный \", \"Ветхий \", \"Выцветший \", \"Голубой \", \"Глиняный \", \"Грязный \", \"Дырявый \", \"Жёлтый \", \"Зелёный \", \"Рваный \" }\n   texKa4W1 = { \"Абсурдная \", \"Восковая \", \"Вязанная \", \"Ветхая \", \"Выцветшая \", \"Голубая \", \"Глиняная \", \"Грязная \", \"Дырявая \", \"Жёлтая \", \"Зелёная \", \"Рваная \" }\n   texKa4S1 = { \"Абсурдное \", \"Восковое \", \"Вязанное \", \"Ветхое \", \"Выцветшее \", \"Голубое \", \"Глиняное \", \"Грязное \", \"Дырявое \", \"Жёлтое \", \"Зелёное \", \"Рваное \" }\n   texKa4Ss1 = { \"Абсурдные  \", \"Восковые \", \"Вязанные \", \"Ветхие \", \"Выцветшие \", \"Голубые \", \"Глиняные \", \"Грязные \", \"Дырявые \", \"Жёлтые \", \"Зелёные \", \"Рваные \" }\n   \n   texKa4M2 = { \"Бирюзовый \", \"Гнутый \", \"Деревянный \", \"Зигзагообразый \", \"Заточенный \", \"Обычный \", \"Простой \", \"Пластиковый \", \"Серый \" }\n   texKa4W2 = { \"Бирюзовая \", \"Гнутая \", \"Деревянная \", \"Зигзагообразная \", \"Заточенная \", \"Обычная \", \"Простая \", \"Пластиковая \", \"Серая \" }\n   texKa4S2 = { \"Бирюзовое \", \"Гнутое \", \"Деревянное \", \"Зигзагообразное \", \"Заточенное \", \"Обычное \", \"Простое \", \"Пластиковое \", \"Серое \" }\n   texKa4Ss2 = { \"Бирюзовые \", \"Гнутые \", \"Деревянные \", \"Ватные \", \"Зигзагообразные \", \"Заточенные \", \"Обычные \", \"Простые \", \"Пластиковые \", \"Серые \" }\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   texKa4M3 = { \"Белый \", \"Вакуумный \", \"Выжигающий \", \"Газообразный \", \"Крепкий \", \"Прочный \", \"Сиреневый \", \"Шестигранный \" }\n   texKa4W3 = { \"Белая \", \"Вакуумная \", \"Выжигающая \", \"Газообразная \", \"Крепкая \", \"Прочная \", \"Сиреневая \", \"Шестигранная \" }\n   texKa4S3 = { \"Белое \", \"Вакуумное \", \"Выжигающее \", \"Газообразное \", \"Крепкое \", \"Прочное \", \"Сиреневое \", \"Шестигранное \" }\n   texKa4Ss3 = { \"Белые \", \"Вакуумные \", \"Выжигающие \", \"Газообразные \", \"Крепкие \", \"Прочные \", \"Сиреневые \", \"Шестигранные \" }\n   \n   texKa4M4 = { \"Ампутирующий \", \"Аннигилирующий \", \"Восьмигранный \", \"Вульгарный \", \"Улучшенный \", \"Усиленный \", \"Укреплённый \" }\n   texKa4W4 = { \"Ампутирующая \", \"Аннигилирующая \", \"Восьмигранная \", \"Вульгарная \", \"Улучшенная \", \"Усиленная \", \"Укреплённая \" }\n   texKa4S4 = { \"Ампутирующее \", \"Аннигилирующее \", \"Восьмигранное \", \"Вульгарное \", \"Улучшенное \", \"Усиленное \", \"Укреплённое \" }\n   texKa4Ss4 = { \"Ампутирующие \", \"Аннигилирующие \", \"Восьмигранные \", \"Вульгарные \", \"Улучшенные \", \"Усиленные \", \"Укреплённые \" }\nend",
+        "text": "   "
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   texKa4M5 = { \"Абсолютный \", \"Божественный \", \"Искуссный \", \"Легендарный \", \"Чёрный \",  \"Шедевральный \", \"Эпический \" }\n   texKa4W5 = { \"Абсолютная \", \"Божественная \", \"Искуссная \", \"Легендарная \", \"Чёрная \", \"Шедевральная \", \"Эпическая \" }\n   texKa4S5 = { \"Абсолютное \", \"Божественное \", \"Искуссное \", \"Легендарное \", \"Чёрное \", \"Шедевральное \", \"Эпическое \" }\n   texKa4Ss5 = { \"Абсолютные \", \"Божественные \", \"Искуссные \", \"Легендарные \", \"Чёрные \", \"Шедевральные \", \"Эпические \" }\nend",
+        "calculate": true,
+        "text": "   ",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "       голова",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   texHeadM = { \"Тазик\", \"Конус\", \"Шлем\", \"Котелок\", \"Дуршлаг\", \"Ковш\", \"Берет\", \"Нимб\", \"Горшок\" }\n   texHeadW = { \"Диадема\", \"Шапка\", \"Балаклава\", \"Панама\", \"Кастрюля\", \"Корона\", \"Каска\", \"Тиара\", \"Шапка-ушанка\", \"Шапка-будёновка\", \"Шляпа с пером\" }\n   texHeadS = { \"Ведро\" }\n   texHeadSs = { \"Рога\" }\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   texBodyM = { \"Броник\", \"Кафтан\", \"Камзол\", \"Ламелляр\", \"Мешок\", \"Нагрудник\", \"Плащ\", \"Панцирь\", \"Шифер\" }\n   texBodyW = { \"Жилетка\", \"Куртка\", \"Кираса\", \"Кольчуга\", \"Крышка люка\", \"Майка\", \"Роба\", \"Ряса\", \"Рубашка\", \"Сковорода\", \"Упряжка\", \"Фуфайка\" }\n   texBodySs = { \"Латы\", \"Рыбные чещуйки\" }\nend",
+        "text": "       тело"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   texHandSs = { \"Манжеты\", \"Наручи\", \"Нарукавники\", \"Перчатки\", \"Рукавицы\", \"Наручники\", \"Браслеты\" }\nend",
+        "text": "    руки"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   texFootSs = { \"Сапоги\", \"Болотники\", \"Башмаки\", \"Берцы\", \"Кирзачи\", \"Краги\", \"Лапти\", \"Чуни\", \"Сандали\", \"Коньки\", \"Валенки\", \"Лыжи\", \"Копыта\", \"Гетры\", \"Штиблеты\", \"Самоходы\" }\nend",
+        "calculate": true,
+        "text": "   ноги",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   texWeaponM = { \"Арбалет\", \"Анкер\", \"Амулет\", \"Аквариум\", \"Алтарь\", \"Альманах\", \"Булыжник\", \"Бумеранг\", \"Болт\", \"Барабан\", \"Бак\", \"Батон\", \"Буклет\", \"Бивень\", \"Бур\", \"Бубенчик\", \"Башмак\", \"Бараний Рог\", \"Бордюр\", \"Ботинок\", \"Букет\", \"Бинт\", \"Веер\", \"Вентиль\", \"Веник\", \"Вантуз\", \"Валенок\", \"Вертел\", \"Воланчик\", \"Горшок\", \"Гвоздь\", \"Двуручник\", \"Дорожный Указатель\", \"Дуршлаг\", \"Зонтик\", \"Кортик\", \"Казан\", \"Котелок\", \"Ключ\", \"Клинок\", \"Крюк\", \"Кирпич\", \"Ковш\", \"Капкан\", \"Ковёр\", \"Камень\", \"Констебель\", \"Кастет\", \"Кол\", \"Костыль\", \"Канделябр\", \"Календарь\", \"Колокол\", \"Лук\", \"Лопух\", \"Лапоть\", \"Лом\", \"Молоток\", \"Матрас\", \"Мушкет\", \"Меч\", \"Напильник\", \"Носок\", \"Нож\", \"Пресс\", \"Прут\", \"Поскребок\", \"Палаш\", \"Посох\", \"Плуг\", \"Посох\",  \"Подсвечник\", \"Портрет\", \"Половник\", \"Ремень\", \"Стакан\", \"Сюрикен\", \"Сапог\", \"Серп\", \"Совок\", \"Стол\", \"Самовар\", \"Смычок\", \"Табурет\", \"Тесак\", \"Тапок\", \"Топор\", \"Факел\", \"Флагшток\", \"Чертополох\", \"Черенок\", \"Шестопёр\", \"Штык\", \"Шест\", \"Шампур\", \"Щит\", \"Якорь\" }\n\n   texWeaponW = { \"Акула-молот\", \"Арматура\", \"Антресоль\", \"Балка\", \"Бадья\", \"Булава\", \"Бита\", \"Балалайка\", \"Баклуша\", \"Бритва\", \"Бутылка\", \"Безделушка\", \"Ветка Алоэ\", \"Ветка Вербы\", \"Воротина\", \"Вешалка\", \"Варежка\", \"Ваза\", \"Вуаль\", \"Волынка\", \"Гиря\", \"Гитара\", \"Гантеля\", \"Губка\", \"Дверь\", \"Дубина\", \"Доска\", \"Жердь\", \"Заколка\", \"Кочерга\", \"Клюка\", \"Клизма\", \"Кисть\", \"Кастрюля\", \"Коса\", \"Катана\", \"Крапива\", \"Коробка\", \"Книга\", \"Картина\", \"Кружка\", \"Калитка\", \"Ложка\", \"Лопата\", \"Лестница\", \"Лютня\", \"Лейка\", \"Мочалка\", \"Мачта\", \"Метла\", \"Мыльница\", \"Ножка Стола\", \"Прялка\", \"Прищепка\", \"Подушка\", \"Палица\", \"Подкова\", \"Рогатина\", \"Рапира\", \"Рыба-меч\", \"Скакалка\", \"Ступа\", \"Сковородка\", \"Скалка\", \"Свеча\", \"Телега\", \"Трость\", \"Указка\", \"Чесалка\", \"Шестерёнка\", \"Шпага\", \"Швабра\", \"Шапка-ушанка\" }\n    \n   texWeaponS = { \"Копьё\", \"Боевое кольцо\" }\nend",
+        "calculate": true,
+        "text": "     оружие",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   texAcsM = { \"Браслет\", \"Кулон\", \"Ошейник\", \"Щит\", \"Кусок забора\", \"Канат\", \"Таз\", \"Хомут\", \"Якорь\" }\n   texAcsW = { \"Верёвка\", \"Цепь\", \"Лоза\", \"Держава\", \"Мишень\", \"Тарелка\", \"Серьга\" }\n   texAcsS = { \"Кадило\", \"Кольцо\", \"Колье\" }\nend",
+        "calculate": true,
+        "text": "       аксессуар",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   shop4 = { \" Рыцаря\", \" Паладина\", \" Целителя\", \" Мага\", \" Лучника\", \" Ренджера\", \" Воина\", \" Разбойника\", \" Жреца\", \" Барда\", \" Бойца\", \" Гладиатора\", \" Следопыта\", \" Заклинателя\", \" Чародея\", \" Иллюзиониста\", \" Священника\", \" Друида\", \" Феи\", \" Варвара\", \" Монаха\", \" Колдуна\", \" Волшебника\" }\nend",
+        "calculate": true,
+        "text": "    ",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   shop5 = { \" Ангела\", \" Архангела\", \" Бездны\", \" Боли\", \" Божества\", \" Бездельника\", \" Бури\", \" Бешенства\", \" Бедствия\", \" Ветра\", \" Воды\", \" Веры\", \" Викинга\", \" Горя\", \" Гнева\", \" Героя\", \" Гибели\", \" Глупости\", \" Гордости\", \" Гордыни\", \" Демона\", \" Дьявола\", \" Джентльмена\", \" Жажды\", \" Зависти\", \" Зимы\", \" Земли\", \" Каторжника\", \" Крестьянина\", \" Короля\", \" Капера\", \" Краха\", \" Льда\", \" Любви\", \" Мага\", \" Мороза\", \" Небес\", \" Надежды\", \" Ненависти\", \" Неудачника\", \" Некроманта\", \" Одержимого\", \" Огня\", \" Обжорства\", \" Побед\", \" Пирата\", \" Поражений\", \" Пламени\", \" Природы\", \" Преступника\", \" Преисподней\", \" Потрошителя\", \" Позора\", \" Разрушений\", \" Судьбы\", \" Света\", \" Стужи\", \" Стражника\", \" Страсти\", \" Спокойствия\", \" Тьмы\", \" Труса\", \" Трусости\", \" Убийцы\", \" Удачи\", \" Флибустьера\", \" Храбрости\", \" Хитрости\", \" Штиля\", \" Шторма\" }\nend",
+        "text": "    ",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "id": 14,
+        "text": " ... для веса ... ",
+        "var_equal": [
+          "admin",
+          999
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "text": "   ",
+        "lua_do": "function lua_do()\n   mName = { \"Аурелион\", \"Азир\", \"Аилант\", \"Аэлмар\", \"Алексий\", \"Аэлнесс\", \"Абархам\", \"Афкиллар\", \"Анвиль\", \"Арравел\", \"Арнольд\", \"Агмасс\", \"Арчибальд\", \"Андерс\", \"Арни\", \"Алекс\", \"Арчи\", \"Антеон\", \"Альбус\", \"Айбер\",                \"Адам\", \"Адриан\", \"Азазель\", \"Амуму\", \"Алистар\", \"Антий\", \"Арифус\", \"Атрокс\", \"Бард\", \"Блиц\", \"Браум\", \"Брэнд\", \"Блэк\", \"Бэлл\", \"Бесталл\", \"Боркас\", \"Баэлнесс\", \"Брэндон\", \"Боб\", \"Брандон\", \"Беон\", \"Бобби\", \"Бурбон\", \"Берадот\", \"Верронн\", \"Верллианн\", \"Вильгельм\", \"Вениамин\", \"Вандон\", \"Виктуар\", \"Вайзер\", \"Варвик\", \"Валакас\", \"Варус\", \"Вейгар\", \"Вэйнир\", \"Вел'коз\", \"Виктор\", \"Владимир\", \"Волибир\", \"Ву Конг\", \"Галио\", \"Ганпланк\", \"Гвидон\", \"Гарен\", \"Грей\", \"Гнар\", \"Грагас\", \"Гекарим\", \"Грэйвс\", \"Гилдримм\", \"Гарри\", \"Гэри\", \"Гарольд\", \"Гордон\", \"Гаррисон\", \"Гудвин\", \"Джерласс\", \"Джаспер\", \"Дик\", \"Джим\", \"Доар\", \"Джон\", \"Диплексий\", \"Джонас\", \"Джек\", \"Дин\", \"Джордж\", \"Джексон\", \"Джоул\", \"Джуд\", \"Джекоб\", \"Дэниел\", \"Джейкоб\", \"Джеймс\", \"Деймос\", \"Дионисий\", \"Дариус\", \"Джакс\", \"Джарван\", \"Джейс\", \"Дрейвен\", \"Джин\", \"Жак\", \"Жан\", \"Зилеан\", \"Зурон\", \"Заир\", \"Зед\", \"Зигг\", \"Зиглер\", \"Засс\", \"Зорро\", \"Зион\", \"Зак\", \"Иверн\", \"Иллай\", \"Икот\", \"Исмаил\", \"Иладар\", \"Иррадион\", \"Иллирий\", \"Ингард\", \"Ивиникум\", \"Ирден\", \"Йорик\", \"Клаус\", \"Казикс\", \"Каин\", \"Кай-сай\", \"Ксерат\", \"Констанций\", \"Калиостро\", \"Камуй\", \"Кармос\", \"Картус\", \"Кассадин\", \"Касан\", \"Квинтер\", \"Кейл\", \"Кэй\", \"Кеннен\", \"Ксерей\", \"Киану\", \"Киндред\", \"Кайзер\", \"Клед\", \"Крентиор\", \"Ког-Мао\", \"Коркей\", \"Кунг-Пао\", \"Кориандр\", \"Кантил\", \"Карлайл\", \"Келлфер\", \"Келлан\", \"Криан\", \"Коравелл\", \"Кораллис\", \"Кадмий\", \"Кассиопей\", \"Люциус\", \"Лонгрен\", \"Люций\", \"Лео\", \"Луций\", \"Леонард\", \"Лекс\", \"Леопольд\", \"Лэри\", \"Лас\", \"Лакс\", \"Луи\", \"Лайт\", \"Ларс\", \"Леон\", \"Либер\", \"Ли Син\", \"Лисс\", \"Лу Сяо\", \"Лур\", \"Люксор\", \"Луциан\", \"Лайкайзер\", \"Марк\", \"Мундо\", \"Марлеон\", \"Мэлон\", \"Мальзахар\", \"Малфит\", \"Мао-Кай\", \"Мордекайзер\", \"Морган\", \"Микаэль\", \"Мэдисон\", \"Михаэль\", \"Макс\", \"Мираклий\", \"Майк\", \"Майкл\", \"Мик\", \"Мел\", \"Мартин\", \"Маллим\", \"Мэтью\", \"Наиселл\", \"Нокс\", \"Нур\", \"Ниа\", \"Намибий\", \"Насус\", \"Новак\", \"Нумис\", \"Наутилус\", \"Николя\", \"Нико\", \"Ноктюрн\", \"Оливий\", \"Орландо\", \"Олаф\", \"Орион\", \"Орн\", \"Патриций\", \"Пайк\", \"Пантеон\", \"Пармис\", \"Пер\", \"Поль\", \"Пауль\", \"Пьер\", \"Питер\", \"Ридесар\", \"Рик\", \"Родислав\", \"Риордан\", \"Рамерий\", \"Рэд\", \"Ромео\", \"Рэтбоун\", \"Рональд\", \"Рэй\", \"Ричард\", \"Роберт\", \"Роджер\", \"Рэм\", \"Рэкс\", \"Ромул\", \"Райз\", \"Рамбл\", \"Раммус\", \"Рексай\", \"Ренгар\", \"Ренектон\", \"Ривер\", \"Рейкан\", \"Рэд\", \"Сэм\", \"Сол\", \"Сайлас\", \"Седжуан\", \"Свэйн\", \"Северян\", \"Синджед\", \"Симба\", \"Скарнер\", \"Сомий\", \"Сорян\", \"Саэллат\", \"Слайвер\", \"Сехелис\", \"Син\", \"Селуанн\", \"Стефан\", \"Сольмир\", \"Себастьян\", \"Сиэль\", \"Соррель\", \"Стив\", \"Симус\", \"Седрик\", \"Северус\", \"Сидо\", \"Стивен\", \"Титаний\", \"Тоберон\", \"Тиберий\", \"Тор\", \"Тейлор\", \"Тонни\", \"Таам\", \"Таллай\", \"Тарик\", \"Талон\", \"Твич\", \"Тимо\", \"Трандл\", \"Треш\", \"Трындамер\", \"Тристан\", \"Теос\", \"Теон\", \"Ульян\", \"Удир\", \"Ургот\", \"Улан\", \"Ург\", \"Уилл\", \"Ферммар\", \"Фаавел\", \"Феофил\", \"Фидель\", \"Феб\", \"Фэйт\", \"Фортунат\", \"Фиддлстикс\", \"Фиор\", \"Физз\", \"Фиксрин\", \"Фралд\", \"Хром\", \"Ханс\", \"Халин\", \"Хеймердингер\", \"Ци\", \"Чарли\", \"Чо Гат\", \"Шерон\", \"Шивер\", \"Шиван\", \"Шако\", \"Шен\", \"Ъйыь\", \"Эмилий\", \"Эзриал\", \"Эвелин\", \"Экко\", \"Элизар\", \"Энио\", \"Эштон\", \"Эйлдар\", \"Эдгар\", \"Эвари\", \"Эдуардо\", \"Эйревелл\", \"Энрики\", \"Элберт\", \"Энджи\", \"Эльберт\", \"Эгри\", \"Эдвард\", \"Эштон\", \"Энтони\", \"Юлий\", \"Юннес\", \"Юмий\", \"Яков\", \"Ярослав\", \"Ясуо\", \"Ялмир\", \"Янви\", \"Якоб\", \"Якин\", \"Вайт\", \"Грин\", \"Блэк\", \"Браун\" }\n\n   wName = { \"Анориэль\", \"Агнесс\", \"Аннелуиза\", \"Ариель\", \"Аннелиза\", \"Алиша\", \"Астория\", \"Агнесс\", \"Андромеда\", \"Аманда\", \"Аннет\", \"Аннабет\", \"Амелия\", \"Беатрис\", \"Бэтла\", \"Беттиет\", \"Белория\", \"Бруклия\", \"Барбара\", \"Бесс\", \"Брайана\", \"Бекки\", \"Виктория\", \"Ванесса\", \"Верония\", \"Василиса\", \"Висконсия\", \"Виндикта\", \"Виола \", \"Венди\", \"Виолетта\", \"Гвиария\", \"Гелата\", \"Генриетта\", \"Гвиана\", \"Гармония\", \"Гермиона\", \"Гестия\", \"Диана\", \"Диксерита\", \"Джоанна\", \"Джулия\", \"Джессика\", \"Дитта\", \"Джуди\", \"Джинни\", \"Даринетта\", \"Дженна\", \"Джейн\", \"Элизабет\", \"Эллиада\", \"Энрика\", \"Эсмеральда\", \"Эзетия\", \"Элеонора\", \"Эланора\", \"Эстера\", \"Эсме\", \"Эдит\", \"Элис\", \"Эшли\", \"Элена\", \"Эми\", \"Энн\", \"Ева\", \"Жозетта\", \"Жизель\", \"Жанна\", \"Жеана\", \"Жискета\", \"Жасмин\", \"Зарина\", \"Занвезия\", \"Ирида\", \"Инимика\", \"Иллиада\", \"Иннея\", \"Изабель\", \"Изабелла\", \"Карина\", \"Кира\", \"Карменсита\", \"Кариона\", \"Катрин\", \"Клер\", \"Клара\", \"Кларисса\", \"Кларенс\", \"Кассиопея\", \"Калипсо\", \"Ким\", \"Кармен\", \"Кэти\", \"Кейт\", \"Кристен\", \"Кэри\", \"Коллин\", \"Кетрин\", \"Кэмерон\", \"Кирстен\", \"Лиана\", \"Люцианна\", \"Лира\", \"Леонора\", \"Луиза\", \"Ламентия\", \"Лейла\", \"Ламина\", \"Ласкетия\", \"Луна\", \"Леона\", \"Лиднерия\", \"Моран\", \"Марианна\", \"Мэйлин\", \"Морин\", \"Мэвен\", \"Мари\", \"Мэри\", \"Маргарет\", \"Мария\", \"Мариэтта\", \"Миранда\", \"Мюриэль\", \"Мэгги\", \"Мишель\", \"Мисора\", \"Нэнси\", \"Натали\", \"Найтири\", \"Наоми\", \"Онтария\", \"Офелия\", \"Онерия\", \"Овлиция\", \"Олимпия\", \"Пенелопа\", \"Палетта\", \"Пиония\", \"Пантеона\", \"Полин\", \"Птолемея\", \"Персея\", \"Пруденс\", \"Пао Ся\", \"Пикси\", \"Рамония\", \"Радулина\", \"Рамирия\", \"Розалия\", \"Рэйчел\", \"Рокси\", \"Роксана\", \"Розали\", \"Роза\", \"Рене\", \"Роуз\", \"Синтия\", \"Северия\", \"Селена\", \"Сельвия\", \"Симплиция\", \"Сюзанна\", \"Серенити\", \"Серентия\", \"Стелла\", \"Сьюзен\", \"Саю\", \"Сильвия\", \"Скарлетт\", \"Селения\", \"Тирис\", \"Талирика\", \"Титания\", \"Татиана\", \"Тирания\", \"Талеона\", \"Титания\", \"Тамми\", \"Тамия\", \"Таомаг\", \"Тринни\", \"Такада\", \"Уэди\", \"Урания\", \"Улания\", \"Фулона\", \"Филомена\", \"Феерия\", \"Фаина\", \"Флора\", \"Фауна\", \"Фрида\", \"Христина\", \"Хелен\", \"Хаара\", \"Халле\", \"Хейди\", \"Хилари\", \"Хизер\", \"Холли\", \"Чжоу\", \"Чао\", \"Шаэра\", \"Шиетта\", \"Шалия\", \"Шерлиз\", \"Юджия\", \"Юджина\", \"Юория\", \"Юстана\", \"Яна\", \"Пинк\" }\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "   Ваше золото:",
+    "answers": [
+      {
+        "id": 2,
+        "text": "... наборы ...",
+        "run": [
+          2
+        ]
+      },
+      {
+        "id": 6,
+        "text": "   ...",
+        "run": [
+          6
+        ],
+        "instant": false
+      },
+      {
+        "lua_text": "function lua_text()\n   if gold < 100 then\n      pred1 = 1\n      pred = packName [math.random (#packName)] .. persName [1]\n   elseif gold < 300 then\n      pred1 = 2\n      pred = packName [math.random (#packName)] .. persName [2] \n   elseif gold < 1000 then\n      pred1 = 3\n      pred = packName [math.random (#packName)] .. persName [3] \n   elseif gold < 3000 then\n      pred1 = 4\n      pred = packName [math.random (#packName)] .. persName [4]\n   elseif gold < 10000 then\n      pred1 = 5\n      pred = packName [math.random (#packName)] .. persName [5] \n   elseif gold < 30000 then\n      pred1 = 6\n      pred = packName [math.random (#packName)] .. persName [6]\n   elseif gold < 100000 then\n      pred1 = 7\n      pred = packName [math.random (#packName)] .. persName [7] \n   elseif gold < 300000 then\n      pred1 = 8\n      pred = packName [math.random (#packName)] .. persName [8] \n   elseif gold < 1000000 then\n      pred1 = 9\n      pred = packName [math.random (#packName)] .. persName [9]\n   else\n      pred1 = 0\n      pred = \"\"\n   end\nreturn gold .. \"<s>\n   Что хотите открыть?\"\nend",
+        "id": 3,
+        "instant": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "instant": false,
+        "super_calculate": false,
+        "id": 3,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   myHead = myHead or { }\n   myBody = myBody or { }\n   myHand = myHand or { }\n   myFoot = myFoot or { }\n   myWeapon = myWeapon or { }\n   myAcs = myAcs or { }\n\n   priceHead = priceHead or { }\n   priceBody = priceBody or { }\n   priceHand = priceHand or { }\n   priceFoot = priceFoot or { }\n   priceWeapon = priceWeapon or { }\n   priceAcs = priceAcs or { }\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_if": "function lua_if()\nreturn gold >= 100 and gold < 3000\nend",
+        "text": " (100 золота)",
+        "id": 3,
+        "var_sub": [
+          "gold",
+          100
+        ],
+        "lua_do": "function lua_do()\nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get1()\n   end\n    local a = get2()\nend",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [1] .. \" (100 монет)\"\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_if": "function lua_if()\nreturn gold >= 300 and gold < 10000\nend",
+        "text": " (300 золота)",
+        "id": 3,
+        "var_sub": [
+          "gold",
+          300
+        ],
+        "lua_do": "function lua_do()\nif status < 1 then status = 1 end \nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get2()\n   end\n   local a = get3()\nend",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [2] .. \" (300 монет)\"\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_if": "function lua_if()\nreturn gold >= 1000 and gold < 30000\nend",
+        "text": " (1 000 золота)",
+        "id": 3,
+        "var_sub": [
+          "gold",
+          1000
+        ],
+        "lua_do": "function lua_do()\nif status < 2 then status = 2 end \nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get3()\n   end\n   local a = get4()\nend",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [3] .. \" (1 000 монет)\"\nend"
+      },
+      {
+        "instant": true,
+        "id": 3,
+        "comment": false,
+        "var_sub": [
+          "gold",
+          3000
+        ],
+        "lua_do": "function lua_do()\nif status < 3 then status = 3 end \nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get4()\n   end\n   local a = get5()\nend",
+        "text": " (3 000 золота)",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [4] .. \" (3 000 монет)\"\nend",
+        "lua_if": "function lua_if()\nreturn gold >= 3000 and gold < 100000\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_if": "function lua_if()\nreturn gold >= 10000 and gold < 300000\nend",
+        "text": " (10 000 золота)",
+        "id": 3,
+        "var_sub": [
+          "gold",
+          10000
+        ],
+        "lua_do": "function lua_do()\nif status < 4 then status = 4 end \nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get5()\n   end\n   local a = get6()\nend",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [5] .. \" (10 000 монет)\"\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn gold >= 30000 and gold < 1000000\nend",
+        "id": 3,
+        "comment": false,
+        "instant": true,
+        "lua_do": "function lua_do()\nif status < 5 then status = 5 end \nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get6()\n   end\n   local a = get7()\nend",
+        "text": " (30 000 золота)",
+        "var_sub": [
+          "gold",
+          30000
+        ],
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [6] .. \" (30 000 монет)\"\nend"
+      },
+      {
+        "var_sub": [
+          "gold",
+          100000
+        ],
+        "lua_do": "function lua_do()\nif status < 6 then status = 6 end \nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get7()\n   end\n   local a = get8()\nend",
+        "lua_if": "function lua_if()\nreturn gold >= 100000\nend",
+        "instant": true,
+        "id": 3,
+        "text": " (100 000 золота)",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [7] .. \" (100 000 монет)\"\nend",
+        "comment": false
+      },
+      {
+        "var_sub": [
+          "gold",
+          300000
+        ],
+        "lua_do": "function lua_do()\nif status < 7 then status = 7 end \nlocal aa = math.random(3,5) \n   for i = 1, aa do\n      local a = get8()\n   end\n   local a = get9()\nend",
+        "lua_if": "function lua_if()\nreturn gold >= 300000\nend",
+        "instant": true,
+        "id": 3,
+        "text": " (300 000 золота)",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [8] .. \" (300 000 монет)\"\nend",
+        "comment": false
+      },
+      {
+        "var_sub": [
+          "gold",
+          1000000
+        ],
+        "lua_do": "function lua_do()\nif status < 8 then status = 8 end \nlocal aa = math.random(4,6) \n   for i = 1, aa do\n      local a = get9()\n   end\nend",
+        "lua_if": "function lua_if()\nreturn gold >= 1000000\nend",
+        "instant": true,
+        "id": 3,
+        "text": " (1 000 000 золота)",
+        "lua_text": "function lua_text()\nreturn packName [math.random (#packName)] .. persName [9] .. \" (1 000 000 монет)\"\nend",
+        "comment": false
+      },
+      {
+        "comment": true,
+        "id": 3,
+        "text": "   ",
+        "lua_text": "function lua_text()\nlocal aa = 0\n   if pred1 == 1 then aa = 100\n   elseif pred1 == 2 then aa = 300\n   elseif pred1 == 3 then aa = 1000\n   elseif pred1 == 4 then aa = 3000\n   elseif pred1 == 5 then aa = 10000\n   elseif pred1 == 6 then aa = 30000\n   elseif pred1 == 7 then aa = 100000\n   elseif pred1 == 8 then aa = 300000\n   elseif pred1 == 9 then aa = 1000000\n   end\nreturn pred .. \" (\" .. aa .. \" монет)\"\nend",
+        "lua_if": "function lua_if()\nreturn pred1 > 0\nend"
+      },
+      {
+        "authorsAd": "",
+        "lua_if": "function lua_if()\nreturn pred1 > 0\nend",
+        "comment": false,
+        "id": 3,
+        "lua_do": "function lua_do()\nrek = rek <plus> 1\nlocal a = \"\"\nlocal aa = math.random(4,5) \n   for i = 1, aa do\n      if pred1 == 1 then a = get1()\n      elseif pred1 == 2 then a = get2()\n      elseif pred1 == 3 then a = get3()\n      elseif pred1 == 4 then a = get4()\n      elseif pred1 == 5 then a = get5()\n      elseif pred1 == 6 then a = get6()\n      elseif pred1 == 7 then a = get7()\n      elseif pred1 == 8 then a = get8()\n      elseif pred1 == 9 then a = get9()\n      end\n   end\n   if pred1 == 1 then a = get2()\n   elseif pred1 == 2 then a = get3()\n   elseif pred1 == 3 then a = get4()\n   elseif pred1 == 4 then a = get5()\n   elseif pred1 == 5 then a = get6()\n   elseif pred1 == 6 then a = get7()\n   elseif pred1 == 7 then a = get8()\n   elseif pred1 == 8 then a = get9()\n   elseif pred1 == 9 then a = get9()\n   end\nend",
+        "text": " (реклама)",
+        "instant": true,
+        "lua_text": "function lua_text()\nreturn pred .. \" (реклама)\"\nend"
+      },
+      {
+        "id": 3,
+        "text": "Отображаются только три самых дорогих чемодана по кошельку игроку. Чемоданов должно быть очень много, с ценами от 10 до миллиона, с разными названиями, чтобы игрок чувствовал прогресс\nчемоданы можно открывать сколько угодно, пока не закончатся деньги",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"   \"\nend"
+      },
+      {
+        "id": 4,
+        "text": "Перейти к одеванию героя",
+        "lua_do": "function lua_do()\n   headHero, bodyHero, handHero, footHero, weaponHero, acsHero = 0, 0, 0, 0, 0, 0\n   male = math.random(2)\n   if male == 1 then\n      nameNum = math.random(#mName)\n   else\n      nameNum = math.random(#wName)\n   end\n   sort1 = 1\nend"
+      },
+      {
+        "id": 3,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "Осмотреть гардероб и продать ненужное",
+        "var_set": [
+          "slide",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   Ваш клиент: ",
+    "answers": [
+      {
+        "comment": true,
+        "id": 4,
+        "text": "голова: ",
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nlocal aa = \"-\"\n   if headHero == 0 then\n      aa = \"-\"\n   elseif headHero > 0 then\n      aa = myHead [headHero]\n   end\nreturn \"Голова: \" .. aa\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #myHead > 0\nend",
+        "comment": false,
+        "id": 4,
+        "middle_answer": true,
+        "text": "Голова, след.предмет",
+        "instant": true,
+        "lua_do": "function lua_do()\n   if headHero == 0 then\n      headHero = #myHead\n   else\n      headHero = headHero - 1\n   end\nend"
+      },
+      {
+        "comment": true,
+        "id": 4,
+        "text": "  ",
+        "lua_text": "function lua_text()\nlocal aa = \"-\"\n   if handHero == 0 then\n      aa = \"-\"\n   elseif handHero > 0 then\n      aa = myHand [handHero]\n   end\nreturn \"Руки: \" .. aa\nend",
+        "left_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #myHand > 0\nend",
+        "id": 4,
+        "comment": false,
+        "text": "Руки, след.предмет",
+        "middle_answer": false,
+        "instant": true,
+        "lua_do": "function lua_do()\n   if handHero == 0 then\n      handHero = #myHand\n   else\n      handHero = handHero - 1\n   end\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\nlocal aa = \"-\"\n   if bodyHero == 0 then\n      aa = \"-\"\n   elseif bodyHero > 0 then\n      aa = myBody [bodyHero]\n   end\nreturn \"Тело: \" .. aa\nend",
+        "id": 4,
+        "text": "  ",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #myBody > 0\nend",
+        "right_answer": true,
+        "comment": false,
+        "lua_do": "function lua_do()\n   if bodyHero == 0 then\n      bodyHero = #myBody\n   else\n      bodyHero = bodyHero - 1\n   end\nend",
+        "id": 4,
+        "text": "Тело, след.предмет",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "id": 4,
+        "text": "  ",
+        "lua_text": "function lua_text()\nlocal aa = \"-\"\n   if footHero == 0 then\n      aa = \"-\"\n   elseif footHero > 0 then\n      aa = myFoot [footHero]\n   end\nreturn \"Ноги: \" .. aa\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #myFoot > 0\nend",
+        "comment": false,
+        "id": 4,
+        "middle_answer": true,
+        "text": "Ноги, след.предмет",
+        "instant": true,
+        "lua_do": "function lua_do()\n   if footHero == 0 then\n      footHero = #myFoot\n   else\n      footHero = footHero - 1\n   end\nend"
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal aa = \"-\"\n   if weaponHero == 0 then\n      aa = \"-\"\n   elseif weaponHero > 0 then\n      aa = myWeapon [weaponHero]\n   end\nreturn \"Оружие: \" .. aa\nend",
+        "middle_answer": false,
+        "text": "  ",
+        "id": 4,
+        "left_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #myWeapon > 0\nend",
+        "id": 4,
+        "comment": false,
+        "text": "Оружие, след.предмет",
+        "middle_answer": false,
+        "instant": true,
+        "lua_do": "function lua_do()\n   if weaponHero == 0 then\n      weaponHero = #myWeapon\n   else\n      weaponHero = weaponHero - 1\n   end\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 4,
+        "text": "  ",
+        "lua_text": "function lua_text()\nlocal aa = \"-\"\n   if acsHero == 0 then\n      aa = \"-\"\n   elseif acsHero > 0 then\n      aa = myAcs [acsHero]\n   end\nreturn \"Аксессуар: \" .. aa\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #myAcs > 0\nend",
+        "right_answer": true,
+        "comment": false,
+        "lua_do": "function lua_do()\n   if acsHero == 0 then\n      acsHero = #myAcs\n   else\n      acsHero = acsHero - 1\n   end\nend",
+        "id": 4,
+        "text": "Аксессуар, след.предмет",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "id": 4,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": "Готово!",
+        "lua_if": "function lua_if()\nreturn headHero > 0 or bodyHero > 0 or handHero > 0 or footHero > 0 or weaponHero > 0 or acsHero > 0\nend",
+        "lua_do": "function lua_do()\nconnectHero = math.random(3) \nend"
+      },
+      {
+        "id": 4,
+        "text": "   ",
+        "lua_text": "function lua_text()\n   local aa = \"\"\n   if male == 1 then\n      aa = \"герой \"\n      name = mName [nameNum]\n   else\n      aa = \"героиня \"\n      name = wName [nameNum]\n   end\nreturn aa .. name\nend",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "id": 4,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   local aa = 0\n   local bb = 0\n   local sum = { 20, 60, 200, 600, 2000, 6000, 20000, 60000, 200000 }\n   if headHero > 0 then \n      aa = aa <plus> priceHead [headHero] \n      bb = bb <plus> sum [priceHead [headHero]] end\n   if bodyHero > 0 then\n      aa = aa <plus> priceBody [bodyHero]\n      bb = bb <plus> sum [priceBody [bodyHero]] end\n   if handHero > 0 then \n      aa = aa <plus> priceHand [handHero] \n      bb = bb <plus> sum [priceHand [handHero]] end\n   if footHero > 0 then\n      aa = aa <plus> priceFoot [footHero]\n      bb = bb <plus> sum [priceFoot [footHero]] end\n   if weaponHero > 0 then\n      aa = aa <plus> priceWeapon [weaponHero]\n      bb = bb <plus> sum [priceWeapon [weaponHero]] end\n   if acsHero > 0 then\n      aa = aa <plus> priceAcs [acsHero] \n      bb = bb <plus> sum [priceAcs [acsHero]] end\n   heroPrice = bb\n   heroKa4 = aa\nend",
+        "text": "   "
+      },
+      {
+        "id": 4,
+        "text": "   ",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"[ цена: \" .. heroPrice .. \", качество: \" .. heroKa4 .. \" ]\"\nend"
+      },
+      {
+        "id": 4,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   Выберите вещь, которую хотите продать.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nlocal aa = 0\nlocal ab = 0\ncontrolSell = 0\n\n   ab = #myHead\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myHead[i] then\n            myHead[i] = myHead[i<plus>1]\n            priceHead[i] = priceHead[i<plus>1]\n            myHead[i<plus>1], priceHead[i<plus>1] = nil, nil\n         end\n      end\n   end\n\n   ab = #myBody\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myBody[i] then\n            myBody[i] = myBody[i<plus>1]\n            priceBody[i] = priceBody[i<plus>1]\n            myBody[i<plus>1], priceBody[i<plus>1] = nil, nil\n         end\n      end\n   end\n\n   ab = #myHand\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myHand[i] then\n            myHand[i] = myHand[i<plus>1]\n            priceHand[i] = priceHand[i<plus>1]\n            myHand[i<plus>1], priceHand[i<plus>1] = nil, nil\n         end\n      end\n   end\n\n   ab = #myFoot\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myFoot[i] then\n            myFoot[i] = myFoot[i<plus>1]\n            priceFoot[i] = priceFoot[i<plus>1]\n            myFoot[i<plus>1], priceFoot[i<plus>1] = nil, nil\n         end\n      end\n   end\n\n   ab = #myWeapon\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myWeapon[i] then\n            myWeapon[i] = myWeapon[i<plus>1]\n            priceWeapon[i] = priceWeapon[i<plus>1]\n            myWeapon[i<plus>1], priceWeapon[i<plus>1] = nil, nil\n         end\n      end\n   end\n\n   ab = #myAcs\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myAcs[i] then\n            myAcs[i] = myAcs[i<plus>1]\n            priceAcs[i] = priceAcs[i<plus>1]\n            myAcs[i<plus>1], priceAcs[i<plus>1] = nil, nil\n         end\n      end\n   end\n\nend",
+        "comment": false,
+        "super_calculate": false,
+        "id": 5,
+        "text": "  ",
+        "calculate": true,
+        "var_equal": [
+          "controlSell",
+          1
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\n   sumItem = #myHead <plus> #myBody <plus> #myHand <plus> #myFoot <plus> #myWeapon <plus> #myAcs\n   sell1 = (slide * 5) <plus> 1\n   sell2 = (slide * 5) <plus> 2\n   sell3 = (slide * 5) <plus> 3\n   sell4 = (slide * 5) <plus> 4\n   sell5 = (slide * 5) <plus> 5\nend",
+        "comment": false,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "   ",
+        "lua_if": "function lua_if()\n   sumItem = #myHead <plus> #myBody <plus> #myHand <plus> #myFoot <plus> #myWeapon <plus> #myAcs\n   sell1 = (slide * 5) <plus> 1\n   sell2 = (slide * 5) <plus> 2\n   sell3 = (slide * 5) <plus> 3\n   sell4 = (slide * 5) <plus> 4\n   sell5 = (slide * 5) <plus> 5\nreturn true\nend"
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn sell1 <= sumItem\nend",
+        "lua_do": "function lua_do()\n   gold = gold <plus> sellPrice1\n   controlSell = 1\n   local aa = sellTab1\n   local ab = sellNum1\n   if aa == 1 then\n      myHead [ab] = nil\n      priceHead [ab] = nil\n   elseif aa == 2 then\n      myBody [ab] = nil\n      priceBody [ab] = nil\n   elseif aa == 3 then\n      myHand [ab] = nil\n      priceHand [ab] = nil\n   elseif aa == 4 then\n      myFoot [ab] = nil\n      priceFoot [ab] = nil\n   elseif aa == 5 then\n      myWeapon [ab] = nil\n      priceWeapon [ab] = nil\n   else\n      myAcs [ab] = nil\n      priceAcs [ab] = nil\n   end\n\nend",
+        "text": "   ",
+        "lua_text": "function lua_text()\nlocal aa1 = sell1\nlocal sn1 = \"\"\nlocal st1 = 0\n  if aa1 <= #myHead then\n      sn1 = myHead[aa1]\n      st1 = 1\n   else\n      aa1 = aa1 - #myHead\n      if aa1 <= #myBody then\n         sn1 = myBody[aa1]\n         st1 = 2\n      else\n         aa1 = aa1 - #myBody\n         if aa1 <= #myHand then\n            sn1 = myHand[aa1]\n            st1 = 3\n         else\n            aa1 = aa1 - #myHand \n            if aa1 <= #myFoot then\n               sn1 = myFoot[aa1]\n               st1 = 4\n            else\n               aa1 = aa1 - #myFoot\n               if aa1 <= #myWeapon then\n                  sn1 = myWeapon[aa1]\n                  st1 = 5\n               else\n                  aa1 = aa1 - #myWeapon\n                  sn1 = myAcs[aa1]\n                  st1 = 6\n               end\n            end\n         end\n      end\n   end\n\n   local tabPrice = { 20, 60, 200, 600, 2000, 6000, 20000, 60000, 200000 }\n   local sp1 = 0\n   if st1 == 1 then\n      sp1 = tabPrice [priceHead [aa1]]\n   elseif st1 == 2 then\n      sp1 = tabPrice [priceBody [aa1]]\n   elseif st1 == 3 then\n      sp1 = tabPrice [priceHand [aa1]]\n   elseif st1 == 4 then\n      sp1 = tabPrice [priceFoot [aa1]]\n   elseif st1 == 5 then\n      sp1 = tabPrice [priceWeapon [aa1]]\n   else\n      sp1 = tabPrice [priceAcs [aa1]]\n   end\n    \nsellTab1 = st1\nsellName1 = sn1\nsellNum1 = aa1\nsellPrice1 = sp1\nreturn sellName1 .. \" (\" .. sp1 .. \" монет)\"\nend",
+        "id": 5
+      },
+      {
+        "lua_if": "function lua_if()\nreturn sell2 <= sumItem\nend",
+        "lua_do": "function lua_do()\n   gold = gold <plus> sellPrice2\n   controlSell = 1\n   local aa = sellTab2\n   local ab = sellNum2\n   if aa == 1 then\n      myHead [ab] = nil\n      priceHead [ab] = nil\n   elseif aa == 2 then\n      myBody [ab] = nil\n      priceBody [ab] = nil\n   elseif aa == 3 then\n      myHand [ab] = nil\n      priceHand [ab] = nil\n   elseif aa == 4 then\n      myFoot [ab] = nil\n      priceFoot [ab] = nil\n   elseif aa == 5 then\n      myWeapon [ab] = nil\n      priceWeapon [ab] = nil\n   else\n      myAcs [ab] = nil\n      priceAcs [ab] = nil\n   end\n\nend",
+        "id": 5,
+        "text": "   ",
+        "lua_text": "function lua_text()\nlocal aa1 = sell2\nlocal sn1 = \"\"\nlocal st1 = 0\n  if aa1 <= #myHead then\n      sn1 = myHead[aa1]\n      st1 = 1\n   else\n      aa1 = aa1 - #myHead\n      if aa1 <= #myBody then\n         sn1 = myBody[aa1]\n         st1 = 2\n      else\n         aa1 = aa1 - #myBody\n         if aa1 <= #myHand then\n            sn1 = myHand[aa1]\n            st1 = 3\n         else\n            aa1 = aa1 - #myHand \n            if aa1 <= #myFoot then\n               sn1 = myFoot[aa1]\n               st1 = 4\n            else\n               aa1 = aa1 - #myFoot\n               if aa1 <= #myWeapon then\n                  sn1 = myWeapon[aa1]\n                  st1 = 5\n               else\n                  aa1 = aa1 - #myWeapon\n                  sn1 = myAcs[aa1]\n                  st1 = 6\n               end\n            end\n         end\n      end\n   end\n\n   local tabPrice = { 20, 60, 200, 600, 2000, 6000, 20000, 60000, 200000 }\n   local sp1 = 0\n   if st1 == 1 then\n      sp1 = tabPrice [priceHead [aa1]]\n   elseif st1 == 2 then\n      sp1 = tabPrice [priceBody [aa1]]\n   elseif st1 == 3 then\n      sp1 = tabPrice [priceHand [aa1]]\n   elseif st1 == 4 then\n      sp1 = tabPrice [priceFoot [aa1]]\n   elseif st1 == 5 then\n      sp1 = tabPrice [priceWeapon [aa1]]\n   else\n      sp1 = tabPrice [priceAcs [aa1]]\n   end\n    \nsellTab2 = st1\nsellName2 = sn1\nsellNum2 = aa1\nsellPrice2 = sp1\nreturn sn1 .. \" (\" .. sp1 .. \" монет)\"\nend",
+        "comment": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn sell3 <= sumItem\nend",
+        "lua_do": "function lua_do()\n   gold = gold <plus> sellPrice3\n   controlSell = 1\n   local aa = sellTab3\n   local ab = sellNum3\n   if aa == 1 then\n      myHead [ab] = nil\n      priceHead [ab] = nil\n   elseif aa == 2 then\n      myBody [ab] = nil\n      priceBody [ab] = nil\n   elseif aa == 3 then\n      myHand [ab] = nil\n      priceHand [ab] = nil\n   elseif aa == 4 then\n      myFoot [ab] = nil\n      priceFoot [ab] = nil\n   elseif aa == 5 then\n      myWeapon [ab] = nil\n      priceWeapon [ab] = nil\n   else\n      myAcs [ab] = nil\n      priceAcs [ab] = nil\n   end\n\nend",
+        "id": 5,
+        "text": "   ",
+        "lua_text": "function lua_text()\nlocal aa1 = sell3\nlocal sn1 = \"\"\nlocal st1 = 0\n  if aa1 <= #myHead then\n      sn1 = myHead[aa1]\n      st1 = 1\n   else\n      aa1 = aa1 - #myHead\n      if aa1 <= #myBody then\n         sn1 = myBody[aa1]\n         st1 = 2\n      else\n         aa1 = aa1 - #myBody\n         if aa1 <= #myHand then\n            sn1 = myHand[aa1]\n            st1 = 3\n         else\n            aa1 = aa1 - #myHand \n            if aa1 <= #myFoot then\n               sn1 = myFoot[aa1]\n               st1 = 4\n            else\n               aa1 = aa1 - #myFoot\n               if aa1 <= #myWeapon then\n                  sn1 = myWeapon[aa1]\n                  st1 = 5\n               else\n                  aa1 = aa1 - #myWeapon\n                  sn1 = myAcs[aa1]\n                  st1 = 6\n               end\n            end\n         end\n      end\n   end\n\n   local tabPrice = { 20, 60, 200, 600, 2000, 6000, 20000, 60000, 200000 }\n   local sp1 = 0\n   if st1 == 1 then\n      sp1 = tabPrice [priceHead [aa1]]\n   elseif st1 == 2 then\n      sp1 = tabPrice [priceBody [aa1]]\n   elseif st1 == 3 then\n      sp1 = tabPrice [priceHand [aa1]]\n   elseif st1 == 4 then\n      sp1 = tabPrice [priceFoot [aa1]]\n   elseif st1 == 5 then\n      sp1 = tabPrice [priceWeapon [aa1]]\n   else\n      sp1 = tabPrice [priceAcs [aa1]]\n   end\n    \nsellTab3 = st1\nsellName3 = sn1\nsellNum3 = aa1\nsellPrice3 = sp1\nreturn sn1 .. \" (\" .. sp1 .. \" монет)\"\nend",
+        "comment": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn sell4 <= sumItem\nend",
+        "lua_text": "function lua_text()\nlocal aa1 = sell4\nlocal sn1 = \"\"\nlocal st1 = 0\n  if aa1 <= #myHead then\n      sn1 = myHead[aa1]\n      st1 = 1\n   else\n      aa1 = aa1 - #myHead\n      if aa1 <= #myBody then\n         sn1 = myBody[aa1]\n         st1 = 2\n      else\n         aa1 = aa1 - #myBody\n         if aa1 <= #myHand then\n            sn1 = myHand[aa1]\n            st1 = 3\n         else\n            aa1 = aa1 - #myHand \n            if aa1 <= #myFoot then\n               sn1 = myFoot[aa1]\n               st1 = 4\n            else\n               aa1 = aa1 - #myFoot\n               if aa1 <= #myWeapon then\n                  sn1 = myWeapon[aa1]\n                  st1 = 5\n               else\n                  aa1 = aa1 - #myWeapon\n                  sn1 = myAcs[aa1]\n                  st1 = 6\n               end\n            end\n         end\n      end\n   end\n\n   local tabPrice = { 20, 60, 200, 600, 2000, 6000, 20000, 60000, 200000 }\n   local sp1 = 0\n   if st1 == 1 then\n      sp1 = tabPrice [priceHead [aa1]]\n   elseif st1 == 2 then\n      sp1 = tabPrice [priceBody [aa1]]\n   elseif st1 == 3 then\n      sp1 = tabPrice [priceHand [aa1]]\n   elseif st1 == 4 then\n      sp1 = tabPrice [priceFoot [aa1]]\n   elseif st1 == 5 then\n      sp1 = tabPrice [priceWeapon [aa1]]\n   else\n      sp1 = tabPrice [priceAcs [aa1]]\n   end\n    \nsellTab4 = st1\nsellName4 = sn1\nsellNum4 = aa1\nsellPrice4 = sp1\nreturn sn1 .. \" (\" .. sp1 .. \" монет)\"\nend",
+        "id": 5,
+        "text": "   ",
+        "lua_do": "function lua_do()\n   gold = gold <plus> sellPrice4\n   controlSell = 1\n   local aa = sellTab4\n   local ab = sellNum4\n   if aa == 1 then\n      myHead [ab] = nil\n      priceHead [ab] = nil\n   elseif aa == 2 then\n      myBody [ab] = nil\n      priceBody [ab] = nil\n   elseif aa == 3 then\n      myHand [ab] = nil\n      priceHand [ab] = nil\n   elseif aa == 4 then\n      myFoot [ab] = nil\n      priceFoot [ab] = nil\n   elseif aa == 5 then\n      myWeapon [ab] = nil\n      priceWeapon [ab] = nil\n   else\n      myAcs [ab] = nil\n      priceAcs [ab] = nil\n   end\n\nend",
+        "comment": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn sell5 <= sumItem\nend",
+        "lua_text": "function lua_text()\nlocal aa1 = sell5\nlocal sn1 = \"\"\nlocal st1 = 0\n  if aa1 <= #myHead then\n      sn1 = myHead[aa1]\n      st1 = 1\n   else\n      aa1 = aa1 - #myHead\n      if aa1 <= #myBody then\n         sn1 = myBody[aa1]\n         st1 = 2\n      else\n         aa1 = aa1 - #myBody\n         if aa1 <= #myHand then\n            sn1 = myHand[aa1]\n            st1 = 3\n         else\n            aa1 = aa1 - #myHand \n            if aa1 <= #myFoot then\n               sn1 = myFoot[aa1]\n               st1 = 4\n            else\n               aa1 = aa1 - #myFoot\n               if aa1 <= #myWeapon then\n                  sn1 = myWeapon[aa1]\n                  st1 = 5\n               else\n                  aa1 = aa1 - #myWeapon\n                  sn1 = myAcs[aa1]\n                  st1 = 6\n               end\n            end\n         end\n      end\n   end\n\n   local tabPrice = { 20, 60, 200, 600, 2000, 6000, 20000, 60000, 200000 }\n   local sp1 = 0\n   if st1 == 1 then\n      sp1 = tabPrice [priceHead [aa1]]\n   elseif st1 == 2 then\n      sp1 = tabPrice [priceBody [aa1]]\n   elseif st1 == 3 then\n      sp1 = tabPrice [priceHand [aa1]]\n   elseif st1 == 4 then\n      sp1 = tabPrice [priceFoot [aa1]]\n   elseif st1 == 5 then\n      sp1 = tabPrice [priceWeapon [aa1]]\n   else\n      sp1 = tabPrice [priceAcs [aa1]]\n   end\n    \nsellTab5 = st1\nsellName5 = sn1\nsellNum5 = aa1\nsellPrice5 = sp1\nreturn sn1 .. \" (\" .. sp1 .. \" монет)\"\nend",
+        "id": 5,
+        "text": "   ",
+        "lua_do": "function lua_do()\n   gold = gold <plus> sellPrice5\n   controlSell = 1\n   local aa = sellTab5\n   local ab = sellNum5\n   if aa == 1 then\n      myHead [ab] = nil\n      priceHead [ab] = nil\n   elseif aa == 2 then\n      myBody [ab] = nil\n      priceBody [ab] = nil\n   elseif aa == 3 then\n      myHand [ab] = nil\n      priceHand [ab] = nil\n   elseif aa == 4 then\n      myFoot [ab] = nil\n      priceFoot [ab] = nil\n   elseif aa == 5 then\n      myWeapon [ab] = nil\n      priceWeapon [ab] = nil\n   else\n      myAcs [ab] = nil\n      priceAcs [ab] = nil\n   end\n\nend",
+        "comment": false
+      },
+      {
+        "id": 5,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 5,
+        "text": "Следущие",
+        "var_add": [
+          "slide",
+          1
+        ],
+        "lua_if": "function lua_if()\nreturn ((slide * 5) <plus> 5) < sumItem\nend"
+      },
+      {
+        "comment": false,
+        "id": 5,
+        "text": "Предыдущие",
+        "var_sub": [
+          "slide",
+          1
+        ],
+        "var_need": [
+          "slide",
+          1
+        ]
+      },
+      {
+        "id": 5,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Отказаться",
+        "comment": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "global isAuthor",
+          1
+        ],
+        "id": 5,
+        "text": "  ",
+        "lua_text": "function lua_text()\nreturn sumItem\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nget1 = function ()\n   local typeItem = math.random(6)\n   local aa = 0\n   local dropItem = \"\"\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texHeadM [aa] \n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texHeadW [aa] \n         else\n            aa = aa - #texHeadW\n            dropItem = texHeadS [aa]\n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texBodyM [aa] \n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texBodyW [aa] \n         else\n            aa = aa - #texBodyW\n            dropItem = texBodySs [aa] \n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texHandSs [math.random (#texHandSs)] \n\n   elseif typeItem == 4 then\n      dropItem = texFootSs [math.random (#texFootSs)] \n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texWeaponM [aa]\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texWeaponW [aa] \n         else\n            aa = aa - #texWeaponW\n            dropItem = texWeaponS [aa]\n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texAcsM [aa] \n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texAcsW [aa] \n         else\n            aa = aa - #texAcsW\n            dropItem = texAcsS [aa]\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem .. \" б/у\")\n      table.insert (priceHead, 1) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem .. \" б/у\") \n      table.insert (priceBody, 1) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem .. \" б/у\")\n      table.insert (priceHand, 1) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem .. \" б/у\")\n      table.insert (priceFoot, 1) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem ..\" б/у\")\n      table.insert (priceWeapon, 1) \n   else\n      table.insert (myAcs, dropItem .. \" б/у\")\n      table.insert (priceAcs, 1) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem .. \" б/у\", answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend",
+        "calculate": true,
+        "text": "100",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nget2 = function ()\n   local typeItem = math.random(6)\n   local aa = 0\n   local dropItem = \"\"\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texHeadM [aa] \n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texHeadW [aa] \n         else\n            aa = aa - #texHeadW\n            dropItem = texHeadS [aa]\n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texBodyM [aa] \n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texBodyW [aa] \n         else\n            aa = aa - #texBodyW\n            dropItem = texBodySs [aa] \n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texHandSs [math.random (#texHandSs)] \n\n   elseif typeItem == 4 then\n      dropItem = texFootSs [math.random (#texFootSs)] \n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texWeaponM [aa]\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texWeaponW [aa] \n         else\n            aa = aa - #texWeaponW\n            dropItem = texWeaponS [aa]\n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texAcsM [aa] \n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texAcsW [aa] \n         else\n            aa = aa - #texAcsW\n            dropItem = texAcsS [aa]\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 2) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 2) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 2) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 2) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 2) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 2) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend",
+        "text": "500",
+        "id": 6,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do()\nget3 = function()\n   local typeItem = math.random(6)\n   local aa = 0\n   local dropItem = \"\"\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texKa4M2 [math.random (#texKa4M2)] .. texHeadM [aa]\n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texKa4W2 [math.random (#texKa4W2)] .. texHeadW [aa]\n         else\n            aa = aa - #texHeadW\n            dropItem = texKa4S2 [math.random (#texKa4S2)] .. texHeadS [aa] \n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texKa4M2 [math.random (#texKa4M2)] .. texBodyM [aa] \n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texKa4W2 [math.random (#texKa4W2)] .. texBodyW [aa]\n         else\n            aa = aa - #texBodyW\n            dropItem = texKa4Ss2 [math.random (#texKa4Ss2)] .. texBodySs [aa] \n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texKa4Ss2 [math.random (#texKa4Ss2)] .. texHandSs [math.random (#texHandSs)] \n\n   elseif typeItem == 4 then\n      dropItem = texKa4Ss2 [math.random (#texKa4Ss2)] .. texFootSs [math.random (#texFootSs)] \n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texKa4M2 [math.random (#texKa4M2)] .. texWeaponM [aa]\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texKa4W2 [math.random (#texKa4W2)] .. texWeaponW [aa]\n         else\n            aa = aa - #texWeaponW\n            dropItem = texKa4S2 [math.random (#texKa4S2)] .. texWeaponS [aa] \n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texKa4M2 [math.random (#texKa4M2)] .. texAcsM [aa]\n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texKa4W2 [math.random (#texKa4W2)] .. texAcsW [aa]\n         else\n            aa = aa - #texAcsW\n            dropItem = texKa4S2 [math.random (#texKa4S2)] .. texAcsS [aa]\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 3) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 3) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 3) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 3) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 3) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 3) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend",
+        "text": "1000"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do()\nget4 = function()\n   local typeItem = math.random(6)\n   local aa = 0\n   local ab = shop4 [math.random (#shop4)] .. \" б/у\"\n   local dropItem = \"\"\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texHeadM [aa] .. ab\n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texHeadW [aa] .. ab\n         else\n            aa = aa - #texHeadW\n            dropItem = texHeadS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texBodyM [aa] .. ab\n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texBodyW [aa] .. ab\n         else\n            aa = aa - #texBodyW\n            dropItem = texBodySs [aa] .. ab\n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texHandSs [math.random (#texHandSs)] .. ab\n\n   elseif typeItem == 4 then\n      dropItem = texFootSs [math.random (#texFootSs)] ..ab\n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texWeaponM [aa] .. ab\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texWeaponW [aa] .. ab\n         else\n            aa = aa - #texWeaponW\n            dropItem = texWeaponS [aa] ..ab\n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texAcsM [aa] .. ab\n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texAcsW [aa] .. ab\n         else\n            aa = aa - #texAcsW\n            dropItem = texAcsS [aa] .. ab\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 4) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 4) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 4) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 4) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 4) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 4) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend",
+        "text": "5000"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nget5 = function()\n   local typeItem = math.random(6)\n   local aa = 0\n   local ab = shop4 [math.random (#shop4)]\n   local dropItem = \"\"\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texHeadM [aa] .. ab\n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texHeadW [aa] .. ab\n         else\n            aa = aa - #texHeadW\n            dropItem = texHeadS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texBodyM [aa] .. ab\n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texBodyW [aa] .. ab\n         else\n            aa = aa - #texBodyW\n            dropItem = texBodySs [aa] .. ab\n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texHandSs [math.random (#texHandSs)] .. ab\n\n   elseif typeItem == 4 then\n      dropItem = texFootSs [math.random (#texFootSs)] ..ab\n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texWeaponM [aa] .. ab\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texWeaponW [aa] .. ab\n         else\n            aa = aa - #texWeaponW\n            dropItem = texWeaponS [aa] ..ab\n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texAcsM [aa] .. ab\n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texAcsW [aa] .. ab\n         else\n            aa = aa - #texAcsW\n            dropItem = texAcsS [aa] .. ab\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 5) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 5) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 5) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 5) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 5) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 5) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend",
+        "calculate": true,
+        "text": "10.000",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nget6 = function()\n   local typeItem = math.random(6)\n   local aa = 0\n   local dropItem = \"\"\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texHeadM [aa]\n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texHeadW [aa]\n         else\n            aa = aa - #texHeadW\n            dropItem = texKa4S3 [math.random (#texKa4S3)] .. texHeadS [aa] \n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texBodyM [aa] \n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texBodyW [aa]\n         else\n            aa = aa - #texBodyW\n            dropItem = texKa4Ss3 [math.random (#texKa4Ss3)] .. texBodySs [aa] \n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texKa4Ss3 [math.random (#texKa4Ss3)] .. texHandSs [math.random (#texHandSs)] \n\n   elseif typeItem == 4 then\n      dropItem = texKa4Ss3 [math.random (#texKa4Ss3)] .. texFootSs [math.random (#texFootSs)] \n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texWeaponM [aa]\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texWeaponW [aa]\n         else\n            aa = aa - #texWeaponW\n            dropItem = texKa4S3 [math.random (#texKa4S3)] .. texWeaponS [aa] \n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texAcsM [aa]\n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texAcsW [aa]\n         else\n            aa = aa - #texAcsW\n            dropItem = texKa4S3 [math.random (#texKa4S3)] .. texAcsS [aa]\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 6) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 6) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 6) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 6) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 6) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 6) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend",
+        "text": "50.000",
+        "id": 6,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "text": "100.000",
+        "calculate": true,
+        "lua_do": "function lua_do()\nget7 = function()\n   local typeItem = math.random(6)\n   local aa = 0\n   local dropItem = \"\"\n   local ab = shop4 [math.random (#shop4)] .. \" б/у\"\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texHeadM [aa] .. ab\n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texHeadW [aa] .. ab\n         else\n            aa = aa - #texHeadW\n            dropItem = texKa4S3 [math.random (#texKa4S3)] .. texHeadS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texBodyM [aa] .. ab\n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texBodyW [aa] .. ab\n         else\n            aa = aa - #texBodyW\n            dropItem = texKa4Ss3 [math.random (#texKa4Ss3)] .. texBodySs [aa] .. ab\n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texKa4Ss3 [math.random (#texKa4Ss3)] .. texHandSs [math.random (#texHandSs)] .. ab\n\n   elseif typeItem == 4 then\n      dropItem = texKa4Ss3 [math.random (#texKa4Ss3)] .. texFootSs [math.random (#texFootSs)] .. ab\n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texWeaponM [aa] .. ab\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texWeaponW [aa] .. ab\n         else\n            aa = aa - #texWeaponW\n            dropItem = texKa4S3 [math.random (#texKa4S3)] .. texWeaponS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texKa4M3 [math.random (#texKa4M3)] .. texAcsM [aa] .. ab\n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texKa4W3 [math.random (#texKa4W3)] .. texAcsW [aa] .. ab\n         else\n            aa = aa - #texAcsW\n            dropItem = texKa4S3 [math.random (#texKa4S3)] .. texAcsS [aa] .. ab\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 7) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 7) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 7) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 7) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 7) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 7) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do()\nget8 = function()\n   local typeItem = math.random(6)\n   local aa = 0\n   local dropItem = \"\"\n   local ab = shop4 [math.random (#shop4)]\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texKa4M4 [math.random (#texKa4M4)] .. texHeadM [aa] .. ab\n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texKa4W4 [math.random (#texKa4W4)] .. texHeadW [aa] .. ab\n         else\n            aa = aa - #texHeadW\n            dropItem = texKa4S4 [math.random (#texKa4S4)] .. texHeadS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texKa4M4 [math.random (#texKa4M4)] .. texBodyM [aa] .. ab\n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texKa4W4 [math.random (#texKa4W4)] .. texBodyW [aa] .. ab\n         else\n            aa = aa - #texBodyW\n            dropItem = texKa4Ss4 [math.random (#texKa4Ss4)] .. texBodySs [aa] .. ab\n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texKa4Ss4 [math.random (#texKa4Ss4)] .. texHandSs [math.random (#texHandSs)] .. ab\n\n   elseif typeItem == 4 then\n      dropItem = texKa4Ss4 [math.random (#texKa4Ss4)] .. texFootSs [math.random (#texFootSs)] .. ab\n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texKa4M4 [math.random (#texKa4M4)] .. texWeaponM [aa] .. ab\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texKa4W4 [math.random (#texKa4W4)] .. texWeaponW [aa] .. ab\n         else\n            aa = aa - #texWeaponW\n            dropItem = texKa4S4 [math.random (#texKa4S4)] .. texWeaponS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texKa4M4 [math.random (#texKa4M4)] .. texAcsM [aa] .. ab\n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texKa4W4 [math.random (#texKa4W4)] .. texAcsW [aa] .. ab\n         else\n            aa = aa - #texAcsW\n            dropItem = texKa4S4 [math.random (#texKa4S4)] .. texAcsS [aa]\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 8) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 8) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 8) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 8) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 8) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 8) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend",
+        "text": "500.000"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "text": "1.000.000",
+        "calculate": true,
+        "lua_do": "function lua_do()\nget9 = function()\n   local typeItem = math.random(6)\n   local aa = 0\n   local dropItem = \"\"\n   local ab = shop5 [math.random (#shop5)]\n   if typeItem == 1 then\n      aa = math.random (#texHeadM <plus> #texHeadW <plus> #texHeadS)\n      if aa <= #texHeadM then\n         dropItem = texKa4M5 [math.random (#texKa4M5)] .. texHeadM [aa] .. ab\n      else\n         aa = aa - #texHeadM\n         if aa <= #texHeadW then\n            dropItem = texKa4W5 [math.random (#texKa4W5)] .. texHeadW [aa] .. ab\n         else\n            aa = aa - #texHeadW\n            dropItem = texKa4S5 [math.random (#texKa4S5)] .. texHeadS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 2 then\n      aa = math.random (#texBodyM <plus> #texBodyW <plus> #texBodySs)\n      if aa <= #texBodyM then\n         dropItem = texKa4M5 [math.random (#texKa4M5)] .. texBodyM [aa] .. ab\n      else\n         aa = aa - #texBodyM\n         if aa <= #texBodyW then\n            dropItem = texKa4W5 [math.random (#texKa4W5)] .. texBodyW [aa] .. ab\n         else\n            aa = aa - #texBodyW\n            dropItem = texKa4Ss5 [math.random (#texKa4Ss5)] .. texBodySs [aa] .. ab\n         end\n      end\n      \n   elseif typeItem == 3 then\n      dropItem = texKa4Ss5 [math.random (#texKa4Ss5)] .. texHandSs [math.random (#texHandSs)] .. ab\n\n   elseif typeItem == 4 then\n      dropItem = texKa4Ss5 [math.random (#texKa4Ss5)] .. texFootSs [math.random (#texFootSs)] .. ab\n\n   elseif typeItem == 5 then\n      aa = math.random (#texWeaponM <plus> #texWeaponW <plus> #texWeaponS)\n      if aa <= #texWeaponM then\n         dropItem = texKa4M5 [math.random (#texKa4M5)] .. texWeaponM [aa] .. ab\n      else\n         aa = aa - #texWeaponM\n         if aa <= #texWeaponW then\n            dropItem = texKa4W5 [math.random (#texKa4W5)] .. texWeaponW [aa] .. ab\n         else\n            aa = aa - #texWeaponW\n            dropItem = texKa4S5 [math.random (#texKa4S5)] .. texWeaponS [aa] .. ab\n         end\n      end\n\n   elseif typeItem == 6 then\n      aa = math.random (#texAcsM <plus> #texAcsW <plus> #texAcsS)\n      if aa <= #texAcsM then\n         dropItem = texKa4M5 [math.random (#texKa4M5)] .. texAcsM [aa] .. ab\n      else\n         aa = aa - #texAcsM\n         if aa <= #texAcsW then\n            dropItem = texKa4W5 [math.random (#texKa4W5)] .. texAcsW [aa] .. ab\n         else\n            aa = aa - #texAcsW\n            dropItem = texKa4S5 [math.random (#texKa4S5)] .. texAcsS [aa]\n         end\n      end\n   end\n\n   if typeItem == 1 then\n      table.insert (myHead, dropItem)\n      table.insert (priceHead, 9) \n   elseif typeItem == 2 then\n      table.insert (myBody, dropItem) \n      table.insert (priceBody, 9) \n   elseif typeItem == 3 then\n      table.insert (myHand, dropItem)\n      table.insert (priceHand, 9) \n   elseif typeItem == 4 then\n      table.insert (myFoot, dropItem)\n      table.insert (priceFoot, 9) \n   elseif typeItem == 5 then\n      table.insert (myWeapon, dropItem)\n      table.insert (priceWeapon, 9) \n   else\n      table.insert (myAcs, dropItem)\n      table.insert (priceAcs, 9) \n   end\n\n   local aat = \"\"\n   if typeItem == 1 then aat = \"Голова: \"\n   elseif typeItem == 2 then aat = \"Тело: \"\n   elseif typeItem == 3 then aat = \"Руки: \"\n   elseif typeItem == 4 then aat = \"Ноги: \"\n   elseif typeItem == 5 then aat = \"Оружие: \"\n   elseif typeItem == 6 then aat = \"Аксессуар: \"\n   end\n\n   dialog({header = \"Получено\", text = aat .. dropItem, answer = {{text = \"Ок\", pressListener = function() hideDialog() end}}})\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 10,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 10,
+        "text": "   ",
+        "lua_text": "function lua_text()\nreturn ({ \"Герой\", \"Героиня\" }) [male] .. \" \" .. name .. \" отправляется на показ мод, и вы вместе с \" .. ({ \"ним\", \"ней\" }) [male] .. \". Каждый из пяти участвующих кутерье демонстрирует участника со своей коллекцией экипировки и они же выбирают победителей путём голосования.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Соединение с сервером... (имитируем онлайн, отображаем этот ответ от 1 до 5 секунд, потом перезапускаем страницу со следуюшим ответом)",
+        "comment": true,
+        "need": [
+          999
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\naa = \"<s>\nОжидание других кутерье... (\" .. connectHero .. \"/5)\"\nif connectHero >= 5 then aa = \"Показ мод начинается!\" end\nreturn aa\nend",
+        "middle_answer": true,
+        "text": "   ",
+        "id": 10,
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn connectHero < 5\nend",
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "text": "   ",
+        "lua_do": "function lua_do()\n   if connectHero < 4 then\n      connectHero = connectHero <plus> math.random (0,2)\n   else\n      connectHero = connectHero <plus> math.random (0,1) \n   end\n\n   local repeater\n   repeater = function() \n      if g.userInQuest == 1 then\n         if connectHero < 5 then\n            showPage {id = 10, transition = \"instant\"} \n         else\n            x, voices = 60, 0\n            voice = { 0, 0, 0, 0, 0 }\n            timeV1 = math.random(50,55)\n            timeV2 = math.random(44,49)\n            timeV3 = math.random(39,43)\n            timeV4 = math.random(33,38) \n            showPage {id = 11, transition = \"instant\"} \n         end\n      else \n         timer1 = timer.performWithDelay (3000, repeater) \n      end \n   end\n   timer1 = timer.performWithDelay (3000, repeater )\nend"
+      },
+      {
+        "id": 10,
+        "text": "   ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   local aa = heroKa4\n   local it1, it2, it3, it4, it5, it6 = 0, 0, 0, 0, 0, 0\n   local ab = 0\n   local ac = \"\"\n   for i = 1, (aa <plus> math.random(3)) do\n      ab = math.random(6)\n      if ab == 1 then it1 = it1 <plus> 1 end\n      if ab == 2 then it2 = it2 <plus> 1 end\n      if ab == 3 then it3 = it3 <plus> 1 end\n      if ab == 4 then it4 = it4 <plus> 1 end\n      if ab == 5 then it5 = it5 <plus> 1 end\n      if ab == 6 then it6 = it6 <plus> 1 end\n   end\n\n   if it1 == 0 then \n      it1 = \"-\"\n\n   elseif it1 == 1 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 2 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M2 [math.random (#texKa4M2)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W2 [math.random (#texKa4W2)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S2 [math.random (#texKa4S2)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 3 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M3 [math.random (#texKa4M3)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W3 [math.random (#texKa4W3)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S3 [math.random (#texKa4S3)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 4 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M4 [math.random (#texKa4M4)] .. texHeadM [math.random (#texHeadM)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 2 then it1 = texKa4W4 [math.random (#texKa4W4)] .. texHeadW [math.random (#texHeadW)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 3 then it1 = texKa4S4 [math.random (#texKa4S4)] .. texHeadS [math.random (#texHeadS)] .. shop4 [math.random (#shop4)]\n      end\n\n   else \n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M5 [math.random (#texKa4M5)] .. texHeadM [math.random (#texHeadM)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 2 then it1 = texKa4W5 [math.random (#texKa4W5)] .. texHeadW [math.random (#texHeadW)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 3 then it1 = texKa4S5 [math.random (#texKa4S5)] .. texHeadS [math.random (#texHeadS)] .. shop5 [math.random (#shop5)]\n      end\n   end\n\n   if it2 == 0 then \n      it2 = \"-\"\n   \n   elseif it2 == 1 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texBodySs [math.random (#texBodySs)]\n      end\n   \n   elseif it2 == 2 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M2 [math.random (#texKa4M2)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W2 [math.random (#texKa4W2)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss2 [math.random (#texKa4Ss2)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 3 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M3 [math.random (#texKa4M3)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W3 [math.random (#texKa4W3)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss3 [math.random (#texKa4Ss3)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 4 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M4 [math.random (#texKa4M4)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W4 [math.random (#texKa4W4)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss4 [math.random (#texKa4Ss4)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   else\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M5 [math.random (#texKa4M5)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W5 [math.random (#texKa4W5)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss5 [math.random (#texKa4Ss5)] .. texBodySs [math.random (#texBodySs)]\n      end\n   end\n\n   ac = texHandSs [math.random (#texHandSs)]\n   if it3 == 0 then \n      it3 = \"-\"\n   elseif it3 == 1 then it3 = texKa4Ss1 [math.random (#texKa4Ss1)] .. ac\n   elseif it3 == 2 then it3 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it3 == 3 then it3 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it3 == 4 then it3 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it3 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n   \n   ac = texFootSs [math.random (#texFootSs)]\n   if it4 == 0 then \n      it4 = \"-\"\n   elseif it4 == 1 then it4 = ac\n   elseif it4 == 2 then it4 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it4 == 3 then it4 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it4 == 4 then it4 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it4 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n\n   if it5 == 0 then\n      it5 = \"-\"\n\n   elseif it5 == 1 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 2 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M2 [math.random (#texKa4M2)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W2 [math.random (#texKa4W2)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S2 [math.random (#texKa4S2)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 3 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M3 [math.random (#texKa4M3)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W3 [math.random (#texKa4W3)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S3 [math.random (#texKa4S3)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 4 then\n      it5 = math.random(5)\n      ac = shop4 [math.random (#shop4)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M4 [math.random (#texKa4M4)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W4 [math.random (#texKa4W4)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S4 [math.random (#texKa4S4)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n\n   else\n      it5 = math.random(5)\n      ac = shop5 [math.random (#shop5)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M5 [math.random (#texKa4M5)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W5 [math.random (#texKa4W5)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S5  [math.random (#texKa4S5)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n   end\n\n   if it6 == 0 then\n      it6 = \"-\"\n   \n   elseif it6 == 1 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 2 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M2 [math.random (#texKa4M2)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W2 [math.random (#texKa4W2)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 3 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M3 [math.random (#texKa4M3)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W3 [math.random (#texKa4W3)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 4 then\n      it6 = math.random(2)\n      ac = shop4 [math.random (#shop4)]\n      if it6 == 1 then it6 = texKa4M4 [math.random (#texKa4M4)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W1 [math.random (#texKa4W1)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   \n   else\n      it6 = math.random(2)\n      ac = shop5 [math.random (#shop5)]\n      if it6 == 1 then it6 = texKa4M5 [math.random (#texKa4M5)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W5 [math.random (#texKa4W5)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   end\n\n   hero1 = { head = it1, body = it2, hand = it3, foot = it4, weapon = it5, acs = it6 }\nend",
+        "calculate": true,
+        "text": "1",
+        "id": 10
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   local aa = heroKa4\n   local it1, it2, it3, it4, it5, it6 = 0, 0, 0, 0, 0, 0\n   local ab = 0\n   local ac = \"\"\n   for i = 1, (aa <plus> math.random(3)) do\n      ab = math.random(6)\n      if ab == 1 then it1 = it1 <plus> 1 end\n      if ab == 2 then it2 = it2 <plus> 1 end\n      if ab == 3 then it3 = it3 <plus> 1 end\n      if ab == 4 then it4 = it4 <plus> 1 end\n      if ab == 5 then it5 = it5 <plus> 1 end\n      if ab == 6 then it6 = it6 <plus> 1 end\n   end\n\n   if it1 == 0 then \n      it1 = \"-\"\n\n   elseif it1 == 1 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 2 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M2 [math.random (#texKa4M2)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W2 [math.random (#texKa4W2)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S2 [math.random (#texKa4S2)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 3 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M3 [math.random (#texKa4M3)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W3 [math.random (#texKa4W3)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S3 [math.random (#texKa4S3)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 4 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M4 [math.random (#texKa4M4)] .. texHeadM [math.random (#texHeadM)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 2 then it1 = texKa4W4 [math.random (#texKa4W4)] .. texHeadW [math.random (#texHeadW)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 3 then it1 = texKa4S4 [math.random (#texKa4S4)] .. texHeadS [math.random (#texHeadS)] .. shop4 [math.random (#shop4)]\n      end\n\n   else \n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M5 [math.random (#texKa4M5)] .. texHeadM [math.random (#texHeadM)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 2 then it1 = texKa4W5 [math.random (#texKa4W5)] .. texHeadW [math.random (#texHeadW)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 3 then it1 = texKa4S5 [math.random (#texKa4S5)] .. texHeadS [math.random (#texHeadS)] .. shop5 [math.random (#shop5)]\n      end\n   end\n\n   if it2 == 0 then \n      it2 = \"-\"\n   \n   elseif it2 == 1 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texBodySs [math.random (#texBodySs)]\n      end\n   \n   elseif it2 == 2 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M2 [math.random (#texKa4M2)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W2 [math.random (#texKa4W2)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss2 [math.random (#texKa4Ss2)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 3 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M3 [math.random (#texKa4M3)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W3 [math.random (#texKa4W3)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss3 [math.random (#texKa4Ss3)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 4 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M4 [math.random (#texKa4M4)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W4 [math.random (#texKa4W4)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss4 [math.random (#texKa4Ss4)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   else\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M5 [math.random (#texKa4M5)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W5 [math.random (#texKa4W5)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss5 [math.random (#texKa4Ss5)] .. texBodySs [math.random (#texBodySs)]\n      end\n   end\n\n   ac = texHandSs [math.random (#texHandSs)]\n   if it3 == 0 then \n      it3 = \"-\"\n   elseif it3 == 1 then it3 = texKa4Ss1 [math.random (#texKa4Ss1)] .. ac\n   elseif it3 == 2 then it3 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it3 == 3 then it3 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it3 == 4 then it3 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it3 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n   \n   ac = texFootSs [math.random (#texFootSs)]\n   if it4 == 0 then \n      it4 = \"-\"\n   elseif it4 == 1 then it4 = ac\n   elseif it4 == 2 then it4 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it4 == 3 then it4 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it4 == 4 then it4 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it4 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n\n   if it5 == 0 then\n      it5 = \"-\"\n\n   elseif it5 == 1 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 2 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M2 [math.random (#texKa4M2)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W2 [math.random (#texKa4W2)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S2 [math.random (#texKa4S2)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 3 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M3 [math.random (#texKa4M3)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W3 [math.random (#texKa4W3)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S3 [math.random (#texKa4S3)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 4 then\n      it5 = math.random(5)\n      ac = shop4 [math.random (#shop4)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M4 [math.random (#texKa4M4)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W4 [math.random (#texKa4W4)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S4 [math.random (#texKa4S4)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n\n   else\n      it5 = math.random(5)\n      ac = shop5 [math.random (#shop5)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M5 [math.random (#texKa4M5)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W5 [math.random (#texKa4W5)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S5  [math.random (#texKa4S5)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n   end\n\n   if it6 == 0 then\n      it6 = \"-\"\n   \n   elseif it6 == 1 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 2 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M2 [math.random (#texKa4M2)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W2 [math.random (#texKa4W2)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 3 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M3 [math.random (#texKa4M3)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W3 [math.random (#texKa4W3)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 4 then\n      it6 = math.random(2)\n      ac = shop4 [math.random (#shop4)]\n      if it6 == 1 then it6 = texKa4M4 [math.random (#texKa4M4)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W1 [math.random (#texKa4W1)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   \n   else\n      it6 = math.random(2)\n      ac = shop5 [math.random (#shop5)]\n      if it6 == 1 then it6 = texKa4M5 [math.random (#texKa4M5)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W5 [math.random (#texKa4W5)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   end\n\n   hero2 = { head = it1, body = it2, hand = it3, foot = it4, weapon = it5, acs = it6 }\nend",
+        "text": "2",
+        "id": 10,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   local aa = heroKa4\n   local it1, it2, it3, it4, it5, it6 = 0, 0, 0, 0, 0, 0\n   local ab = 0\n   local ac = \"\"\n   for i = 1, (aa <plus> math.random(3)) do\n      ab = math.random(6)\n      if ab == 1 then it1 = it1 <plus> 1 end\n      if ab == 2 then it2 = it2 <plus> 1 end\n      if ab == 3 then it3 = it3 <plus> 1 end\n      if ab == 4 then it4 = it4 <plus> 1 end\n      if ab == 5 then it5 = it5 <plus> 1 end\n      if ab == 6 then it6 = it6 <plus> 1 end\n   end\n\n   if it1 == 0 then \n      it1 = \"-\"\n\n   elseif it1 == 1 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 2 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M2 [math.random (#texKa4M2)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W2 [math.random (#texKa4W2)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S2 [math.random (#texKa4S2)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 3 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M3 [math.random (#texKa4M3)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W3 [math.random (#texKa4W3)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S3 [math.random (#texKa4S3)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 4 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M4 [math.random (#texKa4M4)] .. texHeadM [math.random (#texHeadM)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 2 then it1 = texKa4W4 [math.random (#texKa4W4)] .. texHeadW [math.random (#texHeadW)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 3 then it1 = texKa4S4 [math.random (#texKa4S4)] .. texHeadS [math.random (#texHeadS)] .. shop4 [math.random (#shop4)]\n      end\n\n   else \n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M5 [math.random (#texKa4M5)] .. texHeadM [math.random (#texHeadM)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 2 then it1 = texKa4W5 [math.random (#texKa4W5)] .. texHeadW [math.random (#texHeadW)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 3 then it1 = texKa4S5 [math.random (#texKa4S5)] .. texHeadS [math.random (#texHeadS)] .. shop5 [math.random (#shop5)]\n      end\n   end\n\n   if it2 == 0 then \n      it2 = \"-\"\n   \n   elseif it2 == 1 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texBodySs [math.random (#texBodySs)]\n      end\n   \n   elseif it2 == 2 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M2 [math.random (#texKa4M2)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W2 [math.random (#texKa4W2)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss2 [math.random (#texKa4Ss2)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 3 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M3 [math.random (#texKa4M3)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W3 [math.random (#texKa4W3)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss3 [math.random (#texKa4Ss3)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 4 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M4 [math.random (#texKa4M4)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W4 [math.random (#texKa4W4)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss4 [math.random (#texKa4Ss4)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   else\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M5 [math.random (#texKa4M5)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W5 [math.random (#texKa4W5)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss5 [math.random (#texKa4Ss5)] .. texBodySs [math.random (#texBodySs)]\n      end\n   end\n\n   ac = texHandSs [math.random (#texHandSs)]\n   if it3 == 0 then \n      it3 = \"-\"\n   elseif it3 == 1 then it3 = texKa4Ss1 [math.random (#texKa4Ss1)] .. ac\n   elseif it3 == 2 then it3 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it3 == 3 then it3 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it3 == 4 then it3 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it3 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n   \n   ac = texFootSs [math.random (#texFootSs)]\n   if it4 == 0 then \n      it4 = \"-\"\n   elseif it4 == 1 then it4 = ac\n   elseif it4 == 2 then it4 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it4 == 3 then it4 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it4 == 4 then it4 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it4 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n\n   if it5 == 0 then\n      it5 = \"-\"\n\n   elseif it5 == 1 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 2 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M2 [math.random (#texKa4M2)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W2 [math.random (#texKa4W2)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S2 [math.random (#texKa4S2)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 3 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M3 [math.random (#texKa4M3)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W3 [math.random (#texKa4W3)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S3 [math.random (#texKa4S3)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 4 then\n      it5 = math.random(5)\n      ac = shop4 [math.random (#shop4)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M4 [math.random (#texKa4M4)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W4 [math.random (#texKa4W4)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S4 [math.random (#texKa4S4)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n\n   else\n      it5 = math.random(5)\n      ac = shop5 [math.random (#shop5)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M5 [math.random (#texKa4M5)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W5 [math.random (#texKa4W5)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S5  [math.random (#texKa4S5)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n   end\n\n   if it6 == 0 then\n      it6 = \"-\"\n   \n   elseif it6 == 1 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 2 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M2 [math.random (#texKa4M2)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W2 [math.random (#texKa4W2)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 3 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M3 [math.random (#texKa4M3)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W3 [math.random (#texKa4W3)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 4 then\n      it6 = math.random(2)\n      ac = shop4 [math.random (#shop4)]\n      if it6 == 1 then it6 = texKa4M4 [math.random (#texKa4M4)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W1 [math.random (#texKa4W1)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   \n   else\n      it6 = math.random(2)\n      ac = shop5 [math.random (#shop5)]\n      if it6 == 1 then it6 = texKa4M5 [math.random (#texKa4M5)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W5 [math.random (#texKa4W5)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   end\n\n   hero3 = { head = it1, body = it2, hand = it3, foot = it4, weapon = it5, acs = it6 }\nend",
+        "text": "   ",
+        "id": 10,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   local aa = heroKa4\n   local it1, it2, it3, it4, it5, it6 = 0, 0, 0, 0, 0, 0\n   local ab = 0\n   local ac = \"\"\n   for i = 1, (aa <plus> math.random(3)) do\n      ab = math.random(6)\n      if ab == 1 then it1 = it1 <plus> 1 end\n      if ab == 2 then it2 = it2 <plus> 1 end\n      if ab == 3 then it3 = it3 <plus> 1 end\n      if ab == 4 then it4 = it4 <plus> 1 end\n      if ab == 5 then it5 = it5 <plus> 1 end\n      if ab == 6 then it6 = it6 <plus> 1 end\n   end\n\n   if it1 == 0 then \n      it1 = \"-\"\n\n   elseif it1 == 1 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 2 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M2 [math.random (#texKa4M2)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W2 [math.random (#texKa4W2)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S2 [math.random (#texKa4S2)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 3 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M3 [math.random (#texKa4M3)] .. texHeadM [math.random (#texHeadM)]\n      elseif it1 == 2 then it1 = texKa4W3 [math.random (#texKa4W3)] .. texHeadW [math.random (#texHeadW)]\n      elseif it1 == 3 then it1 = texKa4S3 [math.random (#texKa4S3)] .. texHeadS [math.random (#texHeadS)]\n      end\n\n   elseif it1 == 4 then\n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M4 [math.random (#texKa4M4)] .. texHeadM [math.random (#texHeadM)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 2 then it1 = texKa4W4 [math.random (#texKa4W4)] .. texHeadW [math.random (#texHeadW)] .. shop4 [math.random (#shop4)]\n      elseif it1 == 3 then it1 = texKa4S4 [math.random (#texKa4S4)] .. texHeadS [math.random (#texHeadS)] .. shop4 [math.random (#shop4)]\n      end\n\n   else \n      it1 = math.random(3)\n      if it1 == 1 then it1 = texKa4M5 [math.random (#texKa4M5)] .. texHeadM [math.random (#texHeadM)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 2 then it1 = texKa4W5 [math.random (#texKa4W5)] .. texHeadW [math.random (#texHeadW)] .. shop5 [math.random (#shop5)]\n      elseif it1 == 3 then it1 = texKa4S5 [math.random (#texKa4S5)] .. texHeadS [math.random (#texHeadS)] .. shop5 [math.random (#shop5)]\n      end\n   end\n\n   if it2 == 0 then \n      it2 = \"-\"\n   \n   elseif it2 == 1 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texBodySs [math.random (#texBodySs)]\n      end\n   \n   elseif it2 == 2 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M2 [math.random (#texKa4M2)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W2 [math.random (#texKa4W2)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss2 [math.random (#texKa4Ss2)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 3 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M3 [math.random (#texKa4M3)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W3 [math.random (#texKa4W3)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss3 [math.random (#texKa4Ss3)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   elseif it2 == 4 then\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M4 [math.random (#texKa4M4)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W4 [math.random (#texKa4W4)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss4 [math.random (#texKa4Ss4)] .. texBodySs [math.random (#texBodySs)]\n      end\n\n   else\n      it2 = math.random(3)\n      if it2 == 1 then it2 = texKa4M5 [math.random (#texKa4M5)] .. texBodyM [math.random (#texBodyM)]\n      elseif it2 == 2 then it2 = texKa4W5 [math.random (#texKa4W5)] .. texBodyW [math.random (#texBodyW)]\n      elseif it2 == 3 then it2 = texKa4Ss5 [math.random (#texKa4Ss5)] .. texBodySs [math.random (#texBodySs)]\n      end\n   end\n\n   ac = texHandSs [math.random (#texHandSs)]\n   if it3 == 0 then \n      it3 = \"-\"\n   elseif it3 == 1 then it3 = texKa4Ss1 [math.random (#texKa4Ss1)] .. ac\n   elseif it3 == 2 then it3 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it3 == 3 then it3 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it3 == 4 then it3 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it3 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n   \n   ac = texFootSs [math.random (#texFootSs)]\n   if it4 == 0 then \n      it4 = \"-\"\n   elseif it4 == 1 then it4 = ac\n   elseif it4 == 2 then it4 = texKa4Ss2 [math.random (#texKa4Ss2)] .. ac\n   elseif it4 == 3 then it4 = texKa4Ss3 [math.random (#texKa4Ss3)] .. ac\n   elseif it4 == 4 then it4 = texKa4Ss4 [math.random (#texKa4Ss4)] .. ac .. shop4 [math.random (#shop4)]\n   else it4 = texKa4Ss5 [math.random (#texKa4Ss5)] .. ac .. shop5 [math.random (#shop5)]\n   end\n\n   if it5 == 0 then\n      it5 = \"-\"\n\n   elseif it5 == 1 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 2 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M2 [math.random (#texKa4M2)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W2 [math.random (#texKa4W2)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S2 [math.random (#texKa4S2)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 3 then\n      it5 = math.random(5)\n      if it5 == 1 or it5 == 2 then it5 = texKa4M3 [math.random (#texKa4M3)] .. texWeaponM [math.random (#texWeaponM)]\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W3 [math.random (#texKa4W3)] .. texWeaponW [math.random (#texWeaponW)]\n      elseif it5 == 5 then it5 = texKa4S3 [math.random (#texKa4S3)] .. texWeaponS [math.random (#texWeaponS)]\n      end\n\n   elseif it5 == 4 then\n      it5 = math.random(5)\n      ac = shop4 [math.random (#shop4)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M4 [math.random (#texKa4M4)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W4 [math.random (#texKa4W4)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S4 [math.random (#texKa4S4)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n\n   else\n      it5 = math.random(5)\n      ac = shop5 [math.random (#shop5)]\n      if it5 == 1 or it5 == 2 then it5 = texKa4M5 [math.random (#texKa4M5)] .. texWeaponM [math.random (#texWeaponM)] .. ac\n      elseif it5 == 3 or it5 == 4 then it5 = texKa4W5 [math.random (#texKa4W5)] .. texWeaponW [math.random (#texWeaponW)] .. ac\n      elseif it5 == 5 then it5 = texKa4S5  [math.random (#texKa4S5)] .. texWeaponS [math.random (#texWeaponS)] .. ac\n      end\n   end\n\n   if it6 == 0 then\n      it6 = \"-\"\n   \n   elseif it6 == 1 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 2 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M2 [math.random (#texKa4M2)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W2 [math.random (#texKa4W2)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 3 then\n      it6 = math.random(2)\n      if it6 == 1 then it6 = texKa4M3 [math.random (#texKa4M3)] .. texAcsM [math.random (#texAcsM)]\n      elseif it6 == 2 then it6 = texKa4W3 [math.random (#texKa4W3)] .. texAcsW [math.random (#texAcsW)]\n      end\n\n   elseif it6 == 4 then\n      it6 = math.random(2)\n      ac = shop4 [math.random (#shop4)]\n      if it6 == 1 then it6 = texKa4M4 [math.random (#texKa4M4)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W1 [math.random (#texKa4W1)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   \n   else\n      it6 = math.random(2)\n      ac = shop5 [math.random (#shop5)]\n      if it6 == 1 then it6 = texKa4M5 [math.random (#texKa4M5)] .. texAcsM [math.random (#texAcsM)] .. ac\n      elseif it6 == 2 then it6 = texKa4W5 [math.random (#texKa4W5)] .. texAcsW [math.random (#texAcsW)] .. ac\n      end\n   end\n\n   hero4 = { head = it1, body = it2, hand = it3, foot = it4, weapon = it5, acs = it6 }\nend",
+        "text": "   ",
+        "id": 10,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 10,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   if math.random(2) == 1 then\n      hero1.name = \"Герой \" .. mName [math.random (#mName)]\n   else hero1.name = \"Героиня \" .. wName [math.random (#wName)]\n   end\n   if math.random(2) == 1 then\n      hero2.name = \"Герой \" .. mName [math.random (#mName)]\n   else hero2.name = \"Героиня \" .. wName [math.random (#wName)]\n   end\n if math.random(2) == 1 then\n      hero3.name = \"Герой \" .. mName [math.random (#mName)]\n   else hero3.name = \"Героиня \" .. wName [math.random (#wName)]\n   end\n if math.random(2) == 1 then\n      hero4.name = \"Герой \" .. mName [math.random (#mName)]\n   else hero4.name = \"Героиня \" .. wName [math.random (#wName)]\n   end\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Проголосуйте за лучший набор экипировки!",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nlocal aa = 0\n   x = x - 1\n   if timeV1 == x then\n      aa = math.random(5)\n      if rek > 0 then aa = 5 \n         rek = rek - 1 end\n      voice [aa] = voice [aa] <plus> 1\n      if aa == 5 then message (\"Вы получили голос.\") end\n      showPage {id = 11, transition = \"instant\"} \n   end\n    if timeV2 == x then\n      aa = math.random(5)\n      if rek > 0 then aa = 5\n         rek = rek - 1 end\n      voice [aa] = voice [aa] <plus> 1\n      if aa == 5 then message (\"Вы получили голос.\") end\n      showPage {id = 11, transition = \"instant\"} \n   end\n   if timeV3 == x then\n      aa = math.random(5)\n      if rek > 0 then aa = 5\n         rek = rek - 1 end\n      voice [aa] = voice [aa] <plus> 1\n      if aa == 5 then message (\"Вы получили голос.\") end\n      showPage {id = 11, transition = \"instant\"} \n   end\n   if timeV4 == x then\n      aa = math.random(5)\n      if rek > 0 then aa = 5\n         rek = rek - 1 end\n      voice [aa] = voice [aa] <plus> 1\n      if aa == 5 then message (\"Вы получили голос.\") end\n      showPage {id = 11, transition = \"instant\"} \n   end\n\n   local ab = voice[1] <plus> voice[2] <plus> voice[3] <plus> voice[4] <plus> voice[5]\n   if ab > 4 then \n      showPage {id = 13, transition = \"instant\"} \n   end\n\n   if x < 1 then showPage {id = 13, transition = \"instant\"} end\nreturn \"Оставшееся время: \" .. x .. \" сек.<s>\n\"\nend",
+        "id": 11,
+        "text": "   ",
+        "update": [
+          1
+        ],
+        "comment": true
+      },
+      {
+        "id": 11,
+        "text": "   ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal it1 = \"-\"\nlocal it2 = \"-\"\nlocal it3 = \"-\"\nlocal it4 = \"-\"\nlocal it5 = \"-\"\nlocal it6 = \"-\"\n   if headHero > 0 then \n     it1 = myHead [headHero] end\n   if bodyHero > 0 then \n      it2 = myBody [bodyHero] end\n   if handHero > 0 then\n      it3 = myHand [handHero] end\n   if footHero > 0 then \n      it4 = myFoot [footHero] end\n   if weaponHero > 0 then\n      it5 = myWeapon [weaponHero] end\n   if acsHero > 0 then \n      it6 = myAcs [acsHero] end\nreturn ({ \"   Герой \", \"   Героиня \" }) [male] .. name .. \"   (ваш участник)<s>\nГолова: \" .. it1 .. \"<s>\nТело: \" .. it2 .. \"<s>\nРуки: \" .. it3 .. \"<s>\nНоги: \" .. it4 .. \"<s>\nОружие: \" .. it5 .. \"<s>\nАксессуар: \" .. it6\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "voices",
+          1
+        ],
+        "id": 11,
+        "text": "Голосов:",
+        "lua_text": "function lua_text()\nreturn \"Голосов: \" .. voice [5]\nend"
+      },
+      {
+        "comment": false,
+        "var_equal": [
+          "voices",
+          0
+        ],
+        "id": 11,
+        "text": "[ За своего героя голосовать нельзя! ]",
+        "instant": true,
+        "no_transition": true
+      },
+      {
+        "id": 11,
+        "text": "  ",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"<s>\n<s>\n   \" .. hero1.name .. \"<s>\nГолова: \" .. hero1.head .. \"<s>\nТело: \" .. hero1.body .. \"<s>\nРуки: \" .. hero1.hand .. \"<s>\nНоги: \" .. hero1.foot .. \"<s>\nОружие: \" .. hero1.weapon .. \"<s>\nАксессуар: \" .. hero1.acs\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "voices",
+          1
+        ],
+        "id": 11,
+        "text": "Голосов:",
+        "lua_text": "function lua_text()\nreturn \"Голосов: \" .. voice [1]\nend"
+      },
+      {
+        "id": 11,
+        "comment": false,
+        "var_equal": [
+          "voices",
+          0
+        ],
+        "lua_do": "function lua_do()\nvoice [1] = voice [1] <plus> 1\nend",
+        "instant": true,
+        "text": "Голосовать за этого участника",
+        "var_set": [
+          "voices",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "  ",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"<s>\n<s>\n   \" .. hero2.name .. \"<s>\nГолова: \" .. hero2.head .. \"<s>\nТело: \" .. hero2.body .. \"<s>\nРуки: \" .. hero2.hand .. \"<s>\nНоги: \" .. hero2.foot .. \"<s>\nОружие: \" .. hero2.weapon .. \"<s>\nАксессуар: \" .. hero2.acs\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "voices",
+          1
+        ],
+        "id": 11,
+        "text": "Голосов:",
+        "lua_text": "function lua_text()\nreturn \"Голосов: \" .. voice [2]\nend"
+      },
+      {
+        "id": 11,
+        "comment": false,
+        "var_equal": [
+          "voices",
+          0
+        ],
+        "lua_do": "function lua_do()\nvoice [2] = voice [2] <plus> 1\nend",
+        "instant": true,
+        "text": "Голосовать за этого участника",
+        "var_set": [
+          "voices",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "  ",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"<s>\n<s>\n   \" .. hero3.name .. \"<s>\nГолова: \" .. hero3.head .. \"<s>\nТело: \" .. hero3.body .. \"<s>\nРуки: \" .. hero3.hand .. \"<s>\nНоги: \" .. hero3.foot .. \"<s>\nОружие: \" .. hero3.weapon .. \"<s>\nАксессуар: \" .. hero3.acs\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "voices",
+          1
+        ],
+        "id": 11,
+        "text": "Голосов:",
+        "lua_text": "function lua_text()\nreturn \"Голосов: \" .. voice [3]\nend"
+      },
+      {
+        "id": 11,
+        "comment": false,
+        "var_equal": [
+          "voices",
+          0
+        ],
+        "lua_do": "function lua_do()\nvoice [3] = voice [3] <plus> 1\nend",
+        "instant": true,
+        "text": "Голосовать за этого участника",
+        "var_set": [
+          "voices",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "  ",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"<s>\n<s>\n   \" .. hero4.name .. \"<s>\nГолова: \" .. hero4.head .. \"<s>\nТело: \" .. hero4.body .. \"<s>\nРуки: \" .. hero4.hand .. \"<s>\nНоги: \" .. hero4.foot .. \"<s>\nОружие: \" .. hero4.weapon .. \"<s>\nАксессуар: \" .. hero4.acs\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "voices",
+          1
+        ],
+        "id": 11,
+        "text": "Голосов:",
+        "lua_text": "function lua_text()\nreturn \"Голосов: \" .. voice [4]\nend"
+      },
+      {
+        "id": 11,
+        "comment": false,
+        "var_equal": [
+          "voices",
+          0
+        ],
+        "lua_do": "function lua_do()\nvoice [4] = voice [4] <plus> 1\nend",
+        "instant": true,
+        "text": "Голосовать за этого участника",
+        "var_set": [
+          "voices",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 13,
+        "text": "итог",
+        "need": [
+          999
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 13,
+    "text": "   Результаты сражения:",
+    "answers": [
+      {
+        "comment": true,
+        "id": 13,
+        "text": "  ",
+        "lua_text": "function lua_text()\n   local x = 0\n   local tab1 = { \"голос\", \"голоса\", \"голоса\", \"голоса\", \"голосов\" }\n   tab1[0] = \"голосов\"\n   local aa = ({ \"Герой \" .. name .. \" (ваш) - \", \"Героиня \" .. name .. \" (ваша) - \" }) [male] .. voice[5] .. \" \" .. tab1[ voice[5]]\n   aa = aa .. \"<s>\n\" .. hero1.name .. \" - \" .. voice[1] .. \" \" ..tab1[ voice[1]]\n   aa = aa .. \"<s>\n\" .. hero2.name .. \" - \" .. voice[2] .. \" \" ..tab1[ voice[2]]\n   aa = aa .. \"<s>\n\" .. hero3.name .. \" - \" .. voice[3] .. \" \" ..tab1[ voice[3]]\n   aa = aa .. \"<s>\n\" .. hero4.name .. \" - \" .. voice[4] .. \" \" ..tab1[ voice[4]]\n   \n   x = voice[5] * heroPrice <plus> heroPrice\n   aa = aa .. \"<s>\n______________________\" .. \"<s>\nВыигрыш: \" .. x .. \" монет.\"\n\n   gold = gold <plus> x\n   rek = 0\nreturn aa\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 13,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Перейти к открытию чемоданов"
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "  ",
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal aa = 0\nlocal ab = 0\nif headHero > 0 then\n   aa = headHero\n   ab = #myHead\n   myHead[aa], priceHead[aa] = nil, nil\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myHead[i] then\n            myHead[i] = myHead[i<plus>1]\n            priceHead[i] = priceHead[i<plus>1]\n            myHead[i<plus>1], priceHead[i<plus>1] = nil, nil\n         end\n      end\n   end\nend\n\nif bodyHero > 0 then\n   aa = bodyHero\n   ab = #myBody\n   myBody[aa], priceBody[aa] = nil, nil\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myBody[i] then\n            myBody[i] = myBody[i<plus>1]\n            priceBody[i] = priceBody[i<plus>1]\n            myBody[i<plus>1], priceBody[i<plus>1] = nil, nil\n         end\n      end\n   end\nend\n\nif handHero > 0 then\n   aa = handHero\n   ab = #myHand\n   myHand[aa], priceHand[aa] = nil, nil\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myHand[i] then\n            myHand[i] = myHand[i<plus>1]\n            priceHand[i] = priceHand[i<plus>1]\n            myHand[i<plus>1], priceHand[i<plus>1] = nil, nil\n         end\n      end\n   end\nend\n\nif footHero > 0 then\n   aa = footHero\n   ab = #myFoot\n   myFoot[aa], priceFoot[aa] = nil, nil\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myFoot[i] then\n            myFoot[i] = myFoot[i<plus>1]\n            priceFoot[i] = priceFoot[i<plus>1]\n            myFoot[i<plus>1], priceFoot[i<plus>1] = nil, nil\n         end\n      end\n   end\nend\n\nif weaponHero > 0 then\n   aa = weaponHero\n   ab = #myWeapon\n   myWeapon[aa], priceWeapon[aa] = nil, nil\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myWeapon[i] then\n            myWeapon[i] = myWeapon[i<plus>1]\n            priceWeapon[i] = priceWeapon[i<plus>1]\n            myWeapon[i<plus>1], priceWeapon[i<plus>1] = nil, nil\n         end\n      end\n   end\nend\n\nif acsHero > 0 then\n   aa = acsHero\n   ab = #myAcs\n   myAcs[aa], priceAcs[aa] = nil, nil\n   if ab > 1 then\n      for i = 1, (ab-1) do\n         if not myAcs[i] then\n            myAcs[i] = myAcs[i<plus>1]\n            priceAcs[i] = priceAcs[i<plus>1]\n            myAcs[i<plus>1], priceAcs[i<plus>1] = nil, nil\n         end\n      end\n   end\nend\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": " yfufjvubogdt fjvuvih fufigig",
+    "answers": [
+      {
+        "id": 1,
+        "text": "В начало"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 16,
+    "text": "Добро пожаловать на чемпионат высшей лиги! Участвуйте в качестве зрителя, делайте ставки на чемпионов и выигрывайте баснословные гонорары!",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Посетить чемпионат (за рекламу)"
+      },
+      {
+        "id": 2,
+        "text": "пропустить (в начало цикла)"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "после имитации загрущки показыввем\nтакой же список из пяти топовых героев в топовых шмотках, но вместо \"голосовать\" отображается \"сделать ставку\".",
+    "answers": [
+      {
+        "id": 18,
+        "text": "сделать ставку"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "на что хотите поставить?",
+    "answers": [
+      {
+        "id": 19,
+        "text": "займёт первое место"
+      },
+      {
+        "id": 20,
+        "text": "займёт 1 или 2 место"
+      },
+      {
+        "id": 21,
+        "text": "займет 1, 2 или 3 место"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "игрок выбирает сумму. чем более дерзкий прогноз тем больше отображается целевой выигрыш.",
+    "answers": []
+  },
+  {
+    "id": 20,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 21,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 22,
+    "text": "",
+    "answers": []
+  }
+]

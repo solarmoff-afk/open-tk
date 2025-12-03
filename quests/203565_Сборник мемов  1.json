@@ -1,0 +1,313 @@
+[
+  {
+    "id": 1,
+    "text": "Это просто сборник смешных мемов, и всё ",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/E0AJoYo.jpg"
+      },
+      {
+        "id": 2,
+        "text": "Следующий мем "
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://i.imgur.com/sBtvvvD.jpg",
+        "system": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/kTdNJgu.jpg"
+      },
+      {
+        "id": 3,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Следующий день "
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/pOqEXHO.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Следующий мем"
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/iP1NbZj.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Следующий мем"
+      },
+      {
+        "id": 5,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/mYsNe1x.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/i6rgmat.jpg"
+      },
+      {
+        "id": 7,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/W2qKD8q.jpg"
+      },
+      {
+        "id": 8,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/4LzVr7P.jpg"
+      },
+      {
+        "id": 9,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/aNnBMGK.jpg"
+      },
+      {
+        "id": 10,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/l45QK6M.jpg"
+      },
+      {
+        "id": 11,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/ZUU5Una.jpg"
+      },
+      {
+        "id": 12,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/wuWPWTh.jpg"
+      },
+      {
+        "id": 13,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/JOdsaOV.jpg"
+      },
+      {
+        "id": 14,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/FBFWg09.jpg"
+      },
+      {
+        "id": 15,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/oCcjmi3.jpg"
+      },
+      {
+        "id": 16,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/Bx1aulD.jpg"
+      },
+      {
+        "id": 17,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/yx5VI3n.jpg"
+      },
+      {
+        "id": 18,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/vbIGqAH.jpg"
+      },
+      {
+        "id": 19,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/UpDctGH.jpg"
+      },
+      {
+        "id": 20,
+        "text": "Следующий мем"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/LHPvngu.jpg"
+      },
+      {
+        "id": 1,
+        "text": "Всё конец! "
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "",
+    "answers": []
+  }
+]

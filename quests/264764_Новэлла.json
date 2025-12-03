@@ -1,0 +1,1633 @@
+[
+  {
+    "id": 1,
+    "text": "",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Проба",
+        "var_set": [
+          "global fullscreen",
+          1,
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Вмз",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Фоны",
+        "run": [
+          6
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Дождь",
+        "run": [
+          5
+        ],
+        "var_equal": [
+          "фон",
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "text": "снег",
+        "run": [
+          10
+        ],
+        "var_equal": [
+          "фон",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Визуал",
+        "run": [
+          7
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Диалоговые окна",
+        "run": [
+          8
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Текст.",
+        "run": [
+          9
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Текст 2",
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Рабочие кнопки",
+        "run": [
+          11
+        ]
+      },
+      {
+        "id": 13,
+        "text": "рабочие кнопки 2",
+        "run": [
+          13
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "фон",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "фон",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": [
+      {
+        "id": 3,
+        "text": "адекс bottom stretch light",
+        "url": "https://i.postimg.cc/W16VRh48/image.png",
+        "var_equal": [
+          "оп",
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "text": "оборотень bottom stretch",
+        "url": "https://i.postimg.cc/QCTLfMPp/image.png",
+        "var_equal": [
+          "оп",
+          2
+        ]
+      },
+      {
+        "id": 3,
+        "text": "кэти bottom stretch",
+        "url": "https://i.postimg.cc/XJhSK52j/image.png",
+        "var_equal": [
+          "оп",
+          3
+        ]
+      },
+      {
+        "id": 5,
+        "text": "роза bottom stretch ",
+        "url": "https://i.postimg.cc/nzKCR5DS/image.png",
+        "var_equal": [
+          "оп",
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "окно диалога bottom stretch",
+        "url": "https://i.postimg.cc/PqXjdTpj/1.png",
+        "var_equal": [
+          "д",
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "text": "диал 2 bottom stretch",
+        "url": "https://i.postimg.cc/g0gPJQ86/2.png",
+        "var_equal": [
+          "д",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Далее.",
+        "var_add": [
+          "перс",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Фон",
+        "var_add": [
+          "фон",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": [
+      {
+        "id": 5,
+        "text": "stretch pulsate movie back",
+        "url": "https://i.postimg.cc/VL3w1cTH/1.png"
+      },
+      {
+        "id": 5,
+        "text": "stretch pulsate movie back slow",
+        "url": "https://i.postimg.cc/VL3w1cTH/1.png"
+      },
+      {
+        "id": 5,
+        "text": "stretch pulsate movie back",
+        "url": "https://i.postimg.cc/50x1GqG4/2.png"
+      },
+      {
+        "id": 5,
+        "text": "stretch pulsate movie back slow",
+        "url": "https://i.postimg.cc/50x1GqG4/2.png"
+      },
+      {
+        "id": 5,
+        "text": "stretch pulsate movie back",
+        "url": "https://i.postimg.cc/Z5P4bM6P/3.png"
+      },
+      {
+        "id": 5,
+        "text": "stretch pulsate movie back slow",
+        "url": "https://i.postimg.cc/Z5P4bM6P/3.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Западный замок  stretch",
+        "url": "https://i.postimg.cc/mDWPSRtF/image.jpg",
+        "var_equal": [
+          "фон",
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Виндесгон stretch",
+        "url": "https://i.postimg.cc/3JLPphsC/image.png",
+        "var_equal": [
+          "фон",
+          2
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Зала stretch",
+        "url": "https://i.postimg.cc/fRJ1fFZ4/image.png",
+        "var_equal": [
+          "фон",
+          3
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Замок stretch",
+        "url": "https://i.postimg.cc/jd8QLQZ3/image.png",
+        "var_equal": [
+          "фон",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": [
+      {
+        "id": 7,
+        "text": "анна stretch",
+        "url": "https://i.postimg.cc/13Sjj8y0/image.png",
+        "var_equal": [
+          "перс",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "улыбка анны stretch",
+        "url": "https://i.postimg.cc/zXmNqwCT/image.png",
+        "var_equal": [
+          "улыбка",
+          1,
+          "перс",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Алекс stretch",
+        "url": "https://i.postimg.cc/6Q3cfhcS/image.png",
+        "var_equal": [
+          "перс",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "лыба алекса stretch",
+        "url": "https://i.postimg.cc/yNcGZjNH/image.png",
+        "var_equal": [
+          "перс",
+          2,
+          "улыбка",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Алистер stretch",
+        "url": "https://i.postimg.cc/TPxsnsHc/image.png",
+        "var_equal": [
+          "перс",
+          3
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Годрик stretch",
+        "url": "https://i.postimg.cc/FKhPYL7W/image.png",
+        "var_equal": [
+          "перс",
+          4
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Алистер орет stretch",
+        "url": "https://i.postimg.cc/T3Kkg69m/image.png",
+        "var_equal": [
+          "перс",
+          3,
+          "улыбка",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Годрик орет stretch",
+        "url": "https://i.postimg.cc/5N77X0wb/image.png",
+        "var_equal": [
+          "перс",
+          4,
+          "улыбка",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "эльфуцка stretch",
+        "url": "https://i.postimg.cc/3xcD0yrj/image.png",
+        "var_equal": [
+          "перс",
+          5
+        ]
+      },
+      {
+        "id": 7,
+        "text": "лыба stretch",
+        "url": "https://i.postimg.cc/zfD8NpY0/image.png",
+        "var_equal": [
+          "перс",
+          5,
+          "улыбка",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": [
+      {
+        "id": 8,
+        "text": "левое stretch",
+        "url": "https://i.postimg.cc/4y9GRMhj/image.png",
+        "var_equal": [
+          "д",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "средняя stretch",
+        "url": "https://i.postimg.cc/2jbL5SdN/image.png",
+        "var_equal": [
+          "д",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "правая stretch",
+        "url": "https://i.postimg.cc/c1pgtGTg/image.png",
+        "var_equal": [
+          "д",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": [
+      {
+        "id": 9,
+        "text": "2 stretch",
+        "url": "https://i.postimg.cc/52hzCPvg/2.png",
+        "var_equal": [
+          "т",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "text": "3 stretch",
+        "url": "https://i.postimg.cc/q723X8xT/3.png",
+        "var_equal": [
+          "т",
+          3
+        ]
+      },
+      {
+        "id": 9,
+        "text": "4 stretch",
+        "url": "https://i.postimg.cc/k4cRLqHY/4.png",
+        "var_equal": [
+          "т",
+          4
+        ]
+      },
+      {
+        "id": 9,
+        "text": "5 stretch",
+        "url": "https://i.postimg.cc/L60LH48r/5.png",
+        "var_equal": [
+          "т",
+          5
+        ]
+      },
+      {
+        "id": 9,
+        "text": "6 stretch",
+        "url": "https://i.postimg.cc/Pxh86PS8/6.png",
+        "var_equal": [
+          "т",
+          6
+        ]
+      },
+      {
+        "id": 9,
+        "text": "7 stretch",
+        "url": "https://i.postimg.cc/CLKbTnSG/7.png",
+        "var_equal": [
+          "т",
+          7
+        ]
+      },
+      {
+        "id": 9,
+        "text": "8  stretch",
+        "url": "https://i.postimg.cc/W1FrtRDt/8.png",
+        "var_equal": [
+          "т",
+          8
+        ]
+      },
+      {
+        "id": 9,
+        "text": "1 stretch",
+        "url": "https://i.postimg.cc/V6YfQgzR/1.png",
+        "var_equal": [
+          "т",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "9 stretch",
+        "url": "https://i.postimg.cc/TwCRRbwX/9.png",
+        "var_equal": [
+          "т",
+          9
+        ]
+      },
+      {
+        "id": 9,
+        "text": "10 stretch",
+        "url": "https://i.postimg.cc/c4Jv8xym/10.png",
+        "var_equal": [
+          "т",
+          10
+        ]
+      },
+      {
+        "id": 9,
+        "text": "11 stretch",
+        "url": "https://i.postimg.cc/bNFsx7qj/11.png",
+        "var_equal": [
+          "т",
+          11
+        ]
+      },
+      {
+        "id": 9,
+        "text": "12 stretch",
+        "url": "https://i.postimg.cc/9fy0jzZW/12.png",
+        "var_equal": [
+          "т",
+          12
+        ]
+      },
+      {
+        "id": 9,
+        "text": "13 stretch",
+        "url": "https://i.postimg.cc/pLwr7K9G/13.png",
+        "var_equal": [
+          "т",
+          13
+        ]
+      },
+      {
+        "id": 9,
+        "text": "14 stretch",
+        "url": "https://i.postimg.cc/xCRdc76h/14.png",
+        "var_equal": [
+          "т",
+          14
+        ]
+      },
+      {
+        "id": 9,
+        "text": "15 stretch",
+        "url": "https://i.postimg.cc/prcXBjbB/15.png",
+        "var_equal": [
+          "т",
+          15
+        ]
+      },
+      {
+        "id": 9,
+        "text": "16 stretch",
+        "url": "https://i.postimg.cc/wvHvxHQD/16.png",
+        "var_equal": [
+          "т",
+          16
+        ]
+      },
+      {
+        "id": 9,
+        "text": "17 stretch",
+        "url": "https://i.postimg.cc/m2hrgmCp/17.png",
+        "var_equal": [
+          "т",
+          17
+        ]
+      },
+      {
+        "id": 9,
+        "text": "18 stretch",
+        "url": "https://i.postimg.cc/x811HR7C/18.png",
+        "var_equal": [
+          "т",
+          18
+        ]
+      },
+      {
+        "id": 9,
+        "text": "19 stretch",
+        "url": "https://i.postimg.cc/Kc0zb6kg/19.png",
+        "var_equal": [
+          "т",
+          19
+        ]
+      },
+      {
+        "id": 9,
+        "text": "20 stretch",
+        "url": "https://i.postimg.cc/qMYvh2GJ/20.png",
+        "var_equal": [
+          "т",
+          20
+        ]
+      },
+      {
+        "id": 9,
+        "text": "21 stretch",
+        "url": "https://i.postimg.cc/2SZ843H4/21.png",
+        "var_equal": [
+          "т",
+          21
+        ]
+      },
+      {
+        "id": 9,
+        "text": "22 stretch",
+        "url": "https://i.postimg.cc/7LrPXDcj/22.png",
+        "var_equal": [
+          "т",
+          22
+        ]
+      },
+      {
+        "id": 9,
+        "text": "23 stretch",
+        "url": "https://i.postimg.cc/MG06FNJH/23.png",
+        "var_equal": [
+          "т",
+          23
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": [
+      {
+        "id": 10,
+        "text": "stretch pulsate movie back slow",
+        "url": "https://i.postimg.cc/HnzF61Vm/1.png"
+      },
+      {
+        "id": 10,
+        "text": "stretch pulsate movie back slow",
+        "url": "https://i.postimg.cc/jqhVxPv1/2.png"
+      },
+      {
+        "id": 10,
+        "text": "stretch pulsate movie back slow",
+        "url": "https://i.postimg.cc/ZKYGCnM5/3.png"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "",
+    "answers": [
+      {
+        "var_equal": [
+          "т",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          2
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          3
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          4
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          5
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          6
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          6
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          7
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          8
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          8
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          1,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          9
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          1,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          4,
+          "т",
+          10
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          10
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          1,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          11
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          11
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          12
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          12
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          4,
+          "т",
+          13
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          13
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          4,
+          "т",
+          14
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          14
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Пока я был в тюрьме, вы развлекались?",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          15
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          14
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Ты всех победил?",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          16
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          15
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          4,
+          "т",
+          18
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          16
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          4,
+          "т",
+          17
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          17
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          19
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          18
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          19
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          19
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          20
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          20
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          21
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          21
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          4,
+          "т",
+          22
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          22
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          23
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          23
+        ],
+        "id": 2,
+        "text": "Мое почтение миледи.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          24
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          23
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Кажется, я ждал Лорда Исендера.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          25
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": [
+      {
+        "id": 12,
+        "text": "24 stretch",
+        "url": "https://i.postimg.cc/zfchgWnY/24.png",
+        "var_equal": [
+          "т",
+          24
+        ]
+      },
+      {
+        "id": 12,
+        "text": "25 stretch",
+        "url": "https://i.postimg.cc/Y9LWf93G/25.png",
+        "var_equal": [
+          "т",
+          25
+        ]
+      },
+      {
+        "id": 12,
+        "text": "26 stretch",
+        "url": "https://i.postimg.cc/7ZNMffsq/26.png",
+        "var_equal": [
+          "т",
+          26
+        ]
+      },
+      {
+        "id": 12,
+        "text": "27 stretch",
+        "url": "https://i.postimg.cc/d1h8Hnq0/27.png",
+        "var_equal": [
+          "т",
+          27
+        ]
+      },
+      {
+        "id": 12,
+        "text": "28 stretch",
+        "url": "https://i.postimg.cc/25cQ7gNJ/28.png",
+        "var_equal": [
+          "т",
+          28
+        ]
+      },
+      {
+        "id": 12,
+        "text": "29 stretch",
+        "url": "https://i.postimg.cc/9MsyvTMY/29.png",
+        "var_equal": [
+          "т",
+          29
+        ]
+      },
+      {
+        "id": 12,
+        "text": "30 stretch",
+        "url": "https://i.postimg.cc/c18RfD99/30.png",
+        "var_equal": [
+          "т",
+          30
+        ]
+      },
+      {
+        "id": 12,
+        "text": "31 stretch",
+        "url": "https://i.postimg.cc/3Np27R05/31.png",
+        "var_equal": [
+          "т",
+          31
+        ]
+      },
+      {
+        "id": 12,
+        "text": "32 stretch",
+        "url": "https://i.postimg.cc/L6KzDzGH/32.png",
+        "var_equal": [
+          "т",
+          32
+        ]
+      },
+      {
+        "id": 12,
+        "text": "33 stretch",
+        "url": "https://i.postimg.cc/CxwbTwFX/33.png",
+        "var_equal": [
+          "т",
+          33
+        ]
+      },
+      {
+        "id": 12,
+        "text": "34 stretch",
+        "url": "https://i.postimg.cc/Dyr1MSK1/34.png",
+        "var_equal": [
+          "т",
+          34
+        ]
+      },
+      {
+        "id": 12,
+        "text": "35 stretch",
+        "url": "https://i.postimg.cc/nhTBnNrz/35.png",
+        "var_equal": [
+          "т",
+          35
+        ]
+      },
+      {
+        "id": 12,
+        "text": "36 stretch",
+        "url": "https://i.postimg.cc/hGjxvMQ0/36.png",
+        "var_equal": [
+          "т",
+          36
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Укажите команды для картинки stretch",
+        "url": "https://i.postimg.cc/0N9jcqgf/image.png",
+        "var_equal": [
+          "т",
+          37
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          38
+        ],
+        "id": 12,
+        "url": "https://i.postimg.cc/3x5d0vnz/1.png",
+        "text": "Укажите команды для картинки stretch",
+        "var_set": [
+          "т",
+          38
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "9",
+    "answers": [
+      {
+        "var_equal": [
+          "т",
+          24
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          1,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          26
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          25
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          27
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          26
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          28
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          27
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          28
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          28
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          29
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          29
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          30
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          30
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          31
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          31
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          32
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          32
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          2,
+          "фон",
+          4,
+          "перс",
+          1,
+          "т",
+          33
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          33
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          1,
+          "фон",
+          4,
+          "перс",
+          2,
+          "т",
+          34
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          34
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          35
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          35
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          36
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          36
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          37
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          37
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "улыбка",
+          0,
+          "д",
+          3,
+          "фон",
+          4,
+          "перс",
+          0,
+          "т",
+          38
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "",
+    "answers": []
+  }
+]

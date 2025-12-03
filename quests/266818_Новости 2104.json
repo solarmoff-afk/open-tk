@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 33355 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор masha katsuba написал еще 25329.8 слов в квесте \"Границы тьмы\"."
+      },
+      {
+        "targetbookid": "230986",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Границы тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Monkey написал еще 20548.2 слов в квесте \"Стоп, снято!\"."
+      },
+      {
+        "targetbookid": "264609",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Стоп, снято!\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Белый маг написал еще 16796.8 слов в квесте \"Леопардик. Часть 2\"."
+      },
+      {
+        "targetbookid": "262431",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Леопардик. Часть 2\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор bestmean написал еще 16370.6 слов в квесте \"Школа\n\n\"."
+      },
+      {
+        "targetbookid": "266481",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Школа\n\n\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

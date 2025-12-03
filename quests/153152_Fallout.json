@@ -1,0 +1,479 @@
+[
+  {
+    "id": 1,
+    "text": "SPECIAL\nS- Сила (S)\nP- Восприятие (P)\nE- Выносливость (E)\nC- Харизма (C)\nI- Интеллект (I)\nA- Ловкость (A)\nL- Удача (L)",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Старт",
+        "lua_do": "function lua_do()\nfor i=1,100 do\nvars[\"human\".. i ..\"_have\"] = 0\nend\nend",
+        "var_set": [
+          "S",
+          1,
+          "P",
+          1,
+          "E",
+          1,
+          "C",
+          1,
+          "I",
+          1,
+          "A",
+          1,
+          "L",
+          1,
+          "hp",
+          100,
+          "k_num",
+          0,
+          "autorun",
+          8
+        ]
+      },
+      {
+        "id": 8,
+        "text": "auto run",
+        "need": [
+          999
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ваше убежище смотритель.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Люди(макс. 100)"
+      },
+      {
+        "id": 5,
+        "text": "Ресурсы убежища"
+      },
+      {
+        "id": 6,
+        "text": "Вы"
+      },
+      {
+        "id": 7,
+        "text": "Отправиться в пустошь"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Население:\n\nНа этой странице должны выводиться новые варианты ответа в зависимости от числа жителей в убежище",
+    "answers": [
+      {
+        "id": 3,
+        "text": "calc",
+        "calculate": true
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 3,
+        "var_need": [
+          "k_num",
+          10
+        ],
+        "var_sub": [
+          "k_num",
+          10
+        ],
+        "text": "<----Назад"
+      },
+      {
+        "var_show": [
+          "human1_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 1<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 1 ..\"_desc\"] = \"№\".. 1<plus>vars.k_num ..\" \".. vars[\"human\"..1<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 1<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 1 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human2_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 2<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 2 ..\"_desc\"] = \"№\".. 2<plus>vars.k_num ..\" \".. vars[\"human\".. 2<plus>vars.k_num.. \"_name\"] ..\" \".. vars[\"human\".. 2<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 2 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human3_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 3<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 3 ..\"_desc\"] = \"№\".. 3<plus>vars.k_num ..\" \".. vars[\"human\".. 3<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 3<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 3 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human4_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 4<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 4 ..\"_desc\"] = \"№\".. 4<plus>vars.k_num ..\" \".. vars[\"human\"..4<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 4<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 4 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human5_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 5<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 5 ..\"_desc\"] = \"№\".. 5<plus>vars.k_num ..\" \".. vars[\"human\"..5<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 5<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 5 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human6_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 6<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 6 ..\"_desc\"] = \"№\".. 6<plus>vars.k_num ..\" \".. vars[\"human\"..6<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 6<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 6 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human7_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 7<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 7 ..\"_desc\"] = \"№\".. 7<plus>vars.k_num ..\" \".. vars[\"human\"..7<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 7<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 7 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human8_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 8<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 8 ..\"_desc\"] = \"№\".. 8<plus>vars.k_num ..\" \".. vars[\"human\"..8<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 8<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 8 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human9_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 9<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 9 ..\"_desc\"] = \"№\".. 9<plus>vars.k_num ..\" \".. vars[\"human\"..9<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 9<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 9 <plus> vars.k_num\nend"
+      },
+      {
+        "var_show": [
+          "human10_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"human\".. 10<plus>vars.k_num ..\"_have\"] == 1 then\nvars[\"human\".. 10 ..\"_desc\"] = \"№\".. 10<plus>vars.k_num ..\" \".. vars[\"human\"..10<plus>vars.k_num..\"_name\"] ..\" \".. vars[\"human\".. 10<plus>vars.k_num ..\"_surname\"]\nreturn true\nend\nend",
+        "id": 4,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 10 <plus> vars.k_num\nend"
+      },
+      {
+        "id": 3,
+        "text": "Вперед----->",
+        "var_add": [
+          "k_num",
+          10
+        ],
+        "var_no_more": [
+          "k_num",
+          90
+        ]
+      },
+      {
+        "id": 3,
+        "text": "создать человека",
+        "lua_do": "function lua_do()\nlocal created = 0\n  for i=1,100 do\n    if vars[\"human\".. i ..\"_have\"] == 0 and created == 0 then\n      local gender = math.random(1,2)\n      if gender == 1 then gender = \"мужской\"\n      else gender = \"женский\"\n      end\n      if gender == \"мужской\" then\n      vars[\"human\".. i ..\"_name\"] = vars.male_names[math.random(1,#vars.male_names)]\n      vars[\"human\".. i ..\"_surname\"] = vars.male_surnames[math.random(1,#vars.male_surnames)]\n      else vars[\"human\".. i ..\"_name\"] = vars.female_names[math.random(1,#vars.female_names)]\n        vars[\"human\".. i ..\"_surname\"] = vars.female_surnames[math.random(1,#vars.female_surnames)]\n      end\n      vars[\"human\".. i ..\"_gender\"] = gender\n      vars[\"human\".. i ..\"_have\"] = 1\n      created = 1\n    end\n  end\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Житель<s>r\n",
+    "answers": [
+      {
+        "id": 4,
+        "text": "calc",
+        "lua_do": "function lua_do()\nvars.human_info = \"ID: \".. vars.look_num ..\"<s>\n\"..\" Полное имя: \".. vars[\"human\".. vars.look_num ..\"_name\"] ..\" \".. vars[\"human\".. vars.look_num ..\"_surname\"] ..\"<s>\n\"..\" Пол: \".. vars[\"human\".. vars.look_num ..\"_gender\"]\nend",
+        "calculate": true
+      },
+      {
+        "id": 4,
+        "text": "\n",
+        "var_show": [
+          "human_info"
+        ],
+        "merge": true
+      },
+      {
+        "id": 3,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Склад (Макс.100)",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 5,
+        "text": "\nЕда",
+        "var_show": [
+          "food"
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "\nВода",
+        "var_show": [
+          "water"
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "\nДерево",
+        "var_show": [
+          "wood"
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "\nМеталл",
+        "var_show": [
+          "metal"
+        ],
+        "merge": true
+      },
+      {
+        "id": 9,
+        "text": "Склад оружия(пока не заходить)"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Игрок\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Вернуться"
+      },
+      {
+        "id": 6,
+        "text": "[S",
+        "var_show": [
+          "S",
+          "]"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "[P",
+        "var_show": [
+          "P",
+          "]"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "[E",
+        "var_show": [
+          "E",
+          "]"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "[C",
+        "var_show": [
+          "C",
+          "]"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "[I",
+        "var_show": [
+          "I",
+          "]"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "[A",
+        "var_show": [
+          "A",
+          "]"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "[L",
+        "var_show": [
+          "L",
+          "]"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "\n[Здоровье",
+        "var_show": [
+          "hp",
+          "]"
+        ],
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "autorun",
+    "answers": [
+      {
+        "id": 8,
+        "text": "список имен и фамилий",
+        "calculate": true,
+        "lua_do": "function lua_do()\nvars.female_names = {\"Анастасия\", \"Аврора\", \"Ольга\", \"Анна\", \"Арианна\", \"Мария\"}\nvars.male_names ={\"Виктор\", \"Дмитрий\", \"Александр\", \"Архи\"}\nvars.female_surnames = {\"Костенко\", \"Кольга\", \"Будина\", \"Хилькевич\", \"Орлова\", \"Шукшина\"}\nvars.male_surnames = {\"Золотов\", \"Потапов\", \"Серый\", \"Костенко\", \"Кольга\", \"Хилькевич\", \"Тектор\"}\n--for k,v in pairs(vars.names) do\n--end\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Склад оружия",
+    "answers": [
+      {
+        "id": 3,
+        "text": "calc",
+        "calculate": true
+      },
+      {
+        "id": 5,
+        "text": "Вернуться"
+      },
+      {
+        "id": 9,
+        "text": "<----Назад",
+        "var_sub": [
+          "k_num_w",
+          10
+        ],
+        "var_need": [
+          "k_num_w",
+          10
+        ]
+      },
+      {
+        "var_show": [
+          "weapon1_desc"
+        ],
+        "lua_if": "function lua_if()\nif vars[\"weapon\".. 1<plus>vars.k_num_w ..\"_have\"] == 1 then\nvars[\"weapon\".. 1 ..\"_desc\"] = \"№\".. 1<plus>vars.k_num_w ..\" \".. vars[\"weapon\"..1<plus>vars.k_num_w..\"_name\"]\nreturn true\nend\nend",
+        "id": 10,
+        "text": " ",
+        "lua_do": "function lua_do()\nvars.look_num = 1 <plus> vars.k_num_w\nend"
+      },
+      {
+        "id": 9,
+        "text": "Вперед----->",
+        "var_add": [
+          "k_num_w",
+          10
+        ],
+        "var_no_more": [
+          "k_num_w",
+          90
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Оружие<s>r\n",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nvars.weapon_info = \"Номер слота: \".. vars.look_num_w ..\"<s>\n\"..\"Название: \".. vars[\"weapon\".. vars.look_num_w .. \"_name\"]\nend"
+      },
+      {
+        "id": 9,
+        "text": "Назад"
+      },
+      {
+        "id": 10,
+        "text": " ",
+        "var_show": [
+          "weapon_info"
+        ],
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 14,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 16,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 17,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 18,
+    "text": "",
+    "answers": []
+  }
+]

@@ -1,0 +1,454 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Aleks Otter<s>r\n<s>r\nРазводи хомяков и отдавай их в лабораторию.<s>r\nПолучи редких мутантов!",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать",
+        "lua_do": "function lua_do()\n  g.fullscreen = 0\nend"
+      },
+      {
+        "contentList": [
+          "http://188.120.236.127/aleks_otter/hamsters/details/button_star.png http://188.120.236.127/aleks_otter/hamsters/details/labBase.png http://188.120.236.127/aleks_otter/hamsters/details/labGenEnd.png http://188.120.236.127/aleks_otter/hamsters/details/labGenom.png http://188.120.236.127/aleks_otter/hamsters/details/labLight.png http://188.120.236.127/aleks_otter/hamsters/details/labZero.png http://188.120.236.127/aleks_otter/hamsters/details/back_female.png http://188.120.236.127/aleks_otter/hamsters/details/back_male.png http://188.120.236.127/aleks_otter/hamsters/details/back_none.png http://188.120.236.127/aleks_otter/hamsters/details/frame1.png http://188.120.236.127/aleks_otter/hamsters/details/frame2.png http://188.120.236.127/aleks_otter/hamsters/details/frame3.png http://188.120.236.127/aleks_otter/hamsters/details/frame4.png http://188.120.236.127/aleks_otter/hamsters/details/frame5.png http://188.120.236.127/aleks_otter/hamsters/details/heart.png http://188.120.236.127/aleks_otter/hamsters/details/outline.png http://188.120.236.127/aleks_otter/hamsters/details/plus.png http://188.120.236.127/aleks_otter/hamsters/details/question.png http://188.120.236.127/aleks_otter/hamsters/hamsters/cock_body.png http://188.120.236.127/aleks_otter/hamsters/hamsters/cock_head.png http://188.120.236.127/aleks_otter/hamsters/hamsters/cock_tail.png http://188.120.236.127/aleks_otter/hamsters/hamsters/elephant_body.png http://188.120.236.127/aleks_otter/hamsters/hamsters/elephant_head.png http://188.120.236.127/aleks_otter/hamsters/hamsters/elephant_tail.png http://188.120.236.127/aleks_otter/hamsters/hamsters/gray.png http://188.120.236.127/aleks_otter/hamsters/hamsters/gray_body.png http://188.120.236.127/aleks_otter/hamsters/hamsters/gray_head.png http://188.120.236.127/aleks_otter/hamsters/hamsters/gray_tail.png http://188.120.236.127/aleks_otter/hamsters/hamsters/red.png http://188.120.236.127/aleks_otter/hamsters/hamsters/red_body.png http://188.120.236.127/aleks_otter/hamsters/hamsters/red_head.png http://188.120.236.127/aleks_otter/hamsters/hamsters/red_tail.png http://188.120.236.127/aleks_otter/hamsters/hamsters/tiger_body.png http://188.120.236.127/aleks_otter/hamsters/hamsters/tiger_head.png http://188.120.236.127/aleks_otter/hamsters/hamsters/tiger_tail.png http://188.120.236.127/aleks_otter/hamsters/hamsters/white_body.png http://188.120.236.127/aleks_otter/hamsters/hamsters/white_head.png http://188.120.236.127/aleks_otter/hamsters/hamsters/white_tail.png"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 1,
+        "url": "https://vk.com/aleks_otter_quest",
+        "text": "Группа автора",
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/general/vk_blue.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Перетащи хомяка-мальчика на хомяка-девочку, чтобы получить потомство.<s>r\n<s>r\nОтправь лишних хомяков в лабораторию, чтобы получить хомяка-мутанта.<s>r\n<s>r\nНажми на хомяка, чтобы клонировать его или сменить пол.<s>r\n<s>r\nНажми на пустое хомякоместо, чтобы купить простого хомяка.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "К хомякам",
+        "lua_do": "function lua_do()\n   g.fullscreen = 1\n   g.openedTypes = g.openedTypes or {\"gray\"}\n   types = {{\"gray\"}, {\"red\"}, {\"white\",\"cock\"},{\"elephant\"},{\"tiger\"}}\n   sex = {\"male\", \"female\", \"none\"}\n   frames = {\"frame1\", \"frame2\", \"frame3\", \"frame4\", \"frame5\"}\n   hamsters = {}\n   labPoints = 0\n\n   local hamster1 = {sex = 1, chapters = {{rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}}}\n   local hamster2 = {sex = 2, chapters = {{rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}}}\n   table.insert(hamsters, hamster1)\n   table.insert(hamsters, hamster2)\n   for i = 1, 6 do\n      table.insert(hamsters, {sex = 3})\n   end\n\n   baseUrl =\"http://188.120.236.127/aleks_otter/hamsters/\"\n   baseUrlEnd = \".png\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Тут всё происходит",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(showHamsters)\nreturn (tf == 'nil') or (tf == 'string') \nend",
+        "super_calculate": false,
+        "id": 9,
+        "calculate": true,
+        "run": [
+          9
+        ],
+        "text": "Загрузка библиотеки функций"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n   canCenter = canvas.width/2\n   imgWidth05 = (canvas.height - 10)/9\n   imgWidth = imgWidth05 *2\n   currentHamsterId = 0   \n   babySize = canvas.width* 0.75\n   \n   createPictureTable()\n   drawButtons()\n   drawHamsters()\nend",
+        "text": "Рисуем хомяков",
+        "id": 3,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Хотите купить нового хомяка?",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Нет, спасибо",
+        "middle_answer": false
+      },
+      {
+        "right_answer": false,
+        "paid_answer": [
+          "Серый хомяк (девочка)",
+          1
+        ],
+        "id": 3,
+        "text": "Серый хомяк\n(девочка)",
+        "lua_do": "function lua_do()\naddHamster({sex = 2, chapters = {{rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}}}) \nend",
+        "answerImage": [
+          "http://188.120.236.127/aleks_otter/hamsters/hamsters/gray.png"
+        ]
+      },
+      {
+        "paid_answer": [
+          "Серый хомяк (мальчик)",
+          1
+        ],
+        "left_answer": false,
+        "id": 3,
+        "text": "Серый хомяк\n(мальчик)",
+        "lua_do": "function lua_do()\naddHamster({sex = 1, chapters = {{rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}, {rare = 1, type = \"gray\"}}}) \nend",
+        "answerImage": [
+          "http://188.120.236.127/aleks_otter/hamsters/hamsters/gray.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Функции хомяков",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction getRandomType(rare) \n   return types[rare][math.random(#types[rare])]\nend\nend",
+        "calculate": true,
+        "id": 5,
+        "text": "Получить случайный тип указанной редкости"
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Получить случайную редкость",
+        "lua_do": "function lua_do()\nfunction getRandomRare()\n   local rare = math.random(15)\n   if rare <= 5 then return 1 \n   elseif rare <= 9 then return 2 \n   elseif rare <= 12 then return 3 \n   elseif rare <= 14 then return 4 \n   else return 5\n   end\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Получить случайную редкость с повышенным лабораторным шансом",
+        "lua_do": "function lua_do()\nfunction getRandomRareLab()\n   local rare = math.random(10)\n   if rare <= 4 then return 2 \n   elseif rare <= 7 then return 3 \n   elseif rare <= 9 then return 4 \n   else return 5\n   end\nend\nend",
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Получить часть тела (унаследовав или случайную)",
+        "lua_do": "function lua_do()\nfunction getChapter(hamster1, hamster2, index)\n   local chance = math.random(3)\n   if chance == 1 then return table.copy2(hamster1.chapters[index]) \n   elseif chance == 2 then return table.copy2(hamster2.chapters[index]) \n   else \n      local rrrare = getRandomRare()\n      return {rare = rrrare, type = getRandomType(rrrare)}\n   end\nend\nend",
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction newHamster(hamster1, hamster2) \n   local body = getChapter(hamster1, hamster2, 1)\n   local tail = getChapter(hamster1, hamster2, 2)\n   local head = getChapter(hamster1, hamster2, 3)\n \n   return {sex = math.random(2), chapters = {body, tail, head}}\nend\nend",
+        "text": "Получить нового хомяка скрещиванием",
+        "calculate": true,
+        "id": 5
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction newRandomHamster() \n   local rrrare = getRandomRareLab()\n   local body = {rare = rrrare, type = getRandomType(rrrare)}\n   rrrare = getRandomRareLab()\n   local tail = {rare = rrrare, type = getRandomType(rrrare)}\n   rrrare = getRandomRareLab()\n   local head = {rare = rrrare, type = getRandomType(rrrare)}\n   return {sex = math.random(2), chapters = {body, tail, head}}\nend\nend",
+        "text": "Получить нового хомяка из лаборатории"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function addHamster(hamster) \n   for i = 1, #hamsters do\n      if hamsters[i].sex == 3 then \n         hamsters[i] = table.copy2(hamster)\n         return\n      end\n   end\nend end",
+        "calculate": true,
+        "text": "Добавить хомяка в таблицу",
+        "id": 5
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function sendToLab(hamster) \n   local hamCh = hamster.chapters\n   labPoints = labPoints <plus> hamCh[1].rare <plus> hamCh[2].rare <plus> hamCh[3].rare\nend end",
+        "text": "Отправить в лабораторию",
+        "id": 5,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function hamIsFull() \n   local result = true\n   for i = #hamsters, 1, -1 do\n      if hamsters[i].sex == 3 then \n         result = false\n         break\n      end\n   end\n   return result\nend end",
+        "text": "Проверка наличия свободных хомякомест",
+        "id": 5,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Проверка, открыт ли вид хомяка",
+        "calculate": true,
+        "lua_do": "function lua_do() function alreadyOpened(typePar) \n   local opened = false\n   for i = 1, table.getn(g.openedTypes) do\n      if g.openedTypes[i] == typePar then \n         opened = true \n         break\n      end\n   end\n   return opened\nend end"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Функции отрисовки",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do() function getSexUrl(hamster)\n   return baseUrl .. \"details/back_\" .. sex[hamster.sex] .. baseUrlEnd\nend end",
+        "text": "Получить ссылку на картинку фона"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function getBodyUrl(hamster)\n   return baseUrl .. \"hamsters/\" .. hamster.chapters[1].type .. \"_body\" .. baseUrlEnd\nend end",
+        "calculate": true,
+        "text": "Получить ссылку на картинку туловища",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function getTailUrl(hamster)\n   return baseUrl .. \"hamsters/\" .. hamster.chapters[2].type .. \"_tail\" .. baseUrlEnd\nend end",
+        "calculate": true,
+        "text": "Получить ссылку на картинку хвоста",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function getHeadUrl(hamster)\n   return baseUrl .. \"hamsters/\" .. hamster.chapters[3].type .. \"_head\" .. baseUrlEnd\nend end",
+        "calculate": true,
+        "text": "Получить ссылку на картинку головы",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function getFrame(rare)\n   return baseUrl .. \"details/frame\" .. rare .. baseUrlEnd\nend end",
+        "calculate": true,
+        "text": "Получить ссылку на картинку рамки",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function getButton(name)\n   return baseUrl .. \"details/button_\" .. name .. baseUrlEnd\nend end",
+        "text": "Получить ссылку на картинку кнопки",
+        "id": 6,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function addPicture(xPar, yPar, scalePar)\n   table.insert(pictures, {x = xPar, y = yPar, scale = scalePar})\nend end",
+        "text": "Добавить координаты картинки",
+        "id": 6,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "text": "Определить позицию пальца по координатам",
+        "calculate": true,
+        "lua_do": "function lua_do() function getPictureId(x, y)\n   local picCount = #pictures\n   if x > pictures[picCount].x <plus> imgWidth and y > pictures[picCount].y <plus> imgWidth then return 0 end\n   for i = picCount, 1, -1 do\n      if x > pictures[i].x  and y > pictures[i].y then return i end\n   end\n   return 0\nend end"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do() function drawButtons()\n   -- пробирка\n   local targetPoints = 100\n   local labGenom = display.newImage(baseUrl .. \"details/labGenom.png\")\n   labGenom.width = imgWidth05 * 3    labGenom.height = imgWidth05\n   labGenom.x = pictures[1].x <plus> imgWidth * 0.75    labGenom.y = pictures[1].y <plus> imgWidth05 / 2\n\n   local labGenEnd = display.newImage(baseUrl .. \"details/labGenEnd.png\")\n   labGenEnd.width = imgWidth / 12 * 5     labGenEnd.height = labGenom.height\n   -- расчёт, сколько генома должно быть в пробирке\n   local maxGenomLen = labGenom.width - (imgWidth/15) - labGenEnd.width\n   local genomLen = maxGenomLen/100 * labPoints\n   labGenEnd.x = pictures[1].x <plus> labGenEnd.width / 2 <plus> genomLen    labGenEnd.y = labGenom.y\n\n   if labPoints <= targetPoints then \n      local labZero = display.newImage(baseUrl .. \"details/labZero.png\")\n      labZero.width = maxGenomLen - genomLen     labZero.height = labGenom.height\n      labZero.x = labGenEnd.x <plus> labGenEnd.width/2 - imgWidth/15 <plus> labZero.width/2\n      labZero.y = labGenom.y\n   end\n\n   local lab = display.newImage(baseUrl .. \"details/labBase.png\")\n   lab.width = labGenom.width     lab.height = labGenom.height\n   lab.x = labGenom.x     lab.y = labGenom.y\n\n   if labPoints > targetPoints then \n      local labFinal = display.newImage(baseUrl .. \"details/labLight.png\")\n      labFinal.width = labGenom.width     labFinal.height = labGenom.height\n      labFinal.x = labGenom.x     labFinal.y = labGenom.y\n      labFinal:addEventListener( \"tap\", tapLab)\n   end\n\n   -- кнопка коллекции\n   local collection = display.newImage(getButton(\"star\"))\n   collection.width = imgWidth05    collection.height = imgWidth05\n   collection.x = pictures[2].x <plus> imgWidth05 / 2    collection.y = lab.y\n   collection:addEventListener( \"tap\", tapCollection)\nend end",
+        "text": "Отрисовка кнопок"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "text": "Создание таблицы картинок",
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction createPictureTable() \n   pictures = {}\n   addPicture(canCenter - 5 - imgWidth, 0, false) -- лаба\n   addPicture(canCenter <plus> 5 <plus> imgWidth05, 0, false) -- коллекция\n\n   local left = true\n   local y = imgWidth05 <plus> 10\n   for i = 1, #hamsters do\n      if left then\n         addPicture(canCenter - 5 - imgWidth, y, false) \n      else\n         addPicture(canCenter <plus> 5, y, true) \n         y = y <plus> imgWidth\n      end\n      left = not left\n   end\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction drawHamsters() \n   backgrounds = display.newGroup()\n   for i = 3, 10 do\n      local background = display.newImage(getSexUrl(hamsters[i-2]))\n      background.width, background.height = imgWidth, imgWidth\n      background.x = pictures[i].x <plus> imgWidth05   background.y = pictures[i].y <plus> imgWidth05\n      if pictures[i].scale then background.xScale = -1 end\n   end\n\n   portraits = {}\n   for i = 1, #hamsters do\n      portraits[i] = display.newGroup()\n      portraits[i].hamsterId = i\n      portraits[i].x = pictures[i<plus>2].x <plus> imgWidth05  portraits[i].y = pictures[i<plus>2].y <plus> imgWidth05\n      if pictures[i<plus>2].scale then portraits[i].xScale = -1 end\n\n      if hamsters[i].sex < 3 then -- хомяки в наличии\n         local body = display.newImage(getBodyUrl(hamsters[i]))\n         local tail = display.newImage(getTailUrl(hamsters[i]))\n         local head = display.newImage(getHeadUrl(hamsters[i])) \n         body.width, body.height, tail.width, tail.height, head.width, head.height = imgWidth, imgWidth, imgWidth, imgWidth, imgWidth, imgWidth\n         portraits[i]:insert(body)     portraits[i]:insert(tail)     portraits[i]:insert(head)\n         portraits[i]:addEventListener( \"touch\", moveHamster)\n         portraits[i]:addEventListener( \"tap\", tapHamster)\n      else -- хомякоместо\n         local outline = display.newImage(baseUrl .. \"details/outline.png\")\n         local plus = display.newImage(baseUrl .. \"details/plus.png\")\n         outline.width, outline.height, plus.width, plus.height = imgWidth, imgWidth, imgWidth, imgWidth\n         portraits[i]:insert(outline)      portraits[i]:insert(plus)\n         portraits[i]:addEventListener( \"tap\", tapHamsterPlace)\n      end \n   end\n\n   hearts = display.newEmitter(loveData, system.DocumentsDirectory)\n   hearts.isVisible = false\nend\nend",
+        "text": "Отрисовка хомяков"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nloveData = {\nabsolutePosition = true,\nangle = 0, angleVariance = 0,\nblendFuncDestination = 771, blendFuncSource = 774,\nduration = -1,\nemitterType = 0,\nfinishColorAlpha = 1, finishColorBlue = 0.6, finishColorGreen = 0.5, finishColorRed = 1,\nfinishColorVarianceAlpha = 0, finishColorVarianceBlue = 0, finishColorVarianceGreen = 0, finishColorVarianceRed = 0,\nfinishParticleSize = 60, finishParticleSizeVariance = 20,\ngravityx = 0, gravityy = -150,\nmaxParticles = 20,\nmaxRadius = 0, maxRadiusVariance = 0, minRadius = 0, minRadiusVariance = 0,\nparticleLifespan = 1, particleLifespanVariance = 0.5,\nradialAccelVariance = 0, radialAcceleration = 200, rotatePerSecond = 0, rotatePerSecondVariance = 0,\nrotationEnd = 0, rotationEndVariance = 0, rotationStart = 0, rotationStartVariance = 0,\nsourcePositionVariancex = 100,\nsourcePositionVariancey = 100,\nspeed = 30, speedVariance = 10,\nstartColorAlpha = 1, startColorBlue = 0.2, startColorGreen = 0.2, startColorRed = 1,\nstartColorVarianceAlpha = 0, startColorVarianceBlue = 0, startColorVarianceGreen = 0, startColorVarianceRed = 0,\nstartParticleSize = 4, startParticleSizeVariance = 1,\ntangentialAccelVariance = 0, tangentialAcceleration = 0,\ntextureFileName = nameForImages(baseUrl .. \"details/heart.png\"),\ntextureImageData = \"\",\nyCoordFlipped = -1\n}\nend",
+        "calculate": true,
+        "text": "Любовь-морковь",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction drawCollHamster(rarePar, typePar) \n   collectItem = display.newGroup()\n   local hamsterL = {sex = 3, chapters = {{rare = rarePar, type = typePar}, {rare = rarePar, type = typePar}, {rare = rarePar, type = typePar}}}\n   local background = display.newImage(getSexUrl(hamsterL)) \n   background.width, background.height = imgWidth, imgWidth\n   collectItem:insert(background) \n\n   if alreadyOpened(typePar) then\n      local body = display.newImage(getBodyUrl(hamsterL))\n      local tail = display.newImage(getTailUrl(hamsterL))\n      local head = display.newImage(getHeadUrl(hamsterL)) \n      body.width, body.height, tail.width, tail.height, head.width, head.height = imgWidth, imgWidth, imgWidth, imgWidth, imgWidth, imgWidth\n      collectItem:insert(body)     collectItem:insert(tail)     collectItem:insert(head)\n   else\n      local outline = display.newImage(baseUrl .. \"details/outline.png\")\n      local question = display.newImage(baseUrl .. \"details/question.png\")\n      outline.width, outline.height, question.width, question.height = imgWidth, imgWidth, imgWidth, imgWidth\n      collectItem:insert(outline)    collectItem:insert(question) \n   end\n   local frame = display.newImage(getFrame(rarePar)) \n   frame.width, frame.height = imgWidth, imgWidth\n   collectItem:insert(frame) \n\n   collectItem.y = collY\n   if isLeft then \n      collectItem.x = canCenter - imgWidth05 - 5\n   else\n      collectItem.x = canCenter <plus> imgWidth05 <plus> 5\n      collY = collY <plus> imgWidth\n   end\n   isLeft = not isLeft\nend\nend",
+        "calculate": true,
+        "text": "Отрисовка одного хомяка",
+        "id": 6
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Это хороший хомяк. Что вы хотите с ним сделать?",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Ничего!",
+        "middle_answer": false
+      },
+      {
+        "right_answer": false,
+        "paid_answer": [
+          "Сменить пол хомяка",
+          1
+        ],
+        "id": 3,
+        "text": "Сменить пол",
+        "lua_do": "function lua_do()\n   if hamsters[currentHamsterId].sex == 1 then\n      hamsters[currentHamsterId].sex = 2\n   else\n      hamsters[currentHamsterId].sex = 1\n   end\nend"
+      },
+      {
+        "paid_answer": [
+          "Клонировать хомяка",
+          1
+        ],
+        "lua_do": "function lua_do()\naddHamster(table.copy2(hamsters[currentHamsterId])) \nend",
+        "id": 3,
+        "text": "Клонировать",
+        "lua_if": "function lua_if()\nreturn not hamIsFull() \nend",
+        "left_answer": false
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   local hamPortrait = display.newGroup()\n   local background = display.newImage(getSexUrl(hamsters[currentHamsterId]))\n   local body = display.newImage(getBodyUrl(hamsters[currentHamsterId]))\n   local tail = display.newImage(getTailUrl(hamsters[currentHamsterId]))\n   local head = display.newImage(getHeadUrl(hamsters[currentHamsterId])) \n   background.width, background.height, body.width, body.height, tail.width, tail.height, head.width, head.height = babySize, babySize, babySize, babySize, babySize, babySize, babySize, babySize\n   hamPortrait:insert(background)   hamPortrait:insert(body)     hamPortrait:insert(tail)     hamPortrait:insert(head)\n   hamPortrait.x = canCenter  hamPortrait.y = babySize / 2\nend",
+        "calculate": true,
+        "text": "Рисуем выбранного хомяка",
+        "id": 10
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Действия пользователя",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction moveHamster(event)\n   pictureId = getPictureId(event.target.x, event.target.y)\n   if ( event.phase == \"began\" ) then\n        -- Запомнить Idтекущего хомяка\n      if event.target.hamsterId ~= pictureId-2 then return true end\n      currentHamsterId = event.target.hamsterId\n      display.getCurrentStage():setFocus(event.target)\n      event.target:toFront()\n      event.target.touchOffsetX = event.x - event.target.x\n      event.target.touchOffsetY = event.y - event.target.y\n   elseif ( event.phase == \"moved\" ) then\n        if currentHamsterId == 0 then return true end\n        event.target.x = event.x - event.target.touchOffsetX\n        event.target.y = event.y - event.target.touchOffsetY\n        -- сердечки - если наведение на хомяка противоположного пола\n        if (not hamIsFull()) and pictureId > 2 \n                and math.abs(event.target.x - pictures[pictureId].x - imgWidth05) < imgWidth05 \n                and math.abs(event.target.y - pictures[pictureId].y - imgWidth05) < imgWidth05 \n                and hamsters[pictureId-2].sex < 3\n                and hamsters[pictureId-2].sex ~= hamsters[currentHamsterId].sex  then\n           hearts.isVisible = true\n           hearts.x = event.x    hearts.y = event.y\n        else\n           hearts.isVisible = false\n        end\n   elseif ( event.phase == \"ended\" ) then\n        if currentHamsterId == 0 then return true end\n        display.getCurrentStage():setFocus(nil)\n        hearts.isVisible = false\n        if (not hamIsFull()) and pictureId > 2 and hamsters[pictureId-2].sex < 3 and hamsters[pictureId-2].sex ~= hamsters[currentHamsterId].sex then\n           -- спарить  \n           baby = newHamster(hamsters[currentHamsterId], hamsters[pictureId-2])\n           showPage {id = 10, transition = \"instant\"}\n        elseif pictureId == 1 then\n           -- отдать в лабораторию\n           sendToLab(hamsters[currentHamsterId])\n           hamsters[currentHamsterId] = {sex = 3}\n           showPage {id = 3, transition = \"instant\"}\n        else  \n           -- вернуть на место\n           transition.moveTo(event.target, {x = pictures[currentHamsterId<plus>2].x <plus> imgWidth05, y=pictures[currentHamsterId<plus>2].y <plus> imgWidth05, time=200 } )\n        end\n        currentHamsterId = 0\n   end\n   return true\nend\nend",
+        "text": "Тащим хомяка",
+        "id": 6,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "text": "Тап по хомяку",
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction tapHamster(event)\n   if event.target.hamsterId ~= pictureId-2 then return true end\n   currentHamsterId = event.target.hamsterId\n   showPage {id = 7, transition = \"instant\"}\n   return true\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do() function tapHamsterPlace(event)\n   showPage {id = 4, transition = \"instant\"}\n   return true\nend end",
+        "text": "Тап по хомякоместу"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction tapLab(event)\n   labPoints = 0\n   baby = newRandomHamster() \n   showPage {id = 10, transition = \"instant\"}\n   return true\nend\nend",
+        "calculate": true,
+        "text": "Тап по лаборатории",
+        "id": 6
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() function tapCollection(event)\n   showPage {id = 11, transition = \"instant\"}\n   return true\nend end",
+        "text": "Тап по коллекции",
+        "id": 6,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Все функции",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "run": [
+          5
+        ],
+        "text": "Загрузка функций хомяков"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "run": [
+          6
+        ],
+        "text": "Загрузка функций отрисовки"
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "run": [
+          8
+        ],
+        "text": "Загрузка действий пользователя"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Вы получили нового хомяка!",
+    "answers": [
+      {
+        "right_answer": false,
+        "middle_answer": false,
+        "id": 3,
+        "text": "Отправить в лабораторию",
+        "lua_do": "function lua_do()\nsendToLab(baby) \nend",
+        "left_answer": false
+      },
+      {
+        "id": 3,
+        "lua_do": "function lua_do()\naddHamster(baby) \nend",
+        "text": "Забрать себе",
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "super_calculate": false,
+        "id": 10,
+        "text": "Рисуем бэбика",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   local babyPortrait = display.newGroup()\n   local background = display.newImage(getSexUrl(baby))\n   local body = display.newImage(getBodyUrl(baby))\n   local tail = display.newImage(getTailUrl(baby))\n   local head = display.newImage(getHeadUrl(baby)) \n   background.width, background.height, body.width, body.height, tail.width, tail.height, head.width, head.height = babySize, babySize, babySize, babySize, babySize, babySize, babySize, babySize\n   babyPortrait:insert(background)   babyPortrait:insert(body)     babyPortrait:insert(tail)     babyPortrait:insert(head)\n   babyPortrait.x = canCenter  babyPortrait.y = babySize / 2\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   local charp = baby.chapters\n   if charp[1].type == charp[2].type and charp[1].type == charp[3].type and (not alreadyOpened(charp[1].type)) then\n      table.insert(g.openedTypes, charp[1].type)\n   end\nend",
+        "text": "Запоминаем бэбика"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Коллекция хомяков",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Вернуться к хомякам"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(showHamsters)\nreturn (tf == 'nil') or (tf == 'string') \nend",
+        "super_calculate": false,
+        "id": 9,
+        "calculate": true,
+        "run": [
+          9
+        ],
+        "text": "Загрузка библиотеки функций"
+      },
+      {
+        "super_calculate": true,
+        "id": 3,
+        "text": "Рисуем хомяков",
+        "calculate": false,
+        "lua_do": "function lua_do()\n   collY = imgWidth/2\n   isLeft = true\n\n   for i = 1, #types do\n      for j = 1, table.getn(types[i]) do\n         drawCollHamster(i, types[i][j])\n      end\n   end\nend"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": []
+  }
+]

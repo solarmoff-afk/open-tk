@@ -1,0 +1,697 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Ярослав Зверев.\n\nВзрывайте ракеты прямо в своём телефоне!",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Аркада",
+        "lua_do": "function lua_do()\ng.fullscreen = 0\nend"
+      },
+      {
+        "id": 10,
+        "text": "Песочница",
+        "lua_if": "function lua_if()\nreturn g.level and g.level >= 7\nend",
+        "lua_do": "function lua_do()\ng.fullscreen = 0\nend"
+      },
+      {
+        "id": 1,
+        "text": "Песочница (доступно с 7-го уровня)",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not g.level or g.level < 7\nend"
+      },
+      {
+        "id": 6,
+        "text": "3. Звёздочки!",
+        "run": [
+          6
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\nimages.star.isVisible = false\ng.buy = g.buy or {rockets = {1}, colors = {1} }\ng.theme = \"https://images.vfl.ru/ii/1646572969/ee95b635/38349931.jpg\"\ng.background = \"https://images.vfl.ru/ii/1625041212/3e8bc171/34996837.png\"\ng.base_layer_alpha = 0\ng[\"invert text color\"] = 1\ng.noScroll = 0\ng.blockSwipeLeftMenu = 0\ng.image_part_of_screen = 0.6\n\nif type(g.autoFirework) == \"function\" then\n  g.autoFirework(0, 400)\nend\ng.disableAuthorButton = 1\n\ng.standartDialogOptions = {\n  background = {\n    type = \"gradient\",\n    color1 = {0.1, 0.2, 0.5},\n    color2 = {0.1, 0.1, 0.3},\n    direction = \"right\"\n  },\n  textColorForHeader = { 1, 1, 1 },\n  textColorForBody = { 1, 1, 1 }, \n  answers = {\n    {text = \"Ок\", pressEffect =\n       {type = \"gradient\",\n       color1 = {0.05, 0.15, 0.4},\n       color2 = {0, 0, 0.2},\n       direction = \"right\"},\n     pressListener = function() \n       hideDialog() \n     end\n    }\n  }\n}\nend",
+        "text": "   "
+      },
+      {
+        "id": 13,
+        "text": "для красоты",
+        "run": [
+          13
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Ничего",
+        "url": "https://images.vfl.ru/ii/1625041212/3e8bc171/34996837.png"
+      },
+      {
+        "id": 1,
+        "text": "star",
+        "url": "https://images.vfl.ru/ii/1646572893/713b6129/38349893.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "    ",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn not oldMoney\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\noldMoney = g.money\nlvlMoney = g.level <plus> 10 <plus> math.random(-2, 2)\ndialog{header = \"Уровень \".. g.level,\ntext = \"Соберите \" .. lvlMoney .. \" монет\"}\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Уровни"
+      },
+      {
+        "id": 7,
+        "text": "Фон и прочие статичные штуки",
+        "run": [
+          7
+        ]
+      },
+      {
+        "id": 8,
+        "text": "0. Таймер, раскидывающий монетки",
+        "run": [
+          8
+        ]
+      },
+      {
+        "id": 4,
+        "text": "1. Перетаскивание ракеты",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 5,
+        "text": "2. Полёт ракеты",
+        "run": [
+          5
+        ]
+      },
+      {
+        "id": 6,
+        "text": "3. Звёздочки!",
+        "run": [
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Картинки",
+    "answers": [
+      {
+        "id": 3,
+        "text": "фон",
+        "url": "https://images.vfl.ru/ii/1646572969/ee95b635/38349931.jpg"
+      },
+      {
+        "id": 3,
+        "text": "звезда",
+        "url": "https://images.vfl.ru/ii/1646572893/713b6129/38349893.png"
+      },
+      {
+        "id": 3,
+        "text": "Монета",
+        "url": "https://images.vfl.ru/ii/1646573243/464e7a48/38350001.png"
+      },
+      {
+        "id": 3,
+        "text": "Ракета со звёздами",
+        "url": "https://images.vfl.ru/ii/1641371537/2c318280/37401857.png"
+      },
+      {
+        "id": 3,
+        "text": "Ракета с прямыми линиями",
+        "url": "https://images.vfl.ru/ii/1641371579/8c0d8cf4/37401868.png"
+      },
+      {
+        "id": 3,
+        "text": "Ракета с косыми линиями",
+        "url": "https://images.vfl.ru/ii/1641371661/2b593c13/37401898.png"
+      },
+      {
+        "id": 3,
+        "text": "Обнулиться",
+        "comment": false,
+        "lua_do": "function lua_do()\ng.level = 1\ng.money = 0\ng.buy = {rockets = {1}, colors = {1} }\nend"
+      },
+      {
+        "id": 3,
+        "text": "Обогатиться",
+        "comment": false,
+        "lua_do": "function lua_do()\ng.level = 8\ng.money = 1200\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "1. Перетаскивание ракеты",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 4,
+        "text": "Само перетаскивание",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction dragRocket(event)\n  if event.phase == \"began\" then\n    display.getCurrentStage(): setFocus(event.target)\n    event.target.touchOffsetX = event.x - event.target.x\n    event.target.touchOffsetY = event.y - event.target.y\n\n  elseif event.phase == \"moved\" then\n    event.target.x = event.x - (event.target.touchOffsetX or 0)\n    event.target.y = math.max(event.y - (event.target.touchOffsetY or 0), canvas.height - height_instrument*2 - height_strip)\n\n  elseif event.phase == \"ended\" or event.phase == \"cancelled\" then\n    fly(event.target)\n    event.target.x = (event.target.i-0.5)*canvas.width/5\n    event.target.y = canvas.height - height_instrument/2\n    display.getCurrentStage(): setFocus(nil)\n  end\n  return true\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.rockets = {\n  {url = \"https://images.vfl.ru/ii/1641371537/2c318280/37401857.png\", radius = 285, boom = function(x, y) g.sphere(x, y, 1) end},\n  {url = \"https://images.vfl.ru/ii/1641371579/8c0d8cf4/37401868.png\", radius = 200, boom = function(x, y) g.oval(x, y, 1) end},\n  {url = \"https://images.vfl.ru/ii/1641371661/2b593c13/37401898.png\", radius = 200, boom = function(x, y) g.circle(x, y, 1) end},\n  {url = \"https://images.vfl.ru/ii/1641371579/8c0d8cf4/37401868.png\", radius = 200, boom = function(x, y) g.torch(x, y, 1) end},\n}\nif not nolvl then\nfor i = #g.rockets, 1, -1 do\n  if not searchInTable(g.buy.rockets, i) then\n    table.remove(g.rockets, i)\n  end\nend\nend\nfor i = 1, #g.rockets do\n  local group = display.newGroup()\n  group.i = i\n  group.x = (i-0.5)*canvas.width/5\n  group.y = canvas.height - height_instrument*0.5\n  local rocket = display.newImage(g.rockets[i].url)\n  rocket.yScale = height_instrument*0.9/rocket.height\n  rocket.xScale = rocket.yScale\n  group:insert(rocket)\n  rocket.y = 0\n  local area  = display.newRect(canvasGroup, rocket.x, rocket.y, rocket.contentHeight, canvas.width/5)\n  area.isVisible = false\n  area.isHitTestable = true\n  group:insert(area)\n  group:addEventListener (\"touch\", dragRocket)\n  local line = display.newLine (canvasGroup, (i)*canvas.width/5, canvas.height, (i)*canvas.width/5, canvas.height - height_instrument*0.97)\n  line.strokeWidth = stroke_width\n  line.stroke = stroke\nend\nend",
+        "calculate": false,
+        "text": "Создание ракет",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "2. Полёт ракеты",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 5,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction fly(pattern)\n  local rocket = display.newImage(canvasGroup, nameForImages(g.rockets[pattern.i].url), system.TemporaryDirectory, pattern.x, pattern.y)\n  rocket.yScale = pattern.contentHeight*1.2/rocket.height\n  rocket.xScale = rocket.yScale\n  rocket.i = pattern.i\n\n  --смотрим, на какой высоте бахнет и какие монеты заденет\n  local hitTargets = {}\n  local low\n  local curTargets = table.copy(targets)\n  table.sort(curTargets, function(a, b) return a.y > b.y end)\n  \n  local radius = g.rockets[pattern.i].radius\n\n  --pasteboard.copy (\"string\", json.prettify(curTargets))\n  --message(#curTargets)\n  for i = 1, #curTargets do\n    if curTargets[i].x >= \n(pattern.x - radius) and curTargets[i].x <= (pattern.x <plus> radius) then\n      if not low then\n        table.insert(hitTargets, curTargets[i].obj)\n        low = curTargets[i].y\n      elseif curTargets[i].y >= (low - radius) then\n        table.insert(hitTargets, curTargets[i].obj)\n      end\n    end\n  end\n  local y\n  if not nolvl then\n    y = (not low) and radius or math.max(low, radius)\n  else\n    y = ((rocket.y - canvas.height <plus> height_instrument*2)/(height_instrument*2))*(canvas.height - height_instrument*2 - radius*2) <plus> radius\n  end\n  rocket.hitTargets = hitTargets\n\n  transition.to(rocket, {\n    time = (rocket.y - y)/2,\n    y = y,\n    onComplete = function(rocket)\n      --message(\"x = \".. rocket.x.. \", y = \".. rocket.y)\n      g.rockets[rocket.i].boom(rocket.x, rocket.y)\n      g.play_sound_once = \"big\"\n      local hitTargets = rocket.hitTargets\n      for i = 1, #hitTargets do\n        for j, target in ipairs(targets) do\n          if target.x == hitTargets[i].x and target.y == hitTargets[i].y then\n            table.remove(targets, j)\n            g.money = g.money <plus> 1\n            countMoney.text = g.money\n            subCountMoney.text = \"<plus>\".. (g.money - oldMoney) .. \"/\".. lvlMoney\n            break\n          end\n        end\n        removeObj(hitTargets[i])\n      end\n      rocket:removeSelf()\n    end\n  })\nend\nend",
+        "text": "    "
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Фигуры из звёздок",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.defaultAnim(x, y, params, color)\n  local animData = {\n    absolutePosition = false,\n    angle = -90,\n    angleVariance = 180,\n    blendFuncDestination = 1,\n    blendFuncSource = 1,\n    duration = 0.3,\n    emitterType = 0,\n    finishColorAlpha = 1,\n    finishColorBlue = 0,\n    finishColorGreen = 0.9,\n    finishColorRed = 1,\n    finishColorVarianceAlpha = 0,\n    finishColorVarianceBlue = 0,\n    finishColorVarianceGreen = 0,\n    finishColorVarianceRed = 0,      \n    finishParticleSize = 26,\n    finishParticleSizeVariance = 0,\n    gravityx = 0,\n    gravityy = 0,\n    maxParticles = 250,\n    maxRadius = 0,\n    maxRadiusVariance = 0,\n    minRadius = 0,\n    minRadiusVariance = 0,\n    particleLifespan = 1.4,\n    particleLifespanVariance = 0,\n    radialAccelVariance = 0,\n    radialAcceleration = 0,\n    rotatePerSecond = 0,\n    rotatePerSecondVariance = 0,\n    rotationEnd = 0,\n    rotationEndVariance = 0,\n    rotationStart = 0,\n    rotationStartVariance = 0,\n    sourcePositionVariancex = 0,\n    sourcePositionVariancey = 0,\n    speed = 160,\n    speedVariance = 0,\n    startColorAlpha = 1,\n    startColorBlue = 0,\n    startColorGreen = 0.85,\n    startColorRed = 1,\n    startColorVarianceAlpha = 0,\n    startColorVarianceBlue = 0,\n    startColorVarianceGreen = 0,\n    startColorVarianceRed = 0,\n    startParticleSize = 12,\n    startParticleSizeVariance = 0,\n    tangentialAccelVariance = 0,\n    tangentialAcceleration = 0,\n    textureImageData = \"\",\n    yCoordFlipped = -1,\n    textureFileName = nameForImages(\"https://images.vfl.ru/ii/1646572893/713b6129/38349893.png\"),\n}\n  for k, v in pairs (params or {}) do\n    animData[k] = v\n  end\n  for k, v in pairs (g.colors[math.random(#g.colors)]) do\n    animData[k] = v\n  end\n  local anim = display.newEmitter(animData, system.TemporaryDirectory)\n  if type(canvasGroup) == \"table\" and canvasGroup.removeSelf then\n    canvasGroup:insert(anim)\n  end\n  --message(x.. \"  \".. y)\n  anim.x = x\n  anim.y = y\n  --message(anim.x.. \"  \".. anim.y)\nend\nend",
+        "calculate": false,
+        "text": "По умолчанию",
+        "id": 6
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.sphere(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = size or 1,\n    speedVariance = 140,\n    maxParticles = 700,\n  })\nend\nend",
+        "calculate": false,
+        "text": "Сфера",
+        "id": 6
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "text": "Овал",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.oval(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = size or 1,\n    speedVariance = 140,\n    maxParticles = 400,\n    angleVariance = 90,\n    angle = -1*math.random(45, 135),\n    gravityy = 200\n  })\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "text": "Кольцо",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.circle(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = (size or 1)*1.5,\n    speedVariance = 150,\n    maxParticles = 200,\n    sourcePositionVariancex = 75,\n    sourcePositionVariancey = 20,\n    emitterType = 1,\n    maxRadius = 25,\n    maxRadiusVariance = 25,\n    minRadius = 200,\n    minRadiusVariance = 25,\n    radialAccelVariance = 150,\n    radialAcceleration = 150,\n    rotatePerSecond = 25,\n    rotatePerSecondVariance = 10,\n    rotationEnd = 90,\n    rotationEndVariance = 30,\n    rotationStart = 0,\n    rotationStartVariance = 30,\n  })\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.torch(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = (size or 1)*1.5,\n    speedVariance = 150,\n    maxParticles = 200,\n    angleVariance = 30,\n    sourcePositionVariancex = 10,\n    sourcePositionVariancey = 75,\n  })\nend\nend",
+        "text": "Факел"
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.autoFirework(repit, density)\n  timer.performWithDelay(density,   \n  function(event)\n    if not canvas or not canvas.width or not (g.current_id == 1 or g.current_id == 2) then\n      timer.cancel(event.source)\n    end\n    if math.random(4) == 1 then\n      g.oval (math.random (canvas.width or 720), math.random (canvas.height or 1000))\n    elseif math.random(3) == 1 then\n      g.circle (math.random (canvas.width or 720), math.random (canvas.height or 1000))\n    elseif math.random(2) == 1 then\n      g.torch (math.random (canvas.width or 720), math.random (canvas.height or 1000))\n    else\n      g.sphere (math.random (canvas.width or 720), math.random (canvas.height or 1000))\n    end\n  end, repit, \"auto\")\nend\nend",
+        "text": "Рандомный фейерверк"
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "text": "Все цвета",
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.colors = {\n  {startColorRed = 1,\n   startColorGreen = 0.85,\n   startColorBlue = 0,\n\n   finishColorRed = 1,\n   finishColorGreen = 0.9,\n   finishColorBlue = 0},\n  {startColorRed = 1,\n   startColorGreen = 0.2,\n   startColorBlue = 0,\n\n   finishColorRed = 0.8,\n   finishColorGreen = 0.2,\n   finishColorBlue = 0.3},\n  {startColorRed = 0.1,\n   startColorGreen = 0.8,\n   startColorBlue = 0.2,\n\n   finishColorRed = 0.2,\n   finishColorGreen = 0.6,\n   finishColorBlue = 0.2},\n  {startColorRed = 1,\n   startColorGreen = 0.4,\n   startColorBlue = 0,\n\n   finishColorRed = 0.8,\n   finishColorGreen = 0.25,\n   finishColorBlue = 0},\n  {startColorRed = 1,\n   startColorGreen = 1,\n   startColorBlue = 0,\n\n   finishColorRed = 0.1,\n   finishColorGreen = 0.85,\n   finishColorBlue = 0},\n   {startColorRed = 1,\n   startColorGreen = 0,\n   startColorBlue = 0,\n\n   finishColorRed = 1,\n   finishColorGreen = 1,\n   finishColorBlue = 0},\n}\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn g.current_id == 2\nend",
+        "super_calculate": true,
+        "id": 6,
+        "calculate": false,
+        "text": "    ",
+        "lua_do": "function lua_do()\nfor i = #g.colors, 1, -1 do\n  if not searchInTable(g.buy.colors, i) then\n    table.remove(g.colors, i)\n  end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Фон и прочие статичные штуки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction removeObj(obj)\n  if type(obj) == \"table\" and obj.removeSelf then\n    obj:removeSelf()\n  end\nend\nend",
+        "text": "Удалить объект с проверкой",
+        "id": 7,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Есть ли элемент в таблице?",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction searchInTable(table, v)\n  for i = 1, #table do\n    if table[i] == v then\n      return true\n    end\n  end\n  return false\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Фон и уровень",
+        "lua_do": "function lua_do()\nlocal rect = display.newRect(canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\nrect.fill = {\n  type = \"gradient\",\n  color1 = {8/255, 44/255, 80/255},\n  color2 = {15/255, 51/255, 87/255},\n  direction = \"right\"\n}\nheight_instrument = canvas.width*0.3\n\nlocal lvl\nif not nolvl then\n  lvl = display.newText{\n    parent = canvasGroup,\n    text = \"Уровень \".. g.level,\n    fontSize = 1.25*(g.fontSize or fontSize or canvas.width/30),\n    x = canvas.width/2,\n    y = canvas.height - height_instrument,\n   align = \"left\",\n   width = canvas.width*0.96\n  }\n  lvl.y = lvl.y - lvl.height/2\n  local strip = display.newRect (canvasGroup, canvas.width/2, lvl.y, canvas.width, lvl.height*1.1)\n  strip.fill = {20/255, 38/255, 71/255}\n  stroke_width = 2\n  stroke = {1, 0.5}\n  strip.strokeWidth = stroke_width\n  strip.stroke = stroke\n  height_strip = strip.height\nelse\n  stroke_width = 2\n  stroke = {1, 0.5}\n  height_strip = 0\nend\n\nlocal bg = display.newImage(\"https://images.vfl.ru/ii/1646572969/ee95b635/38349931.jpg\")\nbg.x = canvas.width/2\nbg.y = (canvas.height - height_instrument - height_strip)/2\nlocal xs = canvas.width/bg.width\nlocal ys = (canvas.height - height_instrument - height_strip)/bg.height\nbg.xScale = math.max (xs, ys)\nbg.yScale = bg.xScale\n\nif not nolvl then\n  lvl:toFront()\nelse\n  local top = display.newLine(0, canvas.height - height_instrument, canvas.width, canvas.height - height_instrument)\n  canvasGroup:insert(top)\n  top.strokeWidth = stroke_width\n  top.stroke = stroke\nend\nend",
+        "calculate": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not nolvl\nend",
+        "super_calculate": true,
+        "id": 7,
+        "text": "Монеты",
+        "lua_do": "function lua_do()\nlocal img = display.newImage(\"https://images.vfl.ru/ii/1646573243/464e7a48/38350001.png\")\nimg.height = height_strip*0.95\nimg.width = img.height\nimg.x = canvas.width - img.width*0.52\nimg.y = canvas.height - height_instrument - height_strip/2\n\ncountMoney = display.newText{\n  parent = canvasGroup,\n  text = g.money,\n  fontSize = 1.25*(g.fontSize or fontSize or canvas.width/30),\n  x = canvas.width/2,\n  y = canvas.height - height_instrument - height_strip/2,\n  align = \"right\",\n  width = canvas.width - img.width*2.2\n}\n\nsubCountMoney = display.newText{\n  parent = canvasGroup,\n  text = \"<plus>\".. (g.money - oldMoney) .. \"/\".. lvlMoney,\n  fontSize = 1.25*(g.fontSize or fontSize or canvas.width/30),\n  x = canvas.width/2,\n  y = canvas.height - height_instrument - height_strip/2,\n  align = \"center\",\n  width = canvas.width - img.width*2.2\n} \nend",
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.noScroll = 1\ng.blockSwipeLeftMenu = 1\nend",
+        "calculate": false,
+        "text": "    ",
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "0. Таймер, раскидывающий монетки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "lua_do": "function lua_do()\ntargets = {}\ntimer.performWithDelay(100, function(event)\n  if not canvas or not canvas.width or not targets or g.userInQuest == 0 or g.current_id ~= 2 then\n    timer.cancel(event.source)\n  elseif g.money >= oldMoney <plus> lvlMoney then\n    g.level = g.level <plus> 1\n    g.autoFirework(0, 150)\n    dialog{\n      header = \"Победа!\", \n      text = \"Вы прошли уровень и набрали \".. lvlMoney.. \" монет\", background = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      },\n textColorForHeader = { 1, 1, 1 },\n textColorForBody = { 1, 1, 1 },\n      answers = { \n        {text = \"К следующему\", pressListener = \n        function() \n          oldMoney = nil\n          timer.cancel(\"auto\")\n          showPage{id = 2, transition = \"instant\"}\n          hideDialog()\n        end}, \n        {text = \"В магазин\", pressListener = \n        function()\n          timer.cancel(\"auto\")\n          g.fullscreen = 0\n          g.noScroll = 0\n          g.image_part_of_screen = 0\n          showPage{id = 12, transition = \"instant\"}\n          hideDialog()\n        end}\n      }\n    }\n    timer.cancel(event.source)\n  end\n  if math.random(30) == 1 and targets and #targets > 0 then\n    deleteTarget()\n  elseif math.random(10) == 1 and targets and #targets < lvlMoney then\n    createTarget()\n  end\nend, 0)\nend",
+        "text": "   "
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "text": "Создать монетку",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction createTarget()\n if not canvas or not targets or g.userInQuest == 0 or g.current_id ~= 2 then\n   return false\n end\n  local target = display.newImage(canvasGroup, nameForImages(\"https://images.vfl.ru/ii/1646573243/464e7a48/38350001.png\"), system.TemporaryDirectory, math.random(canvas.width), math.random(canvas.height - 3*height_instrument - height_strip))\n  table.insert(targets, {x = target.x, y = target.y, obj = target})\n  target.height = height_strip*0.95\n  target.width = target.height\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "text": "Удалить монетку",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction deleteTarget()\n  if not canvas or not targets or g.userInQuest == 0 or g.current_id ~= 2 then\n   return false\n end\n  local i = math.random(#targets)\n  removeObj(targets[i].obj)\n  table.remove(targets, i)\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Собирайте монеты и проходите уровни!\n\nДля того, чтобы запустить ракету, надо перетащить её на землю.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать",
+        "lua_do": "function lua_do()\ng.level = g.level or 1\ng.money = g.money or 0\ng.fullscreen = 1\nend"
+      },
+      {
+        "id": 13,
+        "text": "для красоты",
+        "run": [
+          13
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "    ",
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.noScroll = 0\ng.blockSwipeLeftMenu = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Устройте своё неповторимое фаер шоу, ни в чём себе не отказывая!\n\nДля того, чтобы запустить ракету, надо перетащить её на землю.\n\nВысота полёта ракеты зависит от высоты её запуска.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nnolvl = true\nend",
+        "text": "Начать",
+        "id": 11
+      },
+      {
+        "id": 13,
+        "text": "для красоты",
+        "run": [
+          13
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.noScroll = 0\ng.blockSwipeLeftMenu = 0\nend",
+        "calculate": false,
+        "text": "    ",
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "        ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nnolvl = true\ng.noScroll = 1\ng.blockSwipeLeftMenu = 1\nend",
+        "text": "    ",
+        "id": 11,
+        "calculate": true
+      },
+      {
+        "id": 7,
+        "text": "Фон и прочие статичные штуки",
+        "run": [
+          7
+        ]
+      },
+      {
+        "id": 4,
+        "text": "1. Перетаскивание ракеты",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 5,
+        "text": "2. Полёт ракеты",
+        "run": [
+          5
+        ]
+      },
+      {
+        "id": 6,
+        "text": "3. Звёздочки!",
+        "run": [
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction searchInTable(table, v)\n  for i = 1, #table do\n    if table[i] == v then\n      return true\n    end\n  end\n  return false\nend\nend",
+        "calculate": false,
+        "text": "Есть ли элемент в таблице?",
+        "id": 7
+      },
+      {
+        "merge": false,
+        "lua_text": "function lua_text()\nreturn \"Монет: \".. g.money\nend",
+        "middle_answer": true,
+        "id": 12,
+        "text": "Монеты",
+        "comment": true,
+        "answerImage": [
+          "https://images.vfl.ru/ii/1646573243/464e7a48/38350001.png"
+        ]
+      },
+      {
+        "comment": false,
+        "middle_answer": false,
+        "text": "\"Веер\" - купить за 100 монет",
+        "left_answer": false,
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.rockets, 2)\nend",
+        "instant": false,
+        "lua_do": "function lua_do()\nif g.money >= 100 then\n  table.insert(g.buy.rockets, 2)\n  g.money = g.money - 100\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\"} \nend\nend",
+        "id": 12,
+        "answerImage": [
+          "https://images.vfl.ru/ii/1641371579/8c0d8cf4/37401868.png"
+        ]
+      },
+      {
+        "answerImage": [
+          "https://images.vfl.ru/ii/1641371579/8c0d8cf4/37401868.png"
+        ],
+        "middle_answer": false,
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.rockets, 2)\nend",
+        "instant": false,
+        "id": 12,
+        "text": "\"Веер\" - куплено",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "middle_answer": false,
+        "text": "\"Круговорот\" - купить за 250 монет",
+        "left_answer": false,
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.rockets, 3)\nend",
+        "instant": false,
+        "id": 12,
+        "lua_do": "function lua_do()\nif g.money >= 250 then\n  table.insert(g.buy.rockets, 3)\n  g.money = g.money - 250\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\"}\nend\nend",
+        "answerImage": [
+          "https://images.vfl.ru/ii/1641371661/2b593c13/37401898.png"
+        ]
+      },
+      {
+        "answerImage": [
+          "https://images.vfl.ru/ii/1641371661/2b593c13/37401898.png"
+        ],
+        "id": 12,
+        "comment": true,
+        "instant": false,
+        "middle_answer": false,
+        "text": "\"Круговорот\" - куплено",
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.rockets, 3)\nend",
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "middle_answer": false,
+        "text": "\"Факел\" - купить за 350 монет",
+        "left_answer": false,
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.rockets, 4)\nend",
+        "instant": false,
+        "lua_do": "function lua_do()\nif g.money >= 350 then\n  table.insert(g.buy.rockets, 4)\n  g.money = g.money - 350\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\", background = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      },\n textColorForHeader = { 1, 1, 1 },\n textColorForBody = { 1, 1, 1 },}\nend\nend",
+        "id": 12,
+        "answerImage": [
+          "https://images.vfl.ru/ii/1641371579/8c0d8cf4/37401868.png"
+        ]
+      },
+      {
+        "left_answer": false,
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.rockets, 4)\nend",
+        "comment": true,
+        "text": "\"Факел\" - куплено",
+        "id": 12,
+        "instant": false,
+        "middle_answer": false,
+        "answerImage": [
+          "https://images.vfl.ru/ii/1641371579/8c0d8cf4/37401868.png"
+        ]
+      },
+      {
+        "id": 12,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ng.fullscreen = 0\ng.noScroll = 0\ng.image_part_of_screen = 0\nend",
+        "calculate": true,
+        "text": "    ",
+        "forget": [
+          2,
+          9
+        ]
+      },
+      {
+        "id": 13,
+        "text": "для красоты",
+        "run": [
+          13
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Цвета фейерверков:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.colors, 2)\nend",
+        "middle_answer": false,
+        "comment": false,
+        "instant": false,
+        "id": 12,
+        "text": "\"Красный\" - купить за 20 монет",
+        "lua_do": "function lua_do()\nif g.money >= 20 then\n  table.insert(g.buy.colors, 2)\n  g.money = g.money - 20\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\", background = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      },\n textColorForHeader = { 1, 1, 1 },\n textColorForBody = { 1, 1, 1 },}\nend\nend",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.colors, 2)\nend",
+        "instant": false,
+        "id": 12,
+        "text": "\"Красный\" - куплено",
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.colors, 3)\nend",
+        "lua_do": "function lua_do()\nif g.money >= 40 then\n  table.insert(g.buy.colors, 3)\n  g.money = g.money - 40\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\", background = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      },\n textColorForHeader = { 1, 1, 1 },\n textColorForBody = { 1, 1, 1 },}\nend\nend",
+        "comment": false,
+        "text": "\"Зелёный\" - купить за 40 монет",
+        "middle_answer": false,
+        "instant": false,
+        "id": 12,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.colors, 3)\nend",
+        "text": "\"Зелёный\" - куплено",
+        "id": 12,
+        "instant": false,
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.colors, 4)\nend",
+        "id": 12,
+        "comment": false,
+        "instant": false,
+        "lua_do": "function lua_do()\nif g.money >= 70 then\n  table.insert(g.buy.colors, 4)\n  g.money = g.money - 70\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\", background = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      },\n textColorForHeader = { 1, 1, 1 },\n textColorForBody = { 1, 1, 1 },}\nend\nend",
+        "text": "\"Апельсин\" - купить за 70 монет",
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.colors, 4)\nend",
+        "text": "\"Апельсин\" - куплено",
+        "id": 12,
+        "instant": false,
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.colors, 5)\nend",
+        "lua_do": "function lua_do()\nif g.money >= 100 then\n  table.insert(g.buy.colors, 5)\n  g.money = g.money - 100\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\", background = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      },\n textColorForHeader = { 1, 1, 1 },\n textColorForBody = { 1, 1, 1 },}\nend\nend",
+        "comment": false,
+        "instant": false,
+        "middle_answer": false,
+        "text": "\"Салат\" - купить за 100 монет",
+        "id": 12,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.colors, 5)\nend",
+        "instant": false,
+        "id": 12,
+        "text": "\"Салат\" - куплено",
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not searchInTable(g.buy.colors, 6)\nend",
+        "middle_answer": false,
+        "comment": false,
+        "instant": false,
+        "id": 12,
+        "text": "\"Феникс\" - купить за 140 монет",
+        "lua_do": "function lua_do()\nif g.money >= 140 then\n  table.insert(g.buy.colors, 6)\n  g.money = g.money - 140\nelse\n  dialog{header = \"Недостаточно денег для покупки\", text = \"Накопите ещё немного\", background = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      },\n textColorForHeader = { 1, 1, 1 },\n textColorForBody = { 1, 1, 1 },}\nend\nend",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn searchInTable(g.buy.colors, 6)\nend",
+        "text": "\"Феникс\" - куплено",
+        "id": 12,
+        "instant": false,
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "id": 6,
+        "text": "3. Звёздочки!",
+        "run": [
+          6
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ntimer.performWithDelay(50,\nfunction(event)\n  if g.current_id ~= 12 then\n    timer.cancel(event.source)\n    return false\n  end\n  if answers_objects and #answers_objects >= 13 then\n    local coin = answers_objects[1].rect.image\n    coin.xScale = coin.xScale*0.75\n    coin.yScale = coin.xScale\n    for i = 2, 4 do\n      local rect = answers_objects[i].rect\n      local text = answers_objects[i].text\n      text.isVisible = false\n      local rocket = rect.image\n      rocket.rotation = -75\n      rocket.xScale = rocket.xScale*2\n      rocket.yScale = rocket.xScale\n      rocket.x = rect.x <plus> rect.contentWidth/2 - rocket.contentWidth*0.45\n      local myText = display.newText{\n        parent = text.parent,\n        text = text.text,\n        fontSize = fontSize or g.fontSize or text.size,\n        align = \"left\",\n        x = rect.x - rocket.contentWidth*0.5 <plus> rect.contentWidth*0.03,\n        y = rect.y,\n        width = rect.contentWidth - rocket.contentWidth\n      }\n    end\n    local startColors = 6\n    for i = startColors, math.min (#answers_objects, #g.colors <plus> startColors - 2) do\n      local rect = answers_objects[i].rect\n     local text = answers_objects[i].text\n     text.isVisible = false\n     local dot = display.newRoundedRect (rect.parent, rect.x <plus> rect.contentWidth*0.5 - rect.contentWidth*0.12, rect.y, rect.contentWidth*0.2, text.contentHeight*1.2, rect.contentHeight)\n      local j = i - 4\n      dot.fill = g.colors[j] and \n{type = \"gradient\", color1 = {\ng.colors[j].startColorRed, g.colors[j].startColorGreen, g.colors[j].startColorBlue}, color2 = {g.colors[j].finishColorRed, g.colors[j].finishColorGreen, g.colors[j].finishColorBlue}, direction = \"right\"} or {0.1, 0.1, 0.3, 0}\n      local myText = display.newText{\n        parent = text.parent,\n        text = text.text,\n        fontSize = fontSize or g.fontSize or text.size,\n        align = \"left\",\n        x = rect.x - dot.contentWidth*0.5 - rect.contentWidth*0.06 <plus> rect.contentWidth*0.03,\n        y = rect.y,\n        width = rect.contentWidth - dot.contentWidth - rect.contentWidth*0.12\n      }\n    end\n    timer.cancel(event.source)\n  end\nend, 0)\nend",
+        "text": "    ",
+        "calculate": false,
+        "id": 12
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Уровень \".. g.level\nend",
+        "id": 12,
+        "text": "    ",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "Продолжить игру (режим аркады)",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\noldMoney = nil\nend"
+      },
+      {
+        "id": 12,
+        "text": "Песочница (доступно с 7-го уровня)",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.level < 7\nend"
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nnolvl = true\nend",
+        "text": "Песочница",
+        "lua_if": "function lua_if()\nreturn g.level >= 7\nend",
+        "id": 11
+      },
+      {
+        "id": 1,
+        "text": "Ничего",
+        "lua_if": "function lua_if()\nreturn g.image_part_of_screen == 0\nend",
+        "url": "https://images.vfl.ru/ii/1625041212/3e8bc171/34996837.png"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Для авторана",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng[\"countAnswers\".. g.current_id] = 0\ntimer.performWithDelay(50,\nfunction(event)\nif answers_objects and #answers_objects > 0 then\n  local oldCount = g[\"countAnswers\".. g.current_id] or 0\n  g[\"countAnswers\".. g.current_id] =  #answers_objects\n  if #answers_objects > oldCount then\n    for i = oldCount <plus> 1, #answers_objects do\n      answers_objects[i].rect.fill = {\n        type = \"gradient\",\n        color1 = {0.1, 0.2, 0.5},\n        color2 = {0.1, 0.1, 0.3},\n        direction = \"right\"\n      }\n    end\n  else\n    timer.cancel(event.source)\n  end\nend\nend, -1)\nend",
+        "text": "Покрасить ответы",
+        "id": 13,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nlocal cw, ch = display.contentWidth, display.contentHeight\nlocal bg = display.newImage(\"https://images.vfl.ru/ii/1646572969/ee95b635/38349931.jpg\")\nbg.x = cw/2\nbg.y = ch/2\nlocal xs = cw/bg.width\nlocal ys = ch/bg.height\nbg.xScale = math.max (xs, ys)\nbg.yScale = bg.xScale\ncanvas.parent.parent.parent.parent.parent:insert(bg)\nbg:toBack()\nend",
+        "calculate": false,
+        "text": "Нарисовать фон",
+        "id": 13
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "",
+    "answers": []
+  }
+]

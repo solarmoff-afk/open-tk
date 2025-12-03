@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 193793 слов в квесте \"Часы, не бьющие полночь\"."
+      },
+      {
+        "targetbookid": "150000",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Часы, не бьющие полночь\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Monkey написал еще 133995 слов в квесте \"Стоп, снято!\"."
+      },
+      {
+        "targetbookid": "264609",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Стоп, снято!\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор TextGame написал еще 114081 слов в квесте \"Убийца капитана\"."
+      },
+      {
+        "targetbookid": "263796",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Убийца капитана\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ingenium Inc.  написал еще 80211 слов в квесте \"Песнь Луны и Солнца\"."
+      },
+      {
+        "targetbookid": "264228",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Песнь Луны и Солнца\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Aylister написал еще 79081 слов в квесте \"Туннель\"."
+      },
+      {
+        "targetbookid": "254830",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Туннель\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

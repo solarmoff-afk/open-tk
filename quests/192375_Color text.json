@@ -1,0 +1,264 @@
+[
+  {
+    "id": 1,
+    "text": "Test color text.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Начать",
+        "lua_do": "function lua_do()\n    font = native.systemFont\n    align = \"left\"\n    fill = { 0 }\n    fonts = {\n        native.systemFont,\n        \"ComingSoon\",\n        \"Cour\",\n        \"DancingScript-Bold\",\n        \"DroidSans-Bold\",\n        \"LindseyforSamsung-Regular\",\n        \"MTLmr3m\",\n        \"NotoSerif-Italic\",\n        \"Roboto-Thin\",\n        \"Times\"\n    }\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Данный модуль позволяет реализовать в квесте эффект вспышки. Его действие подобно оператору \"blackout\", но отличием от оператора является настройка цвета вспышки. При подключении модуля автору становится доступна функция \"vspyshka\".\nДанная функция принимает 3 в качестве параметров 3 числа от 0.0 до 1.0. Это красный, зелёный и синий цвет. Если вызвать функцию параметров, то недостающие параметры будут заменены числом 1. К примеру:\nЗапись vspyshka(0) равноценна vspyshka(0, 1, 1)\n\nluaModuleUpdate http://188.120.236.127/lua/vspyshka.lua",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Назад"
+      },
+      {
+        "id": 2,
+        "text": "Попробовать эффект\n\nvspyshka(0, 0.5, 0.5)",
+        "lua_do": "function lua_do()\n    vspyshka(0, 0.5, 0.5)\nend",
+        "instant": true
+      },
+      {
+        "module": true,
+        "lua_if": "function lua_if()\n    return type(vspyshka) ~= \"function\"\nend",
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "luaModuleUpdate http://188.120.236.127/lua/vspyshka.lua",
+        "lua_do": "function lua_do()\n<s>r\nvspyshka = function(r,g,b)<s>r\nr = r or 1<s>r\ng = g or 1<s>r\nb = b or 1<s>r\n<s>r\n<s>r\nlocal rect = display.newRect(display.contentCenterX, display.contentCenterY,display.contentCenterX*2, display.contentCenterY*2 )<s>r\n<s>r\ncanvas.parent.parent.parent.parent.parent.parent.parent:insert(rect)<s>r\n<s>r\nrect:setFillColor(r,g,b)<s>r\n<s>r\ntransition.from(rect, {--настройка появления<s>r\n<s>r\ntime = 500,<s>r\n<s>r\nalpha = 0,<s>r\n<s>r\ntransition = easing.outExpo,<s>r\n<s>r\nonComplete = function()<s>r\n<s>r\ntimer.performWithDelay(50, function()--если хочешь подержать белый экран<s>r\n<s>r\nif rect and rect.removeSelf then<s>r\n<s>r\ntransition.to(rect, {--настройка исчезновения<s>r\n<s>r\ntime = 500,<s>r\nalpha = 0,<s>r\ntransition = easing.inExpo,<s>r\nonComplete = function()<s>r\nif rect and rect.removeSelf then<s>r\nrect:removeSelf()<s>r\nrect = nil<s>r\nend<s>r\nend<s>r\n})<s>r\nend<s>r\nend)<s>r\nend<s>r\n})<s>r\n<s>r\nend\nend"
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "CheckPages\nДанный модуль нужен для нахождения страниц, на которые не ведёт ни один из вариантов ответа.\n! Данный модуль работает лишь для авторов.\n\nluaModuleUpdate http://188.120.236.127/lua/checkPages.lua",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    local MAX_WIDTH   = 1 / 480.0\n    local MAX_HEIGHT = 1 / 320.0\n\n    function X(x)\n        return x * MAX_WIDTH * canvas.contentWidth\n    end\n    function Y(y)\n        return y * MAX_HEIGHT * canvas.contentHeight\n    end\n\n    tColorBar = { }\n    local BORDER_SIZE = 30.0\n\n    function tColorBar.Create(x, y, size, color, parent)\n        local colorBar = { }\n        x = x * MAX_WIDTH * canvas.contentWidth\n        y = y * MAX_HEIGHT * display.contentHeight\n        if (not parent)\n        then\n            parent = canvasGroup\n            y = y * MAX_HEIGHT * canvas.contentHeight\n        end\n        colorBar\n        display.newRect(x, y, size <plus> BORDER_SIZE, size <plus> BORDER_SIZE) { type = \"gradient\", direction = \"right\", color1\n    end\n\n    function tColorBar:SetColor(red, green, blue)\n        if (type(red) == \"table\")\n        then\n            blue = red.blue or red[3]\n            green = red.green or red[2]\n            red = red.red or red[1]\n        end\n        self:setRelColor(red / 255, green / 255, blue / 255)\n    end\n\n    function tColor:SetRealColor(red, green, blue)\n        if (type(red) == \"table\")\n        then\n            blue = red.blue or red[3]\n            green = red.green or red[2]\n            red = red.red or red[1]\n        end\n        self.red = red\n        self.green = green\n        self.blue = blue\n        \n    end\nend"
+      },
+      {
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    local str = \"красный текст teqdhjswjdhejkwrst \"\nlocal len = utf8.len\narr  = { 0 }\n--function arr.test ()\nlocal v = vars\nx1 = os.clock()\nlocal arrr = arr\nlocal b\nfor i = 1, 100000 do\n   if (c == nil) then end\nend\nx2 = os.clock()\nfor i = 1, 100000 do\n  if (not c) then end\nend\nx3 = os.clock()\n--  a = a .. ' ' .. _end - start\na = '<s>\n' .. x2 - x1 .. '<s>\n' .. x3 - x2\n--end\n--arr.test()\n--a = utf8.len(str) - a .. ' ' .. start\n--a = utf8.sub(str, start, _end)\n--a = start --utf8.remove(str, _end)\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    pasteboard.copy(\"string\", pages[5].answers[3].lua_do)\nend"
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    local REGEXP_TAGS = \"()<(/?[#$].-)>()\"\n\n    local FONTS = {\n        native.systemFont,\n        \"ComingSoon\",\n        \"Cour\",\n        \"DancingScript-Bold\",\n        \"DroidSans-Bold\",\n        \"LindseyforSamsung-Regular\",\n        \"MTLmr3m\",\n        \"NotoSerif-Italic\",\n        \"Roboto-Thin\",\n        \"Times\"\n    }\n\n    local function ParseText(param)\n        local _div255 = 1 / 255\n        local fill = param.fill\n        local font = param.font\n        local str = { { start = 1, fill = fill, font = font } }\n        local size = 1\n        for _end, tag, start in utf8.gmatch(param.text, REGEXP_TAGS) do\n            local _tag = string.char(tag:byte(1))\n            if (_tag == '#')\n            then\n                fill = { }\n                local startPos, direction, endPos = utf8.match(tag, \"()%[(.<plus>)%]()\", 6)\n                if (startPos)\n                then\n                    fill.type = \"gradient\"\n                    fill.direction =\n                        (direction == 'l' and \"left\") or\n                        (direction == 'r' and \"right\") or\n                        (direction == 'u' and \"up\") or\n                        (direction == 'd' and \"down\") or\n                        tonumber(direction) or direction\n                    fill.color1 = { }\n                    fill.color2 = { }\n                    for val in utf8.remove(tag, startPos):gmatch(\"[0-9a-fA-F][0-9a-fA-F]?\") do\n                        fill.color1[#fill.color1 <plus> 1] = tonumber(val, 16) *_div255\n                    end\n                    for val in utf8.sub(tag, endPos):gmatch(\"[0-9a-fA-F][0-9a-fA-F]?\") do\n                        fill.color2[#fill.color2 <plus> 1] = tonumber(val, 16) *_div255\n                    end\n                else\n                    for val in tag:gmatch(\"[0-9a-fA-F][0-9a-fA-F]?\") do\n                        fill[#fill <plus> 1] = tonumber(val, 16) *_div255\n                    end\n                end\n            elseif (_tag == '$')\n            then\n                tag = tag:sub(2)\n                font = FONTS[tonumber(tag) or tag]\n            elseif (_tag == '/')\n            then\n                _tag = string.char(tag:byte(2))\n                if (_tag == '#')\n                then\n                    fill = param.fill\n                elseif (_tag == '$')\n                then\n                    font = param.font\n                end\n            end\n            if (_end > str[size].start)\n            then\n                str[size].text = utf8.sub(param.text, str[size].start, _end - 1)\n                size = size <plus> 1\n                str[size] = { }\n            end\n            str[size].start = start\n            str[size].fill = fill\n            str[size].font = font\n        end\n        str[size].text = utf8.sub(param.text, str[size].start)\n        if (str[size].text == \"\")\n        then\n            str[size] = nil\n        end\n        return str\n    end\n\n     function NewText(param)\n        local grp = display.newGroup()\n        param.parent:insert(grp)\n        grp.textWidth = param.width\n        grp.align = param.align or \"left\"\n        grp.x = param.x\n        grp.y = param.y\n        grp.numLines = 0\n        grp.fontSize = param.fontSize\n        local str = ParseText(param)\n        CreateText(grp, {\n            x = 0,\n            y = 0,\n            text = str[1].text,\n            fill = str[1].fill,\n            font = str[1].font,\n            fontSize = param.fontSize\n        })\n        for i = 2, #str do\n            ConcatText_NoParse(grp, {\n                text = str[i].text,\n                fill = str[i].fill,\n                font = str[i].font,\n                fontSize = param.fontSize\n            })\n        end\n        return grp\n    end\n\n    function ConcatText(grp, param)\n        local str = ParseText(param)\n        for i = 1, #str do\n            ConcatText_NoParse(grp, {\n                text = str[i].text,\n                font = str[i].font,\n                fill = str[i].fill,\n                fontSize = param.fontSize\n            })\n        end\n    end\nend"
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    a = tonumber(\"_33 \")\nend"
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n   function CreateText(grp, param)\n        local textObject = display.newText{\n            x = param.x,\n            y = param.y,\n            font = param.font,\n            fontSize = param.fontSize,\n            align = grp.align,\n            width = grp.textWidth,\n            text = param.text\n        }\n        grp:insert(textObject)\n        textObject.font = param.font\n        textObject._fill = param.fill or { 1 }\n        textObject.fill = textObject._fill\n        textObject.anchorX = 0\n        textObject.anchorY = 0\n        local txt = display.newText(utf8.gsub(param.text, '<s>\n', ''), 0, 0, param.font, param.fontSize)\n        local numLines = math.ceil(textObject.height / txt.height)\n        grp.lineHeight = txt.height\n        local width\n        if (numLines > 1)\n        then\n            grp.lastLineStartObjId = nil\n            local newLine = utf8.find(textObject.text, \"(<s>\n)[^<s>\n]-$\")\n            if (newLine)\n            then\n                newLine = newLine <plus> 1\n                textObject.text = utf8.sub(textObject.text, newLine)\n            end\n            local len = utf8.len(textObject.text)\n            if (len ~= 0)\n            then\n                local str = textObject.text\n                local start, _end\n                local height = textObject.height\n                repeat\n                    start, _end = utf8.find(textObject.text, \"([^%s]-%s*)$\")\n                    textObject.text = utf8.remove(textObject.text, start)\n                until (textObject.height ~= height or start == 1)\na = textObject.text \n                if (start == 1)\n                then --textObject.height = 0\n                end\na = start .. ' ' .. textObject.height\n                if (math.ceil((height - (start == 1 and 0 or textObject.height)) / grp.lineHeight) > 1)\n                then\n                    start = _end - 1                  \n                    textObject.text = utf8.remove(str, start)\n--a = \"= \" .. textObject.text\n                    while height == textObject.height do\n                        start = start - 1\n                        textObject.text = utf8.remove(textObject.text, start)\n                    end\na = height .. ' ' .. textObject.height\n                    height = false\n                else\n                    height = start ~= 1\n                end\n--a = textObject.text\n                if (newLine)\n                then\n                    start = start <plus> newLine\n                end\n                if (height)\n                then\n                    local _, find = utf8.find(param.text, \"^%s<plus>\", start)\n                    if (find)\n                    then\n                        start = find <plus> 1\n                    end\n                end\n                txt.text = utf8.sub(param.text, start)\n                width = txt.contentWidth\n            else\n                grp.endLineText = nil\n                grp.concateText = nil\n                width = 0\n            end\n            textObject.text = param.text\n        else\n            grp.lastLineStartObjId = grp.numChildren\n            width = txt.contentWidth\n        end\n        if (width ~= 0)\n        then\n            grp.endLineText = txt.text \n            grp.concateText = utf8.match(textObject.text, \"([^%s]-[^%s])$\")\n            txt.text = utf8.char(utf8.byte(txt.text, utf8.len(txt.text)))\n            width = width - (param.fontSize / txt.contentWidth) * 1.5\n        end\n        txt:removeSelf()\n        textObject.offsetX = width\n        grp.numLines = grp.numLines <plus> numLines\n        grp.endLineOffset = width\n        grp.textHeight = grp.height\n        textObject.offsetY = grp.height\na = grp.endLineText\n    end\n\n    function ConcatText_NoParse(grp, param)\n        local newLine = utf8.find(param.text, '<s>\n', 1, true)\n        if (newLine and newLine == 1)\n        then\n            CreateText(grp, {\n                x = 0,\n                y = grp.height,\n                font = param.font,\n                fontSize = param.fontSize,\n                text = param.text,\n                fill = param.fill\n            })\n            return\n        end\n        local mainObject = grp[grp.numChildren]\n        local _height = grp.textHeight - grp.lineHeight\n        local endLineOffset = grp.endLineOffset\n        local lastLineObjId = grp.lastLineStartObjId\n        local endLineText = grp.endLineText\n        local textObject = display.newText{\n            x = grp.endLineOffset,\n            y = _height,\n            align = grp.align,\n            font = param.font,\n            fontSize = param.fontSize,\n            text = newLine and utf8.remove(param.text, newLine) or param.text\n        }\n        grp:insert(textObject)\n        local childs = grp.numChildren\n        textObject.fill = param.fill or { 1 }\n        textObject.anchorX = 0\n        textObject.anchorY = 0\n        local freeWidth\n        if (grp.textWidth)\n        then\n            freeWidth = grp.textWidth - endLineOffset\n        end\n        if (grp.textWidth and textObject.width > freeWidth)\n        then\n            textObject.text = param.text\n            local len = utf8.len(param.text)\n            local start, _end\n            repeat\n                start, _end = utf8.find(textObject.text, \"(%s*[^%s]-)%s*$\")\n                textObject.text = utf8.remove(textObject.text, start)\n            until (textObject.width <= freeWidth or start == 1)\n            if (start == 1)\n            then\n                textObject:removeSelf()\n                textObject = nil\n            else\n                local text = textObject.text\n                local width = textObject.contentWidth\n                textObject.text = utf8.char(utf8.byte(text, utf8.len(text)))\n                width = width - param.fontSize / textObject.contentWidth\n                textObject.offsetX = grp.endLineOffset <plus> width\n                textObject.text = text\n                textObject.offsetY = grp.textHeight\n            end\n            local _, find = utf8.find(param.text, \"^%s<plus>\", start)\n            if (find)\n            then\n                start = find <plus> 1\n            end\n            CreateText(grp, {\n                text = utf8.sub(param.text, start),\n                x = 0,\n                y = grp.height,\n                font = param.font,\n                fontSize = param.fontSize,\n                fill = param.fill\n            })\n        elseif (newLine)\n        then\n            CreateText(grp, {\n                text = utf8.sub(param.text, newLine <plus> 1),\n                x = 0,\n                y = grp.height,\n                font = param.font,\n                fontSize = param.fontSize,\n                fill = param.fill\n            })\n        else\n            local width = textObject.contentWidth\n            local text = textObject.text\n            textObject.text = utf8.char(utf8.byte(text, utf8.len(text)))\n            width = width - param.fontSize / textObject.contentWidth\n            grp.endLineOffset = grp.endLineOffset <plus> width\n            textObject.text = text\n            textObject.offsetX = grp.endLineOffset\n            textObject.offsetY = grp.textHeight\n        end\n        if (textObject and grp.align ~= \"left\")\n        then\n            local text = textObject.text\n            textObject.text = utf8.char(utf8.byte(utf8.len(text)))\n            local width = param.fontSize / textObject.contentWidth\n            textObject.text = text\n            width = textObject.contentWidth - width\n            if (grp.align == \"right\")\n            then\n                textObject.x =  grp.textWidth - width\n           else\n               width = width * 0.5\n               textObject.x = grp.textWidth * 0.5 <plus> endLineOffset * 0.5 - width\n           end\n            if (not lastLineObjId)\n            then\n                if (childs == grp.numChildren)\n                then\n                    grp.lastLineStartObjId = childs\n                end\n                if (endLineText)\n                then\n                    local len = utf8.len(endLineText)\n                    local fill = mainObject._fill\n                    mainObject.text = utf8.remove(mainObject.text, utf8.len(mainObject.text) - len)\n                    mainObject = display.newText{\n                        x = 0,\n                        y = _height,\n                        align = grp.align,\n                        fontSize = mainObject.size,\n                        font = mainObject.font,\n                        text = utf8.char(utf8.byte(endLineText, len))\n                    }\n                    grp:insert(mainObject)\n                    mainObject.anchorX = 0\n                    mainObject.anchorY = 0\n                    width = mainObject.size / mainObject.contentWidth\n                    mainObject.text = endLineText\n                    mainObject.x = textObject.x - mainObject.contentWidth <plus> width\n                    mainObject.fill = fill\n                end\n            else\n                for i = lastLineObjId, childs - 1 do\n                    grp[i].x = grp[i].x - width\n                end\n            end\n        end\n    end\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n         \n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "comment": false,
+        "id": 6,
+        "text": "Отобразить текст",
+        "lua_do": "function lua_do()\n    if (not box.text or box.text == \"\") then return end\n    local params = {\n       parent = canvas.parent.parent.parent,\n        x = -350,\n        y = -480,\n        width = 400,\n        fontSize = 40,\n        font = font,\n        text = box.text,\n        fill = fill,\n        align = align\n    }\n    if (not textGrp)\n    then\n        textGrp = NewText(params)\n    else\n        ConcatText(textGrp, params)\n    end\nend",
+        "no_transition": true
+      },
+      {
+        "text": "Выбрать случайный цвет",
+        "id": 6,
+        "instant": false,
+        "lua_do": "function lua_do()\n    fill[1] = math.random()\n    fill[2] = math.random()\n    fill[3] = math.random()\n    txt.fill = fill\nend",
+        "no_transition": true
+      },
+      {
+        "text": "Выбрать случайный шрифт",
+        "id": 6,
+        "instant": false,
+        "lua_do": "function lua_do()\n    font = fonts[math.random(#fonts)]\n    txt:removeSelf()\n    txt = display.newText{\n        x = -300,\n        y = -550,\n        fontSize = 40,\n        parent = canvas.parent.parent.parent,\n        text = type(font) == \"string\" and font or \"system\",\n        font = font\n    }\n    txt.fill = fill\n    txt.anchorX = 0\n    txt.anchorY = 0\nend",
+        "no_transition": true
+      },
+      {
+        "text": "Очистить текст",
+        "id": 6,
+        "instant": false,
+        "lua_do": "function lua_do()\n    if (textGrp)\n    then\n        local i = textGrp.numChildren\n        textGrp[i]:removeSelf()\n        if (textGrp.numChildren == 0)\n        then\n            textGrp = nil\n            boxText = box.text\n            showPage{ id = g.current_id, transition = \"instant\" }\n        else\n            textGrp.endLineOffset = textGrp[i - 1].offsetX\n            textGrp.textHeight = textGrp[i - 1].offsetY\n        end\n    end\nend",
+        "no_transition": true
+      },
+      {
+        "text": "Очистить весь текст",
+        "lua_do": "function lua_do()\n    if (textGrp)\n    then\n        textGrp = nil\n        boxText = box.text\n        showPage{ id = g.current_id, transition = \"instant\" }\n    end\nend",
+        "instant": false,
+        "id": 6,
+        "no_transition": true
+      },
+      {
+        "text": "Draw stata",
+        "super_calculate": true,
+        "id": 6,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    txt = display.newText({\n        parent = canvas.parent.parent.parent,\n        x = -300,\n        y = -550,\n        fontSize = 40,\n        font = font,\n        text = type(font) == \"string\" and font or \"system\"\n   })\n   txt.fill = fill\n   txt.anchorX = 0\n   txt.anchorY = 0\n   local function listener(event)\n       if (event.phase == \"ended\" or event.phase == \"sumbitted\")\n       then\n           text = event.text\n       end\n   end\n   box = native.newTextField(0, -150, 500, 100)\n   canvas.parent.parent.parent:insert(box)\n   box.size = 30\n   box.text = boxText\nend",
+        "no_transition": true
+      },
+      {
+        "text": "   ",
+        "comment": false,
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "run": [
+          5
+        ],
+        "lua_if": "function lua_if()\n    if (type(NewText) ~= \"function\")\n    then\n        textGrp = nil\n        fonts[1] = native.systemFont\n        if (type(font) == \"string\" and utf8.char(utf8.byte(font, 1)) == '<')\n        then\n            font = fonts[1]\n        end\n        return true\n    end\nend"
+      },
+      {
+        "comment": false,
+        "id": 6,
+        "instant": true,
+        "left_answer": false,
+        "right_answer": false,
+        "lua_if": "function lua_if()\n    return align ~= \"center\"\nend",
+        "lua_do": "function lua_do()\n    align = \"center\"\n    textGrp = nil\nend",
+        "text": "По центру",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "right_answer": false,
+        "lua_if": "function lua_if()\n    return align == \"center\"\nend",
+        "text": "По центру",
+        "middle_answer": true,
+        "instant": false,
+        "id": 6,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\n    return align ~= \"left\"\nend",
+        "text": "По левому краю",
+        "id": 6,
+        "instant": true,
+        "lua_do": "function lua_do()\n    align = \"left\"\n    textGrp = nil\nend",
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "id": 6,
+        "text": "По левому краю",
+        "lua_if": "function lua_if()\n    return align == \"left\"\nend",
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "right_answer": true,
+        "lua_if": "function lua_if()\n    return align ~= \"right\"\nend",
+        "instant": true,
+        "id": 6,
+        "text": "По правому краю",
+        "lua_do": "function lua_do()\n    align = \"right\"\n    textGrp = nil\nend",
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "text": "По правому краю",
+        "id": 6,
+        "instant": false,
+        "lua_if": "function lua_if()\n    return align == \"right\"\nend",
+        "left_answer": false
+      },
+      {
+        "id": 6,
+        "text": "======================",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "Первая страница"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do() \n function colorText(params) \n local colors = { \n [\"0\"] = {0, 0, 0}, -- black \n [\"1\"] = {0, 0, 0.55}, -- dark blue \n [\"2\"] = {0, 0.2, 0.13}, -- dark green \n [\"3\"] = {0, 0.45, 0.45}, -- dark aqua \n [\"4\"] = {0.55, 0, 0}, -- dark red \n [\"5\"] = {0.19, 0.1, 0.2}, -- dark purple \n [\"6\"] = {1, 0.84, 0}, -- gold \n [\"7\"] = {0.66, 0.66, 0.66}, -- gray \n [\"8\"] = {0.5, 0.5, 0.5}, -- dark gray \n [\"9\"] = {0, 0, 1.0}, -- blue \n [\"a\"] = {0.4, 1.0, 0}, -- green \n [\"b\"] = {0, 1.0, 1.0}, -- aqua \n [\"c\"] = {0.83, 0.13, 0.18}, -- red \n [\"d\"] = {1, 0, 1}, -- magenta \n [\"e\"] = {0.98, 0.98, 0.22}, -- yellow \n [\"f\"] = {0.95, 0.95, 0.95} -- white \n } \n local currColor, currS, nowC, n, txtFrag \n local currN = 1 \n local full = {objects = {[1] = {}}, objectsGroup = {}} \n local str = params.text \n full.group = display.newGroup() \n full.group.x, full.group.y = params.x, params.y \n full.groupsGroup = display.newGroup() \n full.objectsGroup[1] = display.newGroup() \n full.groupsGroup:insert(full.objectsGroup[1]) \n full.group:insert(full.groupsGroup) \n for i = 1, utf8.len(str) do \n currS = utf8.sub(str, i, i) \n if currS == \"<s>\n\" then \n if txtFrag then \n full.objects[currN] = full.objects[currN] or {} \n n = #full.objects[currN] <plus> 1 \n full.objects[currN][n] = display.newText{parent = full.objectsGroup[currN], text = txtFrag, font = native.systemFont, fontSize = params.fontSize} \n if currColor then \n full.objects[currN][n]:setFillColor(unpack(currColor)) \n end \n txtFrag = nil \n end \n currN = currN <plus> 1 \n full.objectsGroup[currN] = display.newGroup() \n full.groupsGroup:insert(full.objectsGroup[currN]) \n else \n if nowC then \n if txtFrag then \n full.objects[currN] = full.objects[currN] or {} \n n = #full.objects[currN] <plus> 1 \n full.objects[currN][n] = display.newText{parent = full.objectsGroup[currN], text = txtFrag, font = native.systemFont, fontSize = params.fontSize} \n if currColor then \n full.objects[currN][n]:setFillColor(unpack(currColor)) \n end \n txtFrag = nil \n end \n currColor = colors[currS] \n nowC = nil \n else \n if currS == '#' then \n nowC = true \n else \n txtFrag = (txtFrag or \"\") .. currS \n end \n end \n end \n end \n if txtFrag then \n n = #full.objects[currN] <plus> 1 \n full.objects[currN] = full.objects[currN] or {} \n full.objects[currN][n] = display.newText{parent = full.objectsGroup[currN], text = txtFrag, font = native.systemFont, fontSize = params.fontSize} \n if currColor then \n full.objects[currN][n]:setFillColor(unpack(currColor)) \n end \n end \n local maxWidth, maxHeight = 0, 0 \n local width = 0 \n local height = 0 \n local y = 0 \n local x = 0 \n for i = 1, #full.objects do \n x = 0 \n local th = 0 \n width = 0 \n for j = 1, #full.objects[i] do \n th = full.objects[i][j].height \n width = width <plus> full.objects[i][j].width \n full.objects[i][j].x = x <plus> full.objects[i][j].width/2 \n x = full.objects[i][j].x <plus> full.objects[i][j].width/2 \n end \n maxWidth = (maxWidth < width) and width or maxWidth \n full.objectsGroup[i].y = y <plus> th \n y = y <plus> th \n height = height <plus> th \n if params.align == \"right\" then \n full.objectsGroup[i].x = -width \n full.groupsGroup.x = maxWidth/2 \n elseif params.align == \"left\" then \n full.objectsGroup[i].x = 0 \n full.groupsGroup.x = -maxWidth/2 \n else \n full.objectsGroup[i].x = -width/2 \n end \n end \n full.groupsGroup.y = -height/2 \n \n return full \n end \n local a = colorText{parent = canvasGroup, text = \"#1x#2t xt<s>\n#2next #6string\", x = canvas.width/2, y = canvas.height/2, fontSize = 40, align = \"left\"} \nend",
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n txts = display.newText{ parent = canvas.parent.parent.parent, text = (\"B1aCk \"):rep(9454), x = 0, y = 0, font = native.systemFont, fontSize = 20, width = 1000}\ntxts.fill = { 0 }\nend",
+        "no_transition": true
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    a = timer.performWithDelay(100, function(event) end, 0)\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Timers",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    local timer = {\n        _runlist = { },\n       _pausedTimers = { },\n       allowIterationsWithinFrame = false\n    }\n\n    function timer.performWithDelay(delay, listener, varA, varB)\n        local entry\n        local t = type(listener)\n        if (t == \"function\" or (t == \"table\" and type(listener.timer) == \"function\"))\n        then\n            entry = {\n                _listener = listener,\n                _time = system.getTimer() <plus> delay\n            }\n            if (type(varA) == \"number\" and varA ~= 1)\n            then\n                entry._iterations = varA - 1\n                entry._delay = delay\n            end\n            entry._count = 1\n            entry._tag = type(varA) == \"string\" and varA or type(varB) == \"string\" and varB or \"\"\n            local timer = timer\n            entry._inFrameIterations = timer.allowIterationsWthinFrame\n            timer._insert(entry)\n        end\n        return entry\n    end\n\n    function timer.cancel(object)\n        local t = type(object)\n        if (t == \"table\")\n        then\n            object._cancelled = true\n            object._expired = true\n            return (object._time - (object._pauseTime or system.getTimer())), (object._iterations or 0) <plus> 1\n        elseif  (t == \"string\")\n        then\n            local timer = timer\n            for k = 1, 2 do\n                local list = k == 1 and timer.paused or timer.runlist\n                for i = #list, 1, -1 do\n                    local v = list[i]\n                    if (v._tag == object)\n                    then\n                        v._cancelled = true\n                        v._expired = true\n                    end\n                end\n            end\n        else\n            error(\"timer.cancel(): invalid timerId or tag (table or string expected, got \"..t..\")\", 2)\n        end\n    end\n\n    function timer.pause(object, _id)\n        local t = type(object)\n        local isTag = (t == \"string\")\n        if (isTag or t == \"table\")\n        then\n            local timer = timer\n            local runlist = timer._runlist\n            local pausedTimers = timer._pausedTimers\n            if (_id)\n            then\n                local v = runlist[_id]\n                pausedTimers[#pausedTimers <plus> 1] = v\n                v._pauseTime = system.getTimer()\n                timer._remove(v, _id)\n                return v._time - v._pauseTime\n            elseif (isTag or ((not object._expired) and (not object._pauseTime)))\n            then\n                for i = #runlist, 1, -1 do\n                    local v = runlist[i]\n                    if ((isTag and v._tag == object and not v._expired and not v._pauseTime) or v == object)\n                    then\n                        pausedTimers[#pausedTimers <plus> 1] = v\n                        v._pauseTime = system.getTimer()\n                        timer._remove(v, i)\n                        if (not isTag)\n                        then\n                            return v._time - v._pauseTime\n                        end\n                    end\n                end\n            else\n                return 0\n            end\n        else\n            error(\"timer.pause(): invalid timerId or tag (table or string expected, got \"..t..\")\", 2)\n        end\n    end\n\n    function timer.resume(object, _id)\n        local t = type(object)\n        local isTag = (t == \"string\")\n        if (isTag or tag == \"table\")\n        then\n            local timer = timer\n            local pausedTimers = timer._pausedTimers\n            if (_id)\n            then\n                local v = pausedTimers[_id]\n                local timeLeft = v._time - v._pauseTime\n                v._time = system.getTimer() <plus> timeLeft\n                v._pauseTime = nil\n                table.remove(pausedTimers, _id)\n                if (v._removed)\n                then\n                    timer._insert(v)\n                end\n                return timeLeft\n            elseif (isTag or ((not v._expired) and v._pauseTime))\n            then\n                for i = #pausedTimers, 1, -1 do\n                    local v = pausedTimers[i]\n                    if ((isTag and (not v._expired) and v._pauseTime) or v == object)\n                    then\n                        local timeLeft = v._time - v._pauseTime\n                        v._time = system.getTimer() <plus> timeLeft\n                        v._pauseTime = nil\n                        table.remove(pausedTimers, i)\n                        if (v._removed)\n                        then\n                            timer._insert(v)\n                        end\n                        if (not isTag)\n                        then\n                            return timeLeft\n                        end\n                    end\n                end\n            else\n                return 0\n            end\n        else\n            error(\"timer.resume(): invalid timerId or tag (table or string expected, got \"..t..\")\", 2)\n        end\n    end\n\n    function timer._insert(entry)\n        local timer = timer\n        local runlist = timer._runlist\n        local fireTime = entry._time\n        local index = #runlist <plus> 1\n        for i = 1, #runlist do\n            if (runlist[i]._time < fireTime)\n            then\n                index = i\n                break\n            end\n        end\n        table.insert(runlist, index, entry)\n        entry._removed = nil\n        if (not time._nextTime)\n        then\n            Runtime:addEventListener(\"enterFrame\", timer)\n        end\n        timer._nextTime = runlist[#runlist]._time\n    end\n\n    function timer._remove(entry, _id)\n        local timer = timer\n        local runlist = timer._runlist\n        for i = _id or 1, #runlist do\n            if (runlist[i] == entry)\n            then\n                entry._removed = true\n                table.remove(runlist, i)\n                break\n            end\n        end\n        if (#runlist > 0)\n        then\n            timer._nextTime = runlist[#runlist]._time\n        else\n            timer._nextTime = nil\n            Runtime:removeEventListener(\"enterFrame\", timer)\n        end\n        return entry\n    end\n\n    function timer:enterFrame(event)\n        local timer = timer\n        local runlist = timer._runlist\n        if (#runlist > 0)\n        then\n            local timerEvent = { name = \"timer\", time = event.time }\n            while timerEvent.time >= timer._nextTimer do\n                local entry = timer._remove(runlist[#runlist], #runlist)\n                if ((not entry._expired) and (not entry._cancelled) and (not entry._pauseTime))\n                then\n                    \n                end\n            end\n        end\n    end\nend"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": []
+  }
+]

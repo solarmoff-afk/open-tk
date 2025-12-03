@@ -1,0 +1,621 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Доктор Дионис (Комогорцев Денис)\n\nВдохновление: \"Lapse: Забытое будущее\"\n\nНазвание: \"Статус\" — это транслитерация латинского \"status\" — \"государство\".<s>ufeff<s>ufeff <s>ufeff\n<s>ufeff\nВам предстоит играть за президента страны в апокалиптическом мире будущего.\n",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nnature = 50\npeople = 50\ndiplomacy = 50\narmy = 50\nmoney = 50\ng.autorun = 2\nidleness = 0\nend",
+        "text": "Начать",
+        "widget": [
+          "nature",
+          "https://i.ibb.co/YXQRG69/icons8-plant-48.png",
+          "%",
+          "people",
+          "https://i.ibb.co/mHj5HNX/icons8-standing-man-50.png",
+          "%",
+          "army",
+          "https://i.ibb.co/cLrgQTR/icons8-missile-100.png",
+          "%",
+          "money",
+          "https://i.ibb.co/X45Q5LB/icons8-money-50.png",
+          "%",
+          "diplomacy",
+          "https://i.ibb.co/12kW0Fs/icons8-diplomacy-100.png",
+          "%"
+        ],
+        "id": 3
+      },
+      {
+        "id": 20,
+        "text": "(Анти)достижения",
+        "lua_do": "function lua_do()\ng.autorun = nil\nend"
+      },
+      {
+        "id": 1,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Виджеты",
+    "answers": [
+      {
+        "widget_show": [
+          "nature",
+          "nature",
+          "people",
+          "people",
+          "diplomacy",
+          "diplomacy",
+          "army",
+          "army",
+          "money",
+          "money"
+        ],
+        "super_calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nif (nature <= 0 or people <= 0 or diplomacy <= 0 or money <= 0) then\ng.autorun = nil\nshowPage{id =10}\nend\nif nature > 100 then nature = 100 end\nif people > 100 then people = 100 end\nif diplomacy > 100 then diplomacy = 100 end\nif army > 100 then army = 100 end\nif money > 100 then money = 100 end\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "ОБУЧЕНИЕ\n\nВы видите 5 показателей: природа, народ, дипломатия, армия и деньги. При обнулении хотя бы одного показателя, кроме армии, происходит проигрыш.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Министр обороны Гомер Мейер: Господин верховный главнокомандующий, южные страны наращивают военную мощь.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Увеличить военный бюджет (<plus>24, -24)",
+        "lua_do": "function lua_do()\narmy = 74\nmoney = 26\nend"
+      },
+      {
+        "id": 5,
+        "text": "Объявить мобилизацию (-24, -8, <plus>24, -8)",
+        "lua_do": "function lua_do()\npeople = 26\ndiplomacy = 42\narmy = 74\nmoney = 42\nend"
+      },
+      {
+        "id": 5,
+        "text": "Отправить дипломатическую миссию (<plus>24, -8)",
+        "lua_do": "function lua_do()\ndipmission = true\ndiplomacy = 74\nmoney = 42\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Министр здравоохранения Салли Харвей: В восточных городах началась эпидемия нового вируса.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Выделить деньги и изолировать заражённые города (-8, -32)",
+        "lua_do": "function lua_do()\nisolationOfVirus = true\narmy = army - 8\nmoney = money - 32\nend"
+      },
+      {
+        "id": 6,
+        "text": "Выделить деньги (-24)",
+        "lua_do": "function lua_do()\nmoneyAgainstVirus = true\nmoney = money -24\nend"
+      },
+      {
+        "id": 6,
+        "text": "Бездействовать (-8, -16)",
+        "lua_do": "function lua_do()\npeople = people-8\nmoney = money -16\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Министр финансов Эрнест Брайан: Казна пустеет.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Удвоить налоги (-24, <plus>24)",
+        "lua_do": "function lua_do()\npeople = people - 24\nmoney = money <plus>24\nend"
+      },
+      {
+        "id": 7,
+        "text": "Немного поднять налоги (-8, <plus>8)",
+        "lua_do": "function lua_do()\npeople = people - 8\nmoney = money <plus>8\nend"
+      },
+      {
+        "id": 7,
+        "text": "Бездействовать",
+        "lua_do": "function lua_do()\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Министр природы Марибель Дженсен: Господин президент, в столице очень грязный воздух.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Очищать воздух (<plus>8, <plus>8, -8)",
+        "lua_do": "function lua_do()\nnature=nature <plus>8\npeople = people <plus>8\nmoney = money -8\nend"
+      },
+      {
+        "id": 8,
+        "text": "Бездействовать (-8, -8)",
+        "lua_do": "function lua_do()\nnature=nature -8\npeople = people -8\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Министр иностранных дел Ирвин Торнтон: Западные государства преподнесли нам дары.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Принять (<plus>8)",
+        "lua_do": "function lua_do()\nmoney = money <plus>8\nend"
+      },
+      {
+        "id": 9,
+        "text": "Отказаться (<plus>8)",
+        "lua_do": "function lua_do()\ndiplomacy = diplomacy <plus> 8\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Патриарх Доминик: Выделите, пожалуйста, денег Церкви?",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Да, много (<plus>24, -24)",
+        "lua_do": "function lua_do()\npeople = people <plus>24\nmoney = money -24\nend"
+      },
+      {
+        "id": 11,
+        "text": "Да, немного (<plus>8, -8)",
+        "lua_do": "function lua_do()\npeople = people <plus>8\nmoney = money -8\nend"
+      },
+      {
+        "id": 11,
+        "text": "Нет",
+        "lua_do": "function lua_do()\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "  ",
+    "answers": [
+      {
+        "id": 10,
+        "text": " ",
+        "lua_text": "function lua_text()\nif nature <= 0 then\nreturn \"В стране произошёл экологический крах. Она больше не пригодна для жизни людей.\" end\nend",
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": " ",
+        "comment": true,
+        "lua_text": "function lua_text()\nif people <= 0 then\nreturn \"В стране произошло восстание. Вас казнили.\" end\nend"
+      },
+      {
+        "id": 10,
+        "text": " ",
+        "comment": true,
+        "lua_text": "function lua_text()\nif diplomacy <= 0 then\nreturn \"На страну напали соседние государства. Власть перешла к ним.\" else return nil end\nend"
+      },
+      {
+        "id": 10,
+        "text": " ",
+        "comment": true,
+        "lua_text": "function lua_text()\nif money <= 0 then\nreturn \"Страна увязла в долгах. Власть продана другим государствам.\" end\nend"
+      },
+      {
+        "id": 1,
+        "text": "Титульная страница"
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "widget_show": [
+          "nature",
+          "nature",
+          "people",
+          "people",
+          "diplomacy",
+          "diplomacy",
+          "army",
+          "army",
+          "money",
+          "money"
+        ],
+        "lua_do": "function lua_do()\nif people <= 0 then g.peopleHater = true end\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 11,
+        "text": " ",
+        "comment": true,
+        "lua_text": "function lua_text()\nif dipmission ~= true then \nreturn \"Министр обороны Гомер Мейер: Южные государства напали на нашу страну.\" end\nend"
+      },
+      {
+        "id": 12,
+        "text": "Уничтожить южные страны термоядерным оружием (-16, -16, -32, -24)",
+        "lua_if": "function lua_if()\nif dipmission ~= true then\nreturn true end\nend",
+        "lua_do": "function lua_do()\nSouthIsDestroyed = true\nnature = nature -16\npeople = people -16\ndiplomacy = diplomacy - 32\narmy = army - 24\nend"
+      },
+      {
+        "id": 12,
+        "text": "Обороняться (-8, -24)",
+        "lua_if": "function lua_if()\nif dipmission ~= true then\nreturn true end\nend",
+        "lua_do": "function lua_do()\ndefenseAgainstSouth = true\ndiplomacy = diplomacy - 8\narmy = army -24\nend"
+      },
+      {
+        "id": 12,
+        "text": "Направить дипломатическую миссию (<plus>24, -8)",
+        "lua_if": "function lua_if()\nif dipmission ~= true then\nreturn true end\nend",
+        "lua_do": "function lua_do()\ndipmission = true\ndiplomacy = diplomacy <plus>24\nmoney = money -8\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Министр иностранных дел Ирвин Торнтон: Дипломатическая миссия, которую Вы направили на Юг, имеет возможность заключить договор о ненападении. Подписать?\"\nend",
+        "id": 11,
+        "text": " ",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn dipmission\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn dipmission\nend",
+        "lua_do": "function lua_do()\ndiplomacy = diplomacy <plus>24\nend",
+        "text": "Да (<plus>24)",
+        "id": 12,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn dipmission\nend",
+        "id": 12,
+        "text": "Нет",
+        "lua_do": "function lua_do()\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Министр культуры Морган Скотт: У нас в стране бесплатное посещение государственных культурных учреждений. ",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Оставить бесплатным",
+        "lua_do": "function lua_do()\nidleness = idleness <plus>1\nend"
+      },
+      {
+        "id": 13,
+        "text": "Установить низкие цены (-8, <plus>8)",
+        "lua_do": "function lua_do()\npeople = people -8\nmoney = money <plus>8\nend"
+      },
+      {
+        "id": 13,
+        "text": "Установить высокие цены (-24, <plus>24)",
+        "lua_do": "function lua_do()\npeople = people -24\nmoney = money <plus>24\nend"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "   \n",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nreturn \"Министр здравоохранения Салли Харвей: Тот вирус довольно заразный и смертельно опасный. Но нам удалось изолировать его в восточных городах и снизить летальность.\"\nend",
+        "id": 13,
+        "text": " ",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn isolationOfVirus\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Министр здравоохранения Салли Харвей: Тот вирус довольно заразный и смертельно опасный. Он распространился по всей стране, но нам удалось снизить его летальность.\"\nend",
+        "id": 13,
+        "text": " ",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn moneyAgainstVirus\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Министр здравоохранения Салли Харвей: Тот вирус довольно заразный и смертельно опасный. Он распространился по всей стране и убивает наших граждан.\"\nend",
+        "id": 13,
+        "text": " ",
+        "comment": true,
+        "lua_if": "function lua_if()\nif (isolationOfVirus ~= true and moneyAgainstVirus ~= true) then\nreturn true end\nend"
+      },
+      {
+        "id": 14,
+        "text": "Попросить помощи у мирового сообщества (-24)",
+        "lua_if": "function lua_if()\nif isolationOfVirus == true or moneyAgainstVirus == true then\nreturn true end\nend",
+        "lua_do": "function lua_do()\ndiplomacy = diplomacy -24\nend"
+      },
+      {
+        "id": 14,
+        "text": "Попросить помощи у мирового сообщества (-48)",
+        "lua_if": "function lua_if()\nif isolationOfVirus ~= true and moneyAgainstVirus ~= true then\nreturn true end\nend",
+        "lua_do": "function lua_do()\ndiplomacy = diplomacy -48\nend"
+      },
+      {
+        "id": 14,
+        "text": "Выделить деньги (-24)",
+        "lua_do": "function lua_do()\nmoney = money -24\nend"
+      },
+      {
+        "id": 14,
+        "text": "Ввести ограничения (-24)",
+        "lua_do": "function lua_do()\narmy = army - 24\nend"
+      },
+      {
+        "id": 14,
+        "text": "Выделить деньги и ввести ограничения (-24, -24)",
+        "lua_do": "function lua_do()\nmoney = money -24\narmy = army -24\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Министр труда Джеральд Мельтон: Продолжительность жизни уменьшилась. Снизим пенсионный возраст?",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nif dipmission == nil then\nreturn true end\nend",
+        "id": 15,
+        "text": "Да (<plus>24, -24)",
+        "lua_do": "function lua_do()\npeople = people <plus>24\nmoney = money -24\nend",
+        "left_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn dipmission\nend",
+        "id": 16,
+        "text": "Да (<plus>24, -24)",
+        "lua_do": "function lua_do()\npeople = people <plus>24\nmoney = money -24\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif dipmission == nil then\nreturn true end\nend",
+        "id": 15,
+        "text": "Нет",
+        "lua_do": "function lua_do()\nidleness = idleness <plus>1\nend"
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn dipmission\nend",
+        "id": 16,
+        "text": "Нет",
+        "lua_do": "function lua_do()\nidleness = idleness <plus>1\nend"
+      },
+      {
+        "id": 15,
+        "text": "Поднимем (-24, <plus>24)",
+        "lua_if": "function lua_if()\nif dipmission == nil then\nreturn true end\nend",
+        "lua_do": "function lua_do()\npeople = people -24\nmoney = money <plus>24\nend"
+      },
+      {
+        "id": 16,
+        "text": "Поднимем (-24, <plus>24)",
+        "lua_if": "function lua_if()\nreturn dipmission\nend",
+        "lua_do": "function lua_do()\npeople = people -24\nmoney = money <plus>24\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   ",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn SouthIsDestroyed\nend",
+        "id": 15,
+        "text": " ",
+        "lua_text": "function lua_text()\nreturn \"Министр обороны Гомер Мейер: Южные страны стёрты с лица планеты. Их армия капитулировала.\"\nend",
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Министр обороны Гомер Мейер: Мы держим оборону, но Юг продолжает наступать.\"\nend",
+        "id": 15,
+        "text": " ",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn defenseAgainstSouth\nend"
+      },
+      {
+        "id": 16,
+        "text": "Далее",
+        "lua_if": "function lua_if()\nreturn SouthIsDestroyed\nend"
+      },
+      {
+        "id": 11,
+        "text": " ",
+        "comment": true,
+        "lua_text": "function lua_text()\nif dipmission ~= true then \nreturn \"Министр обороны Гомер Мейер: Южные государства напали на нашу страну.\" end\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nSouthIsDestroyed = true\nnature = nature -16\npeople = people -16\ndiplomacy = diplomacy - 32\narmy = army - 24\nend",
+        "text": "Уничтожить южные страны термоядерным оружием (-16, -16, -32, -24)",
+        "lua_if": "function lua_if()\nif dipmission ~= true then\nreturn true end\nend",
+        "id": 16
+      },
+      {
+        "lua_do": "function lua_do()\ndefenseAgainstSouth = true\ndiplomacy = diplomacy - 8\narmy = army -24\nend",
+        "text": "Обороняться (-8, -24)",
+        "lua_if": "function lua_if()\nif dipmission ~= true then\nreturn true end\nend",
+        "id": 16
+      },
+      {
+        "lua_do": "function lua_do()\ndipmission = true\ndiplomacy = diplomacy <plus>24\nmoney = money -8\nend",
+        "text": "Направить дипломатическую миссию (<plus>24, -8)",
+        "lua_if": "function lua_if()\nif dipmission ~= true then\nreturn true end\nend",
+        "id": 16
+      },
+      {
+        "comment": true,
+        "id": 11,
+        "text": " ",
+        "lua_if": "function lua_if()\nreturn dipmission\nend",
+        "lua_text": "function lua_text()\nreturn \"Министр иностранных дел Ирвин Торнтон: Заключён мирный договор с Югом.\"\nend"
+      },
+      {
+        "id": 16,
+        "text": "Далее",
+        "lua_if": "function lua_if()\nreturn dipmission\nend"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Генеральный директор частной компании: Господин президент, разрешите нам срубить 70 гектаров леса?\n\n",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Да (-8, <plus>8)",
+        "lua_do": "function lua_do()\nnature = nature -8\nmoney = money <plus>8\nend",
+        "left_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\nnature = nature <plus>8\nmoney = money -8\nidleness = idleness <plus>1\nend",
+        "right_answer": true,
+        "id": 17,
+        "text": "Нет (<plus>8, -8)"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Министр внутренних дел Люк Прайс: В стране распространяется новый наркотик, который поступает из-за границы.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Усилить пограничный контроль (<plus>8, -8)",
+        "lua_do": "function lua_do()\npeople = people <plus>8\narmy = army -8\nend"
+      },
+      {
+        "id": 18,
+        "text": "Бездействовать (-8)",
+        "lua_do": "function lua_do()\npeople = people -8\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Министр науки Аманда Бёрнс: Учёные хотят провести эксперименты над овощными культурами. Это повысит устойчивость растений.",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Выделить деньги (<plus>8, -8)",
+        "lua_do": "function lua_do()\nnature = nature <plus>8\nmoney = money -8\nend"
+      },
+      {
+        "id": 19,
+        "text": "Отказать в финансировании",
+        "lua_do": "function lua_do()\nidleness = idleness <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Автор: Поздравляю! Вы прошли этот квест. ",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn (nature == 74)\nend",
+        "id": 19,
+        "text": "Получено достижение \"Великий экозащитник\": закончить игру с 74% природы.",
+        "comment": true,
+        "merge": false
+      },
+      {
+        "id": 19,
+        "text": "Получено достижение \"Президент, любящий народ и любимый народом\": завершить квест с 74<plus>% народа.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn (people >= 74)\nend"
+      },
+      {
+        "id": 19,
+        "text": "Получено достижение \"Великий дипломат\": окончить игру с 100% дипломатии.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn (diplomacy == 100)\nend"
+      },
+      {
+        "id": 19,
+        "text": "Получено антидостижение \"Геноцид\": уничтожить южные страны.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn SouthIsdestroyed\nend"
+      },
+      {
+        "id": 19,
+        "text": "Получено антидостижение \"Великий бездельник\": бездействовать максимальное количество раз (11).",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn (idleness == 11)\nend"
+      },
+      {
+        "id": 1,
+        "text": "Титульная страница"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif nature == 74 then g.ecoDefender = 1 end\nif people >= 74 then g.love = 1 end\nif diplomacy == 100 then g.diplomat = 1 end\nif SouthIsDestroyed == true then g.genocide = 1 end\nif idleness == 11 then g.idler = 1 end\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 19,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Полученные за все прохождения квеста (анти)достижения:\n",
+    "answers": [
+      {
+        "id": 20,
+        "text": "\"Великий экозащитник\": закончить игру с 74% природы.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.ecoDefender\nend"
+      },
+      {
+        "id": 20,
+        "text": "\"Президент, любящий народ и любимый народом\": завершить игру с 74<plus>% народа.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.love\nend"
+      },
+      {
+        "id": 20,
+        "text": "\"Великий дипломат\": окончить квест с 100% дипломатии.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.diplomat\nend"
+      },
+      {
+        "id": 20,
+        "text": "Антидостижение \"Геноцид\": уничтожить южные страны.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.genocide\nend"
+      },
+      {
+        "id": 20,
+        "text": "Антидостижение \"Великий бездельник\": бездействовать максимальное количество раз (11).",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.idler\nend"
+      },
+      {
+        "id": 1,
+        "text": "Титульная страница"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "",
+    "answers": []
+  }
+]

@@ -1,0 +1,1576 @@
+[
+  {
+    "id": 1,
+    "text": "Этот квест предназначен для тестирования работы различных переменных и механик, для создания примеров, с которыми смогут ознакомиться читатели группы «Текстовые квесты» и «Заметки юрского периода».\n\nСейчас тестируется ввод числовой иеформацией пользователем в таблицу.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Изучаем оператор update.",
+        "need": 10000,
+        "var_set": [
+          "counter",
+          40
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Игра: коридор с ловушками",
+        "need": 10000
+      },
+      {
+        "id": 9,
+        "text": "Одна страница вызова меню.",
+        "need": 10000,
+        "var_set": [
+          "autorun",
+          10
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Другая страница вызова того же меню.",
+        "need": 10000,
+        "var_set": [
+          "autorun",
+          10
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "need": 10000
+      },
+      {
+        "id": 22,
+        "text": "Новый ответ. введите текст",
+        "need": 10000
+      },
+      {
+        "id": 23,
+        "text": "Пррверка работы autorun auto: повлияет ли он на отображение ответов на странице?",
+        "need": 10000,
+        "var_set": [
+          "autorun after",
+          30
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Тестирование возведения в степень.",
+        "need": 10000
+      },
+      {
+        "id": 25,
+        "text": "Новый ответ. введите текст",
+        "need": 10000,
+        "var_set": [
+          "lubaduba",
+          "ergom"
+        ]
+      },
+      {
+        "id": 38,
+        "text": "Тестирование Луа-режима.",
+        "need": 10000,
+        "lua_do": "function lua_do()\n    vars.objects = {}\nend"
+      },
+      {
+        "id": 61,
+        "text": "Разработка боевого движка",
+        "lua_do": "function lua_do()\n    vars.classes = {}\n    vars.instances = {}\n    vars.links = {weapon = {}, armour = {}}\n    dataNotLost = nil\nend"
+      },
+      {
+        "id": 56,
+        "text": "Заполнение таблицы с ключами.",
+        "lua_do": "function lua_do()\n    vars.inputTable = {weight = \"\", height = \"\", strength = \"\", dexterity = \"\", intellect = \"\", constitution = \"\", charisma = \"\", wisdom = \"\", hp = \"\", damage = \"\", thac0 = \"\", ac = \"\"}\nend"
+      },
+      {
+        "id": 56,
+        "text": "Заполнение массива",
+        "lua_do": "function lua_do()\n    vars.inputTable = {\"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"}\nend"
+      },
+      {
+        "id": 62,
+        "text": "Антон, это для тебя."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "На этой странице работает таймер обратного отсчёта до момента взрыва сероводородной бомбы!",
+    "answers": [
+      {
+        "var_sub": [
+          "counter",
+          1
+        ],
+        "var_show": [
+          "counter",
+          "сек."
+        ],
+        "comment": true,
+        "text": "До взрыва осталось",
+        "id": 2,
+        "var_more": [
+          "counter",
+          0
+        ],
+        "update": [
+          1,
+          40
+        ],
+        "calculate": false
+      },
+      {
+        "id": 2,
+        "text": "Бабах!!! Пук-пук!",
+        "comment": true,
+        "var_no_more": [
+          "counter",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Вернуться на первую страницу."
+      },
+      {
+        "id": 2,
+        "text": "Калькулейт.",
+        "var_add": [
+          "gamba",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "var_less": [
+          "counter",
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "    Вы подписались спасти принцессу, заточённую в самой высокой башне древнего замка. Угораздило же! Дракона вы уже победили. После этого вам пришлось победить ещё кучу лестниц с выщербленными влагой и временем осклизлыми ступенями. Второе было не легче первого. Наконец вы вышли на финишную прямую: вам осталось пройти коридор, по слухам, напичканный множеством смертельных ловушек.<s>r\n    Кряхтя, вы отворяете древнюю каменную дверь, и попадаете в узкий коридор, из которого веет какой-то жутью и замогильным холодом.<s>r\n    «Вперёд, отважный рыцарь!» — неуверенно сказали вы себе и сделали первый шаг.<s>r\n    Ну что ж. Осталось лишь выбрать сложность игры, и можно начинать!<s>r",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Новичок.",
+        "var_set": [
+          "difficulty",
+          6
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Опытный.",
+        "var_set": [
+          "difficulty",
+          4
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Супергерой.",
+        "var_set": [
+          "difficulty",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   Шагнув в коридор, вы вдруг заметили, что прямо на вас сверху летит нечто огромное. Ваши действия?",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Отпрянуть назад!",
+        "var_equal": [
+          "fail",
+          0
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Прыгнуть вперёд!",
+        "var_equal": [
+          "fail",
+          0
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Прыгнуть вбок!",
+        "var_equal": [
+          "fail",
+          0
+        ]
+      },
+      {
+        "id": 4,
+        "text": "\n    Ваш герой остолбенел и, словно загипнотизированный, уставился на летящую сверху каменную глыбу правильной кубической формы… Он любовался её гранями и мерцающими в полутьме полированными поверхностями… «Как красиво!» — только и успел подумать он…",
+        "merge": true,
+        "var_equal": [
+          "fail",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Начать всё заново!",
+        "var_equal": [
+          "fail",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 4,
+        "text": "  ",
+        "update": [
+          "difficulty",
+          1
+        ],
+        "var_set": [
+          "fail",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 9,
+    "text": "Одна страница входа в многоуровневое меню.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Закончить тестирование и выйти на первую страницу"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Меню. Первый уровень.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Пункт 1"
+      },
+      {
+        "id": 12,
+        "text": "Пункт 2"
+      },
+      {
+        "id": 13,
+        "text": "Пункт 3"
+      },
+      {
+        "backstepCount": 1,
+        "forget": 10,
+        "text": "Выйти из меню",
+        "isBack": true,
+        "id": 10
+      },
+      {
+        "id": 10,
+        "text": "Обнуление авторана",
+        "calculate": true,
+        "var_set": [
+          "autorun",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Пункт меню 1",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Подпункт 1 пункта 1 и, одновременно, подпункт 2 пункта 3"
+      },
+      {
+        "id": 16,
+        "text": "Подпункт 2 пункта 1"
+      },
+      {
+        "id": 17,
+        "text": "Подпункт 3 пункта 1"
+      },
+      {
+        "backstepCount": 1,
+        "forget": 11,
+        "isBack": true,
+        "text": "Вернуться в корень меню",
+        "id": 11,
+        "var_set": [
+          "autorun",
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Пункт 2.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Подпункт 1 пункта 2"
+      },
+      {
+        "id": 19,
+        "text": "Подпункт 2 пункта 2 и, одновременно, подпункт 3 пункта 3"
+      },
+      {
+        "id": 20,
+        "text": "Подпункт 3 пункта 2"
+      },
+      {
+        "isBack": true,
+        "id": 12,
+        "backstepCount": 1,
+        "text": "Вернуться в корень меню",
+        "forget": 12,
+        "var_set": [
+          "autorun",
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Пункт 3",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Подпункт 1 пункта 3"
+      },
+      {
+        "id": 15,
+        "text": "Подпункт 2 пункта 3 и, одновременно, подпункт 1 пункта 1"
+      },
+      {
+        "id": 19,
+        "text": "Подпункт 3 пункта 3 и, одновременно, подпункт 2 пункта 2"
+      },
+      {
+        "isBack": true,
+        "id": 13,
+        "backstepCount": 1,
+        "text": "Вернуться в корень меню",
+        "forget": 13,
+        "var_set": [
+          "autorun",
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Другая страница вызова того же меню.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Закончить тестирование и выйти на первую страницу"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Подпункт 1 пункта 1 и, одновременно, подпункт 2 пункта 3.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 15,
+        "text": "Вернуться к пункту 1 или к пункту 3 (в зависимости от того, с какого пункта вы пришли)",
+        "isBack": true,
+        "id": 15
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Подпункт 2 пункта 1.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 16,
+        "text": "К пункту меню 1",
+        "isBack": true,
+        "id": 16
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Подпункт 3 пункта 1",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 17,
+        "text": "Вернуться к пункту 1",
+        "isBack": true,
+        "id": 17
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Подпункт 1 пункта 2.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 18,
+        "text": "Вернуться к пункту 2",
+        "isBack": true,
+        "id": 18
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Подпункт 2 пункта 2 и, одновременно, подпункт 3 пункта 3.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 19,
+        "text": "Вернуться к пункту 2 или к пункту 3 (в зависимости от того, откуда вы пришли)",
+        "isBack": true,
+        "id": 19
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Подпункт 3 пункта 2.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 20,
+        "text": "Вернуться к пункту 2",
+        "isBack": true,
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Подпункт 1 пункта 3.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 21,
+        "text": "Вернуться к пункту 3",
+        "isBack": true,
+        "id": 21
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Страница тестирования оператора update.",
+    "answers": [
+      {
+        "var_add": [
+          "offset",
+          10,
+          "adding",
+          1
+        ],
+        "id": 22,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "offset",
+          "global time"
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 27,
+        "text": "Счетчик равен.",
+        "update": [
+          1
+        ],
+        "var_show": [
+          "counter"
+        ]
+      },
+      {
+        "var_need": [
+          "global time",
+          "offset"
+        ],
+        "id": 23,
+        "calculate": false,
+        "run": [
+          23
+        ],
+        "text": "Производится расчет."
+      },
+      {
+        "id": 22,
+        "text": "Переустановить время.",
+        "var_add": [
+          "offset",
+          10
+        ],
+        "var_set": [
+          "offset",
+          "global time"
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Есть ли приращение при обновлении стрвницы.",
+        "var_show": [
+          "adding"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Установка вспомогательной переменной на значение 1.",
+        "calculate": true,
+        "var_set": [
+          "sup",
+          1
+        ]
+      },
+      {
+        "id": 29,
+        "text": "Ответ отображается в случае, если вспомогательная переменная установленатна 1.",
+        "var_equal": [
+          "sup",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "На этой странице вызывается подпрограмма, реализующая возведение в любую степень любого числа.\nНеобходимые переменные:\nbase — основание степени (число, возводимое в степень);\nexponent — показатель степени (сколько раз число само на себя умножается);\nresult — результат вычислений.",
+    "answers": [
+      {
+        "calculate": true,
+        "id": 24,
+        "text": "Возвести 7 в 5 степень.",
+        "run": [
+          31
+        ],
+        "var_set": [
+          "base",
+          7,
+          "exponent",
+          5,
+          "result",
+          "base"
+        ]
+      },
+      {
+        "id": 32,
+        "text": "Результат:",
+        "var_show": [
+          "result"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "var_str_set": [
+          "a",
+          "5"
+        ],
+        "var_mult": [
+          "a",
+          3
+        ]
+      },
+      {
+        "id": 35,
+        "text": "Переход на страницу, с которой вызывается база данных."
+      },
+      {
+        "id": 37,
+        "text": "Новый ответ. введите текст",
+        "var_pointer_get": [
+          "luba",
+          "lubaduba"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "123",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 29,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 30,
+    "text": "",
+    "answers": [
+      {
+        "id": 30,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "sup",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "На этой странице реализуется цикл возведения в степень числа, хранящегося в переменной \"base\". Показатель степени хранится в переменной \"exponent\".",
+    "answers": [
+      {
+        "calculate": true,
+        "text": "Производится самовызов страницы, если значение переменной \"exponent\" больше единицы.",
+        "var_more": [
+          "exponent",
+          1
+        ],
+        "id": 31,
+        "var_sub": [
+          "exponent",
+          1
+        ],
+        "run": [
+          31
+        ],
+        "var_mult": [
+          "result",
+          "base"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 33,
+    "text": "",
+    "answers": [
+      {
+        "id": 34,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Обработчик баз данных.",
+    "answers": [
+      {
+        "var_str_set": [
+          "db_underline",
+          "_",
+          "db_index",
+          "",
+          "db_height",
+          "",
+          "db_width",
+          "",
+          "db_height-text",
+          "height",
+          "db_width-text",
+          "width"
+        ],
+        "var_concat": [
+          "db_index",
+          "db_database",
+          "db_index",
+          "db_underline",
+          "db_index",
+          "db_table",
+          "db_index",
+          "db_underline",
+          "db_index",
+          "db_column",
+          "db_index",
+          "db_underline",
+          "db_index",
+          "db_row",
+          "db_height",
+          "db_database",
+          "db_width",
+          "db_database",
+          "db_height",
+          "db_underline",
+          "db_width",
+          "db_underline",
+          "db_height",
+          "db_table",
+          "db_width",
+          "db_table",
+          "db_height",
+          "db_underline",
+          "db_width",
+          "db_underline",
+          "db_height",
+          "db_height-text",
+          "db_width",
+          "db_width-text"
+        ],
+        "id": 34,
+        "calculate": true,
+        "text": "Формирует полный идентификатор ячейки с помощью конкатенации, а также имена переменных, хранящих ширину и высоту таблицы."
+      },
+      {
+        "var_pointer_get": [
+          "db_current-width",
+          "db_width",
+          "db_current-height",
+          "db_height"
+        ],
+        "var_equal": [
+          "db_record",
+          1
+        ],
+        "id": 34,
+        "calculate": true,
+        "text": "Записывает значение переменной db_data в ячейку таблицы при условии, что значение переменной db_record равно единице. Также извлекает значения текущей ширины и высоты таблицы.",
+        "var_pointer_put": [
+          "db_index",
+          "db_data"
+        ]
+      },
+      {
+        "var_equal": [
+          "db_record",
+          0
+        ],
+        "id": 34,
+        "calculate": true,
+        "var_pointer_get": [
+          "db_data",
+          "db_index"
+        ],
+        "text": "Считывает значение ячейки таблицы и записывает его в переменную db_data при условии, что значение переменной db_record равно нулю."
+      },
+      {
+        "text": "При записи устанавливает новое значение переменной, хранящей значение ширины таблицы в ячейках, если значение переменной db_column больше её текущего значения.",
+        "var_equal": [
+          "db_record",
+          1
+        ],
+        "id": 34,
+        "calculate": true,
+        "var_more": [
+          "db_column",
+          "db_current-width"
+        ],
+        "var_pointer_put": [
+          "db_width",
+          "db_column"
+        ]
+      },
+      {
+        "text": "При записи устанавливает новое значение переменной, хранящей значение высоты таблицы в ячейках, если значение переменной db_row больше её текущего значения.",
+        "var_equal": [
+          "db_record",
+          1
+        ],
+        "id": 34,
+        "calculate": true,
+        "var_more": [
+          "db_row",
+          "db_current-height"
+        ],
+        "var_pointer_put": [
+          "db_height",
+          "db_row"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "С этой страницы вызывается база данных.",
+    "answers": [
+      {
+        "var_str_set": [
+          "db_database",
+          "equipment",
+          "db_table",
+          "weapons",
+          "db_data",
+          "выше крыши"
+        ],
+        "text": "Устанавливает переменные и записывает значение.",
+        "id": 34,
+        "calculate": true,
+        "run": [
+          34
+        ],
+        "var_set": [
+          "db_record",
+          1,
+          "db_column",
+          97,
+          "db_row",
+          238
+        ]
+      },
+      {
+        "id": 36,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "db_column",
+          457,
+          "db_row",
+          1245
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Считывает данные из ячейки таблицы и записывает их в переменную damage.",
+    "answers": [
+      {
+        "text": "Новый ответ. введите текст",
+        "id": 36,
+        "calculate": true,
+        "run": [
+          34
+        ],
+        "var_set": [
+          "db_record",
+          0
+        ]
+      },
+      {
+        "id": 36,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "damage",
+          "db_data"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 38,
+    "text": "Тестирование Луа.",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Нажмите,чтобы тестировать."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Запись в объект и извлечение из него данных после выхода из приложения.",
+    "answers": [
+      {
+        "id": 40,
+        "text": "Вызов библиотеки функций",
+        "run": [
+          40
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\n    vars.objects[1] = {}\n    setmetatable(vars.objects[1], {__index = Object})\n    vars.objects[1]:set(1, \"Все получилось\")\nend",
+        "text": "Запись в новосозданный объект.",
+        "id": 39
+      },
+      {
+        "id": 39,
+        "text": "Извлечение данных из поля.",
+        "lua_do": "function lua_do()\n    vars.result = vars.objects[1]:get(1)\nend",
+        "var_show": [
+          "result"
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\n    vars.objects[3] = {}\n    setmetatable(vars.objects[3], {__index = Object})\n    vars.objects[3]:set(5, \"У нас есть объектно-ориентированное программирование!\")\nend",
+        "text": "Запись в новосозданный объект в третьей позиции.",
+        "id": 39
+      },
+      {
+        "id": 39,
+        "text": "Извлечение данных из поля в третьей позиции.",
+        "lua_do": "function lua_do()\n    vars.result = vars.objects[3]:get(5)\nend",
+        "var_show": [
+          "result"
+        ]
+      },
+      {
+        "id": 39,
+        "text": "Создание объекта класса Stalker, у которого есть метод многократно рассказывать истории.",
+        "var_show": [
+          "result"
+        ],
+        "lua_do": "function lua_do()\n    vars.objects[4] = {}\n    setmetatable(vars.objects[4], {__index = Stalker})\n    vars.objects[4]:set(10, \"Сейчас Поршень расскажет сказочку\")\n    vars.result = vars.objects[4]:storitell(\"Там на неведомых дорожках следы невиданных зверей. \", 3)\nend"
+      },
+      {
+        "id": 39,
+        "text": "Результат:",
+        "var_show": [
+          "result"
+        ],
+        "lua_do": "function lua_do()\n     vars.result = vars.objects[4]:get(10)\nend"
+      },
+      {
+        "id": 39,
+        "text": "Полная очистка массива.",
+        "lua_do": "function lua_do()\n    vars.objects = {}\nend"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Библиотека функций квеста. Вызывается с помощью команды run каждый раз перед обращением к функции.",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Библиотека объектов.",
+    "answers": [
+      {
+        "id": 41,
+        "text": "Библиотека.",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\n    -- Инициализация базового класса Base\n    vars.classes.Base = {}\n    \n    -- Определение методов базового класса Base\n    \n    -- Метод установки имени объекта\n    function vars.classes.Base:setObjectName(name)\n        self.name = name\n    end\n    \n    -- Метод установки идентификатора метатаблицы объекта\n    function vars.classes.Base:setMetatableIndex(metatable)\n        self.metatable = metatable\n    end\n    \n    -- Метод вывода поля в переменную vars.print\n    function vars.classes.Base:printField(field)\n        vars.print = self[field]\n    end \n    \n    -- Конец определения методов базового класса Base\n    \n    -- Обновление присвоения метатаблиц с помощью цикла с итератором\n    \n    for key, value in pairs(vars.objects) do\n        setmetatable(vars.objects[key], {__index = vars.classes[value.metatable]})\n    end\n\nend\n"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Исполняемая часть.",
+    "answers": [
+      {
+        "id": 41,
+        "text": "Вызов библиотеки",
+        "run": [
+          41
+        ],
+        "calculate": true
+      },
+      {
+        "lua_do": "function lua_do()\n    vars.objects.firstObject = {}\n    setmetatable(vars.objects.firstObject, {__index = vars.classes.Base})\n    vars.objects.firstObject:setMetatableIndex(\"Base\")\n    vars.objects.firstObject:setObjectName(\"Первый объект\")\nend\n",
+        "text": "Запуск нового объекта",
+        "id": 42
+      },
+      {
+        "lua_do": "function lua_do()\n    vars.objects.firstObject:printField(\"name\")\nend\n",
+        "text": "Печать",
+        "id": 42
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Обновляемая библиотека классов, используемых в квесте.",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Модуль библиотеки классов. Вызывается каждый раз при перезаходе в приложение.",
+        "lua_do": "function lua_do()\n\n    -- Создание базового класса\n    vars.classes.Class = {}\n    vars.classes.Class.name = \"Class\"\n\n    -- Описание  конструктора\n        \n    function vars.classes.Class:new(name)        \n        local newObject = {} -- Описание свойств\n        newObject.name = name\n        setmetatable(newObject, {__index = self})\n        newObject:setMT(self.name)\n        return newObject\n    end\n\n    function vars.classes.Class:printField(field)\n        vars.print = self[field]\n    end\n\n    function vars.classes.Class:setMT(metatable)\n        self.metatable = metatable\n    end\n\n   -- Обновление присвоения метатаблиц с помощью цикла с итератором\n    \n    for key, value in pairs(vars.objects) do\n        setmetatable(vars.objects[key], {__index = vars.classes[value.metatable]})\n    end\nend",
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Исполняемая часть.",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Вызов библиотеки.",
+        "run": [
+          43
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Создание экземпляра класса и обращение к его методу print",
+        "lua_do": "function lua_do()\n    vars.objects.exsemplar = vars.classes.Class:new(\"Первый экземпляр\")\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    vars.objects.exsemplar:printField(\"name\")\nend",
+        "text": "Печать.",
+        "id": 44
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "—--\n",
+    "answers": [
+      {
+        "id": 45,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do() \n vars.firstFighter = \"Винни Пух\" \n vars.secondFighter = \"Сова\" \n vars.thirdFighter = \"слонопотам\" \n  \n vars.text = [[ Кругом шелестели литься вековых сосен. Вдруг ]]..vars.firstFighter..[[ заметил неподалёку какое-то движение. Какая-то тень мелькнула между деревьями - и уже через секунду исчезла. \n  А ещё через секунду он почувствовал сильный толчок в спину. Это была ]]..vars.secondFighter..[[. \n  И снова какое-то движение. Оба бойца извлекли из ножен меч и встали в боевую позицию. \n  Из-за дерева появилась приземистая мощная фигура. Судя по экипировке это был ]]..vars.thirdFighter..[[.]] \n  \nend"
+      },
+      {
+        "id": 45,
+        "text": "    ",
+        "var_show": [
+          "text"
+        ],
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Обновляемая библиотека классов.",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Обновлено",
+        "comment": true
+      },
+      {
+        "id": 46,
+        "text": "Обновляемая библиотека классов. Вызывается каждый раз, когда значение контрольной переменной dataNotLost не определено.",
+        "calculate": true,
+        "lua_do": "function lua_do()\n    vars.console = \"\"\n    vars.classes.Weapon = {}\n    vars.classes.Weapon.name = \"Weapon\"\n    vars.classes.Weapon.damageMin = 1\n    vars.classes.Weapon.damageMax = 1\n    vars.classes.Weapon.damageArea = 0\n    vars.classes.Weapon.damageType = true\n    vars.classes.Weapon.maxDistance = 0\n    vars.classes.Weapon.condition = 100\n    vars.classes.Weapon.resource = 10000\n    vars.classes.Weapon.failureFactor = 0\n    vars.classes.Weapon.attPerRound = 1\n    vars.classes.Weapon.sndAttModifier = 1\n    vars.classes.Weapon.magazine = 1\n    vars.classes.Weapon.charge = 1\n    vars.classes.Weapon.ascend = 1.359140922\n    vars.classes.Weapon.cost = 0\n    vars.classes.Weapon.repairCost = 0\n    function vars.classes.Weapon:saveMetatable(metatable)\n        self.metatable = metatable\n    end\n    function vars.classes.Weapon:getName()\n        return self.name\n    end\n    function vars.classes.Weapon:getDamageMin()\n        return self.damageMin\n    end\n    function vars.classes.Weapon:getDamageMax()\n        return self.damageMax\n    end\n    function vars.classes.Weapon:getDamageArea()\n        return self.damageArea\n    end\n    function vars.classes.Weapon:getDamageType()\n        return self.damageType\n    end\n    function vars.classes.Weapon:getMaxDistance()\n        return self.maxDistance\n    end\n    function vars.classes.Weapon:setCondition(condition)\n        self.condition = condition < 0 and 0 or (condition > 100 and 100 or condition)\n    end\n    function vars.classes.Weapon:getCondition()\n        return self.condition\n    end\n    function vars.classes.Weapon:setAttPerRound(attPerRound)\n        self.attPerRound = attPerRound < 1 and 1 or (attPerRound > self.magazine and self.magazine or attPerRound)\n    end\n    function vars.classes.Weapon:getAttPerRound()\n        return self.attPerRound\n    end\n    function vars.classes.Weapon:getSndAttModifier()\n        return self.sndAttModifier\n    end\n    function vars.classes.Weapon:getMagazine()\n        return self.magazine\n    end\n    function vars.classes.Weapon:setCharge(charge, ammunition)\n        ammunition = ammunition - (ammunition < self.magazine and ammunition or self.magazine)\n        self.charge = ammunition < self.magazine and ammunition or self.magazine\n        return ammunition\n    end\n    function vars.classes.Weapon:getCharge()\n        return self.charge\n    end\n    function vars.classes.Weapon:getCost()\n        return self.cost\n    end\n    function vars.classes.Weapon:repair(costModifier)\n        self.condition = 100\n        return self.repairCost * costModifier\n    end\n    function vars.classes.Weapon:askRepair(costModifier)\n        return self.repairCost * costModifier\n    end\n    function vars.classes.Weapon:damage(owner, target, toHitModifier, toDamageModifier, distance)\n        local shotNumber = 0\n        local hitNumber = 0\n        local missNumber = 0\n        local sumDamage = 0\n        local failure = false\n        local magazineEmpty = false\n        local highDistance = false\n        local alife = true\n        local secondAttackModifier = 1\n        if distance > self.maxDistance then\n            highDistance = true\n            vars.console = vars.console..\"Атака невозможна, так как расстояние до цели превышает максимальную дальность выстрела оружия\"..\";<s>\n\"\n            return shotNumber, hitNumber, missNumber, sumDamage, self.condition, failure, magazineEmpty, highDistance, alife\n        end\n        local attCounter = self.attPerRound\n        local cutPoint = math.exp(1) ^ 2 / 4 / self.ascend\n        local coefficient = (math.exp(1) ^ 2 / 4 / ((self.ascend - cutPoint) / self.maxDistance * distance <plus> cutPoint) - cutPoint) / (self.ascend - cutPoint)\n        for i=1, attCounter do\n            if self.charge < 1 then\n                magazineEmpty = true\n                break\n            elseif self.condition / 100 <plus> self.failureFactor < math.random() then\n                failure = true\n                break\n            else\n                local attNeed = math.floor(((owner:getAttack() - target:getArmourClass() <plus> target.armour:getArmourClassModifier() <plus> (200 - (owner:getAttack() - target:getArmourClass() <plus> target.armour:getArmourClassModifier())) * (1 - coefficient) - toHitModifier)) * (1 / secondAttackModifier))\n                if attNeed < 2 then\n                    attNeed = 2\n                elseif attNeed > 200 then\n                    attNeed = 200\n                end\n                vars.console = vars.console..attNeed..\";<s>\n\"\n                if attNeed <= math.random(1, 200) then\n                    local dmg = math.random(self.damageMin, self.damageMax) <plus> toDamageModifier\n                    if dmg < 1 then dmg = 1 end\n                    alife = target:hitPointsModify(dmg * -1)\n                    hitNumber = hitNumber <plus> 1\n                    sumDamage = sumDamage <plus> dmg\n                else\n                    missNumber = missNumber <plus> 1\n                end\n                shotNumber = shotNumber <plus> 1\n                if self.condition > 0 then self.condition = self.condition - 100 / self.resource end\n                self.charge = self.charge - 1\n            end\n            if secondAttackModifier == 1 then secondAttackModifier = self.sndAttModifier end\n        end\n        return shotNumber, hitNumber, missNumber, sumDamage, self.condition, failure, magazineEmpty, highDistance, alife\n    end\n    function vars.classes.Weapon:new(params)\n        local newInstance = {}\n        if params.name then\n            for key, value in pairs(params) do\n                if vars.classes.Weapon[key] then\n                    newInstance[key] = value\n                else\n                    vars.console = vars.console..\"Аргумент \"..key..\" не предусмотрен в объекте класса Weapon.<s>\n\"\n                end\n            end\n            setmetatable(newInstance, {__index = self})\n            newInstance:saveMetatable(self.name)\n            return newInstance\n        else\n            vars.console = vars.console..\"Конструктору класса Weapon не передано значение поля name. Объект не создан.<s>\n\"\n            return nil\n        end\n    end\n    vars.classes.Armour = {}\n    vars.classes.Armour.name = \"Armour\"\n    vars.classes.Armour.armourClassModifier = 0\n    vars.classes.Armour.burnProtection = 0\n    vars.classes.Armour.chemicalBurnProtection = 0\n    vars.classes.Armour.shockProtection = 0\n    vars.classes.Armour.radiationProtection = 0\n    vars.classes.Armour.telepaticProtection = 0\n    vars.classes.Armour.explosionProtection = 0\n    vars.classes.Armour.condition = 100\n    vars.classes.Armour.resource = 1000\n    vars.classes.Armour.cost = 0\n    vars.classes.Armour.repairCost = 1000\n    function vars.classes.Armour:saveMetatable(metatable)\n        self.metatable = metatable\n    end\n    function vars.classes.Armour:getName()\n        return self.name\n    end\n    function vars.classes.Armour:getArmourClassModifier()\n        return self.armourClassModifier\n    end\n    function vars.classes.Armour:repair(costModifier)\n        self.condition = 100\n        return self.repairCost * costModifier\n    end\n    function vars.classes.Armour:askRepair(costModifier)\n        return self.repairCost * costModifier\n    end\n    function vars.classes.Armour:new(params)\n        local newInstance = {}\n        if params.name then\n            for key, value in pairs(params) do\n                if vars.classes.Armour[key] then\n                    newInstance[key] = value\n                else\n                    vars.console = vars.console..\"Аргумент \"..key..\" не предусмотрен в объекте класса Armour.<s>\n\"\n                end\n            end\n            setmetatable(newInstance, {__index = self})\n            newInstance:saveMetatable(self.name)\n            return newInstance\n        else\n            vars.console = vars.console..\"Конструктору класса Armour не передано значение поля name. Объект не создан.<s>\n\"\n            return nil\n        end\n    end\n    vars.classes.Fighter = {}\n    vars.classes.Fighter.name = \"Fighter\"\n    vars.classes.Fighter.level = 1\n    vars.classes.Fighter.experience = 0\n    vars.classes.Fighter.expTable = {0, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 750000, 1000000, 1250000, 1500000, 1750000, 2000000, 2250000, 2500000, 2750000, 3000000}\n    vars.classes.Fighter.armourClass = 100\n    vars.classes.Fighter.attack = 200\n    vars.classes.Fighter.hitPoints = 10\n    vars.classes.Fighter.hitPointsMax = 10\n    vars.classes.Fighter.weapon = vars.classes.Weapon:new{name = \"defaultWeapon\"}\n    vars.classes.Fighter.armour = vars.classes.Armour:new{name = \"defaultArmour\"}\n    vars.classes.Fighter.stealth = 100\n    vars.classes.Fighter.vision = 200\n    function vars.classes.Fighter:saveMetatable(metatable)\n        self.metatable = metatable\n    end\n    function vars.classes.Fighter:getName()\n        return self.name\n    end\n    function vars.classes.Fighter:changeExperience(experience)\n        self.experience = self.experience <plus> experience\n        local levelUp = false\n        local currentLevel = 0\n        for i, value in ipairs(self.expTable) do\n            currentLevel = self.experience >= value and i or currentLevel\n        end\n        levelUp = currentLevel > self.level and true or false\n        self.level = currentLevel\n        return levelUp\n    end\n    function vars.classes.Fighter:setArmourClass(armourClass)\n        self.armourClass = armourClass\n    end\n    function vars.classes.Fighter:getArmourClass()\n        return self.armourClass\n    end\n    function vars.classes.Fighter:setAttack(attack)\n        self.attack = attack\n    end\n    function vars.classes.Fighter:getAttack()\n        return self.attack\n    end\n    function vars.classes.Fighter:setHitPoints(hitPoints)\n        self.hitPoints = hitPoints\n    end\n    function vars.classes.Fighter:getHitPoints()\n        return self.hitPoints\n    end\n    function vars.classes.Fighter:setWeapon(weapon)\n        self.weapon = weapon\n    end\n    function vars.classes.Fighter:getWeapon()\n        return self.weapon\n    end\n    function vars.classes.Fighter:setArmour(armour)\n        self.armour = armour\n    end\n    function vars.classes.Fighter:getArmour()\n        return self.armour\n    end\n    function vars.classes.Fighter:hitPointsModify(modifier)\n        self.hitPoints = self.hitPoints <= 0 and self.hitPoints or (self.hitPoints <plus> modifier <= self.hitPointsMax and (self.hitPoints <plus> modifier > 0 and self.hitPoints <plus> modifier or 0) or self.hitPointsMax)\n        return self.hitPoints > 0\n    end\n    function vars.classes.Fighter:fight(target, toHitModifier, toDamageModifier, distance)\n        if self.weapon.name == \"defaultWeapon\" then\n            vars.console = vars.console..\"Для атакующего не установлено оружие<s>\n\"\n            return\n        elseif target.armour.name == \"defaultArmour\" then\n            vars.console = vars.console..\"Для атакуемого не установлен доспех<s>\n\"\n            return\n        else\n            return self.weapon:damage(self, target, toHitModifier, toDamageModifier, distance)\n        end\n    end\n    function vars.classes.Fighter:descry(enemy, distance, descryModifier)\n    end\n    function vars.classes.Fighter:new(params)\n        local newInstance = {}\n        if params.name then\n            for key, value in pairs(params) do\n                if vars.classes.Fighter[key] then\n                    newInstance[key] = value\n                else\n                    vars.console = vars.console..\"Аргумент \"..key..\" не предусмотрен в объекте класса Fighter.<s>\n\"\n                end\n            end\n            setmetatable(newInstance, {__index = self})\n            newInstance:saveMetatable(self.name)\n            return newInstance\n        else\n            vars.console = vars.console..\"Конструктору класса fighter не передано значение поля name. Объект не создан.<s>\n\"\n            return nil\n        end\n    end\n    for key, value in pairs(vars.instances) do\n        setmetatable(vars.instances[key], {__index = vars.classes[value.metatable]})\n    end\n    for iKey, iValue in pairs(vars.links) do\n        for jKey, jValue in pairs(iValue) do\n            vars.instances[jKey][iKey] = vars.instances[jValue]\n        end\n    end\n    dataNotLost = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Тестовая страница движка\n<s>r\n",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\n<s>tif not dataNotLost then\n<s>t<s>treturn true\n<s>tend\nend\n",
+        "id": 46,
+        "text": "Обновление библиотеки классов, если переменная dataNotLost имеет значение nil.",
+        "run": [
+          46
+        ],
+        "calculate": false
+      },
+      {
+        "var_show": [
+          "console"
+        ],
+        "comment": true,
+        "id": 47,
+        "calculate": false,
+        "text": "Консоль:\n"
+      },
+      {
+        "id": 47,
+        "text": "Создание экземпляров классов. Этот ответ должен быть нажат первым для запуска боя - иначе вылетит приложение. Также он служит для его перезапуска.",
+        "lua_do": "function lua_do()\n    vars.instances.Andrill = vars.classes.Weapon:new{name = \"Andrill\", maxDistance = 800, attPerRound = 5, charge = 30, sndAttModifier = 0.95, damageMax = 12}\n    vars.instances.BoromirArmour = vars.classes.Armour:new{name = \"BoromirArmour\", armourClassModifier = 3}\n    vars.instances.Aragorn = vars.classes.Fighter:new{name = \"Арагорн, сын Араторна\", armourClass = 30, attack = 110, hitPoints = 74, weapon = vars.instances.Andrill}\n    vars.links.weapon.Aragorn = \"Andrill\"\n    vars.instances.Boromir = vars.classes.Fighter:new{name = \"Боромир, сын Денетора\", armourClass = 30, attack = 110, hitPoints = 74, hitPointsMax = 80; armour = vars.instances.BoromirArmour}\n    vars.links.armour.Boromir = \"BoromirArmour\"\nend"
+      },
+      {
+        "id": 47,
+        "text": "Арагорн атакует Боромира.",
+        "var_show": [
+          "message"
+        ],
+        "lua_do": "function lua_do()\n    vars.shots, vars.popal, vars.promah, vars.uron, vars.resurs, vars.osechka, vars.pusto, vars.daleko = vars.instances.Aragorn:fight(vars.instances.Boromir, 0, 0, 200)\n    if vars.osechka then\n        vars.message = \"Выстрелов - \"..(vars.shots or \"\")..\"; попаданий - \"..(vars.popal or \"\")..\"; промахов - \"..(vars.promah or \"\")..\"; всего урона нанесено - \"..(vars.uron or \"\")..\"; осталось выстрелов до полного отказа - \"..((vars.resurs or 0) / 100 * vars.instances.Andrill.resource or \"\")..\". Оружие заклинило - нужно перезарядить!\"\n    elseif vars.pusto then\n        vars.message = \"Выстрелов - \"..(vars.shots or \"\")..\"; попаданий - \"..(vars.popal or \"\")..\"; промахов - \"..(vars.promah or \"\")..\"; всего урона нанесено - \"..(vars.uron or \"\")..\"; осталось выстрелов до полного отказа - \"..((vars.resurs or 0) / 100 * vars.instances.Andrill.resource or \"\")..\". Магазин пуст - нужно перезарядить!\"\n    elseif vars.daleko then\n        vars.message = \"Выстрелов - \"..(vars.shots or \"\")..\"; попаданий - \"..(vars.popal or \"\")..\"; промахов - \"..(vars.promah or \"\")..\"; всего урона нанесено - \"..(vars.uron or \"\")..\"; осталось выстрелов до полного отказа - \"..((vars.resurs or 0) / 100 * vars.instances.Andrill.resource or \"\")..\". Слишком далеко для выстрела\"\n    else\n        vars.message = \"Выстрелов - \"..(vars.shots or \"\")..\"; попаданий - \"..(vars.popal or \"\")..\"; промахов - \"..(vars.promah or \"\")..\"; всего урона нанесено - \"..(vars.uron or \"\")..\"; осталось выстрелов до полного отказа - \"..((vars.resurs or 0) / 100 * vars.instances.Andrill.resource or \"\")..\".\"\n    end\nend"
+      },
+      {
+        "id": 47,
+        "text": "Починить оружие",
+        "lua_do": "function lua_do()\n    vars.instances.Andrill:repair(1.5)\nend",
+        "var_show": [
+          "print"
+        ]
+      },
+      {
+        "id": 47,
+        "text": "Модификафия хитов Боромира",
+        "lua_do": "function lua_do()\n    vars.instances.Boromir:hitPointsModify(20)\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    levelUp = vars.instances.Aragorn:changeExperience(-5000)\n    vars.print = levelUp and \"Получен новый уровень!\" or \"Уровень остался прежним.\"\nend",
+        "text": "Повысить уровень.",
+        "id": 47
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Тестирование обрашения к функции.",
+    "answers": [
+      {
+        "id": 48,
+        "text": "Библиотека классов и обновитель метатаблиц",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\n    -- Базовый класс Class. Объявление класса и присвоение имени\n<s>tvars.classes.Class = {}\n<s>tvars.classes.Class.name = \"Class\"\n<s>t\n<s>t-- Метод записи в переменную экземпляра класса \"metatable\" имени метатаблицы для последующего обновления.\n<s>tfunction vars.classes.Class:saveMetatable(metatable)\n<s>t<s>tself.metatable = metatable\n<s>tend\n<s>t\n<s>t-- Инкапсулирующие методы работы с полями\n<s>tfunction vars.classes.Class:getName()\n<s>t<s>treturn self.name\n<s>tend\n\n<s>t\n<s>t-- Конструктор экземпляров\n<s>tfunction vars.classes.Class:new(name)\n<s>t<s>tlocal newInstance = {}\n<s>t<s>tsetmetatable(newInstance, {__index = self})\n<s>t<s>tnewInstance:saveMetatable(self.name)\n<s>t<s>tnewInstance.name = name<s>t\n<s>t<s>treturn newInstance\n<s>tend\n<s>t\n<s>t-- Конец базового класса Class.\n<s>t\n<s>t-- Модуль обновления метатаблиц. Запускается перед первым использованием программы и каждый раз при перезаходе в приложение.\n<s>t\n<s>tfor key, value in pairs(vars.instances) do\n<s>t<s>tsetmetatable(vars.instances[key], {__index = vars.classes[value.metatable]})<s>t\n<s>tend\n-- Конец библиотеки классов\n\n-- Установка контрольной переменной, использующейся для запуска обновления библиотеки классов и метатаблиц\n\n    dataIsNotLost = 1\n\nend\n"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Демонстрационная страница.",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\n    if not dataIsNotLost then\n        return true\n    end\nend",
+        "id": 48,
+        "calculate": false,
+        "run": [
+          48
+        ],
+        "text": "Вызов библиотеки обновления классов и метатаблиц, если значение переменной dataIsNotLost равно nill"
+      },
+      {
+        "id": 49,
+        "text": "Создание экземпляра",
+        "lua_do": "function lua_do()\n<s>tvars.instances.firstClass = vars.classes.Class:new(\"Дивный новый экземпляр класса\")\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n<s>tvars.print = vars.instances.firstClass:getName()\nend\n",
+        "text": "Запрос имени экземпляра класса и сохранение его в переменную print.",
+        "id": 49
+      },
+      {
+        "lua_do": "function lua_do()\n    vars.instances.firstClass = nil\nend",
+        "text": "Удаление созданного объекта",
+        "id": 49
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Вычисление приращения падения вероятности успешной атаки по гиперболе. Показатель крутизны гиперболы определяет динамику изменений.",
+    "answers": [
+      {
+        "id": 50,
+        "text": "Вычислитель",
+        "lua_do": "function lua_do()\n    vars.distance = 200 -- Дистанция до цели в метрах\n    vars.maxDistance = 800 -- Максимальная дистанция оружия\n    vars.gipAscent = 1.35914092 -- Показатель крутизны гиперболы. Больший показатель приводит к большей крутизне\n    vars.point = math.exp(1)^2/4/vars.gipAscent -- Крайняя точка избранного числа крутизны\n    vars.coef = (math.exp(1)^2/4/((vars.gipAscent - vars.point)/vars.maxDistance*vars.distance<plus>vars.point)-vars.point)/(vars.gipAscent-vars.point) -- Кэффициент, определяющий приращение вероятности\nend"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "",
+    "answers": [
+      {
+        "id": 51,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nglobal_vars.print = 3\nend"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "",
+    "answers": [
+      {
+        "id": 52,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n\nvars.mt = {height = 180,  weight = 85, strength = 13}\nfunction vars.mt:getFieldValue(fieldName)\n    return self[fieldName]\nend\n\nfunction vars.mt:new(params)\n    local fighter = {}\n    for key, value in pairs(params) do\n        fighter[key] = value\n    end\n    setmetatable(fighter, {__index = vars.mt})\n    return fighter\nend\n\nvars.table1 =  vars.mt:new{strength = 5, weight = 20, height = 135}\nvars.print = vars.table1:getFieldValue(\"weight\")\nend"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "",
+    "answers": [
+      {
+        "id": 53,
+        "text": "Новый ответ. введите текст",
+        "var_show": [
+          "print"
+        ],
+        "lua_do": "function lua_do()\nvars.print = math.random(1, 10)\nend"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "",
+    "answers": [
+      {
+        "id": 54,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    vars.class[#vars.class <plus> 1] = \"jdndn\"\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nvars.class = {}\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 54
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "Ввод цифр:",
+    "answers": [
+      {
+        "id": 55,
+        "text": "Подготовка учетных инструментов",
+        "lua_do": "function lua_do()\n    if not vars.inputTableLength then\n        vars.keys = {}\n        vars.inputTableLength = 0\n        vars.tableCounter = 0\n        for key, value in pairs(vars.inputTable) do\n            vars.inputTableLength = vars.inputTableLength <plus> 1\n            vars.keys[vars.inputTableLength] = key\n            vars.inputTable[key] = \"\"\n        end\n    end\nend",
+        "calculate": true
+      },
+      {
+        "id": 55,
+        "text": "Подготовка сообщения",
+        "lua_do": "function lua_do()\n    vars.message = vars.keys[vars.tableCounter <plus> 1]..\". Текущее значение - \"..vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]\nend",
+        "calculate": true
+      },
+      {
+        "id": 55,
+        "text": "Вводим значение параметра",
+        "comment": true,
+        "var_show": [
+          "message"
+        ]
+      },
+      {
+        "instant": true,
+        "id": 55,
+        "text": "1",
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"1\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 55,
+        "instant": true,
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"2\"\nend",
+        "text": "2"
+      },
+      {
+        "instant": true,
+        "id": 55,
+        "text": "3",
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"3\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 55,
+        "instant": true,
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"4\"\nend",
+        "text": "4"
+      },
+      {
+        "instant": true,
+        "id": 55,
+        "text": "5",
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"5\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 55,
+        "instant": true,
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"6\"\nend",
+        "text": "6"
+      },
+      {
+        "instant": true,
+        "id": 55,
+        "text": "7",
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"7\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 55,
+        "instant": true,
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"8\"\nend",
+        "text": "8"
+      },
+      {
+        "instant": true,
+        "id": 55,
+        "text": "9",
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"9\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 55,
+        "instant": true,
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = vars.inputTable[vars.keys[vars.tableCounter <plus> 1]]..\"0\"\nend",
+        "text": "0"
+      },
+      {
+        "instant": true,
+        "id": 55,
+        "text": "Очистить",
+        "lua_do": "function lua_do()\n    vars.inputTable[vars.keys[vars.tableCounter <plus> 1]] = \"\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\n    if vars.tableCounter <plus> 1 < vars.inputTableLength then return true end\nend",
+        "id": 55,
+        "instant": true,
+        "lua_do": "function lua_do()\n    vars.tableCounter = vars.tableCounter <plus> 1\nend",
+        "text": "Следующий параметр"
+      },
+      {
+        "lua_if": "function lua_if()\n    if vars.tableCounter > 0 then return true end\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\n    vars.tableCounter = vars.tableCounter - 1\nend",
+        "text": "Предыдущий параметр",
+        "id": 55,
+        "left_answer": true
+      },
+      {
+        "forget": 55,
+        "right_answer": true,
+        "lua_if": "function lua_if()\n    if vars.tableCounter <plus> 1 >= vars.inputTableLength then return true end\nend",
+        "backstepCount": 1,
+        "id": 55,
+        "text": "Завершить ввод",
+        "isBack": true,
+        "lua_do": "function lua_do()\n \nend"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "С этой страницы производится запуск страницы заполнения, а потом отображаются его результаты.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На первую страницу."
+      },
+      {
+        "id": 55,
+        "text": "Ввести значения.",
+        "lua_do": "function lua_do()\n<s>tvars.inputTableLength = nil\nend"
+      },
+      {
+        "lua_if": "function lua_if()\n<s>tif vars.inputTableLength then return true end\nend",
+        "lua_do": "function lua_do()\n<s>tvars.message = \"\"\n<s>tfor key, value in pairs(vars.inputTable) do\n<s>t<s>tvars.message = vars.message..key..\" - \"..value..\";<s>\n\"\n<s>tend\nend",
+        "text": "Конкатенация значений таблицы",
+        "id": 56,
+        "calculate": true
+      },
+      {
+        "id": 56,
+        "text": "Результат:\n",
+        "comment": true,
+        "var_show": [
+          "message"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 58,
+    "text": "",
+    "answers": [
+      {
+        "id": 57,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "",
+    "answers": [
+      {
+        "id": 59,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    function cycle(start, stat)\n        local i = start\n        while stat ~= 0 do\n             stat = coroutine.yeild(i)\n             if stat = -1 then i = start end\n        end\n    end\n\n    function main(massive)\n        local subs, pauses = {}, {}\n        for i = 1, #massive do\n            subs[i] = coroutine.create(cycle)\n            lauses[i] = coroutine.create(cycle)\n        end\n        \n    end\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    function f(param)\n        param = param * 2\n        return param\n    end\n    vars.print = f(6)\n    vars.print1 = param\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 59
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "Преход для полноты тестирования.",
+    "answers": [
+      {
+        "id": 47,
+        "text": "Далее..."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "Переход для полноты тестирования.",
+    "answers": [
+      {
+        "id": 60,
+        "text": "Далее..."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "Страница боя.",
+    "answers": [
+      {
+        "var_not": [
+          "done",
+          1
+        ],
+        "id": 62,
+        "calculate": true,
+        "text": "Создание участников боя.",
+        "lua_do": "function lua_do()\n<s>tvars.fighters = {fighter1 = {name = \"Ваш герой\", id = \"fighter1\", isPC = true, hp = 60, minDamage = 1, maxDamage = 10, speed = 8, i = 0}, fighter2 = {name = \"Арагорн\", id = \"fighter2\", isPC = false, hp = 52, minDamage = 2, maxDamage = 6, speed = 4, i = 0}, fighter3 = {name = \"Леголас\", id = \"fighter3\", isPC = false, hp = 72, minDamage = 1, maxDamage = 7, speed = 10, i = 0}, fighter4 = {name = \"Первый орк\", id = \"fighter4\", isPC = false, hp = 35, minDamage = 3, maxDamage = 6, speed = 5, i = 0}, fighter5 = {name = \"Второй орк\", id = \"fighter5\", isPC = false, hp = 83, minDamage = 1, maxDamage = 4, speed = 9, i = 0}, fighter6 = {name = \"Третий орк\", id = \"fighter6\", isPC = false, hp = 28, minDamage = 4, maxDamage = 9, speed = 7, i = 0}}\n<s>tvars.fighters.fighter1.enemies = {vars.fighters.fighter4.id, vars.fighters.fighter5.id, vars.fighters.fighter6.id}\n<s>tvars.fighters.fighter2.enemies = {vars.fighters.fighter4.id, vars.fighters.fighter5.id, vars.fighters.fighter6.id}\n<s>tvars.fighters.fighter3.enemies = {vars.fighters.fighter4.id, vars.fighters.fighter5.id, vars.fighters.fighter6.id}\n<s>tvars.fighters.fighter4.enemies = {vars.fighters.fighter1.id, vars.fighters.fighter2.id, vars.fighters.fighter3.id}\n<s>tvars.fighters.fighter5.enemies = {vars.fighters.fighter1.id, vars.fighters.fighter2.id, vars.fighters.fighter3.id}\n<s>tvars.fighters.fighter6.enemies = {vars.fighters.fighter1.id, vars.fighters.fighter2.id, vars.fighters.fighter3.id}\n<s>tvars.endCombat = 0\n<s>tvars.print = \"\"\nend"
+      },
+      {
+        "var_equal": [
+          "canAttack",
+          1
+        ],
+        "id": 62,
+        "instant": true,
+        "text": "Вы можете атаковать противника!",
+        "var_set": [
+          "done",
+          1,
+          "attackPC",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "print"
+        ],
+        "comment": true,
+        "var_equal": [
+          "endCombat",
+          0
+        ],
+        "id": 62,
+        "text": "Идёт бой:",
+        "update": [
+          1
+        ],
+        "lua_do": "function lua_do()\n<s>tfor iKey, iValue in pairs(vars.fighters) do\n<s>t<s>tlocal enemy = \"\"\n<s>t<s>tfor j, jValue in ipairs(iValue.enemies) do\n<s>t<s>t<s>tif vars.fighters[jValue].hp <= 0 and j == #iValue.enemies then\n<s>t<s>t<s>t<s>tvars.endCombat = 1\n<s>t<s>t<s>t<s>treturn\n<s>t<s>t<s>telseif vars.fighters[jValue].hp > 0 then\n<s>t<s>t<s>t<s>tenemy = vars.fighters[jValue]\n<s>t<s>t<s>t<s>tbreak\n<s>t<s>t<s>tend\n<s>t<s>tend\n<s>t<s>tif iValue.i >= iValue.speed and iValue.isPC then vars.canAttack = 1 end\n<s>t<s>tif iValue.hp <= 0 and iValue.isPC then\n<s>t<s>t<s>tcanAttack = 0\n<s>t<s>telseif iValue.hp <= 0 and not iValue.isPC then\n<s>t<s>telseif iValue.i >= iValue.speed and iValue.isPC and vars.attackPC == 1 then\n<s>t<s>t<s>tlocal damage = math.random(iValue.minDamage, iValue.maxDamage)\n<s>t<s>t<s>tenemy.hp = enemy.hp - damage\n<s>t<s>t<s>tiValue.i = 0\n<s>t<s>t<s>tvars.attackPC = 0\n<s>t<s>t<s>tvars.canAttack = 0\n<s>t<s>t<s>tvars.print = vars.print..\"Вы атакуете противника \"..enemy.name..\" и наносите ему \"..damage..\" единиц урона.<s>\n\"\n<s>t<s>t<s>tif enemy.hp <= 0 then vars.print = vars.print..enemy.name..\" повержен!<s>\n\" end\n<s>t<s>telseif iValue.i >= iValue.speed and not iValue.isPC then\n<s>t<s>t<s>tlocal damage = math.random(iValue.minDamage, iValue.maxDamage)\n<s>t<s>t<s>tenemy.hp = enemy.hp - damage\n<s>t<s>t<s>tiValue.i = 0\n<s>t<s>t<s>tvars.print = vars.print..iValue.name..\" атакует противника \"..enemy.name..\" и наносит ему \"..damage..\" единиц урона.<s>\n\"\n<s>t<s>t<s>tif enemy.hp <= 0 then vars.print = vars.print..enemy.name..\" повержен!<s>\n\" end\n<s>t<s>telse\n<s>t<s>t<s>tiValue.i = iValue.i <plus> 1\n<s>t<s>tend\n<s>tend\nend"
+      },
+      {
+        "var_show": [
+          "print"
+        ],
+        "comment": true,
+        "var_equal": [
+          "endCombat",
+          1
+        ],
+        "id": 62,
+        "text": "Бой завершён:"
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу.",
+        "var_equal": [
+          "endCombat",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "",
+    "answers": [
+      {
+        "id": 63,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    vars.g = {}\n    for key, value in pairs(_G.application) do\n        vars.g[key] = \"\"\n    end\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    callll = 1\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 63
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 65,
+    "text": "",
+    "answers": []
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор seem03 написал еще 96015 слов в квесте \"RF Online (Rising Force):\nЭхо простых / возвращение Геродиан\"."
+      },
+      {
+        "targetbookid": "258013",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"RF Online (Rising Force):\nЭхо простых / возвращение Геродиан\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Shchepanoff написал еще 29368 слов в квесте \"ВТОРЖЕНИЕ\"."
+      },
+      {
+        "targetbookid": "1111",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"ВТОРЖЕНИЕ\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор dmitry написал еще 18662 слов в квесте \"пандемия\"."
+      },
+      {
+        "targetbookid": "287371",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"пандемия\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор elChem написал еще 18616 слов в квесте \"Прогност\"."
+      },
+      {
+        "targetbookid": "282000",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Прогност\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 17854 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      }
+    ]
+  }
+]

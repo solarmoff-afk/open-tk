@@ -1,0 +1,545 @@
+[
+  {
+    "id": 1,
+    "text": "Данная игра является ремейком знаменитой игры Buckshot Roulette за авторством Mike Klubnika! Пожалуйста, поддержите оригинал, спасибо!",
+    "answers": [
+      {
+        "id": 2,
+        "text": "В меню",
+        "var_set": [
+          "global reloadFunctions",
+          2,
+          "Eternity",
+          0,
+          "global realEternity",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Очнувшись, Вы обнаруживаете себя в своего рода  общественной туалетной комнате. За дверью слышится музыка.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Выбить дверь"
+      },
+      {
+        "var_not": [
+          "Eternity",
+          1
+        ],
+        "lua_if": "function lua_if()\nreturn g.completedClassic == 1\nend",
+        "id": 2,
+        "text": "Выпить таблетки на подоконнике.\n(Это повлияет на Вашу способность к вождению)",
+        "var_set": [
+          "Eternity",
+          1
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    --Конвертирует число в булевое значение (0 - false, всё остальное - true)\n    function ToBool(num)\n        return num ~= 0 and true or false\n    end\n\n    --Конвертирует булевое значение в число (false - 0, true - 1)\n    function ToNum(val)\n        return val and 1 or 0\n    end\n\n    --Случайным образом заряжает пушку; есть возможность указать количество тех или иных патронов\n    function LoadGun(real, blank)\n        math.randomseed(os.time())\n        real = real or math.random(1, 4)\n        blank = blank or math.random(1, 4)\n        Dealer.knownBlanks = blank\n        Dealer.knownShots = real\n        local bullets = {blank, real}\n        Gun = {}\n        while bullets[1]<plus>bullets[2] > 0 do\n            local is_live = math.random(0, 1)\n            if bullets[1<plus>is_live] <= 0 then\n                is_live = ToNum(not ToBool(is_live))\n            end\n            bullets[1<plus>is_live] = bullets[1<plus>is_live] - 1\n            Gun[#Gun<plus>1] = is_live\n        end\n    end\n\n    --Передаст ход, только когда пушка заряжена, иначе ход гарантированно вернётся игроку\n    function PassTurn(srcCheck)\n        if ToBool(srcCheck.usedHandcuffs) then\n            srcCheck.usedHandcuffs = 0\n        else\n            if #Gun > 0 or srcCheck == Dealer then\n                PlayerTurn = ToNum(not ToBool(PlayerTurn))\n            end\n        end\n    end\n\n    function ReloadGun()\n        usedShotType = Dealer.playerUsedInvertor == 1 and ToNum(not ToBool(Gun[1])) or Gun[1]\n        Dealer.knownBlanks = usedShotType == 0 and Dealer.knownBlanks - 1 or Dealer.knownBlanks\n        Dealer.knownShots = usedShotType == 1 and Dealer.knownShots - 1 or Dealer.knownShots\n        table.remove(Gun, 1)\n        table.remove(Dealer.predictions, 1)\n        table.insert(Dealer.predictions, -1)\n        Dealer.currentShot = Dealer.predictions[1] ~= -1 and Dealer.predictions[1] or nil\n    end\n\n    function ShootOpponent()\n        local src = {}\n        local targ = {}\n        if ToBool(PlayerTurn) then\n            targ = Dealer\n            src = Player\n        else\n            targ = Player\n            src = Dealer\n        end\n\n        if Gun[1] == 1 then\n            targ.hp = math.max(0, targ.hp - src.shootPower)\n        end\n        src.shootPower = 1\n        ReloadGun()\n        PassTurn(src)\n    end\n\n    function ShootSelf()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if Gun[1] == 1 then\n            src.hp = math.max(0, src.hp - src.shootPower)\n            src.shootPower = 1\n            PassTurn(src)\n        end\n        ReloadGun()\n        if #Gun == 0 then\n            PlayerTurn = 1\n        end\n    end\n\n    function UseKnife()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы использовали нож, обрезав дуло ружья на 1 раунд.\"\n        else\n            src = Dealer\n            text = text .. \"Дилер использовал нож, обрезав дуло ружья на 1 раунд.<s>\n\"\n        end\n\n        if src.items.knife > 0 then\n            src.shootPower = 2\n            src.items.knife = src.items.knife - 1\n        end\n    end\n\n    function UseHandcuffs()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы сковали дилера наручниками. Он пропустит 1 ход.\"\n        else\n            src = Dealer\n            text = text .. \"Дилер сковал Вас наручниками. Вы пропустите 1 ход.<s>\n\"\n        end\n\n        if src.items.handcuffs > 0 then\n            src.usedHandcuffs = 1\n            src.items.handcuffs = src.items.handcuffs - 1\n        end\n    end\n\n    function UseCigarette()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if src.items.cigarette > 0 then\n            src.hp = math.min(src.maxHp, src.hp <plus> 1)\n            src.items.cigarette = src.items.cigarette - 1\n            if src == Dealer then\n                text = text .. \"Дилер, закурив, восстановил 1 ед. здоровья.<s>\nТекущее здоровье дилера: \" .. src.hp .. \"/\" .. src.maxHp .. \"<s>\n\"\n            else\n                text = \"Вы, закурив, восстановили 1 ед. здоровья.<s>\nВаше текущее здоровье: \" .. src.hp .. \"/\" .. src.maxHp\n            end\n        end\n    end\n\n   function UseBeer()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы, выпив пиво, скинули патрон в ружье. \"\n        else\n            src = Dealer\n            text = text .. \"Дилер, выпив пиво, скинул патрон в ружье. \"\n        end\n\n        if src.items.beer > 0 then\n            ReloadGun()\n            text = text .. \"Выпавший патрон - \"\n            text = usedShotType == 1 and text .. \"боевой<s>\n\" or text .. \"холостой<s>\n\"\n            src.items.beer = src.items.beer - 1\n        end\n    end\n\n    function UseMagnifier()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n            text = text .. 'Дилер, разбив увеличительное стекло, посмотрел в ружьё - \"Интересно...\" - сказал он.<s>\n'\n        end\n\n        if src.items.magnifier > 0 then\n            local bulletType = Gun[1]\n            if src == Dealer then\n                src.currentShot = bulletType\n            else\n                usedShotType = bulletType\n                text = \"Вы, разбив увеличительное стекло, посмотрели в ружьё. Патрон в ружье - \"\n                if usedShotType == 1 then\n                    text = text .. \"боевой.\"\n                else\n                    text = text .. \"холостой.\"\n                end\n            end\n            src.items.magnifier = src.items.magnifier - 1\n        end\n    end\n\n    function UsePills()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if src.items.pills > 0 then\n            math.randomseed(os.time())\n            local healed = false\n            if math.random() < 0.5 then\n                src.hp = math.min(src.maxHp, src.hp <plus> 2)\n                healed = true\n            else\n                src.hp = math.max(0, src.hp - 1)\n            end\n\n            if src == Dealer then\n                text = text .. \"Дилер, выпив таблетки, \"\n                if healed then\n                    text = text .. \"восстановил 2 ед. здоровья!\"\n                else\n                    text = text .. \"подавился и потерял 1 ед. здоровья!\"\n                end\n                text = text .. \"<s>\nТекущее здоровье дилера: \" .. Dealer.hp .. \"/\" .. Dealer.maxHp .. \"<s>\n\"\n            else\n                text = \"Вы выпили таблетки и \"\n                if healed then\n                    text = text .. \"восстановили 2 ед. здоровья!\"\n                else\n                    text = text .. \"подавились, потеряв 1 ед. здоровья!\"\n                end\n                text = text .. \"<s>\nВаше текущее здоровье: \" .. Player.hp .. \"/\" .. Player.maxHp\n            end\n\n            src.items.pills = src.items.pills - 1\n        end\n    end\n\n    function UseInvertor()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы, повернув рычажок на инверторе, поменяли патрон в ружье на противоположный.\"\n            Dealer.playerUsedInvertor = 1\n        else\n            src = Dealer\n            text = text .. \"Дилер, сломав вдребезги инвертор, поменял патрон в ружье на противоположный.<s>\n\"\n            src.usedInvertor = 1\n        end\n\n        if src.items.invertor > 0 then\n            Gun[1] = ToNum(not ToBool(Gun[1]))\n            src.items.invertor = src.items.invertor - 1\n        end\n    end\n\n    function UseCellphone()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if src.items.cellphone > 0 then\n            math.randomseed(os.time())\n            local shotChoice = math.random(2, #Gun)\n            local shotType = #Gun > 1 and Gun[shotChoice] or nil\n            if src == Player then\n                text = \"Вы, открыв складной мобильный телефон, стали внимательно слушать.\"\n                if shotType then\n                    text = text .. \"<s>\nИз телефона послышался голос: \"\n                    local shotOrderName = \"\"\n                    if shotChoice == 2 then\n                        shotOrderName = \"второй\"\n                    elseif shotChoice == 3 then\n                        shotOrderName = \"третий\"\n                    elseif shotChoice == 4 then\n                        shotOrderName = \"четвёртый\"\n                    elseif shotChoice == 5 then\n                        shotOrderName = \"пятый\"\n                    elseif shotChoice == 6 then\n                        shotOrderName = \"шестой\"\n                    elseif shotChoice == 7 then\n                        shotOrderName = \"седьмой\"\n                    elseif shotChoice == 8 then\n                        shotOrderName = \"восьмой\"\n                    end\n                    text = text .. shotOrderName .. \" патрон... \"\n                    text = shotType == 0 and text .. \"холостой...\" or text .. \"боевой...\"\n                else\n                    text = text .. \"<s>\nИз телефона слышны только помехи.\"\n                end\n                text = text .. \"<s>\nТелефон разорвало неведомой силой.\"\n            else\n                text = text .. \"Дилер, открыв складной мобильный телефон, позвонил, а затем выбросил телефон в пустоту.<s>\n\"\n                src.predictions[shotChoice] = shotType\n                Dealer.currentShot = #Gun == 2 and Gun[1] or nil\n            end\n            src.items.cellphone = src.items.cellphone - 1\n        end\n    end\n\n    function SetRoundHP(value)\n        math.randomseed(os.time())\n        value = value or math.random(2, 6)\n        Player.maxHp = value\n        Player.hp = value\n        Dealer.maxHp = value\n        Dealer.hp = value\n    end\n\n    function CountItems()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        local sum = 0\n        for _, v in pairs(src.items) do\n            sum = sum <plus> v\n        end\n        return sum\n    end\n\n    function LoadGunCutscene()\n        cutscene = 1\n        local function sceneFinish()\n            text = \"Дилер засунул все патроны в ружьё и положил его по цетру стола, позволяя Вам сделать первый ход.\"\n            cutscene = 0\n            if g.userInQuest == 1 then\n                g.lastUnfinishedFunction = {}\n                showPage{id=g.current_id, transition=\"instant\"}\n            end\n        end\n        local function dealerTalk()\n            cutscene = 1\n            local waits = 0\n            if Eternity ~= 1 then\n                if Subround >= 1 and Subround <= 2 then\n                    waits = 4000\n                    if Subround == 1 then\n                        text = '\"Я вставляю патроны в случайном порядке\" - сказал дилер.'\n                    elseif Subround == 2 then\n                        text = '\"Они попадают в ружьё в скрытой последовательности\" – сказал дилер.'\n                    end\n                end\n                g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n                if g.userInQuest == 1 then\n                    cutscene = 1\n                    showPage{id=g.current_id, transition=\"instant\"}\n                    cutscene = 1\n                end\n            end\n            g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n            if g.userInQuest == 1 then\n                timer.performWithDelay(waits, sceneFinish)\n            end\n        end\n        local function gunLoad()\n            cutscene = 1\n            local waits = 4000\n            LoadGun()\n            text = \"Затем счётчик показал количество патронов:<s>\n\" .. Dealer.knownShots .. \" – настоящих<s>\n\" .. Dealer.knownBlanks .. \" – пустых.\"\n            g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n            if g.userInQuest == 1 then\n                cutscene = 1\n                showPage{id=g.current_id, transition=\"instant\"}\n                cutscene = 1\n                timer.performWithDelay(waits, dealerTalk)\n            end\n        end\n        local function hpUpdate()\n            cutscene = 1\n            local waits = 0\n            if Dealer.hp == 0 then  \n                local hp = nil\n                Eternity = Eternity or 0\n                if Eternity ~= 1 then\n                    if Round == 1 then\n                        hp = 3\n                    elseif Round == 2 then\n                        hp = 4\n                    else\n                        hp = 6\n                    end\n                end\n                SetRoundHP(hp)\n                text = \"Затем счётчик показал Ваше здоровье и здоровье дилера: \" .. Player.hp .. \" и \" .. Dealer.hp .. \".\"\n                if g.userInQuest == 1 then\n                    cutscene = 1\n                    showPage{id=g.current_id, transition=\"instant\"}\n                    cutscene = 1\n                end\n                waits = 4000\n            end\n            g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n            if g.userInQuest == 1 then\n                timer.performWithDelay(waits, gunLoad)\n            end\n        end\n        local waits = 0\n        if PrevRound ~= Round then\n            text = \"Настольный счётчик обновил текущий раунд на \" .. Round .. \".\"\n            waits = 4000\n            PrevRound = Round\n        end\n        cutscene = 1\n        g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n        if g.userInQuest == 1 then\n            timer.performWithDelay(waits, hpUpdate)\n        end\n    end\n\n    function DealerChoice()\n        local function countShotsOfType(shot)\n            local amount = 0\n            for _, v in ipairs(Dealer.predictions) do\n                amount = v == shot and amount <plus> 1 or amount\n            end\n            return amount\n        end\n        local function countChance(shot)\n            return shot == 1 and (Dealer.predictions[1] == 1 and 100 or Dealer.knownShots / (#Gun - countShotsOfType(1))) or (Dealer.predictions[1] == 0 and 100 or Dealer.knownBlanks / (#Gun - countShotsOfType(0)))\n        end\n        local shootChance = countChance(1)\n        local blankChance = countChance(0)\n        --print(\"<s>\nИзначально дилер думает, что шанс на выстрел - \" .. shootChance*100 .. \"%, а на промах - \" .. blankChance*100 ..\"%<s>\n\")\n        text = \"\"\n        PlayerTurn = PlayerTurn == 1 and 0 or PlayerTurn\n        Dealer.currentShot = #Gun == 1 and Gun[1] or Dealer.currentShot\n        if CountItems() > 0 then\n            while Dealer.hp < Dealer.maxHp and Dealer.items.cigarette > 0 do\n                UseCigarette()\n            end\n            if Dealer.items.pills > 0 and Dealer.hp > 1 and Dealer.maxHp > Dealer.hp then\n                UsePills()\n            end\n            if Dealer.items.cellphone > 0 and #Gun >= 2 and Dealer.knownShots*Dealer.knownBlanks > 0 then\n                UseCellphone()\n            end\n            while Dealer.items.beer > 0 and blankChance > 0 and shootChance > 0 and blankChance ~= 100 and blankChance > shootChance do\n                UseBeer()\n                shootChance = countChance(1)\n                blankChance = countChance(0)\n            end\n            Dealer.currentShot = ((blankChance * shootChance == 0 or shootChance <plus> blankChance >= 100) or #Gun == 1) and Gun[1] or Dealer.currentShot\n            if #Gun > 1 and Dealer.items.handcuffs > 0 and Dealer.knownShots > 0 then\n                UseHandcuffs()\n            end\n           if Dealer.items.magnifier > 0 and not Dealer.currentShot and shootChance <= blankChance and shootChance > 0 then\n                UseMagnifier()\n                shootChance = Dealer.currentShot\n                blankChance = ToNum(not ToBool(Dealer.currentShot))\n            end\n            if Dealer.items.invertor > 0 and blankChance > shootChance then\n                UseInvertor()\n                shootChance = countChance(1)\n                blankChance = countChance(0)\n            end\n            if Dealer.items.knife > 0 and shootChance >= blankChance then\n                UseKnife()\n            end\n        end\n        if Dealer.usedInvertor == 1 then\n            Dealer.knownBlanks = countShotsOfType(0)\n            Dealer.knownShots = countShotsOfType(1)\n            shootChance = 1\n            blankChance = 0\n            Dealer.currentShot = 1\n            Dealer.usedInvertor = 0\n        end\n        shootChance = Dealer.currentShot and Dealer.currentShot or shootChance\n        blankChance = Dealer.currentShot and ToNum(not ToBool(Dealer.currentShot)) or blankChance\n        if shootChance == blankChance then\n            if math.random() < 0.5 or Dealer.shootPower > 1 then shootChance = shootChance <plus> 1 else blankChance = blankChance <plus> 1 end\n        end\n        if shootChance > blankChance then\n            text = text .. \"Дилер взял ружьё, прицелился на Вас...\"\n            ShootOpponent()\n            if usedShotType == 1 then\n                text = text .. \"и выстрелил!<s>\nВаше текущее здоровье: \" .. Player.hp .. \"/\" .. Player.maxHp\n            else\n                text = text .. \"и не сумел выстрелить!\"\n            end\n        else\n            text = text .. \"Дилер приставил ружьё себе к лицу...\"\n            ShootSelf()\n            if usedShotType == 1 then\n                text = text .. \"и выстрелил!<s>\nЕго текущее здоровье: \" .. Dealer.hp .. \"/\" .. Dealer.maxHp\n            else\n                text = text .. \"и не сумел выстрелить!\"\n            end\n        end\n        if PlayerTurn == 0 then\n            text = text .. \"<s>\nХод остаётся за дилером.\"\n        else\n            text = text .. \"<s>\nХод передаётся Вам.\"\n        end\n        --cutscene = 0\n    end\n\n    function ProvideItems(targ, amount)\n        local function items_sum()\n            local sum = 0\n            for _, v in pairs(targ.items) do\n                sum = sum <plus> v\n            end\n            return sum\n        end\n        local function limit(num, min, max)\n            return num > max and max or num < min and min or num\n        end\n        local currentSpace = 8-items_sum()\n        if targ == Dealer then\n            math.randomseed(math.ceil(os.time()/1.1))\n        else\n            math.randomseed(os.time())\n        end\n        amount = amount or math.random(1, 5)\n        if Eternity ~= 1 then\n            if Round == 2 then\n                amount = 2\n            elseif Round == 3 then\n                amount = 4\n            end\n        end\n        amount = limit(amount, 0, currentSpace)\n        if targ == Player then\n            text = amount > 0 and \"Вы получили \" or \"Вы не получили \"\n            text = (amount >= 5 and text .. amount .. \" предметов\") or ((amount >= 2 and amount <= 4) and text .. amount .. \" предмета\") or (amount == 1 and text .. amount .. \" предмет\") or (amount == 0 and text .. \"предметов\")\n            text = currentSpace >= 2 and text .. \" для \" .. currentSpace .. \" доступных мест\" or currentSpace == 1 and text .. \" для \" .. currentSpace .. \" доступного места\" or text .. \", поскольку все места на столе уже заняты.\"\n            text = currentSpace > 0 and text .. \":<s>\n\" or text\n        end\n        for i=1, amount do\n            local randNum = Eternity ~= 1 and math.random(1, 5) or math.random(1, 8)\n            if randNum == 1 then\n                targ.items.knife = targ.items.knife <plus> 1\n                text = targ == Player and text .. \"Нож<s>\n\" or text\n            elseif randNum == 2 then\n                targ.items.handcuffs = targ.items.handcuffs <plus> 1\n                text = targ == Player and text .. \"Наручники<s>\n\" or text\n            elseif randNum == 3 then\n                targ.items.cigarette = targ.items.cigarette <plus> 1\n                text = targ == Player and text .. \"Сигарету<s>\n\" or text\n            elseif randNum == 4 then\n                targ.items.beer = targ.items.beer <plus> 1\n                text = targ == Player and text .. \"Банку пива<s>\n\" or text\n            elseif randNum == 5 then\n                targ.items.magnifier = targ.items.magnifier <plus> 1\n                text = targ == Player and text .. \"Увеличительное стекло<s>\n\" or text\n            elseif randNum == 6 then\n                targ.items.pills = targ.items.pills <plus> 1\n                text = targ == Player and text .. \"Таблетки<s>\n\" or text\n            elseif randNum == 7 then\n                targ.items.invertor = targ.items.invertor <plus> 1\n                text = targ == Player and text .. \"Инвертор<s>\n\" or text\n            elseif randNum == 8 then\n                targ.items.cellphone = targ.items.cellphone <plus> 1\n                text = targ == Player and text .. \"Складной мобильный телефон<s>\n\" or text\n            end\n        end\n    end\n\nend",
+        "calculate": false,
+        "text": " function lua_do()\n    --Конвертирует число в булевое значение (0 - false, всё остальное - true)\n    function ToBool(num)\n        return num ~= 0 and true or false\n    end\n\n    --Конвертирует булевое значение в число (false - 0, true - 1)\n    function ToNum(val)\n        return val and 1 or 0\n    end\n\n    --Случайным образом заряжает пушку; есть возможность указать количество тех или иных патронов\n    function LoadGun(real, blank)\n        math.randomseed(os.time())\n        real = real or math.random(1, 4)\n        blank = blank or math.random(1, 4)\n        Dealer.knownBlanks = blank\n        Dealer.knownShots = real\n        local bullets = {blank, real}\n        Gun = {}\n        while bullets[1]<plus>bullets[2] > 0 do\n            local is_live = math.random(0, 1)\n            if bullets[1<plus>is_live] <= 0 then\n                is_live = ToNum(not ToBool(is_live))\n            end\n            bullets[1<plus>is_live] = bullets[1<plus>is_live] - 1\n            Gun[#Gun<plus>1] = is_live\n        end\n    end\n\n    --Передаст ход, только когда пушка заряжена, иначе ход гарантированно вернётся игроку\n    function PassTurn(srcCheck)\n        if ToBool(srcCheck.usedHandcuffs) then\n            srcCheck.usedHandcuffs = 0\n        else\n            if #Gun > 0 or srcCheck == Dealer then\n                PlayerTurn = ToNum(not ToBool(PlayerTurn))\n            end\n        end\n    end\n\n    function ReloadGun()\n        usedShotType = Dealer.playerUsedInvertor == 1 and ToNum(not ToBool(Gun[1])) or Gun[1]\n        Dealer.knownBlanks = usedShotType == 0 and Dealer.knownBlanks - 1 or Dealer.knownBlanks\n        Dealer.knownShots = usedShotType == 1 and Dealer.knownShots - 1 or Dealer.knownShots\n        table.remove(Gun, 1)\n        table.remove(Dealer.predictions, 1)\n        table.insert(Dealer.predictions, -1)\n        Dealer.currentShot = Dealer.predictions[1] ~= -1 and Dealer.predictions[1] or nil\n    end\n\n    function ShootOpponent()\n        local src = {}\n        local targ = {}\n        if ToBool(PlayerTurn) then\n            targ = Dealer\n            src = Player\n        else\n            targ = Player\n            src = Dealer\n        end\n\n        if Gun[1] == 1 then\n            targ.hp = math.max(0, targ.hp - src.shootPower)\n        end\n        src.shootPower = 1\n        ReloadGun()\n        PassTurn(src)\n    end\n\n    function ShootSelf()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if Gun[1] == 1 then\n            src.hp = math.max(0, src.hp - src.shootPower)\n            src.shootPower = 1\n            PassTurn(src)\n        end\n        ReloadGun()\n        if #Gun == 0 then\n            PlayerTurn = 1\n        end\n    end\n\n    function UseKnife()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы использовали нож, обрезав дуло ружья на 1 раунд.\"\n        else\n            src = Dealer\n            text = text .. \"Дилер использовал нож, обрезав дуло ружья на 1 раунд.<s>\n\"\n        end\n\n        if src.items.knife > 0 then\n            src.shootPower = 2\n            src.items.knife = src.items.knife - 1\n        end\n    end\n\n    function UseHandcuffs()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы сковали дилера наручниками. Он пропустит 1 ход.\"\n        else\n            src = Dealer\n            text = text .. \"Дилер сковал Вас наручниками. Вы пропустите 1 ход.<s>\n\"\n        end\n\n        if src.items.handcuffs > 0 then\n            src.usedHandcuffs = 1\n            src.items.handcuffs = src.items.handcuffs - 1\n        end\n    end\n\n    function UseCigarette()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if src.items.cigarette > 0 then\n            src.hp = math.min(src.maxHp, src.hp <plus> 1)\n            src.items.cigarette = src.items.cigarette - 1\n            if src == Dealer then\n                text = text .. \"Дилер, закурив, восстановил 1 ед. здоровья.<s>\nТекущее здоровье дилера: \" .. src.hp .. \"/\" .. src.maxHp .. \"<s>\n\"\n            else\n                text = \"Вы, закурив, восстановили 1 ед. здоровья.<s>\nВаше текущее здоровье: \" .. src.hp .. \"/\" .. src.maxHp\n            end\n        end\n    end\n\n   function UseBeer()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы, выпив пиво, скинули патрон в ружье. \"\n        else\n            src = Dealer\n            text = text .. \"Дилер, выпив пиво, скинул патрон в ружье. \"\n        end\n\n        if src.items.beer > 0 then\n            ReloadGun()\n            text = text .. \"Выпавший патрон - \"\n            text = usedShotType == 1 and text .. \"боевой<s>\n\" or text .. \"холостой<s>\n\"\n            src.items.beer = src.items.beer - 1\n        end\n    end\n\n    function UseMagnifier()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n            text = text .. 'Дилер, разбив увеличительное стекло, посмотрел в ружьё - \"Интересно...\" - сказал он.<s>\n'\n        end\n\n        if src.items.magnifier > 0 then\n            local bulletType = Gun[1]\n            if src == Dealer then\n                src.currentShot = bulletType\n            else\n                usedShotType = bulletType\n                text = \"Вы, разбив увеличительное стекло, посмотрели в ружьё. Патрон в ружье - \"\n                if usedShotType == 1 then\n                    text = text .. \"боевой.\"\n                else\n                    text = text .. \"холостой.\"\n                end\n            end\n            src.items.magnifier = src.items.magnifier - 1\n        end\n    end\n\n    function UsePills()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if src.items.pills > 0 then\n            math.randomseed(os.time())\n            local healed = false\n            if math.random() < 0.5 then\n                src.hp = math.min(src.maxHp, src.hp <plus> 2)\n                healed = true\n            else\n                src.hp = math.max(0, src.hp - 1)\n            end\n\n            if src == Dealer then\n                text = text .. \"Дилер, выпив таблетки, \"\n                if healed then\n                    text = text .. \"восстановил 2 ед. здоровья!\"\n                else\n                    text = text .. \"подавился и потерял 1 ед. здоровья!\"\n                end\n                text = text .. \"<s>\nТекущее здоровье дилера: \" .. Dealer.hp .. \"/\" .. Dealer.maxHp .. \"<s>\n\"\n            else\n                text = \"Вы выпили таблетки и \"\n                if healed then\n                    text = text .. \"восстановили 2 ед. здоровья!\"\n                else\n                    text = text .. \"подавились, потеряв 1 ед. здоровья!\"\n                end\n                text = text .. \"<s>\nВаше текущее здоровье: \" .. Player.hp .. \"/\" .. Player.maxHp\n            end\n\n            src.items.pills = src.items.pills - 1\n        end\n    end\n\n    function UseInvertor()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n            text = \"Вы, повернув рычажок на инверторе, поменяли патрон в ружье на противоположный.\"\n            Dealer.playerUsedInvertor = 1\n        else\n            src = Dealer\n            text = text .. \"Дилер, сломав вдребезги инвертор, поменял патрон в ружье на противоположный.<s>\n\"\n            src.usedInvertor = 1\n        end\n\n        if src.items.invertor > 0 then\n            Gun[1] = ToNum(not ToBool(Gun[1]))\n            src.items.invertor = src.items.invertor - 1\n        end\n    end\n\n    function UseCellphone()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        if src.items.cellphone > 0 then\n            math.randomseed(os.time())\n            local shotChoice = math.random(2, #Gun)\n            local shotType = #Gun > 1 and Gun[shotChoice] or nil\n            if src == Player then\n                text = \"Вы, открыв складной мобильный телефон, стали внимательно слушать.\"\n                if shotType then\n                    text = text .. \"<s>\nИз телефона послышался голос: \"\n                    local shotOrderName = \"\"\n                    if shotChoice == 2 then\n                        shotOrderName = \"второй\"\n                    elseif shotChoice == 3 then\n                        shotOrderName = \"третий\"\n                    elseif shotChoice == 4 then\n                        shotOrderName = \"четвёртый\"\n                    elseif shotChoice == 5 then\n                        shotOrderName = \"пятый\"\n                    elseif shotChoice == 6 then\n                        shotOrderName = \"шестой\"\n                    elseif shotChoice == 7 then\n                        shotOrderName = \"седьмой\"\n                    elseif shotChoice == 8 then\n                        shotOrderName = \"восьмой\"\n                    end\n                    text = text .. shotOrderName .. \" патрон... \"\n                    text = shotType == 0 and text .. \"холостой...\" or text .. \"боевой...\"\n                else\n                    text = text .. \"<s>\nИз телефона слышны только помехи.\"\n                end\n                text = text .. \"<s>\nТелефон разорвало неведомой силой.\"\n            else\n                text = text .. \"Дилер, открыв складной мобильный телефон, позвонил, а затем выбросил телефон в пустоту.<s>\n\"\n                src.predictions[shotChoice] = shotType\n                Dealer.currentShot = #Gun == 2 and Gun[1] or nil\n            end\n            src.items.cellphone = src.items.cellphone - 1\n        end\n    end\n\n    function SetRoundHP(value)\n        math.randomseed(os.time())\n        value = value or math.random(2, 6)\n        Player.maxHp = value\n        Player.hp = value\n        Dealer.maxHp = value\n        Dealer.hp = value\n    end\n\n    function CountItems()\n        local src = {}\n        if ToBool(PlayerTurn) then\n            src = Player\n        else\n            src = Dealer\n        end\n\n        local sum = 0\n        for _, v in pairs(src.items) do\n            sum = sum <plus> v\n        end\n        return sum\n    end\n\n    function LoadGunCutscene()\n        cutscene = 1\n        local function sceneFinish()\n            text = \"Дилер засунул все патроны в ружьё и положил его по цетру стола, позволяя Вам сделать первый ход.\"\n            cutscene = 0\n            if g.userInQuest == 1 then\n                showPage{id=g.current_id, transition=\"instant\"}\n            end\n        end\n        local function dealerTalk()\n            local waits = 0\n            if Eternity ~= 1 then\n                if Subround >= 1 and Subround <= 2 then\n                    waits = 4000\n                    if Subround == 1 then\n                        text = '\"Я вставляю патроны в случайном порядке\" - сказал дилер.'\n                    elseif Subround == 2 then\n                        text = '\"Они попадают в ружьё в скрытой последовательности\" – сказал дилер.'\n                    end\n                end\n                if g.userInQuest == 1 then\n                    g.lastUnfinishedFunction = {}\n                    showPage{id=g.current_id, transition=\"instant\"}\n                end\n            end\n            g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n            if g.userInQuest == 1 then\n                timer.performWithDelay(waits, sceneFinish)\n            end\n        end\n        local function gunLoad()\n            local waits = 4000\n            LoadGun()\n            text = \"Затем счётчик показал количество патронов:<s>\n\" .. Dealer.knownShots .. \" – настоящих<s>\n\" .. Dealer.knownBlanks .. \" – пустых.\"\n            g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n            if g.userInQuest == 1 then\n                showPage{id=g.current_id, transition=\"instant\"}\n                timer.performWithDelay(waits, dealerTalk)\n            end\n        end\n        local function hpUpdate()\n            local waits = 0\n            if Dealer.hp == 0 then  \n                local hp = nil\n                Eternity = Eternity or 0\n                if Eternity ~= 1 then\n                    if Round == 1 then\n                        hp = 3\n                    elseif Round == 2 then\n                        hp = 4\n                    else\n                        hp = 6\n                    end\n                end\n                SetRoundHP(hp)\n                text = \"Затем счётчик показал Ваше здоровье и здоровье дилера: \" .. Player.hp .. \" и \" .. Dealer.hp .. \".\"\n                if g.userInQuest == 1 then\n                    showPage{id=g.current_id, transition=\"instant\"}\n                end\n                waits = 4000\n            end\n            g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n            if g.userInQuest == 1 then\n                timer.performWithDelay(waits, gunLoad)\n            end\n        end\n        local waits = 0\n        if PrevRound ~= Round then\n            text = \"Настольный счётчик обновил текущий раунд на \" .. Round .. \".\"\n            waits = 4000\n            PrevRound = Round\n        end\n        g.lastUnfinishedFunction = {checkPoint=os.time(), delay=waits/1000}\n        if g.userInQuest == 1 then\n            timer.performWithDelay(waits, hpUpdate)\n        end\n    end\n\n    function DealerChoice()\n        local function countShotsOfType(shot)\n            local amount = 0\n            for _, v in ipairs(Dealer.predictions) do\n                amount = v == shot and amount <plus> 1 or amount\n            end\n            return amount\n        end\n        local function countChance(shot)\n            return shot == 1 and (Dealer.predictions[1] == 1 and 100 or Dealer.knownShots / (#Gun - countShotsOfType(1))) or (Dealer.predictions[1] == 0 and 100 or Dealer.knownBlanks / (#Gun - countShotsOfType(0)))\n        end\n        local shootChance = countChance(1)\n        local blankChance = countChance(0)\n        --print(\"<s>\nИзначально дилер думает, что шанс на выстрел - \" .. shootChance*100 .. \"%, а на промах - \" .. blankChance*100 ..\"%<s>\n\")\n        text = \"\"\n        PlayerTurn = PlayerTurn == 1 and 0 or PlayerTurn\n        Dealer.currentShot = #Gun == 1 and Gun[1] or Dealer.currentShot\n        if CountItems() > 0 then\n            while Dealer.hp < Dealer.maxHp and Dealer.items.cigarette > 0 do\n                UseCigarette()\n            end\n            if Dealer.items.pills > 0 and Dealer.hp > 1 and Dealer.maxHp > Dealer.hp then\n                UsePills()\n            end\n            if Dealer.items.cellphone > 0 and #Gun >= 2 and Dealer.knownShots*Dealer.knownBlanks > 0 then\n                UseCellphone()\n            end\n            while Dealer.items.beer > 0 and blankChance > 0 and shootChance > 0 and blankChance ~= 100 and blankChance > shootChance do\n                UseBeer()\n                shootChance = countChance(1)\n                blankChance = countChance(0)\n            end\n            Dealer.currentShot = ((blankChance * shootChance == 0 or shootChance <plus> blankChance >= 100) or #Gun == 1) and Gun[1] or Dealer.currentShot\n            if #Gun > 1 and Dealer.items.handcuffs > 0 and Dealer.knownShots > 0 then\n                UseHandcuffs()\n            end\n           if Dealer.items.magnifier > 0 and not Dealer.currentShot and shootChance <= blankChance and shootChance > 0 then\n                UseMagnifier()\n                shootChance = Dealer.currentShot\n                blankChance = ToNum(not ToBool(Dealer.currentShot))\n            end\n            if Dealer.items.invertor > 0 and blankChance > shootChance then\n                UseInvertor()\n                shootChance = countChance(1)\n                blankChance = countChance(0)\n            end\n            if Dealer.items.knife > 0 and shootChance >= blankChance then\n                UseKnife()\n            end\n        end\n        if Dealer.usedInvertor == 1 then\n            Dealer.knownBlanks = countShotsOfType(0)\n            Dealer.knownShots = countShotsOfType(1)\n            shootChance = 1\n            blankChance = 0\n            Dealer.currentShot = 1\n            Dealer.usedInvertor = 0\n        end\n        shootChance = Dealer.currentShot or shootChance\n        blankChance = ToNum(not ToBool(Dealer.currentShot)) or blankChance\n        if shootChance == blankChance then\n            if math.random() < 0.5 or Dealer.shootPower > 1 then shootChance = shootChance <plus> 1 else blankChance = blankChance <plus> 1 end\n        end\n        if shootChance > blankChance then\n            text = text .. \"Дилер взял ружьё, прицелился на Вас...\"\n            ShootOpponent()\n            if usedShotType == 1 then\n                text = text .. \"и выстрелил!<s>\nВаше текущее здоровье: \" .. Player.hp .. \"/\" .. Player.maxHp\n            else\n                text = text .. \"и не сумел выстрелить!\"\n            end\n        else\n            text = text .. \"Дилер приставил ружьё себе к лицу...\"\n            ShootSelf()\n            if usedShotType == 1 then\n                text = text .. \"и выстрелил!<s>\nЕго текущее здоровье: \" .. Dealer.hp .. \"/\" .. Dealer.maxHp\n            else\n                text = text .. \"и не сумел выстрелить!\"\n            end\n        end\n        if PlayerTurn == 0 then\n            text = text .. \"<s>\nХод остаётся за дилером.\"\n        else\n            text = text .. \"<s>\nХод передаётся Вам.\"\n        end\n        cutscene = 0\n    end\n\n    function ProvideItems(targ, amount)\n        local function items_sum()\n            local sum = 0\n            for _, v in pairs(targ.items) do\n                sum = sum <plus> v\n            end\n            return sum\n        end\n        local function limit(num, min, max)\n            return num > max and max or num < min and min or num\n        end\n        local currentSpace = 8-items_sum()\n        if targ == Dealer then\n            math.randomseed(math.ceil(os.time()/1.1))\n        else\n            math.randomseed(os.time())\n        end\n        amount = amount or math.random(1, 5)\n        if Eternity ~= 1 then\n            if Round == 2 then\n                amount = 2\n            elseif Round == 3 then\n                amount = 4\n            end\n        end\n        amount = limit(amount, 0, currentSpace)\n        if targ == Player then\n            text = amount > 0 and \"Вы получили \" or \"Вы не получили \"\n            text = (amount >= 5 and text .. amount .. \" предметов\") or ((amount >= 2 and amount <= 4) and text .. amount .. \" предмета\") or (amount == 1 and text .. amount .. \" предмет\") or (amount == 0 and text .. \"предметов\")\n            text = currentSpace >= 2 and text .. \" для \" .. currentSpace .. \" доступных мест\" or currentSpace == 1 and text .. \" для \" .. currentSpace .. \" доступного места\" or text .. \", поскольку все места на столе уже заняты.\"\n            text = currentSpace > 0 and text .. \":<s>\n\" or text\n        end\n        for i=1, amount do\n            local randNum = Eternity ~= 1 and math.random(1, 5) or math.random(1, 8)\n            if randNum == 1 then\n                targ.items.knife = targ.items.knife <plus> 1\n                text = targ == Player and text .. \"Нож<s>\n\" or text\n            elseif randNum == 2 then\n                targ.items.handcuffs = targ.items.handcuffs <plus> 1\n                text = targ == Player and text .. \"Наручники<s>\n\" or text\n            elseif randNum == 3 then\n                targ.items.cigarette = targ.items.cigarette <plus> 1\n                text = targ == Player and text .. \"Сигарету<s>\n\" or text\n            elseif randNum == 4 then\n                targ.items.beer = targ.items.beer <plus> 1\n                text = targ == Player and text .. \"Банку пива<s>\n\" or text\n            elseif randNum == 5 then\n                targ.items.magnifier = targ.items.magnifier <plus> 1\n                text = targ == Player and text .. \"Увеличительное стекло<s>\n\" or text\n            elseif randNum == 6 then\n                targ.items.pills = targ.items.pills <plus> 1\n                text = targ == Player and text .. \"Таблетки<s>\n\" or text\n            elseif randNum == 7 then\n                targ.items.invertor = targ.items.invertor <plus> 1\n                text = targ == Player and text .. \"Инвертор<s>\n\" or text\n            elseif randNum == 8 then\n                targ.items.cellphone = targ.items.cellphone <plus> 1\n                text = targ == Player and text .. \"Складной мобильный телефон<s>\n\" or text\n            end\n        end\n    end\n\nend",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Выбив дверь, Вы попадаете на железный мостик, ведущий к двери соседнего здания. Музыка доносится откуда-то далеко снизу. Вы пытались что-нибудь разглядеть там, но всё как в тёмном тумане.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Выбить дверь соседнего здания",
+        "lua_do": "function lua_do()\n    Gun = {1, 0, 1, 0}\n    PlayerTurn = 1\n\n    Player = {\n        hp = 0,\n        maxHp = 0,\n        shootPower = 1,\n        usedHandcuffs = 0,\n        money = 0,\n        items = {\n            knife = 0,\n            handcuffs = 0,\n            cigarette = 0,\n            beer = 0,\n            magnifier = 0,\n            pills = 0,\n            invertor = 0,\n            cellphone = 0\n        }\n    }\n    Dealer = {\n    hp = 0,\n    maxHp = 3,\n    shootPower = 1,\n    usedHandcuffs = 0,\n    currentShot = nil,\n    items = {\n        knife = 0,\n        handcuffs = 0,\n        cigarette = 0,\n        beer = 0,\n        magnifier = 0,\n        pills = 0,\n        invertor = 0,\n        cellphone = 0\n    },\n    knownShots = 0,\n    knownBlanks = 0,\n    usedInvertor = 0,\n    playerUsedInvertor = 0,\n    predictions = {-1, -1, -1, -1, -1, -1, -1, -1}\n}\nend",
+        "var_set": [
+          "global realEternity",
+          "Eternity"
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn Eternity ~= 1 and \"<s>\nРядом с соседним здании на мостике стоит мужчина. Он всматривается в тьму, время от времени затягивая сигарету. Вы пытались привлечь его внимание, но ему будто безразлично.\" or \"\"\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Выбив дверь здания и пройдя внутрь затемнённого помещения, Вы обнаруживаете посередине крупный зелёный стол, на котором точно белым мелом начерчена окружность, а в её центре лежит грозное ружьё. На правой стороне стола установлен цифровой прибор, напоминающий счётчик.\nПо бокам комнаты расположены колонки и прочая аппаратура неизвестного предназначения. Сама комната освещается направленными в сторону стола лампами, установленными на противоположной от Вас стороне стола.\nВдруг из темноты на противоположной стороне стола появляется существо неизвестного вида. Оно похоже на летающий зубастый колобок с парящими руками без конечностей и пустыми тёмными глазами. \"Пожалуйста, подпишите отказ от претензий в случае Вашей гибели\" – обратилось к Вам существо и положило подле ружья лист бумаги.\nВзяв лист бумаги в руки, Вы распознаёте в нём договор. Текст договора написан мелким почерком, который невозможно прочитать. Справа снизу документа виднеется поле для ввода своего имени.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Подписать договор",
+        "lua_do": "function lua_do()\n    LoadGunCutscene()\nend",
+        "var_set": [
+          "Round",
+          1,
+          "Subround",
+          1,
+          "PrevRound",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "В комнате заморгал свет.\n",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Начать делать выбор",
+        "lua_if": "function lua_if()\nreturn cutscene == 0\nend",
+        "var_equal": [
+          "cutscene",
+          0
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\n    local timePoint = rawget(g.lastUnfinishedFunction, \"checkPoint\") or 0\n    local delay = rawget(g.lastUnfinishedFunction, \"delay\") or 0\nreturn os.time() - timePoint > delay<plus>5\nend",
+        "var_equal": [
+          "cutscene",
+          1
+        ],
+        "lua_do": "function lua_do()\n    Dealer.hp = 0\n    Dealer.maxHp = 0\n    Player.hp = 0\n    Player.maxHp = 0\n    Eternity = g.realEternity\n    LoadGunCutscene()\nend",
+        "text": "(Если страница не обновляется долгое время, нажать сюда для починки)",
+        "id": 5
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Ружьё грозно лежит по центру стола. Ход сейчас находится у Вас. Что же Вы предпримете?",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Выстрелить в дилера",
+        "lua_if": "function lua_if()\nreturn #Gun > 0\nend",
+        "lua_do": "function lua_do()\n    text = \"Вы прицеливаетесь в дилера и готовитесь нажать на курок...\"\n    cutscene = 1\n    ShootOpponent()\n    if (Dealer.playerUsedInvertor == 1 and usedShotType == 0) or (usedShotType == 1 and Dealer.playerUsedInvertor == 0) then\n        text = text .. \"и выстреливаете! Вы успешно попали!<s>\nЗдоровье дилера: \" .. Dealer.hp .. '/' .. Dealer.maxHp\n    else\n        text = text .. \"и слышите глухой щелчок! Патрон пустой!\"\n    end\n    Dealer.playerUsedInvertor = 0\n    cutscene = 0\nend"
+      },
+      {
+        "id": 8,
+        "text": "Выстрелить в себя\n(При пустом пропускает ход противника)",
+        "lua_if": "function lua_if()\nreturn #Gun > 0\nend",
+        "lua_do": "function lua_do()\n    text = \"Вы приставили ружьё к своему лицу и готовитесь нажать на курок...\"\n    cutscene = 1\n    ShootSelf()\n    if (Dealer.playerUsedInvertor == 1 and usedShotType == 0) or (usedShotType == 1 and Dealer.playerUsedInvertor == 0) then\n        text = text .. \"и выстреливаете! Вы попали в себя!<s>\nВаше здоровье: \" .. Player.hp .. '/' .. Player.maxHp\n    else\n        text = text .. \"и слышите глухой щелчок! Пронесло!\"\n    end\n    Dealer.playerUsedInvertor = 0\n    cutscene = 0\nend"
+      },
+      {
+        "id": 10,
+        "text": "Использовать предмет",
+        "lua_if": "function lua_if()\nreturn CountItems() * #Gun > 0\nend"
+      },
+      {
+        "id": 16,
+        "text": "Осмотреть стол дилера",
+        "lua_if": "function lua_if()\n    local sum = 0\n    for _, v in pairs(Dealer.items) do\n        sum = sum <plus> v\n    end\nreturn sum * #Gun > 0\nend",
+        "lua_do": "function lua_do()\n    text = \"\"\n    for k, v in pairs(Dealer.items) do\n        if v > 0 then\n            if k == \"knife\" then\n                text = text .. \"Нож\"\n            elseif k == \"handcuffs\" then\n                text = text .. \"Наручники\"\n            elseif k == \"cigarette\" then\n                text = text .. \"Сигареты\"\n            elseif k == \"beer\" then\n                text = text .. \"Банка пива\"\n            elseif k == \"magnifier\" then\n                text = text .. \"Увеличительное стекло\"\n            elseif k == \"pills\" then\n                text = text .. \"Таблетки\"\n            elseif k == \"invertor\" then\n                text = text .. \"Инвертор\"\n            elseif k == \"cellphone\" then\n                text = text .. \"Складной мобильный телефон\"\n            end\n            text = text .. \" - \" .. v .. \" шт.<s>\n\"\n        end\n    end\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do()\n    PlayerTurn = PlayerTurn == 0 and 1 or PlayerTurn\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    cutscene = 1\n    LoadGunCutscene()\nend",
+        "text": "Перезарядить оружие",
+        "lua_if": "function lua_if()\nreturn #Gun == 0 and (Round == 1 and Eternity == 0)\nend",
+        "id": 5
+      },
+      {
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    ProvideItems(Dealer)\n    ProvideItems(Player)\nend",
+        "text": "Получить предметы",
+        "lua_if": "function lua_if()\nreturn #Gun == 0 and ((Subround > 1 and Eternity == 1) or (Eternity == 0 and Round >= 2))\nend",
+        "id": 13
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"<s>\nВаше здоровье: \" .. Player.hp .. \"/\" .. Player.maxHp .. \"<s>\nЗдоровье дилера: \" .. Dealer.hp .. \"/\" .. Dealer.maxHp\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Взяв ружьё в свои дрожащие руки, ",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Я могу сделать ещё один ход!",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and cutscene == 0 and #Gun > 0 and Player.hp * Dealer.hp > 0\nend"
+      },
+      {
+        "id": 9,
+        "text": "Ход передаётся дилеру",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 0 and cutscene == 0 and #Gun > 0 and Player.hp * Dealer.hp > 0\nend",
+        "lua_do": "function lua_do()\n    cutscene = 1\n    DealerChoice()\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    cutscene = 1\n    LoadGunCutscene()\nend",
+        "text": "Перезарядить оружие",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and cutscene == 0 and #Gun == 0 and Player.hp * Dealer.hp > 0 and (Eternity ~= 1 and Round < 2)\nend",
+        "id": 5
+      },
+      {
+        "lua_do": "function lua_do()\n    PrevRound = Round\n    Round = Round <plus> 1\n    if Round == 4 then\n        if Eternity == 0 then\n            Player.money = 70000\n        else\n            math.randomseed(os.time())\n            Player.money = Player.money == 0 and math.random(5000, 10000) or Player.money * 2\n        end\n    end\nend",
+        "text": "Победа!",
+        "lua_if": "function lua_if()\nreturn Dealer.hp == 0\nend",
+        "id": 12
+      },
+      {
+        "id": 13,
+        "text": "Получить предметы",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and cutscene == 0 and #Gun == 0 and Player.hp * Dealer.hp > 0 and (Eternity == 1 or (Eternity == 0 and Round >= 2))\nend",
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    ProvideItems(Dealer)\n    ProvideItems(Player)\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 7,
+        "calculate": true,
+        "lua_do": "function lua_do()\n    cutscene = cutscene == 1 and 0 or cutscene\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Схватившись, ",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Ход за мной!",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and cutscene == 0 and #Gun > 0 and Player.hp * Dealer.hp > 0\nend"
+      },
+      {
+        "id": 9,
+        "text": "Ход передаётся дилеру",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 0 and cutscene == 0 and #Gun > 0 and Player.hp * Dealer.hp > 0\nend",
+        "lua_do": "function lua_do()\n    cutscene = 1\n    DealerChoice()\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    cutscene = 1\n    LoadGunCutscene()\nend",
+        "text": "Перезарядить оружие",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and cutscene == 0 and #Gun == 0 and Player.hp * Dealer.hp > 0 and (Eternity ~= 1 and Round < 2)\nend",
+        "id": 5
+      },
+      {
+        "id": 13,
+        "text": "Получить предметы",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and cutscene == 0 and #Gun == 0 and Player.hp * Dealer.hp > 0 and (Eternity == 1 or (Eternity == 0 and Round >= 2))\nend",
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    ProvideItems(Dealer)\n    ProvideItems(Player)\nend"
+      },
+      {
+        "id": 15,
+        "text": "Поражение!",
+        "lua_if": "function lua_if()\nreturn Player.hp == 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Обдумав всё, дилер сделал следующее:<s>r\n",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 9,
+        "text": "Валяй",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 0 and Dealer.hp * Player.hp > 0 and #Gun > 0\nend",
+        "lua_do": "function lua_do()\n    DealerChoice()\nend"
+      },
+      {
+        "id": 6,
+        "text": "Надо подумать",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and Dealer.hp * Player.hp > 0 and #Gun > 0\nend"
+      },
+      {
+        "id": 5,
+        "text": "Перезарядить оружие",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and #Gun == 0 and Player.hp * Dealer.hp > 0 and (Eternity ~= 1 and Round < 2)\nend",
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    LoadGunCutscene()\nend"
+      },
+      {
+        "id": 15,
+        "text": "Поражение!",
+        "lua_if": "function lua_if()\nreturn Player.hp == 0\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    Round = Round <plus> 1\n    Subround = Subround <plus> 1\n    if Round == 4 then\n        if Eternity == 0 then\n            Player.money = 70000\n        else\n            math.randomseed(os.time())\n            Player.money = Player.money == 0 and math.random(5000, 10000) or Player.money * 2\n        end\n    end\nend",
+        "text": "Победа!",
+        "lua_if": "function lua_if()\nreturn Dealer.hp == 0\nend",
+        "id": 12
+      },
+      {
+        "id": 13,
+        "text": "Получить предметы",
+        "lua_if": "function lua_if()\nreturn PlayerTurn == 1 and #Gun == 0 and Player.hp * Dealer.hp > 0 and (Eternity == 1 or (Eternity == 0 and Round >= 2))\nend",
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    ProvideItems(Dealer)\n    ProvideItems(Player)\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 9,
+        "calculate": true,
+        "lua_do": "function lua_do()\n    PlayerTurn = #Gun == 0 and 1 or PlayerTurn\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Вы решили осмотреть свою половину стола.",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn Player.items.knife > 0 and Player.shootPower == 1\nend",
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    UseKnife()\nend",
+        "lua_text": "function lua_text()\nreturn \"Нож (\" .. Player.items.knife .. \" шт.) - удваивает урон боевой пули в 2 раза на 1 ход.\"\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Наручники (\" .. Player.items.handcuffs .. \" шт.) - противник пропускает 1 ход.\"\nend",
+        "lua_do": "function lua_do()\n    UseHandcuffs()\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 11,
+        "lua_if": "function lua_if()\nreturn Player.items.handcuffs > 0 and Player.usedHandcuffs ~= 1\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Сигарета (\" .. Player.items.cigarette .. \" шт.) - восстанавливает 1 ед. здоровья.<s>\nP.S. Курение вредит Вашему здоровью\"\nend",
+        "lua_do": "function lua_do()\n    UseCigarette()\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 11,
+        "lua_if": "function lua_if()\nreturn Player.items.cigarette > 0\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Банка пива (\" .. Player.items.beer .. \" шт.) - скидывает текущий патрон в ружье.\"\nend",
+        "lua_do": "function lua_do()\n    UseBeer()\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 11,
+        "lua_if": "function lua_if()\nreturn Player.items.beer > 0\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn Player.items.magnifier > 0\nend",
+        "lua_do": "function lua_do()\n    UseMagnifier()\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Увеличительное стекло (\" .. Player.items.magnifier .. \" шт.) - показывает текущий патрон в ружье.\"\nend",
+        "id": 11
+      },
+      {
+        "lua_if": "function lua_if()\nreturn Player.items.pills > 0\nend",
+        "lua_do": "function lua_do()\n    UsePills()\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Таблетки (\" .. Player.items.pills .. \" шт.) - 50% шанс восстановят 2 ед. здоровья, иначе - уберут 1 ед. здоровья.\"\nend",
+        "id": 11
+      },
+      {
+        "lua_if": "function lua_if()\nreturn Player.items.invertor > 0\nend",
+        "lua_do": "function lua_do()\n    UseInvertor()\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Инвертор (\" .. Player.items.invertor .. \" шт.) - меняет текущий патрон в ружье на противоположный.\"\nend",
+        "id": 11
+      },
+      {
+        "lua_if": "function lua_if()\nreturn Player.items.cellphone > 0\nend",
+        "lua_do": "function lua_do()\n    UseCellphone()\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Складной мобильный телефон (\" .. Player.items.cellphone .. \" шт.) - заглядывает в будущее ружья.\"\nend",
+        "id": 11
+      },
+      {
+        "id": 6,
+        "text": "К столу"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Вы сделали следующее: ",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "К столу",
+        "lua_if": "function lua_if()\nreturn Player.hp > 0\nend"
+      },
+      {
+        "id": 15,
+        "text": "Поражение!",
+        "lua_if": "function lua_if()\nreturn Player.hp == 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Вы одолели дилера!<s>r\n",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nreturn '\"Давай сделаем игру поинтереснее...\" - сказал дилер.<s>\nВнезапно части на обоих половин стола изменились на прямоугольники. Затем и у Вас и у дилера ближе к краям из-под стола появился открытый ящик. Внутри ящика ничего не видно - сплошная тьма.<s>\n\"Каждую перезарядку оружия на 2 раунде мы берём по 2 случайных предмета из наших ящиков, которыми мы можем воспользоваться впоследствии игры.\" - сказал дилер и начал доставать предметы из своей открытого ящика.'\nend",
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn Round == 2 and Eternity ~= 1\nend",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn '\"С меня довольно!\" - прорычал дилер и разбил аппараты перекачки крови - \"Больше никаких переливаний крови, шоковых терапий! Только ты и я, и наша дуэль насмерть!\"<s>\nИз-под стола появились ящики. \"По 4 предмета каждому.\" - сказал дилер и полез доставать их из своего ящика.'\nend",
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn Round == 3 and Eternity ~= 1\nend",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Дилер улетел в кромешную темноту. Спустя время оттуда стало видно 2 ярко-красных от злобы глаза. Пару секунд спустя глаза исчезли, а вместо них из темноты появилась железная рука и выдвинула Вам на подносе чемодан. Открыв его, Вы обнаружили кучу пачек денег.<s>\nВы забрали чемодан с собой и вышли из помещения...\"\nend\n",
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn Round == 4 and Eternity ~= 1\nend",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Слева от Вас счётчик повысил Ваш денежный приз до \" .. Player.money .. \"$.<s>\nУдвоить его и продолжить играть дальше или уйти с деньгами?\"\nend",
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn Round == 4 and Eternity == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "Удвоить счёт",
+        "lua_if": "function lua_if()\nreturn Round == 4 and Eternity == 1\nend",
+        "lua_do": "function lua_do()\n    Round = 1\n    Subround = Subround <plus> 1\n    cutscene = 1\n    LoadGunCutscene()\nend"
+      },
+      {
+        "id": 12,
+        "text": "Уйти с деньгами",
+        "lua_if": "function lua_if()\nreturn Round == 4 and Eternity == 1\nend",
+        "lua_do": "function lua_do()\n    Eternity = 2\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    if Eternity == 0 then\n        g.completedClassic = 1\n    else\n        g.moneyEarned = Player.money\n        g.moneyRecord = g.moneyRecord or 0\n        g.moneyRecord = math.max(g.moneyRecord, g.moneyEarned)\n    end\nend",
+        "text": "B-)",
+        "lua_if": "function lua_if()\nreturn Round == 4 and Eternity ~= 1\nend",
+        "id": 14
+      },
+      {
+        "id": 13,
+        "text": "Получить предметы",
+        "lua_if": "function lua_if()\nreturn Round < 4\nend",
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    Player.items = {\n        knife = 0,\n        handcuffs = 0,\n        cigarette = 0,\n        beer = 0,\n        magnifier = 0,\n        pills = 0,\n        invertor = 0,\n        cellphone = 0\n    }\n    Dealer.items = table.copy2(Player.items)\n    Dealer.predictions = {-1, -1, -1, -1, -1, -1, -1, -1}\n    ProvideItems(Dealer)\n    ProvideItems(Player)\nend"
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"<s>\nВы прошли \" .. Round-1 .. \"/3 раунд<s>\n\"\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Из своего открытого ящика ",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "Перезарядить ружьё",
+        "lua_do": "function lua_do()\n    cutscene = 1\n    LoadGunCutscene()\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Вы сели в машину и поехали с чемоданом денег и грозным ружьём.<s>r\n",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\n    local resText = Eternity ~= 1 and \"Поздравляем, читатель! Вы получили \" .. Player.money .. \"$!\" or \"Поздравляем, читатель! Вы получили \" .. g.moneyEarned .. \"$!\"\n    resText = Player.money == 70000 and resText .. '<s>\nОткрыт режим \"Всё или ничего\".' or resText\n    resText = (Eternity >= 1 and g.moneyEarned == g.moneyRecord) and resText .. '<s>\nВы установили рекорд: ' .. g.moneyEarned .. \"$!\" or Eternity >= 1 and resText .. \"<s>\nВаш текущий рекорд: \" .. g.moneyRecord .. \"$\" or resText\n    resText = resText .. \"<s>\nКоличество перезарядок: \" .. Subround .. \".\"\nreturn resText\nend",
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "В начало квеста"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Вас окружила тьма...<s>r\n",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn (Eternity ~= 1 and Round < 3) and 'Внезапно Вы чувствуете, как будто кто-то тормошит Вас. Вы открываете глаза и обнаруживаете себя в своего рода врачебной комнате. Перед Вами стоит мужчина, похожий на врача и говорит: \"Вставай, рано тебе ещё умирать. Ночь длинная.\"' or \"Спустя время Вы открываете глаза и видете перед собой дремучий лес, как бы полностью тёмный. Неба и солнца не видно. В округе сплошной белый туман. Вы чувствуете, что Вам нужно идти...<s>\nВы умерли!\"\nend",
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "В начало квеста",
+        "lua_if": "function lua_if()\nreturn (Eternity ~= 1 and Round == 3) or (Eternity == 1)\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n    Subround = Subround <plus> 1\n    Player.items = {knife = 0, handcuffs = 0, cigarette = 0, beer = 0, magnifier = 0, pills = 0, invertor = 0}\n    Dealer.hp = 0\n    Dealer.items = table.copy2(Player.items)\n    cutscene = 1\n    LoadGunCutscene()\nend",
+        "text": "Пойти стреляться ещё раз",
+        "lua_if": "function lua_if()\nreturn Eternity ~= 1 and Round < 3\nend",
+        "id": 5
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Вы решили осмотреть половину стола дилера и увидели у него следующие предметы:<s>r\n",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "К столу"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "",
+    "answers": []
+  }
+]

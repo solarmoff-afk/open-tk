@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "text": "• Здравствуйте!\n\nДобро пожаловать в мир Зомбита!\nВам предстоит преодолеть много препятствий, убийств, знакомств, головоломок и различных сюжетных повоторов, дабы выжить в этом, на вид простом мире! ",
+    "answers": [
+      {
+        "id": 1,
+        "text": "movie back, very fast",
+        "url": "https://i.imgur.com/mT1e2df.jpg"
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://i.imgur.com/nxT3zTC.jpg",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://i.imgur.com/qigRBb6.jpg",
+        "system": true
+      },
+      {
+        "newAnswerImage": [
+          "https://i.imgur.com/eNVy18R.png"
+        ],
+        "middle_answer": true,
+        "text": " ",
+        "id": 3,
+        "lua_do": "function lua_do()\ng.fullscreen_on_first_page = 1\nend"
+      },
+      {
+        "newAnswerImage": [
+          "https://i.imgur.com/qZ6nHjx.png"
+        ],
+        "middle_answer": true,
+        "text": " ",
+        "id": 4,
+        "lua_do": "function lua_do()\ng.fullscreen_on_first_page = 1\nend"
+      },
+      {
+        "newAnswerImage": [
+          "https://i.imgur.com/FdTXet1.png"
+        ],
+        "lua_do": "function lua_do()\ng.fullscreen_on_first_page = 1\nend",
+        "text": " ",
+        "middle_answer": true,
+        "id": 5
+      },
+      {
+        "newAnswerImage": [
+          "https://i.imgur.com/7EWBToR.png"
+        ],
+        "middle_answer": true,
+        "text": " ",
+        "id": 2,
+        "lua_do": "function lua_do()\ng.fullscreen_on_first_page = 1\nend"
+      },
+      {
+        "id": 1,
+        "text": "Перед запуском игры, провертье пункты ниже.",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "newAnswerImage": [
+          "https://i.imgur.com/Rl26ii9.png"
+        ],
+        "blackout": true,
+        "middle_answer": true,
+        "text": " ",
+        "id": 7,
+        "lua_do": "function lua_do()\ng.fullscreen_on_first_page = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "• Для полного комфорта, зайдите в меню справа и выберите именно \"маленький\" размер шрифта. Именно с этим шрифтом и делался квест. \n\n• Для более удобной игры, включите \"ночной режим\" в меню слева.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 2,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": [
+      {
+        "var_add": [
+          ""
+        ],
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "id": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 4,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 5,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 7,
+    "text": "• Начало\n\nТу самую ночь будет забыть сложно. люди начали выбегать из домов, хватая всё что им нужно было для выживания, а Итан, только проснувшись, пытался сообразить что происходит. На улицах был ад. Всё случилось всего в один момент, неожиданно.\n\nОтключение света, крики на улице и сонное состояние, мешало взять всё что нужно. Итан хватал всё что мог с полок, попутно светя фонариком. рюкзак у Итана был довольно большой.\n\nНикто и никогда не мог подумать, что произойдёт подобное, в кажись таком не большом городе.\n\nСтранные звуки снаружи, которых парень никогда не слышал, пугали его до усрачки. Тут было понятно лишь одно — происходит что-то странное, и надо бежать. А куда? \n\nГерой находился в 5-ти этажке. Здание само по себе было большим, а выходов было несколько. За дверью уже были слышны странные звуки и крики...\n\nВсё было готово. Практически все необходимые вещи, Итан закинул в рюкзак. Что теперь?",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Попытаться позвонить"
+      },
+      {
+        "id": 8,
+        "text": "Выглянуть в окно"
+      },
+      {
+        "id": 7,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.imgur.com/RSOiMJ7.jpg"
+      },
+      {
+        "id": 9,
+        "text": "Выйти из квартиры"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": []
+  }
+]

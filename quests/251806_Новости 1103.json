@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор berrel (kenny) написал еще 147368 слов в квесте \"SOUL - ANIMATRONICS CALL YOU \"."
+      },
+      {
+        "targetbookid": "247548",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"SOUL - ANIMATRONICS CALL YOU \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Waffle написал еще 122071 слов в квесте \"Тёмные дни\"."
+      },
+      {
+        "targetbookid": "239163",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тёмные дни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор IXOR  написал еще 116345 слов в квесте \"Зубов: Ментовские будни\"."
+      },
+      {
+        "targetbookid": "250760",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Зубов: Ментовские будни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Фантом написал еще 112109 слов в квесте \"War of Heaven Volume 1\"."
+      },
+      {
+        "targetbookid": "245599",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"War of Heaven Volume 1\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор MFUA_Gangster написал еще 105729 слов в квесте \"Симулятор студента МФЮА\n\"."
+      },
+      {
+        "targetbookid": "250657",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Симулятор студента МФЮА\n\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

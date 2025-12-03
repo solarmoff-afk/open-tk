@@ -1,0 +1,1405 @@
+[
+  {
+    "id": 1,
+    "text": "Квест про выживание в опасном мире также является недо неофициальной копией игры Minecraft \n<===========================================\nАвтор:MicroCom\nversion Inside\nUpdate: 1.0AW6",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Play"
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://cdn1.worldpng.ru/uploads/2021/3/12/12f4acdbfb5eb543eab249f4d6ca484a-full.jpg",
+        "system": true
+      },
+      {
+        "id": 1,
+        "url": "https://cdn1.worldpng.ru/uploads/2021/3/12/2bb907c7b04389c5663de1ba3621529a-full.jpg",
+        "text": "Укажите команды для картинки"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Worlds",
+    "answers": [
+      {
+        "need_ever": true,
+        "var_random": [
+          "hp1",
+          5,
+          5
+        ],
+        "id": 4,
+        "text": "New World",
+        "need": [
+          9
+        ]
+      },
+      {
+        "id": 5,
+        "text": "New World2",
+        "need": [
+          7
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 6,
+        "text": "Nwe World3",
+        "need": [
+          8
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 3,
+        "text": "Добавить мир"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Ячейки\nЗайдет только в 1 мир",
+    "answers": [
+      {
+        "need_ever": true,
+        "var_random": [
+          "hp1",
+          20,
+          20
+        ],
+        "id": 9,
+        "text": "Мир 1",
+        "need": [
+          -9
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Мир 2",
+        "need": [
+          -7
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 8,
+        "text": "Мир 3",
+        "need": [
+          -8
+        ],
+        "need_ever": true
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Мир\nVer. Inside\nWorld Default\nScale 1",
+    "answers": [
+      {
+        "var_show": [
+          "hp1"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "HP:",
+        "var_set": [
+          "hp1"
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Меню добычи",
+        "bg_color": [
+          1,
+          0.5,
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Меню строительства",
+        "bg_color": [
+          1,
+          0.5,
+          0
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Меню архитектуры",
+        "var_need": [
+          "mansion1",
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Инвентарь",
+        "bg_color": [
+          0.7,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Главное меню"
+      },
+      {
+        "id": 13,
+        "text": "Открыть верстак",
+        "var_need": [
+          "crafttable1",
+          1
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Открыть картографический стол",
+        "var_need": [
+          "karttable1",
+          1
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Особняк",
+        "var_need": [
+          "mansion1",
+          1
+        ],
+        "bg_color": [
+          0.8,
+          1,
+          0.2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 7,
+    "text": "Мир создан",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Мир создан",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Мир создан",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ок"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Инвентарь",
+    "answers": [
+      {
+        "var_show": [
+          "wood1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Дерево:",
+        "var_set": [
+          "wood1"
+        ],
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "stone1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Камень:",
+        "right_answer": true,
+        "var_set": [
+          "stone1"
+        ]
+      },
+      {
+        "var_show": [
+          "iron1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Железо:",
+        "var_set": [
+          "iron1"
+        ],
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "arrow1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Стрелы:",
+        "right_answer": true,
+        "var_set": [
+          "arrow1"
+        ]
+      },
+      {
+        "var_show": [
+          "paper 1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Ткань:",
+        "left_answer": true,
+        "var_set": [
+          "paper 1"
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 10,
+        "text": "Рамки портала:",
+        "var_show": [
+          "rampaportal1"
+        ],
+        "var_set": [
+          "rampaportal1"
+        ]
+      },
+      {
+        "var_show": [
+          "reaktor1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Реактор:",
+        "var_set": [
+          "reaktor1"
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 10,
+        "text": "Зеленая пыль:",
+        "var_show": [
+          "green1"
+        ],
+        "var_set": [
+          "green1"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Закрыть"
+      },
+      {
+        "var_show": [
+          "bow1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Лук:",
+        "var_set": [
+          "bow1"
+        ]
+      },
+      {
+        "var_show": [
+          "sword1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Меч:",
+        "var_set": [
+          "sword1"
+        ]
+      },
+      {
+        "var_show": [
+          "pickaxe1"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Кирка:",
+        "var_set": [
+          "pickaxe1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Добыча\n",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Разбойник",
+        "var_random": [
+          "hprazb1",
+          20,
+          20,
+          "swordrazb1",
+          10,
+          10
+        ]
+      },
+      {
+        "id": 4,
+        "var_need": [
+          "bow1",
+          1,
+          "arrow1",
+          1
+        ],
+        "var_sub": [
+          "bow1",
+          1,
+          "arrow1",
+          1
+        ],
+        "text": "Добыча животных"
+      },
+      {
+        "id": 11,
+        "text": "Добыча дерева",
+        "var_add": [
+          "wood1",
+          1
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Шахта"
+      },
+      {
+        "id": 4,
+        "text": "Назад"
+      },
+      {
+        "id": 11,
+        "text": "Дерево:",
+        "comment": true,
+        "var_show": [
+          "wood1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Строительство\nВерстак:4 дерева\nЗемлянка:10 дерева\nДом:50 дерева 30 камня\nОсобняк:100 дерева 100 камня",
+    "answers": [
+      {
+        "var_add": [
+          "crafttable1",
+          1
+        ],
+        "id": 12,
+        "var_need": [
+          "wood1",
+          4
+        ],
+        "text": "Создать верстак",
+        "var_sub": [
+          "wood1",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "karttable1",
+          1
+        ],
+        "id": 12,
+        "var_need": [
+          "wood1",
+          5,
+          "charter1",
+          1
+        ],
+        "var_sub": [
+          "wood1",
+          5,
+          "charter1",
+          1
+        ],
+        "text": "Создать стол картографа"
+      },
+      {
+        "var_add": [
+          "sandhouse1",
+          1
+        ],
+        "id": 12,
+        "var_need": [
+          "wood1",
+          10
+        ],
+        "text": "Создать землянку",
+        "var_sub": [
+          "wood1",
+          10
+        ]
+      },
+      {
+        "var_add": [
+          "house1",
+          1
+        ],
+        "id": 12,
+        "var_need": [
+          "wood1",
+          50,
+          "stone1",
+          30
+        ],
+        "text": "Создать дом",
+        "var_sub": [
+          "wood1",
+          50,
+          "stone1",
+          30
+        ]
+      },
+      {
+        "var_add": [
+          "mansion1",
+          1
+        ],
+        "id": 12,
+        "var_sub": [
+          "wood1",
+          100,
+          "stone1",
+          100
+        ],
+        "text": "Создать особняк",
+        "var_need": [
+          "wood1",
+          100,
+          "stone1",
+          100
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Назад"
+      },
+      {
+        "var_show": [
+          "crafttable1"
+        ],
+        "comment": true,
+        "id": 12,
+        "text": "Кол-во верстаков:",
+        "left_answer": true,
+        "var_set": [
+          "crafttable1"
+        ]
+      },
+      {
+        "var_show": [
+          "karttable1"
+        ],
+        "comment": true,
+        "id": 12,
+        "text": "Кол-во карт. столов",
+        "left_answer": true,
+        "var_set": [
+          "karttable1"
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 12,
+        "text": "Кол-во землянок:",
+        "var_show": [
+          "sandhouse1"
+        ],
+        "var_set": [
+          "sandhouse1"
+        ]
+      },
+      {
+        "var_show": [
+          "house1"
+        ],
+        "comment": true,
+        "id": 12,
+        "text": "Кол-во домов:",
+        "left_answer": true,
+        "var_set": [
+          "house1"
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 12,
+        "text": "Кол-во особняков:",
+        "var_show": [
+          "mansion1"
+        ],
+        "var_set": [
+          "mansion1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Верстак",
+    "answers": [
+      {
+        "var_add": [
+          "sword1",
+          10
+        ],
+        "id": 13,
+        "text": "Создать меч\n[1 дерево 2 железо]",
+        "var_sub": [
+          "wood1",
+          1,
+          "iron1",
+          2
+        ],
+        "var_need": [
+          "wood1",
+          1,
+          "iron1",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "bow1",
+          10
+        ],
+        "id": 13,
+        "text": "Создать лук\n[3 дерева 3 ткани]",
+        "var_sub": [
+          "wood1",
+          3,
+          "paper1",
+          3
+        ],
+        "var_need": [
+          "wood1",
+          3,
+          "paper1",
+          3
+        ]
+      },
+      {
+        "var_add": [
+          "pickaxe1",
+          10
+        ],
+        "id": 13,
+        "text": "Создать кирку\n[5 дерева]",
+        "var_sub": [
+          "wood1",
+          5
+        ],
+        "var_need": [
+          "wood1",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "arrow1",
+          3
+        ],
+        "id": 13,
+        "text": "Создать стрелы\n[1 дерево 1 железо 1 ткань]",
+        "var_sub": [
+          "iron1",
+          1,
+          "wood1",
+          1,
+          "paper1",
+          1
+        ],
+        "var_need": [
+          "wood1",
+          1,
+          "iron1",
+          1,
+          "paper1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "rampaportal1",
+          1
+        ],
+        "id": 13,
+        "var_need": [
+          "green1",
+          10,
+          "iron1",
+          5
+        ],
+        "var_sub": [
+          "green1",
+          10,
+          "iron1",
+          1
+        ],
+        "text": "Создать рамку портала\n[10 зеленой пыли 5 железа]"
+      },
+      {
+        "var_add": [
+          "reaktor1",
+          1
+        ],
+        "id": 13,
+        "var_need": [
+          "green1",
+          30,
+          "mansion1",
+          1,
+          "rampaportal1",
+          4
+        ],
+        "var_sub": [
+          "green1",
+          30,
+          "rampaportal1",
+          4
+        ],
+        "text": "Создать реактор\n[30 зеленой пыли 4 рамки портала 1 особняк]"
+      },
+      {
+        "id": 4,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Битва",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Разбойник",
+        "comment": true
+      },
+      {
+        "var_show": [
+          "hprazb1"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "HP:",
+        "var_set": [
+          "hprazb1"
+        ]
+      },
+      {
+        "var_show": [
+          "swordrazb1"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Меч:",
+        "var_set": [
+          "swordrazb1"
+        ]
+      },
+      {
+        "id": 14,
+        "text": "VS ",
+        "comment": true
+      },
+      {
+        "id": 14,
+        "text": "Меч:",
+        "comment": true,
+        "var_show": [
+          "sword1"
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Лук:",
+        "comment": true,
+        "var_show": [
+          "bow1"
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Стрелы:",
+        "comment": true,
+        "var_show": [
+          "arrow1"
+        ]
+      },
+      {
+        "id": 14,
+        "text": "HP:",
+        "comment": true,
+        "var_show": [
+          "hp1"
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Вы:",
+        "comment": true
+      },
+      {
+        "id": 14,
+        "text": "Ударить рукой",
+        "var_sub": [
+          "hprazb1",
+          1,
+          "hp1",
+          3,
+          "swordrazb1",
+          1
+        ],
+        "var_need": [
+          "hp1",
+          1,
+          "hprazb1",
+          1
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Ударить мечом",
+        "var_sub": [
+          "hprazb1",
+          3,
+          "hp1",
+          3,
+          "swordrazb1",
+          1,
+          "sword1",
+          1
+        ],
+        "var_need": [
+          "sword1",
+          1,
+          "hp1",
+          1,
+          "hprazb1",
+          1
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Выстрелить луком",
+        "var_need": [
+          "arrow1",
+          1,
+          "hp1",
+          1,
+          "hprazb1",
+          1,
+          "bow1",
+          1
+        ],
+        "var_sub": [
+          "hp1",
+          3,
+          "swordrazb1",
+          1,
+          "hprazb1",
+          5,
+          "bow1",
+          1,
+          "arrow1",
+          1
+        ]
+      },
+      {
+        "var_random": [
+          "hp1",
+          20,
+          20
+        ],
+        "var_less": [
+          "hp1",
+          1
+        ],
+        "text": "RESPAWN",
+        "var_sub": [
+          "wood1",
+          10,
+          "stone1",
+          10
+        ],
+        "id": 4
+      },
+      {
+        "id": 4,
+        "text": "EXIT",
+        "var_add": [
+          "paper 1",
+          3
+        ],
+        "var_less": [
+          "hprazb1",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Структура\nVer. Inside\nWorld mansion\nScale 2",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Комната с порталом",
+        "var_need": [
+          "portalad1",
+          1
+        ],
+        "bg_color": [
+          0.4,
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Выйти"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Мир\nVer. Inside\nWorld Ad\nScale 3",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Меню добычи"
+      },
+      {
+        "id": 19,
+        "text": "Меню строительства"
+      },
+      {
+        "id": 20,
+        "text": "Инвентарь"
+      },
+      {
+        "id": 15,
+        "text": "В портал",
+        "bg_color": [
+          1,
+          0.5,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Шахта",
+    "answers": [
+      {
+        "var_need": [
+          "pickaxe1",
+          1
+        ],
+        "var_random": [
+          "ore1",
+          1,
+          5
+        ],
+        "id": 17,
+        "text": "Искать руды",
+        "var_sub": [
+          "pickaxe1",
+          5
+        ],
+        "var_set": [
+          "ore1"
+        ]
+      },
+      {
+        "var_add": [
+          "stone1",
+          1
+        ],
+        "id": 17,
+        "text": "Добыча камня",
+        "var_need": [
+          "pickaxe1",
+          1
+        ],
+        "var_sub": [
+          "pickaxe1",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Назад"
+      },
+      {
+        "id": 17,
+        "text": "Камень:",
+        "comment": true,
+        "var_show": [
+          "stone1"
+        ]
+      },
+      {
+        "id": 17,
+        "text": "                                               <s><s>/",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "iron1",
+          1
+        ],
+        "var_equal": [
+          "ore1",
+          1
+        ],
+        "id": 17,
+        "var_sub": [
+          "pickaxe1",
+          1
+        ],
+        "var_need": [
+          "pickaxe1",
+          1
+        ],
+        "text": "Железо"
+      },
+      {
+        "var_add": [
+          "green1",
+          3
+        ],
+        "var_equal": [
+          "ore1",
+          3
+        ],
+        "id": 17,
+        "text": "Зеленая пыль",
+        "var_need": [
+          "pickaxe1",
+          1
+        ],
+        "var_sub": [
+          "pickaxe 1",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Добыча",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Демон",
+        "var_random": [
+          "hpdemon1",
+          20,
+          20,
+          "sworddemon1",
+          10,
+          10
+        ],
+        "var_set": [
+          "hpdemon1"
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Охота на грибоедов",
+        "var_sub": [
+          "bow1",
+          1,
+          "arrow1",
+          1
+        ],
+        "var_need": [
+          "bow1",
+          1,
+          "arrow1",
+          1
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Добыча адских деревьев",
+        "var_add": [
+          "wood1",
+          5
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Дерево:",
+        "comment": true,
+        "var_show": [
+          "wood1"
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Строительство",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Тут пока ничего нет :>",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Инвентарь",
+    "answers": [
+      {
+        "var_show": [
+          "wood1"
+        ],
+        "comment": true,
+        "id": 20,
+        "text": "Дерево:",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 20,
+        "text": "Камень:",
+        "var_show": [
+          "stone1"
+        ]
+      },
+      {
+        "var_show": [
+          "iron1"
+        ],
+        "comment": true,
+        "id": 20,
+        "text": "Железо:",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 20,
+        "text": "Стрелы:",
+        "var_show": [
+          "arrow1"
+        ]
+      },
+      {
+        "var_show": [
+          "paper1"
+        ],
+        "comment": true,
+        "id": 20,
+        "text": "Ткань:",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 20,
+        "text": "Рамки портала:",
+        "var_show": [
+          "rampaportal1"
+        ]
+      },
+      {
+        "var_show": [
+          "reaktor1"
+        ],
+        "comment": true,
+        "id": 20,
+        "text": "Реактор:",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 20,
+        "text": "Зеленая пыль",
+        "var_show": [
+          "green1"
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Закрыть"
+      },
+      {
+        "id": 20,
+        "text": "Лук:",
+        "comment": true,
+        "var_show": [
+          "bow1"
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Меч:",
+        "comment": true,
+        "var_show": [
+          "sword1"
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Кирка:",
+        "comment": true,
+        "var_show": [
+          "pickaxe1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 22,
+    "text": "Архитектор\nПортал:12 рамок портала 1 реактор",
+    "answers": [
+      {
+        "var_add": [
+          "portalad1",
+          1
+        ],
+        "id": 22,
+        "var_need": [
+          "portalrampa1",
+          12,
+          "reaktor1",
+          1,
+          " charter1",
+          1
+        ],
+        "var_sub": [
+          "portalrampa1",
+          12,
+          "reaktor",
+          1,
+          "charter1",
+          1
+        ],
+        "text": "Комната с порталом"
+      },
+      {
+        "id": 4,
+        "text": "Назад"
+      },
+      {
+        "id": 22,
+        "text": "Кол-Во комнат с порталами:",
+        "comment": true,
+        "var_show": [
+          "portalad1"
+        ]
+      },
+      {
+        "var_show": [
+          "charter1"
+        ],
+        "comment": true,
+        "id": 22,
+        "text": "Чертежи:",
+        "var_set": [
+          "charter1"
+        ]
+      },
+      {
+        "var_show": [
+          "bigcharter1"
+        ],
+        "comment": true,
+        "id": 22,
+        "text": "Большие чертежи:",
+        "var_set": [
+          "bigcharter1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 24,
+    "text": "Шахта",
+    "answers": []
+  },
+  {
+    "id": 25,
+    "text": "Стол картографа",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Ткань:",
+        "comment": true,
+        "var_show": [
+          "paper1"
+        ]
+      },
+      {
+        "var_add": [
+          "charter1",
+          1
+        ],
+        "id": 25,
+        "var_sub": [
+          "paper1",
+          1
+        ],
+        "var_need": [
+          "paper1",
+          1
+        ],
+        "text": "Создать чертеж\n[1 ткань]"
+      },
+      {
+        "var_add": [
+          "bigcharter1",
+          1
+        ],
+        "id": 25,
+        "var_sub": [
+          "paper1",
+          4
+        ],
+        "var_need": [
+          "paper1",
+          4
+        ],
+        "text": "Создать большой чертеж\n[4 ткани]"
+      },
+      {
+        "id": 4,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 29,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 30,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 31,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 33,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 34,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 35,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 36,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": []
+  }
+]

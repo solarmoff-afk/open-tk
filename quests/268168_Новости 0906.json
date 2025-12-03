@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Froga написал еще 22785.8 слов в квесте \"Ночь в лесу\"."
+      },
+      {
+        "targetbookid": "267171",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ночь в лесу\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ingenium Inc.  написал еще 18104.6 слов в квесте \"Песнь Луны и Солнца\"."
+      },
+      {
+        "targetbookid": "264228",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Песнь Луны и Солнца\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Epitoki написал еще 17330 слов в квесте \"Достойные порицания\"."
+      },
+      {
+        "targetbookid": "216406",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Достойные порицания\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Paradoz написал еще 16067.8 слов в квесте \"Medieval \"."
+      },
+      {
+        "targetbookid": "265884",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Medieval \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Простой тип написал еще 15485.2 слов в квесте \"FNaF 1\"."
+      },
+      {
+        "targetbookid": "231700",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"FNaF 1\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

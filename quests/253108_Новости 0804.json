@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Фантом написал еще 144547 слов в квесте \"Трёхвостая\"."
+      },
+      {
+        "targetbookid": "244638",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Трёхвостая\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 108072 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "248757",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Teppish написал еще 102293 слов в квесте \"Телохранитель с небес\n\"."
+      },
+      {
+        "targetbookid": "191426",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Телохранитель с небес\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Джефф написал еще 98320 слов в квесте \"\"Сверхъестественное\"\n\n\n\n\n\n\"."
+      },
+      {
+        "targetbookid": "240836",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"\"Сверхъестественное\"\n\n\n\n\n\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Feellow написал еще 97675 слов в квесте \"Свет\"."
+      },
+      {
+        "targetbookid": "229974",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Свет\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

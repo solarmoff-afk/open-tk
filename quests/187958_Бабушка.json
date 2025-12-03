@@ -1,0 +1,1809 @@
+[
+  {
+    "id": 1,
+    "text": "Волею судеб вы оказались в том самом доме, о котором так много слышали. Кровожадная бабушка уже много лет никого не отпускает живым.<s>r\n<s>r\nПостарайтесь не присоединиться к десяткам тех, кто стал ей обедом, а может быть вы даже сможете положить всему этому конец?<s>r\n<s>r\nВнимание! Данный квест почти невозможно пройти, ни разу не умерев. Будьте готовы.<s>r\n<s>r\nv 1.0",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать",
+        "contentList": [
+          "http://188.120.236.127/BabkaEng/plants1.jpg http://188.120.236.127/BabkaEng/babyroom.jpg http://188.120.236.127/BabkaEng/upfloor.jpg http://188.120.236.127/BabkaEng/livingroom.jpg http://188.120.236.127/BabkaEng/underthebed1.jpg http://188.120.236.127/BabkaEng/underthebed2.jpg http://188.120.236.127/BabkaEng/bedroom1.jpg http://188.120.236.127/BabkaEng/bedroom2.jpg http://188.120.236.127/BabkaEng/garaj.jpg http://188.120.236.127/BabkaEng/closet.jpg http://188.120.236.127/BabkaEng/kitchen.jpg http://188.120.236.127/BabkaEng/vewtrap.jpg http://188.120.236.127/BabkaEng/kor1floor.jpg http://188.120.236.127/BabkaEng/kor2floor.jpg http://188.120.236.127/BabkaEng/kor3floor.jpg http://188.120.236.127/BabkaEng/cellar.jpg http://188.120.236.127/BabkaEng/Babka_face.png http://188.120.236.127/BabkaEng/Babka_full.png http://188.120.236.127/BabkaEng/Babka_nogi.png http://188.120.236.127/BabkaEng/Babka_top.png http://188.120.236.127/BabkaEng/oblojka.jpg"
+        ],
+        "lua_do": "function lua_do()\ng.autorun = 30\ng[\"autorun after\"]= 31\nbabushka_dist = 20\npodval_corpse = 0\ngaraj_search = 0\nkuhnya_searches = 0\npodval_door_locked = true\ngaraj_door_blocked = true\nhp = 50\nstamina = 50\nfloor=0\nend"
+      },
+      {
+        "id": 30,
+        "text": "авторан",
+        "need": 1000
+      },
+      {
+        "id": 31,
+        "text": "Авторан афтер",
+        "need": 1000
+      },
+      {
+        "id": 34,
+        "text": "смерть",
+        "need": [
+          1000
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "В подвале очень холодно. Тусклая антивандальная лампочка освещает пустой бетонный пол и стены. В одном углу целая гора грязных тряпок, в другом — свалены в кучу тела мёртвых людей.",
+    "answers": [
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ni_am_undead_too = true\nend",
+        "text": "Активировать бессмертие",
+        "id": 2,
+        "lua_if": "function lua_if()\nreturn false\nend"
+      },
+      {
+        "id": 2,
+        "text": "Дверь закрыта снаружи, замка или замочной скважины нет.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn podval_door_locked\nend"
+      },
+      {
+        "id": 3,
+        "text": "Дверь открыта, подняться наверх",
+        "lua_if": "function lua_if()\nreturn not podval_door_locked\nend",
+        "lua_do": "function lua_do()\nupstairs()\nfloor = 1\nend"
+      },
+      {
+        "id": 4,
+        "text": "Спрятаться в тряпках",
+        "lua_do": "function lua_do()\nhide()\npodval_tryapki_hide = (podval_tryapki_hide or 0) <plus> 1\nsecond_floor_bed_hide = (second_floor_bed_hide or 0) - 1 -- сброс другого укрытия\nif second_floor_bed_hide <0 then\nsecond_floor_bed_hide = 0 -- лимит сброса\nend\nif podval_tryapki_hide == 3 then\ndialog{header = \"Вы слишком часто прячетесь здесь. Бабушка начинает что-то подозревать.\", text = \"\", answers = {{text = \"Ok\"}}}\nend\nbabushka_distract = babushka_distract - podval_tryapki_hide*3\nif babushka_distract <0 then\nbabushka_distract = 0\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn podval_corpse < 20\nend",
+        "id": 2,
+        "instant": true,
+        "text": "Осмотреть один труп",
+        "lua_do": "function lua_do()\npodval_corpse = podval_corpse  <plus> 1\nif podval_corpse == 1 then\n message2(\"Вы нашли письмо!\")\nelseif podval_corpse == 2 then\n message2(\"Вы нашли заплесневелый хлеб!\")\nelseif podval_corpse == 3 then\n message2(\"Вы нашли гнилую картошку!\")\nelseif podval_corpse == 4 then\n message2(\"Вы нашли таблетки!\")\nelseif podval_corpse == 5 then\n message2(\"Вы нашли пустую зажигалку! Она, хотя бы, даёт искру.\")\nelseif podval_corpse == 10 then\n message2(\"Вы нашли руку куклы!\")\nelseif podval_corpse == 15 then\n message2(\"Вы нашли таблетки!\")\nelseif podval_corpse == 20 then\nmessage2(\"Вы нашли труп с торчащей изо рта красной ниткой. \")\nend\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"<s>\nИсследовано трупов: \".. (podval_corpse or 0)\nend",
+        "id": 2,
+        "text": "Исследовано трупов: 8",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "Взять пустую зажигалку",
+        "lua_if": "function lua_if()\nreturn podval_corpse > 4 and (not inventory_zajigalka)\nend",
+        "lua_do": "function lua_do()\ninventory_zajigalka = 1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn podval_corpse > 0 \nend",
+        "lua_do": "function lua_do()\nmessage2(\"'Привет, бабушка! Как ты там без меня? Я скучаю. Приезжай, скорее. Спасите меня, кто-нибудь. Я не хочу умирать. Я не хочу в подвал!!!\")\nend",
+        "text": "Прочитать письмо",
+        "id": 2,
+        "no_transition": false
+      },
+      {
+        "id": 2,
+        "text": "Взять руку куклы",
+        "lua_if": "function lua_if()\nreturn podval_corpse > 9 and (not podval_kukla_hand_taken)\nend",
+        "lua_do": "function lua_do()\ninventory_kukla_pieces = (inventory_kukla_pieces or 0) <plus>1\npodval_kukla_hand_taken = true\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif podval_door_locked and babushka_dist == 15 then\nmessage2(\"От закрытой двери раздаётся сиплое дыхание.\")\nelseif podval_door_locked and babushka_dist == 14 then\nmessage2(\"Раздаётся грохот, дверь трясётся.\")\nelseif podval_door_locked and babushka_dist == 12 then\nmessage2(\"Раздаётся звук падающего замка.\")\nelseif podval_door_locked and babushka_dist == 10 then\nmessage2(\"С оглушительным скрежетом дверь раскрывается.\")\npodval_door_locked = false\nelseif podval_door_locked and babushka_dist < 8 then\npodval_door_locked = false\nend\nend\n\n\n\n",
+        "text": "Новый ответ. введите текст",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "id": 2,
+        "text": "Съесть заплесневелый хлеб",
+        "lua_if": "function lua_if()\nreturn podval_corpse > 1 and (not podval_bread_eated)\nend",
+        "lua_do": "function lua_do()\npodval_bread_eated = 1\nhp = hp <plus> 10\nend"
+      },
+      {
+        "id": 2,
+        "text": "Съесть гнилую картошку",
+        "lua_if": "function lua_if()\nreturn podval_corpse > 2 and (not podval_potato_eated)\nend",
+        "lua_do": "function lua_do()\npodval_potato_eated = 1\nhp = hp <plus> 10\nend"
+      },
+      {
+        "showAd": true,
+        "lua_if": "function lua_if()\nreturn podval_corpse > 3 and (not podval_tabletki_eated)\nend",
+        "lua_do": "function lua_do()\npodval_tabletki_eated = 1\nhp = hp <plus> 30\nend",
+        "text": "Съесть таблетки (Большой бонус к здоровью. Побочный эффект - рекламные галюциннации.)",
+        "id": 2
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Вытаскивать красную нитку из трупа (извлечено на \" .. (podval_trup_20_nitka or 0) .. \"%)\"\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\npodval_trup_20_nitka = (podval_trup_20_nitka or 0) <plus> 10\nend",
+        "text": "Вытаскивать красную нитку изо рта трупа (извлечено на 50%)",
+        "id": 2,
+        "lua_if": "function lua_if()\nreturn podval_corpse > 19 and(podval_trup_20_nitka and (podval_trup_20_nitka<100) or (not podval_trup_20_nitka))\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (podval_trup_20_nitka and (podval_trup_20_nitka>=100) and (podval_trup_20_nitka<200))\nend",
+        "instant": true,
+        "id": 2,
+        "text": "Очистить красную нитку от слизи(извлечено на 50%)",
+        "lua_do": "function lua_do()\npodval_trup_20_nitka = (podval_trup_20_nitka or 0) <plus> 25\nend",
+        "lua_text": "function lua_text()\nreturn \"Очистить красную нитку от слизи (очищено на \" .. podval_trup_20_nitka - 100 .. \" %)\"\nend\n"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Смотать красную нитку в клубок (смотано на \" ..  podval_trup_20_nitka - 200 .. \" %)\"\nend\n",
+        "instant": true,
+        "lua_do": "function lua_do()\npodval_trup_20_nitka = (podval_trup_20_nitka or 0) <plus> 5\nend",
+        "text": "Смотать красную нитку в клубок (смотано на 50%)",
+        "id": 2,
+        "lua_if": "function lua_if()\nreturn (podval_trup_20_nitka and (podval_trup_20_nitka>=200) and (podval_trup_20_nitka<300))\nend"
+      },
+      {
+        "lua_do": "function lua_do()\npodval_trup_20_nitka = 301\ninventory_pryaja = (inventory_pryaja or 0) <plus> 1\nend",
+        "text": "Забрать красный клубок",
+        "lua_if": "function lua_if()\nreturn (podval_trup_20_nitka and (podval_trup_20_nitka == 300) )\nend",
+        "id": 2
+      },
+      {
+        "showAd": true,
+        "lua_if": "function lua_if()\nreturn podval_corpse > 14 and (not podval_tabletki2_eated)\nend",
+        "lua_do": "function lua_do()\npodval_tabletki2_eated = 1\nhp = hp <plus> 30\nend",
+        "text": "Съесть таблетки (Большой бонус к здоровью. Побочный эффект - рекламные галюциннации.)",
+        "id": 2
+      },
+      {
+        "id": 35,
+        "text": "читать \"Книга о бабушке\"",
+        "lua_if": "function lua_if()\nreturn g.ever_die\nend",
+        "lua_do": "function lua_do()\ng.autorun = nil\nend"
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/cellar.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Коридор первого этажа. На вешалке висят поеденные молью лохмотья.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Выход из дома",
+        "left_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Спуск в подвал",
+        "lua_do": "function lua_do()\ndownstairs()\nfloor = 0\nend",
+        "right_answer": true
+      },
+      {
+        "id": 8,
+        "text": "Кухня",
+        "lua_do": "function lua_do()\nin_the_room()\ni_am_in_the_kitchen = true\nend",
+        "left_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Туалет",
+        "lua_do": "function lua_do()\nin_the_room()\ni_am_in_the_shelter = true\nend",
+        "right_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not garaj_door_blocked\nend",
+        "id": 10,
+        "text": "Гараж",
+        "lua_do": "function lua_do()\nin_the_room()\nend",
+        "left_answer": true
+      },
+      {
+        "id": 12,
+        "text": "Гараж",
+        "lua_if": "function lua_if()\nreturn garaj_door_blocked\nend",
+        "left_answer": true
+      },
+      {
+        "id": 7,
+        "text": "Подъём на 2 этаж",
+        "lua_do": "function lua_do()\nupstairs()\nfloor=2\nend",
+        "right_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not first_floor_portret_taken\nend",
+        "id": 3,
+        "text": "\nСтену украшает портрет бабушки.",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "id": 3,
+        "text": "Взять портрет",
+        "lua_if": "function lua_if()\nreturn not first_floor_portret_taken\nend",
+        "lua_do": "function lua_do()\nfirst_floor_portret_taken = true\ninventory_portret = 1\nend"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/kor1floor.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Вы спрятались в тряпках.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nunhide()\nend",
+        "id": 4,
+        "text": "Вылезти",
+        "isBack": true,
+        "backstepCount": 1
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nif podval_door_locked and babushka_dist == 15 then\nmessage(\"От закрытой двери раздаётся сиплое дыхание.\")\nelseif podval_door_locked and babushka_dist == 14 then\nmessage(\"Раздаётся грохот, дверь трясётся.\")\nelseif podval_door_locked and babushka_dist == 12 then\nmessage(\"Раздаётся звук падающего замка.\")\nelseif podval_door_locked and babushka_dist == 10 then\nmessage(\"С оглушительным скрежетом дверь раскрывается.\")\npodval_door_locked = false\nelseif podval_door_locked and babushka_dist < 8 then\npodval_door_locked = false\nend\nend\n\n\n\n",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/vewtrap.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Концовка \"Побег\"<s>r\n<s>r\nВы сбежали из дома! После долгих часов блуждания по окрестностям вы смогли найти небольшое поселение, где вас выходили. Вы хотели вернуться к страшному дому с факелами и бензином, но, как ни старались, больше никогда не смогли его найти.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "В начало"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "                                      ",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "id": 6
+      },
+      {
+        "id": 6,
+        "text": "Выдернуть один гвоздь гвоздодёром (это шумная и тяжелая работа)",
+        "lua_if": "function lua_if()\nvhod_gvozdi  = vhod_gvozdi  or 12\nreturn inventory_gvozdoder and (vhod_gvozdi >0)\nend",
+        "lua_do": "function lua_do()\nvhod_gvozdi  = vhod_gvozdi  or 12\nvhod_gvozdi = vhod_gvozdi -1\ninventory_gvozdi = (inventory_gvozdi or 0)<plus> 1\nstamina = stamina - 15\nif stamina < 30 then \nmessage(\"Вы устали! Отдохните!\")\nend\nbabushka_dist = babushka_dist - 1\nbabushka_distract = 0\nif babushka_dist <0 then\nbabushka_dist = 0\nend\nend"
+      },
+      {
+        "id": 6,
+        "text": "Выход заколочен огромными досками. Осталось выдернуть гвоздей",
+        "lua_text": "function lua_text()\nvhod_gvozdi = vhod_gvozdi or 12\nreturn \"<s>\nОсталось выдернуть гвоздей: \".. vhod_gvozdi\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Замок",
+        "lua_text": "function lua_text()\nreturn vhod_zamok_otkryt and \"<s>\nЗамок открыт и снят.\" or \"<s>\nОгромный навесной замок удерживает толстые стальные штыри, уходящие в бетон. Его невозможно сломать.\"\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "id": 6,
+        "text": "Чтобы вырвать гвозди, нужен гвоздодёр.",
+        "lua_if": "function lua_if()\nreturn not inventory_gvozdoder\nend",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "id": 6,
+        "text": "Чтобы открыть замок, нужен ключ.",
+        "lua_if": "function lua_if()\nreturn not vhod_key\nend",
+        "merge": false
+      },
+      {
+        "id": 6,
+        "text": "Открыть замок ключом",
+        "lua_if": "function lua_if()\nreturn inventory_vhod_key and (not vhod_zamok_otkryt)\nend",
+        "lua_do": "function lua_do()\nvhod_key = nil\nvhod_zamok_otkryt = true\nend"
+      },
+      {
+        "id": 5,
+        "text": "Покинуть дом",
+        "lua_if": "function lua_if()\nreturn vhod_zamok_otkryt and (vhod_gvozdi<1) and (not babushka_dead )\nend",
+        "var_set": [
+          "global autorun",
+          0,
+          "global autorun after",
+          0
+        ]
+      },
+      {
+        "id": 45,
+        "text": "Покинуть дом",
+        "lua_if": "function lua_if()\nreturn vhod_zamok_otkryt and (vhod_gvozdi<1) and (babushka_dead )\nend",
+        "var_set": [
+          "global autorun",
+          0,
+          "global autorun after",
+          0
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/kor1floor.jpg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Коридор второго этажа. Деревянный пол жутко скрипит, то там то тут видны дыры.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Спуск на 1 этаж",
+        "lua_do": "function lua_do()\ndownstairs()\nfloor=1\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 13,
+        "text": "Спальня",
+        "lua_do": "function lua_do()\nin_the_room()\nend",
+        "left_answer": true
+      },
+      {
+        "id": 15,
+        "text": "Гостиная",
+        "lua_do": "function lua_do()\nin_the_room()\ni_am_in_guestroom=true\nend",
+        "right_answer": true
+      },
+      {
+        "comment": true,
+        "id": 7,
+        "text": "\nЛестница, ведущая на третий этаж, развалилась напрочь, до верхушки не дотянуться.",
+        "lua_if": "function lua_if()\nreturn not second_floor_lestnica_gvozdi\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "id": 7,
+        "text": "Лестница повреждена",
+        "lua_if": "function lua_if()\nreturn not second_floor_lestnica_gvozdi\nend",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "id": 7,
+        "text": "Чтобы отремонтировать лестницу, вам нужна какая-нибудь большая доска.",
+        "lua_if": "function lua_if()\nreturn not second_floor_lestnica_gvozdi\nend",
+        "merge": false
+      },
+      {
+        "id": 7,
+        "text": "Чтобы забраться по двери на лестницу, нужно приколотить её гвоздями и молотком.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn (second_floor_lestnica_gvozdi and (second_floor_lestnica_gvozdi <5))\nend"
+      },
+      {
+        "id": 7,
+        "text": "Положить на лестницу дверное полотно",
+        "lua_if": "function lua_if()\nreturn door_moved and (door_moved>99) and (not second_floor_lestnica_gvozdi)\nend",
+        "lua_do": "function lua_do()\nsecond_floor_lestnica_gvozdi = 0\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Приколотить дверное полотно гвоздём (Очень шумно! Тяжело. Осталось забить \".. 5 -( second_floor_lestnica_gvozdi or 0) ..\"  гвоздей)\"\nend",
+        "lua_do": "function lua_do()\ninventory_gvozdi = inventory_gvozdi -1\nif inventory_gvozdi <1 then inventory_gvozdi = nil\nend\nsecond_floor_lestnica_gvozdi = (second_floor_lestnica_gvozdi  or 0) <plus> 1\nbabushka_distract = 0\nbabushka_dist = babushka_dist - 3\nif babushka_dist <0 then\nbabushka_dist = 0\nend\nend",
+        "text": "Приколотить дверь гвоздём (осталось 5)",
+        "id": 7,
+        "lua_if": "function lua_if()\nreturn second_floor_lestnica_gvozdi and second_floor_lestnica_gvozdi < 5 and inventory_gvozdi and inventory_molotok\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn second_floor_lestnica_gvozdi and second_floor_lestnica_gvozdi >4\nend",
+        "id": 16,
+        "text": "Подъём на 3 этаж",
+        "lua_do": "function lua_do()\nupstairs()\nfloor=3\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/kor2floor.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Кухня завалена грязной посудой, повсюду разбросаны гнилые продукты. Мухи давно передохли и лежат повсюду чёрной россыпью.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nout_of_room()\ni_am_in_the_kitchen = nil\nend",
+        "backstepCount": 1,
+        "text": "Выйти",
+        "isBack": true,
+        "id": 8
+      },
+      {
+        "lua_if": "function lua_if()\nreturn kuhnya_searches < 25\nend",
+        "lua_text": "function lua_text()\nreturn \"Искать еду. Осталось мест: \".. 25-kuhnya_searches\nend",
+        "lua_do": "function lua_do()\nkuhnya_searches = (kuhnya_searches or 0 ) <plus> 1\nstamina = stamina - 3\nend",
+        "text": "Искать еду",
+        "instant": true,
+        "id": 8
+      },
+      {
+        "id": 8,
+        "text": "\n\nСтаринный холодильник стоит, распахнутый, вилка выдернута из розетки.",
+        "lua_if": "function lua_if()\nreturn not kuhnya_holodolnik_vkl and (not holodilnik_destroyed)\nend",
+        "merge": true
+      },
+      {
+        "id": 8,
+        "text": "\nСтаринный холодильник оглушительно тарахтит. Лучше убираться отсюда.",
+        "lua_if": "function lua_if()\nreturn kuhnya_holodolnik_vkl and (not holodilnik_destroyed)\nend",
+        "merge": true
+      },
+      {
+        "id": 8,
+        "text": "\n\nОкно заколочено снаружи, его невозможно разблокировать.",
+        "merge": true
+      },
+      {
+        "id": 8,
+        "text": "Включить холодильник в розетку",
+        "lua_if": "function lua_if()\nreturn (not kuhnya_holodolnik_vkl) and (not holodilnik_destroyed)\nend",
+        "lua_do": "function lua_do()\nkuhnya_holodolnik_vkl = 30\nmessage2(\"Холодильник оглушительно затарахтел. Вы услышали быстрые шаги — бабушка спешит сюда.\")\nend"
+      },
+      {
+        "id": 8,
+        "text": "Выключить холодильник из розетки",
+        "lua_if": "function lua_if()\nreturn kuhnya_holodolnik_vkl and (not holodilnik_destroyed)\nend",
+        "lua_do": "function lua_do()\nkuhnya_holodolnik_vkl = false\nend"
+      },
+      {
+        "id": 8,
+        "text": "Старинный холодильник опрокинут навзничь, шнур питания разорван.",
+        "lua_if": "function lua_if()\nreturn holodilnik_destroyed\nend",
+        "merge": true
+      },
+      {
+        "lua_do": "function lua_do()\nkuhnya_1_eated = 1\nhp = hp <plus> 10\nend",
+        "text": "Съесть сухую крупу",
+        "lua_if": "function lua_if()\nreturn kuhnya_searches > 1 and (not kuhnya_1_eated)\nend",
+        "id": 8
+      },
+      {
+        "id": 8,
+        "text": "Вы обнаружили на дне миски с крупой ногу куклы",
+        "lua_if": "function lua_if()\nreturn kuhnya_1_eated and (not kuhnya_kukla_taken )\nend",
+        "comment": true
+      },
+      {
+        "lua_do": "function lua_do()\nkuhnya_kukla_taken = true\nmessage2(\"Вы обнаружили на дне миски с крупой ногу куклы\")\ninventory_kukla_pieces = (inventory_kukla_pieces or 0)<plus>1\nend",
+        "text": "Забрать ногу куклы из миски",
+        "lua_if": "function lua_if()\nreturn kuhnya_1_eated and (not kuhnya_kukla_taken )\nend",
+        "id": 8
+      },
+      {
+        "showAd": true,
+        "lua_if": "function lua_if()\nreturn kuhnya_searches > 4 and (not kuhnya_2_eated)\nend",
+        "lua_do": "function lua_do()\nkuhnya_2_eated = 1\nhp = hp <plus> 30\nend",
+        "text": "Съесть таблетки (большой бонус к здоровью, побочный эффект — рекламные галюциннации)",
+        "id": 8
+      },
+      {
+        "lua_do": "function lua_do()\nkuhnya_3_eated = 1\nhp = hp <plus> 10\nend",
+        "text": "Съесть гнилое мясо",
+        "lua_if": "function lua_if()\nreturn kuhnya_searches > 9 and (not kuhnya_3_eated)\nend",
+        "id": 8
+      },
+      {
+        "lua_do": "function lua_do()\nkuhnya_4_eated = 1\nhp = hp <plus> 10\nend",
+        "text": "Съесть сырое мясо",
+        "lua_if": "function lua_if()\nreturn kuhnya_searches > 14 and (not kuhnya_4_eated)\nend",
+        "id": 8
+      },
+      {
+        "lua_do": "function lua_do()\nkuhnya_5_eated = 1\nhp = hp <plus> 10\nend",
+        "text": "Съесть засоленные уши",
+        "lua_if": "function lua_if()\nreturn kuhnya_searches > 19 and (not kuhnya_5_eated)\nend",
+        "id": 8
+      },
+      {
+        "lua_do": "function lua_do()\ninventory_pryaja = (inventory_pryaja or 0) <plus> 1\nkuhnya_6_taken = true\nend",
+        "text": "Взять синий клубок пряжи",
+        "lua_if": "function lua_if()\nreturn kuhnya_searches > 24 and (not kuhnya_6_taken)\nend",
+        "id": 8
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/kitchen.jpg"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Туалет с битым кафелем, ржавым подтекающим краном и ободранными стенами. Вы ощущаете отвратительный запах фекалий и разложения.<s>r\n<s>r\nНа массивной двери установлена надёжная железная щеколда. Здесь вы в безопасности.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nout_of_room()\ni_am_in_the_shelter = false\nend",
+        "backstepCount": 1,
+        "text": "Выйти",
+        "isBack": true,
+        "id": 9
+      },
+      {
+        "id": 9,
+        "text": "Наполнить ведро водой",
+        "lua_if": "function lua_if()\nreturn inventory_vedro and (not inventory_water)\nend",
+        "lua_do": "function lua_do()\ninventory_water = true\nend"
+      },
+      {
+        "id": 9,
+        "text": "Облегчиться",
+        "lua_if": "function lua_if()\nreturn i_want_pipi > 10\nend",
+        "lua_do": "function lua_do()\ntualet_popisil = true\nstamina = stamina <plus> i_want_pipi\ni_want_pipi = 0\nmessage2(\"Вы облегчились и почувствовали себя бодрее.\")\nend"
+      },
+      {
+        "id": 9,
+        "text": "Смыть за собой",
+        "lua_if": "function lua_if()\nreturn tualet_popisil and (not tualet_smyl)\nend",
+        "lua_do": "function lua_do()\ntualet_smyl = true\nif babushka_dist <0 then\nbabushka_dist = 0\nend\nmessage2(\"Вы потянули за леску смывного бачка и обнаружили, что к её концу привязана нога куклы.\")\n\nend"
+      },
+      {
+        "id": 9,
+        "text": "Отвязать ногу куклы от лески смывного бачка",
+        "lua_if": "function lua_if()\nreturn tualet_smyl and (not tualet_kukla_taken)\nend",
+        "lua_do": "function lua_do()\ntualet_kukla_taken = true\ninventory_kukla_pieces = (inventory_kukla_pieces or 0)<plus>1\nend"
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/closet.jpg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Гараж завален хламом, металлоломом и тряпками. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Выйти через дверь.",
+        "lua_if": "function lua_if()\nreturn not garaj_door_blocked\nend",
+        "lua_do": "function lua_do()\nout_of_room()\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not garaj_light\nend",
+        "id": 10,
+        "text": "\nИскать в темноте невозможно.",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not garaj_light\nend",
+        "url": "http://188.120.236.127/babka/Гараж.jpg",
+        "id": 10,
+        "text": "few black",
+        "comment": true,
+        "merge": false
+      },
+      {
+        "id": 10,
+        "text": "Вкрутить лампочку",
+        "lua_if": "function lua_if()\nreturn inventory_lightbulb and (not garaj_light )\nend",
+        "lua_do": "function lua_do()\ninventory_lightbulb = nil\ngaraj_light = true\nend"
+      },
+      {
+        "id": 10,
+        "text": "Зажечь свечу",
+        "lua_if": "function lua_if()\nreturn inventory_candle and inventory_zajigalka  and (not garaj_light )\nend",
+        "lua_do": "function lua_do()\ninventory_candle = inventory_candle - 1\nif inventory_candle == 0 then\ninventory_candle = nil\nend\ngaraj_light = true\ngaraj_light_candle = true\nend"
+      },
+      {
+        "id": 10,
+        "text": " Вам нечем зажечь свечу",
+        "lua_if": "function lua_if()\nreturn inventory_candle and (not inventory_zajigalka)  and (not garaj_light )\nend",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": " Ваша пустая зажигалка только даёт искры и не может осветить поиски.",
+        "lua_if": "function lua_if()\nreturn (not inventory_candle) and (inventory_zajigalka)  and (not garaj_light )\nend",
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "Спрятаться",
+        "need": [
+          1000
+        ],
+        "lua_do": "function lua_do()\nhide()\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn garaj_light and (garaj_search<30)\nend",
+        "id": 10,
+        "text": "Искать что-то полезное",
+        "lua_do": "function lua_do()\ngaraj_search = (garaj_search or 0) <plus> 1\nstamina = stamina - 5\nif garaj_light_candle and garaj_search == 11 then\ngaraj_light = nil\nend\nend",
+        "instant": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn garaj_light and (garaj_search<30)\nend",
+        "id": 10,
+        "url": "http://188.120.236.127/BabkaEng/garaj.jpg",
+        "text": "Искать что-то полезное",
+        "instant": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"<s>\nВы обыскали \".. (garaj_search or 0) .. \" мест из 30 возможных.\"\nend\n",
+        "id": 10,
+        "text": "Вы обыскали 2 из 16 мест",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn garaj_door_blocked\nend",
+        "id": 10,
+        "text": " Дверь наружу подпёрта старым креслом, которое в свою очередь упирается в ступеньку.",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Убрать кресло.",
+        "lua_if": "function lua_if()\nreturn garaj_door_blocked\nend",
+        "lua_do": "function lua_do()\ngaraj_door_blocked = false\nunhide()\nend"
+      },
+      {
+        "id": 10,
+        "text": "Дыра в потолке недосягаема. Нужна лестница.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not stremyanka_installed\nend"
+      },
+      {
+        "id": 10,
+        "text": "Приставить лестницу-стремянку к дыре в потолке",
+        "lua_if": "function lua_if()\nreturn (garaj_search) and garaj_search > 24 and (not stremyanka_installed)\nend",
+        "lua_do": "function lua_do()\nstremyanka_installed = true\nend"
+      },
+      {
+        "id": 13,
+        "text": "Подняться по стремянке на второй этаж через дыру в потолке",
+        "lua_if": "function lua_if()\nreturn stremyanka_installed \nend",
+        "lua_do": "function lua_do()\nupstairs()\nfloor =2\nend"
+      },
+      {
+        "id": 10,
+        "text": "Взять гвоздодёр",
+        "lua_if": "function lua_if()\nreturn garaj_search >= 5 and (not inventory_gvozdoder)\nend",
+        "lua_do": "function lua_do()\ninventory_gvozdoder=1\nend"
+      },
+      {
+        "id": 10,
+        "text": "Взять молоток",
+        "lua_if": "function lua_if()\nreturn garaj_search >= 10 and (not inventory_molotok)\nend",
+        "lua_do": "function lua_do()\ninventory_molotok=1\nend"
+      },
+      {
+        "id": 10,
+        "text": "Взять ведро",
+        "lua_if": "function lua_if()\nreturn garaj_search >= 15 and (not inventory_vedro)\nend",
+        "lua_do": "function lua_do()\ninventory_vedro=1\nend"
+      },
+      {
+        "id": 10,
+        "text": "\nСвеча прогорела и погасла!",
+        "lua_if": "function lua_if()\nreturn garaj_light_candle and (not garaj_light)\nend\n\n",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Чтобы зажечь свечу, нужны спички или зажигалка",
+        "lua_if": "function lua_if()\nreturn inventory_candle and (not inventory_zajigalka)  and (not garaj_light )\nend",
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": "Взять клубок жёлтой пряжи",
+        "lua_if": "function lua_if()\nreturn garaj_search > 19 and (not garaj_pryaja_taken)\nend",
+        "lua_do": "function lua_do()\ngaraj_pryaja_taken=true\ninventory_pryaja =( inventory_pryaja or 0) <plus>1\nend"
+      },
+      {
+        "id": 10,
+        "text": "Взять туловище куклы с ногой",
+        "lua_if": "function lua_if()\nreturn garaj_search > 29 and (not garaj_kukla_taken)\nend",
+        "lua_do": "function lua_do()\ngaraj_kukla_taken=true\ninventory_kukla_pieces =( inventory_kukla_pieces or 0) <plus>1\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Вы спрятались в куче тряпья, между колёсами и стопкой досок.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\nunhide()\nend",
+        "text": "Выбраться",
+        "id": 11,
+        "forget": 11
+      },
+      {
+        "id": 11,
+        "text": "Ждать"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Дверь в гараж открывается всего на дюйм и не поддаётся. Она подпёрта чем-то тяжёлым изнутри.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 12,
+        "text": "Назад",
+        "id": 12,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Вы в спальне. Огромная покосившаяся кровать, прикрытая двумя обрывками серой простыни стоит на вздыбившемся полу и кажется вот-вот рухнет вниз. У стены приютилась покосившаяся тумбочка.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\nout_of_room()\nend"
+      },
+      {
+        "id": 10,
+        "text": "Прыгнуть в дыру в полу",
+        "lua_if": "function lua_if()\nreturn (not stremyanka_installed) and ( hole_in_bedroom_appeare)\nend",
+        "lua_do": "function lua_do()\ndownstairs()\nfloor =1\nif garaj_door_blocked then\nhide()\nend\nhp = hp -20\nvspyshka (1,0.5,0.5)\nend"
+      },
+      {
+        "id": 14,
+        "text": "Спрятаться под кровать",
+        "lua_do": "function lua_do()\nhide()\nsecond_floor_bed_hide = (second_floor_bed_hide  or 0) <plus> 1\npodval_tryapki_hide = (podval_tryapki_hide or 0) - 1 -- сброс другого укрытия\nif podval_tryapki_hide <0 then\npodval_tryapki_hide = 0 -- лимит сброса\nend\nif second_floor_bed_hide == 3 then\nmessage2(\"Вы слишком часто прячетесь здесь. Бабушка начинает что-то подозревать.\")\nend\nbabushka_distract = babushka_distract - second_floor_bed_hide *3\nif babushka_distract <0 then\nbabushka_distract = 0\nend\nend"
+      },
+      {
+        "id": 10,
+        "text": "Спуститься через дыру по стремянке",
+        "lua_if": "function lua_if()\nreturn stremyanka_installed\nend",
+        "lua_do": "function lua_do()\ndownstairs()\nfloor=1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nhole_in_bedroom_appeare = true\ndownstairs()\nbabushka_dist = 25\nfloor=1\nhide()\nhp = hp -20\nvspyshka (1,0.5,0.5)\nend",
+        "text": "Осмотреть тумбочку",
+        "lua_if": "function lua_if()\nreturn (not hole_in_bedroom_appeare)\nend",
+        "id": 32
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (not hole_in_bedroom_appeare)\nend",
+        "id": 13,
+        "url": "http://188.120.236.127/BabkaEng/bedroom1.jpg",
+        "lua_do": "function lua_do()\nhole_in_bedroom_appeare = true\ndownstairs()\nbabushka_dist = 25\nfloor=1\nhide()\nhp = hp -20\nvspyshka (1,0.5,0.5)\nend",
+        "text": "Осмотреть тумбочку"
+      },
+      {
+        "id": 33,
+        "text": "Обыскать тумбочку (осторожно обойдя дыру)",
+        "lua_if": "function lua_if()\nreturn hole_in_bedroom_appeare \nend"
+      },
+      {
+        "id": 13,
+        "text": "Обыскать тумбочку (осторожно обойдя дыру)",
+        "lua_if": "function lua_if()\nreturn hole_in_bedroom_appeare \nend",
+        "url": "http://188.120.236.127/BabkaEng/bedroom2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Вы прячетесь под кроватью. Здесь пахнет пылью.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\nunhide()\nend",
+        "text": "Выбраться",
+        "id": 14,
+        "forget": 14
+      },
+      {
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/underthebed1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Просторная по меркам этого места гостиная завалена мебелью и её обломками. На расчищенном пятачке находится кресло-качалка.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Выйти",
+        "lua_do": "function lua_do()\nout_of_room()\ni_am_in_guestroom=false\nend"
+      },
+      {
+        "id": 42,
+        "text": "Обыскать полки"
+      },
+      {
+        "id": 43,
+        "text": "Обыскать письменный стол"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Волочить дверь на лестницу (это шумно и тяжело), готово на \".. (door_moved or 0) .. \"%\"\nend",
+        "lua_do": "function lua_do()\ndoor_moved = (door_moved or 0) <plus> math.random(30)\nstamina = stamina - 10\nbabushka_dist = babushka_dist - 3\nif babushka_dist <0 then\nbabushka_dist = 0\nend\nbabushka_distract = 0\nend",
+        "text": "Волочить дверь на лестницу (это шумно и тяжело)",
+        "id": 15,
+        "lua_if": "function lua_if()\nreturn (not door_moved) or (door_moved<100)\nend"
+      },
+      {
+        "id": 15,
+        "text": "На столе лежит ваше письмо бабушке.",
+        "comment": true,
+        "need": [
+          21
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Осмотреть кресло-качалку"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "\nНа полу лежит выбитая дверь, достаточно длинная для ремонта лестницы. ",
+        "lua_if": "function lua_if()\nreturn not door_moved\nend",
+        "merge": true
+      },
+      {
+        "showAd": true,
+        "lua_if": "function lua_if()\nreturn not tv_work_time\nend",
+        "lua_do": "function lua_do()\ntv_work_time = 30\nmessage2(\"Телевизор включен и грохочет на полную. Лучше убираться отсюда!\")\nend",
+        "text": "Включить рекламу на телевизоре",
+        "id": 15
+      },
+      {
+        "id": 15,
+        "text": "Телевизор надолго привлекёт бабушку в данную комнату, но, выбирая канал, вы неизбежно увидите какую-нибудь рекламу.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not tv_work_time \nend"
+      },
+      {
+        "id": 15,
+        "text": "Телевизор включен и грохочет на полную. Лучше убираться отсюда!",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn tv_work_time and tv_work_time > 0\nend"
+      },
+      {
+        "id": 15,
+        "text": " В кресле, прижимая к груди фоторамку и одетую куклу , лежит бабушка. Её лицо расслабилось, оскал с него исчез. На щеках — неровные дорожки слёз. Кажется, её путь на земле окончен.",
+        "lua_if": "function lua_if()\nreturn babushka_dead\nend",
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/livingroom.jpg"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Коридор третьего этажа. Здесь пыльнее, чем везде, но не так пахнет тлением. Кажется, бабушка нечасто сюда добирается.",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Подняться на чердак",
+        "lua_do": "function lua_do()\nupstairs()\nfloor=4\nend"
+      },
+      {
+        "id": 23,
+        "text": "Войти в детскую комнату",
+        "lua_do": "function lua_do()\nin_the_room()\nend"
+      },
+      {
+        "id": 24,
+        "text": "Войти в зимний сад",
+        "lua_do": "function lua_do()\nin_the_room()\nend"
+      },
+      {
+        "id": 7,
+        "text": "Спуститься на второй этаж",
+        "lua_do": "function lua_do()\ndownstairs()\nfloor = 2\nend"
+      },
+      {
+        "id": 16,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/kor3floor.jpg"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Как вы начнёте письмо?",
+    "answers": [
+      {
+        "id": 18,
+        "text": "\"Дорогая бабушка\""
+      },
+      {
+        "id": 18,
+        "text": "\"Милая бабушка\" "
+      },
+      {
+        "id": 18,
+        "text": "\"Любимая бабушка\""
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Что расскажете о себе?",
+    "answers": [
+      {
+        "id": 19,
+        "text": "\"У меня всё хорошо.\""
+      },
+      {
+        "id": 19,
+        "text": "\"У меня ничего особенного.\""
+      },
+      {
+        "id": 19,
+        "text": "\"Дела у меня неважно.\""
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Что дальше?",
+    "answers": [
+      {
+        "id": 20,
+        "text": "\"Как ты там без меня?\""
+      },
+      {
+        "id": 20,
+        "text": "\"Очень скучаю по тебе.\""
+      },
+      {
+        "id": 20,
+        "text": "\"Постоянно вспоминаю, как мы играли в детстве.\""
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "И напоследок...",
+    "answers": [
+      {
+        "id": 21,
+        "text": "\"Пожалуйста, приезжай!\""
+      },
+      {
+        "id": 21,
+        "text": "\"Скоро я приеду!\""
+      },
+      {
+        "id": 21,
+        "text": "\"Не знаю, когда мы встретимся...\""
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Письмо составлено. ",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Оставить письмо на столе",
+        "lua_do": "function lua_do()\ng.autorun = 30\nend"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Чердак выглядит по-человечески обжитым. Глядя на ряды пустых консервных банок и бутылок, вы поняли, куда подевалась из дома вся нормальная еда. На старом кресле лежит письмо.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Спуститься на третий этаж",
+        "lua_do": "function lua_do()\ndownstairs()\nfloor=3\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not inventory_vhod_key\nend",
+        "lua_do": "function lua_do()\ninventory_vhod_key = 1\nend",
+        "text": "Забрать ключ",
+        "need": [
+          44
+        ],
+        "id": 22
+      },
+      {
+        "id": 22,
+        "text": "С потолка свисает на проводе тускло светящая лампочка.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not cherdak_lamp_removed\nend"
+      },
+      {
+        "id": 22,
+        "text": "Выкрутить лампочку",
+        "lua_if": "function lua_if()\nreturn not cherdak_lamp_removed\nend",
+        "lua_do": "function lua_do()\ninventory_lightbulb = 1\ncherdak_lamp_removed = true\nend"
+      },
+      {
+        "id": 44,
+        "text": "Прочитать письмо"
+      },
+      {
+        "id": 22,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn not cherdak_lamp_removed\nend",
+        "url": "http://188.120.236.127/BabkaEng/upfloor.jpg"
+      },
+      {
+        "id": 22,
+        "text": "black",
+        "lua_if": "function lua_if()\nreturn cherdak_lamp_removed\nend",
+        "url": "http://188.120.236.127/BabkaEng/upfloor.jpg"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Детская комната выглядит так, словно ей никогда не пользовались — пеленальный столик, кроватка, коробки с игрушками стояли ровно вдоль стенки, покрытые ровным слоем пыли.\n\nНа зеркальном трюмо стоит фоторамка с разбитым стеклом.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\nout_of_room()\nend"
+      },
+      {
+        "id": 25,
+        "text": "Осмотреть рамку"
+      },
+      {
+        "id": 26,
+        "text": "Осмотреть кроватку."
+      },
+      {
+        "id": 23,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/babyroom.jpg"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "              ",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn not( sad_cvety and (sad_cvety > 9))\nend",
+        "id": 24,
+        "text": " В оранжерее нет ни одного живого цветка — из горшков торчат сухие стебли. Земля в горшках обильно удобрена, судя по всему, плохо перемолотой костяной мукой. ",
+        "comment": false,
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn sad_cvety and (sad_cvety > 9)\nend",
+        "id": 24,
+        "text": " В оранжерее зеленеют побеги цветов. На фоне царящего вокруг кошмара, это даёт лучик надежды.",
+        "comment": false,
+        "merge": true
+      },
+      {
+        "id": 16,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\nout_of_room()\nend"
+      },
+      {
+        "id": 24,
+        "text": "Чтобы полить цветы, нужно ведро с водой.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn (not (inventory_vedro and inventory_water) ) and (not ( sad_cvety and (sad_cvety > 9) ))\nend"
+      },
+      {
+        "id": 24,
+        "text": "Полить один цветок",
+        "lua_if": "function lua_if()\nreturn inventory_water and ((sad_cvety or 0) <10)\nend",
+        "lua_do": "function lua_do()\ninventory_water = false\nstamina = stamina - 10\nsad_cvety = (sad_cvety or 0) <plus> 1\nend"
+      },
+      {
+        "id": 24,
+        "text": "Облегчиться",
+        "lua_if": "function lua_if()\nreturn i_want_pipi>20 and ((sad_cvety or 0) <10)\nend",
+        "lua_do": "function lua_do()\ni_want_pipi = 0\nstamina = stamina <plus> 10\nsad_cvety = (sad_cvety or 0) <plus> 1\nend"
+      },
+      {
+        "comment": true,
+        "id": 24,
+        "text": "Осталось полить 10 цветов.",
+        "lua_if": "function lua_if()\nreturn ((sad_cvety or 0) <10)\nend",
+        "lua_text": "function lua_text()\nreturn \"Осталось полить \" .. 10- (sad_cvety or 0) .. \" горшков с цветами.\"\nend"
+      },
+      {
+        "id": 29,
+        "text": "Осмотреть политые горшки.",
+        "lua_if": "function lua_if()\nreturn sad_cvety and (sad_cvety > 9)\nend"
+      },
+      {
+        "id": 24,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/plants1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Стекло фоторамки разбито, фотография отсутствует, кроме небольшого уцелевшего кусочка.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Отойти"
+      },
+      {
+        "id": 25,
+        "text": "Приложить кусочек к фото",
+        "lua_if": "function lua_if()\nreturn(( not inventory_photo_pieces) or (inventory_photo_pieces < 3)) and inventory_photo_pieces\nend",
+        "lua_do": "function lua_do()\nchild_bedroom_photo_pieces = (child_bedroom_photo_pieces or 0) <plus>1\ninventory_photo_pieces = inventory_photo_pieces -1\nif inventory_photo_pieces == 0 then \ninventory_photo_pieces = nil\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn( not child_bedroom_photo_pieces) or (child_bedroom_photo_pieces < 3)\nend",
+        "id": 25,
+        "text": "Не хватает ещё 3 кусочков",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"Не хватает ещё \".. 3-(child_bedroom_photo_pieces or 0 )..\" кусочков\"\nend"
+      },
+      {
+        "id": 27,
+        "text": "Рассмотреть фотографию",
+        "lua_if": "function lua_if()\nreturn( child_bedroom_photo_pieces) and (child_bedroom_photo_pieces > 2)\nend"
+      },
+      {
+        "id": 25,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/babyroom.jpg"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Кроватка аккуратно застелена простынёй, ныне истлевшей.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Отойти"
+      },
+      {
+        "id": 26,
+        "text": "В уголке кроватки лежит обрывок фотографии, на котором видно лицо младенца.",
+        "lua_if": "function lua_if()\nreturn not child_bed_photo_taken\nend",
+        "merge": true
+      },
+      {
+        "id": 26,
+        "text": "Забрать обрывок фото",
+        "lua_if": "function lua_if()\nreturn not child_bed_photo_taken\nend",
+        "lua_do": "function lua_do()\nchild_bed_photo_taken = true\ninventory_photo_pieces = (inventory_photo_pieces or 0) <plus>1\nend"
+      },
+      {
+        "id": 26,
+        "text": "Собрать куклу",
+        "lua_if": "function lua_if()\nreturn (not child_bedroom_kukla_assembled ) and (inventory_kukla_pieces and inventory_kukla_pieces >4)\nend",
+        "lua_do": "function lua_do()\ninventory_kukla_pieces = nil\nchild_bedroom_kukla_assembled =  true\nend"
+      },
+      {
+        "id": 26,
+        "text": "Найдите пять частей куклы, чтобы собрать её воедино",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn (not child_bedroom_kukla_assembled) and (inventory_kukla_pieces and inventory_kukla_pieces>0)\nend"
+      },
+      {
+        "id": 26,
+        "text": "Одеть куклу",
+        "lua_if": "function lua_if()\nreturn child_bedroom_kukla_assembled and (not child_bedroom_kukla_weared) and (inventory_baby_suit)\nend",
+        "lua_do": "function lua_do()\nchild_bedroom_kukla_weared = true\ninventory_baby_suit = nil\nend"
+      },
+      {
+        "id": 26,
+        "text": "Кукла лежит в кроватке.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn child_bedroom_kukla_assembled and (not child_bedroom_kukla_weared)\nend"
+      },
+      {
+        "id": 26,
+        "text": "Одетая в связанные бабушкой вещи кукла лежит в кроватке.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn child_bedroom_kukla_weared\nend"
+      },
+      {
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/babyroom.jpg"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "На фотографии усталая молодая женщина в красивом платье держит на руках младенца.  ",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Отойти"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Кресло старинное и рассохшееся, но совсем не пыльное. Кажется, им регулярно пользуются. В корзинке рядом с креслом лежат спицы.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Отойти"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (second_floor_pryaja_installed or 0) <5\nend",
+        "id": 28,
+        "text": "В корзинке не хватает 5 клубков",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"В корзинке не хватает \".. 5 - (second_floor_pryaja_installed or 0) ..\" клубков\"\nend"
+      },
+      {
+        "id": 28,
+        "text": "Положить клубок пряжи в корзинку",
+        "lua_if": "function lua_if()\nreturn (inventory_pryaja and inventory_pryaja > 0 ) and ((not second_floor_pryaja_installed) or (second_floor_pryaja_installed and second_floor_pryaja_installed <5))\nend",
+        "lua_do": "function lua_do()\nsecond_floor_pryaja_installed = (second_floor_pryaja_installed or 0) <plus> 1\ninventory_pryaja = inventory_pryaja - 1\nend"
+      },
+      {
+        "comment": false,
+        "id": 28,
+        "text": "\nВ корзинке пять клубков пряжи разных цветов. Если в этом и был какой-то смысл, то стоит вернуться позже.",
+        "lua_if": "function lua_if()\nreturn (second_floor_pryaja_installed or 0)>4\nend",
+        "merge": true
+      },
+      {
+        "id": 28,
+        "text": "\nВ корзинке лежит связанный из пряжи крошечный детский разноцветный комбинезон",
+        "lua_if": "function lua_if()\nreturn second_floor_baby_suit_ready\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn second_floor_baby_suit_ready\nend",
+        "id": 28,
+        "text": "Забрать детский комбинезон",
+        "lua_do": "function lua_do()\nsecond_floor_baby_suit_ready = nil\ninventory_baby_suit = 1\nend",
+        "merge": false
+      },
+      {
+        "id": 28,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/livingroom.jpg"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Казалось бы, безнадежный сушняк от воды и заботы неожиданно быстро ожил и зазеленел. ",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nsad_photo_taken = true\ninventory_photo_pieces = (inventory_photo_pieces or 0) <plus> 1\nend",
+        "text": "Забрать обрывок фотографиии",
+        "lua_if": "function lua_if()\nreturn not sad_photo_taken\nend",
+        "id": 29
+      },
+      {
+        "id": 29,
+        "text": "\nСреди листьев вы заметили обрывок фотографии.",
+        "lua_if": "function lua_if()\nreturn not sad_photo_taken\nend",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "Отойти"
+      },
+      {
+        "id": 29,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/plants1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "       \n",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nlocal text = \" Она на вашем этаже.\"\nif not babushka_dead  then\nif babushka_relative == 0 and babushka_dist<6 and (not i_am_hided) and (not(babushka_start_distract and babushka_distract>0)) then\ntext = \" Она смотрит на вас.\"\n\nelseif (babushka_relative == 0) and (babushka_dist<6) and (i_am_hided) then\ntext = \" Она принюхивается.\"\n\nelseif babushka_relative == 0 and babushka_dist<10 and babushka_start_distract and babushka_distract>0 then\ntext = \" Она не смотрит на вас.\"\n\nelseif babushka_relative >0 then\n text = \" Её шаги раздаются сверху.\"\n\nelseif babushka_relative < 0 then\n text = \" Её шаги раздаются снизу.\"\n\nend\nend\nbabushka_dist = babushka_dist or 20\nreturn \"<s>\nБабушка в \"..babushka_dist .. \" метрах от вас.\" .. text \nend",
+        "id": 30,
+        "text": "\nБабушка ходит-бродит.",
+        "lua_if": "function lua_if()\nreturn not (g.current_id ==34)\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not (g.current_id ==34)\nend",
+        "id": 30,
+        "text": "\nХочется писить",
+        "lua_text": "function lua_text()\nif not i_am_in_the_shelter then\ni_want_pipi = ( i_want_pipi or 0) <plus> 1\nend\n\nif  i_want_pipi < 10 then\nreturn \"\"\nelseif i_want_pipi <20 then\nreturn \"<s>\nВам хочется в туалет\"\nelseif  i_want_pipi < 30 then\nreturn \"<s>\nВам сильно хочется в туалет\"\nelse\nreturn \"<s>\nВам очень сильно хочется в туалет\"\nend\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not (g.current_id ==34)\nend",
+        "super_calculate": false,
+        "id": 30,
+        "text": "ходьба бабушки",
+        "calculate": true,
+        "lua_do": "function lua_do()\nbabushka_distract = babushka_distract or 0\nbabushka_relative = babushka_relative  or 1\nif not babushka_dead then\nbabushka_dist = babushka_dist-1\nend\nif babushka_dist <0 then \nbabushka_dist = 0\nend\nif babushka_dist < 2 and babushka_distract>0 and (not babushka_start_distract) then\nbabushka_start_distract = true\nend\nif babushka_dist <10 then \nbabushka_relative = 0\nend\nif babushka_distract>0 and ( babushka_start_distract) and (not babushka_dead ) then\nbabushka_dist = babushka_dist <plus> 2\nbabushka_distract = babushka_distract - 1\nend\nif babushka_distract < 1 then\nbabushka_start_distract = false\nend\nif babushka_dist < 10 then\nbabushka_relative = 0\nend\nif i_am_in_the_shelter and babushka_dist<6 then\nbabushka_dist = 6\nend\n\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nout_of_room = function()\nbabushka_dist = (babushka_dist - 4)\nif babushka_dist <6 then\nbabushka_dist = 7\nend\nstamina = stamina - 5\nif stamina < 30 then\nbabushka_dist = (babushka_dist - 1)\nend\nend\nin_the_room = function()\nbabushka_dist = babushka_dist <plus> 4 \nstamina = stamina - 5\nif stamina < 30 then\nbabushka_dist = (babushka_dist - 1)\nend\nend\nend",
+        "calculate": true,
+        "text": "ыункция выхода из комнаты",
+        "id": 30
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nhide = function()\ni_am_hided = true\nif babushka_dist >5 then\nbabushka_distract = 20\nbabushka_start_distract = nil\nelse\nbabushka_distract = 0\nbabushka_start_distract = nil\nend\nend\nunhide = function()\ni_am_hided = false\nif babushka_dist <6 or (not babushka_start_distract ) then\nbabushka_start_distract = nil\nbabushka_distract =0\n\nend\nend\nend",
+        "calculate": true,
+        "text": "функция прятанья",
+        "id": 30
+      },
+      {
+        "super_calculate": false,
+        "id": 30,
+        "text": "лестничные функции",
+        "calculate": true,
+        "lua_do": "function lua_do()\nupstairs = function()\nif babushka_relative == 0 then\nbabushka_relative = -1\nbabushka_dist = babushka_dist <plus> 4\nelseif babushka_relative > 0 then\nbabushka_dist = babushka_dist - 0\nelse\nbabushka_dist = babushka_dist <plus> 5\nend\nif babushka_dist < 0 then\nbabushka_dist =0\nend\n\nstamina = stamina - 20\nif stamina < 30 then\nbabushka_dist = (babushka_dist - 0)\nend\n\n\nend\ndownstairs = function()\nif babushka_relative == 0 then\nbabushka_dist = babushka_dist <plus> 4\nbabushka_relative = 1\nelseif babushka_relative > 0 then\nbabushka_dist = babushka_dist <plus> 5\nelse\nbabushka_dist = babushka_dist - 0\nend\nif babushka_dist < 0 then\nbabushka_dist =0\nend\n\n\nstamina = stamina - 18\nif stamina < 30 then\nbabushka_dist = (babushka_dist - 0)\nend\n\nend\nend"
+      },
+      {
+        "module": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n<s>r\nvspyshka = function(r,g,b)<s>r\nr = r or 1<s>r\ng = g or 1<s>r\nb = b or 1<s>r\n<s>r\n<s>r\nlocal rect = display.newRect(display.contentCenterX, display.contentCenterY,display.contentCenterX*2, display.contentCenterY*2 )<s>r\n<s>r\ncanvas.parent.parent.parent.parent.parent.parent.parent:insert(rect)<s>r\n<s>r\nrect:setFillColor(r,g,b)<s>r\n<s>r\ntransition.from(rect, {--настройка появления<s>r\n<s>r\ntime = 500,<s>r\n<s>r\nalpha = 0,<s>r\n<s>r\ntransition = easing.outExpo,<s>r\n<s>r\nonComplete = function()<s>r\n<s>r\ntimer.performWithDelay(50, function()--если хочешь подержать белый экран<s>r\n<s>r\nif rect and rect.removeSelf then<s>r\n<s>r\ntransition.to(rect, {--настройка исчезновения<s>r\n<s>r\ntime = 500,<s>r\nalpha = 0,<s>r\ntransition = easing.inExpo,<s>r\nonComplete = function()<s>r\nif rect and rect.removeSelf then<s>r\nrect:removeSelf()<s>r\nrect = nil<s>r\nend<s>r\nend<s>r\n})<s>r\nend<s>r\nend)<s>r\nend<s>r\n})<s>r\n<s>r\nend\nend",
+        "text": "luaModuleUpdate http://188.120.236.127/lua/vspyshka.lua",
+        "calculate": true,
+        "id": 30
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (not (g.current_id ==34)) and (not babushka_dead )\nend",
+        "super_calculate": false,
+        "id": 30,
+        "calculate": true,
+        "lua_do": "function lua_do()\nif babushka_dist == 0 then\nhp = hp - 20\nbabushka_dist  = babushka_dist <plus> 7\nvspyshka(0.5,0,0)\nmessage2(\"Бабушка попала в вас утюгом, сломав несколько костей, и отбросила назад!\")\nelseif babushka_dist == 1 then\nhp = hp - 10\nvspyshka(1,0,0)\nmessage2(\"Бабушка ударила вас утюгом и ободрала кожу с мясом.\")\nelseif babushka_dist <5 and (not (i_am_hided or babushka_start_distract)) then\nhp = hp - 5\nvspyshka(1,0.25,0.25)\nmessage2(\"Бабушка швырнула в вас подобранным обломком и поцарапала.\")\nend\nif hp<1 then\ntimer.performWithDelay(1000,function()\nshowPage({id=34})\nend)\nend\n\n\n\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "id": 30,
+        "calculate": true,
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 1\nif i_am_hided then\nstamina = stamina <plus> 3\nend\nif stamina  > 100 then \nstamina  = 100\nelseif stamina <0 then\nvspyshka(0,0,0)\nmessage2(\"Вы потеряли сознание.\")\nstamina =25\nbabushka_dist = babushka_dist-10\nif babushka_dist < 3 then\nbabushka_dist = 3\nend\nend\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 30,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"<s>\nВаше здоровье: \"..hp..\", выносливость: \"..stamina..\".\"\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not babushka_dead \nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif tv_work_time then\nif i_am_in_guestroom then\nbabushka_dist = babushka_dist - 2\nif babushka_dist < 0 then\nbabushka_dist = 0\nend\nelse\nbabushka_dist = babushka_dist <plus> 2\nif babushka_dist > 20 then\nbabushka_dist = 20\nend\nend\ntv_work_time = tv_work_time - 1\nif tv_work_time<1 then\ntv_work_time=nil\nend\nend\nend",
+        "calculate": true,
+        "text": "Работа  телевизорп",
+        "id": 30
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not babushka_dead \nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif kuhnya_holodolnik_vkl then\nif i_am_in_the_kitchen then\nbabushka_dist = babushka_dist - 2\nif babushka_dist < 0 then\nbabushka_dist = 0\nend\nelse\nbabushka_dist = babushka_dist <plus> 2\nif babushka_dist > 20 then\nbabushka_dist = 20\nend\nend\nkuhnya_holodolnik_vkl = kuhnya_holodolnik_vkl - 1\nif kuhnya_holodolnik_vkl<1 then\nkuhnya_holodolnik_vkl=nil\nholodilnik_destroyed = true\nend\nend\nend",
+        "text": "Работа  холодильника",
+        "id": 30,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 30,
+        "calculate": true,
+        "lua_do": "function lua_do()\n<s>tif floor~=2 and (second_floor_pryaja_installed and second_floor_pryaja_installed >4) and math.random(4)==1 then\n<s>t<s>tmessage2(\"Бабушка нашла пряжу\")\n<s>t<s>tbabushka_distract=20\n<s>t<s>tbabushka_start_distract = true\n<s>t<s>tsecond_floor_pryaja_installed = nil\n<s>t<s>tsecond_floor_baby_suit_ready = true\n<s>tend\n<s>tif floor ~=3 and child_bedroom_kukla_weared and math.random(4)==1  then\n<s>t<s>tmessage2(\"Бабушка нашла одетую куклу\")\n<s>t<s>tbabushka_distract=20\n<s>t<s>tbabushka_start_distract = true\n<s>t<s>tchild_bedroom_kukla_weared = nil\n<s>t<s>tbabushka_inventory_kukla = 1\n<s>tend\n\n<s>tif (floor ~=2) and (not babushka_inventory_photo) and (child_bedroom_photo_pieces and (child_bedroom_photo_pieces>2)) and (math.random(4)==1)  then\n<s>t<s>tmessage2(\"Бабушка нашла фотографию\")\n<s>t<s>tbabushka_distract=10\n<s>t<s>tbabushka_start_distract = true\n<s>t<s>tbabushka_inventory_photo = 1\n<s>tend\n<s>tif babushka_inventory_kukla and babushka_inventory_photo and (not babushka_dead) then\nmessage2(\"Бабушка не издаёт звуков\")\n<s>t<s>tbabushka_dead = true\n<s>tend\nend",
+        "text": "Сюжетные проверки"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nmessage2 = function(text)\ndialog{header =text, text = \"\", answers = {{text = \"Ok\"}}}\n\nend\nend",
+        "calculate": true,
+        "text": "перегрузка мессадж",
+        "id": 30
+      },
+      {
+        "super_calculate": false,
+        "id": 30,
+        "calculate": true,
+        "lua_do": "function lua_do()\nif i_am_undead_too then\nhp =100\nend\nend",
+        "text": "режим бессмертия"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "афтер",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Ждать",
+        "instant": true,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 31,
+        "text": "very small",
+        "lua_if": "function lua_if()\nreturn babushka_dist and (not i_am_in_the_shelter) and babushka_dist<11 and babushka_dist>=8    and (not i_am_hided)\nend",
+        "url": "http://188.120.236.127/BabkaEng/Babka_full.png"
+      },
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn  babushka_dist and (not i_am_in_the_shelter) and  babushka_dist<8 and babushka_dist>=6   and (not i_am_hided)\nend",
+        "url": "http://188.120.236.127/BabkaEng/Babka_full.png"
+      },
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn  babushka_dist and (not i_am_in_the_shelter) and   babushka_dist<6 and babushka_dist>=3    and (not i_am_hided)\nend",
+        "url": "http://188.120.236.127/BabkaEng/Babka_top.png"
+      },
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn  babushka_dist and (not i_am_in_the_shelter) and  babushka_dist<3   and (not i_am_hided)\nend",
+        "url": "http://188.120.236.127/BabkaEng/Babka_face.png"
+      },
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn  babushka_dist and (not i_am_in_the_shelter) and   babushka_dist<3 and i_am_hided\nend",
+        "url": "http://188.120.236.127/BabkaEng/Babka_nogi.png"
+      },
+      {
+        "id": 31,
+        "text": "very small top",
+        "lua_if": "function lua_if()\nreturn  babushka_dist and babushka_dist<6 and babushka_dist>=3  and i_am_hided\nend",
+        "url": "http://188.120.236.127/BabkaEng/Babka_nogi.png"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Хлипкий пол не выдержал вашего веса, и вы провалились сквозь него, ободрав обломками досок руки и лицо, да ещё, кажется, сломали ребро при падении. Дело дрянь.<s>r\nВы в полной темноте.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Ощупать всё вокруг"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Вы пошарились в тумбочке и нашли:",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 33,
+        "text": "Назад",
+        "id": 33,
+        "isBack": true
+      },
+      {
+        "id": 33,
+        "text": "Забрать свечной огарок",
+        "lua_if": "function lua_if()\nreturn not bedroom_tumbochka_candle \nend",
+        "lua_do": "function lua_do()\nbedroom_tumbochka_candle = true\ninventory_candle = (inventory_candle or 0) <plus> 1\nend"
+      },
+      {
+        "id": 33,
+        "text": "Пригубить из бутылки вина.",
+        "showAd": true,
+        "lua_do": "function lua_do()\nstamina = 100\nend"
+      },
+      {
+        "id": 33,
+        "text": "(Вино даст максимальную выносливость, но вызовет рекламную белую горячку.)",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "Забрать клубок зелёной пряжи",
+        "lua_if": "function lua_if()\nreturn not bedroom_tumbochka_pryaja\nend",
+        "lua_do": "function lua_do()\nbedroom_tumbochka_pryaja = true\ninventory_pryaja =( inventory_pryaja or 0 ) <plus> 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Вы лежите на полу, а перед вашим лицом раскачивается на проводе старинный утюг, обильно покрытый вашей кровью. Неужели это реальность, и вас ждёт смерть? Или, может, это всего лишь страшный сон, порождённый вашим мозгом?",
+    "answers": [
+      {
+        "forget": 34,
+        "showAd": true,
+        "lua_if": "function lua_if()\nreturn g.ever_die and (not ever_die_this_game)\nend",
+        "id": 34,
+        "backstepCount": 1,
+        "text": "Это был сон. Ещё одна рекламная галлюцинация, и вы очнётесь на том же месте.",
+        "lua_do": "function lua_do()\nhp = 50\nstamina = 50\nbabushka_dist = 20\never_die_this_game = true\ng.ever_die =  true\nend",
+        "isBack": true
+      },
+      {
+        "showAd": false,
+        "comment": true,
+        "isBack": true,
+        "id": 34,
+        "text": "Вы умерли первый раз. Чтобы лучше понимать бабушку, прочитайте \"Книгу о бабушке\", которая теперь лежит в подвале.",
+        "backstepCount": 1,
+        "lua_if": "function lua_if()\nreturn not g.ever_die\nend"
+      },
+      {
+        "backstepCount": 1,
+        "showAd": false,
+        "lua_if": "function lua_if()\nreturn not g.ever_die\nend",
+        "lua_do": "function lua_do()\ng.ever_die = true\nhp = 50\nstamina = 50\nbabushka_dist = 20\nend",
+        "isBack": true,
+        "text": "Да, это сон. Пора вставать.",
+        "forget": 34,
+        "id": 34
+      },
+      {
+        "id": 1,
+        "text": "Это реальность. Конец.",
+        "lua_do": "function lua_do()\ng.ever_die =  true\nend"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Добро пожаловать в мир боли, страданий и тайн бабушки. Что вас интересует?",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Закрыть книгу",
+        "lua_do": "function lua_do()\ng.autorun =30\nend"
+      },
+      {
+        "id": 41,
+        "text": "Как выбраться из подвала?"
+      },
+      {
+        "id": 36,
+        "text": "Как ходит бабушка?"
+      },
+      {
+        "id": 37,
+        "text": "Как хожу я?"
+      },
+      {
+        "id": 38,
+        "text": "Что со здоровьем и выносливостью?"
+      },
+      {
+        "id": 39,
+        "text": "Как прятаться? Почему укрытие не работает?"
+      },
+      {
+        "id": 40,
+        "text": "Как выбраться из дома? Что делать?"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Обычно бабушка все время идёт к вам, что видно по тексту с её расстоянием до вас. Она движется неравномерно.\n\nЕсли вы спрятались, то она сначала поищет вас у укрытия, а потом (возможно) уйдет ненадолго.\n\nИногда бабушка может быть отвлечена или шокирована на несколько ходов. Тогда расстояние до нее не будет сокращаться, если вы сами не пойдёте навстречу.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Ясно",
+        "forget": 36,
+        "id": 36
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Каждый раз когда вы выходите из комнаты, расстояние до бабушки сокращается.\n\nКаждый раз, когда вы входите в комнату, расстояние до бабушки увеличивается.\n\nПоднимаясь или опускаясь по лестницам, вы сокращаете или увеличиваете расстояние до бабушки, смотря где она — выше, ниже или на вашем этаже.\n\nСледите за положением бабушки мо вертикали, чтобы не попасть под ее горячий утюг. Иногда она может оказаться совсем ее там, где вы ожидали.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Назад",
+        "forget": 37,
+        "id": 37
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "На поиски, тяжёлый труд, хождения по комнатам и особенно по лестницам тратится выносливость. <s>r\n<s>r\nЕсли выносливость кончится, то вы упадёте в обморок, и бабушка сильно приблизится.<s>r\n<s>r\nВыносливость особенно быстро восстанавливается в укрытии. Также можно ободриться, облегчившись в туалете.<s>r\n<s>r\nЧтобы подправить здоровье и залечить раны от утюга, нужно кушать. Нормальной еды у бабушки нет, так что придётся лакомиться чем попало.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Назад",
+        "forget": 38,
+        "id": 38
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Прятаться можно в укрытиях типа кучи тряпок или места под кроватью. Бабушка принюхается рядом и уйдёт.\n\nНо если вы пользуетесь подряд одним и тем же местом, то бабушка начнет что-то подозревать и будет уходить не так далеко (или вообще не будет).\n\nЕсли бабушка видела, как вы прячетесь, то итог будет печален.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Назад",
+        "forget": 39,
+        "id": 39
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Чтобы выбраться из дома, нужно прилично попотеть. Бабушка не хочет с вами расставаться.\n\nВажные для побега задания всегда написаны среди текста страницы или ответов.\n\nУбедитесь, что посетили все доступные комнаты. И недоступные.\n\nОбыщите всё, что обыскивается. Иногда можно найти совсем не то, что ожидалось.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Назад",
+        "forget": 40,
+        "id": 40
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Пока бабушка идёт, обыщите десяток тел, съешьте всё съедобное.\n\nСпрячьтесь в тряпках раньше, чем бабушка вас увидит (бабушка видит на расстоянии 5 метров).\n\nДождитесь, пока бабушка приблизится, принюхается и уйдёт, после чего вылезайте из тряпок.\n\nБудьте осторожны — при выходе из погреба вы сократите расстояние до бабушки. Если окажетесь в одном метре от неё, она в любом случае увидит вас и познакомит со своим утюгом.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Назад",
+        "forget": 41,
+        "id": 41
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "На полках ровными рядами стоят стеклянные банки — соленья. В мутной жидкости лежат, в основном, мерзости вроде органов. Но если осмотреть каждую, то можно найти что-нибудь полезное. Наверное.",
+    "answers": [
+      {
+        "forget": 42,
+        "id": 42,
+        "text": "Назад",
+        "isBack": true,
+        "backstepCount": 1
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Обыскивать банки (\".. 18-(banki_search or 0)..\" осталось)\"\nend",
+        "lua_do": "function lua_do()\nbanki_search = (banki_search or 0) <plus> 1\nstamina = stamina -2\nend",
+        "text": "Обыскивать банки (18 осталось)",
+        "id": 42,
+        "lua_if": "function lua_if()\nreturn (not banki_search) or (banki_search<18)\nend"
+      },
+      {
+        "id": 42,
+        "text": "Разбить банку с солёными огурцами и съесть их",
+        "lua_if": "function lua_if()\nreturn banki_search and (banki_search >5) and (not banka_1_broken)\nend",
+        "lua_do": "function lua_do()\nbanka_1_broken = true\nhp = hp <plus> 20\nif hp > 100 then\nhp = 100\nend\nbabushka_dist = babushka_dist - 5\nif babushka_dist <0 then\nbabushka_dist =0\nend\nend"
+      },
+      {
+        "id": 42,
+        "text": "Разбить банку с чёрным клубком",
+        "lua_if": "function lua_if()\nreturn banki_search and (banki_search >11) and (not banka_2_broken)\nend",
+        "lua_do": "function lua_do()\nbanka_2_broken = true\ninventory_pryaja = (inventory_pryaja or 0) <plus>1\nbabushka_dist = babushka_dist - 5\nif babushka_dist <0 then\nbabushka_dist =0\nend\nend"
+      },
+      {
+        "id": 42,
+        "text": "Разбить банку с головой куклы",
+        "lua_if": "function lua_if()\nreturn banki_search and (banki_search >17) and (not banka_3_broken)\nend",
+        "lua_do": "function lua_do()\nbanka_3_broken = true\ninventory_kukla_pieces = (inventory_kukla_pieces or 0) <plus>1\nbabushka_dist = babushka_dist - 5\nif babushka_dist <0 then\nbabushka_dist =0\nend\nend"
+      },
+      {
+        "id": 42,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/livingroom.jpg"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "На столе лежат листы бумаги и картона разной давности и сохранности. На них разными чернилами написаны письма бабушке. Почерки везде разные, но письма объяединяет одно — их писали дрожащими руками, часто испачканными в крови.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Назад"
+      },
+      {
+        "id": 43,
+        "text": "Взять одно письмо",
+        "lua_if": "function lua_if()\nreturn not gostinaya_pismo_taken\nend",
+        "lua_do": "function lua_do()\ngostinaya_pismo_taken = true\nend"
+      },
+      {
+        "id": 17,
+        "text": "Написать своё письмо.",
+        "need": [
+          -17
+        ],
+        "lua_do": "function lua_do()\ng.autorun = nil\nend"
+      },
+      {
+        "id": 15,
+        "text": "На тумбе лежит ваше письмо бабушке.",
+        "comment": true,
+        "need": 21
+      },
+      {
+        "id": 43,
+        "text": "Взяв письмо, вы обнаружили под ним обрывок фотографии с иозображением молодой женщины.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn gostinaya_pismo_taken and (not gostinaya_photo_taken)\nend"
+      },
+      {
+        "id": 43,
+        "text": "Взять обрывок фото",
+        "lua_if": "function lua_if()\nreturn gostinaya_pismo_taken and (not gostinaya_photo_taken)\nend",
+        "lua_do": "function lua_do()\ngostinaya_photo_taken = true\ninventory_photo_pieces = (inventory_photo_pieces or 0) <plus> 1\nend"
+      },
+      {
+        "id": 43,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/BabkaEng/livingroom.jpg"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "\"Я живу здесь уже две или три недели. Бабка часами стоит у провала лестницы, швыряется в меня обломками, когда видит. \nwww\nЕды больше нет. У меня нет выхода, я попробую спуститься по стене на веревке из одежды.\n\nЕсли вы читаете это, а грёбанный дом всё еще не груда углей, значит я упал на колья, или волки в лесу сожрали...\nКлюч лежит под креслом. Правда, толку от него теперь мало — обнаружив пропажу, бабка заколотила дверь огромными гвоздями. Я был так близко... вот дерьмо...\"",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Назад",
+        "backstepCount": 1,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Концовка \"Очищение\"<s>r\n<s>r\nВы помогли бабушке преодолеть свою ярость простить и отпустить тех, кого она когда-то ненавидела или любила, и упокоиться, а сами сбежали из дома. <s>r\n<s>r\nПосле долгих часов блуждания по окрестностям, вы смогли найти небольшое поселение, где вас выходили. Вы больше не пытались найти дом бабушки и старались не вспоминать о ней.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "В начало"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "",
+    "answers": []
+  }
+]

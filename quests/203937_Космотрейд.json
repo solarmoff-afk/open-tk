@@ -1,0 +1,454 @@
+[
+  {
+    "id": 1,
+    "text": "Путешествуя между множеством планет, покупайте и продавайте товары, чтобы наскрести денег на еду и топливо, а может и на свою собственную планету!",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Малая галактика (10 планет)",
+        "lua_do": "function lua_do()\nplanets_num = 10\ngalaxy_size = 25\ndefault_sell_price = 10\ndefault_buy_price = 5\nend"
+      },
+      {
+        "id": 5,
+        "text": "Средняя галактика (100 планет)",
+        "lua_do": "function lua_do()\nplanets_num = 100\ngalaxy_size = 100\ndefault_sell_price = 10\ndefault_buy_price = 5\nend"
+      },
+      {
+        "id": 5,
+        "text": "Огромная галактика (1000 планет)",
+        "lua_do": "function lua_do()\nplanets_num = 1000\ngalaxy_size = 1000\ndefault_sell_price = 10\ndefault_buy_price = 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Вы находитесь ",
+    "answers": [
+      {
+        "calculate": false,
+        "super_calculate": true,
+        "id": 3,
+        "text": "Все рабочие функции",
+        "run": [
+          4
+        ],
+        "merge": false
+      },
+      {
+        "need_ever": false,
+        "lua_text": "function lua_text()\nlocal text = \"\"\nfor i=1,planets_num do\ntext = text .. planets[i].name ..\" производит товар \"\ntext = text .. planets[i].good_production_name ..\"<s>\n\"\nend\nreturn text\nend",
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "need": 999,
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "Игрок находится",
+        "lua_text": "function lua_text()\nlocal text = \"на планете \"..planets[player.planet].name ..\n\"<s>\n<s>\nЗдесь производят \"..planets[player.planet].good_production_name\n\nif planets[player.planet].materials <1 then\ntext = text .. \", но производство остановлено из-за нехватки материалов.\"\nend\n\nlocal i = 1\nfor k,v in pairs(players) do\nif v.planet == player.planet and k ~= 1 then\nif i == 1 then\ntext = text .. \"<s>\nКроме вас здесь также: \"\nelse\ntext = text .. \", \"\nend\ntext = text .. v.name .. \" (\".. v.money ..\" кр.)\"\ni = i <plus> 1\nend\nend\n\n\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 3,
+        "text": "Космодром",
+        "lua_do": "function lua_do()\ncosmodrom_page = cosmodrom_page  or 1\nend"
+      },
+      {
+        "id": 6,
+        "text": "Корабль"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn planets[player.planet].inventory[tostring(player.planet)] and planets[player.planet].inventory[tostring(player.planet)]>0 and player.money >= planets[player.planet].sellprice\nend",
+        "lua_do": "function lua_do()\nbuygood(player)\nend",
+        "id": 2,
+        "text": "Купить ",
+        "lua_text": "function lua_text()\nreturn \"Купить \".. \nplanets[player.planet].good_production_name .. \n\" за \".. \nplanets[player.planet].sellprice .. \n\" кредитов<s>\n (осталось: \" .. \n(planets[player.planet].inventory[tostring(player.planet)] or 0) .. \", у вас: \" .. (player.inventory[tostring(player.planet)] or 0 )  .. \")\"\nend",
+        "instant": true
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "На планете нет товара.",
+        "lua_text": "function lua_text()\nreturn \"На планете нет товара \".. \nplanets[player.planet].good_production_name .. \n\" за \".. \nplanets[player.planet].sellprice .. \n\" кредитов<s>\n (осталось: \" .. \n(planets[player.planet].inventory[tostring(player.planet)] or 0) .. \", у вас: \" .. (player.inventory[tostring(player.planet)] or 0 )  .. \")\"\nend",
+        "lua_if": "function lua_if()\nreturn not (planets[player.planet].inventory[tostring(player.planet)] and planets[player.planet].inventory[tostring(player.planet)]>0)\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Не хватает денег на \".. \nplanets[player.planet].good_production_name .. \n\" за \".. \nplanets[player.planet].sellprice .. \n\" кредитов<s>\n (осталось: \" .. \n(planets[player.planet].inventory[tostring(player.planet)] or 0) .. \", у вас: \" .. (player.inventory[tostring(player.planet)] or 0 )  .. \")\"\nend",
+        "id": 2,
+        "text": "У вас недостаточно денег.",
+        "lua_if": "function lua_if()\nreturn not ( player.money >= planets[player.planet].sellprice)\nend",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "СПРОС:",
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprice = planet.buyprices[tostring(current_good_id)]\n\nprint(\"current_good_id\",current_good_id)\nreturn \"Продать \".. planets[tonumber(current_good_id)].good_production_name .. \n\" за \".. buyprice .. \" кредитов<s>\n(спрос: \" .. \nbuyneed  .. \", у вас: \" .. (player.inventory[tostring(current_good_id)]  or 0 )  .. \")\"\nend",
+        "id": 2,
+        "lua_do": "function lua_do()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nsellgood(player,current_good_id)\nend",
+        "text": "Продать",
+        "lua_if": "function lua_if()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprices = planet.buyprices[tostring(current_good_id)]\n\n\nreturn buyneed and buyneed>0 and \nplayer.inventory[tostring(current_good_id)] and player.inventory[tostring(current_good_id)] > 0\nend",
+        "instant": true
+      },
+      {
+        "lua_text": "function lua_text()\n\nlocal current_good_id\nlocal i = 1\nfor k,v in pairs(planets[player.planet].buyneed) do\nif v>0 then\nif i == current_planet_buy_page then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\ni = i<plus>1\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprice = planet.buyprices[tostring(current_good_id)]\n\nif not current_good_id then\n<s>treturn \"Ошибка\"\nend\n\nreturn \"У вас нет \".. planets[current_good_id].good_production_name .. \n\" за \".. buyprice .. \" кредитов, <s>\n(Спрос: \" .. \nbuyneed  .. \")\"\nend",
+        "id": 2,
+        "text": "У вас нет такого товара",
+        "lua_if": "function lua_if()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nif i == 0 then\nreturn false\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprices = planet.buyprices[tostring(current_good_id)]\n\n\nreturn not (current_good_id and buyneed and buyneed>0 and \nplayer.inventory[tostring(current_good_id)] and player.inventory[tostring(current_good_id)] > 0)\nend",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>1 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprices = planet.buyprices[tostring(current_good_id)]\n\n\nreturn buyneed and buyneed>0 and \nplayer.inventory[tostring(current_good_id)] and player.inventory[tostring(current_good_id)] > 0\nend",
+        "lua_do": "function lua_do()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>1 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nsellgood(player,current_good_id)\nend",
+        "id": 2,
+        "text": "Продать",
+        "lua_text": "function lua_text()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>1 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprice = planet.buyprices[tostring(current_good_id)]\n\nprint(\"current_good_id\",current_good_id)\nreturn \"Продать \".. planets[tonumber(current_good_id)].good_production_name .. \n\" за \".. buyprice .. \" кредитов<s>\n(спрос: \" .. \nbuyneed  .. \", у вас: \" .. (player.inventory[tostring(current_good_id)]  or 0 )  .. \")\"\nend",
+        "instant": true
+      },
+      {
+        "lua_if": "function lua_if()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>1 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nif i == 0 then\nreturn false\nend\nif not current_good_id then\nreturn false\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprices = planet.buyprices[tostring(current_good_id)]\n\n\nreturn not (current_good_id and buyneed and buyneed>0 and \nplayer.inventory[tostring(current_good_id)] and player.inventory[tostring(current_good_id)] > 0)\nend",
+        "id": 2,
+        "text": "У вас нет такого товара",
+        "comment": true,
+        "lua_text": "function lua_text()\n\nlocal current_good_id\nlocal i = 1\nfor k,v in pairs(planets[player.planet].buyneed) do\nif v>0 then\nif i == current_planet_buy_page<plus>1 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\ni = i<plus>1\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprice = planet.buyprices[tostring(current_good_id)]\n\nif not current_good_id then\n<s>treturn \"Ошибка\"\nend\n\nreturn \"У вас нет \".. planets[current_good_id].good_production_name .. \n\" за \".. buyprice .. \" кредитов, <s>\n(Спрос: \" .. \nbuyneed  .. \")\"\nend"
+      },
+      {
+        "lua_text": "function lua_text()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>2 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprice = planet.buyprices[tostring(current_good_id)]\n\nprint(\"current_good_id\",current_good_id)\nreturn \"Продать \".. planets[tonumber(current_good_id)].good_production_name .. \n\" за \".. buyprice .. \" кредитов<s>\n(спрос: \" .. \nbuyneed  .. \", у вас: \" .. (player.inventory[tostring(current_good_id)]  or 0 )  .. \")\"\nend",
+        "id": 2,
+        "lua_do": "function lua_do()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>2 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nsellgood(player,current_good_id)\nend",
+        "text": "Продать",
+        "lua_if": "function lua_if()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>2 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprices = planet.buyprices[tostring(current_good_id)]\n\n\nreturn buyneed and buyneed>0 and \nplayer.inventory[tostring(current_good_id)] and player.inventory[tostring(current_good_id)] > 0\nend",
+        "instant": true
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "У вас нет такого товара",
+        "lua_text": "function lua_text()\n\nlocal current_good_id\nlocal i = 1\nfor k,v in pairs(planets[player.planet].buyneed) do\nif v>0 then\nif i == current_planet_buy_page<plus>2 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\ni = i<plus>1\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprice = planet.buyprices[tostring(current_good_id)]\n\nif not current_good_id then\n<s>treturn \"Ошибка\"\nend\n\nreturn \"У вас нет \".. planets[current_good_id].good_production_name .. \n\" за \".. buyprice .. \" кредитов, <s>\n(Спрос: \" .. \nbuyneed  .. \")\"\nend",
+        "lua_if": "function lua_if()\n\nlocal current_good_id\nlocal i = 0\nfor k,v in pairs(planets[player.planet].buyneed) do\ni=i<plus>1\nif v>0 then\nif i == current_planet_buy_page<plus>2 then\n<s>tcurrent_good_id = tonumber(k)\nend\nend\nend\nif i == 0 then\nreturn false\nend\nif not current_good_id then\nreturn false\nend\nlocal planet = planets[player.planet]\nlocal buyneed = planet.buyneed[tostring(current_good_id)]\nlocal buyprices = planet.buyprices[tostring(current_good_id)]\n\n\nreturn not (current_good_id and buyneed and buyneed>0 and \nplayer.inventory[tostring(current_good_id)] and player.inventory[tostring(current_good_id)] > 0)\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn table.count(planets[player.planet].buyneed)>3\nend",
+        "instant": true,
+        "id": 2,
+        "text": "Назад",
+        "lua_do": "function lua_do()\nif current_planet_buy_page >1 then\ncurrent_planet_buy_page = current_planet_buy_page - 3\nend\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn table.count(planets[player.planet].buyneed)>3\nend",
+        "lua_do": "function lua_do()\nif table.count(planets[player.planet].buyneed) >current_planet_buy_page then\ncurrent_planet_buy_page = current_planet_buy_page <plus> 3\nend\nend",
+        "text": "Вперёд",
+        "id": 2,
+        "instant": true
+      },
+      {
+        "id": 2,
+        "text": "Баланс",
+        "lua_text": "function lua_text()\nreturn \"Ваши кредиты: \".. player.money\nend",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not autowait\nend",
+        "id": 2,
+        "lua_do": "function lua_do()\ndaypass()\nshowPage({id=2,transition = \"instant\"})\nend",
+        "instant": true,
+        "text": "Ждать",
+        "no_transition": true
+      },
+      {
+        "id": 3,
+        "lua_if": "function lua_if()\nreturn autowait\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\ndaypass()\nshowPage({id=2,transition = \"instant\"})\nend",
+        "text": "Ждать",
+        "update": [
+          3
+        ],
+        "no_transition": true
+      },
+      {
+        "lua_do": "function lua_do()\nautowait = not autowait\nend",
+        "text": "Автомат",
+        "lua_text": "function lua_text()\nreturn \"Реальное время: \" .. (autowait and \" включено.\" or \" выключено.\")\nend",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Космодром.",
+    "answers": [
+      {
+        "calculate": false,
+        "super_calculate": true,
+        "id": 3,
+        "text": "Все рабочие функции",
+        "run": [
+          4
+        ],
+        "merge": false
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Вы находитесь:<s>\n<s>\n\" .. planettext(true)\nend",
+        "merge": false,
+        "id": 3,
+        "text": "Игрок находится",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nplanet_output_num = (cosmodrom_page-1)*3 <plus> 1\nreturn true\nend",
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "Расчёт дистанций",
+        "lua_do": "function lua_do()\nlocal v2 = planets[player.planet]\nplanets_distances = {}\nfor k,v in pairs(planets) do\nplanets_distances[k] = {\nid = k,\ndist = ((v.x-v2.x)^2<plus>(v.y-v2.y)^2<plus>(v.z-v2.z)^2)^0.5,\n}\nend\ntable.sort(planets_distances,function(a,b)\nreturn a.dist<b.dist\n end)\nend"
+      },
+      {
+        "right_answer": false,
+        "lua_do": "function lua_do()\ncurrent_planet_buy_page=1\nend",
+        "super_calculate": false,
+        "id": 2,
+        "text": "Рынок",
+        "calculate": false,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "super_calculate": false,
+        "id": 6,
+        "calculate": false,
+        "text": "Корабль",
+        "left_answer": false
+      },
+      {
+        "id": 3,
+        "text": "Ближайшие планеты:",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn planets_distances[(cosmodrom_page-1)*3<plus>2]\nend",
+        "comment": true,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn planettext()\nend",
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if()\nreturn planets_distances[(cosmodrom_page-1)*3<plus>2] \nend",
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nlocal dist = math.floor(planets_distances[(cosmodrom_page-1)*3<plus>2].dist)\nfor i=1,flytime(dist) do\ndaypass()\nend\nplayer.planet = tonumber(planets_distances[(cosmodrom_page-1)*3<plus>2].id)\ncosmodrom_page = 1\nend",
+        "lua_text": "function lua_text()\nreturn planetbuttontext(2)\nend"
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn planettext()\nend",
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn planets_distances[(cosmodrom_page-1)*3<plus>3]\nend",
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if()\nreturn planets_distances[(cosmodrom_page-1)*3<plus>3]\nend",
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nlocal dist = math.floor(planets_distances[(cosmodrom_page-1)*3<plus>3].dist)\nfor i=1,flytime(dist) do\ndaypass()\nend\nplayer.planet = tonumber(planets_distances[(cosmodrom_page-1)*3<plus>3].id)\ncosmodrom_page = 1\nend",
+        "lua_text": "function lua_text()\nreturn planetbuttontext(3)\nend"
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn planettext()\nend",
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn planets_distances[(cosmodrom_page-1)*3<plus>4]\nend",
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if()\nreturn planets_distances[(cosmodrom_page-1)*3<plus>4]\nend",
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nlocal dist = math.floor(planets_distances[(cosmodrom_page-1)*3<plus>4].dist)\nfor i=1,flytime(dist) do\ndaypass()\nend\nplayer.planet = tonumber(planets_distances[(cosmodrom_page-1)*3<plus>4].id)\ncosmodrom_page = 1\nend",
+        "lua_text": "function lua_text()\nreturn planetbuttontext(4)\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nif cosmodrom_page > 1 then\ncosmodrom_page = cosmodrom_page - 1\nend\nend",
+        "text": "Назад",
+        "super_calculate": false,
+        "id": 3,
+        "instant": true,
+        "calculate": false,
+        "left_answer": true
+      },
+      {
+        "id": 3,
+        "right_answer": true,
+        "text": "Вперёд",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif cosmodrom_page <= math.ceil(planets_num/3) then\ncosmodrom_page = cosmodrom_page <plus> 1\nend\nend",
+        "instant": true,
+        "calculate": false,
+        "left_answer": false
+      },
+      {
+        "lua_do": "function lua_do()\ncosmodrom_page = 1\nend",
+        "right_answer": false,
+        "calculate": false,
+        "super_calculate": false,
+        "id": 3,
+        "text": "В начало",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not autowait\nend",
+        "id": 3,
+        "lua_do": "function lua_do()\ndaypass()\nshowPage({id=3,transition = \"instant\"})\nend",
+        "text": "Ждать",
+        "instant": true,
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not autowait\nend",
+        "id": 3,
+        "lua_do": "function lua_do()\nfor i = 1,365 do\ndaypass()\nend\nshowPage({id=3,transition = \"instant\"})\nend",
+        "text": "Ждать год",
+        "instant": true,
+        "no_transition": true
+      },
+      {
+        "id": 3,
+        "lua_if": "function lua_if()\nreturn autowait\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\ndaypass()\nshowPage({id=3,transition = \"instant\"})\nend",
+        "text": "Ждать",
+        "update": [
+          3
+        ],
+        "no_transition": true
+      },
+      {
+        "id": 3,
+        "text": "Автомат",
+        "lua_text": "function lua_text()\nreturn \"Реальное время: \" .. (autowait and \" включено.\" or \" выключено.\")\nend",
+        "lua_do": "function lua_do()\nautowait = not autowait\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Здесь все сервисные функции",
+    "answers": [
+      {
+        "module": true,
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ndaypass = function()<s>r\n<s>tfor k,v in pairs(planets) do<s>r\n<s>t<s>tlocal planet = planets[k]<s>r\n<s>t<s>tif planet.materials>0 then<s>r\n<s>t<s>t<s>tplanet.inventory[tostring(k)] = (planet.inventory[tostring(k)] or 0) <plus> 1<s>r\n<s>t<s>t<s>tplanet.materials = planet.materials - 1<s>r\n<s>t<s>t<s>tif math.random(2) == 1 then<s>r\n<s>t<s>t<s>t<s>tplanet.sellprice = planet.sellprice - 1<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>telseif math.random(10) == 1 then<s>r\n<s>t<s>t<s>tplanet.materials = planet.materials <plus> 1<s>r\n<s>t<s>tend<s>r\n<s>r\n<s>t<s>tif planet.trade_agent and planets[planet.trade_agent].buyneed[tostring(k)] and planets[planet.trade_agent].buyneed[tostring(k)] > 0 then<s>r\n<s>t<s>t<s>t--planets[planet.trade_agent].buyneed[tostring(k)] = planets[planet.trade_agent].buyneed[tostring(k)] <plus> 1<s>r\n<s>t<s>telse<s>r\n<s>t<s>t<s>tlocal spros = math.random(planets_num)<s>r\n<s>t<s>t<s>tplanets[spros].buyneed[tostring(k)] = 10--planet.inventory[tostring(k)]<s>r\n<s>t<s>t<s>tplanets[spros].buyprices[tostring(k)] = (planets[spros].buyprices[tostring(k)] or default_buy_price) <plus> 1<s>r\n<s>t<s>t<s>tplanet.trade_agent = spros <s>r\n<s>t<s>tend<s>r\n<s>r\n<s>t<s>tfor kk,vv in pairs(planet.buyprices) do<s>r\n<s>t<s>t<s>t-- if math.random(2) == 1 then<s>r\n<s>t<s>t<s>t<s>tplanet.buyprices[kk] = planet.buyprices[kk] <plus> 1<s>r\n<s>t<s>t<s>t-- end<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>r\n<s>t<s>t-- if math.random(2) == 1 then<s>r\n<s>t<s>t<s>t-- planet.sellprice = planet.sellprice - 1<s>r\n<s>t<s>t-- end<s>r\n<s>t<s>t<s>r\n<s>t<s>tif planet.sellprice < default_sell_price then<s>r\n<s>t<s>t<s>tplanet.sellprice = default_sell_price<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\n<s>tfor k,c_player in pairs(players) do<s>r\n<s>t<s>t--if k ~=1 then<s>r\n<s>t<s>t<s>tif players[k].flytime then<s>r\n<s>t<s>t<s>t<s>tplayers[k].flytime = <s>r\n<s>t<s>t<s>t<s>tplayers[k].flytime - 1<s>r\n<s>r\n<s>t<s>t<s>t<s>tif players[k].flytime <1 then<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].flytime = nil<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].planet  = tonumber(players[k].target) --c_player.inventory --planets[c_player.planet].trade_agent or math.random(planets_num)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tif players[k].planet == player.planet then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tmessage(\"Игрок \"..players[k].name .. \" прилетел на \"..planets[players[k].planet].name)<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>telseif <s>r\n<s>t<s>t<s>t--table.count(c_player.inventory) == 0 <s>r\n<s>t<s>t<s>tnot players[k].target<s>r\n<s>t<s>t<s>tthen -- пустой багажник, надо искать где закупаться<s>r\n<s>t<s>t<s>t<s>tif c_player.money>=  planets[players[k].planet].sellprice and --можно закупиться там где ты есть. Хватает денег <s>r\n<s>t<s>t<s>t<s>tplanets[players[k].planet].inventory[tostring(players[k].planet)]>0 and -- и товара<s>r\n<s>t<s>t<s>t<s>tplanets[players[k].planet].sellprice <= planets[planets[players[k].planet].trade_agent].buyprices[tostring(players[k].planet)] -- и сделка будет выгодной<s>r\n<s>t<s>t<s>t<s>tthen <s>r\n<s>t<s>t<s>t<s>t<s>tlocal flag = true<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tlocal try = 0<s>r\n<s>t<s>t<s>t<s>t<s>tlocal budget = players[k].money * players[k].risk<s>r\n<s>t<s>t<s>t<s>t<s>tlocal spended = 0<s>r\n<s>t<s>t<s>t<s>t<s>twhile flag do<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tflag = buygood(players[k])<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttry = try <plus> (flag and 1 or 0)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tspended = spended <plus> (flag and planets[planets[players[k].planet].trade_agent].buyprices[tostring(players[k].planet)] or 0)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t-- if try >= c_player.unpatience then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t-- flag = false<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t-- end<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tif spended >= budget then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tflag = false<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tif try > 0 and players[k].planet == player.planet then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tmessage(\"Игрок \"..players[k].name .. \" купил x\".. try .. \" \" .. planets[players[k].planet].good_production_name)<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].source = players[k].planet<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].target = planets[players[k].planet].trade_agent<s>r\n<s>t<s>t<s>t<s>telse -- дорого, летим на случайную планету<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].target = math.random(planets_num)<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>telseif players[k].target ~= players[k].planet  then -- чёто купили, надо лететь, ещё не прилетели<s>r\n<s>t<s>t<s>t<s>t--for k,v in pairs(c_player.inventory) do<s>r\n<s>t<s>t<s>t<s>tif players[k].planet == player.planet then<s>r\n<s>t<s>t<s>t<s>t<s>tmessage(\"Игрок \"..players[k].name .. \" улетел на \"..planets[players[k].target].name)<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tlocal dist  = <s>r\n<s>t<s>t<s>t<s>t((planets[players[k].target].x - planets[players[k].planet].x)^2<plus><s>r\n<s>t<s>t<s>t<s>t(planets[players[k].target].y - planets[players[k].planet].y)^2<plus><s>r\n<s>t<s>t<s>t<s>t(planets[players[k].target].z - planets[players[k].planet].z)^2)^0.5<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tplayers[k].flytime = flytime(dist)<s>r\n<s>t<s>t<s>t<s>tplayers[k].planet = nil<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t--break<s>r\n<s>t<s>t<s>t<s>t--end<s>r\n<s>t<s>t<s>telse -- прилетели<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tlocal flag = true<s>t<s>r\n<s>t<s>t<s>t<s>tlocal try = 0<s>t<s>r\n<s>t<s>t<s>t<s>tlocal last_price = 0<s>r\n<s>t<s>t<s>t<s>twhile flag do<s>r\n<s>t<s>t<s>t<s>t<s>tlast_price = planets[players[k].planet].buyprices[tostring(players[k].source)] or last_price<s>r\n<s>t<s>t<s>t<s>t<s>tflag = sellgood(players[k],players[k].source)<s>r\n<s>t<s>t<s>t<s>t<s>ttry = try <plus> (flag and 1 or 0)<s>r\n<s>t<s>t<s>t<s>t--<s>tif try >= c_player.unpatience then<s>r\n<s>t<s>t<s>t<s>t--<s>t<s>tflag = false<s>r\n<s>t<s>t<s>t<s>t--<s>tend<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tif try > 0 and players[k].planet == player.planet then<s>r\n<s>t<s>t<s>t<s>t<s>tmessage(\"Игрок \"..<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].name .. <s>r\n<s>t<s>t<s>t<s>t<s>t\" продал x\"..<s>r\n<s>t<s>t<s>t<s>t<s>ttry .. \" \" .. <s>r\n<s>t<s>t<s>t<s>t<s>tplanets[players[k].source].good_production_name<s>r\n<s>t<s>t<s>t<s>t<s>t)<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t-- if not (players[k].inventory[tostring(players[k].source)] and players[k].inventory[tostring(players[k].source)] >0 and <s>r\n<s>t<s>t<s>t<s>t-- planets[players[k].planet].buyneed[tostring(players[k].source)] and planets[players[k].planet].buyneed[tostring(players[k].source)]>0) then<s>r\n<s>t<s>t<s>t<s>t<s>t-- если у игрока закончились товары или на планете закончился спрос, то прекратить продавать<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].source = nil<s>r\n<s>t<s>t<s>t<s>t<s>tplayers[k].target = nil<s>r\n<s>t<s>t<s>t<s>t-- end<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t--end<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\nend<s>r\n<s>r\nfunction flytime(parsecs)<s>r\n<s>r\n<s>r\n<s>r\nreturn math.floor((parsecs/15)^2)<s>r\nend<s>r\n<s>r\n<s>r\n<s>r\nbuygood = function(c_player)<s>r\n<s>r\n<s>tif c_player.money >= planets[c_player.planet].sellprice and planets[c_player.planet].inventory[tostring(c_player.planet)]>0 then<s>r\n<s>t<s>tc_player.money = c_player.money - planets[c_player.planet].sellprice<s>r\n<s>t<s>tprint(\"Игрок \"..c_player.name .. \" купил \".. planets[c_player.planet].good_production_name .. \" за \" .. planets[c_player.planet].sellprice)<s>r\n<s>t<s>tc_player.inventory[tostring(c_player.planet)] = (c_player.inventory[tostring(c_player.planet)] or 0) <plus> 1<s>r\n<s>t<s>tplanets[c_player.planet].inventory[tostring(c_player.planet)] = planets[c_player.planet].inventory[tostring(c_player.planet)] - 1<s>r\n<s>t--<s>tplanets[c_player.planet].sellprice = planets[c_player.planet].sellprice <plus> math.floor(1<plus>planets[c_player.planet].sellprice/10)<s>r\n<s>t<s>tplanets[c_player.planet].sellprice = planets[c_player.planet].sellprice <plus> 1<s>r\n<s>t<s>treturn true<s>r\n<s>tend<s>r\n<s>r\nend<s>r\n<s>r\nsellgood = function(c_player,good)<s>r\n<s>r\n<s>r\n<s>tlocal planet = planets[c_player.planet]<s>r\n<s>tlocal buyneed = planet.buyneed[tostring(good)]<s>r\n<s>tlocal buyprice = planet.buyprices[tostring(good)]<s>r\n<s>r\n<s>tif c_player.inventory[tostring(good)] and c_player.inventory[tostring(good)] >= 1 and buyneed  and buyneed>0 then<s>r\n<s>r\n<s>t<s>tc_player.money = c_player.money <plus> buyprice<s>r\n<s>r\n<s>t<s>tc_player.inventory[tostring(good)] = (c_player.inventory[tostring(good)] or 0) - 1<s>r\n<s>t<s>tplanet.buyneed[tostring(good)] = planet.buyneed[tostring(good)] - 1<s>r\n<s>t<s>t<s>r\n<s>t<s>tplanet.materials = <s>r\n<s>t<s>tplanet.materials <plus> 1 <s>r\n<s>t<s>t<s>r\n<s>t<s>tprint(\"Игрок \"..c_player.name .. \" продал  \".. planets[good].good_production_name ..\" за \" .. buyprice)<s>r\n<s>t<s>t<s>r\n<s>t<s>t--planet.buyprices[tostring(good)] = math.floor(planet.buyprices[tostring(good)] * 0.98)<s>r\n<s>t<s>tplanet.buyprices[tostring(good)] = planet.buyprices[tostring(good)] - 1<s>r\n<s>t<s>tif planet.buyneed[tostring(good)]<1 then<s>r\n<s>t<s>t<s>tplanet.buyneed[tostring(good)] = nil<s>r\n<s>t<s>tend<s>r\n<s>t<s>tif c_player.inventory[tostring(good)]<1 then<s>r\n<s>t<s>t<s>tc_player.inventory[tostring(good)] = nil<s>r\n<s>t<s>tend<s>r\n<s>r\n<s>t<s>t--if good == c_player.planet then<s>r\n<s>t<s>t--<s>tplanets[c_player.planet].inventory[tostring(c_player.planet)] = planets[c_player.planet].inventory[tostring(c_player.planet)] <plus> 1<s>r\n<s>t<s>t--end<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>treturn true<s>r\n<s>tend<s>r\n<s>r\nend<s>r\n<s>r\n<s>r\n<s>r\nplanettext = function(isCurrent)<s>r\n<s>tif not isCurrent then<s>r\n<s>t<s>tplanet_output_num = (planet_output_num or 0) <plus>1<s>r\n<s>tend<s>r\n<s>tif not planets_distances[planet_output_num] then<s>r\n<s>t<s>treturn \"Ошибка\"<s>r\n<s>tend<s>r\n<s>tlocal planet = planets[planets_distances[planet_output_num].id]<s>r\n<s>tif isCurrent then<s>r\n<s>t<s>tplanet = planets[player.planet]<s>r\n<s>tend<s>r\n<s>tlocal text = \"Планета \" .. planet.name .. <s>r\n<s>t\", <s>\nПредл: \".. <s>r\n<s>tplanet.good_production_name .. \", \".. planet.inventory[tostring(planet.id)]<s>r\n<s>t.. \"шт. Цена: \".. planet.sellprice<s>r\n<s>tfor k,v in pairs(planet.buyneed) do<s>r\n<s>ttext = text ..\"<s>\nСпрос: \".. planets[tonumber(k)].good_production_name .. \", \" .. v .. \" шт. Цена: \" .. planet.buyprices[k]<s>r\n<s>tend<s>r\n<s>r\n<s>tlocal i = 1<s>r\n<s>tfor k,v in pairs(players) do<s>r\n<s>t<s>tif v.planet == planet.id then<s>r\n<s>t<s>t<s>tif i == 1 then<s>r\n<s>t<s>t<s>t<s>ttext = text .. \"<s>\nГости планеты: \"<s>r\n<s>t<s>t<s>telse<s>r\n<s>t<s>t<s>t<s>ttext = text .. \", \"<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>ttext = text .. v.name .. \" (\"..v.money .. \" кр.)\"<s>r\n<s>t<s>ti = i <plus> 1<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>r\n<s>treturn text<s>r\nend<s>r\n<s>r\n<s>r\nshipgoodtext = function(ii)<s>r\n<s>tlocal text = \"\"<s>r\n<s>tlocal i = 0<s>r\n<s>tfor good_id,good_quantity in pairs(player.inventory) do<s>r\n<s>t<s>ti = i <plus> 1<s>r\n<s>t<s>tif i == ship_goods_num <plus> ii then<s>r\n<s>t<s>t<s>ttext = text ..\"Товар: \".. planets[tonumber(good_id)].good_production_name .. \", \" .. good_quantity .. \" шт. \"<s>r\n<s>t<s>t<s>t--\"<s>\nПредложение на планете: \" .. planets[tonumber(good_id)].name<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tfor kk,vv in pairs(planets_distances) do<s>r\n<s>t<s>t<s>t<s>tif vv.id == planets[tonumber(good_id)].trade_agent then<s>r\n<s>t<s>t<s>t<s>t<s>ttext = text ..\"<s>\nСпрос на планете: \".. <s>r\n<s>t<s>t<s>t<s>t<s>tplanets[vv.id].name .. <s>r\n<s>t<s>t<s>t<s>t<s>t\", \".. planets[vv.id].buyprices[tostring(good_id)] .. <s>r\n<s>t<s>t<s>t<s>t<s>t\" кр, \".. (planets[vv.id].buyneed[tostring(good_id)] or 0) ..<s>r\n<s>t<s>t<s>t<s>t<s>t\" шт.<s>\nНажмите, чтобы просмотреть.\"<s>r\n<s>t<s>t<s>t<s>t<s>tbreak<s>r\n<s>t<s>t<s>t<s>tend<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tbreak<s>r\n<s>t<s>tend<s>t<s>t<s>r\n<s>tend<s>r\n<s>treturn text<s>r\nend<s>r\n<s>r\nshipgoodbutton = function(ii)<s>r\n<s>r\n<s>t<s>r\n<s>tlocal i = 0<s>r\n<s>tfor k,v in pairs(player.inventory) do<s>r\n<s>t<s>ti = i <plus> 1<s>r\n<s>t<s>tif i == ship_goods_num <plus> ii then<s>r\n<s>t<s>t<s>tfor kk,vv in pairs(planets_distances) do<s>r\n<s>t<s>t<s>t<s>tif vv.id == planets[tonumber(k)].trade_agent then<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tcosmodrom_page = math.floor((kk<plus>1)/3)<s>r\n<s>t<s>t<s>t<s>t<s>tcosmodrom_page = cosmodrom_page>0 and cosmodrom_page or 1<s>r\n<s>t<s>t<s>t<s>t<s>tshowPage{id=3}<s>r\n<s>t<s>t<s>t<s>t<s>tbreak<s>r\n<s>t<s>t<s>t<s>tend<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tbreak<s>r\n<s>t<s>tend<s>t<s>t<s>r\n<s>tend<s>r\n<s>treturn text<s>r\nend<s>r\n<s>r\n<s>r\nfunction planetbuttontext(ii)<s>r\n<s>tif not planets_distances[planet_output_num] then<s>r\n<s>t<s>treturn \"Ошибка\"<s>r\n<s>tend<s>r\n<s>tlocal dist = math.floor(planets_distances[planet_output_num].dist)<s>r\n<s>tlocal planet = planets[planets_distances[(cosmodrom_page-1)*3<plus>ii].id]<s>r\n<s>treturn  \"Лететь \".. dist .. \" парсеков, \"..flytime(dist)..<s>r\n<s>t\" дней<s>\n(x \".. ((math.floor(planet.x - planets[player.planet].x) > 0) and \"<plus>\" or \"–\") ..<s>r\n<s>tmath.abs(math.floor(planet.x - planets[player.planet].x)) ..<s>r\n<s>t\", y \" .. ((math.floor(planet.y - planets[player.planet].y)  > 0) and \"<plus>\" or \"–\").. <s>r\n<s>tmath.abs(math.floor(planet.y - planets[player.planet].y)) .. <s>r\n<s>t\", z \" .. <s>t((math.floor(planet.z - planets[player.planet].z) > 0) and \"<plus>\" or \"–\")..<s>r\n<s>tmath.abs(math.floor(planet.z - planets[player.planet].z)) .. <s>r\n<s>t\" от \" .. planets[player.planet].name ..<s>r\n<s>t\" )\"<s>r\nend<s>r\n<s>r\n\nend",
+        "calculate": false,
+        "id": 4,
+        "text": "luaModuleUpdate http://188.120.236.127/cosmotrade/mechanics.lua"
+      },
+      {
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "need": 999
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Что желаете сделать?",
+    "answers": [
+      {
+        "module": true,
+        "lua_text": "function lua_text()\nreturn \"Создать новую галактику\"\nend",
+        "lua_do": "function lua_do()\n-- planets_num = 100<s>r\n-- galaxy_size = 1000<s>r\n-- default_sell_price = 10<s>r\n-- default_buy_price = 5<s>r\n<s>r\nlocal planets_names_base = <s>r\n{<s>r\n<s>t{\"Ко\",\"Окси\",\"Мега\",\"Пиро\",\"За\",\"Фи\",\"Кси\",\"Ра\",\"Пу\",\"Иль-\"},<s>r\n<s>t{\"бито\",\"раки\",\"зо\",\"фил\",\"гжен\",\"циано\",\" рэд\",\"чер\",\"зат\",\"кратос\",\"\"},<s>r\n<s>t{\"-центавра\",\" кольт\",\" Ива\",\" Ля\",\"ту\",\"по\",\"др\",\"кин\",\"льмо\",\"вно\",\"\"},<s>r\n}<s>r\nlocal good_production_names_base = <s>r\n{<s>r\n<s>t{\"Зелёный \",\"Квази\",\"Чистый \",\"Красный \",\"Белый \",\"Чёрный \",\"Пси-\",\"Аква\",\"Гидро\",\"Псевдо\",\"Авто\",\"Заразный \", \"Синий \", \"Летучий \", \"Тяжёлый \", \"Бром\", \"Заряженный \",\"Главный \",\"Астро\",\"Настоящий \",\"Страстный \",\"Ликвидный \",\"Последний \",\"Смешной \",\"Не очень \",\"Кварковый \",\"Космический \",\"Гравитационный \",\"Лазерный \",\"Боевой \",\"Торговый \",\"Карго\"},<s>r\n<s>t{\"зло\",\"добро\",\"волно\",\"пере\",\"недо\",\"кило\",\"быстро\",\"бар\",\"зак\",\"киль\",\"кру\",\"пар\",\"зад\",\"вту\",\"кал\",\"че\",\"дров\",\"серд\",\"ионный \",\"керамо\",\"кремационный \",\"травяной \",\"клю\",\"колю\",\"блю\",\"блё\",\"вонь\",\"дурь\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",},<s>r\n<s>t{\"излучатель\",\"гравитатор\",\"уничтожитель\",\"натуратор\",\"окислитель\",\"гидратор\",\"\",\"вибратор\",\"проникатель\",\"насыщатель\",\"ГЭКК\",\"распространитель\",\"увлажнитель\",\"сос\",\"загрязнитель\",\"журнал\",\"поток\",\"глаз\",\"костыль\",\"компьютер\",\"телефон\",\"отстой\",\"хлам\",\"коридор\",\"лазер\",\"поглотитель\",\"гном\",\"сыр\",\"бук\",\"дуб\",\"стол\",\"пар\",\"ликвидатор\",\"бык\",\"сигнализатор\",\"контрацептив\",\"завал\",\"лоризатор\",\"опорожнятель\",\"дефлоратор\",\"обрезатель\",\"рост\",\"рот\",\"пук\",\"козёл\",\"хомяк\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",},<s>r\n}<s>r\n<s>r\nlocal male_names = {<s>r\n{\"Арн\",\"Спект\",\"Валь\",\"Дамбл\",\"Макс\",\"Алекс\",\"Пё\",\"Кра\",\"Анкило\",\"Анти\",\"Ша\",\"Леген\",\"Дмит\",\"Эр\",\"Эд\",\"Ха\",\"Кон\",},<s>r\n{\"ольд\",\"рум\",\"хен\",\"дор\",\"имилиан\",\"андр\",\"\",\"тр\",\"тос\",\"завр\",\"херо\",\"бер\",\"дорик\",\"рий\",\"нест\",\"вард\",\"биб\",\"нор\",},<s>r\n}<s>r\nlocal female_names = {<s>r\n{\"Дж\",\"Викто\",\"Алекс\",\"Клео\",<s>t\"Оль\",\"Клемен\",<s>t\"Еле\",<s>t\"Брати\",\"Ната\",<s>t\"Элео\",\"Ли\",\"Окса\",<s>t\"Ири\",\"Эл\",\"Тать\"},<s>r\n{\"ейн\",\"рия\",\"андра\",\"патра\",<s>t\"га\",\"тина\",<s>t\"на\",<s>t\"слава\",\"ша\",<s>t\"нора\",\"я\",\"на\",<s>t\"шка\",\"ен\",\"яна\"},<s>r\n}<s>r\n<s>r\n-- Джон<s>r\n-- Джек<s>r\n-- Бэн<s>r\n-- Рассел<s>r\n-- Майкл<s>r\n-- Стив<s>r\n-- Майка<s>r\n-- Джоэл<s>r\n-- Рон<s>r\n-- Вильям прям американское<s>r\n <s>r\n-- Шекспир же из Вашингтона<s>r\n<s>r\nplanets = {}<s>r\nfor i=1,planets_num do<s>r\n<s>tlocal planet = {<s>r\n<s>t<s>tx = math.random(galaxy_size),<s>r\n<s>t<s>ty = math.random(galaxy_size),<s>r\n<s>t<s>tz = math.random(galaxy_size),<s>r\n<s>t<s>tid = i,<s>r\n<s>t<s>tname = planets_names_base[1][math.random(#planets_names_base[1])]..<s>r\n<s>t<s>t<s>tplanets_names_base[2][math.random(#planets_names_base[2])]..<s>r\n<s>t<s>t<s>tplanets_names_base[3][math.random(#planets_names_base[3])]<s>r\n<s>t<s>t,<s>r\n<s>t<s>tgood_production_name = good_production_names_base[1][math.random(#good_production_names_base[1])]..<s>r\n<s>t<s>t<s>tgood_production_names_base[2][math.random(#good_production_names_base[2])]..<s>r\n<s>t<s>t<s>tgood_production_names_base[3][math.random(#good_production_names_base[3])]<s>r\n<s>t<s>t,<s>r\n<s>t<s>tinventory = {},<s>r\n<s>t<s>tsellprice = default_sell_price,<s>r\n<s>t<s>tbuyprices = {},<s>r\n<s>t<s>tbuyneed = {},<s>r\n<s>t<s>tmaterials = 10,<s>r\n<s>t}<s>r\n<s>tplanet.inventory[tostring(i)]=1<s>r\n<s>t--local rand_good = math.random(planets_num)<s>r\n<s>t--planet.buyneed[tostring(rand_good)]=1<s>r\n<s>t--planet.buyprices[tostring(rand_good)]=default_buy_price<s>r\n<s>r\n<s>tplanets[i] = planet<s>r\nend<s>r\n<s>r\nplayers = {}<s>r\nplayer = {<s>r\n<s>tsex = \"m\",<s>r\n<s>tname = \"Вы\",<s>r\n<s>tplanet = 1,<s>r\n<s>tinventory = {},<s>r\n<s>tmoney = 100,<s>r\n}<s>r\n--table.insert(players,player)<s>r\n--players[1] = player<s>r\n<s>r\nfor i = 1,1<plus>math.floor(planets_num) do<s>r\n<s>tlocal player = {}<s>r\n<s>tplayer.sex = ({\"f\",\"m\"})[math.random(2)]<s>r\n<s>tlocal names<s>r\n<s>tif player.sex == \"m\" then<s>r\n<s>t<s>tnames = male_names<s>r\n<s>telse<s>r\n<s>t<s>tnames = female_names<s>r\n<s>tend<s>r\n<s>tplayer.name = names[1][math.random(#names[1])] ..  names[2][math.random(#names[2])]<s>r\n<s>tplayer.money = 100<s>r\n<s>tplayer.inventory = {}<s>r\n<s>tplayer.planet = math.random(planets_num)<s>r\n<s>tplayer.unpatience = i % 100<s>r\n<s>tplayer.risk = (i%5<plus>1)/5<s>r\n<s>ttable.insert(players,player)<s>r\n<s>t--print(player.name)<s>r\nend<s>r\n<s>r\ncurrent_planet_buy_page = 1\nend",
+        "text": "luaModuleUpdate http://188.120.236.127/cosmotrade/create_world.lua",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Груз на корабле:",
+    "answers": [
+      {
+        "calculate": false,
+        "super_calculate": true,
+        "id": 3,
+        "text": "Все рабочие функции",
+        "run": [
+          4
+        ],
+        "merge": false
+      },
+      {
+        "id": 3,
+        "text": "Космодром",
+        "lua_do": "function lua_do()\ncosmodrom_page = cosmodrom_page  or 1\nend"
+      },
+      {
+        "id": 2,
+        "text": "Рынок"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "Расчёт дистанций",
+        "lua_do": "function lua_do()\nlocal v2 = planets[player.planet]\nplanets_distances = {}\nfor k,v in pairs(planets) do\nplanets_distances[k] = {\nid = k,\ndist = ((v.x-v2.x)^2<plus>(v.y-v2.y)^2<plus>(v.z-v2.z)^2)^0.5,\n}\nend\ntable.sort(planets_distances,function(a,b)\nreturn a.dist<b.dist\n end)\n\n\nship_goods_num = ship_goods_num   or 1\n\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \nshipgoodtext(0)\nend",
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nshipgoodbutton(0)\nend",
+        "no_transition": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \nshipgoodtext(1)\nend",
+        "lua_do": "function lua_do()\nshipgoodbutton(1)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 6,
+        "no_transition": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \nshipgoodtext(2)\nend",
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nshipgoodbutton(2)\nend",
+        "no_transition": true
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nif ship_goods_num  >3 then\nship_goods_num    = ship_goods_num    -3\nend\nend",
+        "text": "Назад",
+        "id": 6,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_do": "function lua_do()\nship_goods_num   = ship_goods_num    <plus> 3\nend",
+        "text": "Вперёд",
+        "instant": true,
+        "id": 6
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  }
+]

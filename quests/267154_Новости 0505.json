@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 51715 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор masha katsuba написал еще 34184.6 слов в квесте \"Границы тьмы\"."
+      },
+      {
+        "targetbookid": "230986",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Границы тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Monkey написал еще 29024 слов в квесте \"Стоп, снято!\"."
+      },
+      {
+        "targetbookid": "264609",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Стоп, снято!\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Star Aelita  написал еще 20751.4 слов в квесте \"Твой выбор: Созидай или Разрушай\"."
+      },
+      {
+        "targetbookid": "266938",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Твой выбор: Созидай или Разрушай\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mey_Igarasi написал еще 16743.8 слов в квесте \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "targetbookid": "239805",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

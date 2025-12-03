@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 47096 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "158580",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Безымянный написал еще 34565 слов в квесте \"Счастье\"."
+      },
+      {
+        "targetbookid": "157794",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Счастье\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Yulia Oayder  написал еще 27439 слов в квесте \"Возвращение к истокам\"."
+      },
+      {
+        "targetbookid": "154825",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Возвращение к истокам\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ana Ray написал еще 25629 слов в квесте \"24 часа в тени\"."
+      },
+      {
+        "targetbookid": "157206",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"24 часа в тени\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Admiral Atom\n написал еще 24532 слов в квесте \"NO MERCY\"."
+      },
+      {
+        "targetbookid": "157118",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"NO MERCY\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

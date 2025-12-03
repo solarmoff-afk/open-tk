@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 27315 слов в квесте \"Подземелье \"."
+      },
+      {
+        "targetbookid": "185185",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Подземелье \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 27081 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Gekata Silverhant написал еще 24683 слов в квесте \"Кровь и пламя, эльфийские хроники\"."
+      },
+      {
+        "targetbookid": "164444",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Кровь и пламя, эльфийские хроники\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Тачибана Аяме\n написал еще 19352 слов в квесте \"Я-Богиня? \"."
+      },
+      {
+        "targetbookid": "170509",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Я-Богиня? \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ордон\n написал еще 18021 слов в квесте \"Орден\"."
+      },
+      {
+        "targetbookid": "153759",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Орден\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

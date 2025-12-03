@@ -1,0 +1,7657 @@
+[
+  {
+    "id": 1,
+    "text": "Это помощник для ролевой игры в чате. Это не игра.(по крайней мере пока что).\nКнопка для Voxbee убирает некоторую информацию из квеста и создана для удобства Автора.\nДанный квест предназначался для моих друзей, но если вам интересно, можете пользоваться на здоровье.\nЕсли заходите в первый раз, прочтите справочник. Удачной игры)\n\nVoxbee(Автор) — придумал и реализовал проект\n\nOswald(Ответственный за визуальное оформление) — отвечал за внешний вид квеста",
+    "answers": [
+      {
+        "id": 65,
+        "text": "Начать",
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_set": [
+          "xar",
+          3,
+          "golod",
+          100,
+          "vida",
+          100,
+          "xp",
+          250,
+          "cila",
+          0,
+          "ym",
+          0,
+          "lov",
+          0,
+          "yronc",
+          0,
+          "minap",
+          0,
+          "srap",
+          0,
+          "bigap",
+          0,
+          "op",
+          0,
+          "level",
+          0,
+          "vidab",
+          0,
+          "bot",
+          0,
+          "star_met",
+          0,
+          "slab_pist",
+          0,
+          "babyshka",
+          0,
+          "katana",
+          0,
+          "topor",
+          0,
+          "kope",
+          0,
+          "kosa",
+          0,
+          "luna",
+          0,
+          "rep_ad",
+          0,
+          "gg",
+          0,
+          "brv",
+          0,
+          "cilap",
+          0.5,
+          "ymp",
+          1,
+          "lovp",
+          1,
+          "yron",
+          0,
+          "kit",
+          0,
+          "br",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "zensura",
+          0
+        ],
+        "id": 65,
+        "text": "Кнопка для Voxbee(Вкл)",
+        "instant": true,
+        "var_set": [
+          "zensura",
+          1,
+          "xar",
+          3,
+          "golod",
+          100,
+          "vida",
+          100,
+          "xp",
+          250,
+          "cila",
+          0,
+          "ym",
+          0,
+          "lov",
+          0,
+          "yronc",
+          0,
+          "minap",
+          0,
+          "srap",
+          0,
+          "bigap",
+          0,
+          "op",
+          0,
+          "level",
+          0,
+          "vidab",
+          0,
+          "bot",
+          0,
+          "star_met",
+          0,
+          "slab_pist",
+          0,
+          "babyshka",
+          0,
+          "katana",
+          0,
+          "topor",
+          0,
+          "kope",
+          0,
+          "kosa",
+          0,
+          "luna",
+          0,
+          "rep_ad",
+          0,
+          "gg",
+          0,
+          "brv",
+          0,
+          "cilap",
+          0.5,
+          "ymp",
+          1,
+          "lovp",
+          1,
+          "yron",
+          0,
+          "br",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "zensura",
+          1
+        ],
+        "id": 65,
+        "instant": true,
+        "text": "Кнопка для Voxbee(Выкл)",
+        "var_set": [
+          "zensura",
+          0,
+          "xar",
+          3,
+          "golod",
+          100,
+          "vida",
+          100,
+          "xp",
+          250,
+          "cila",
+          0,
+          "ym",
+          0,
+          "lov",
+          0,
+          "yronc",
+          0,
+          "minap",
+          0,
+          "srap",
+          0,
+          "bigap",
+          0,
+          "op",
+          0,
+          "level",
+          0,
+          "vidab",
+          0,
+          "bot",
+          0,
+          "star_met",
+          0,
+          "slab_pist",
+          0,
+          "babyshka",
+          0,
+          "katana",
+          0,
+          "topor",
+          0,
+          "kope",
+          0,
+          "kosa",
+          0,
+          "luna",
+          0,
+          "rep_ad",
+          0,
+          "gg",
+          0,
+          "brv",
+          0,
+          "cilap",
+          0.5,
+          "ymp",
+          1,
+          "lovp",
+          1,
+          "yron",
+          0,
+          "br",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://c.radikal.ru/c39/2106/34/2a9ee3c4f6e1.jpg",
+        "system": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Меню:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 4,
+        "text": "Примите еду",
+        "var_no_more": [
+          "golod",
+          15
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 4,
+        "text": "Примите жидкость",
+        "var_no_more": [
+          "vida",
+          15
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Персонаж",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "lua_do": "function lua_do()\nyyy=yron<plus>yronc<plus>cilap\nend"
+      },
+      {
+        "id": 5,
+        "text": "Нужды",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Распределение характеристик",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Инвентарь",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 45,
+        "text": "Питомцы",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Справочник",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Действия",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 34,
+        "text": "НПС(если ведущий скажет)",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 29,
+        "text": "Бестиарий",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Награды от ведущего (Только с его разрешения!!)",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 31,
+        "text": "Войти в аккаунт",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 2,
+        "text": "Вы умерли.\n",
+        "var_no_more": [
+          "golod",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 2,
+        "text": "Вы умерли.\n",
+        "var_no_more": [
+          "vida",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 2,
+        "text": "Вы умерли.\n",
+        "var_no_more": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "id": 47,
+        "text": "Смерть",
+        "var_no_more": [
+          "golod",
+          0
+        ]
+      },
+      {
+        "id": 47,
+        "text": "Смерть",
+        "var_no_more": [
+          "vida",
+          0
+        ]
+      },
+      {
+        "id": 47,
+        "text": "Смерть",
+        "var_no_more": [
+          "xp",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "fjhvvhh.",
+    "answers": [
+      {
+        "var_show": [
+          "ym",
+          "<plus>1"
+        ],
+        "var_add": [
+          "ym",
+          1
+        ],
+        "instant": true,
+        "id": 7,
+        "var_sub": [
+          "xar",
+          1
+        ],
+        "text": "Интеллект",
+        "var_more": [
+          "xar",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "cila",
+          "<plus>1"
+        ],
+        "var_add": [
+          "cila",
+          1
+        ],
+        "text": "Сила",
+        "id": 7,
+        "var_sub": [
+          "xar",
+          1
+        ],
+        "var_more": [
+          "xar",
+          0
+        ],
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lov",
+          "<plus>1"
+        ],
+        "var_add": [
+          "lov",
+          1
+        ],
+        "text": "Ловкость",
+        "id": 7,
+        "var_sub": [
+          "xar",
+          1
+        ],
+        "var_more": [
+          "xar",
+          0
+        ],
+        "instant": true
+      },
+      {
+        "id": 7,
+        "text": "d"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Персонаж:\n",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Класс ассасин\n\n",
+        "merge": true,
+        "var_equal": [
+          "assasin",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Класс воин\n\n",
+        "merge": true,
+        "var_equal": [
+          "voin",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Класс взломщик",
+        "merge": true,
+        "var_equal": [
+          "vz",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Уровень",
+        "comment": true,
+        "var_show": [
+          "level"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Текущий урон",
+        "comment": true,
+        "var_show": [
+          "yyy"
+        ]
+      },
+      {
+        "var_max": [
+          "op",
+          6000
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          19
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          4700
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          18
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          3750
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          17
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          3000
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          16
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          2500
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          15
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          2000
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          14
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          1750
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          13
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          1500
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          12
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          1200
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          11
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          1000
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          10
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          750
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          9
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          550
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          8
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          400
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          7
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          300
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          6
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          200
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          5
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          150
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          4
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          100
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          3
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          50
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          2
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          25
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          1
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_max": [
+          "op",
+          10
+        ],
+        "var_show": [
+          "op"
+        ],
+        "comment": true,
+        "var_equal": [
+          "level",
+          0
+        ],
+        "id": 4,
+        "text": "Очков опыта",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "xar"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 4,
+        "text": "\nСвободных очков характеристик",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ym"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0.5
+        ],
+        "id": 4,
+        "text": "Интеллект"
+      },
+      {
+        "var_show": [
+          "ymp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0.5
+        ],
+        "id": 4,
+        "text": "Доп интеллект"
+      },
+      {
+        "var_show": [
+          "lov"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.5,
+          0
+        ],
+        "id": 4,
+        "text": "Ловкость"
+      },
+      {
+        "var_show": [
+          "lovp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.5,
+          0
+        ],
+        "id": 4,
+        "text": "Доп ловкость"
+      },
+      {
+        "var_show": [
+          "cila"
+        ],
+        "comment": true,
+        "text_color": [
+          0.5,
+          0,
+          0
+        ],
+        "id": 4,
+        "text": "Сила"
+      },
+      {
+        "var_show": [
+          "cilap"
+        ],
+        "comment": true,
+        "text_color": [
+          0.5,
+          0,
+          0
+        ],
+        "id": 4,
+        "text": "Доп сила"
+      },
+      {
+        "id": 4,
+        "text": "Примите еду",
+        "comment": true,
+        "var_no_more": [
+          "golod",
+          15
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Примите жидкость",
+        "comment": true,
+        "var_no_more": [
+          "vida",
+          15
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          10
+        ],
+        "var_equal": [
+          "level",
+          0
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          25
+        ],
+        "var_equal": [
+          "level",
+          1
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          50
+        ],
+        "var_equal": [
+          "level",
+          2
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          100
+        ],
+        "var_equal": [
+          "level",
+          3
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          150
+        ],
+        "var_equal": [
+          "level",
+          4
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          200
+        ],
+        "var_equal": [
+          "level",
+          5
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          300
+        ],
+        "var_equal": [
+          "level",
+          6
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          400
+        ],
+        "var_equal": [
+          "level",
+          7
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          550
+        ],
+        "var_equal": [
+          "level",
+          8
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          750
+        ],
+        "var_equal": [
+          "level",
+          9
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          1000
+        ],
+        "var_equal": [
+          "level",
+          10
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          1200
+        ],
+        "var_equal": [
+          "level",
+          11
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          1500
+        ],
+        "var_equal": [
+          "level",
+          12
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          1750
+        ],
+        "var_equal": [
+          "level",
+          13
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          2000
+        ],
+        "var_equal": [
+          "level",
+          14
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          2500
+        ],
+        "var_equal": [
+          "level",
+          15
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          3000
+        ],
+        "var_equal": [
+          "level",
+          16
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          3750
+        ],
+        "var_equal": [
+          "level",
+          17
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          4700
+        ],
+        "var_equal": [
+          "level",
+          18
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый уровень",
+        "var_need": [
+          "op",
+          6000
+        ],
+        "var_equal": [
+          "level",
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Нужды и хп вашего персонажа.",
+    "answers": [
+      {
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 5,
+        "text": "Очков здоровья"
+      },
+      {
+        "var_max": [
+          "golod",
+          100
+        ],
+        "var_show": [
+          "golod"
+        ],
+        "comment": true,
+        "id": 5,
+        "text": "Голод"
+      },
+      {
+        "var_max": [
+          "vida",
+          100
+        ],
+        "var_show": [
+          "vida"
+        ],
+        "comment": true,
+        "id": 5,
+        "text": "Жажда"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "var_max": [
+          "xp",
+          250
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "п"
+      },
+      {
+        "var_max": [
+          "vida",
+          100
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "d"
+      },
+      {
+        "var_max": [
+          "golod",
+          100
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "o"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Интеллект:шанс взлома.\n\nСила: доп урон(1ед. силы=0.5ед. урона).\n\nЛовкость: количество уклонений(полное игнорирование урона).\n\nДоп характеристики обозначают количество полученных параметров от петов.(Изначально они на единице)\n\nНа старте все получают 3 очка характеристик.\nРаспределите их с умом.\n\n\n\nПри сражениях с монстрами отнимается жажда и голод. При успешном взломе сундуком тоже, чем сложнее сундук тем больше.(взлом роскошного сундука отнимает 20 жажды).\n\n\n\nЕсли жидкость или голод дойдет до 15, в меню персонажа и в основном меню появится предупреждение.\n\n\n\nЕсли хп, жажда или голод дойдет до 0, персонаж погибнет, и потеряет всё.(кроме питомцев и знаний из бестиария)\n\n\nЛут из сундуков определяет ведущий, но валюта падает из сундуков сама.\n\n\nПередача работает по принципу, один оддал другой взял.\n То есть, она не работает на прямую. Если нужно передать деньги, то на одном устройстве с которого отнимаем, нажмаем на кнопку передать клеверов x, а на другом позже нажимаем кнопку с таким же значением получить x клеверов.\n\n(если у вас нет клеверов передать вы не сможете)\n(так нужно делать не только с валютой но и с предметами)\n\nПожалуйста не используйте эту возможность для жульничества.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Здесь можно распределить характеристики если они есть.",
+    "answers": [
+      {
+        "var_show": [
+          "xar"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 4,
+        "text": "Свободных очков характеристик",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ym",
+          "<plus>1"
+        ],
+        "var_add": [
+          "ym",
+          1
+        ],
+        "var_sub": [
+          "xar",
+          1
+        ],
+        "id": 7,
+        "var_more": [
+          "xar",
+          0
+        ],
+        "text": "Интеллект",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "cila",
+          "<plus>1"
+        ],
+        "var_add": [
+          "cila",
+          1,
+          "yronc",
+          0.5
+        ],
+        "var_sub": [
+          "xar",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "var_more": [
+          "xar",
+          0
+        ],
+        "text": "Сила"
+      },
+      {
+        "var_show": [
+          "lov",
+          "<plus>1"
+        ],
+        "var_add": [
+          "lov",
+          1
+        ],
+        "var_sub": [
+          "xar",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "var_more": [
+          "xar",
+          0
+        ],
+        "text": "Ловкость"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Выбор действий.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 9,
+        "text": "Сражения с монстрами",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Взлом",
+        "lua_do": "function lua_do()\nym=ym<plus>ymp\nend",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Спор",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Монстры",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Назад"
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "id": 14,
+        "text": "Обычный зомби",
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "var_set": [
+          "mxp",
+          10,
+          "myr",
+          11,
+          "p",
+          14
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "text": "Зомбик",
+        "id": 16,
+        "var_set": [
+          "mxp",
+          15,
+          "myr",
+          21,
+          "p",
+          16
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "id": 61,
+        "text": "Зомби#2",
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "var_set": [
+          "mxp",
+          25,
+          "myr",
+          26,
+          "p",
+          61
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "text": "Радиоктивный зомби",
+        "id": 59,
+        "var_set": [
+          "mxp",
+          50,
+          "myr",
+          26,
+          "p",
+          59
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "text": "Зомби шахтер",
+        "id": 62,
+        "var_set": [
+          "mxp",
+          40,
+          "myr",
+          31,
+          "p",
+          62
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "id": 40,
+        "text": "Мутант",
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "var_set": [
+          "mxp",
+          100,
+          "myr",
+          46,
+          "p",
+          40
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "text": "Мутант#2",
+        "id": 57,
+        "var_set": [
+          "mxp",
+          125,
+          "myr",
+          36,
+          "p",
+          57
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "text": "Мутант#3",
+        "id": 58,
+        "var_set": [
+          "mxp",
+          200,
+          "myr",
+          51,
+          "p",
+          58
+        ]
+      },
+      {
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ],
+        "id": 60,
+        "text": "Мутант#4",
+        "lua_do": "function lua_do()\nlovk=(lovp<plus>lov)/3\nyyy=yron<plus>yronc<plus>cilap\nend",
+        "var_set": [
+          "mxp",
+          275,
+          "myr",
+          56,
+          "p",
+          60
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Выбор сложности сундука.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Назад"
+      },
+      {
+        "id": 13,
+        "text": "Обычный"
+      },
+      {
+        "id": 17,
+        "text": "Редкий"
+      },
+      {
+        "id": 18,
+        "text": "Богатый"
+      },
+      {
+        "id": 19,
+        "text": "Роскошный"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Здесь вы можете решить спор.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Назад"
+      },
+      {
+        "id": 12,
+        "text": "Орёл или решка"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Киньте монетку и решите спор.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Назад",
+        "var_set": [
+          "orel",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Орёл",
+        "comment": true,
+        "var_equal": [
+          "orel",
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Решка",
+        "comment": true,
+        "var_equal": [
+          "orel",
+          2
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Кинуть",
+        "instant": true,
+        "var_random_from_weight": [
+          "orel",
+          1,
+          50,
+          2,
+          50
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Вы можете попытаться взломать обычный сундук.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад"
+      },
+      {
+        "id": 20,
+        "text": "Попытаться взломать",
+        "var_add": [
+          "clever",
+          30
+        ],
+        "var_need": [
+          "ym",
+          5
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Вам не подсилу взломать этот замок)",
+        "comment": true,
+        "var_less": [
+          "ym",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c41/2106/5b/11c8168a5ab9.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          10
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Обычный зомби\n\nурон 10              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc-cilap\nend",
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Атаковать(",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "var_sub": [
+          "lovk",
+          1
+        ],
+        "id": 14,
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Уклониться\nдоступно раз("
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "instant": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Получить урон",
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "instant": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Получить урон",
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>5-br)\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Обычный зомби ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Обычный зомби атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Обычный зомби использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "obz",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          5
+        ],
+        "instant": true,
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "id": 9,
+        "text": "Победа"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c41/2106/5b/11c8168a5ab9.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          10
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Обычный зомби\n\nурон 10              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yron",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 14,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc\nend"
+      },
+      {
+        "text": "Уклониться\nдоступно раз(",
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "id": 14,
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "var_sub": [
+          "lovk",
+          1
+        ],
+        "var_show": [
+          "lovk",
+          ")"
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "instant": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Получить урон",
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "var_sub": [
+          "xp",
+          10
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "instant": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Получить урон",
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "var_sub": [
+          "xp",
+          15
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Обычный зомби ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Обычный зомби атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Обычный зомби использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "obz",
+          0,
+          70,
+          1,
+          30
+        ],
+        "var_add": [
+          "op",
+          2
+        ],
+        "text": "Победа",
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "instant": true,
+        "id": 9,
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 14,
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b05/2106/88/864aba0dcd77.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          15
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Зомбик\n\nурон 20              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 16,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc\nend"
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "id": 16,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "instant": true,
+        "id": 16,
+        "text": "Получить урон"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>5-br)\nend",
+        "instant": true,
+        "id": 16,
+        "text": "Получить урон"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Зомбик ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Зомбик атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Зомбик использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "z",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          12
+        ],
+        "text": "Победа",
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "instant": true,
+        "id": 9,
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 14,
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Вы можете попытаться взломать редкий сундук.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад"
+      },
+      {
+        "id": 21,
+        "var_need": [
+          "ym",
+          8
+        ],
+        "var_add": [
+          "clever",
+          60
+        ],
+        "text": "Попытаться взломать"
+      },
+      {
+        "id": 13,
+        "text": "Вам не подсилу взломать этот замок)",
+        "comment": true,
+        "var_less": [
+          "ym",
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Вы можете попытаться взломать богатый сундук.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад"
+      },
+      {
+        "id": 22,
+        "var_need": [
+          "ym",
+          12
+        ],
+        "var_add": [
+          "clever",
+          100
+        ],
+        "text": "Попытаться взломать"
+      },
+      {
+        "id": 13,
+        "text": "Вам не подсилу взломать этот замок)",
+        "comment": true,
+        "var_less": [
+          "ym",
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Вы можете попытаться взломать роскошный сундук.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад"
+      },
+      {
+        "id": 23,
+        "text": "Попытаться взломать",
+        "var_add": [
+          "clever",
+          200
+        ],
+        "var_need": [
+          "ym",
+          16
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Вам не подсилу взломать этот замок)",
+        "comment": true,
+        "var_less": [
+          "ym",
+          16
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Лёгкий замок взломан.(награда определяется ведущим)",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад",
+        "var_sub": [
+          "vida",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Средний замок взломан.(награда определяется ведущим)",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад",
+        "var_sub": [
+          "vida",
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Сложный замок взломан.(награда определяется ведущим)",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад",
+        "var_sub": [
+          "vida",
+          15
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Мастерский замок взломан.(награда определяется ведущим)",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Назад",
+        "var_sub": [
+          "vida",
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Здесь отображаются ваши предметы.",
+    "answers": [
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 25,
+        "text": "Оружие",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Броня",
+        "var_need": [
+          "golod",
+          1,
+          "vida",
+          1,
+          "xp",
+          1
+        ]
+      },
+      {
+        "id": 52,
+        "text": "Припасы"
+      },
+      {
+        "id": 53,
+        "text": "Другое"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Здесь можно экипировать доступное оружие.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Назад"
+      },
+      {
+        "text": "Снять оружие",
+        "var_equal": [
+          "gg",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "lua_do": "function lua_do()\nyron=yron-yron\nend",
+        "var_set": [
+          "gg",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "lov",
+          1,
+          "gg",
+          1
+        ],
+        "answerImage": [
+          "https://c.radikal.ru/c35/2106/d1/1c43da1283ef.jpg"
+        ],
+        "id": 25,
+        "text": "Кухонный нож 2 урона\n\n",
+        "instant": true,
+        "var_set": [
+          "yron",
+          2
+        ]
+      },
+      {
+        "answerImage": [
+          "https://d.radikal.ru/d17/2106/fc/076e124f4e2b.jpg"
+        ],
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "gg",
+          1
+        ],
+        "var_equal": [
+          "star_met",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Бита 3 урона\n\n",
+        "var_set": [
+          "yron",
+          3
+        ]
+      },
+      {
+        "answerImage": [
+          "https://d.radikal.ru/d22/2106/2a/ee8ccd66b968.jpg"
+        ],
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "gg",
+          1
+        ],
+        "var_equal": [
+          "topor",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Топор 4 урона\n\n",
+        "var_set": [
+          "yron",
+          4
+        ]
+      },
+      {
+        "answerImage": [
+          "https://a.radikal.ru/a14/2106/1d/e3601069f7d2.jpg"
+        ],
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "gg",
+          1
+        ],
+        "var_equal": [
+          "slab_pist",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Мачете 5 урона\n\n",
+        "var_set": [
+          "yron",
+          5
+        ]
+      },
+      {
+        "answerImage": [
+          "https://d.radikal.ru/d37/2106/26/ab25065bda07.jpg"
+        ],
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "gg",
+          1
+        ],
+        "var_equal": [
+          "kope",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Копьё 5 урона\n\n",
+        "var_set": [
+          "yron",
+          5
+        ]
+      },
+      {
+        "answerImage": [
+          "https://b.radikal.ru/b11/2106/71/0716bb970d2d.jpg"
+        ],
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "gg",
+          1
+        ],
+        "var_equal": [
+          "katana",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Катана 7 урона\n\n",
+        "var_set": [
+          "yron",
+          7
+        ]
+      },
+      {
+        "answerImage": [
+          "https://c.radikal.ru/c11/2106/80/68b22c7bfc31.jpg"
+        ],
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "gg",
+          1
+        ],
+        "var_equal": [
+          "kosa",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Коса 9 урона\n\n",
+        "var_set": [
+          "yron",
+          9
+        ]
+      },
+      {
+        "answerImage": [
+          "https://c.radikal.ru/c39/2106/ef/bd72832663ae.jpg"
+        ],
+        "var_not": [
+          "gg",
+          1
+        ],
+        "var_add": [
+          "gg",
+          1
+        ],
+        "var_equal": [
+          "babyshka",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "text": "Нож бабочка 11 урона\n\n",
+        "var_set": [
+          "yron",
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Вы собрали достаточно очков опыта и можете повысить уровень.",
+    "answers": [
+      {
+        "var_add": [
+          "level",
+          1,
+          "xar",
+          2,
+          "lov",
+          1
+        ],
+        "var_equal": [
+          "assasin",
+          1
+        ],
+        "id": 4,
+        "text": "Повысить",
+        "var_set": [
+          "op",
+          0,
+          "xp",
+          250
+        ]
+      },
+      {
+        "var_add": [
+          "level",
+          1,
+          "xar",
+          2,
+          "cila",
+          1,
+          "yronc",
+          0.5
+        ],
+        "var_equal": [
+          "voin",
+          1
+        ],
+        "id": 4,
+        "text": "Повысить",
+        "var_set": [
+          "op",
+          0,
+          "xp",
+          250
+        ]
+      },
+      {
+        "var_add": [
+          "level",
+          1,
+          "xar",
+          2,
+          "ym",
+          1
+        ],
+        "var_equal": [
+          "vz",
+          1
+        ],
+        "id": 4,
+        "text": "Повысить",
+        "var_set": [
+          "op",
+          0,
+          "xp",
+          250
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 25,
+        "text": "25"
+      },
+      {
+        "id": 25,
+        "text": "Стартовый пистолет 5 урона",
+        "instant": true,
+        "var_set": [
+          "yron",
+          5
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Стартовый нож 4 урона\n<plus>1 ловкость",
+        "var_add": [
+          "lov",
+          1
+        ],
+        "var_set": [
+          "yron",
+          4,
+          "bonus",
+          1
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Старый меч 10 урона",
+        "instant": false,
+        "var_set": [
+          "yron",
+          10
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Слабый пистолет 12 урона",
+        "instant": true,
+        "var_set": [
+          "yron",
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Здесь можно получить награду от ведущего.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 48,
+        "text": "Оружие"
+      },
+      {
+        "id": 74,
+        "text": "Броня"
+      },
+      {
+        "id": 50,
+        "text": "Припасы"
+      },
+      {
+        "id": 51,
+        "text": "Предметы и другое"
+      },
+      {
+        "id": 72,
+        "text": "Передача вещей"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Здесь есть известные вам монстры.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 30,
+        "text": "Обычный зомби",
+        "var_equal": [
+          "obz",
+          1
+        ]
+      },
+      {
+        "id": 39,
+        "text": "Зомбик",
+        "var_equal": [
+          "z",
+          1
+        ]
+      },
+      {
+        "id": 68,
+        "text": "Зомби#2",
+        "var_equal": [
+          "z2",
+          1
+        ]
+      },
+      {
+        "id": 41,
+        "text": "Мутант",
+        "var_equal": [
+          "m",
+          1
+        ]
+      },
+      {
+        "id": 67,
+        "text": "Радиоктивный зомби",
+        "var_equal": [
+          "rad",
+          1
+        ]
+      },
+      {
+        "id": 66,
+        "text": "Зомби шахтер",
+        "var_equal": [
+          "zsh",
+          1
+        ]
+      },
+      {
+        "id": 69,
+        "text": "Мутант#2",
+        "var_equal": [
+          "m2",
+          1
+        ]
+      },
+      {
+        "id": 70,
+        "text": "Мутант#3",
+        "var_equal": [
+          "m3",
+          1
+        ]
+      },
+      {
+        "id": 71,
+        "text": "Мутант#4",
+        "var_equal": [
+          "m4",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 30,
+        "text": " \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c41/2106/5b/11c8168a5ab9.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "id": 30,
+        "text": "Обычный Зомби\n   \nНахождение: почти везде\n\nХар-ки: \nУрон <plus>10 / хп 10/10\n\nОпыт за убийство:5",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Здесь вы можете войти в аккаунт",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 32,
+        "text": "Voxbee[Автор]\nУровень:100000000\nХп:1000000\nИнтелект:10000000\nСила:100000000\nЛовкость:1000000000000"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Введите пароль.",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Назад"
+      },
+      {
+        "id": 32,
+        "text": "Сбросить пароль",
+        "instant": true,
+        "var_set": [
+          "0",
+          0,
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          0,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Войти в аккаунт",
+        "var_equal": [
+          "0",
+          1,
+          "3",
+          1,
+          "7",
+          1,
+          "9",
+          1,
+          "6",
+          1,
+          "2",
+          1
+        ],
+        "var_set": [
+          "0",
+          0,
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          0,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      0",
+        "instant": true,
+        "var_set": [
+          "0",
+          1,
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          0,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      1",
+        "instant": true,
+        "var_set": [
+          "0",
+          0,
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          0,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      2",
+        "instant": true,
+        "var_set": [
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "2",
+          1
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      3",
+        "instant": true,
+        "var_set": [
+          "3",
+          1
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      4",
+        "instant": true,
+        "var_set": [
+          "0",
+          0,
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          0,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      5",
+        "instant": true,
+        "var_set": [
+          "0",
+          0,
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          0,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      6",
+        "instant": true,
+        "var_set": [
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          1,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      7",
+        "instant": true,
+        "var_set": [
+          "3",
+          0,
+          "7",
+          1,
+          "9",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      8",
+        "instant": true,
+        "var_set": [
+          "0",
+          0,
+          "3",
+          0,
+          "7",
+          0,
+          "9",
+          0,
+          "6",
+          0,
+          "2",
+          0
+        ]
+      },
+      {
+        "id": 32,
+        "text": "                                      9",
+        "instant": true,
+        "var_set": [
+          "3",
+          0,
+          "9",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Вы в аккаунте Voxbee",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 33,
+        "text": "Сила дезактивирована",
+        "var_equal": [
+          "Voxbee",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 33,
+        "text": "Сила активирована",
+        "var_equal": [
+          "Voxbee",
+          1
+        ]
+      },
+      {
+        "id": 32,
+        "text": "Назад"
+      },
+      {
+        "var_not": [
+          "Voxbee",
+          1
+        ],
+        "var_add": [
+          "level",
+          100000000,
+          "cila",
+          100000000,
+          "lov",
+          1000000000000,
+          "ym",
+          10000000,
+          "yronc",
+          100000000,
+          "xp",
+          1000000
+        ],
+        "id": 33,
+        "instant": true,
+        "text": "Активировать силу разработчика",
+        "var_set": [
+          "Voxbee",
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "level",
+          100000000,
+          "cila",
+          100000000,
+          "lov",
+          1000000000000,
+          "ym",
+          10000000,
+          "yronc",
+          100000000,
+          "xp",
+          1000000
+        ],
+        "instant": true,
+        "var_equal": [
+          "Voxbee",
+          1
+        ],
+        "id": 33,
+        "text": "Дезактивировать силу разработчика",
+        "var_min": [
+          "xp",
+          0
+        ],
+        "var_set": [
+          "Voxbee",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Нпс.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 35,
+        "text": "Оружейник"
+      },
+      {
+        "id": 36,
+        "text": "Торговец припасами"
+      },
+      {
+        "id": 37,
+        "text": "Доктор"
+      },
+      {
+        "id": 42,
+        "text": "Бронник"
+      },
+      {
+        "id": 43,
+        "text": "Скупщик барахла"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 35,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b41/2106/1b/c67c4bdd4d95.jpg"
+        ]
+      },
+      {
+        "id": 35,
+        "text": "Дазай Осаму\nПродавец оружия:\n\nМачете - 190 клеверов\n\nКатана - 270 клеверов\n\nТопор - 150 клевера",
+        "comment": true
+      },
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "id": 34,
+        "text": "Назад"
+      },
+      {
+        "var_more": [
+          "clever",
+          149
+        ],
+        "var_not": [
+          "topor",
+          1
+        ],
+        "var_sub": [
+          "clever",
+          150
+        ],
+        "instant": true,
+        "id": 35,
+        "text": "Купить топор",
+        "var_min": [
+          "clever",
+          0
+        ],
+        "var_set": [
+          "topor",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "katana",
+          1
+        ],
+        "text": "Купить мачете",
+        "instant": true,
+        "id": 35,
+        "var_sub": [
+          "clever",
+          190
+        ],
+        "var_more": [
+          "clever",
+          189
+        ],
+        "var_set": [
+          "slab_pist",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "slab_pist",
+          1
+        ],
+        "text": "Купить катану",
+        "instant": true,
+        "id": 35,
+        "var_sub": [
+          "clever",
+          270
+        ],
+        "var_more": [
+          "clever",
+          269
+        ],
+        "var_set": [
+          "katana",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 36,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b14/2106/8e/beb931084b27.jpg"
+        ]
+      },
+      {
+        "id": 36,
+        "text": "Чуя Накахара\n\nПродавец припасов\n\nВода - 15 клевера\n\nПитательный батончик - 15 клевера\n\nПитомец совёнок(<plus>?инт) - 300 клевера",
+        "comment": true
+      },
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "id": 34,
+        "text": "Назад"
+      },
+      {
+        "var_add": [
+          "vidab",
+          1
+        ],
+        "id": 36,
+        "text": "Купить воду",
+        "var_sub": [
+          "clever",
+          15
+        ],
+        "var_more": [
+          "clever",
+          14
+        ]
+      },
+      {
+        "var_add": [
+          "bot",
+          1
+        ],
+        "id": 36,
+        "text": "Купить питательный батончик",
+        "var_sub": [
+          "clever",
+          15
+        ],
+        "var_more": [
+          "clever",
+          14
+        ]
+      },
+      {
+        "var_not": [
+          "cova",
+          1
+        ],
+        "var_sub": [
+          "clever",
+          300
+        ],
+        "text": "Питомец совёнок",
+        "id": 36,
+        "var_more": [
+          "clever",
+          299
+        ],
+        "instant": true,
+        "var_set": [
+          "sova",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "   ",
+    "answers": [
+      {
+        "var_not": [
+          "zensura",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d19/2106/5a/51054c9a7f65.jpg"
+        ],
+        "id": 37,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true
+      },
+      {
+        "id": 37,
+        "text": "Адель Камадо\n\nНравится: белые розы\n\nВрач\n\nМаленькая аптечка - 30 клевера\n\nСредняя аптечка - 60 клевера\n\nБольшая аптечка - 100 клевера",
+        "comment": true
+      },
+      {
+        "var_show": [
+          "rep_ad"
+        ],
+        "comment": true,
+        "id": 37,
+        "text": "Репутация",
+        "var_more": [
+          "rep_ad",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "id": 34,
+        "text": "Назад"
+      },
+      {
+        "var_show": [
+          "roza",
+          "шт"
+        ],
+        "var_add": [
+          "rep_ad",
+          10
+        ],
+        "id": 37,
+        "instant": true,
+        "var_more": [
+          "roza",
+          0
+        ],
+        "text": "Подарить розу\nУ меня"
+      },
+      {
+        "var_add": [
+          "minap",
+          1
+        ],
+        "id": 37,
+        "text": "Маленькая аптечка",
+        "var_sub": [
+          "clever",
+          30
+        ],
+        "var_more": [
+          "clever",
+          29
+        ]
+      },
+      {
+        "var_add": [
+          "srap",
+          1
+        ],
+        "id": 37,
+        "var_more": [
+          "clever",
+          59
+        ],
+        "text": "Средняя аптечка",
+        "var_sub": [
+          "clever",
+          60
+        ]
+      },
+      {
+        "var_add": [
+          "bignap",
+          1
+        ],
+        "id": 37,
+        "var_more": [
+          "clever",
+          99
+        ],
+        "text": "Большая аптечка",
+        "var_sub": [
+          "clever",
+          100
+        ]
+      },
+      {
+        "var_not": [
+          "kot",
+          1
+        ],
+        "id": 37,
+        "var_more": [
+          "rep_ad",
+          49
+        ],
+        "text": "Питомец котёнок(150 клеверов)",
+        "var_set": [
+          "kot",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 39,
+    "text": "               ",
+    "answers": [
+      {
+        "id": 39,
+        "text": " \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b05/2106/88/864aba0dcd77.jpg"
+        ]
+      },
+      {
+        "id": 39,
+        "text": "Зомбик))) \n\nНахождение: почти везде\n\nХар-ки:\nУрон <plus>20 / хп 15/15\n\nОпыт за убийство:12",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d11/2106/c2/7427e6b97f2f.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          100
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Мутант\n\nурон 45              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 40,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc\nend",
+        "text": "Атаковать(",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "id": 40,
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Получить урон",
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "id": 40,
+        "instant": true
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Получить урон",
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>5-br)\nend",
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "id": 40,
+        "instant": true
+      },
+      {
+        "id": 63,
+        "text": "Аптечка",
+        "var_not": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Мутант ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Мутант атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Мутант использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_random_from_weight": [
+          "m",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          180
+        ],
+        "instant": true,
+        "id": 9,
+        "text": "Победа",
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "var_set": [
+          "kit",
+          0
+        ]
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 14
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "               ",
+    "answers": [
+      {
+        "id": 39,
+        "text": " \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b09/2106/47/5382669ee625.jpg"
+        ]
+      },
+      {
+        "id": 39,
+        "text": "Опыта за убийство:55",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 42,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b03/2106/93/8e1bc6ec2dc2.jpg"
+        ]
+      },
+      {
+        "id": 42,
+        "text": "Освальд Кестис\n\nПродавец брони ( курток) \n\nЧёрная куртка 3 защ - 145 клеверов\n\nТёмно-зелёная куртка 4защ - 175 клеверов\n\nКоричневая куртка 5 защ - 200 клеверов\n\nКожаная куртка 6защ- 250 клеверов\n\nЗолотистая куртка 7защ- 300 клеверов\n\nКуртка Коннора 8 защ- 350 клеверов\n\nДжинсовая куртка 10защ - 500 клеверов\n\n",
+        "comment": true
+      },
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "id": 34,
+        "text": "Назад"
+      },
+      {
+        "text": "Купить чёрную куртку",
+        "instant": true,
+        "id": 42,
+        "var_sub": [
+          "clever",
+          145
+        ],
+        "var_more": [
+          "clever",
+          144
+        ],
+        "var_set": [
+          "black_k",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "text": "Купить тёмно-зелёную куртку",
+        "id": 42,
+        "var_more": [
+          "clever",
+          174
+        ],
+        "var_sub": [
+          "clever",
+          175
+        ],
+        "var_set": [
+          "zel_k",
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "clever",
+          200
+        ],
+        "var_more": [
+          "clever",
+          199
+        ],
+        "id": 42,
+        "instant": true,
+        "text": "Купить коричневую куртку",
+        "var_set": [
+          "kor_k",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "text": "Купить кожаную куртку",
+        "id": 42,
+        "var_more": [
+          "clever",
+          249
+        ],
+        "var_sub": [
+          "clever",
+          250
+        ],
+        "var_set": [
+          "koj_k",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "text": "Купить золотистую куртку",
+        "id": 42,
+        "var_more": [
+          "clever",
+          299
+        ],
+        "var_sub": [
+          "clever",
+          300
+        ],
+        "var_set": [
+          "zol_k",
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "clever",
+          350
+        ],
+        "var_more": [
+          "clever",
+          349
+        ],
+        "id": 42,
+        "instant": true,
+        "text": "Купить куртку Коннора",
+        "var_set": [
+          "kon_k",
+          1
+        ]
+      },
+      {
+        "text": "Купить джинсовую куртку",
+        "instant": true,
+        "id": 42,
+        "var_sub": [
+          "clever",
+          500
+        ],
+        "var_more": [
+          "clever",
+          499
+        ],
+        "var_set": [
+          "jin_k",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 43,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a08/2106/bf/b0cad63d2b82.jpg"
+        ]
+      },
+      {
+        "id": 43,
+        "text": "Фёдор\n\nНравится: Красное вино\n\nСкупальщик хлама\n\nБита - 30 клеверов\n\nТопор - 50 клеверов \n\nМачете - 120 клеверов\n\nКатана - 150 клеверов\n\nКопьё - 120 клеверов\n\nКоса - 170 клеверов\n\nНож бабочка - 200 клеверов",
+        "comment": true
+      },
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "id": 34,
+        "text": "Назад"
+      },
+      {
+        "var_add": [
+          "clever",
+          30
+        ],
+        "var_equal": [
+          "star_met",
+          1
+        ],
+        "id": 28,
+        "text": "Бита 3 урона",
+        "instant": true,
+        "var_set": [
+          "star_met",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "clever",
+          50
+        ],
+        "var_equal": [
+          "topor",
+          1
+        ],
+        "id": 28,
+        "text": "Топор 4 урона",
+        "instant": true,
+        "var_set": [
+          "topor",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "clever",
+          120
+        ],
+        "var_equal": [
+          "slab_pist",
+          1
+        ],
+        "id": 28,
+        "text": "Мачете 5 урона",
+        "instant": true,
+        "var_set": [
+          "slab_pist",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "clever",
+          120
+        ],
+        "var_equal": [
+          "kope",
+          1
+        ],
+        "id": 28,
+        "instant": true,
+        "text": "Копьё 5 урона",
+        "var_set": [
+          "kope",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "clever",
+          150
+        ],
+        "var_equal": [
+          "katana",
+          1
+        ],
+        "id": 28,
+        "text": "Катана 7 урона",
+        "instant": true,
+        "var_set": [
+          "katana",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "clever",
+          170
+        ],
+        "var_equal": [
+          "kosa",
+          1
+        ],
+        "id": 28,
+        "instant": true,
+        "text": "Коса 9 урона",
+        "var_set": [
+          "kosa",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "clever",
+          200
+        ],
+        "var_equal": [
+          "babyshka",
+          1
+        ],
+        "id": 28,
+        "text": "Нож бабочка 11 урона",
+        "instant": true,
+        "var_set": [
+          "babyshka",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 45,
+    "text": "Здесь находятся доступные вам питомцы.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "text": "Снять ",
+        "var_equal": [
+          "pet",
+          1,
+          "petl",
+          1
+        ],
+        "lua_do": "function lua_do()\nlovp=lovp-lovp<plus>1\nend",
+        "instant": true,
+        "id": 45,
+        "var_set": [
+          "pet",
+          0,
+          "petl",
+          0
+        ]
+      },
+      {
+        "text": "Снять ",
+        "var_equal": [
+          "pet",
+          1,
+          "petc",
+          1
+        ],
+        "lua_do": "function lua_do()\ncilap=cilap-cilap<plus>0.5\nend",
+        "instant": true,
+        "id": 45,
+        "var_set": [
+          "pet",
+          0,
+          "petc",
+          0
+        ]
+      },
+      {
+        "text": "Снять ",
+        "var_equal": [
+          "pet",
+          1,
+          "pety",
+          1
+        ],
+        "lua_do": "function lua_do()\nymp=ymp-ymp<plus>1\nend",
+        "instant": true,
+        "id": 45,
+        "var_set": [
+          "pet",
+          0,
+          "pety",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "petl",
+          1,
+          "pet",
+          1
+        ],
+        "var_not": [
+          "pet",
+          1
+        ],
+        "var_add": [
+          "lovp",
+          15
+        ],
+        "var_equal": [
+          "luna_kot",
+          1
+        ],
+        "id": 45,
+        "instant": true,
+        "text": "Лунный кот\n\n\n\n",
+        "answerImage": [
+          "https://a.radikal.ru/a14/2106/10/23d2999faa1f.png"
+        ]
+      },
+      {
+        "answerImage": [
+          "https://b.radikal.ru/b25/2106/dd/addc5313fce4.jpg"
+        ],
+        "var_not": [
+          "pet",
+          1
+        ],
+        "var_add": [
+          "lovp",
+          5
+        ],
+        "var_equal": [
+          "kot",
+          1
+        ],
+        "id": 45,
+        "instant": true,
+        "text": "Котёнок\n\n",
+        "var_set": [
+          "petl",
+          1,
+          "pet",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "pet",
+          1
+        ],
+        "var_add": [
+          "cilap",
+          2.5
+        ],
+        "var_equal": [
+          "pes",
+          1
+        ],
+        "id": 45,
+        "instant": true,
+        "text": "Щенок",
+        "var_set": [
+          "pet",
+          1,
+          "petc",
+          1
+        ]
+      },
+      {
+        "var_more": [
+          "luna",
+          0
+        ],
+        "lua_do": "function lua_do()\nlovp=lovp-lovp\nend",
+        "text": "Котёнок\nВозможна эволюция\nЗатраты: лунный камень 1шт",
+        "id": 45,
+        "var_set": [
+          "kot",
+          0,
+          "luna_kot",
+          1,
+          "luna",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "pet",
+          1
+        ],
+        "var_add": [
+          "ymp",
+          5
+        ],
+        "var_equal": [
+          "sova",
+          1
+        ],
+        "id": 45,
+        "instant": true,
+        "text": "Совёнок",
+        "var_set": [
+          "pet",
+          1,
+          "pety",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Здесь хранится ваша броня.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Назад"
+      },
+      {
+        "id": 55,
+        "text": "Куртки"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Вы умерли",
+    "answers": [
+      {
+        "id": 65,
+        "text": "Начать заново",
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_set": [
+          "xar",
+          3,
+          "golod",
+          100,
+          "vida",
+          100,
+          "xp",
+          250,
+          "cila",
+          0,
+          "ym",
+          0,
+          "lov",
+          0,
+          "yronc",
+          0,
+          "minap",
+          0,
+          "srap",
+          0,
+          "bigap",
+          0,
+          "op",
+          0,
+          "level",
+          0,
+          "vidab",
+          0,
+          "bot",
+          0,
+          "star_met",
+          0,
+          "slab_pist",
+          0,
+          "babyshka",
+          0,
+          "katana",
+          0,
+          "topor",
+          0,
+          "kope",
+          0,
+          "kosa",
+          0,
+          "luna",
+          0,
+          "rep_ad",
+          0,
+          "gg",
+          0,
+          "brv",
+          0,
+          "cilap",
+          0.5,
+          "ymp",
+          1,
+          "lovp",
+          1,
+          "yron",
+          0,
+          "kit",
+          0,
+          "br",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Оружие передать.",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Назад"
+      },
+      {
+        "id": 48,
+        "text": "Бита 3 урона",
+        "instant": true,
+        "var_set": [
+          "star_met",
+          1
+        ]
+      },
+      {
+        "id": 48,
+        "text": "Топор 4 урона",
+        "instant": true,
+        "var_set": [
+          "topor",
+          1
+        ]
+      },
+      {
+        "id": 48,
+        "text": "Мачете 5 урона",
+        "instant": true,
+        "var_set": [
+          "slab_pist",
+          1
+        ]
+      },
+      {
+        "id": 48,
+        "instant": true,
+        "text": "Копьё 5 урона",
+        "var_set": [
+          "kope",
+          1
+        ]
+      },
+      {
+        "id": 48,
+        "text": "Катана 7 урона",
+        "instant": true,
+        "var_set": [
+          "katana",
+          1
+        ]
+      },
+      {
+        "id": 48,
+        "instant": true,
+        "text": "Коса 9 урона",
+        "var_set": [
+          "kosa",
+          1
+        ]
+      },
+      {
+        "id": 48,
+        "text": "Нож бабочка 11 урона",
+        "instant": true,
+        "var_set": [
+          "babyshka",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Броня",
+    "answers": [
+      {
+        "id": 72,
+        "text": "Назад"
+      },
+      {
+        "var_equal": [
+          "black_k",
+          1
+        ],
+        "id": 49,
+        "text": "Чёрная куртка 3защ",
+        "instant": true,
+        "var_set": [
+          "black_k",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "kor_k",
+          1
+        ],
+        "id": 49,
+        "text": "Коричневая куртка",
+        "instant": true,
+        "var_set": [
+          "kor_k",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "kon_k",
+          1
+        ],
+        "id": 49,
+        "text": "Куртка Конора",
+        "instant": true,
+        "var_set": [
+          "kon_k",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "jin_k",
+          1
+        ],
+        "id": 49,
+        "text": "Джинсовая куртка 10защ",
+        "instant": true,
+        "var_set": [
+          "jin_k",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Припасы",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Назад"
+      },
+      {
+        "id": 50,
+        "instant": true,
+        "var_add": [
+          "minap",
+          1
+        ],
+        "text": "Малая аптечка(<plus>30хп)"
+      },
+      {
+        "id": 50,
+        "instant": true,
+        "var_add": [
+          "srnap",
+          1
+        ],
+        "text": "Средняя аптечка(<plus>60хп)"
+      },
+      {
+        "id": 50,
+        "instant": true,
+        "var_add": [
+          "bigap",
+          1
+        ],
+        "text": "Большая аптечка(<plus>100хп)"
+      },
+      {
+        "id": 50,
+        "instant": true,
+        "var_add": [
+          "vidab",
+          1
+        ],
+        "text": "Бутылка воды(<plus>20жид)"
+      },
+      {
+        "id": 50,
+        "instant": true,
+        "var_add": [
+          "bot",
+          1
+        ],
+        "text": "Питательный батончик(<plus>20г)"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "Предметы и другое",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Назад"
+      },
+      {
+        "var_max": [
+          "luna",
+          1
+        ],
+        "var_add": [
+          "luna",
+          1
+        ],
+        "id": 51,
+        "text": "Лунный камень",
+        "instant": true
+      },
+      {
+        "id": 51,
+        "text": "Белая роза",
+        "var_add": [
+          "roza",
+          1
+        ],
+        "instant": true
+      },
+      {
+        "id": 51,
+        "text": "Питомец щенок",
+        "instant": true,
+        "var_set": [
+          "pes",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "Припасы",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Назад"
+      },
+      {
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_show": [
+          "minap",
+          "шт       "
+        ],
+        "var_add": [
+          "xp",
+          30
+        ],
+        "instant": true,
+        "id": 24,
+        "text": "Малая аптечка(<plus>30хп)",
+        "var_more": [
+          "minap",
+          0
+        ],
+        "var_sub": [
+          "minap",
+          1
+        ]
+      },
+      {
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_show": [
+          "minap",
+          "шт       "
+        ],
+        "var_add": [
+          "xp",
+          60
+        ],
+        "instant": true,
+        "id": 24,
+        "text": "Средняя аптечка(<plus>60хп)",
+        "var_more": [
+          "srap",
+          0
+        ],
+        "var_sub": [
+          "srap",
+          1
+        ]
+      },
+      {
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_show": [
+          "bigap",
+          "шт      "
+        ],
+        "var_add": [
+          "xp",
+          100
+        ],
+        "instant": true,
+        "id": 24,
+        "text": "Большая аптечка(<plus>100хп)",
+        "var_more": [
+          "bigap",
+          0
+        ],
+        "var_sub": [
+          "bigap",
+          1
+        ]
+      },
+      {
+        "var_max": [
+          "vida",
+          100
+        ],
+        "var_show": [
+          "vidab",
+          "шт    "
+        ],
+        "var_add": [
+          "vida",
+          20
+        ],
+        "text": "Бутылка воды(<plus>20жид)",
+        "id": 24,
+        "instant": true,
+        "var_more": [
+          "vidab",
+          0
+        ],
+        "var_sub": [
+          "vidab",
+          1
+        ]
+      },
+      {
+        "var_max": [
+          "golod",
+          100
+        ],
+        "var_show": [
+          "bot",
+          "шт       "
+        ],
+        "var_add": [
+          "golod",
+          20
+        ],
+        "text": "Питательный батончик(<plus>20г)",
+        "id": 24,
+        "instant": true,
+        "var_more": [
+          "bot",
+          0
+        ],
+        "var_sub": [
+          "bot",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Другое",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Назад"
+      },
+      {
+        "var_max": [
+          "luna",
+          1
+        ],
+        "var_show": [
+          "luna"
+        ],
+        "comment": true,
+        "id": 24,
+        "text": "Лунный камень",
+        "var_more": [
+          "luna",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "roza"
+        ],
+        "comment": true,
+        "id": 24,
+        "text": "Белая роза",
+        "var_more": [
+          "roza",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "Здесь находятся ваши шлемы.",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Назад"
+      },
+      {
+        "var_more": [
+          "br",
+          0
+        ],
+        "lua_do": "function lua_do()\nbrsh=brsh-brsh\nend",
+        "instant": true,
+        "id": 46,
+        "text": "Снять"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "Здесь находятся ваши куртки.",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Назад"
+      },
+      {
+        "lua_do": "function lua_do()\nbr=br-br<plus>1\nend",
+        "var_more": [
+          "br",
+          0
+        ],
+        "var_equal": [
+          "brv",
+          1
+        ],
+        "id": 55,
+        "instant": true,
+        "text": "Снять",
+        "var_set": [
+          "brv",
+          0
+        ]
+      },
+      {
+        "answerImage": [
+          "https://c.radikal.ru/c03/2106/8c/d64a9c6577af.jpg"
+        ],
+        "var_not": [
+          "brv",
+          1
+        ],
+        "var_add": [
+          "br",
+          3
+        ],
+        "var_equal": [
+          "black_k",
+          1
+        ],
+        "id": 55,
+        "text": "Чёрная куртка 3защ\n\n\n\n",
+        "instant": true,
+        "var_set": [
+          "brv",
+          1
+        ]
+      },
+      {
+        "answerImage": [
+          "https://d.radikal.ru/d43/2106/08/457dc490a2c2.jpg"
+        ],
+        "var_not": [
+          "brv",
+          1
+        ],
+        "var_add": [
+          "br",
+          4
+        ],
+        "var_equal": [
+          "zel_k",
+          1
+        ],
+        "id": 55,
+        "text": "Тёмно-зелёная куртка 4защ\n\n\n\n",
+        "instant": true,
+        "var_set": [
+          "brv",
+          1
+        ]
+      },
+      {
+        "answerImage": [
+          "https://d.radikal.ru/d39/2106/6c/fcad91bbf913.jpg"
+        ],
+        "var_not": [
+          "brv",
+          1
+        ],
+        "var_add": [
+          "br",
+          5
+        ],
+        "var_equal": [
+          "kor_k",
+          1
+        ],
+        "id": 55,
+        "text": "Коричневая куртка 5защ\n\n\n\n",
+        "instant": true,
+        "var_set": [
+          "brv",
+          1
+        ]
+      },
+      {
+        "answerImage": [
+          "https://c.radikal.ru/c25/2106/5f/4fc4da4c70c2.jpg"
+        ],
+        "var_not": [
+          "brv",
+          1
+        ],
+        "var_add": [
+          "br",
+          6
+        ],
+        "var_equal": [
+          "koj_k",
+          1
+        ],
+        "id": 55,
+        "text": "Кожаная куртка 6защ\n\n\n\n",
+        "instant": true,
+        "var_set": [
+          "brv",
+          1
+        ]
+      },
+      {
+        "answerImage": [
+          "https://c.radikal.ru/c05/2106/e8/6cef652f02c6.jpg"
+        ],
+        "var_not": [
+          "brv",
+          1
+        ],
+        "var_add": [
+          "br",
+          7
+        ],
+        "var_equal": [
+          "zol_k",
+          1
+        ],
+        "id": 55,
+        "text": "Золотистая куртка 7защ\n\n\n\n",
+        "instant": true,
+        "var_set": [
+          "brv",
+          1
+        ]
+      },
+      {
+        "answerImage": [
+          "https://d.radikal.ru/d26/2106/13/064a14111656.jpg"
+        ],
+        "var_not": [
+          "brv",
+          1
+        ],
+        "var_add": [
+          "br",
+          8
+        ],
+        "var_equal": [
+          "kon_k",
+          1
+        ],
+        "id": 55,
+        "text": "Куртка Конора 8защ\n\n\n\n",
+        "instant": true,
+        "var_set": [
+          "brv",
+          1
+        ]
+      },
+      {
+        "answerImage": [
+          "https://a.radikal.ru/a29/2106/cf/96230c8a83f3.jpg"
+        ],
+        "var_not": [
+          "brv",
+          1
+        ],
+        "var_add": [
+          "br",
+          10
+        ],
+        "var_equal": [
+          "jin_k",
+          1
+        ],
+        "id": 55,
+        "text": "Джинсовая куртка 10защ\n\n\n\n",
+        "instant": true,
+        "var_set": [
+          "brv",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 57,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b07/2106/82/58402b83cb28.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          125
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Мутант#2\n\nурон 35              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 57,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc-cilap\nend"
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "id": 57,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 57,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>10-br)\nend",
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 57,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "id": 63,
+        "text": "Аптечка",
+        "var_not": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Мутант ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Мутант атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Мутант использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_random_from_weight": [
+          "m2",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          100
+        ],
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Победа",
+        "var_set": [
+          "kit",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c38/2106/3f/7ed7e688fd89.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          200
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Мутант#3\n\nурон 50              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 58,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc-cilap\nend"
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "id": 58,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 58,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>20-br)\nend",
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 58,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "id": 63,
+        "text": "Аптечка",
+        "var_not": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Обычный зомби ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Обычный зомби атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Обычный зомби использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_random_from_weight": [
+          "m3",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          350
+        ],
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Победа",
+        "var_set": [
+          "kit",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a24/2106/0e/172ef3f01e7f.png"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          50
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Радиоктивный зомби\n\nурон 25              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 59,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc-cilap\nend"
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "id": 59,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 59,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>10-br)\nend",
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 59,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "id": 63,
+        "text": "Аптечка",
+        "var_not": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Радиоктивный зомби ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Радиоктивный зомби атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Радиоктивный зомби использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_random_from_weight": [
+          "rad",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          50
+        ],
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Победа",
+        "var_set": [
+          "kit",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d33/2106/1c/b7d0766b9011.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          275
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Мутант#4\n\nурон 55              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 60,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc-cilap\nend"
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "id": 60,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 60,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>20-br)\nend",
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 60,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "id": 63,
+        "text": "Аптечка",
+        "var_not": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Обычный зомби ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Обычный зомби атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Обычный зомби использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_random_from_weight": [
+          "m4",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          450
+        ],
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Победа",
+        "var_set": [
+          "kit",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a08/2106/e4/a6e42b38ebe0.png"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          25
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Зомби#2\n\nурон 25              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 61,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc-cilap\nend"
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "id": 61,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 61,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>5-br)\nend",
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 61,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "id": 63,
+        "text": "Аптечка",
+        "var_not": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Обычный зомби ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Обычный зомби атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Обычный зомби использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_random_from_weight": [
+          "z2",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          20
+        ],
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Победа",
+        "var_set": [
+          "kit",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a19/2106/9e/501d5d0ce4a2.jpg"
+        ],
+        "comment": true
+      },
+      {
+        "var_max": [
+          "mxp",
+          40
+        ],
+        "var_show": [
+          "mxp",
+          ""
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Зомби шахтер\n\nурон 30              хп"
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "super_calculate": false,
+        "id": 14,
+        "text": " ",
+        "calculate": true
+      },
+      {
+        "var_max": [
+          "vxp",
+          250
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Моё хп",
+        "update": [
+          1
+        ],
+        "var_min": [
+          "xp",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "yyy",
+          ")"
+        ],
+        "launchtimer": [
+          "x",
+          1
+        ],
+        "id": 62,
+        "instant": true,
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "text": "Атаковать(",
+        "lua_do": "function lua_do()\nmxp=mxp-yron-yronc-cilap\nend"
+      },
+      {
+        "var_show": [
+          "lovk",
+          ")"
+        ],
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "text": "Уклониться\nдоступно раз(",
+        "var_need": [
+          "lovk",
+          1,
+          "boy",
+          20
+        ],
+        "id": 62,
+        "var_more": [
+          "mxp",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "lovk",
+          1
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr-br)\nend",
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 62,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_random_from_weight": [
+          "boy",
+          1,
+          50,
+          20,
+          25,
+          25,
+          25
+        ],
+        "lua_do": "function lua_do()\nxp=xp-(myr<plus>10-br)\nend",
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 62,
+        "text": "Получить урон",
+        "instant": true,
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "id": 63,
+        "text": "Аптечка",
+        "var_not": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          1
+        ],
+        "id": 14,
+        "text": "Обычный зомби ошеломлён",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          20
+        ],
+        "id": 14,
+        "text": "Обычный зомби атакует",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "boy",
+          25
+        ],
+        "id": 14,
+        "text": "Обычный зомби использует супер атаку",
+        "var_more": [
+          "mxp",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "mxp",
+          1
+        ],
+        "var_random_from_weight": [
+          "zsh",
+          0,
+          10,
+          1,
+          90
+        ],
+        "var_add": [
+          "op",
+          60
+        ],
+        "var_sub": [
+          "golod",
+          10,
+          "vida",
+          5
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "Победа",
+        "var_set": [
+          "kit",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "Припасы",
+    "answers": [
+      {
+        "id": 63,
+        "text": "Назад",
+        "var_set": [
+          "kit",
+          1
+        ],
+        "go_to": [
+          "p"
+        ]
+      },
+      {
+        "var_show": [
+          "minap",
+          "шт       "
+        ],
+        "var_add": [
+          "xp",
+          30
+        ],
+        "id": 24,
+        "text": "Малая аптечка(<plus>30хп)",
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_not": [
+          "kit",
+          1
+        ],
+        "var_more": [
+          "minap",
+          0
+        ],
+        "var_sub": [
+          "minap",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "minap",
+          "шт       "
+        ],
+        "var_add": [
+          "xp",
+          60
+        ],
+        "id": 24,
+        "text": "Средняя аптечка(<plus>60хп)",
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_not": [
+          "ki",
+          1
+        ],
+        "var_more": [
+          "srap",
+          0
+        ],
+        "var_sub": [
+          "srap",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "kit",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "bigap",
+          "шт      "
+        ],
+        "var_add": [
+          "xp",
+          100
+        ],
+        "id": 24,
+        "text": "Большая аптечка(<plus>100хп)",
+        "var_max": [
+          "xp",
+          250
+        ],
+        "var_not": [
+          "kit",
+          1
+        ],
+        "var_more": [
+          "bigap",
+          0
+        ],
+        "var_sub": [
+          "bigap",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "kit",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "Вы берите класс персонажа:\nАссасин (<plus>1ловкость/уровень)\n\nВоин(<plus>1сила/уровень)\n\nВзломщик (<plus>1интеллект/уровень)",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ассасин",
+        "var_set": [
+          "assasin",
+          1,
+          "voin",
+          0,
+          "vz",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Воин",
+        "var_set": [
+          "voin",
+          1,
+          "assasin",
+          0,
+          "vz",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Взломщик",
+        "var_set": [
+          "vz",
+          1,
+          "assasin",
+          0,
+          "voin",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "Интеллект:шанс взлома.\n\nСила: доп урон(1ед. силы=0.5ед. урона).\n\nЛовкость: количество уклонений(полное игнорирование урона).\n\nДоп характеристики обозначают количество полученных параметров от петов.(Изначально они на единице)\n\nНа старте все получают 3 очка характеристик.\nРаспределите их с умом.\n\n\n\nПри сражениях с монстрами отнимается жажда и голод. При успешном взломе сундуком тоже, чем сложнее сундук тем больше.(взлом роскошного сундука отнимает 20 жажды).\n\n\n\nЕсли жидкость или голод дойдет до 15, в меню персонажа и в основном меню появится предупреждение.\n\n\n\nЕсли хп, жажда или голод дойдет до 0, персонаж погибнет, и потеряет всё.(кроме питомцев и знаний из бестиария)\n\n\nЛут из сундуков определяет ведущий, но валюта падает из сундуков сама.\n\n\nПередача работает по принципу, один оддал другой взял.\n То есть, она не работает на прямую. Если нужно передать деньги, то на одном устройстве с которого отнимаем, нажмаем на кнопку передать клеверов x, а на другом позже нажимаем кнопку с таким же значением получить x клеверов.\n\n(если у вас нет клеверов передать вы не сможете)\n(так нужно делать не только с валютой но и с предметами)\n\nПожалуйста не используйте эту возможность для жульничества.",
+    "answers": [
+      {
+        "id": 64,
+        "text": "Перейти к выбору класса персонажа"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 66,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a19/2106/9e/501d5d0ce4a2.jpg"
+        ]
+      },
+      {
+        "id": 66,
+        "text": "Зомби шахтёр\n\nНахождение: везде\n\nУрон <plus>30 / хп 40/40\n\nОпыт за убийство:60",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "instant": false
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 67,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a24/2106/0e/172ef3f01e7f.png"
+        ]
+      },
+      {
+        "id": 67,
+        "text": "Радиакцивный зомби:\n\nНахождение: на заводах\n\nХар-ки:\nУрон <plus>25 / хп 50/50\n\nОпыт за убийство:50",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "instant": false
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 68,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a08/2106/e4/a6e42b38ebe0.png"
+        ]
+      },
+      {
+        "id": 68,
+        "text": "Зомби #2\n\nНахождение: везде\n\nХар-ки:\nУрон <plus>25 / хп 25/25\n\nОпыт за убийство:20",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "instant": false
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 69,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://b.radikal.ru/b07/2106/82/58402b83cb28.jpg"
+        ]
+      },
+      {
+        "id": 69,
+        "text": "Мутант #2\n\nНахождение: на фабриках\n\nХар-ки:\nУрон <plus>35 / хп 125/125\n\nОпыт за убийство:100",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "instant": false
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 70,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c38/2106/3f/7ed7e688fd89.jpg"
+        ]
+      },
+      {
+        "id": 70,
+        "text": "Мутант #3\n\nНахождение: в озёрах\n\nХар-ки: \nУрон <plus>50 / хп 200/200\n\nОпыт за убийство:350",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "instant": false
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 71,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d33/2106/1c/b7d0766b9011.jpg"
+        ]
+      },
+      {
+        "id": 71,
+        "text": "Мутант #4\n\nНахождение: в заброшенном замке\n\nХар-ки:\nУрон <plus>55 / хп 275/ 275\n\nОпыт за убийство:450",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "instant": false
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "Здесь можно передать вещи другим игрокам.",
+    "answers": [
+      {
+        "id": 72,
+        "text": "Внимание это передача!!!",
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Назад"
+      },
+      {
+        "id": 73,
+        "text": "Оружие"
+      },
+      {
+        "id": 49,
+        "text": "Броня"
+      },
+      {
+        "id": 75,
+        "text": "Припасы"
+      },
+      {
+        "id": 76,
+        "text": "Предметы и другое"
+      },
+      {
+        "id": 77,
+        "text": "Деньги"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "Оружие передать.",
+    "answers": [
+      {
+        "id": 72,
+        "text": "Назад"
+      },
+      {
+        "var_equal": [
+          "star_met",
+          1
+        ],
+        "id": 73,
+        "instant": true,
+        "text": "Бита 3 урона",
+        "var_set": [
+          "star_met",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "topor",
+          1
+        ],
+        "id": 73,
+        "instant": true,
+        "text": "Топор 4 урона",
+        "var_set": [
+          "topor",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "slab_pist",
+          1
+        ],
+        "id": 73,
+        "instant": true,
+        "text": "Мачете 5 урона",
+        "var_set": [
+          "slab_pist",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "kope",
+          1
+        ],
+        "id": 73,
+        "text": "Копьё 5 урона",
+        "instant": true,
+        "var_set": [
+          "kope",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "katana",
+          1
+        ],
+        "id": 73,
+        "instant": true,
+        "text": "Катана 7 урона",
+        "var_set": [
+          "katana",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "kosa",
+          1
+        ],
+        "id": 73,
+        "text": "Коса 9 урона",
+        "instant": true,
+        "var_set": [
+          "kosa",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "babyshka",
+          1
+        ],
+        "id": 73,
+        "instant": true,
+        "text": "Нож бабочка 11 урона",
+        "var_set": [
+          "babyshka",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "Броня ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Назад"
+      },
+      {
+        "id": 74,
+        "instant": true,
+        "text": "Чёрная куртка 3защ",
+        "var_set": [
+          "black_k",
+          1
+        ]
+      },
+      {
+        "id": 74,
+        "instant": true,
+        "text": "Коричневая куртка",
+        "var_set": [
+          "kor_k",
+          1
+        ]
+      },
+      {
+        "id": 74,
+        "instant": true,
+        "text": "Куртка Конора",
+        "var_set": [
+          "kon_k",
+          1
+        ]
+      },
+      {
+        "id": 74,
+        "instant": true,
+        "text": "Джинсовая куртка 10защ",
+        "var_set": [
+          "jin_k",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "Припасы передать.",
+    "answers": [
+      {
+        "id": 72,
+        "text": "Назад"
+      },
+      {
+        "id": 75,
+        "instant": true,
+        "var_sub": [
+          "minap",
+          1
+        ],
+        "text": "Малая аптечка(<plus>30хп)"
+      },
+      {
+        "id": 75,
+        "instant": true,
+        "var_sub": [
+          "srnap",
+          1
+        ],
+        "text": "Средняя аптечка(<plus>60хп)"
+      },
+      {
+        "id": 75,
+        "instant": true,
+        "var_sub": [
+          "bigap",
+          1
+        ],
+        "text": "Большая аптечка(<plus>100хп)"
+      },
+      {
+        "var_sub": [
+          "vidab",
+          1
+        ],
+        "id": 75,
+        "text": "Бутылка воды(<plus>20жид)",
+        "var_more": [
+          "vidab",
+          0
+        ],
+        "instant": true
+      },
+      {
+        "var_sub": [
+          "bot",
+          1
+        ],
+        "id": 75,
+        "text": "Питательный батончик(<plus>20г)",
+        "var_more": [
+          "bot",
+          0
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "Предметы и другое передать.",
+    "answers": [
+      {
+        "id": 72,
+        "text": "Назад"
+      },
+      {
+        "var_max": [
+          "luna",
+          1
+        ],
+        "var_sub": [
+          "luna",
+          1
+        ],
+        "id": 76,
+        "var_more": [
+          "luna",
+          0
+        ],
+        "instant": true,
+        "text": "Лунный камень"
+      },
+      {
+        "var_sub": [
+          "roza",
+          1
+        ],
+        "id": 76,
+        "instant": true,
+        "var_more": [
+          "roza",
+          0
+        ],
+        "text": "Белая роза"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "Здесь можно передать деньги",
+    "answers": [
+      {
+        "id": 72,
+        "text": "Назад"
+      },
+      {
+        "id": 78,
+        "text": "Получить"
+      },
+      {
+        "id": 79,
+        "text": "Передать"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "Получить",
+    "answers": [
+      {
+        "id": 77,
+        "text": "Назад"
+      },
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "id": 78,
+        "text": "Получить 5 клеверов",
+        "var_add": [
+          "clever",
+          5
+        ],
+        "instant": true
+      },
+      {
+        "id": 78,
+        "text": "Получить 10 клеверов",
+        "var_add": [
+          "clever",
+          10
+        ],
+        "instant": true
+      },
+      {
+        "id": 78,
+        "text": "Получить 100 клеверов",
+        "var_add": [
+          "clever",
+          100
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "Передать",
+    "answers": [
+      {
+        "id": 77,
+        "text": "Назад"
+      },
+      {
+        "var_show": [
+          "clever"
+        ],
+        "comment": true,
+        "id": 35,
+        "text": "У меня клеверов",
+        "answerImage": [
+          "https://b.radikal.ru/b19/2106/b2/6aba506ce54f.png"
+        ]
+      },
+      {
+        "var_more": [
+          "clever",
+          4
+        ],
+        "id": 79,
+        "text": "Передать клеверов 5",
+        "instant": true,
+        "var_sub": [
+          "clever",
+          5
+        ]
+      },
+      {
+        "instant": true,
+        "id": 79,
+        "text": "Передать клеверов 10",
+        "var_sub": [
+          "clever",
+          10
+        ],
+        "var_more": [
+          "clever",
+          9
+        ]
+      },
+      {
+        "instant": true,
+        "id": 79,
+        "text": "Передать клеверов 100",
+        "var_sub": [
+          "clever",
+          100
+        ],
+        "var_more": [
+          "clever",
+          99
+        ]
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 81,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 82,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 83,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 84,
+    "text": "",
+    "answers": []
+  }
+]

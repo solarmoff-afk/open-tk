@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Фантом написал еще 147855 слов в квесте \"Они среди нас\"."
+      },
+      {
+        "targetbookid": "231374",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Они среди нас\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Tobi написал еще 138323 слов в квесте \"Тропа во тьме \"."
+      },
+      {
+        "targetbookid": "246479",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тропа во тьме \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 122442 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Fiikus написал еще 122211 слов в квесте \"Раскол\"."
+      },
+      {
+        "targetbookid": "249847",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Раскол\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 106545 слов в квесте \"Из вора в лорды\"."
+      },
+      {
+        "targetbookid": "231522",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Из вора в лорды\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

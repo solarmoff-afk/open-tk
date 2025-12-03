@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mey_Igarasi написал еще 163639 слов в квесте \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "targetbookid": "239805",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Newa Hand написал еще 110100 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "256611",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Irbis написал еще 108183 слов в квесте \"Подарок из другого мира\"."
+      },
+      {
+        "targetbookid": "245509",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Подарок из другого мира\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор mionlen0 написал еще 97596 слов в квесте \"Планета Горно\"."
+      },
+      {
+        "targetbookid": "255658",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Планета Горно\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Bismarck написал еще 97537 слов в квесте \"Когда мертвые оживают\"."
+      },
+      {
+        "targetbookid": "254226",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Когда мертвые оживают\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

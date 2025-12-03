@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор JSG написал еще 23398 слов в квесте \"Наследница\"."
+      },
+      {
+        "targetbookid": "144307",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наследница\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Nika написал еще 23302 слов в квесте \"Николь\"."
+      },
+      {
+        "targetbookid": "153804",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Николь\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Leslie\n написал еще 22529 слов в квесте \"Дети такие дети...\"."
+      },
+      {
+        "targetbookid": "157886",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Дети такие дети...\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Yana Z написал еще 18128 слов в квесте \"Кьяллахельм. Ведомые Тьмой\"."
+      },
+      {
+        "targetbookid": "142026",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Кьяллахельм. Ведомые Тьмой\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Admiral Atom\n написал еще 17932 слов в квесте \"NO MERCY\"."
+      },
+      {
+        "targetbookid": "157118",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"NO MERCY\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

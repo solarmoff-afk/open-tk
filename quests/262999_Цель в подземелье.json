@@ -1,0 +1,3594 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Michy\nЖанры: подземелье, симулятор, выживание, фэнтези, приключения\nВремя прохождения: 1-40 минут\n\nЭто квест-рпг про человека, пришедшего в опасное подземелье одолеть главного босса. На пути придётся столкнуться с разными монстрами и трудностями. Выживайте, прокачивайтесь, становитесь сильнее. Надеюсь, вам понравится этот квест\n\nНачать эпилог можно в городе в любое время. Концовка будет зависить от ваших действий и достижений\n\nК новому году вышел) 28.12.22\nВсе картинки, кроме виджетов, сгенерированны DALL-E 2",
+    "answers": [
+      {
+        "var_str_set": [
+          "global bg_music",
+          ""
+        ],
+        "id": 3,
+        "text": "Начнём!",
+        "lua_do": "function lua_do()\ntp = false\nspeed = 1\nloot = 1\ntask1 = math.random(1,15)\ntask11 = math.random(1,3)\ntask2 = math.random(1,15)\ntask22 = math.random(1,3)\ntask3 = math.random(1,15)\ntask33 = math.random(1,3)\nend",
+        "var_set": [
+          "diff",
+          0,
+          "gender",
+          0,
+          "restart",
+          0,
+          "coin",
+          2,
+          "health",
+          30,
+          "maxhealth",
+          50,
+          "stage",
+          4,
+          "strange",
+          1,
+          "strange1",
+          1,
+          "def",
+          0,
+          "loc",
+          0,
+          "fight",
+          0,
+          "cost",
+          0,
+          "cost1",
+          0,
+          "m",
+          0,
+          "m1",
+          0,
+          "m2",
+          0,
+          "m3",
+          0,
+          "m4",
+          0,
+          "m5",
+          0,
+          "m6",
+          0,
+          "m7",
+          0,
+          "m8",
+          0,
+          "weapon",
+          0,
+          "w1",
+          0,
+          "w2",
+          0,
+          "w3",
+          0,
+          "w4",
+          0,
+          "armor",
+          0,
+          "a1",
+          0,
+          "a2",
+          0,
+          "a3",
+          0,
+          "a4",
+          0,
+          "find",
+          2000,
+          "people",
+          0,
+          "savepeople",
+          0,
+          "minKilled",
+          0,
+          "krist",
+          0,
+          "halls",
+          0,
+          "peopleSave",
+          0,
+          "savepeople",
+          0,
+          "floor5",
+          0,
+          "gold",
+          0,
+          "homelvl",
+          0,
+          "chance",
+          1000,
+          "r",
+          0,
+          "bank",
+          1,
+          "bankcoin",
+          0,
+          "coinadd",
+          0,
+          "bankDvlp",
+          0,
+          "darkkrist",
+          0,
+          "tutorial",
+          1,
+          "gMinKilled",
+          0,
+          "gDarkKilled",
+          0,
+          "karma",
+          0,
+          "darkhomelvl",
+          0,
+          "gangster",
+          0,
+          "friend",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "[Достижения]"
+      },
+      {
+        "var_str_set": [
+          "global font",
+          "NotoSerif-Bold"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "global instantDownload",
+          1,
+          "global base_layer_alpha",
+          0.8
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://i.ibb.co/3mQtS3F/image.png",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "",
+        "system": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Нажмите \"эпилог\", чтобы получить достижения.\nВаши достижения:",
+    "answers": [
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "«самый живучий»",
+        "id": 2,
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.health100 then t=\"«самый живучий»<s>\nздоровье до 100\" end\nreturn t\nend"
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "«самый сильный»",
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.strange3 then t=\"«самый сильный»<s>\nсила без оружия 3\" end\nreturn t\nend",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.ArmorWeapon1 then t=\"«лучшее из магазина»<s>\nпосох <plus> стальная броня\" end\nreturn t\nend",
+        "id": 2,
+        "text": "«лучшее из магазина»",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.ArmorWeapon0 then t=\"«легендарное снаряжение»<s>\nтёмный посох <plus> тёмная броня\" end\nreturn t\nend",
+        "middle_answer": true,
+        "text": "«легендарное снаряжение»",
+        "comment": true,
+        "id": 2
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.home then t=\"«уют дома»<s>\nдом 4 уровня\" end\nreturn t\nend",
+        "middle_answer": true,
+        "text": "«уют дома»",
+        "comment": true,
+        "id": 2
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "«лучший дворец»",
+        "id": 2,
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.darkhome then t=\"«лучший дворец»<s>\nтёмный дворец 4 уровня\" end\nreturn t\nend"
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "«в бездну»",
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.stage15 then t=\"«в бездну»<s>\nспуститесь на 15 этаж\" end\nreturn t\nend",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.friend1 then t=\"«есть пара»<s>\nсходить на свидание\" end\nreturn t\nend",
+        "id": 2,
+        "text": "«есть пара»",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.friend2 then t=\"«не пара»<s>\nне сходить на свидание\" end\nreturn t\nend",
+        "middle_answer": true,
+        "text": "«не пара»",
+        "comment": true,
+        "id": 2
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "«дьявол»",
+        "id": 2,
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.karma1 then t=\"«дьявол»<s>\nкарма < -9\" end\nreturn t\nend"
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "«ангел»",
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.karma2 then t=\"«ангел»<s>\nкарма > 9\" end\nreturn t\nend",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-\"\nif g.gangsters then t=\"«бандитов нет»<s>\nразобраться с бандитами\" end\nreturn t\nend",
+        "id": 2,
+        "text": "«бандитов нет»",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "[назад]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Настройки:",
+    "answers": [
+      {
+        "comment": true,
+        "merge": false,
+        "id": 3,
+        "instant": false,
+        "text": "СЛОЖНОСТЬ",
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "diff",
+          -1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 3,
+        "instant": true,
+        "text": "Легко",
+        "var_set": [
+          "diff",
+          0,
+          "coin",
+          2,
+          "maxhealth",
+          40,
+          "health",
+          30
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "right_answer": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "var_equal": [
+          "diff",
+          0
+        ],
+        "id": 3,
+        "text": "Нормально",
+        "instant": true,
+        "var_set": [
+          "diff",
+          1,
+          "coin",
+          1,
+          "maxhealth",
+          30,
+          "health",
+          30
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "right_answer": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "var_equal": [
+          "diff",
+          1
+        ],
+        "id": 3,
+        "text": "Сложно",
+        "instant": true,
+        "var_set": [
+          "diff",
+          -1,
+          "coin",
+          2,
+          "maxhealth",
+          50,
+          "health",
+          40
+        ]
+      },
+      {
+        "comment": true,
+        "id": 3,
+        "text": "ПОЛ ",
+        "merge": false,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "gender",
+          0
+        ],
+        "id": 3,
+        "text": "мужской",
+        "instant": true,
+        "var_set": [
+          "gender",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "gender",
+          1
+        ],
+        "id": 3,
+        "text": "женский",
+        "instant": true,
+        "var_set": [
+          "gender",
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text": "ВОЗРОЖДЕНИЯ",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "restart",
+          1
+        ],
+        "id": 3,
+        "text": "Да",
+        "instant": true,
+        "var_set": [
+          "restart",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "restart",
+          0
+        ],
+        "id": 3,
+        "text": "Нет",
+        "instant": true,
+        "var_set": [
+          "restart",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Готов!",
+        "lua_text": "function lua_text()\nlocal t = \"Готов!\"\nif restart==1 and diff==-1 then t=\"начнём...\" end\nreturn t\nend",
+        "lua_if": "function lua_if()\nreturn diff<1 or restart==1\nend"
+      },
+      {
+        "id": 4,
+        "text": "ХАРДКОР!",
+        "lua_if": "function lua_if()\nreturn restart==0 and diff==1\nend",
+        "text_color": [
+          255,
+          0,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 3,
+        "text": "40/50 здоровья, 2 монеты, <plus>1 монета при продаже, -1 урон в битве, доступны бонусы и банк",
+        "shadow_color": [],
+        "var_equal": [
+          "diff",
+          -1
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 3,
+        "text": "30/40 здоровья, 2 монеты, доступен банк, недоступны бонусы",
+        "var_equal": [
+          "diff",
+          0
+        ],
+        "shadow_color": []
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 3,
+        "text": "30/30 здоровья, 1 монета, -1 монета при продаже, <plus>1 урон в битве, недоступны бонусы и банк",
+        "shadow_color": [],
+        "var_equal": [
+          "diff",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "widget": [
+          "WhealthP",
+          "https://i.ibb.co/3MtpsgQ/image.png",
+          "%",
+          "Whealth",
+          "https://i.ibb.co/3MtpsgQ/image.png",
+          "ед.",
+          "Wstrange",
+          "https://i.ibb.co/cx6s75R/image.png",
+          "",
+          "Wstrange2",
+          "https://i.ibb.co/nr4NQQm/image.png",
+          "",
+          "Wcoins",
+          "https://i.ibb.co/n8FQP6C/image.png",
+          "",
+          "Wdef",
+          "https://i.ibb.co/prKDDYD/image.png",
+          "",
+          "Wspeed",
+          "https://i.ibb.co/0t6ft9d/image.png",
+          ""
+        ],
+        "text": "виджеты"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Локация: Подземелье, лестница вверх\n",
+    "answers": [
+      {
+        "var_show": [
+          "stage"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "этаж:",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "var_equal": [
+          "stage",
+          1
+        ],
+        "middle_answer": false,
+        "text": "[на поверхность]",
+        "id": 10,
+        "left_answer": true
+      },
+      {
+        "left_answer": true,
+        "var_not": [
+          "stage",
+          1
+        ],
+        "var_add": [
+          "stage",
+          -1,
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "middle_answer": false,
+        "text": "[выше]",
+        "id": 4,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "id": 4,
+        "text": "[остаться]",
+        "middle_answer": false,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "id": 19,
+        "text": "[к телепорту]",
+        "lua_if": "function lua_if()\nreturn tp and (stage<6 or darkhomelvl>0)\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 4,
+        "text": "лестница",
+        "lua_text": "function lua_text()\nlocal t = \"\"\nif r==0 then t=\"<s>\n<s>\nПеред вами винтовая лестница наверх. Выглядит старой\" end\nif r==1 then t=\"<s>\n<s>\nПеред вами длинная прямая летница наверх. Каменный проход кажется бесконечным\" end\nif r==2 then t=\"<s>\n<s>\nНад вами ущелье на верхний этаж. Можно было бы залезть\" end\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"\"\nif gender == 0 then\nt=\"Вы новый авантюрист, который забрался в подземелье\" else\nt=\"Вы новая авантюристка, которая забралась в подземелье\" end\nt=t..\". Говорят на следующем этаже вниз есть сильнейший босс - минотавр. Но с вашей силой пора одуматься и вернуться в город. Тут водятся опасные монстры\"\nreturn \"<s>\n<s>\n\"..t..\"<s>\n<s>\n!!!здоровье указано в процентах от максимального, а считается в единицах, смотрите «персонаж»!!!\"\nend",
+        "id": 4,
+        "text": "начало",
+        "need": [
+          -5,
+          -6,
+          -7,
+          -8,
+          -9
+        ],
+        "merge": true
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Этажи номируются с верхнего (первого). Чем ниже, тем опаснее противники. На каждом этаже 3 вида противников. Уровень=этаж<plus>(от 0 до 2)",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/xzGgMG0/image.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Локация: Подземелье, лестница вниз \n",
+    "answers": [
+      {
+        "var_show": [
+          "stage"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "этаж:",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "left_answer": true,
+        "lua_do": "function lua_do()\nif stage<plus>1==15 then g.stage15=true end\nend",
+        "var_add": [
+          "stage",
+          1,
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "middle_answer": false,
+        "text": "[ниже]",
+        "id": 5,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "id": 5,
+        "text": "[остаться]",
+        "middle_answer": false,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "id": 19,
+        "text": "[к телепорту]",
+        "lua_if": "function lua_if()\nreturn tp and (stage<6 or darkhomelvl>0)\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 5,
+        "text": "лестница ",
+        "lua_text": "function lua_text()\nlocal t = \"\"\nif r==0 then t=\"<s>\n<s>\nПеред вами винтовая лестница вниз\" end\nif r==1 then t=\"<s>\n<s>\nПеред вами длинная прямая летница вниз. Каменный проход кажется бесконечным\" end\nif r==2 then t=\"<s>\n<s>\nРядом с вами ущелье на нижний этаж. Можно было бы спуститься\" end\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Этажи номируются с верхнего (первого). Чем ниже, тем опаснее противники. На каждом этаже 3 вида противников. Уровень=этаж<plus>(от 0 до 2)",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/xzGgMG0/image.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Локация: Подземелье, враг\n",
+    "answers": [
+      {
+        "var_show": [
+          "stage"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "этаж: ",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Вы слышите звуки мостра рядом...",
+        "lua_text": "function lua_text()\nreturn \"<s>\n<s>\nВы слышите звуки мостра рядом...<s>\n\"\nend",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wspeed",
+          "speed"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "id": 6,
+        "text": "\n\nВы встретили ",
+        "lua_text": "function lua_text()\nif stage<plus>r<strange1<plus>1 then\nreturn \"...<s>\nНо никто не пришёл\"\nelse\nlocal text = \"лишь тьму\"\nif stage <plus> r == 1 then\ntext = \"мышь<s>\nздоровье: 1, атака: 1\"\nend\nif stage <plus> r == 2 then\ntext = \"слизь<s>\nздоровье: 2, атака: 2\"\nend\nif stage <plus> r == 3 then\ntext = \"летучую мышь<s>\nздоровье: 3, атака: 3\"\nend\nif stage <plus> r == 4 then\ntext = \"паука<s>\nздоровье: 4, атака: 4\"\nend\nif stage <plus> r == 5 then\ntext = \"скелета<s>\nздоровье: 5, атака: 5\"\nend\nif stage <plus> r == 6 then\ntext = \"голема<s>\nздоровье: 6, атака: 6\"\nend\nif stage <plus> r == 7 then\ntext = \"минотавра<s>\nздоровье: 7, атака: 7\"\nend\nreturn \"Вы встретили \" .. text\nend\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "\n...\nТьма сгущается\nВы встретили теневого монстра\nздоровье: 10, атака: 10",
+        "var_equal": [
+          "e",
+          10
+        ],
+        "merge": true
+      },
+      {
+        "left_answer": true,
+        "lua_if": "function lua_if()\nlocal h = true\nif (e > 7 and e ~= 10) or e<strange1/2 then\nh = false\nend\nreturn h\nend",
+        "var_equal": [
+          "fight",
+          0
+        ],
+        "id": 6,
+        "text": "[сбежать]",
+        "lua_do": "function lua_do()\ndamage = math.ceil((e <plus> diff)/speed -def)\nif damage>=0 then\nhealth = health - damage end\nend",
+        "var_set": [
+          "fight",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nlocal h = true\nif (e > 7 and e ~= 10) or e<strange1/2 then\nh = false\nend\nreturn h\nend",
+        "var_equal": [
+          "fight",
+          0
+        ],
+        "id": 6,
+        "text": "[атака]",
+        "lua_do": "function lua_do()\nlocal HP = e <plus> diff\ndamage = 0\nwhile HP > 0 and health > 0 do\nHP = HP - strange1\nif HP > 0 and ((e <plus> diff) -def)>0 then\nhealth = health - math.ceil((e <plus> diff) -def)\ndamage = damage <plus> math.ceil((e <plus> diff) -def)\nend\nend\nif HP<=0 and e==7 then minKilled=1 gMinKilled=1 end\nif HP<=0 and e==10 then gDarkKilled=1 end\nend",
+        "var_set": [
+          "fight",
+          2
+        ]
+      },
+      {
+        "var_show": [
+          "damage"
+        ],
+        "var_equal": [
+          "fight",
+          1
+        ],
+        "id": 6,
+        "var_need": [
+          "health",
+          1
+        ],
+        "text": "\n\nВы сбежали\nПотеряно здоровья: ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "damage"
+        ],
+        "var_equal": [
+          "fight",
+          2
+        ],
+        "id": 6,
+        "var_need": [
+          "health",
+          1
+        ],
+        "text": "\n\nВы победили\nПотеряно здоровья: ",
+        "merge": true
+      },
+      {
+        "lua_do": "function lua_do()\nif e == 1 then m1 = m1 <plus> loot end\nif e == 2 then m2 = m2 <plus> loot end\nif e == 3 then m3 = m3 <plus> loot end\nif e == 4 then m4 = m4 <plus> loot end\nif e == 5 then m5 = m5 <plus> loot end\nif e == 6 then m6 = m6 <plus> loot end\nif e == 7 then m7 = m7 <plus> loot end\nif e == 10 then m8 = m8 <plus> loot end\nend",
+        "lua_text": "function lua_text()\nlocal text = \"<s>\nПолучено: \"\nif e == 1 then\ntext = text .. \"шкура мышки\"\nend\nif e == 2 then\ntext = text .. \"желе слизи\"\nend\nif e == 3 then\ntext = text .. \"крыло летучей мыши\"\nend\nif e == 4 then\ntext = text .. \"яд паука\"\nend\nif e == 5 then\ntext = text .. \"череп скелета\"\nend\nif e == 6 then\ntext = text .. \"камень голема\"\nend\nif e == 7 then\ntext = text .. \"рог минотавра\"\nend\nif e == 10 then\ntext = text .. \"сгусток тьмы\"\nend\nreturn text\nend",
+        "var_equal": [
+          "fight",
+          2
+        ],
+        "id": 6,
+        "text": "Получено: ",
+        "var_need": [
+          "health",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "damage"
+        ],
+        "id": 6,
+        "text": "\n\nВы проиграли\nПотеряно здоровья: ",
+        "merge": true,
+        "var_no_more": [
+          "health",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "right_answer": false,
+        "lua_if": "function lua_if()\nlocal h = false\nif (e > 7 and e ~= 10) or e<strange1/2 then\nh = true\nend\nreturn h\nend",
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "id": 5,
+        "text": "[дальше]",
+        "middle_answer": true,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "health",
+          1,
+          "fight",
+          1
+        ],
+        "go_to": [
+          "loc"
+        ],
+        "right_answer": false,
+        "id": 5,
+        "text": "[дальше]",
+        "var_set": [
+          "fight",
+          0
+        ]
+      },
+      {
+        "var_no_more": [
+          "health",
+          0
+        ],
+        "id": 11,
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "var_need": [
+          "fight",
+          1
+        ],
+        "middle_answer": true,
+        "text": "[дальше]",
+        "lua_do": "function lua_do()\nhealth = math.ceil(maxhealth / 2)\nend",
+        "var_set": [
+          "coin",
+          0,
+          "fight",
+          0,
+          "stage",
+          1,
+          "m1",
+          0,
+          "m2",
+          0,
+          "m3",
+          0,
+          "m4",
+          0,
+          "m5",
+          0,
+          "m6",
+          0,
+          "m7",
+          0,
+          "m8",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "fight",
+          0
+        ],
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "lua_do": "function lua_do()\ne = stage <plus> r\nend",
+        "text": "случайная сложность, атака/жизни"
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]",
+        "var_equal": [
+          "fight",
+          0
+        ]
+      },
+      {
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "При побеге вы получите урон, равный атаке врага (±1 от сложности)",
+        "var_equal": [
+          "fight",
+          0,
+          "tutorial",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "При атаке, вы будите атаковать поочередно, начиная с вас, пока здоровье у всех >0 (атака ±1 от сложности)",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "fight",
+          0,
+          "tutorial",
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/7G9jCwr/image.png"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Локация: Подземелье, обмен\n",
+    "answers": [
+      {
+        "var_show": [
+          "stage"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "этаж:",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "id": 7,
+        "var_need": [
+          "stage",
+          6
+        ],
+        "text": "\n\nВы в безжизненной тёмной зоне",
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "r",
+          0
+        ],
+        "id": 7,
+        "text": "\n\nВы встретили авантюриста. Он может продать вам целебных трав за 1 монету. Они восстановят 5 здоровья",
+        "merge": true,
+        "var_no_more": [
+          "stage",
+          5
+        ]
+      },
+      {
+        "id": 7,
+        "text": "\n\nВы встретили авантюриста. Он может продать вам целебных трав за 1 монету. Они восстановят 5 здоровья\n\nВы купили их и вылечились",
+        "var_equal": [
+          "r",
+          -1
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 7,
+        "text": "\n\nВы нашли сокровища! Но это может быть мимик. -5 здоровья или <plus>1 монета. Хотите открыть сундук?",
+        "var_no_more": [
+          "stage",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"<s>\n<s>\nВы нашли сокровища! Но это может быть мимик. -5 здоровья или <plus>1 монета. Хотите открыть сундук?<s>\n<s>\n\"\nif math.random(0,2)==1 then\nt=t..\"Удача, это настоящий сундук с ценностями!<s>\nМонеты: <plus>1\" coin=coin<plus>1\nelseif math.random(0,1)==1 then\nt=t..\"Это обычный пустой сундук. Продолжим путь\"\nelse t=t..\"Мимик укусил вас<s>\nЗдоровье: -5\" health=health-5 end\nreturn t\nend",
+        "var_equal": [
+          "r",
+          -2
+        ],
+        "id": 7,
+        "text": "\n\nВы нашли сокровища! Но это может быть мимик. 50% -5 здоровья, 50% <plus>1 монета. Хотите открыть сундук?\n\nмонеты:\nздоровье:",
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "r",
+          2
+        ],
+        "id": 7,
+        "text": "\n\nВы наткнулись на пропасть. Если кинуть в неё монету, то может вернуться 2 чужие. Хотя, может, и ваша монета просто уйдёт кому-то. хотите попробовать?",
+        "var_no_more": [
+          "stage",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "gold"
+        ],
+        "var_equal": [
+          "r",
+          -3
+        ],
+        "id": 7,
+        "text": "\n\nВы наткнулись на пропасть. Если кинуть в неё монету, то может вернуться 2 чужие. Хотя, может, и ваша монета просто уйдёт кому-то. хотите попробовать?\n\nПотрачено: 1 монета\nПолучено: ",
+        "merge": true
+      },
+      {
+        "id": 7,
+        "lua_if": "function lua_if()\nlocal t = false\nif r>=0 then t=true end\nreturn t\nend",
+        "text": "[обмен]",
+        "middle_answer": true,
+        "instant": true,
+        "lua_do": "function lua_do()\nif r==0 and coin>=1 then coin=coin-1 health=health<plus>5 if health>maxhealth then health=maxhealth end r=-1 end\nif r==1 then r=-2 end\nif r==2 and coin>=1 then gold=math.random(0,2) coin=coin<plus>gold-1 r=-3 end\nend",
+        "var_no_more": [
+          "stage",
+          5
+        ]
+      },
+      {
+        "text": "[дальше]",
+        "right_answer": false,
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "health",
+          1
+        ],
+        "middle_answer": true,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "var_set": [
+          "coin",
+          0,
+          "fight",
+          0,
+          "stage",
+          1,
+          "m1",
+          0,
+          "m2",
+          0,
+          "m3",
+          0,
+          "m4",
+          0,
+          "m5",
+          0,
+          "m6",
+          0,
+          "m7",
+          0,
+          "m8",
+          0
+        ],
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "middle_answer": true,
+        "id": 11,
+        "text": "[дальше]",
+        "lua_do": "function lua_do()\nhealth = math.ceil(maxhealth / 2)\nend",
+        "var_no_more": [
+          "health",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 7,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/KNfC5Pp/image.png"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Иногда в подземелье можно совершить обмен или рискнуть. Выбор за вами",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Локация: Подземелье, событие\n",
+    "answers": [
+      {
+        "var_show": [
+          "stage"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "этаж:",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "r",
+          0
+        ],
+        "id": 8,
+        "text": "\n\nВы нашли монету",
+        "merge": true,
+        "var_no_more": [
+          "stage",
+          5
+        ]
+      },
+      {
+        "var_no_more": [
+          "stage",
+          9
+        ],
+        "comment": true,
+        "var_equal": [
+          "r",
+          0
+        ],
+        "id": 8,
+        "var_need": [
+          "stage",
+          6
+        ],
+        "text": "\n\nВы нашли...\nНо силуэт монеты сразу пропал",
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "r",
+          -1
+        ],
+        "id": 8,
+        "text": "\n\nВы нашли монету\n\nВы подобрали монету",
+        "merge": true,
+        "var_no_more": [
+          "stage",
+          5
+        ]
+      },
+      {
+        "var_set": [
+          "r",
+          -1
+        ],
+        "text": "[подобрать монету]",
+        "var_add": [
+          "coin",
+          1
+        ],
+        "var_equal": [
+          "r",
+          0
+        ],
+        "middle_answer": true,
+        "instant": false,
+        "id": 8,
+        "var_no_more": [
+          "stage",
+          5
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"\"\nlocal randDvlp = math.random(0,2)\nlocal randDm = math.ceil(math.random(maxhealth/50,maxhealth/20))\nif randDvlp==0 then t=\"<s>\n<s>\nВы споткнулись и упали<s>\nЗдоровье: -\"..randDm end\nif randDvlp==1 then t=\"<s>\n<s>\nВы ударились в темноте<s>\nЗдоровье: -\"..randDm end\nif randDvlp==2 then t=\"<s>\n<s>\nВы попали в ловушку<s>\nЗдоровье: -\"..randDm end\nhealth=health-randDm\nif health<=0 then r=-4 end\nreturn t\nend",
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 8,
+        "text": "удар",
+        "merge": true,
+        "var_no_more": [
+          "stage",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "r",
+          2
+        ],
+        "id": 8,
+        "text": "\n\nВы встретили раненного авантюриста.\nВзять его с собой?",
+        "var_no_more": [
+          "stage",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "merge": true,
+        "var_equal": [
+          "r",
+          2
+        ],
+        "id": 8,
+        "var_need": [
+          "stage",
+          6
+        ],
+        "text": "\n\nВы встретили...\nНо силуэт человека сразу пропал",
+        "var_no_more": [
+          "stage",
+          9
+        ]
+      },
+      {
+        "id": 8,
+        "text": "\n\nВы встретили раненного авантюриста\n\nВы взяли его с собой. Он следует за вами\nКарма: <plus>1",
+        "var_equal": [
+          "r",
+          -2
+        ],
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal get= math.random(1,2)\ncoin=coin<plus>get\nreturn \"<s>\n<s>\nВы встретили раненного авантюриста<s>\n<s>\nВы ограбили его<s>\nКарма: -1<s>\nСпасено людей: -1<s>\nМонеты <plus>\"..get\nend",
+        "var_equal": [
+          "r",
+          -3
+        ],
+        "id": 8,
+        "text": "\n\nВы встретили раненного авантюриста\n\nВы ограбили его",
+        "merge": true
+      },
+      {
+        "var_no_more": [
+          "stage",
+          5
+        ],
+        "right_answer": true,
+        "var_add": [
+          "people",
+          1,
+          "karma",
+          1
+        ],
+        "var_equal": [
+          "r",
+          2
+        ],
+        "id": 8,
+        "text": "[помочь]",
+        "middle_answer": false,
+        "var_set": [
+          "r",
+          -2
+        ]
+      },
+      {
+        "var_set": [
+          "r",
+          -3
+        ],
+        "middle_answer": false,
+        "var_add": [
+          "savepeople",
+          -1,
+          "karma",
+          -1
+        ],
+        "var_equal": [
+          "r",
+          2
+        ],
+        "id": 8,
+        "text": "[ограбить]",
+        "var_no_more": [
+          "stage",
+          5
+        ],
+        "left_answer": true
+      },
+      {
+        "var_need": [
+          "m8",
+          1,
+          "stage",
+          10
+        ],
+        "id": 8,
+        "text": "\n\nВаш сгусток тьмы начал запонять всё тьмой. Когда всё прояснилось, перед вами появился полуразрушенный тёмный дворец подземелья",
+        "need": -22,
+        "merge": true
+      },
+      {
+        "merge": true,
+        "var_need": [
+          "stage",
+          10
+        ],
+        "id": 8,
+        "text": "\n\nВы чувствуете рядом что-то огромное\nНужно: сгусток тьмы",
+        "need": -22,
+        "var_no_more": [
+          "m8",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "stage",
+          10
+        ],
+        "id": 8,
+        "text": "\n\nВы вернулись к своему дворцу",
+        "need": [
+          22
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "middle_answer": true,
+        "text": "[к тёмному дворцу]",
+        "need": -22,
+        "var_need": [
+          "m8",
+          1,
+          "stage",
+          10
+        ]
+      },
+      {
+        "var_need": [
+          "stage",
+          10
+        ],
+        "id": 22,
+        "middle_answer": true,
+        "text": "[к тёмному дворцу]",
+        "need": 22,
+        "var_set": [
+          "stage",
+          10
+        ]
+      },
+      {
+        "var_need": [
+          "r",
+          -3
+        ],
+        "right_answer": false,
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "id": 5,
+        "text": "[дальше]",
+        "middle_answer": true,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "var_set": [
+          "coin",
+          0,
+          "fight",
+          0,
+          "stage",
+          1,
+          "m1",
+          0,
+          "m2",
+          0,
+          "m3",
+          0,
+          "m4",
+          0,
+          "m5",
+          0,
+          "m6",
+          0,
+          "m7",
+          0,
+          "m8",
+          0
+        ],
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "lua_do": "function lua_do()\nhealth = math.ceil(maxhealth / 2)\nend",
+        "id": 11,
+        "text": "[дальше]",
+        "middle_answer": true,
+        "var_no_more": [
+          "health",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 8,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/KNfC5Pp/image.png"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Иногда в подземелье что-то случается. Хорошое или не очень",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Локация: Подземелье, в пути\n",
+    "answers": [
+      {
+        "var_show": [
+          "stage"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "этаж:",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "id": 9,
+        "text": "\n\nВы идёте по тихой пещере. Такая тишина даже напрягает",
+        "merge": true,
+        "var_equal": [
+          "r",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 9,
+        "text": "\n\nВы встретили место с красивыми светящимися кристаллами. Умиротворяюще",
+        "var_no_more": [
+          "stage",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "r",
+          1
+        ],
+        "id": 9,
+        "text": "\n\nВы встретили место с мрачными светящимися кристаллами. Умиротворяюще... Наверное...",
+        "var_need": [
+          "stage",
+          6
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "r",
+          -1
+        ],
+        "id": 9,
+        "text": "\n\nВы встретили место с красивыми светящимися кристаллами. Умиротворяюще\n\nВы взяли один из них",
+        "var_no_more": [
+          "stage",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "r",
+          -1
+        ],
+        "id": 9,
+        "text": "\n\nВы встретили место с мрачными светящимися кристаллами. Умиротворяюще... Наверное...\n\nВы всё-таки взяли один из них",
+        "var_need": [
+          "stage",
+          6
+        ],
+        "merge": true
+      },
+      {
+        "id": 9,
+        "text": "\n\nВы идете по длинным запутанным коридорам. В этом лабиринте возможно легко заблудиться...",
+        "merge": true,
+        "var_equal": [
+          "r",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "text": "\n\nВы идете по длинным запутанным коридорам. В этом лабиринте возможно легко заблудиться...\n\nВы составили небольшую карту местности",
+        "var_equal": [
+          "r",
+          -2
+        ],
+        "merge": true
+      },
+      {
+        "middle_answer": true,
+        "var_equal": [
+          "floor5",
+          0,
+          "stage",
+          5
+        ],
+        "id": 9,
+        "text": "[исследовать этаж]",
+        "instant": true,
+        "var_set": [
+          "floor5",
+          1
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (r==1 and ((krist==0 and stage<6) or (darkkrist==0 and stage>5)))\nend",
+        "lua_do": "function lua_do()\nif stage>5 and darkkrist==0 then darkkrist=1 end\nend",
+        "middle_answer": true,
+        "text": "[собрать образец]",
+        "id": 9,
+        "var_set": [
+          "r",
+          -1,
+          "krist",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "r",
+          2,
+          "halls",
+          0
+        ],
+        "id": 9,
+        "text": "[изучить]",
+        "middle_answer": true,
+        "var_set": [
+          "r",
+          -2,
+          "halls",
+          1
+        ]
+      },
+      {
+        "right_answer": false,
+        "var_add": [
+          "bankDvlp",
+          1
+        ],
+        "var_random": [
+          "loc",
+          4,
+          9,
+          "r",
+          0,
+          2
+        ],
+        "id": 5,
+        "text": "[дальше]",
+        "middle_answer": true,
+        "go_to": [
+          "loc"
+        ]
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 9,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/F53VZ6h/image.png"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Иногда в подземелье можно долго ходить, но ничего не найти",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Локация: Поверхность, центр\n",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nif karma<-4 then\nreturn \"<s>\nВы пробрались в город в плаще. Не стоит попадаться на глаза. Что же нам нужно сегодня...\"\nelse\nreturn \"<s>\nВы вышли в город. Куда отправимся сегодня и какие приключения у нас на день?\" end\nend",
+        "id": 10,
+        "text": "текст",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wspeed",
+          "speed",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "left_answer": true,
+        "middle_answer": false,
+        "text": "[скупщик]\nпродать",
+        "id": 13,
+        "var_set": [
+          "people",
+          0,
+          "r",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_random": [
+          "r",
+          0,
+          2
+        ],
+        "id": 14,
+        "text": "[магазин]\nкупить",
+        "middle_answer": false,
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "left_answer": true,
+        "var_random": [
+          "r",
+          1,
+          11
+        ],
+        "id": 15,
+        "text": "[трактир]\nлечение",
+        "middle_answer": false,
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "id": 21,
+        "right_answer": true,
+        "text": "[дом]\nлечение",
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "left_answer": true,
+        "middle_answer": false,
+        "text": "[гильдия]\nзадания",
+        "id": 17,
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "id": 18,
+        "text": "[библиотека]\nулучшить",
+        "right_answer": true,
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "right_answer": false,
+        "var_set": [
+          "people",
+          0
+        ],
+        "var_equal": [
+          "diff",
+          -1
+        ],
+        "id": 16,
+        "text": "[жилой квартал]\nбонусы",
+        "middle_answer": false,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_no_more": [
+          "diff",
+          0
+        ],
+        "left_answer": false,
+        "middle_answer": false,
+        "text": "[банк]\nвклад/кредит",
+        "id": 20,
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nreturn tp\nend",
+        "id": 19,
+        "text": "[телепорт]\nк этажам",
+        "var_set": [
+          "people",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 4,
+        "text": "[в подземелье]",
+        "middle_answer": true,
+        "var_set": [
+          "stage",
+          1,
+          "people",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]",
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nlocal t = false\nif people > 0 then t=true end\nreturn t\nend",
+        "id": 10,
+        "text": "\nЛюди",
+        "lua_text": "function lua_text()\nlocal gift = math.random(0,people)\ncoin=coin<plus>gift\npeopleSave=peopleSave<plus>people\nsavepeople=savepeople<plus>people\nreturn \"<s>\n<s>\nЧеловек вас поблагодарило и ушло: \"..people..\"<s>\nВам дали монет: \"..gift\nend",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "id": 20,
+        "calculate": true,
+        "lua_do": "function lua_do()\nwhile bankDvlp>=10 do\nbankDvlp=bankDvlp-10\ncoin=coin<plus>math.ceil(coinadd)\nend\nend",
+        "text": "Банк"
+      },
+      {
+        "id": 24,
+        "text": "[эпилог]\nесли готовы для концовки",
+        "middle_answer": true
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/QfmRNjR/DALL-E-2202-12-29-00-02-25-dra.png"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Это поверхность. Главный центр, где можно лечиться, улучшаться, брать задания, покупать/продовать и другое. И с новыми силами можно снова отправляться в подземелье",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Локация: отсутствует\n",
+    "answers": [
+      {
+        "id": 10,
+        "text": "[продолжить]",
+        "var_equal": [
+          "restart",
+          1
+        ],
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "id": 11,
+        "text": "текст",
+        "lua_text": "function lua_text()\nlocal t=\"Вы погибли<s>\nВозрождение с частичным лечением<s>\nПотеряны все ресурсы и монеты\"\nif restart == 0 then t=\"Вы погибли. Странная история, где главный герой погибает в середине, но так бывает. Сейчас именно это истинная концовка. Это конец?\" end\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "restart",
+          0
+        ],
+        "id": 1,
+        "text": "[да]",
+        "blackout": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "restart",
+          0
+        ],
+        "id": 1,
+        "text": "[нет]",
+        "blackout": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Персонаж:\n\n",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nlocal tp1 = \"\"\nif tp then tp1=\"да\" else tp1=\"нет\" end\nlocal t = \"Статистика:<s>\n\"..\"здоровье: \"..health..\"/\"..maxhealth..\"<s>\nсила: \"..strange..\"<s>\nзащита: \"..def..\"<s>\nскорость: \"..speed..\"<s>\nудача: \"..loot..\"<s>\nтелепортации: \"..tp1..\"<s>\nлюдей с вами: \"..people..\"<s>\nспас всего: \"..savepeople..\"<s>\nКарма: \"..karma..\"<s>\n\"\nreturn t\nend",
+        "id": 12,
+        "text": "Статистика: \n",
+        "left_answer": false,
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t = \"<s>\nДля заданий:\"..\"<s>\nубито минотавров: \"..minKilled..\"<s>\nкоридоров исследовано: \"..halls..\"/1\"..\"<s>\nкристалов изучено: \"..krist..\"/1\"..\"<s>\nпятый этаж исследован: \"..floor5..\"/1\"..\"<s>\nспасено: \"..peopleSave..\"<s>\nСобытий для банка: \"..bankDvlp..\"/10<s>\n\"\nreturn t\nend",
+        "id": 12,
+        "text": "Для заданий: \n",
+        "merge": true,
+        "left_answer": false
+      },
+      {
+        "id": 12,
+        "text": "Снаряжение:",
+        "lua_text": "function lua_text()\nlocal t = \"<s>\nСнаряжение:\"\nif w5==1 then t=t..\"<s>\nтёмный посох\"\nelseif w4==1 then t=t..\"<s>\nпосох\"\nelseif w3==1 then t=t..\"<s>\nмеч\"\nelseif w2==1 then t=t..\"<s>\nтопор\"\nelseif w1==1 then t=t..\"<s>\nкинжал\"\nelse t=t..\"<s>\nпалка\" end\nif a5==1 then t=t..\"<s>\nтёмная броня\"\nelseif a4==1 then t=t..\"<s>\nстальная броня\"\nelseif a3==1 then t=t..\"<s>\nжелезная броня\"\nelseif a2==1 then t=t..\"<s>\nкольчужная броня\"\nelseif a1==1 then t=t..\"<s>\nкожаная броня\"\nelse t=t..\"<s>\nодежда\" end\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "right_answer": false,
+        "lua_text": "function lua_text()\nlocal text = \"<s>\n<s>\nИнвентарь: \"\nif m1 ~= 0 then\ntext = text .. \"<s>\nшкура мышки: \" .. m1\nend\nif m2 ~= 0 then\ntext = text .. \"<s>\nжеле слизи: \" .. m2\nend\nif m3 ~= 0 then\ntext = text .. \"<s>\nкрыло летучей мыши:  \" .. m3\nend\nif m4 ~= 0 then\ntext = text .. \"<s>\nяд паука: \" .. m4\nend\nif m5 ~= 0 then\ntext = text .. \"<s>\nчереп скелета: \" .. m5\nend\nif m6 ~= 0 then\ntext = text .. \"<s>\nкамень голема: \" .. m6\nend\nif m7 ~= 0 then\ntext = text .. \"<s>\nрог минотавра: \" .. m7\nend\nif m8 ~= 0 then\ntext = text .. \"<s>\nсгусток тьмы: \" .. m8\nend\nreturn text\nend",
+        "id": 12,
+        "text": "Инвентарь: ",
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Подсказки:",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "tutorial",
+          0
+        ],
+        "id": 12,
+        "text": "выкл",
+        "instant": true,
+        "var_set": [
+          "tutorial",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "tutorial",
+          1
+        ],
+        "id": 12,
+        "text": "вкл",
+        "instant": true,
+        "var_set": [
+          "tutorial",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "id": 12,
+        "text": "[назад]",
+        "isBack": true,
+        "backstepCount": 1
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Здесь находится информация о вашем персонаже, его характерисках, предметах и событиях",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Локация: Поверхность, гильдия, скупщик\n\nНевысокий старик пересчитывал монеты и обратил на вас внимание:",
+    "answers": [
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "var_show": [
+          "cost"
+        ],
+        "comment": true,
+        "id": 13,
+        "text": "Цена за штуку: ",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\nlocal t = \"ничего\"\nif m == 1 then t = \"шкура мышки\" end\nif m == 2 then t = \"желе слизи\" end\nif m == 3 then t = \"крыло мыши\" end\nif m == 4 then t = \"яд паука\" end\nif m == 5 then t = \"череп скелета\" end\nif m == 6 then t = \"камень голема\" end\nif m == 7 then t = \"рог минотавра\" end\nif m == 8 then t = \"сгусток тьмы\" end\nreturn t\nend",
+        "id": 13,
+        "text": "материал",
+        "lua_do": "function lua_do()\nif m < 8 then m=m<plus>1 cost=m-diff else m=0 cost=0 end\nif m == 1 and m1 < 1 then m=m<plus>1\ncost=2-diff end\nif m == 2 and m2 < 1 then m=m<plus>1\ncost=3-diff end\nif m == 3 and m3 < 1 then m=m<plus>1\ncost=4-diff end\nif m == 4 and m4 < 1 then m=m<plus>1\ncost=5-diff end\nif m == 5 and m5 < 1 then m=m<plus>1\ncost=6-diff end\nif m == 6 and m6 < 1 then m=m<plus>1\ncost=7-diff end\nif m == 7 and m7 < 1 then m=m<plus>1\ncost=8-diff end\nif m == 8 and m8 < 1 then m=0\ncost=0 end\nend",
+        "instant": true
+      },
+      {
+        "instant": true,
+        "id": 13,
+        "text": "[продать один]",
+        "lua_do": "function lua_do()\nif m==1 and m1>0 then coin=coin<plus>cost m1=m1-1 r=1 end\nif m==2 and m2>0 then coin=coin<plus>cost m2=m2-1 r=1 end\nif m==3 and m3>0 then coin=coin<plus>cost m3=m3-1 r=1 end\nif m==4 and m4>0 then coin=coin<plus>cost m4=m4-1 r=2 end\nif m==5 and m5>0 then coin=coin<plus>cost m5=m5-1 r=2 end\nif m==6 and m6>0 then coin=coin<plus>cost m6=m6-1 r=2 end\nif m==7 and m7>0 then coin=coin<plus>cost m7=m7-1 r=2 end\nif m==8 and m8>0 then coin=coin<plus>cost m8=m8-1 r=3 end\n\nif m == 1 and m1 < 1 then m=m<plus>1\ncost=2-diff end\nif m == 2 and m2 < 1 then m=m<plus>1\ncost=3-diff end\nif m == 3 and m3 < 1 then m=m<plus>1\ncost=4-diff end\nif m == 4 and m4 < 1 then m=m<plus>1\ncost=5-diff end\nif m == 5 and m5 < 1 then m=m<plus>1\ncost=6-diff end\nif m == 6 and m6 < 1 then m=m<plus>1\ncost=7-diff end\nif m == 7 and m7 < 1 then m=m<plus>1\ncost=8-diff end\nif m == 8 and m8 < 1 then m=0\ncost=0 end\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 13,
+        "instant": true,
+        "lua_do": "function lua_do()\nif m==1 then coin=coin<plus>(cost*m1) m1=0 r=1 end\nif m==2 then coin=coin<plus>(cost*m2) m2=0 r=1 end\nif m==3 then coin=coin<plus>(cost*m3) m3=0 r=1 end\nif m==4 then coin=coin<plus>(cost*m4) m4=0 r=2 end\nif m==5 then coin=coin<plus>(cost*m5) m5=0 r=2 end\nif m==6 then coin=coin<plus>(cost*m6) m6=0 r=2 end\nif m==7 then coin=coin<plus>(cost*m7) m7=0 r=2 end\nif m==8 then coin=coin<plus>(cost*m8) m8=0 r=3 end\n\nif m == 1 and m1 < 1 then m=m<plus>1\ncost=2-diff end\nif m == 2 and m2 < 1 then m=m<plus>1\ncost=3-diff end\nif m == 3 and m3 < 1 then m=m<plus>1\ncost=4-diff end\nif m == 4 and m4 < 1 then m=m<plus>1\ncost=5-diff end\nif m == 5 and m5 < 1 then m=m<plus>1\ncost=6-diff end\nif m == 6 and m6 < 1 then m=m<plus>1\ncost=7-diff end\nif m == 7 and m7 < 1 then m=m<plus>1\ncost=8-diff end\nif m == 8 and m8 < 1 then m=0\ncost=0 end\nend",
+        "text": "[продать все]"
+      },
+      {
+        "lua_do": "function lua_do()\ncoin=coin<plus>(m1*(1-diff))\ncoin=coin<plus>(m2*(2-diff))\ncoin=coin<plus>(m3*(3-diff))\ncoin=coin<plus>(m4*(4-diff))\ncoin=coin<plus>(m5*(5-diff))\ncoin=coin<plus>(m6*(6-diff))\ncoin=coin<plus>(m7*(7-diff))\ncoin=coin<plus>(m8*(8-diff))\nif m1>0 then m1=0 r=1 end\nif m2>0 then m2=0 r=1 end\nif m3>0 then m3=0 r=1 end\nif m4>0 then m4=0 r=2 end\nif m5>0 then m5=0 r=2 end\nif m6>0 then m6=0 r=2 end\nif m7>0 then m7=0 r=2 end\nif m8>0 then m8=0 r=3 end\nend",
+        "middle_answer": true,
+        "instant": true,
+        "id": 13,
+        "text": "[продать всё]"
+      },
+      {
+        "id": 13,
+        "text": "слова",
+        "lua_text": "function lua_text()\nlocal t = \"<s>\n-Принёс что-нибудь ценное?<s>\n\"\nif r==1 then t=\"<s>\n-Сплошное барахло<s>\n\" end\nif r==2 then t=\"<s>\n-Качественные материалы<s>\n\" end\nif r==3 then t=\"<s>\n-Где ты это достал?!<s>\n\" end\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Инвентарь: ",
+        "lua_text": "function lua_text()\nlocal text = \"<s>\nИнвентарь: \"\nif m1 ~= 0 then\ntext = text .. \"<s>\nшкура мышки: \" .. m1\nend\nif m2 ~= 0 then\ntext = text .. \"<s>\nжеле слизи: \" .. m2\nend\nif m3 ~= 0 then\ntext = text .. \"<s>\nкрыло летучей мыши:  \" .. m3\nend\nif m4 ~= 0 then\ntext = text .. \"<s>\nяд паука: \" .. m4\nend\nif m5 ~= 0 then\ntext = text .. \"<s>\nчереп скелета: \" .. m5\nend\nif m6 ~= 0 then\ntext = text .. \"<s>\nкамень голема: \" .. m6\nend\nif m7 ~= 0 then\ntext = text .. \"<s>\nрог минотавра: \" .. m7\nend\nif m8 ~= 0 then\ntext = text .. \"<s>\nсгусток тьмы: \" .. m8\nend\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "[назад]",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Нажимайте на материалы справа, чтобы их листать, затем нажмите сколько хотите продать",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Локация: Поверхность, магазин\n",
+    "answers": [
+      {
+        "comment": true,
+        "id": 14,
+        "text": "текст",
+        "lua_text": "function lua_text()\nlocal t=\"\"\nif r==0 then\nif gangster==1 then\nr=1\nelseif gangster==2 then\nr=1\nelseif gangster==3 then\nr=1\nelse t=\"<s>\nВам преградили дорого бандиты. Отдать им монету?\" end\nelse t=\"<s>\nВы вошли в лавку. Вам пригленулось несколько товаров\" end\nif r==-1 then t=\"Бандиты приняли вашу плату. Больше они вас не потревожат\" end\nif r==-2 then t=\"Бандиты испугались, извинлись и ушли. Они боятся нападать на вас\" end\nif r==-3 then t=\"Вы убили всех бандитов. Никто не смог от вас скрыться\" end\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "left_answer": true,
+        "var_equal": [
+          "r",
+          0
+        ],
+        "id": 14,
+        "text": "[отдать монету]\nЦена: 1",
+        "lua_do": "function lua_do()\nif coin>=1 then coin=coin-1 end\nend",
+        "var_set": [
+          "r",
+          1
+        ]
+      },
+      {
+        "left_answer": false,
+        "right_answer": true,
+        "var_add": [
+          "coin",
+          -5
+        ],
+        "var_equal": [
+          "r",
+          0
+        ],
+        "id": 14,
+        "var_need": [
+          "coin",
+          5
+        ],
+        "text": "[навсегда откупиться]\nЦена: 5",
+        "var_set": [
+          "r",
+          -1,
+          "gangster",
+          1
+        ]
+      },
+      {
+        "left_answer": true,
+        "var_add": [
+          "karma",
+          3
+        ],
+        "var_equal": [
+          "r",
+          0
+        ],
+        "id": 14,
+        "var_need": [
+          "strange1",
+          3.1
+        ],
+        "text": "[припугнуть]",
+        "var_set": [
+          "r",
+          -2,
+          "gangster",
+          2
+        ]
+      },
+      {
+        "var_set": [
+          "r",
+          -3,
+          "gangster",
+          3
+        ],
+        "right_answer": true,
+        "var_add": [
+          "karma",
+          -3
+        ],
+        "var_equal": [
+          "r",
+          0
+        ],
+        "id": 14,
+        "var_need": [
+          "strange1",
+          3.1
+        ],
+        "text": "[убить]",
+        "left_answer": false
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Оружее, Цена: \"..cost..\"<s>\nСила: <plus>\".. tostring(cost/30)\nend",
+        "var_need": [
+          "r",
+          1
+        ],
+        "id": 14,
+        "text": "Оружее, Цена: \nСила: <plus>",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\nlocal t = \"ничего\"\nif weapon == 1 then t = \"кинжал\" end\nif weapon == 2 then t = \"топор\" end\nif weapon == 3 then t = \"меч\" end\nif weapon == 4 then t = \"посох\" end\nreturn t\nend",
+        "lua_do": "function lua_do()\nif weapon <4 then weapon=weapon<plus>1\nelse weapon=0 end\nif weapon == 1 and w1==1 then weapon=weapon<plus>1 end\nif weapon == 2 and w2==1 then weapon=weapon<plus>1 end\nif weapon == 3 and w3==1 then weapon=weapon<plus>1 end\nif weapon == 4 and w4==1 then weapon=0 end\ncost=weapon*15\nend",
+        "id": 14,
+        "var_need": [
+          "r",
+          1
+        ],
+        "instant": true,
+        "text": "оружее"
+      },
+      {
+        "right_answer": false,
+        "id": 14,
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nif coin>=cost then coin=coin-cost\nif weapon==1 then w1=1 end\nif weapon==2 then w2=1 end\nif weapon==3 then w3=1 end\nif weapon==4 then w4=1 end\n\nif weapon == 1 and w1==1 then weapon=weapon<plus>1 cost=cost<plus>15 end\nif weapon == 2 and w2==1 then weapon=weapon<plus>1 cost=cost<plus>15 end\nif weapon == 3 and w3==1 then weapon=weapon<plus>1 cost=cost<plus>15 end\nif weapon == 4 and w4==1 then weapon=0 cost=0 end\nend\nif w4==1 then strange1=strange<plus>2\nelseif w3==1 then strange1=strange<plus>1.5\nelseif w2==1 then strange1=strange<plus>1\nelseif w1==1 then strange1=strange<plus>0.5\nelse strange1=strange end\nend",
+        "instant": true,
+        "text": "[купить оружее]",
+        "var_need": [
+          "r",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_need": [
+          "r",
+          1
+        ],
+        "id": 14,
+        "text": "Броня, Цена: ",
+        "lua_text": "function lua_text()\nreturn \"Броня, Цена: \"..cost1..\"<s>\nЗащита: <plus>\".. tostring(cost1/10)\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\nlocal t = \"ничего\"\nif armor == 1 then t = \"кожаная броня\" end\nif armor == 2 then t = \"кольчужная броня\" end\nif armor == 3 then t = \"железная броня\" end\nif armor == 4 then t = \"стальная броня\" end\nreturn t\nend",
+        "lua_do": "function lua_do()\nif armor <4 then armor=armor<plus>1\nelse armor=0 end\nif armor == 1 and a1==1 then armor=armor<plus>1 end\nif armor == 2 and a2==1 then armor=armor<plus>1 end\nif armor == 3 and a3==1 then armor=armor<plus>1 end\nif armor == 4 and a4==1 then armor=0 end\ncost1=armor*5\nend",
+        "id": 14,
+        "var_need": [
+          "r",
+          1
+        ],
+        "instant": true,
+        "text": "броня"
+      },
+      {
+        "right_answer": false,
+        "id": 14,
+        "lua_do": "function lua_do()\nif coin>=cost1 then coin=coin-cost1\nif armor==1 then a1=1 end\nif armor==2 then a2=1 end\nif armor==3 then a3=1 end\nif armor==4 then a4=1 end\n\nif armor == 1 and a1==1 then armor=armor<plus>1 cost1=10 end\nif armor == 2 and a2==1 then armor=armor<plus>1 cost1=15 end\nif armor == 3 and a3==1 then armor=armor<plus>1 cost1=20 end\nif armor == 4 and a4==1 then armor=0 cost1=0 end\nif a4==1 then def=2\nelseif a3==1 then def=1.5\nelseif a2==1 then def=1\nelseif a1==1 then def=0.5\nelse def=0 end\nend\nend",
+        "middle_answer": true,
+        "instant": true,
+        "text": "[купить броню]",
+        "var_need": [
+          "r",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "text": "[назад]",
+        "var_not": [
+          "r",
+          0
+        ],
+        "id": 10
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Нажимайте на товар справа, чтобы его листать, затем нажмите \"купить\" ниже",
+        "var_equal": [
+          "tutorial",
+          1
+        ],
+        "var_need": [
+          "r",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Локация: Поверхность, трактир\n\nВы зашли в местный трактир. Что бы заказать...\nЗдесь можно досыта поесть, да и все вечно что-то обсуждают:",
+    "answers": [
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "text": "пара",
+        "lua_text": "function lua_text()\nlocal t=\"\"\n\nif karma>4 and friend==0 then\nif gender==0 then\nt=\"К вам подошла спасённая вами девушка:«Спасибо за тот раз. Может пообедаем сегодня вместе?»\"\nelse\nt=\"К вам подошёл спасённый вами юноша:«Спасибо за тот раз. Может пообедаем сегодня вместе?»\"\nend end\n\nif friend==1 then\nt=\"«Спасибо тебе за всё! Ещё увидимся!»<s>\nЗдоровье: <plus>100\" health=maxhealth friend=2\nend\n\nif friend==-1 then\nt=\"«Очень жаль, спасибо за всё ещё раз. Извините»\" friend=-2\nend\n\nreturn t\nend",
+        "merge": false
+      },
+      {
+        "var_set": [
+          "friend",
+          -1
+        ],
+        "var_equal": [
+          "friend",
+          0
+        ],
+        "id": 15,
+        "var_need": [
+          "karma",
+          5
+        ],
+        "text": "нет",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "friend",
+          0
+        ],
+        "id": 15,
+        "var_need": [
+          "karma",
+          5
+        ],
+        "text": "хорошо",
+        "var_set": [
+          "friend",
+          1
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Еда:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "text": "[купить порцию еды]\nЦена: 1, <plus>7 здоровья",
+        "lua_do": "function lua_do()\nif coin>=1 and health<maxhealth then\ncoin=coin-1 health=health<plus>7 end\nif health>maxhealth then\nhealth = maxhealth end\nend",
+        "instant": true,
+        "middle_answer": true,
+        "id": 15
+      },
+      {
+        "text": "[хорошо поесть]\nЦена: 2, <plus>18 здоровья",
+        "id": 15,
+        "instant": true,
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nif coin>=2 and health<maxhealth then\ncoin=coin-2 health=health<plus>18 end\nif health>maxhealth then\nhealth = maxhealth end\nend"
+      },
+      {
+        "text": "[стол лучшей еды]\nЦена: 4, <plus>44 здоровья",
+        "id": 15,
+        "instant": true,
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nif coin>=4 and health<maxhealth then\ncoin=coin-4 health=health<plus>44 end\nif health>maxhealth then\nhealth = maxhealth end\nend"
+      },
+      {
+        "id": 15,
+        "text": "Лечение:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nif coin>=1 and health<maxhealth then\ncoin=coin-1 health=math.ceil(health<plus>maxhealth/10) end\nif health>maxhealth then\nhealth = maxhealth end\nend",
+        "text": "[промыть раны]\nЦена: 1, <plus>10% Здоровья",
+        "id": 15,
+        "middle_answer": true
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nif coin>=2 and health<maxhealth then\ncoin=coin-2 health=math.ceil(health<plus>maxhealth/4) end\nif health>maxhealth then\nhealth = maxhealth end\nend",
+        "text": "[обеззаразить раны и перебинтовать]\nЦена: 2, <plus>25% Здоровья",
+        "id": 15,
+        "middle_answer": true
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nif coin>=3 and health<maxhealth then\ncoin=coin-3 health=math.ceil(health<plus>maxhealth/2) end\nif health>maxhealth then\nhealth = maxhealth end\nend",
+        "text": "[купить медикаменты]\nЦена: 3, <plus>50% Здоровья",
+        "id": 15,
+        "middle_answer": true
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nif coin>=5 and health<maxhealth then\ncoin=coin-5 health=health<plus>maxhealth end\nif health>maxhealth then\nhealth = maxhealth end\nend",
+        "text": "[сходить к фельдшеру]\nЦена: 5, <plus>100% Здоровья",
+        "id": 15,
+        "middle_answer": true
+      },
+      {
+        "id": 10,
+        "text": "[назад]",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 15,
+        "text": "разговор",
+        "lua_text": "function lua_text()\nlocal t=\"\"\n\nif r==1 then\nif strange>2 then\nif gender==0 then\nt=\"-Это тот самый новичок, который быстро стал сильным\"\nelse t=\"-Это та новенькая, что быстро стала сильной\" end\nelse\nif gender==0 then\nt=\"-Это тот слабый новичок, что пришёл ради подземелья\"\nelse t=\"-Это та слабая новенькая, что пришла ради подземелья\" end\nend end\n\nif r==2 then\nif strange1-strange>1 then\nif gender==0 then\nt=\"-А крутое у него оружее\"\nelse t=\"-А крутое у неё оружее\" end\nelse\nif gender==0 then\nt=\"-Как он сражается с этим оружеем?\"\nelse t=\"-Как она сражается с этим оружеем?\" end\nend end\n\nif r==3 then\nif def>1 then\nt=\"-Такую броню и дракон не пробьёт!\"\nelseif def==0 then\nt=\"-Ты был на 4 этаже без брони и выжил?!\"\nelse\nt=\"-Добротные доспехи у тебя\"\nend end\n\nif r==4 then\nif maxhealth<100 then\nt=\"-Знаешь, ты слишком пологаешься на свою живучесть и регенерацию\"\nelse t=\"-Похоже, тебя теперь ни одно ранение не сломит. Думаю, ты можешь полагаться на свою живучесть\"\nend end\n\nif r==5 then\nif health/maxhealth>0.7 then\nif gender==0 then\nt=\"-Парень, хорошо выглядишь!\"\nelse t=\"-Мадам, вы сегодня в хорошей форме!\" end\nelse\nif gender==0 then\nt=\"-Парень, у тебя кровь, тебе бы к фельдшеру...\"\nelse t=\"-Девушка, у тебя кровь, тебе бы к фельдшеру...\" end\nend end\n\nif r==6 then\nif gDarkKilled==1 then\nif gender==0 then\nt=\"-Это же он нашёл этажи ниже 5 и победил сильнейшего! Я думала, минотавр - главный босс подземелья\"\nelse t=\"-Это же она нашла этажи ниже 5 и победила сильнейшего! Я думала, минотавр - главный босс подземелья\" end\nelseif gMinKilled==1 then\nif gender==0 then\nt=\"-Новичок, победивший минотавра... Неплохо!\"\nelse t=\"-Новичок, победившая минотавра... Неплохо!\" end\nelse\nt=\"-Это тоже из авантюристов? Не видела раньше\"\nend end\n\nif r==7 then t=\"-Я сегодня была аж на 5 этаже! Пусть и не долго\" end\n\nif r==8 then\nif homelvl==4 then\nif gender==0 then\nt=\"-Это тот парень, что отстроил себе отличный дом!\"\nelse t=\"-Та авантюристка, что отстроила себе отличный дом!\" end\nelseif homelvl<2 then\nt=\"-Говорят, в доме на окраине поселились призраки\"\nelse t=\"-Кто-то починил заброшенный дом на окраине. Надо же!\"\nend end\n\nif r==9 then\nif savepeople>9 then\nif gender==0 then\nt=\"-Это он меня спас в подземелье!\"\nelse t=\"-Это она меня спасла в подземелье!\" end\nelse t=\"-В последнее время в подземелье много пропавших...\"\nend end\n\nif r==10 then t=\"-Приветствую, ты тоже за местной медициной?\" end\n\nif r==11 then\nif gangster<2 then\nt=\"-Банда разбойников возле лавки уже достала. Почему стражи бездействуют?\"\nelseif gangster==2 then\nt=\"-Разбойники у лавки перестали нападать!\"\nelse t=\"-Недавно нашли трупы бандитов возле лавки...\"\nend end\n\nreturn \"<s>\n<s>\n\"..t\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Здесь вы можете вылечиться одним из вариатов или подслушать местнве сплетни, в том числе о вас",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Локация: Поверхность, жилой квартал\n\nСпокойный район города с вашими неспокойными перспективами. Что хотите провернуть?",
+    "answers": [
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"[тренироваться на чучеле]<s>\nСила: <plus>1 Шанс: \"..tostring(100/chance)..\"%\"\nend",
+        "id": 16,
+        "instant": true,
+        "lua_do": "function lua_do()\nif math.random(1,chance)==1 then strange=strange<plus>1 chance=chance/2 end\nend",
+        "text": "[тренироваться на чучеле]"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"[искать монеты на улице]<s>\nМонеты: <plus>1 Шанс: \"..tostring(find/100)..\"%\"\nend",
+        "lua_do": "function lua_do()\nif find >= math.random(1,10000) then coin=coin<plus>1 find=math.ceil(find/2*100)/100 end\nr1= math.random(11,20)\nend",
+        "text": "[искать монеты на улице]",
+        "id": 16,
+        "instant": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal h = math.ceil((maxhealth-health)/maxhealth*1000)/100\nreturn \"[погулять и отдохнуть]<s>\nЗдоровье: <plus>1 Шанс: \"..h..\"%\"\nend",
+        "lua_do": "function lua_do()\nlocal h = (maxhealth-health)/maxhealth*100\nr= math.random(1,1000)\nif h>=r then health=health<plus>1 end\nr1= math.random(0,10)\nend",
+        "text": "[погулять и отдохнуть]",
+        "id": 16,
+        "instant": true
+      },
+      {
+        "id": 10,
+        "text": "[назад]",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Обычный жилой кватрал. Можно чего-то добиться, если есть терпение",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Локация: Поверхность, гильдия\n\nАвантюристы обсуждали разные задания здесь. Вы подошли к 3 доступным вам",
+    "answers": [
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "right_answer": false,
+        "lua_text": "function lua_text()\nlocal text = \"<s>\n<s>\nИнвентарь: \"\nif m1 ~= 0 then\ntext = text .. \"<s>\nшкура мышки: \" .. m1\nend\nif m2 ~= 0 then\ntext = text .. \"<s>\nжеле слизи: \" .. m2\nend\nif m3 ~= 0 then\ntext = text .. \"<s>\nкрыло летучей мыши:  \" .. m3\nend\nif m4 ~= 0 then\ntext = text .. \"<s>\nяд паука: \" .. m4\nend\nif m5 ~= 0 then\ntext = text .. \"<s>\nчереп скелета: \" .. m5\nend\nif m6 ~= 0 then\ntext = text .. \"<s>\nкамень голема: \" .. m6\nend\nif m7 ~= 0 then\ntext = text .. \"<s>\nрог минотавра: \" .. m7\nend\nif m8 ~= 0 then\ntext = text .. \"<s>\nсгусток тьмы: \" .. m8\nend\nreturn text\nend",
+        "id": 12,
+        "text": "Инвентарь: ",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t = \"\"\nif task1 <7 then t=t..\"(принести \"..task11 end\nif task1 == 1 then t=t..\" шкур мышек)<s>\nНаграда: \"..tostring(math.ceil(task11*1.5<plus>diff)) end\nif task1 == 2 then t=t..\" желе слизи)<s>\nНаграда: \"..tostring(math.ceil(task11*3<plus>diff)) end\nif task1 == 3 then t=t..\" крыльев мыши)<s>\nНаграда: \"..tostring(math.ceil(task11*4.5<plus>diff)) end\nif task1 == 4 then t=t..\" яда паука)<s>\nНаграда: \"..tostring(math.ceil(task11*6<plus>diff)) end\nif task1 == 5 then t=t..\" черепов скелета)<s>\nНаграда: \"..tostring(math.ceil(task11*7.5<plus>diff)) end\nif task1 == 6 then t=t..\" камня голема)<s>\nНаграда: \"..tostring(math.ceil(task11*9<plus>diff)) end\nif task1 == 7 then t=t..\"(убить минотавра)<s>\nНаграда: 5\" end\nif task1 == 8 then t=t..\"(спасти \"..task11..\" людей)<s>\nНаграда: \"..task11 end\nif task1 == 9 then t=t..\"(вернуть монетку)<s>\nНаграда: 2 Цена: 1\" end\nif task1 == 10 then t=t..\"(принести образец кристалов)<s>\nНаграда: 1\" end\nif task1 == 11 then t=t..\"(исследовать 5 этаж)<s>\nНаграда: 3\" end\nif task1 == 12 then t=t..\"(исследовать подземные коридоры)<s>\nНаграда: 1\" end\nif task1 == 13 then t=t..\"(работа сопровождающим)<s>\nНаграда: 2 Цена: 10 здоровья\" end\nif task1 == 14 then t=t..\"(помочь с погрузкой)<s>\nНаграда: 3 Надо: 2 сила\" end\nif task1 == 15 then t=t..\"(собирательство за еду)<s>\nНаграда: 15 здоровья Цена: 1\" end\nif task1==0 then t=\"выполнено\" end\nreturn t\nend",
+        "instant": true,
+        "id": 17,
+        "text": "задание 1",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nlocal function re()\ntask1=0\ntask11=0\nend\nif task1==1 and m1>=task11 then coin=math.ceil(coin<plus>task11*1.5<plus>diff) m1=m1-task11 re() end\nif task1==2 and m2>=task11 then coin=coin<plus>task11*3<plus>diff m2=m2-task11 re() end\nif task1==3 and m3>=task11 then coin=math.ceil(coin<plus>task11*4.5<plus>diff) m3=m3-task11 re() end\nif task1==4 and m4>=task11 then coin=coin<plus>task11*6<plus>diff m4=m4-task11 re() end\nif task1==5 and m5>=task11 then coin=math.ceil(coin<plus>task11*7.5<plus>diff) m5=m5-task11 re() end\nif task1==6 and m6>=task11 then coin=coin<plus>task11*9<plus>diff m6=m6-task11 re() end\nif task1==7 and minKilled>0 then minKilled=minKilled-1 coin=coin<plus>5 re() end\nif task1==8 and peopleSave>=task11 then coin=coin<plus>task11 peopleSave=peopleSave-task11 re() end\nif task1==9 and coin>=1 then coin=coin<plus>1 re() end\nif task1==10 and krist==1 then krist=0 coin=coin<plus>1 re() end\nif task1==11 and floor5==1 then floor5=0 coin=coin<plus>3 re() end\nif task1==12 and halls==1 then halls=0 coin=coin<plus>1 re() end\nif task1==13 and health>10 then health=health-10 coin=coin<plus>2 re() end\nif task1==14 and strange>=2 then coin=coin<plus>3 re() end\nif task1==15 and coin>=1 then coin=coin-1  health=health<plus>15\nif health>maxhealth then health=maxhealth end re() end\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t = \"\"\nif task2 <7 then t=t..\"(принести \"..task22 end\nif task2 == 1 then t=t..\" шкур мышек)<s>\nНаграда: \"..tostring(math.ceil(task22*1.5<plus>diff)) end\nif task2 == 2 then t=t..\" желе слизи)<s>\nНаграда: \"..tostring(math.ceil(task22*3<plus>diff)) end\nif task2 == 3 then t=t..\" крыльев мыши)<s>\nНаграда: \"..tostring(math.ceil(task22*4.5<plus>diff)) end\nif task2 == 4 then t=t..\" яда паука)<s>\nНаграда: \"..tostring(math.ceil(task22*6<plus>diff)) end\nif task2 == 5 then t=t..\" черепов скелета)<s>\nНаграда: \"..tostring(math.ceil(task22*7.5<plus>diff)) end\nif task2 == 6 then t=t..\" камня голема)<s>\nНаграда: \"..tostring(math.ceil(task22*9<plus>diff)) end\nif task2 == 7 then t=t..\"(убить минотавра)<s>\nНаграда: 5\" end\nif task2 == 8 then t=t..\"(спасти \"..task22..\" людей)<s>\nНаграда: \"..task22 end\nif task2 == 9 then t=t..\"(вернуть монетку)<s>\nНаграда: 2 Цена: 1\" end\nif task2 == 10 then t=t..\"(принести образец кристалов)<s>\nНаграда: 1\" end\nif task2 == 11 then t=t..\"(исследовать 5 этаж)<s>\nНаграда: 3\" end\nif task2 == 12 then t=t..\"(исследовать подземные коридоры)<s>\nНаграда: 1\" end\nif task2 == 13 then t=t..\"(работа сопровождающим)<s>\nНаграда: 2 Цена: 10 здоровья\" end\nif task2 == 14 then t=t..\"(помочь с погрузкой)<s>\nНаграда: 3 Надо: 2 сила\" end\nif task2 == 15 then t=t..\"(собирательство за еду)<s>\nНаграда: 15 здоровья Цена: 1\" end\nif task2==0 then t=\"выполнено\" end\nreturn t\nend",
+        "lua_do": "function lua_do()\nlocal function re()\ntask2=0\ntask22=0\nend\nif task2==1 and m1>=task22 then coin=math.ceil(coin<plus>task22*1.5<plus>diff) m1=m1-task22 re() end\nif task2==2 and m2>=task22 then coin=coin<plus>task22*3<plus>diff m2=m2-task22 re() end\nif task2==3 and m3>=task22 then coin=math.ceil(coin<plus>task22*4.5<plus>diff) m3=m3-task22 re() end\nif task2==4 and m4>=task22 then coin=coin<plus>task22*6<plus>diff m4=m4-task22 re() end\nif task2==5 and m5>=task22 then coin=math.ceil(coin<plus>task22*7.5<plus>diff) m5=m5-task22 re() end\nif task2==6 and m6>=task22 then coin=coin<plus>task22*9<plus>diff m6=m6-task22 re() end\nif task2==7 and minKilled>0 then minKilled=minKilled-1 coin=coin<plus>5 re() end\nif task2==8 and peopleSave>=task22 then coin=coin<plus>task22 peopleSave=peopleSave-task11 re() end\nif task2==9 and coin>=1 then coin=coin<plus>1 re() end\nif task2==10 and krist==1 then krist=0 coin=coin<plus>1 re() end\nif task2==11 and floor5==1 then floor5=0 coin=coin<plus>3 re() end\nif task2==12 and halls==1 then halls=0 coin=coin<plus>1 re() end\nif task2==13 and health>10 then health=health-10 coin=coin<plus>2 re() end\nif task2==14 and strange>=2 then coin=coin<plus>3 re() end\nif task2==15 and coin>=1 then coin=coin-1  health=health<plus>15\nif health>maxhealth then health=maxhealth end re() end\nend",
+        "id": 17,
+        "text": "задание 2",
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t = \"\"\nif task3 <7 then t=t..\"(принести \"..task33 end\nif task3 == 1 then t=t..\" шкур мышек)<s>\nНаграда: \"..tostring(math.ceil(task33*1.5<plus>diff)) end\nif task3 == 2 then t=t..\" желе слизи)<s>\nНаграда: \"..tostring(math.ceil(task33*3<plus>diff)) end\nif task3 == 3 then t=t..\" крыльев мыши)<s>\nНаграда: \"..tostring(math.ceil(task33*4.5<plus>diff)) end\nif task3 == 4 then t=t..\" яда паука)<s>\nНаграда: \"..tostring(math.ceil(task33*6<plus>diff)) end\nif task3 == 5 then t=t..\" черепов скелета)<s>\nНаграда: \"..tostring(math.ceil(task33*7.5<plus>diff)) end\nif task3 == 6 then t=t..\" камня голема)<s>\nНаграда: \"..tostring(math.ceil(task33*9<plus>diff)) end\nif task3 == 7 then t=t..\"(убить минотавра)<s>\nНаграда: 5\" end\nif task3 == 8 then t=t..\"(спасти \"..task11..\" людей)<s>\nНаграда: \"..task33 end\nif task3 == 9 then t=t..\"(вернуть монетку)<s>\nНаграда: 2 Цена: 1\" end\nif task3 == 10 then t=t..\"(принести образец кристалов)<s>\nНаграда: 1\" end\nif task3 == 11 then t=t..\"(исследовать 5 этаж)<s>\nНаграда: 3\" end\nif task3 == 12 then t=t..\"(исследовать подземные коридоры)<s>\nНаграда: 1\" end\nif task3 == 13 then t=t..\"(работа сопровождающим)<s>\nНаграда: 2 Цена: 10 здоровья\" end\nif task3 == 14 then t=t..\"(помочь с погрузкой)<s>\nНаграда: 3 Надо: 2 сила\" end\nif task3 == 15 then t=t..\"(собирательство за еду)<s>\nНаграда: 15 здоровья Цена: 1\" end\nif task3==0 then t=\"выполнено\" end\nreturn t\nend",
+        "lua_do": "function lua_do()\nlocal function re()\ntask3=0\ntask33=0\nend\nif task3==1 and m1>=task33 then coin=math.ceil(coin<plus>task33*1.5<plus>diff) m1=m1-task33 re() end\nif task3==2 and m2>=task33 then coin=coin<plus>task33*3<plus>diff m2=m2-task33 re() end\nif task3==3 and m3>=task33 then coin=math.ceil(coin<plus>task33*4.5<plus>diff) m3=m3-task33 re() end\nif task3==4 and m4>=task33 then coin=coin<plus>task33*6<plus>diff m4=m4-task33 re() end\nif task3==5 and m5>=task33 then coin=math.ceil(coin<plus>task33*7.5<plus>diff) m5=m5-task33 re() end\nif task3==6 and m6>=task33 then coin=coin<plus>task33*9<plus>diff m6=m6-task33 re() end\nif task3==7 and minKilled>0 then minKilled=minKilled-1 coin=coin<plus>5 re() end\nif task3==8 and peopleSave>=task33 then coin=coin<plus>task33 peopleSave=peopleSave-task33 re() end\nif task3==9 and coin>=1 then coin=coin<plus>1 re() end\nif task3==10 and krist==1 then krist=0 coin=coin<plus>1 re() end\nif task3==11 and floor5==1 then floor5=0 coin=coin<plus>3 re() end\nif task3==12 and halls==1 then halls=0 coin=coin<plus>1 re() end\nif task3==13 and health>10 then health=health-10 coin=coin<plus>2 re() end\nif task3==14 and strange>=2 then coin=coin<plus>3 re() end\nif task3==15 and coin>=1 then coin=coin-1  health=health<plus>15\nif health>maxhealth then health=maxhealth end re() end\nend",
+        "id": 17,
+        "text": "задание 3",
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "lua_do": "function lua_do()\nif coin>=1 then\ntask1=math.random(1,15)\ntask11=math.random(1,3)\ntask2=math.random(1,15)\ntask22=math.random(1,3)\ntask3=math.random(1,15)\ntask33=math.random(1,3)\ncoin=coin-1\nend\nend",
+        "text": "[обновить задания]\nЦена: 1",
+        "id": 17,
+        "left_answer": true
+      },
+      {
+        "id": 17,
+        "text": "Я чувствую у тебя тёмный кристалл! Не знаю как ты его достал, но я заплачу за него 20 монет. Согласен?",
+        "comment": true,
+        "var_equal": [
+          "darkkrist",
+          1
+        ]
+      },
+      {
+        "text": "[продать]",
+        "var_equal": [
+          "darkkrist",
+          1
+        ],
+        "id": 17,
+        "instant": true,
+        "middle_answer": true,
+        "lua_do": "function lua_do()\ndarkkrist=2\ncoin=coin<plus>20\nend"
+      },
+      {
+        "id": 10,
+        "text": "[назад]",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/cgx3mbv/image.png"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Выполняйте задания, получацте награду. Сменить задания можно только все сразу за монету. Вам доступны только 3. Задания на исследования нужно выполнять каждый раз заново",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Локация: ",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nlocal t=\"\"\nif stage==1 then\nt=\"Поверхность, библиотека<s>\n<s>\nВы прошли сквозь стелажи самых разных волшебных книг к разделу навыков. За эти придётся заплатить, хотите что-нибудь?\"\nelseif stage==10 then\nt=\"Тёмный дворец, библиотека\" end\nreturn t\nend",
+        "id": 18,
+        "text": "текст",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wspeed",
+          "speed",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nif coin>=7 then coin=coin-7 maxhealth=maxhealth<plus>10 end\nend",
+        "lua_text": "function lua_text()\nreturn \"[купить книгу жизни \"..tostring(maxhealth/10-3)..\"]<s>\nмаксимальное здоровье <plus>10<s>\nЦена: 7\"\nend",
+        "text": "[купить книгу жизни]\nмаксимальное здоровье <plus>10\nЦена: 7",
+        "middle_answer": true,
+        "instant": true,
+        "id": 18,
+        "var_no_more": [
+          "maxhealth",
+          99
+        ]
+      },
+      {
+        "comment": true,
+        "id": 18,
+        "var_need": [
+          "maxhealth",
+          100
+        ],
+        "middle_answer": true,
+        "text": "[купить книгу жизни]\nмаксимальное здоровье <plus>10\nЦена: 7"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"[купить книгу силы \"..strange..\"]<s>\nмаксимальная сила <plus>1<s>\nЦена: \"..tostring(math.ceil(math.pow(strange,2)*15))\nend",
+        "id": 18,
+        "lua_do": "function lua_do()\nif coin>=math.pow(strange,2)*15 then coin=coin-math.ceil(math.pow(strange,2)*15) strange=strange<plus>1 strange1=strange1<plus>1 end\nend",
+        "instant": true,
+        "middle_answer": true,
+        "text": "[купить книгу силы]\nмаксимальная сила <plus>1\nЦена: 10"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"[купить книгу удачи \"..loot..\"]<s>\nчисло выпадающих материалов <plus>1<s>\nЦена: \"..tostring(math.pow(loot,2)*10)\nend",
+        "id": 18,
+        "lua_do": "function lua_do()\nif coin>=math.pow(loot,2)*10 then coin=coin-math.pow(loot,2)*10 loot=loot<plus>1 end\nend",
+        "instant": true,
+        "middle_answer": true,
+        "text": "[купить книгу удачи]\nколличество ресурсов с монстра <plus>1\nЦена: 15"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"[купить книгу скорости \"..speed..\"]<s>\nурон от побега ÷\"..tostring(speed<plus>1)..\"<s>\nЦена: 20\"\nend",
+        "id": 18,
+        "lua_do": "function lua_do()\nif coin>=20 then coin=coin-20 speed=speed<plus>1 end\nend",
+        "instant": true,
+        "middle_answer": true,
+        "text": "[купить книгу скорости]\nурон от побега ÷скорость\nЦена: "
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not tp\nend",
+        "lua_do": "function lua_do()\nif coin>=40 then coin=coin-40 tp=true end\nend",
+        "middle_answer": true,
+        "instant": true,
+        "id": 18,
+        "text": "[купить книгу телепортации]\nперемещаться на любой этаж\nЦена: 40"
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "[купить книгу телепортации]\nперемещаться на любой этаж\nЦена: 40",
+        "id": 18,
+        "lua_if": "function lua_if()\nreturn tp\nend"
+      },
+      {
+        "middle_answer": true,
+        "text": "[назад]",
+        "id": 10,
+        "var_equal": [
+          "stage",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "text": "[назад]",
+        "var_need": [
+          "stage",
+          10
+        ],
+        "id": 22
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Покупайте волшебные книги и становитесь сильнее, быстрее и выносливее. Чем выше ваши показатели, тем больше книг придётся потратить на их улучшение",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Локация: Телепорт\n\nВы встали на платформу, и вас окружило поле, закрывающее обзор. На какой вам?",
+    "answers": [
+      {
+        "id": 10,
+        "text": "[на поверхность]",
+        "var_set": [
+          "stage",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 1]",
+        "var_set": [
+          "stage",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 2]",
+        "var_set": [
+          "stage",
+          2
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 3]",
+        "var_set": [
+          "stage",
+          3
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 4]",
+        "var_set": [
+          "stage",
+          4
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 5]",
+        "var_set": [
+          "stage",
+          5
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 6]",
+        "need": 22,
+        "var_set": [
+          "stage",
+          6
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 7]",
+        "need": 22,
+        "var_set": [
+          "stage",
+          7
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 8]",
+        "need": 22,
+        "var_set": [
+          "stage",
+          8
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 9]",
+        "need": 22,
+        "var_set": [
+          "stage",
+          9
+        ]
+      },
+      {
+        "id": 4,
+        "text": "[на этаж 10]",
+        "need": 22,
+        "var_set": [
+          "stage",
+          10
+        ]
+      },
+      {
+        "id": 22,
+        "text": "[к тёмному дворцу]",
+        "need": 22,
+        "var_set": [
+          "stage",
+          10
+        ]
+      },
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "[вернуться]",
+        "middle_answer": true,
+        "id": 19
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Локация: Поверхность, банк\n\nК вам подошла банкир:\"Чего желаете?\"",
+    "answers": [
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "id": 20,
+        "text": "В банке: \nПрибыль: ",
+        "comment": true,
+        "lua_text": "function lua_text()\nif bankcoin>=0 then\ncoinadd1= math.ceil(500/(bankcoin<plus>100)*1000)*0.001\ncoinadd = math.ceil(500/(bankcoin<plus>100)*10*bankcoin)*0.001\nelse\ncoinadd1= 6\ncoinadd = bankcoin*0.06\nend\nreturn \"В банке: \"..bankcoin..\"<s>\nСтавка: \"..coinadd1..\"%\"..\"<s>\nЗа 10 событий: \"..coinadd\nend"
+      },
+      {
+        "id": 20,
+        "text": "Монет:",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\nreturn bank\nend",
+        "id": 20,
+        "text": "число",
+        "instant": true,
+        "lua_do": "function lua_do()\nif bank==1000 then bank=1 else bank=bank*10 end\nend"
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nif bankcoin-bank>-101 then\nbankcoin=bankcoin-bank\ncoin=coin<plus>bank\nend end",
+        "text": "[взять]",
+        "id": 20,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 20,
+        "instant": true,
+        "text": "[положить]",
+        "lua_do": "function lua_do()\nif coin>=bank then coin=coin-bank bankcoin=bankcoin<plus>bank end\nend"
+      },
+      {
+        "id": 10,
+        "text": "[назад]",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]",
+        "var_set": [
+          "people",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "Вы можете взять деньги в кредит под 6% до 100 монет или вложить деньги от 5% и ниже. Чем больше денег вложено, тем ниже процентная ставка. Это связано с ограниченными возможностями банка.\nМонеты списываются и начисляются автоматически по прибытию в город, округляясь до целых в большую сторону",
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Локация: Поверхность, дом\n",
+    "answers": [
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"[поспать]<s>\nЗдоровье до \"..tostring(15*homelvl)..\"%\"\nend",
+        "lua_do": "function lua_do()\nif health<maxhealth*(homelvl*0.15) then health=math.ceil(maxhealth*(homelvl*0.15)) end\nend",
+        "middle_answer": true,
+        "text": "[поспать]",
+        "id": 21,
+        "instant": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn homelvl<4\nend",
+        "lua_text": "function lua_text()\nreturn \"[улучшить дом]<s>\nЦена: \"..tostring((homelvl<plus>1)*10)..\" монет или \"..tostring((homelvl<plus>4)/2)..\" силы\"\nend",
+        "id": 21,
+        "middle_answer": true,
+        "text": "[улучшить дом]\nЦена: ",
+        "instant": true,
+        "lua_do": "function lua_do()\nif (homelvl<plus>4)/2<=strange1 then homelvl=homelvl<plus>1\nelseif coin>=(homelvl<plus>1)*10 then homelvl=homelvl<plus>1 coin=coin-(homelvl<plus>1)*10 end\nend"
+      },
+      {
+        "id": 10,
+        "text": "[назад]",
+        "middle_answer": true
+      },
+      {
+        "id": 21,
+        "text": "уровень дома",
+        "lua_text": "function lua_text()\nlocal t = \"\"\nif homelvl==0 then t=\"Уровень дома: 1<s>\n<s>\nВы живёте в кем-то заброшенном доме на окраине города. Здесь нет половины крыши и окон\" end\nif homelvl==1 then t=\"Уровень дома: 2<s>\n<s>\nУ вас тёплый ветхий домик\" end\nif homelvl==2 then t=\"Уровень дома: 2<s>\n<s>\nУ вас неплохой тёплый дом и кровать\" end\nif homelvl==3 then t=\"Уровень дома: 3<s>\n<s>\nУ вас уютный небольшой красивый домик\" end\nif homelvl==4 then t=\"Уровень дома: 4<s>\n<s>\nУ вас хороший красивый дом со спальней и кухней, а с балкончика в крыше видно большую часть города\" end\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.7,
+          0.3
+        ],
+        "id": 13,
+        "text": "В своём доме вы можете отдохнуть и восстановить здоровье до определённого значения в %, которое зависит от уровня дома",
+        "shadow_color": [
+          1,
+          1,
+          1
+        ],
+        "var_equal": [
+          "tutorial",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Локация: Тёмный дворец, центр\n",
+    "answers": [
+      {
+        "var_show": [
+          "stage"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "этаж:",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"<s>\nУровень дворца: \"..tostring(darkhomelvl<plus>1)\nend",
+        "var_equal": [
+          "darkkrist",
+          3
+        ],
+        "id": 22,
+        "text": "\nУровень дворца: ",
+        "merge": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wspeed",
+          "speed",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "left_answer": true,
+        "lua_do": "function lua_do()\nif (darkhomelvl<plus>1)*25<=coin then coin=coin-(darkhomelvl<plus>1)*25 darkhomelvl=darkhomelvl<plus>1 end\nend",
+        "lua_text": "function lua_text()\nreturn \"[улучшить]<s>\nЦена: \"..tostring((darkhomelvl<plus>1)*25)\nend",
+        "var_equal": [
+          "darkkrist",
+          3
+        ],
+        "id": 22,
+        "instant": true,
+        "text": "[улучшить]\nЦена: ",
+        "var_no_more": [
+          "darkhomelvl",
+          3
+        ]
+      },
+      {
+        "instant": true,
+        "comment": true,
+        "var_equal": [
+          "darkkrist",
+          3
+        ],
+        "id": 22,
+        "text": "[улучшить]\nЦена: ---",
+        "var_need": [
+          "darkhomelvl",
+          4
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 23,
+        "text": "[обмен]\nмагазин",
+        "right_answer": true,
+        "var_equal": [
+          "darkkrist",
+          3
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\nif health/maxhealth*100<darkhomelvl*20 then health=maxhealth*0.2*darkhomelvl end\nend",
+        "lua_text": "function lua_text()\nreturn \"[отдыхать в покоях]<s>\n\"..\"Здоровье до:<s>\n\"..tostring(darkhomelvl*20)..\"%\"\nend",
+        "var_equal": [
+          "darkkrist",
+          3
+        ],
+        "id": 22,
+        "text": "[отдыхать в покоях]",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "darkkrist",
+          3
+        ],
+        "id": 22,
+        "text": "[поесть в столовой]\nЦена: 1\nЗдоровье: <plus>10%",
+        "instant": true,
+        "lua_do": "function lua_do()\nif coin>=1 then coin=coin-1 health=health<plus>math.ceil(maxhealth/10) end\nif health>maxhealth then health=maxhealth end\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn tp\nend",
+        "var_equal": [
+          "darkkrist",
+          3
+        ],
+        "middle_answer": false,
+        "text": "[телепорт]",
+        "id": 19,
+        "left_answer": true
+      },
+      {
+        "id": 18,
+        "text": "[библиотека]",
+        "right_answer": true,
+        "var_equal": [
+          "darkkrist",
+          3
+        ]
+      },
+      {
+        "id": 22,
+        "text": "\nПеред вами вход в тёмный дворец. На воротах углубление под тёмный кристалл",
+        "merge": true,
+        "var_no_more": [
+          "darkkrist",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "darkkrist",
+          1
+        ],
+        "id": 22,
+        "text": "[положить кристалл]",
+        "middle_answer": true,
+        "var_set": [
+          "darkkrist",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "[в подземелье]",
+        "right_answer": false,
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      },
+      {
+        "id": 24,
+        "text": "[эпилог]\nесли готовы для концовки",
+        "middle_answer": true,
+        "var_equal": [
+          "darkkrist",
+          3
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/ststwKG/image.png"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Локация: Тёмный дворец, стол обмена",
+    "answers": [
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 25,
+        "text": "виджеты",
+        "widget_show": [
+          "WhealthP",
+          "allhealth",
+          "Wstrange",
+          "strange",
+          "Wstrange2",
+          "strange2",
+          "Wdef",
+          "def",
+          "Wcoins",
+          "coin"
+        ],
+        "lua_do": "function lua_do()\nallhealth=math.ceil(health/maxhealth*100)\nstrange2=strange1-strange\nend"
+      },
+      {
+        "text": "[все материалы на монеты]",
+        "lua_do": "function lua_do()\ncoin=coin<plus>(1*m1) m1=0\ncoin=coin<plus>(2*m2) m2=0\ncoin=coin<plus>(3*m3) m3=0\ncoin=coin<plus>(4*m4) m4=0\ncoin=coin<plus>(5*m5) m5=0\ncoin=coin<plus>(6*m6) m6=0\ncoin=coin<plus>(7*m7) m7=0\ncoin=coin<plus>(8*m8) m8=0\nm=0\nend",
+        "instant": true,
+        "id": 23,
+        "middle_answer": true
+      },
+      {
+        "text": "[тёмный посох]\n100 монет, 3 силы",
+        "var_equal": [
+          "w5",
+          0
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 23,
+        "lua_do": "function lua_do()\nif coin>=100 then coin=coin-100 w5=1 strange1=strange<plus>3 end\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "w5",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "text": "[тёмный посох]\n100 монет, 3 силы",
+        "id": 23
+      },
+      {
+        "text": "[тёмная броня]\n40 монет, 3 защиты",
+        "var_equal": [
+          "a5",
+          0
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 23,
+        "lua_do": "function lua_do()\nif coin>=40 then coin=coin-40 a5=1 def=3 end\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a5",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "text": "[тёмная броня]\n40 монет, 3 защиты",
+        "id": 23
+      },
+      {
+        "id": 22,
+        "text": "[назад]",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[персонаж]"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Локация: Отсутствует\n",
+    "answers": [
+      {
+        "id": 24,
+        "text": "эпилог",
+        "lua_text": "function lua_text()\nlocal t=\"<s>\nТак и началось ваше долгое приключение:<s>\n\"\n\nif karma>9 then g.karma2=true end\nif karma<-9 then g.karma1=true end\nif friend==2 then g.friend1=true end\nif friend==-2 then g.friend2=true end\nif a5==1 and w5==1 then g.ArmorWeapon0=true end\nif a4==1 and w4==1 then g.ArmorWeapon1=true end\n\nif karma>-5 then\nt=t..\"У вас на счету ещё много хороших дел и помощи окружающим. Люди стали ценить вашу доброту и поддержку.<s>\n\"\nelse\nt=t..\"У вас на счету ещё много крупных грабежей и побед. Стражи не могут вас остановить.<s>\n\"\nend\n\nif homelvl==0 and darkhomelvl==0 then\nif karma>-5 then\nt=t..\"Вы не задержались в новом городе и стали искать и исследовать множество новых увлекательных мест.<s>\n\"\nif friend==2 then\nif gender==0 then\nt=t..\"Ваша новая спутница, а позже и девушка, стала путешествовать с вами.<s>\n\"\nelse\nt=t..\"Ваш новый спутник, а позже и парень, стал путешествовать с вами.<s>\n\"\nend end\nelse\nt=t..\"Вы не задержались в новом городе и отправись на поиски денег и власти в другие места.<s>\n\"\nif friend==2 then\nif gender==0 then\nt=t..\"Спасённая вами девушка не одобрила вашего решения.<s>\n\"\nelse\nt=t..\"Спасённый вами юноша не одобрил такого решения.<s>\n\"\nend end\nend\n\nelseif darkhomelvl>=homelvl then\nt=t..\"Вы поселились в тёмном дворце и стали управлять подземельем. Ваше могущество росло, как и число подчинённых монстров, а позже и другие подземелья стали вашими.<s>\n\"\nif darkhomelvl>3 then\nt=t..\"Ваш дворец уже совсем не уступал другим замкам, а скорее даже превосходил их.<s>\n\" g.darkhome=true\nend\nif karma>-5 then\nif friend==2 then\nif gender==0 then\nt=t..\"Ваша новая спутница, а позже и королева стала жить с вами.<s>\n\"\nelse\nt=t..\"Ваш новый спутник, а позже и король, стал жить вместе с вами.<s>\n\"\nend end\nelse\nif friend==2 then\nif gender==0 then\nt=t..\"Спасённая вами девушка не одобрила вашего решения.<s>\n\"\nelse\nt=t..\"Спасённый вами юноша не одобрил такого решения.<s>\n\"\nend end\nend\n\nelse\nt=t..\"Вы поселились в своём новом доме и вскоре освоились на этом месте.<s>\n\"\nif homelvl>3 then\ng.home=true\nif karma>-5 then\nt=t..\"Вашим домом часто все восхищались.<s>\n\"\nif friend==2 then\nif gender==0 then\nt=t..\"Ваша новая подруга, а позже и девушка, стала жить с вами.<s>\n\"\nelse\nt=t..\"Ваш новый друг, а позже и парень, стал жить с вами.<s>\n\"\nend end\nelse\nt=t..\"Вашего дома все стали бояться, а некоторые завидовали.<s>\n\"\nif friend==2 then\nif gender==0 then\nt=t..\"Спасённая вами девушка не одобрила вашего решения.<s>\n\"\nelse\nt=t..\"Спасённый вами юноша не одобрил такого решения.<s>\n\"\nend end\nend\nend\nend\n\nif gDarkKilled==1 then\nt=t..\"Все уже узнали о убитом вами «Теневом монстре» и о этажах ниже 5. Не все в это верили, но ваши способности признавали.<s>\n\"\nelseif gMinKilled==1 then\nt=t..\"Все сразу узнали о убитом вами минотавре. Оказалось, что он был не один, а в глубинах подземелья ещё часто слышали страшные звуки.<s>\n\"\nelse\nt=t..\"Вы стали отличным авантюристом, хоть так и не одолели минотавра. В глубинах подземелья ещё часто слышали страшные звуки.<s>\n\"\nend\n\nif darkhomelvl==0 then\nt=t..\"Кто знает, сколько ещё таин хранит это поздемелье.<s>\n\"\nelse\nt=t..\"Вы узнавали всё больше таин о вашем подземелье, как и о других.<s>\n\"\nend\n\nif darkkrist==2 then\nt=t..\"Ещё долго ходили слухи о проданном вами чёрном кристалле. Он обладал сильной тёмной энергией.<s>\n\"\nend\n\nif gangster<2 then\nt=t..\"Бандиты начали проворачивать кражи и убийста покрупнее, нарастив свои силы.<s>\n\"\nelse\nif karma>-4 then\nt=t..\"Вы больше не слышали о бандитах.<s>\n\" g.gangsters=true\nelse\nt=t..\"Вы подмяли под себя все бандитские банды и стали получать салидный доход.<s>\n\"\nend\nend\n\nif maxhealth==100 then\nt=t..\"Вас больше не мог сломить ни один удар. Вы стали выносливее всех.<s>\n\" g.health100=true\nend\n\nif strange>2 then\ng.strange3=true\nif karma>-5 then\nt=t..\"Многие стали признавать вашу силу, а некоторые стали на вас ровняться.<s>\n\"\nelse\nt=t..\"Все стали бояться вашей силы. Вы быстро смогли убедить смельчаков, что оно того стоит.<s>\n\"\nend\nend\n\nif w5==1 then\nt=t..\"Никто не мог больше достать оружее, как у вас. Оно стало считаться сильнейшим «Легендарным посохом». \"\nelseif w4==1 then\nt=t..\"Многие оценили качество вашего магического посоха. \"\nelse\nt=t..\"Ваше оружее не могло выделиться из серой массы. \"\nend\n\nif a5==1 then\nt=t..\"А броня на вас оказалась несокрушимой, её назвали «Легендарной бронёй».<s>\n\"\nelseif a4==1 then\nt=t..\"А броня вполне хорошо вас защищала и привлекала внимание ремесленников.<s>\n\"\nelse\nt=t..\"А броня лишь частично вас защищала.<s>\n\"\nend\n\nreturn t\nend",
+        "merge": true
+      },
+      {
+        "isBack": true,
+        "id": 24,
+        "text": "[вернуться]",
+        "backstepCount": 1,
+        "left_answer": true
+      },
+      {
+        "middle_answer": true,
+        "text": "[конец]",
+        "id": 1,
+        "blackout": true
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 26,
+    "text": "",
+    "answers": []
+  }
+]

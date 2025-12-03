@@ -1,0 +1,1803 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Aleks Otter<s>r\n<s>r\n     Добро пожаловать в клуб клептоманов.<s>r\n     Первое правило клуба клептоманов — красть только у членов клуба клептоманов.<s>r\n     Второе правило клуба клептоманов — не выходить из клуба, пока есть, что красть.<s>r\n     Воруй барахло и будь обворованым! <s>r\n<s>r\n     Попробуй прибрать к рукам все 10 предметов. Кликер или головоломка? Зависит от тебя!",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Вступить в клуб",
+        "lua_do": "function lua_do()\ng.lotion_count = g.lotion_count or 0\ng.beer_count = g.beer_count or 0\ng.boom_count = g.boom_count or 0\ng.coffee_count = g.coffee_count or 0\ng.clover_count = g.clover_count or 0\n\nbeer_ef = 0\nlotion_ef = 0\nboom_ef = 0\ncoffee_ef = 0\nclover_ef = 0\nend"
+      },
+      {
+        "id": 1,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/general/vk_blue.png"
+        ],
+        "id": 1,
+        "url": "https://vk.com/aleks_otter_quest",
+        "text": "Группа автора"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Объявление переменных",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal hero1 = {id = 1, nameI = \"Вы\", nameR = \"Вас\", sex = 4, items = {}, badId = -2}\nlocal hero2 = {id = 2, nameI = \"Гринч\", nameR = \"Гринча\", sex = 1, items = {}, badId = 0}\nlocal hero3 = {id = 3, nameI = \"Бриньольф\", nameR = \"Бриньольфа\", sex = 1, items = {}, badId = 0}\nlocal hero4 = {id = 4, nameI = \"Робин Гуд\", nameR = \"Робина Гуда\", sex = 1, items = {}, badId = 0}\nlocal hero5 = {id = 5, nameI = \"Остап Бендер\", nameR = \"Остапа Бендера\", sex = 1, items = {}, badId = 0}\n\nheroes = {hero1, hero2, hero3, hero4, hero5}\nend",
+        "text": "Персонажи",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nstealVerbs = {\"украл\", \"стащил\", \"стянул\", \"свистнул\", \"умыкнул\"}\nrarity_1 = {\"Заурядный\", \"Необычный\", \"Интересный\", \"Притягательный\", \"Гипнотический\"}\nrarity_1v = {\"Заурядный\", \"Необычный\", \"Интересный\", \"Притягательный\", \"Гипнотический\"}\nrarity_2 = {\"Заурядная\", \"Необычная\", \"Интересная\", \"Притягательная\", \"Гипнотическая\"}\nrarity_2v = {\"Заурядную\", \"Необычную\", \"Интересную\", \"Притягательную\", \"Гипнотическую\"}\nrarity_3 = {\"Заурядное\", \"Необычное\", \"Интересное\", \"Притягательное\", \"Гипнотическое\"}\nrarity_3v = {\"Заурядное\", \"Необычное\", \"Интересное\", \"Притягательное\", \"Гипнотическое\"}\nrarity_4 = {\"Заурядные\", \"Необычные\", \"Интересные\", \"Притягательные\", \"Гипнотические\"}\nrarity_4v = {\"Заурядные\", \"Необычные\", \"Интересные\", \"Притягательные\", \"Гипнотические\"}\nend",
+        "text": "Склонения",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\nlocal item ={id = 1, nameI = \"\", nameV = \"\", sex = 1, cost = 1, theftsCount = 0, ownerId = 0}\n\nlocal coin = table.copy2(item)\ncoin.nameI = \"фальшивая монета\"   coin.nameV = \"фальшивую МОНЕТУ\"   coin.sex = 2\n\nlocal custard = table.copy2(item)\ncustard.id = 2   custard.nameI = \"сладкий рулет\"   custard.nameV = \"сладкий РУЛЕТ\"\n\nlocal gem = table.copy2(item)\ngem.id = 3   gem.nameI = \"пластмассовый алмаз\"   gem.nameV = \"пластмассовый АЛМАЗ\"\n\nlabel = table.copy2(item)\nlabel.id = 4   label.nameI = \"бирка Versace\"   label.nameV = \"БИРКУ Versace\"   label.sex = 2\n\nlocal newspaper = table.copy2(item)\nnewspaper.id = 5   newspaper.nameI = \"вчерашняя газета\"   newspaper.nameV = \"вчерашнюю ГАЗЕТУ\"   newspaper.sex = 2\n\nlocal pen = table.copy2(item)\npen.id = 6   pen.nameI = \"синяя ручка\"   pen.nameV = \"синюю РУЧКУ\"   pen.sex = 2\n\nlocal socks = table.copy2(item)\nsocks.id = 7   socks.nameI = \"несвежие носки\"   socks.nameV = \"несвежие НОСКИ\"   socks.sex = 4\n\nlocal spoon = table.copy2(item)\nspoon.id = 8   spoon.nameI = \"серебряная ложечка\"   spoon.nameV = \"серебряную ЛОЖЕЧКУ\"   spoon.sex = 2\n\nlocal taco = table.copy2(item)\ntaco.id = 9   taco.nameI = \"пикантный тако\"   taco.nameV = \"пикантный ТАКО\"\n\nlocal videocassette = table.copy2(item)\nvideocassette.id = 10   videocassette.nameI = \"папина видеокассета\"   videocassette.nameV = \"папину ВИДЕОКАССЕТУ\"   videocassette.sex = 2\n\nriches = {coin, custard, gem, label, newspaper, pen, socks, spoon, taco, videocassette}\nend",
+        "calculate": true,
+        "text": "Предметы",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nday = 1   turnText = \"\"    lastDayText = \"День 1.\"  lastTarget = {}\nlocal randomHeroId = 0\nfor i, v in ipairs(riches) do\n   randomHeroId = math.random(#heroes)\n   riches[i].ownerId = randomHeroId \n   table.insert(heroes[randomHeroId].items, table.copy2(riches[i]))\nend\nend",
+        "text": "Раздача предметов"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Основная логика",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction targetHeroSelection(curHero)\n   nums = {}\n   for i, v in ipairs(heroes) do\n      if v.id ~= curHero.id\n         and v.id ~= curHero.badId then\n            table.insert(nums, v.id)\n      end\n   end\n   return heroes[nums[math.random(#nums)]]\nend\nend",
+        "text": "Выбор цели кражи"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction targetItemSelection(tarHero)\n   local res = -1\n   local countI = table.count(tarHero.items)\n   if countI == 1 then res = tarHero.items[1].id\n   elseif countI > 1 then res = tarHero.items[math.random(countI)].id\n   end\n   return res \nend\nend",
+        "calculate": true,
+        "text": "Выбор предмета кражи",
+        "id": 3
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction frightenOffChance(curHero, tarHero, itemId)\n   local chance = 50 / sumCost(tarHero) * riches[itemId].cost\n   if (tarHero.id == 1) and (coffee_ef > 0) then \n      chance = math.min((chance * 4), 100)\n   elseif curHero.id == 1 then \n      if day == 1 then chance = 1 \n      elseif boom_ef > 0 then \n         chance = chance / 4 \n      end\n   end\n   chance = chance - chance%0.01\nreturn chance\nend\nend",
+        "text": "Расчёт шанса быть пойманным"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction sumCost(curHero)\n   local sum = 0\n   for i, v in ipairs(curHero.items) do\n      sum = sum <plus> v.cost\n   end\n   return sum\nend\nend",
+        "text": "Суммарная ценность",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction stealChance(curHero, tarHero, itemId)\n   local chance = 55 <plus> sumCost(curHero)\n   if (tarHero.id == 1) and (lotion_ef > 0) then \n      chance = chance / 2\n      chance = chance - chance%0.01\n   elseif curHero.id == 1 then\n      if day == 1 then chance = 100 \n      elseif clover_ef > 0 then chance = math.min((chance <plus> 25), 100) end\n   end\n   return chance \nend\nend",
+        "text": "Расчёт шанса успешной кражи",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction attemptedTheft(curHero, tarHero, itemId)\n\n   if itemId == -1 then    -- нечего красть\n      curHero.badId = -2\n   elseif math.random(100) <= frightenOffChance(curHero, tarHero, itemId) then\n      -- поймали за руку\n      curHero.badId = tarHero.id\n   elseif math.random(100) <= stealChance(curHero, tarHero, itemId) then\n      -- удача\n      steal(curHero, tarHero, itemId)\n      curHero.badId = 0\n   else\n      -- неудача\n      curHero.badId = -1\n   end\n\n   addTurnText(curHero, tarHero, itemId)\nend\nend",
+        "calculate": true,
+        "text": "Попытка кражи",
+        "id": 3
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction costUpdate(itemId)\n   local count = riches[itemId].theftsCount <plus> 1\n   riches[itemId].theftsCount = count\n   if count == 5 or count == 15 or count == 30 or count == 50 then riches[itemId].cost = riches[itemId].cost <plus> 1 end\nend\nend",
+        "text": "Обновить ценность предмета",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Кража",
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction steal(curHero, tarHero, itemId)\n   local needFind = true\n   local idl = 0\n   for i, v in ipairs(tarHero.items) do\n      if v.id == itemId then \n         idl = i \n         break\n      end\n   end\n   table.remove(tarHero.items, idl)\n   riches[itemId].ownerId = curHero.id\n   costUpdate(itemId)\n   table.insert(curHero.items, table.copy2(riches[itemId]))\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Определить эпитет предмета",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nfunction getEpithetV(item)\n   local text = \"\"\n   if item.sex == 1 then text = rarity_1v[item.cost]\n   elseif item.sex == 2 then text = rarity_2v[item.cost]\n   elseif item.sex == 3 then text = rarity_3v[item.cost]\n   elseif item.sex == 4 then text = rarity_4v[item.cost]\n   end\n   return text .. \" \" .. item.nameV\nend\n\nfunction getEpithetI(item)\n   local text = \"\"\n   if item.sex == 1 then text = rarity_1[item.cost]\n   elseif item.sex == 2 then text = rarity_2[item.cost]\n   elseif item.sex == 3 then text = rarity_3[item.cost]\n   elseif item.sex == 4 then text = rarity_4[item.cost]\n   end\n   return text .. \" \" .. item.nameI\nend\n\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Получение глагола кражи",
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction getVerb(hero)\n   local text = stealVerbs[math.random(#stealVerbs)]\n   if hero.sex == 2 then text = text .. \"а\"\n   elseif hero.sex == 4 then text = text .. \"и\"\n   end\n   return text\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction addTurnText(curHero, targetHero, tarItemId)\n   local text = \"\"\n   if curHero.badId > 0 then\n      if curHero.id == 1 then \n         text = lastTarget.nameI .. \" схватил Вас за руку при попытке кражи! Сегодня Вы не сможете подойти к нему незаметно. <s>\n\"\n      else \n         text = curHero.nameI .. \" был схвачен при попытке кражи у \" .. targetHero.nameR .. \". <s>\n\"\n      end\n   elseif curHero.badId == -2 then\n      if curHero.id == 1 then \n         text = \"Увы, Вы ничего не нашли в карманах \" .. targetHero.nameR .. \". <s>\n\"\n      else \n         text = curHero.nameI .. \" не нашёл, что украсть у \" .. targetHero.nameR .. \". <s>\n\"\n      end\n   elseif curHero.badId == -1 then\n      if curHero.id == 1 then \n         text = \"Уф! Едва не попались! Украсть \" .. getEpithetV(riches[tarItemId]) .. \" у \" .. targetHero.nameR .. \" не удалось. <s>\n\"\n      else \n         text = curHero.nameI .. \" пытался украсть \" .. getEpithetV(riches[tarItemId]) .. \" у \" .. targetHero.nameR .. \". <s>\n\"\n      end\n   elseif curHero.badId == 0 then\n      text = curHero.nameI .. \" \" .. getVerb(curHero) .. \" у \" .. targetHero.nameR .. \" \" .. getEpithetV(riches[tarItemId]) .. \". <s>\n\"\n   end\n   turnText = turnText .. \"     \" .. text\nend\nend",
+        "text": "Получение записи в лог"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Ход бота (попытка случайной кражи)",
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction botMove(curHero)\n   local targetHero = targetHeroSelection(curHero)\n   local tarItemId = targetItemSelection(targetHero)\n   attemptedTheft(curHero, targetHero, tarItemId)\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction nextDay()\n   day = day <plus> 1\n   lastDayText = \"День \" .. day .. \".<s>\n\" .. turnText \n   turnText = \"\"   \n   hasTarget = false\n\nif beer_ef > 0 then beer_ef = beer_ef - 1 end\nif lotion_ef > 0 then lotion_ef = lotion_ef - 1 end\nif boom_ef > 0 then boom_ef = boom_ef - 1 end\nif coffee_ef > 0 then coffee_ef = coffee_ef - 1 end\nif clover_ef > 0 then clover_ef = clover_ef - 1 end\nend\nend",
+        "calculate": true,
+        "text": "смена дня",
+        "id": 3
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction botsTurn()\n   local ord = {}\n   for i = 2, #heroes do\n      table.insert(ord, i)\n   end\n\n   if table.count(heroes[1].items) < 10 then\n      local index = 0\n      for i = 1, #heroes - 1 do\n         index = math.random(#ord)\n         botMove(heroes[ord[index]])\n         table.remove(ord, index)\n      end\n  end\n\n  nextDay()\nend\nend",
+        "text": "Очерёдность ходов ботов",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Текст на предмете",
+        "lua_do": "function lua_do()\nfunction getItemText(rid)\nlocal item = riches[rid]\nlocal text = getEpithetI(item)\nlocal chance = 0\nif riches[rid].ownerId == 1 then \n   chance = frightenOffChance(heroes[2], heroes[1], rid)\n   text = text .. \"<s>\nШанс поймать: \"\nelse\n   chance = frightenOffChance(heroes[1], heroes[item.ownerId], rid)\n   text = text .. \"<s>\nРиск попасться: \"\n   if day == 1 then \n      chance = 50 / table.count(heroes[item.ownerId].items)\n      chance = chance - chance%0.01\n   end\nend\nreturn text .. chance .. \"%\"\nend\nend",
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": " ~ ~ ~ ",
+    "answers": [
+      {
+        "text": "КОООД",
+        "lua_if": "function lua_if()\nlocal tf = type(\"targetHeroSelection\")\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "run": [
+          3
+        ],
+        "comment": false
+      },
+      {
+        "comment": true,
+        "id": 4,
+        "text": "Результат кражи",
+        "lua_if": "function lua_if()\nreturn not hasTarget\nend",
+        "lua_text": "function lua_text()\nreturn lastDayText \nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not hasTarget and table.count(heroes[1].items) < 10\nend",
+        "id": 4,
+        "text": "Кого обчистим сегодня?",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not hasTarget and table.count(heroes[1].items) == 10\nend",
+        "lua_text": "function lua_text()\nreturn \"Победа!!! <s>\n Как вам это удалось?! <s>\n Ваш счёт: \" .. sumCost(heroes[1]) .. \" из 50\"\nend",
+        "middle_answer": true,
+        "text": "ПОБЕДА!!!",
+        "comment": false,
+        "id": 1
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId ~= 2 and table.count(heroes[1].items) < 10\nend",
+        "lua_text": "function lua_text()\nlocal text = heroes[2].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[2].items)   end\nreturn text \nend",
+        "instant": true,
+        "id": 4,
+        "text": "2",
+        "lua_do": "function lua_do()\n   lastTarget = heroes[2]\n   hasTarget = true\nend",
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal text = heroes[2].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[2].items)   end\nreturn text \nend",
+        "instant": true,
+        "id": 4,
+        "text": "2",
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId == 2  and table.count(heroes[1].items) < 10\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId ~= 3 and table.count(heroes[1].items) < 10\nend",
+        "instant": true,
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\n   lastTarget = heroes[3]\n   hasTarget = true\nend",
+        "lua_text": "function lua_text()\nlocal text = heroes[3].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[3].items)   end\nreturn text  \nend"
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\nlocal text = heroes[3].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[3].items)   end\nreturn text \nend",
+        "comment": true,
+        "id": 4,
+        "instant": true,
+        "text": "3",
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId == 3 and table.count(heroes[1].items) < 10\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId ~= 4 and table.count(heroes[1].items) < 10\nend",
+        "lua_text": "function lua_text()\nlocal text = heroes[4].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[4].items)   end\nreturn text \nend",
+        "instant": true,
+        "id": 4,
+        "text": "4",
+        "lua_do": "function lua_do()\n   lastTarget = heroes[4]\n   hasTarget = true\nend",
+        "left_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal text = heroes[4].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[4].items)   end\nreturn text \nend",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId == 4 and table.count(heroes[1].items) < 10\nend",
+        "id": 4,
+        "text": "4",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId ~= 5 and table.count(heroes[1].items) < 10\nend",
+        "instant": true,
+        "id": 4,
+        "text": "5",
+        "lua_do": "function lua_do()\n   lastTarget = heroes[5]\n   hasTarget = true\nend",
+        "lua_text": "function lua_text()\nlocal text = heroes[5].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[5].items)   end\nreturn text \nend"
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal text = heroes[5].nameI\nif beer_ef > 0 then   text = text .. \"<s>\nПредметов: \" .. table.count(heroes[5].items)   end\nreturn text \nend",
+        "id": 4,
+        "text": "5",
+        "instant": true,
+        "lua_if": "function lua_if()\nreturn (not hasTarget) and heroes[1].badId == 5 and table.count(heroes[1].items) < 10\nend"
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn hasTarget\nend",
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nreturn \"Ваша цель — \" .. lastTarget.nameI .. \"<s>\n Что крадём?\"\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn hasTarget\nend",
+        "super_calculate": false,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          7
+        ],
+        "calculate": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal text = \"<s>\n\"\nif table.count(heroes[1].items) > 0 then\ntext = text .. \"Ваши сокровища \"\nelse\ntext = text .. \"Ваши карманы пусты\"\nend\nreturn text\nend",
+        "middle_answer": true,
+        "text": "предметы игрока",
+        "comment": true,
+        "id": 4
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Богатство: \" .. sumCost(heroes[1])  .. \" / 50\"\nend",
+        "id": 4,
+        "middle_answer": false,
+        "text": "богатство и шансы на успех",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "middle_answer": false,
+        "text": "богатство и шансы на успех",
+        "lua_text": "function lua_text()\n   local chance = sumCost(heroes[1]) <plus> 55\n   if clover_ef > 0 then chance = math.min((chance <plus> 25), 100) end\nreturn \"Успех кражи: \" .. chance .. \"%\"\nend",
+        "id": 4
+      },
+      {
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          17
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Правила",
+        "left_answer": true
+      },
+      {
+        "id": 18,
+        "right_answer": true,
+        "comment": false,
+        "text": "Магазин"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "          ПРАВИЛА<s>r\n<s>r\n     Раз в день Вы можете попытаться украсть один предмет.<s>r\n     Человек, у которого Вы пытаетесь украсть, может поймать Вас за руку. Вы не сможете красть у него на следующий день. <s>r\n     Чем чаще воруют предмет, тем выше его ценность. Чем больше у Вас ценных предметов, тем выше вероятность успешной кражи, если Вас не поймают за руку.<s>r\n     Чем больше предметов, тем сложнее за ними следить. Шанс поймать вора (50%) делится между предметами. Предметы с высокой ценностью охраняются тщательнее. <s>r\n<s>r\nЦЕННОСТЬ / Кол-во краж / Очки<s>r\nЗаурядный  /  0  /  1<s>r\nНеобычный  /  5  /  2<s>r\nИнтересный  /  15  /  3<s>r\nПритягательный  /  30  /  4 <s>r\nГипнотический  /  50  /  5 <s>r\n<s>r\n     Например, предмет с ценностью \"Гипнотический\" повышает шанс успешной кражи на 5%.<s>r\n     Для победы нужно собрать все 10 предметов. И читать историю краж =)",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Красть!"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn type(heroes) ~= \"table\" \nend",
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "run": [
+          2
+        ],
+        "text": "объявление переменных"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "монетка",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-1fP23u9ol3U/X3WeHY4UJLI/AAAAAAAAMJA/QX6J6EB623Y-lUvw3OG7AGU2nd-5hCXIACLcBGAsYHQ/s0/coin1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 1)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 1\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-Nocl_AfD2co/X3WeHetWBHI/AAAAAAAAMI8/zUs9x5FU_0QZ0XPZj0JHGhCyJ2kfoZJRwCLcBGAsYHQ/s0/coin2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 1)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-R277FanHBK4/X3WeHTHNC6I/AAAAAAAAMJE/yjyrJDXygWsyjCbbDpfj1RCQLtmAOWTFgCLcBGAsYHQ/s0/coin3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 1)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-121dS1cYu0I/X3WeIPURQlI/AAAAAAAAMJI/gGrSwIM7Mx8c1TF3208oazNoCZx7KHLyACLcBGAsYHQ/s0/coin4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 1)\nbotsTurn()\nend",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 4\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-N7Enq0sfEqQ/X3WeIRcwk7I/AAAAAAAAMJM/9tuYzDe_iLgx1egSeD7nwcGxhFYOj6CVwCLcBGAsYHQ/s0/coin5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 1)\nbotsTurn()\nend",
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 5\nend",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Все предметы — активные",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[1].ownerId\nend",
+        "super_calculate": false,
+        "id": 7,
+        "calculate": true,
+        "run": [
+          6
+        ],
+        "text": "монета"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[2].ownerId\nend",
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "run": [
+          8
+        ],
+        "text": "рулет"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[3].ownerId\nend",
+        "super_calculate": false,
+        "id": 7,
+        "calculate": true,
+        "run": [
+          9
+        ],
+        "text": "кристалл"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[4].ownerId\nend",
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "run": [
+          10
+        ],
+        "text": "бирка"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[5].ownerId\nend",
+        "super_calculate": false,
+        "id": 11,
+        "calculate": true,
+        "run": [
+          11
+        ],
+        "text": "газета"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[6].ownerId\nend",
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "run": [
+          12
+        ],
+        "text": "ручка"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[7].ownerId\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "run": [
+          13
+        ],
+        "text": "носки"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[8].ownerId\nend",
+        "super_calculate": false,
+        "id": 14,
+        "calculate": true,
+        "run": [
+          14
+        ],
+        "text": "ложечка"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[9].ownerId\nend",
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "run": [
+          15
+        ],
+        "text": "тако"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn lastTarget.id == riches[10].ownerId\nend",
+        "super_calculate": false,
+        "id": 16,
+        "calculate": true,
+        "run": [
+          16
+        ],
+        "text": "кассета"
+      },
+      {
+        "id": 4,
+        "text": "Нечего красть!",
+        "lua_if": "function lua_if()\nreturn table.count(lastTarget.items) == 0\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, -1)\nbotsTurn()\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "рулет",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-05WkSgvg2TI/X3WeIY_EZhI/AAAAAAAAMJQ/heTX35GoQ0ceWbopEdnMhUNwp6cUUju4QCLcBGAsYHQ/s0/custard1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 2)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-MWEd67dkUiQ/X3WeIrtsCBI/AAAAAAAAMJU/1XERuyw0jP8lC-2s_KO-mo7YPZ-JixNXgCLcBGAsYHQ/s0/custard2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 2)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-x85CIF6P13I/X3WeJAx5NBI/AAAAAAAAMJY/fdMsKVStn3UAka7qByzoGaKDLXzTr8RaQCLcBGAsYHQ/s0/custard3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 2)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-kcevJE80Ne8/X3WeJfipzXI/AAAAAAAAMJc/J2UF9dpGlncmZYQmtvrUOfnZbQgVhyc4QCLcBGAsYHQ/s0/custard4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 2)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-UdDCbXRSvpU/X3WeJZnTbJI/AAAAAAAAMJg/OLrPKTD5OtEnmBESd1OKMJ4je-b_-JQ1gCLcBGAsYHQ/s0/custard5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 2)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "кристалл",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-NZVr0JHaJZg/X3WeJgi6t6I/AAAAAAAAMJk/im5MetK9DucFhG9BUZXoKcLYuXJWACQGwCLcBGAsYHQ/s0/gem1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 3)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-IWPWBGWGelw/X3WeJ4Isu6I/AAAAAAAAMJo/AnJM2nmGNAULOb1uoDW9wDa4QlbVOMYFwCLcBGAsYHQ/s0/gem2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 3)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-Nz9PjjnsuMU/X3WeJ4ss1hI/AAAAAAAAMJs/07A6y4QeE5kQBbvRSD2bUpPZfMpzC8wXACLcBGAsYHQ/s0/gem3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 3)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-gfZzgb2PZnk/X3WeKDynI1I/AAAAAAAAMJw/0F1e6YVDDYYJbHZgnBQQoZDIM4LtefFGQCLcBGAsYHQ/s0/gem4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 3)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-vJ4pKJKlh8E/X3WeKWo98zI/AAAAAAAAMJ0/Zc8XXOLytzgEevRrWhDSx99J37M_wMd9QCLcBGAsYHQ/s0/gem5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 3)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "бирка",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/--RpK5ViBcpc/X3WeKTHlG8I/AAAAAAAAMJ4/ihBfweEP06shd_8hLaco7SZrcKnV1ogvwCLcBGAsYHQ/s0/label1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 4)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-sT_8tfRY46I/X3WeKsFWRsI/AAAAAAAAMJ8/j5oGsRC7Sh0ApoLK91a-y3O8bddoGEVGACLcBGAsYHQ/s0/label2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 4)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-tVj4oct627s/X3WeLPIjILI/AAAAAAAAMKE/fa8oFDMLeC0YOm2BQzjyyiOFQTaVR2t_ACLcBGAsYHQ/s0/label3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 4)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-UNRBsxc8wLA/X3WeLHyGDkI/AAAAAAAAMKA/SC-7SGDyaWI6jRxjtO3vediToGqzynvegCLcBGAsYHQ/s0/label4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 4)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-XQGkkBcUvMk/X3WeLXeWeXI/AAAAAAAAMKI/oXREGSv-FvkThr_oppfPJXJfu1bOORrpwCLcBGAsYHQ/s0/label5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 4)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "газета",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-rlV-YWNrVGY/X3WeL0rZL9I/AAAAAAAAMKM/RhdzJW6Uuz8VkAAz80_Hpsuil464FXEVwCLcBGAsYHQ/s0/newspaper1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 5)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-QPDM8sU8DEQ/X3WeMWGKBXI/AAAAAAAAMKQ/lbBkW8Y_qDAjBeR-gBVGBpZckGgM2Sd8ACLcBGAsYHQ/s0/newspaper2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 5)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-eIgi7u8tfWI/X3WeMh7IdjI/AAAAAAAAMKU/MFVx8Sn6M9oj39bfc7OUJsaH_OvyY-cigCLcBGAsYHQ/s0/newspaper3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 5)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-WUPRVhPSqv8/X3WeMpTDyDI/AAAAAAAAMKY/e6JNPkjNIXgOgkSB1uSFxMXE8GDYNMBBQCLcBGAsYHQ/s0/newspaper4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 5)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-1gmzdWyHtzs/X3WeM-f4awI/AAAAAAAAMKc/HEbWdXe3Ln4HeFH5UbgTtwhjFY4jcSKUACLcBGAsYHQ/s0/newspaper5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 5)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "ручка",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-gKu5SR9xAx0/X3WeNE8jJPI/AAAAAAAAMKg/2f7ubj9cMx8wHUuNuRv_dRm-p9W2brP4ACLcBGAsYHQ/s0/pen1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 6)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-UsWlpabjWaE/X3WeNdG-bhI/AAAAAAAAMKk/ogoTh9XW0LIdQCJA02IKqe3c_2QwPN4ZACLcBGAsYHQ/s0/pen2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 6)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-80b73NuaPCQ/X3WeNXmbCGI/AAAAAAAAMKo/M0QfGwc-WHkjDc4fSwVj0Rm-6XaCYv9NwCLcBGAsYHQ/s0/pen3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 6)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-bhmOz8k0Dj4/X3WeN0CRstI/AAAAAAAAMKs/o2f_zfZerikoKrKcgTKB3iDVSVZED1oLACLcBGAsYHQ/s0/pen4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 6)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-ZnbSZMxkLh8/X3WeN8MMQxI/AAAAAAAAMKw/81NiMBg6OGAg8Y4EZAWxdUkPC3GbLOQ-ACLcBGAsYHQ/s0/pen5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 6)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "носки",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-Kkdt3YIQATA/X3WeN8Gp7dI/AAAAAAAAMK0/zQVQ5UscVqwwCspKJvFQvbgO6udHqA5KQCLcBGAsYHQ/s0/socks1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 7)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-CwzxEFHr1rM/X3WeOWGXqsI/AAAAAAAAMK4/JgruMjhRgocoEV2OZl3wCNL8MaHot3PSQCLcBGAsYHQ/s0/socks2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 7)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-OFaCMufBVMo/X3WeOU53N3I/AAAAAAAAMK8/UKVqUefTHtcBI05j_IqsXMnl00qHpINtwCLcBGAsYHQ/s0/socks3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 7)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/--whkNyzWgsY/X3WeOWIhIAI/AAAAAAAAMLA/1BL-b0RwArIVB5zItEGJ3jQ0Yt_Tg31mQCLcBGAsYHQ/s0/socks4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 7)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-gKiBP0S7MSU/X3WeO0EE5XI/AAAAAAAAMLE/6xn2DYobirgKvFQWbQq2NVd7wlTPfp_MwCLcBGAsYHQ/s0/socks5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 7)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "ложка",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-xREeE1vYpK0/X3WePKmuTeI/AAAAAAAAMLI/i3CHEbJJWgg_bbrx3shtyh-UTnIKuGfnwCLcBGAsYHQ/s0/spoon1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 8)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-CDKVn6aWI7A/X3WePE-qkuI/AAAAAAAAMLM/cJzAPA2NJtYGOXtXs4waYqAZKecfyB6GQCLcBGAsYHQ/s0/spoon2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 8)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-FnFiw1Um9XY/X3WePmiL-PI/AAAAAAAAMLQ/gOrEb2kcu7gT2xx9-4hbeC1tYVxooJbPgCLcBGAsYHQ/s0/spoon3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 8)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-E2PpkAQ1VTo/X3WeP-tZ76I/AAAAAAAAMLU/DU5lkOFqqXQReJ8k5TojdqgvQWFDm8LzwCLcBGAsYHQ/s0/spoon4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 8)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-27Cdu8lr8f8/X3WePyn-wCI/AAAAAAAAMLY/5tnjEaPFsGwRDgTcTsBYMe2zoW8wIRT2QCLcBGAsYHQ/s0/spoon5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 8)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "тако",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-df2wI38U18E/X3WeQElJ3EI/AAAAAAAAMLc/K2bGNcGEemg4LUXZC7uCuZ1Em4-3o2u3ACLcBGAsYHQ/s0/taco1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 9)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-v0CdG3m_jJw/X3WeQSqzjnI/AAAAAAAAMLg/LIqWz4q4moQyend5HydQ9Hu2aSyxHv0FwCLcBGAsYHQ/s0/taco2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 9)\nbotsTurn()\nend",
+        "text": "2",
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-A93JEemtbKQ/X3WeQSwpUFI/AAAAAAAAMLk/eIIQxIXm3Yk-S-pphyPq1hRFrPOZrkfgwCLcBGAsYHQ/s0/taco3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 9)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-bfNRp2iRv6c/X3WeQ9zxyvI/AAAAAAAAMLo/JsIlN6tlYKApwGE5UfueuZO-3_3g3byWgCLcBGAsYHQ/s0/taco4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 9)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-qcJ6IJWBSRI/X3WeQ629YKI/AAAAAAAAMLs/pbezSBw6HgoL1rnif7zQYT1RiPJiR9OgQCLcBGAsYHQ/s0/taco5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 9)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "видеокассета",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-KD4pWR6aByI/X3WeRKLEuOI/AAAAAAAAMLw/leHyco6T6xkT5xEu2_Caf694YjXa5S1EgCLcBGAsYHQ/s0/videocassette1.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 10)\nbotsTurn()\nend",
+        "text": "1",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-ObJ0Fr519jg/X3WeRc4_-SI/AAAAAAAAML0/NmyNDgiIj64Nv52RYHpd0i37XmAQaYPhQCLcBGAsYHQ/s0/videocassette2.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 2\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 10)\nbotsTurn()\nend",
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend",
+        "id": 4
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-P49Pyr9e0O4/X3WeRfP1MnI/AAAAAAAAML4/QeSH_IcLv5soigGGP8cDXq4RCyLYqT9QgCLcBGAsYHQ/s0/videocassette3.png"
+        ],
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 3\nend",
+        "id": 4,
+        "text": "3",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 10)\nbotsTurn()\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-HOr-7CM49XQ/X3WeRud9AeI/AAAAAAAAML8/6fpg7XegbzsZYRgqhhQJ0x3zNh0dxg73ACLcBGAsYHQ/s0/videocassette4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend",
+        "id": 4,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 4\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 10)\nbotsTurn()\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-uybpo2RAep4/X3WeSIqS-fI/AAAAAAAAMMA/h0R7JfQ2lcMhqenZM2lzq5pBGnswMp5egCLcBGAsYHQ/s0/videocassette5.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend",
+        "lua_do": "function lua_do()\nattemptedTheft(heroes[1], lastTarget, 10)\nbotsTurn()\nend",
+        "text": "5",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Предметы игрока",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-N7Enq0sfEqQ/X3WeIRcwk7I/AAAAAAAAMJM/9tuYzDe_iLgx1egSeD7nwcGxhFYOj6CVwCLcBGAsYHQ/s0/coin5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 5 and riches[1].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-UdDCbXRSvpU/X3WeJZnTbJI/AAAAAAAAMJg/OLrPKTD5OtEnmBESd1OKMJ4je-b_-JQ1gCLcBGAsYHQ/s0/custard5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 5 and riches[2].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-vJ4pKJKlh8E/X3WeKWo98zI/AAAAAAAAMJ0/Zc8XXOLytzgEevRrWhDSx99J37M_wMd9QCLcBGAsYHQ/s0/gem5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 5 and riches[3].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-XQGkkBcUvMk/X3WeLXeWeXI/AAAAAAAAMKI/oXREGSv-FvkThr_oppfPJXJfu1bOORrpwCLcBGAsYHQ/s0/label5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 5 and riches[4].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-1gmzdWyHtzs/X3WeM-f4awI/AAAAAAAAMKc/HEbWdXe3Ln4HeFH5UbgTtwhjFY4jcSKUACLcBGAsYHQ/s0/newspaper5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 5 and riches[5].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-ZnbSZMxkLh8/X3WeN8MMQxI/AAAAAAAAMKw/81NiMBg6OGAg8Y4EZAWxdUkPC3GbLOQ-ACLcBGAsYHQ/s0/pen5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 5 and riches[6].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-gKiBP0S7MSU/X3WeO0EE5XI/AAAAAAAAMLE/6xn2DYobirgKvFQWbQq2NVd7wlTPfp_MwCLcBGAsYHQ/s0/socks5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 5 and riches[7].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-27Cdu8lr8f8/X3WePyn-wCI/AAAAAAAAMLY/5tnjEaPFsGwRDgTcTsBYMe2zoW8wIRT2QCLcBGAsYHQ/s0/spoon5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 5 and riches[8].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-qcJ6IJWBSRI/X3WeQ629YKI/AAAAAAAAMLs/pbezSBw6HgoL1rnif7zQYT1RiPJiR9OgQCLcBGAsYHQ/s0/taco5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 5 and riches[9].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-uybpo2RAep4/X3WeSIqS-fI/AAAAAAAAMMA/h0R7JfQ2lcMhqenZM2lzq5pBGnswMp5egCLcBGAsYHQ/s0/videocassette5.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "5",
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 5 and riches[10].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-121dS1cYu0I/X3WeIPURQlI/AAAAAAAAMJI/gGrSwIM7Mx8c1TF3208oazNoCZx7KHLyACLcBGAsYHQ/s0/coin4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 4 and riches[1].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-kcevJE80Ne8/X3WeJfipzXI/AAAAAAAAMJc/J2UF9dpGlncmZYQmtvrUOfnZbQgVhyc4QCLcBGAsYHQ/s0/custard4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 4 and riches[2].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-gfZzgb2PZnk/X3WeKDynI1I/AAAAAAAAMJw/0F1e6YVDDYYJbHZgnBQQoZDIM4LtefFGQCLcBGAsYHQ/s0/gem4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 4 and riches[3].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-UNRBsxc8wLA/X3WeLHyGDkI/AAAAAAAAMKA/SC-7SGDyaWI6jRxjtO3vediToGqzynvegCLcBGAsYHQ/s0/label4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 4 and riches[4].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-WUPRVhPSqv8/X3WeMpTDyDI/AAAAAAAAMKY/e6JNPkjNIXgOgkSB1uSFxMXE8GDYNMBBQCLcBGAsYHQ/s0/newspaper4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 4 and riches[5].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-bhmOz8k0Dj4/X3WeN0CRstI/AAAAAAAAMKs/o2f_zfZerikoKrKcgTKB3iDVSVZED1oLACLcBGAsYHQ/s0/pen4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 4 and riches[6].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/--whkNyzWgsY/X3WeOWIhIAI/AAAAAAAAMLA/1BL-b0RwArIVB5zItEGJ3jQ0Yt_Tg31mQCLcBGAsYHQ/s0/socks4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 4 and riches[7].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-E2PpkAQ1VTo/X3WeP-tZ76I/AAAAAAAAMLU/DU5lkOFqqXQReJ8k5TojdqgvQWFDm8LzwCLcBGAsYHQ/s0/spoon4.png"
+        ],
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 4 and riches[8].ownerId == 1\nend",
+        "id": 17,
+        "instant": false,
+        "text": "4",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-bfNRp2iRv6c/X3WeQ9zxyvI/AAAAAAAAMLo/JsIlN6tlYKApwGE5UfueuZO-3_3g3byWgCLcBGAsYHQ/s0/taco4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 4 and riches[9].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-HOr-7CM49XQ/X3WeRud9AeI/AAAAAAAAML8/6fpg7XegbzsZYRgqhhQJ0x3zNh0dxg73ACLcBGAsYHQ/s0/videocassette4.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "4",
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 4 and riches[10].ownerId == 1\nend",
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-R277FanHBK4/X3WeHTHNC6I/AAAAAAAAMJE/yjyrJDXygWsyjCbbDpfj1RCQLtmAOWTFgCLcBGAsYHQ/s0/coin3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 3 and riches[1].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-x85CIF6P13I/X3WeJAx5NBI/AAAAAAAAMJY/fdMsKVStn3UAka7qByzoGaKDLXzTr8RaQCLcBGAsYHQ/s0/custard3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 3 and riches[2].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-Nz9PjjnsuMU/X3WeJ4ss1hI/AAAAAAAAMJs/07A6y4QeE5kQBbvRSD2bUpPZfMpzC8wXACLcBGAsYHQ/s0/gem3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend",
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 3 and riches[3].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-tVj4oct627s/X3WeLPIjILI/AAAAAAAAMKE/fa8oFDMLeC0YOm2BQzjyyiOFQTaVR2t_ACLcBGAsYHQ/s0/label3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend",
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 3 and riches[4].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-eIgi7u8tfWI/X3WeMh7IdjI/AAAAAAAAMKU/MFVx8Sn6M9oj39bfc7OUJsaH_OvyY-cigCLcBGAsYHQ/s0/newspaper3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend",
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 3 and riches[5].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-80b73NuaPCQ/X3WeNXmbCGI/AAAAAAAAMKo/M0QfGwc-WHkjDc4fSwVj0Rm-6XaCYv9NwCLcBGAsYHQ/s0/pen3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend",
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 3 and riches[6].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-OFaCMufBVMo/X3WeOU53N3I/AAAAAAAAMK8/UKVqUefTHtcBI05j_IqsXMnl00qHpINtwCLcBGAsYHQ/s0/socks3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend",
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 3 and riches[7].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-FnFiw1Um9XY/X3WePmiL-PI/AAAAAAAAMLQ/gOrEb2kcu7gT2xx9-4hbeC1tYVxooJbPgCLcBGAsYHQ/s0/spoon3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 3 and riches[8].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-A93JEemtbKQ/X3WeQSwpUFI/AAAAAAAAMLk/eIIQxIXm3Yk-S-pphyPq1hRFrPOZrkfgwCLcBGAsYHQ/s0/taco3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 3 and riches[9].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-P49Pyr9e0O4/X3WeRfP1MnI/AAAAAAAAML4/QeSH_IcLv5soigGGP8cDXq4RCyLYqT9QgCLcBGAsYHQ/s0/videocassette3.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "3",
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend",
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 3 and riches[10].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-Nocl_AfD2co/X3WeHetWBHI/AAAAAAAAMI8/zUs9x5FU_0QZ0XPZj0JHGhCyJ2kfoZJRwCLcBGAsYHQ/s0/coin2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 2 and riches[1].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-MWEd67dkUiQ/X3WeIrtsCBI/AAAAAAAAMJU/1XERuyw0jP8lC-2s_KO-mo7YPZ-JixNXgCLcBGAsYHQ/s0/custard2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 2 and riches[2].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-IWPWBGWGelw/X3WeJ4Isu6I/AAAAAAAAMJo/AnJM2nmGNAULOb1uoDW9wDa4QlbVOMYFwCLcBGAsYHQ/s0/gem2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend",
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 2 and riches[3].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-sT_8tfRY46I/X3WeKsFWRsI/AAAAAAAAMJ8/j5oGsRC7Sh0ApoLK91a-y3O8bddoGEVGACLcBGAsYHQ/s0/label2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend",
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 2 and riches[4].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-UsWlpabjWaE/X3WeNdG-bhI/AAAAAAAAMKk/ogoTh9XW0LIdQCJA02IKqe3c_2QwPN4ZACLcBGAsYHQ/s0/pen2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend",
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 2 and riches[6].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-QPDM8sU8DEQ/X3WeMWGKBXI/AAAAAAAAMKQ/lbBkW8Y_qDAjBeR-gBVGBpZckGgM2Sd8ACLcBGAsYHQ/s0/newspaper2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend",
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 2 and riches[5].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-CwzxEFHr1rM/X3WeOWGXqsI/AAAAAAAAMK4/JgruMjhRgocoEV2OZl3wCNL8MaHot3PSQCLcBGAsYHQ/s0/socks2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend",
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 2 and riches[7].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-CDKVn6aWI7A/X3WePE-qkuI/AAAAAAAAMLM/cJzAPA2NJtYGOXtXs4waYqAZKecfyB6GQCLcBGAsYHQ/s0/spoon2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 2 and riches[8].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-v0CdG3m_jJw/X3WeQSqzjnI/AAAAAAAAMLg/LIqWz4q4moQyend5HydQ9Hu2aSyxHv0FwCLcBGAsYHQ/s0/taco2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "2",
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 2 and riches[9].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-ObJ0Fr519jg/X3WeRc4_-SI/AAAAAAAAML0/NmyNDgiIj64Nv52RYHpd0i37XmAQaYPhQCLcBGAsYHQ/s0/videocassette2.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend",
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 2 and riches[10].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-1fP23u9ol3U/X3WeHY4UJLI/AAAAAAAAMJA/QX6J6EB623Y-lUvw3OG7AGU2nd-5hCXIACLcBGAsYHQ/s0/coin1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(1)\nend",
+        "lua_if": "function lua_if()\nreturn riches[1].cost == 1 and riches[1].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-05WkSgvg2TI/X3WeIY_EZhI/AAAAAAAAMJQ/heTX35GoQ0ceWbopEdnMhUNwp6cUUju4QCLcBGAsYHQ/s0/custard1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(2)\nend",
+        "lua_if": "function lua_if()\nreturn riches[2].cost == 1 and riches[2].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-NZVr0JHaJZg/X3WeJgi6t6I/AAAAAAAAMJk/im5MetK9DucFhG9BUZXoKcLYuXJWACQGwCLcBGAsYHQ/s0/gem1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(3)\nend",
+        "lua_if": "function lua_if()\nreturn riches[3].cost == 1 and riches[3].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/--RpK5ViBcpc/X3WeKTHlG8I/AAAAAAAAMJ4/ihBfweEP06shd_8hLaco7SZrcKnV1ogvwCLcBGAsYHQ/s0/label1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(4)\nend",
+        "lua_if": "function lua_if()\nreturn riches[4].cost == 1 and riches[4].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-rlV-YWNrVGY/X3WeL0rZL9I/AAAAAAAAMKM/RhdzJW6Uuz8VkAAz80_Hpsuil464FXEVwCLcBGAsYHQ/s0/newspaper1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(5)\nend",
+        "lua_if": "function lua_if()\nreturn riches[5].cost == 1 and riches[5].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-gKu5SR9xAx0/X3WeNE8jJPI/AAAAAAAAMKg/2f7ubj9cMx8wHUuNuRv_dRm-p9W2brP4ACLcBGAsYHQ/s0/pen1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(6)\nend",
+        "lua_if": "function lua_if()\nreturn riches[6].cost == 1 and riches[6].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-Kkdt3YIQATA/X3WeN8Gp7dI/AAAAAAAAMK0/zQVQ5UscVqwwCspKJvFQvbgO6udHqA5KQCLcBGAsYHQ/s0/socks1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(7)\nend",
+        "lua_if": "function lua_if()\nreturn riches[7].cost == 1 and riches[7].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-xREeE1vYpK0/X3WePKmuTeI/AAAAAAAAMLI/i3CHEbJJWgg_bbrx3shtyh-UTnIKuGfnwCLcBGAsYHQ/s0/spoon1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(8)\nend",
+        "lua_if": "function lua_if()\nreturn riches[8].cost == 1 and riches[8].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-df2wI38U18E/X3WeQElJ3EI/AAAAAAAAMLc/K2bGNcGEemg4LUXZC7uCuZ1Em4-3o2u3ACLcBGAsYHQ/s0/taco1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(9)\nend",
+        "lua_if": "function lua_if()\nreturn riches[9].cost == 1 and riches[9].ownerId == 1\nend"
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-KD4pWR6aByI/X3WeRKLEuOI/AAAAAAAAMLw/leHyco6T6xkT5xEu2_Caf694YjXa5S1EgCLcBGAsYHQ/s0/videocassette1.png"
+        ],
+        "comment": true,
+        "id": 17,
+        "text": "1",
+        "lua_text": "function lua_text()\nreturn getItemText(10)\nend",
+        "lua_if": "function lua_if()\nreturn riches[10].cost == 1 and riches[10].ownerId == 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "     Здесь можно купить предметы, облегчающие жизнь клептомана.<s>r\n     Цена каждого предмета — 1 закладка.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "    Детское масло\nСмазанные маслом предметы выскальзывают из пальцев незадачливых воришек.\nСнижает вероятность удачной кражи у Вас в 2 раза на 2 дня.",
+        "comment": true,
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-GJr9xhLtmRM/X3xGcrUbZrI/AAAAAAAAMQk/OkduDFojNmkPKhvi8TMz3-gPNI6RvuLWACLcBGAsYHQ/s0/lotion.png"
+        ]
+      },
+      {
+        "paid_answer": [
+          "Детское масло",
+          1
+        ],
+        "lua_do": "function lua_do()\ng.lotion_count = g.lotion_count <plus> 1\nend",
+        "id": 18,
+        "instant": true,
+        "text": "Купить",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "global lotion_count",
+          "шт. )"
+        ],
+        "lua_if": "function lua_if()\nreturn (g.lotion_count > 0) and (lotion_ef == 0)\nend",
+        "right_answer": true,
+        "id": 18,
+        "instant": true,
+        "lua_do": "function lua_do()\ng.lotion_count = g.lotion_count - 1\nlotion_ef = 2\nend",
+        "text": "Применить ("
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn (g.lotion_count == 0) or (lotion_ef > 0)\nend",
+        "comment": true,
+        "id": 18,
+        "instant": true,
+        "text": "Применить (",
+        "var_show": [
+          "global lotion_count",
+          "шт. )"
+        ]
+      },
+      {
+        "id": 18,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 18,
+        "text": "     Петарда\nГромкая и внезапная. Отвлёкшихся на взрыв людей проще обчистить.\nСнижает риск быть пойманным за руку в 4 раза на 1 день.",
+        "comment": true,
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-6xY-MzUFTxs/X3xGcX-2ncI/AAAAAAAAMQg/WU1MYIPByZgGPKW_YlYT0Aa2rINgFxeigCLcBGAsYHQ/s0/firecracker.png"
+        ]
+      },
+      {
+        "paid_answer": [
+          "Петарда",
+          1
+        ],
+        "lua_do": "function lua_do()\ng.boom_count = g.boom_count <plus> 1\nend",
+        "id": 18,
+        "instant": true,
+        "text": "Купить",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "global boom_count",
+          "шт. )"
+        ],
+        "lua_if": "function lua_if()\nreturn (g.boom_count) > 0 and (boom_ef == 0)\nend",
+        "right_answer": true,
+        "id": 18,
+        "instant": true,
+        "lua_do": "function lua_do()\ng.boom_count = g.boom_count - 1\nboom_ef = 1\nend",
+        "text": "Применить ("
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn (g.boom_count == 0) or (boom_ef > 0)\nend",
+        "comment": true,
+        "id": 18,
+        "instant": true,
+        "text": "Применить (",
+        "var_show": [
+          "global boom_count",
+          "шт. )"
+        ]
+      },
+      {
+        "id": 18,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-LZlqAHtZPIU/X3xGb-lg9wI/AAAAAAAAMQY/aq_KdRNPeYEoZha92gRM7Zq6T4zjiu7MQCLcBGAsYHQ/s0/coffe.png"
+        ],
+        "comment": true,
+        "id": 18,
+        "text": "     Чашка кофе\nРобуста средней обжарки. Бодрит и повышает скорость реакции. \nУвеличивает шанс схватить воришку в 4 раза на 1 день.",
+        "var_max": [
+          ""
+        ]
+      },
+      {
+        "paid_answer": [
+          "Чашка кофе",
+          1
+        ],
+        "lua_do": "function lua_do()\ng.coffee_count = g.coffee_count <plus> 1\nend",
+        "id": 18,
+        "instant": true,
+        "text": "Купить",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "global coffee_count",
+          "шт. )"
+        ],
+        "lua_if": "function lua_if()\nreturn (g.coffee_count) > 0 and (coffee_ef == 0)\nend",
+        "right_answer": true,
+        "id": 18,
+        "text": "Применить (",
+        "instant": true,
+        "lua_do": "function lua_do()\ng.coffee_count = g.coffee_count - 1\ncoffee_ef = 1\nend"
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn (g.coffee_count == 0) or (coffee_ef > 0)\nend",
+        "comment": true,
+        "id": 18,
+        "text": "Применить (",
+        "instant": true,
+        "var_show": [
+          "global coffee_count",
+          "шт. )"
+        ]
+      },
+      {
+        "id": 18,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 18,
+        "text": "     Четырёхлистный клевер\nВозможно и не приносит удачу, но точно добавляет уверенности в своих силах.\nПовышает вероятность удачной кражи на 25% на 3 дня.",
+        "comment": true,
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-l0jNHS8yBhw/X3xGb1SEMvI/AAAAAAAAMQc/XLWgYElqt-4yZ4PqdXKyTQcwYnyte6MSgCLcBGAsYHQ/s0/clover.png"
+        ]
+      },
+      {
+        "paid_answer": [
+          "Четырёхлистный клевер",
+          1
+        ],
+        "lua_do": "function lua_do()\ng.clover_count = g.clover_count <plus> 1\nend",
+        "id": 18,
+        "instant": true,
+        "text": "Купить",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "global clover_count",
+          "шт. )"
+        ],
+        "lua_if": "function lua_if()\nreturn (g.clover_count) > 0 and (clover_ef == 0)\nend",
+        "right_answer": true,
+        "id": 18,
+        "text": "Применить (",
+        "instant": true,
+        "lua_do": "function lua_do()\ng.clover_count = g.clover_count - 1\nclover_ef = 3\nend"
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn (g.clover_count == 0) or (clover_ef > 0)\nend",
+        "comment": true,
+        "id": 18,
+        "text": "Применить (",
+        "instant": true,
+        "var_show": [
+          "global clover_count",
+          "шт. )"
+        ]
+      },
+      {
+        "id": 18,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "https://3.bp.blogspot.com/-39V84Ac97ag/X3xGb6rDRdI/AAAAAAAAMQU/bym3L2YEMI4X0CytCQDROTN7CL7oUB91gCLcBGAsYHQ/s0/beer.png"
+        ],
+        "text": "     Пиво на всех.\nЛучший способ завести новых друзей. И узнать о них много интересного.\nРаскрывает количество предметов в чужих карманах на 5 дней.",
+        "comment": true,
+        "id": 18
+      },
+      {
+        "paid_answer": [
+          "Пиво на всех",
+          1
+        ],
+        "lua_do": "function lua_do()\ng.beer_count = g.beer_count <plus> 1\nend",
+        "id": 18,
+        "instant": true,
+        "text": "Купить",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "global beer_count",
+          "шт. )"
+        ],
+        "lua_if": "function lua_if()\nreturn (g.beer_count > 0) and (beer_ef == 0)\nend",
+        "right_answer": true,
+        "id": 18,
+        "instant": true,
+        "lua_do": "function lua_do()\ng.beer_count = g.beer_count - 1\nbeer_ef = 5\nend",
+        "text": "Применить ("
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn (g.beer_count == 0) or (beer_ef > 0)\nend",
+        "comment": true,
+        "id": 18,
+        "instant": true,
+        "text": "Применить (",
+        "var_show": [
+          "global beer_count",
+          "шт. )"
+        ]
+      },
+      {
+        "id": 18,
+        "text": " ",
+        "comment": true
+      },
+      {
+        "id": 4,
+        "text": "Красть!"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 20,
+    "text": "",
+    "answers": []
+  }
+]

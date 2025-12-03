@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор InSannity написал еще 268619 слов в квесте \"Наследие Витори\"."
+      },
+      {
+        "targetbookid": "239068",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наследие Витори\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор GeneralT написал еще 245821 слов в квесте \"Mental Hospital V\"."
+      },
+      {
+        "targetbookid": "240153",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Mental Hospital V\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Dark Scimitar  написал еще 177489 слов в квесте \"Оруженосец\"."
+      },
+      {
+        "targetbookid": "222111",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Оруженосец\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Пожилая Личинка написал еще 162913 слов в квесте \"Царство Кошмара\"."
+      },
+      {
+        "targetbookid": "235172",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Царство Кошмара\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Любопытство губительно написал еще 143625 слов в квесте \"«Вальпина»\n\"."
+      },
+      {
+        "targetbookid": "239467",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"«Вальпина»\n\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 25455 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор DeverlyBee написал еще 22686 слов в квесте \"Дьявол\"."
+      },
+      {
+        "targetbookid": "224649",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Дьявол\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ana Ray написал еще 15192 слов в квесте \"Рассвет 2\"."
+      },
+      {
+        "targetbookid": "214560",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Рассвет 2\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Yuna735 написал еще 14951 слов в квесте \"Академия Канделл\"."
+      },
+      {
+        "targetbookid": "216270",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Академия Канделл\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ярослав Зверев написал еще 14866 слов в квесте \"Светило оборотня\"."
+      },
+      {
+        "targetbookid": "212919",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Светило оборотня\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

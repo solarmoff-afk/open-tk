@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Admiral Atom\n написал еще 19001 слов в квесте \"                    \"."
+      },
+      {
+        "targetbookid": "157118",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"                    \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Nika написал еще 18005 слов в квесте \"Секс и ничего лишнего\"."
+      },
+      {
+        "targetbookid": "158503",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Секс и ничего лишнего\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Enjdufzz написал еще 17783 слов в квесте \"Чумной лекарь\"."
+      },
+      {
+        "targetbookid": "127266",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Чумной лекарь\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Gospodin K. написал еще 17732 слов в квесте \"Пограничный нейтралитет.\"."
+      },
+      {
+        "targetbookid": "175355",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Пограничный нейтралитет.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Teppish написал еще 17707 слов в квесте \"Любовь не по Ремарку\"."
+      },
+      {
+        "targetbookid": "161778",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Любовь не по Ремарку\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

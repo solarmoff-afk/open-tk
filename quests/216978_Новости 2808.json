@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ana Ray написал еще 17311 слов в квесте \"Рассвет 2\"."
+      },
+      {
+        "targetbookid": "214560",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Рассвет 2\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор _KessiKeyd_❤ написал еще 17155 слов в квесте \"???\"."
+      },
+      {
+        "targetbookid": "210474",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"???\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Подснежница написал еще 16596 слов в квесте \"Одиночество или Любовь?\"."
+      },
+      {
+        "targetbookid": "200252",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Одиночество или Любовь?\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Vepayn написал еще 16377 слов в квесте \"Краонсо: Операция \"Зачистка\"\"."
+      },
+      {
+        "targetbookid": "211447",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Краонсо: Операция \"Зачистка\"\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Elizabeth написал еще 16169 слов в квесте \"Студенческая жизнь\"."
+      },
+      {
+        "targetbookid": "105086",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Студенческая жизнь\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

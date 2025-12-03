@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Teppish написал еще 194196 слов в квесте \"Телохранитель с небес\n\"."
+      },
+      {
+        "targetbookid": "191426",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Телохранитель с небес\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Resrix написал еще 166815 слов в квесте \"Последний лимит\"."
+      },
+      {
+        "targetbookid": "240000",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Последний лимит\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор IXOR  написал еще 113819 слов в квесте \"Зло внутри нас \"."
+      },
+      {
+        "targetbookid": "252477",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Зло внутри нас \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Shtopor написал еще 110638 слов в квесте \"One Week at Freddy's \"."
+      },
+      {
+        "targetbookid": "250402",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"One Week at Freddy's \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор XuMuTo написал еще 101431 слов в квесте \"Проект: 019. Ассимиляция.\"."
+      },
+      {
+        "targetbookid": "209262",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Проект: 019. Ассимиляция.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

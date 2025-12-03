@@ -1,0 +1,3486 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: [Dead_Second] (Андрей Маурин).\nЖанр: Мемы.\nПоджанры: Симулятор, Юмор, Мини-квест.\n\nВ данном квесте Вам предстоит исполнить заветную мечту голубя Евгения — нагадить сотню тысяч раз и разблокировать алмазный скин перьев, по пути собирая другие раскраски своих перьев!\nВ игре доступно правое боковое меню!\n\nv4.0",
+    "answers": [
+      {
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nvsego = 0\nnado = 100000\nbodr = 15\nresp = 0\nv1 = 0\nv2 = 0\nv3 = 0\nv4 = 0\nv5 = 0\na1 = 0\na2 = 0\na3 = 0\na4 = 0\na5 = 0\nz1 = 0\nz2 = 0\nz3 = 0\nz4 = 0\nz5 = 0\ny1 = 0\ny2 = 0\ny3 = 0\ny4 = 0\ny5 = 0\nkonec = 0\ngolubi = 0\ngusi = 0\nvybor = 0\nstr2 = 1\nstr7 = 0\nstr9 = 0\nend",
+        "instant": true,
+        "id": 2,
+        "text": "Начать!"
+      },
+      {
+        "comment": false,
+        "id": 7,
+        "lua_do": "function lua_do()\nrespK = respK or 0\ngaj = gaj or 0\nrecruit = recruit or 0\ncel = cel or 0\nperyaK = \"Обычная\"\nnach = 0\nstr7 = 1\nstr2 = 0\nstr9 = 0\nend",
+        "text": "Режим птицы-киборга",
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "text": "Режим средневековного голубя",
+        "middle_answer": true,
+        "instant": true,
+        "lua_do": "function lua_do()\nnNach = 0\ngajSR = gajSR or 0\npopular = popular or 0\nrespSR = respSR or 0\nstamina = stamina or 15\nSR1 = 0\nSR2 = 0\nSR3 = 0\nstr9 = 1\nstr2 = 0\nstr7 = 0\nend",
+        "id": 9
+      },
+      {
+        "text": "От автора",
+        "middle_answer": true,
+        "instant": true,
+        "id": 3,
+        "var_set": [
+          "hist",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "пикча",
+        "url": "https://i.postimg.cc/T2ZkR9KG/Q-Ka-TMh-Tdu-E.jpg"
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "сайд-меню",
+        "calculate": true,
+        "lua_do": "function lua_do()\nstr2 = 0\nstr7 = 0\nstr9 = 0\ng.side_menu = 4\ng.right_icon = \"https://i.ibb.co/DCXgDq1/5fee0cf29b66.png\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "empty",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   local text = \"Раскраска перьев: \".. perya .. \"<s>\n<s>\nОбгажено всего: \" .. vsego .. \"<s>\nОсталось: \".. nado ..\n\"<s>\n<s>\nРеспект других пернатых: \" .. resp ..\n\"<s>\nБодрость: \" .. bodr\n\nreturn text\nend",
+        "id": 2,
+        "instant": true,
+        "text": " ",
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "скрытый вариант ответа 5",
+        "run": [
+          5
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a2",
+          1,
+          "a5",
+          0
+        ],
+        "id": 2,
+        "text": "Теперь Вы в банде \"Голубиный Криминал\"!",
+        "middle_answer": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a5",
+          1
+        ],
+        "id": 2,
+        "text": "Теперь Вы босс банды \"Голубиный Криминал\"!",
+        "middle_answer": false
+      },
+      {
+        "instant": true,
+        "middle_answer": true,
+        "var_more": [
+          "vsego",
+          500
+        ],
+        "var_equal": [
+          "napomn",
+          0
+        ],
+        "id": 2,
+        "text": "Напоминание!",
+        "lua_do": "function lua_do()\nnapomn = napomn or 0\n local alertShow = native.showAlert(\"Напоминание!\", \"Я напоминаю, что в игре есть боковое меню (свайп справа налево), где Вы можете сохранить свой прогресс в игре!\", {\"Ок\"})\nend",
+        "var_set": [
+          "napomn",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Конец?..",
+        "left_answer": true,
+        "right_answer": true,
+        "super_calculate": false,
+        "var_equal": [
+          "nado",
+          0,
+          "konec",
+          0
+        ],
+        "instant": true,
+        "calculate": true,
+        "lua_do": "function lua_do()\ndialog {\nheader = \"Мечта всей жизни\", \ntext = \"Спустя столько времени стараний, голубь Евгений всё же смог заработать алмазную раскраску своих перьев. За это время он прошёл немалый путь от обычного голубя до босса целой сети мафии. Спасибо, что Вы играли в мою игру, надеюсь, она Вас хоть немного позабавила! :)\",\nanswers = {\n{\ntext = \"Ура!\",\npressListener = function()\nhideDialog()\nend\n}\n}\n}\nend",
+        "var_set": [
+          "konec",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "var_more": [
+          "resp",
+          99
+        ],
+        "var_equal": [
+          "v1",
+          0
+        ],
+        "id": 2,
+        "text": "Пробиться к общине голубей",
+        "instant": true,
+        "var_set": [
+          "v1",
+          1,
+          "a1",
+          1
+        ]
+      },
+      {
+        "left_answer": true,
+        "middle_answer": false,
+        "var_more": [
+          "resp",
+          349
+        ],
+        "var_equal": [
+          "v1",
+          1,
+          "v2",
+          0,
+          "golubi",
+          0,
+          "gusi",
+          0
+        ],
+        "id": 2,
+        "text": "Вступить в банду голубей",
+        "instant": true,
+        "var_set": [
+          "v2",
+          1,
+          "a2",
+          1,
+          "golubi",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Стать правой рукой босса",
+        "var_equal": [
+          "v2",
+          1,
+          "v3",
+          0
+        ],
+        "middle_answer": true,
+        "var_more": [
+          "resp",
+          2000
+        ],
+        "instant": true,
+        "var_set": [
+          "v3",
+          1,
+          "a3",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Прилететь с бандой в Китай",
+        "var_equal": [
+          "v3",
+          1,
+          "v4",
+          0
+        ],
+        "middle_answer": true,
+        "var_more": [
+          "resp",
+          3000
+        ],
+        "instant": true,
+        "var_set": [
+          "v4",
+          1,
+          "a4",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "var_more": [
+          "resp",
+          5000
+        ],
+        "var_equal": [
+          "v4",
+          1,
+          "v5",
+          0
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "text": "Стать боссом своей банды",
+        "var_set": [
+          "v5",
+          1,
+          "a5",
+          1
+        ]
+      },
+      {
+        "var_set": [
+          "rab",
+          1,
+          "otd",
+          0
+        ],
+        "text": "Тёмные делишки",
+        "var_equal": [
+          "rab",
+          0
+        ],
+        "id": 2,
+        "instant": true,
+        "middle_answer": false,
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "otd",
+          0,
+          "rab",
+          1
+        ],
+        "id": 2,
+        "text": "[Тёмные делишки] ",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          0
+        ],
+        "id": 2,
+        "text": "Отдых",
+        "middle_answer": false,
+        "var_set": [
+          "rab",
+          0,
+          "otd",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "var_equal": [
+          "rab",
+          0,
+          "otd",
+          1
+        ],
+        "id": 2,
+        "text": "[Отдых] "
+      },
+      {
+        "id": 6,
+        "text": "скрытый вариант ответа 6",
+        "run": [
+          6
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "bodr",
+          0,
+          "rab",
+          1
+        ],
+        "id": 2,
+        "text": "[Восполните свою бодрость]",
+        "middle_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\nnado = nado - 1\nvsego = vsego <plus>1\nbodr = bodr-1\nresp = resp <plus>1\nend",
+        "instant": true,
+        "var_min": [
+          "nado",
+          1
+        ],
+        "no_transition": false,
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_equal": [
+          "rab",
+          1,
+          "a1",
+          0,
+          "z1",
+          0,
+          "z2",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Нагадить на машину",
+        "id": 2,
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "nado",
+          5
+        ],
+        "var_need": [
+          "bodr",
+          5,
+          "resp",
+          15
+        ],
+        "text": "Пробраться на автостоянку",
+        "var_equal": [
+          "rab",
+          1,
+          "a1",
+          0,
+          "z1",
+          0,
+          "z2",
+          0
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nnado = nado - 5\nvsego = vsego <plus>5\nbodr = bodr-5\nresp = resp <plus>4\nend",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "nado",
+          25
+        ],
+        "text": "Гадить на уже обгаженные автомобили",
+        "middle_answer": true,
+        "var_equal": [
+          "rab",
+          1,
+          "a1",
+          1,
+          "a3",
+          0,
+          "z1",
+          0,
+          "z2",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          25,
+          "resp",
+          100
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 25\nvsego = vsego <plus>25\nbodr = bodr-25\nresp = resp <plus>25\nend",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "text": "Рейдить автостоянки вместе с бандой",
+        "var_min": [
+          "nado",
+          75
+        ],
+        "instant": true,
+        "id": 2,
+        "var_equal": [
+          "rab",
+          1,
+          "a2",
+          1,
+          "a4",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          50,
+          "resp",
+          349
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 75\nvsego = vsego <plus>75\nbodr = bodr-50\nresp = resp <plus>73\nend",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "nado",
+          150
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 150\nvsego = vsego <plus>150\nbodr = bodr-100\nresp = resp <plus>139\nend",
+        "text": "Путешествовать по стране с бандой",
+        "var_equal": [
+          "rab",
+          1,
+          "a3",
+          1,
+          "a4",
+          0
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          100,
+          "resp",
+          700
+        ],
+        "middle_answer": true,
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "nado",
+          500
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 500\nvsego = vsego <plus>500\nbodr = bodr-400\nresp = resp <plus>450\nend",
+        "middle_answer": true,
+        "var_equal": [
+          "rab",
+          1,
+          "a4",
+          1
+        ],
+        "var_need": [
+          "bodr",
+          400,
+          "resp",
+          3000
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "text": "Гадить не только на автомобили, но и на людей",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Воевать с Китайскими бандами",
+        "var_min": [
+          "nado",
+          750
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 750\nvsego = vsego <plus>750\nbodr = bodr-500\nresp = resp <plus>725\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "a5",
+          1
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          500,
+          "resp",
+          5000
+        ],
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "id": 2,
+        "text": "Стравливать другие банды друг с другом",
+        "var_min": [
+          "nado",
+          1500
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 1500\nvsego = vsego <plus>1500\nbodr = bodr-750\nresp = resp <plus>1449\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "a5",
+          1
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          750,
+          "resp",
+          8000
+        ],
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "id": 2,
+        "text": "Монополизировать другие банды в свою",
+        "var_min": [
+          "nado",
+          5000
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 5000\nvsego = vsego <plus>5000\nbodr = bodr-3000\nresp = resp <plus>4449\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "a5",
+          1
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          3000,
+          "resp",
+          25000
+        ],
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "a1",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Клевать корм",
+        "lua_do": "function lua_do()\nbodr = bodr<plus>1\nend",
+        "id": 2
+      },
+      {
+        "id": 2,
+        "text": "Послушать сплетни голубей",
+        "var_equal": [
+          "otd",
+          1,
+          "a1",
+          0
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "var_need": [
+          "resp",
+          15
+        ],
+        "lua_do": "function lua_do()\nbodr = bodr<plus>5\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nbodr = bodr<plus>25\nend",
+        "text": "Общаться с голубями в общине",
+        "var_equal": [
+          "otd",
+          1,
+          "a1",
+          1,
+          "a2",
+          0,
+          "z1",
+          0,
+          "z2",
+          0
+        ],
+        "id": 2,
+        "instant": true,
+        "var_need": [
+          "resp",
+          100
+        ],
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Зависать в баре \"Для Своих\" ",
+        "var_equal": [
+          "a2",
+          1,
+          "otd",
+          1,
+          "a4",
+          0
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "resp",
+          349
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nbodr = bodr<plus>100\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nbodr = bodr<plus>300\nend",
+        "instant": true,
+        "var_equal": [
+          "a2",
+          1,
+          "otd",
+          1,
+          "a5",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Тусоваться с боссом",
+        "var_need": [
+          "resp",
+          700
+        ],
+        "id": 2
+      },
+      {
+        "lua_do": "function lua_do()\nbodr = bodr<plus>500\nend",
+        "instant": true,
+        "var_equal": [
+          "a4",
+          1,
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Зависать в китайских барах вместе с бандой",
+        "var_need": [
+          "resp",
+          3000
+        ],
+        "id": 2
+      },
+      {
+        "lua_do": "function lua_do()\nbodr = bodr<plus>1000\nend",
+        "var_equal": [
+          "a5",
+          1,
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 2,
+        "text": "Веселиться со своей бандой"
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_equal": [
+          "a5",
+          1,
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Отправиться в отпуск со своей бандой",
+        "var_need": [
+          "resp",
+          25000
+        ],
+        "lua_do": "function lua_do()\nbodr = bodr<plus>5000\nend"
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "==========================================================",
+        "need": [
+          10000
+        ],
+        "middle_answer": true
+      },
+      {
+        "left_answer": true,
+        "id": 2,
+        "instant": true,
+        "var_equal": [
+          "cheat",
+          0
+        ],
+        "middle_answer": false,
+        "text": "[Читы]",
+        "need": [
+          10000
+        ],
+        "var_set": [
+          "cheat",
+          1,
+          "otd",
+          0,
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "[Читы]",
+        "comment": true,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "middle_answer": false,
+        "instant": true,
+        "need": [
+          10000
+        ],
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "middle_answer": false,
+        "text": "[Закрыть чит-меню] ",
+        "need": [
+          10000
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "var_set": [
+          "cheat",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "var_equal": [
+          "cheat",
+          0
+        ],
+        "id": 2,
+        "text": "[Закрыть чит-меню] ",
+        "need": [
+          10000
+        ]
+      },
+      {
+        "id": 2,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "lua_do": "function lua_do()\nresp = resp<plus>50\nend",
+        "text": "Добавить <plus>50 респекта",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "text": "Добавить <plus>500 респекта",
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nresp = resp<plus>500\nend",
+        "left_answer": true
+      },
+      {
+        "text": "Добавить <plus>1000 респекта",
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nresp = resp<plus>1000\nend",
+        "left_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\nresp = resp<plus>9999999999\nend",
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "text": "Добавить МНОГО респекта",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nbodr = bodr<plus>50\nend",
+        "text": "Добавить <plus>50 бодрости"
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nbodr = bodr<plus>500\nend",
+        "text": "Добавить <plus>500 бодрости"
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nbodr = bodr<plus>1000\nend",
+        "text": "Добавить <plus>1000 бодрости"
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "text": "Добавить МНОГО бодрости",
+        "instant": true,
+        "lua_do": "function lua_do()\nbodr = bodr<plus>9999999999\nend"
+      },
+      {
+        "instant": true,
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Добавить <plus>100000 к итоговой цели",
+        "lua_do": "function lua_do()\nnado = nado-100000\nvsego = vsego<plus>100000\nend",
+        "id": 2
+      },
+      {
+        "lua_do": "function lua_do()\nvsego = 0\nnado = 100000\nbodr = 15\nresp = 0\nv1 = 0\nv2 = 0\nv3 = 0\nv4 = 0\nv5 = 0\na1 = 0\na2 = 0\na3 = 0\na4 = 0\na5 = 0\nkonec = 0\nnapomn = 0\nend",
+        "var_equal": [
+          "cheat",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "middle_answer": true,
+        "text": "Обнулить статистику"
+      },
+      {
+        "id": 2,
+        "var_need": [
+          "vsego",
+          0
+        ],
+        "var_str_set": [
+          "perya",
+          "Обычный"
+        ],
+        "lua_if": "function lua_if()\nif vsego < 500 then\nperya = \"Обычная\"\ng.perya = \"Обычная\"\nend\nreturn true\nend",
+        "super_calculate": false,
+        "calculate": false,
+        "url": "https://i.ibb.co/nRSPRQy/1-golub-obychny.jpg",
+        "text": "commonG",
+        "var_set": [
+          "global perya",
+          "Обычный"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif vsego >= 500 then\nperya = \"Золотая\"\ng.perya2 = \"Золотая\"\nend\nreturn true\nend",
+        "var_need": [
+          "vsego",
+          500
+        ],
+        "id": 2,
+        "text": "goldG",
+        "url": "https://i.ibb.co/8bTfxth/2-golub-zolotoy.jpg",
+        "var_set": [
+          "global perya2",
+          "Золотой"
+        ]
+      },
+      {
+        "calculate": false,
+        "lua_if": "function lua_if()\nif vsego >= 3000 then\nperya = \"Платиновая\"\ng.perya3 = \"Платиновая\"\nend\nreturn true\nend",
+        "super_calculate": false,
+        "id": 2,
+        "var_need": [
+          "vsego",
+          3000
+        ],
+        "url": "https://i.ibb.co/mSZ5QdN/3-golub-platinovy.jpg",
+        "text": "platinumG"
+      },
+      {
+        "calculate": false,
+        "lua_if": "function lua_if()\nif vsego >= 25000 then\nperya = \"Изумрудная\"\ng.perya4 = \"Изумрудная\"\nend\nreturn true\nend",
+        "super_calculate": false,
+        "id": 2,
+        "var_need": [
+          "vsego",
+          25000
+        ],
+        "url": "https://i.ibb.co/fnMkNX9/4-golub-sapfirovy.jpg",
+        "text": "sapfyrG"
+      },
+      {
+        "calculate": false,
+        "lua_if": "function lua_if()\nif vsego >= 50000 then\nperya = \"Рубиновая\"\ng.perya5 = \"Рубиновая\"\nend\nreturn true\nend",
+        "super_calculate": false,
+        "id": 2,
+        "var_need": [
+          "vsego",
+          50000
+        ],
+        "url": "https://i.ibb.co/TwGmGZn/5-golub-rubinovy.jpg",
+        "text": "rubinG"
+      },
+      {
+        "calculate": false,
+        "lua_if": "function lua_if()\nif vsego >= 100000 then\nperya = \"Алмазная\"\ng.perya6 = \"Алмазная\"\nend\nreturn true\nend",
+        "super_calculate": false,
+        "id": 2,
+        "var_need": [
+          "vsego",
+          100000
+        ],
+        "url": "https://i.ibb.co/CM56Dj7/6-golub-almazny.jpg",
+        "text": "diamondG"
+      },
+      {
+        "calculate": false,
+        "lua_if": "function lua_if()\nif vsego >= 200000 then\nperya = \"Голубь Эндера\"\ng.perya7 = \"Голубь Эндера\"\nend\nreturn true\nend",
+        "super_calculate": false,
+        "id": 2,
+        "var_need": [
+          "vsego",
+          200000
+        ],
+        "url": "https://i.ibb.co/6mQRkcy/7-golub-endera.jpg",
+        "text": "enderG"
+      },
+      {
+        "lua_if": "function lua_if()\nif vsego >= 1000000 then\nperya = \"Радужный голубь\"\ng.perya8 = \"Радужный голубь\"\nend\nreturn true\nend",
+        "id": 2,
+        "text": "rainbowG",
+        "var_need": [
+          "vsego",
+          1000000
+        ],
+        "url": "https://i.ibb.co/SxSRY2Y/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif vsego >= 2000000 then\nperya = \"???\"\ng.perya9 = \"камень\"\nend\nreturn true\nend",
+        "id": 2,
+        "text": "stoneG",
+        "var_need": [
+          "vsego",
+          2000000
+        ],
+        "url": "https://i.ibb.co/Vwn2j7r/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif vsego >= 5000000 then\nperya = \"???\"\ng.perya10 = \"псих\"\nend\nreturn true\nend",
+        "id": 2,
+        "text": "stoneG2",
+        "var_need": [
+          "vsego",
+          5000000
+        ],
+        "url": "https://i.ibb.co/pRJpw3P/image.jpg"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a1",
+          1,
+          "rab",
+          1
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 2,
+        "var_less": [
+          "bodr",
+          25
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a2",
+          1,
+          "rab",
+          1,
+          "a4",
+          0
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 2,
+        "var_less": [
+          "bodr",
+          50
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a3",
+          1,
+          "rab",
+          1,
+          "a4",
+          0,
+          "a5",
+          0
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 2,
+        "var_less": [
+          "bodr",
+          100
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a4",
+          1,
+          "rab",
+          1,
+          "a5",
+          0
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 2,
+        "var_less": [
+          "bodr",
+          400
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "a5",
+          1,
+          "rab",
+          1
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "var_less": [
+          "bodr",
+          500
+        ],
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "empty",
+    "answers": [
+      {
+        "text": "История разработки",
+        "var_equal": [
+          "hist",
+          0
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 3,
+        "var_set": [
+          "hist",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "var_equal": [
+          "hist",
+          1
+        ],
+        "id": 3,
+        "text": "Закрыть логи разработки",
+        "instant": true,
+        "var_set": [
+          "hist",
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text": "v0.1:\n4.05.2021: Версия v0.1 выложена в Ранний Доступ.\nv0.2:\n10.05.2021: В версии v0.2 добавлена визуализация: теперь можно видеть раскраску перьев Евгения! Раскраска перьев меняется в зависимости от количества обгаженных целей.\nv0.3:\n11.05.2021: В версии v0.3 теперь доступны некие \"достижения\": теперь Вам известно о том, сколько раскрасок Вы разблокировали на протяжении всей игры!\nВся информация находится чуть ниже, в кнопке \"Раскраски перьев\".\nv0.3.1:\n11.05.2021: Вслед за v0.3 выходит v0.3.1!\nв этой версии я добавил возможность сохранить свои данные и загрузить сохранение потом, если Вы не хотите потерять свой прогресс!\nv0.4:\n15.05.2021: Фикс бага с отсутствием отображения голубей.\nv1.0:\n16.05.2021: Добавил обложку и наконец опубликовал квест.\nv1.1:\n17.05.2021: Изменил внешний вид игры, теперь она более компактная!\nv2.0:\n20.05.2021: Добавил в игру возможность выбрать банду гусей! Нагоняйте страх на гусей и чувствуйте свободу!\nv3.0:\n23.05.2021: Добавил небольшой режим про голубя-киборга. Сыграйте обязательно!\nv3.1:\n25.05.2021: Добавил визуализацию голубя-киборга.\nv3.2:\n20.06.2021: Фикс бага, из-за которого не отображались кнопки в режиме голубя-киборга. Почему же вы не сообщили мне об этом?\nv3.3:\n04.12.2021: Добавил несколько новых скинов голубя в основном режиме, раз вы так просите. Наслаждайтесь!\nv4.0:\n06.02.2022: В игре появился целый новый режим про голубя, который попал в прошлое! Сыграйте обязательно!\n??.??.????: waiting for v5.0...",
+        "comment": true,
+        "var_equal": [
+          "hist",
+          1
+        ]
+      },
+      {
+        "url": "https://vk.com/tizumi_gg",
+        "middle_answer": true,
+        "instant": true,
+        "id": 3,
+        "text": "Нашли баг или же хотите поделиться идеей для улучшения геймплея? Напишите мне об этом в ВК!"
+      },
+      {
+        "instant": true,
+        "var_equal": [
+          "skins",
+          0,
+          "kyber",
+          0,
+          "proshloe",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Раскраски перьев",
+        "id": 3,
+        "var_set": [
+          "skins",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "Закрыть вкладку скинов",
+        "instant": true,
+        "var_set": [
+          "skins",
+          0
+        ]
+      },
+      {
+        "text": "Скины режима кибер-птицы",
+        "comment": false,
+        "var_equal": [
+          "skins",
+          0,
+          "kyber",
+          0,
+          "proshloe",
+          0
+        ],
+        "id": 3,
+        "instant": true,
+        "middle_answer": true,
+        "var_set": [
+          "kyber",
+          1
+        ]
+      },
+      {
+        "text": "Закрыть вкладку скинов",
+        "comment": false,
+        "var_equal": [
+          "kyber",
+          1
+        ],
+        "id": 3,
+        "instant": true,
+        "middle_answer": true,
+        "var_set": [
+          "kyber",
+          0
+        ]
+      },
+      {
+        "text": "Скины средневекового режима",
+        "var_equal": [
+          "skins",
+          0,
+          "kyber",
+          0,
+          "proshloe",
+          0
+        ],
+        "id": 3,
+        "instant": true,
+        "middle_answer": true,
+        "var_set": [
+          "proshloe",
+          1
+        ]
+      },
+      {
+        "text": "Закрыть вкладку скинов",
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "instant": true,
+        "middle_answer": true,
+        "var_set": [
+          "proshloe",
+          0
+        ]
+      },
+      {
+        "need_ever": false,
+        "comment": true,
+        "var_equal": [
+          "skins",
+          100
+        ],
+        "id": 3,
+        "text": "скрипт скинов",
+        "lua_if": "function lua_if()\nif g.perya ~= \"Обычная\" then \ng.perya = \"???\"\nend\nif g.perya2 ~= \"Золотая\" then \ng.perya2 = \"???\"\nend\nif g.perya3 ~= \"Платиновая\" then\ng.perya3 = \"???\" \nend\nif g.perya4 ~= \"Изумрудная\" then\ng.perya4 = \"???\" \nend\nif g.perya5 ~= \"Рубиновая\" then\ng.perya5 = \"???\" \nend\nif g.perya6 ~= \"Алмазная\" then\ng.perya6 = \"???\" \nend\nif g.perya7 ~= \"Голубь Эндера\" then\ng.perya7 = \"???\"\nend\nif g.perya8 ~= \"Радужный голубь\" then\ng.perya8 = \"???\"\nend\nif g.perya9 ~= \"камень\" then\ng.perya9 = \"???\"\nend\nif g.perya10 ~= \"псих\" then\ng.perya10 = \"???\"\nend\nif g.peryaK ~= \"Обычная\" then\ng.peryaK = \"???\"\nend\nif g.peryaK2 ~= \"Золотая\" then\ng.peryaK2 = \"???\"\nend\nif g.peryaK3 ~= \"Платиновая\" then\ng.peryaK3 = \"???\"\nend\nif g.peryaK4 ~= \"Ржавая\" then\ng.peryaK4 = \"???\"\nend\nif g.peryaSR ~= \"Обычная\" then\ng.peryaSR = \"???\"\nend\nif g.perya2SR ~= \"Медная\" then\ng.perya2SR = \"???\"\nend\nif g.perya3SR ~= \"Бронзовая\" then\ng.perya3SR = \"???\"\nend\nif g.perya4SR ~= \"Серебрянная\" then\ng.perya4SR = \"???\"\nend\nif g.perya5SR ~= \"Золотая\" then\ng.perya5SR = \"???\"\nend\nif g.perya6SR ~= \"Платиновая\" then\ng.perya6SR = \"???\"\nend\nif g.perya7SR ~= \"Изумрудная\" then\ng.perya7SR = \"???\"\nend\nif g.perya8SR ~= \"Алмазная\" then\ng.perya8SR = \"???\"\nend\nif g.perya9SR ~= \"Демоническая\" then\ng.perya9SR = \"???\"\nend\nreturn true\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "обычные перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта обычная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "золотые перья",
+        "lua_text": "function lua_text()\nif g.perya2 == \"???\" then\n   local text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта золотая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "платиновые перья",
+        "lua_text": "function lua_text()\nif g.perya3 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта платиновая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "изумрудные перья",
+        "lua_text": "function lua_text()\nif g.perya4 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта изумрудная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "рубиновые перья",
+        "lua_text": "function lua_text()\nif g.perya5 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта рубиновая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "алмазные перья",
+        "lua_text": "function lua_text()\nif g.perya6 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта алмазная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "перья Эндера",
+        "lua_text": "function lua_text()\nif g.perya7 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта раскраска перьев Эндера.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "радужные перья",
+        "lua_text": "function lua_text()\nif g.perya8 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта радужная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "камень",
+        "lua_text": "function lua_text()\nif g.perya9 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыт камень.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "skins",
+          1
+        ],
+        "id": 3,
+        "text": "ты псих",
+        "lua_text": "function lua_text()\nif g.perya10 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта!<s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Ты псих. Обратись к психиатру.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "kyber",
+          1
+        ],
+        "id": 3,
+        "text": "обычные перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.peryaK == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта обычная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "kyber",
+          1
+        ],
+        "id": 3,
+        "text": "золотые перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.peryaK2 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта золотая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "kyber",
+          1
+        ],
+        "id": 3,
+        "text": "платиновые крылья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.peryaK3 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта платиновая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "kyber",
+          1
+        ],
+        "id": 3,
+        "text": "ржавые крылья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.peryaK4 == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта ржавая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "обычные перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.peryaSR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта обычная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "медные перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya2SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта медная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "бронзовые перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya3SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта бронзовая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "серебрянные перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya4SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта серебрянная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "золотые перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya5SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта золотая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "платиновые перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya6SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта платиновая раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "изумрудные перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya7SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта изумрудная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "алмазные перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya8SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта алмазная раскраска перьев.\"\nreturn text\nend\nend"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "proshloe",
+          1
+        ],
+        "id": 3,
+        "text": "демонические перья",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_text": "function lua_text()\nif g.perya9SR == \"???\" then\nlocal text = \"Раскраска перьев ещё не открыта! <s>\nВозможно, Вам стоило поиграть ещё немного!\"\nreturn text\nelse\nlocal text = \"Открыта демоническая раскраска перьев. Молодец, Сатана!\"\nreturn text\nend\nend"
+      },
+      {
+        "middle_answer": true,
+        "instant": true,
+        "text": "Назад",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Если Вы видите это сообщение - значит, Вы сейчас не находитесь в игре. Загрузить сохранение сейчас невозможно.",
+        "comment": true,
+        "var_equal": [
+          "str2",
+          0,
+          "str7",
+          0,
+          "str9",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "str2",
+          1
+        ],
+        "lua_do": "function lua_do()\ng.vsego = vsego\ng.nado = nado\ng.resp = resp\ng.bodr = bodr\ng.v1 = v1\ng.v2 = v2\ng.v3 = v3\ng.v4 = v4\ng.v5 = v5\ng.a1 = a1\ng.a2 = a2\ng.a3 = a3\ng.a4 = a4\ng.a5 = a5\ng.z1 = z1\ng.z2 = z2\ng.z3 = z3\ng.z4 = z4\ng.z5 = z5\ng.y1 = y1\ng.y2 = y2\ng.y3 = y3\ng.y4 = y4\ng.y5 = y5\ng.golubi = golubi\ng.gusi = gusi\ng.vybor = vybor\nend",
+        "text": "Сохранить прогресс",
+        "id": 2,
+        "instant": true
+      },
+      {
+        "var_equal": [
+          "str2",
+          1
+        ],
+        "lua_do": "function lua_do()\ng.vsego = g.vsego or 0\ng.nado = g.nado or 100000\ng.resp = g.resp or 0\ng.bodr = g.bodr or 15\ng.v1 = g.v1 or 0\ng.v2 = g.v2 or 0\ng.v3 = g.v3 or 0\ng.v4 = g.v4 or 0\ng.v5 = g.v5 or 0\ng.a1 = g.a1 or 0\ng.a2 = g.a2 or 0\ng.a3 = g.a3 or 0\ng.a4 = g.a4 or 0\ng.a5 = g.a5 or 0\nvsego = g.vsego\nnado = g.nado\nresp = g.resp\nbodr = g.bodr\nv1 = g.v1\nv2 = g.v2\nv3 = g.v3\nv4 = g.v4\nv5 = g.v5\na1 = g.a1\na2 = g.a2\na3 = g.a3\na4 = g.a4\na5 = g.a5\nz1 = g.z1\nz2 = g.z2\nz3 = g.z3\nz4 = g.z4\nz5 = g.z5\ny1 = g.y1\ny2 = g.y2\ny3 = g.y3\ny4 = g.y4\ny5 = g.y5\ngolubi = g.golubi\ngusi = g.gusi\nvybor = g.vybor\nend",
+        "text": "Загрузить прогресс",
+        "id": 2,
+        "instant": true
+      },
+      {
+        "id": 7,
+        "text": "Сохранить прогресс птицы-киборга",
+        "lua_do": "function lua_do()\ng.gaj =  gaj\ng.recruit = recruit\ng.nach = nach\ng.cel = cel\ng.intro = intro\ng.gg1 = gg1\ng.respK = respK\ng.peryaK = peryaK\nend",
+        "var_equal": [
+          "str7",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Загрузить прогресс",
+        "lua_do": "function lua_do()\ngaj = g.gaj\nrecruit = g.recruit\nnach = g.nach\ncel = g.cel\nintro = g.intro\ngg1 = g.gg1\nrespK = g.respK\nperyaK = g.peryaK\nend",
+        "var_equal": [
+          "str7",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Сохранить прогресс средневековья",
+        "lua_do": "function lua_do()\ng.gajSR = gajSR\ng.respSR = respSR\ng.popular = popular\ng.peryaSR = peryaSR\ng.stamina = stamina\ng.SR1 = SR1\ng.SR2 = SR2\ng.SR3 = SR3\ng.endSR = endSR\nend",
+        "var_equal": [
+          "str9",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Загрузить прогресс",
+        "lua_do": "function lua_do()\ng.gajSR = g.gajSR or 0\ng.respSR = g.respSR or 0\ng.popular = g.popular or 0\ng.stamina = g.stamina or 15\ng.SR1 = g.SR1 or 0\ng.SR2 = g.SR2 or 0\ng.SR3 = g.SR3 or 0\ng.endSR = g.endSR or 0\ngajSR = g.gajSR\nrespSR = g.respSR\npopular = g.popular\nperyaSR = g.peryaSR\nstamina = g.stamina\nSR1 = g.SR1\nSR2 = g.SR2\nSR3 = g.SR3\nendSR = g.endSR\nend",
+        "var_equal": [
+          "str9",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 5,
+        "instant": true,
+        "left_answer": true,
+        "lua_do": "function lua_do()\n<s>tdialog {\n<s>t<s>theader = \"Выбор банды\", \n<s>t<s>ttext = \"Чем известнее Вы становились, тем сильнее Вы привлекали внимание группировок. И вот настал момент, когда банда голубей пригласила Вас к себе. Одновременно с ними, Вам было прислано приглашение от гусиной мафии. Теперь Выбор за Вами!\",\n<s>t<s>t<s>tanswers = {\n<s>t<s>t<s>t<s>t{\n<s>t<s>t<s>t<s>t<s>ttext = \"Понял\",\n<s>t<s>t<s>t<s>t<s>tpressListener = function()\n<s>t<s>t<s>t<s>t<s>thideDialog()\n<s>t<s>t<s>t<s>t<s>tend\n<s>t<s>t<s>t<s>t}\n<s>t<s>t<s>t}\n} \nend",
+        "right_answer": true,
+        "var_need": [
+          "resp",
+          349
+        ],
+        "var_equal": [
+          "vybor",
+          0
+        ],
+        "text": "Выбор пути",
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "vybor",
+          1,
+          "z1",
+          1
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Теперь Вы в банде \"Гусиный криминал\"!",
+        "comment": true,
+        "var_equal": [
+          "y2",
+          1,
+          "y5",
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Теперь Вы босс банды \"Гусиный криминал\"!",
+        "comment": true,
+        "var_equal": [
+          "y5",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "left_answer": false,
+        "right_answer": true,
+        "var_equal": [
+          "z1",
+          1,
+          "z2",
+          0,
+          "golubi",
+          0,
+          "gusi",
+          0
+        ],
+        "middle_answer": false,
+        "var_more": [
+          "resp",
+          349
+        ],
+        "text": "Вступить в банду гусей",
+        "var_set": [
+          "z2",
+          1,
+          "y2",
+          1,
+          "gusi",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "left_answer": false,
+        "right_answer": false,
+        "var_equal": [
+          "z2",
+          1,
+          "z3",
+          0,
+          "gusi",
+          1
+        ],
+        "middle_answer": true,
+        "var_more": [
+          "resp",
+          2000
+        ],
+        "text": "Стать правой рукой босса",
+        "var_set": [
+          "z3",
+          1,
+          "y3",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "left_answer": false,
+        "right_answer": false,
+        "var_equal": [
+          "z3",
+          1,
+          "z4",
+          0,
+          "gusi",
+          1
+        ],
+        "middle_answer": true,
+        "var_more": [
+          "resp",
+          3000
+        ],
+        "text": "Переселиться в другую страну",
+        "var_set": [
+          "z4",
+          1,
+          "y4",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "left_answer": false,
+        "right_answer": false,
+        "var_equal": [
+          "z4",
+          1,
+          "z5",
+          0,
+          "gusi",
+          1
+        ],
+        "middle_answer": true,
+        "var_more": [
+          "resp",
+          5000
+        ],
+        "text": "Стать боссом банды гусей",
+        "var_set": [
+          "z5",
+          1,
+          "y5",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "empty",
+    "answers": [
+      {
+        "middle_answer": true,
+        "text": "Гонять детей",
+        "instant": true,
+        "id": 2,
+        "var_equal": [
+          "rab",
+          1,
+          "y2",
+          1,
+          "y4",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          50,
+          "resp",
+          349
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "lua_do": "function lua_do()\nbodr = bodr-50\nresp = resp <plus>73\nend",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "text": "Учить гусей гадить на автомобили",
+        "var_min": [
+          "nado",
+          75
+        ],
+        "instant": true,
+        "id": 2,
+        "var_equal": [
+          "rab",
+          1,
+          "y2",
+          1,
+          "y4",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          75,
+          "resp",
+          1000
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 100\nvsego = vsego <plus>100\nbodr = bodr-75\nresp = resp <plus>95\nend",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "nado",
+          150
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 150\nvsego = vsego <plus>150\nbodr = bodr-100\nresp = resp <plus>139\nend",
+        "text": "Держать в страхе поселение",
+        "var_equal": [
+          "rab",
+          1,
+          "y3",
+          1,
+          "y4",
+          0
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          100,
+          "resp",
+          700
+        ],
+        "middle_answer": true,
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "nado",
+          150
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 200\nvsego = vsego <plus>200\nbodr = bodr-150\nresp = resp <plus>175\nend",
+        "text": "Путешествовать по стране",
+        "var_equal": [
+          "rab",
+          1,
+          "y3",
+          1,
+          "y4",
+          0
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          100,
+          "resp",
+          700
+        ],
+        "middle_answer": true,
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "nado",
+          500
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 500\nvsego = vsego <plus>500\nbodr = bodr-400\nresp = resp <plus>450\nend",
+        "middle_answer": true,
+        "var_equal": [
+          "rab",
+          1,
+          "y4",
+          1
+        ],
+        "var_need": [
+          "bodr",
+          400,
+          "resp",
+          3000
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "text": "Вербовать гусей в свою банду",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Рейдить поселения",
+        "var_min": [
+          "nado",
+          750
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 750\nvsego = vsego <plus>750\nbodr = bodr-500\nresp = resp <plus>725\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "y5",
+          1
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          500,
+          "resp",
+          5000
+        ],
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "id": 2,
+        "text": "Воевать с другими бандами гусей",
+        "var_min": [
+          "nado",
+          1500
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 1500\nvsego = vsego <plus>1500\nbodr = bodr-750\nresp = resp <plus>1449\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "y5",
+          1
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          750,
+          "resp",
+          8000
+        ],
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "id": 2,
+        "text": "Монополизировать другие банды в свою",
+        "var_min": [
+          "nado",
+          5000
+        ],
+        "lua_do": "function lua_do()\nnado = nado - 5000\nvsego = vsego <plus>5000\nbodr = bodr-3000\nresp = resp <plus>4449\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "y5",
+          1
+        ],
+        "var_more": [
+          "bodr",
+          0
+        ],
+        "var_need": [
+          "bodr",
+          3000,
+          "resp",
+          25000
+        ],
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "id": 2,
+        "var_need": [
+          "resp",
+          349
+        ],
+        "var_equal": [
+          "y2",
+          1,
+          "otd",
+          1,
+          "y4",
+          0
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "text": "Клевать гусиный корм",
+        "lua_do": "function lua_do()\nbodr = bodr<plus>100\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nbodr = bodr<plus>300\nend",
+        "text": "Тусоваться с боссом",
+        "var_equal": [
+          "y2",
+          1,
+          "otd",
+          1,
+          "y5",
+          0
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "resp",
+          700
+        ],
+        "instant": true,
+        "id": 2
+      },
+      {
+        "lua_do": "function lua_do()\nbodr = bodr<plus>500\nend",
+        "text": "Отдохнуть на пляже",
+        "var_equal": [
+          "y4",
+          1,
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "resp",
+          3000
+        ],
+        "instant": true,
+        "id": 2
+      },
+      {
+        "lua_do": "function lua_do()\nbodr = bodr<plus>1000\nend",
+        "var_equal": [
+          "y5",
+          1,
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 2,
+        "text": "Гордо гулять по захваченным поселениям"
+      },
+      {
+        "id": 2,
+        "text": "Устроить пикник своим подданным",
+        "var_equal": [
+          "y5",
+          1,
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "resp",
+          25000
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nbodr = bodr<plus>5000\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "empty",
+    "answers": [
+      {
+        "var_max": [
+          "cel",
+          100
+        ],
+        "lua_text": "function lua_text()\nlocal text = \"Раскраска перьев: \".. peryaK ..\n\"<s>\nОбгажено всего: \".. gaj ..\n\"<s>\n<s>\nРеспект других птиц: \".. respK ..\n\"<s>\nРекрутов в команде: \".. recruit ..\n\"<s>\n<s>\nГотовность корабля: \".. cel .. \"%\"\nreturn text\nend",
+        "id": 7,
+        "text": "информация",
+        "update": [
+          1
+        ],
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "id": 7,
+        "var_equal": [
+          "intro",
+          0
+        ],
+        "lua_do": "function lua_do()\ndialog {\nheader = \"Когда-то в будущем...\", \ntext = \"Планета Земля, 7077 год. Человечество пережило крах и, можно сказать, полностью вымерло, оставив планету животным. Со временем, семейства пернатых эволюционировали и начали создавать свои государства. Ещё через некоторое время они научились создавать киборгов по своему образу и подобию. Настало время взлететь выше, покорить новую, неизведанную ранее территорию - космос. Но для начала нужно создать свою научную организацию.\",\nanswers = {\n{\ntext = \"Продолжить\",\npressListener = function()\nhideDialog()\nend\n}\n}\n}\ngaj = gaj or 0\nrespK = respK or 0\nrecruit = recruit or 0\nend",
+        "text": "начало",
+        "calculate": true,
+        "var_set": [
+          "intro",
+          1
+        ]
+      },
+      {
+        "var_need": [
+          "recruit",
+          100
+        ],
+        "id": 7,
+        "text": "начало работы",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ndialog {\nheader = \"У Вас достаточно рекрутов!\", \ntext = \"Вы собрали достаточно рекрутов, чтобы наконец начать работу над своей ракетой!\",\nanswers = {\n{\ntext = \"Продолжить\",\npressListener = function()\nhideDialog()\nend\n}\n}\n}\nend",
+        "calculate": true,
+        "var_equal": [
+          "nach",
+          0
+        ],
+        "var_set": [
+          "nach",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "раскраски",
+        "run": [
+          8
+        ]
+      },
+      {
+        "left_answer": true,
+        "instant": true,
+        "var_equal": [
+          "rab",
+          0
+        ],
+        "id": 7,
+        "text": "Делишки",
+        "var_set": [
+          "rab",
+          1,
+          "otd",
+          0
+        ],
+        "no_transition": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rab",
+          1
+        ],
+        "id": 7,
+        "text": "[Делишки]",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "otd",
+          0
+        ],
+        "id": 7,
+        "text": "Набор рекрутов",
+        "instant": true,
+        "var_set": [
+          "otd",
+          1,
+          "rab",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "var_equal": [
+          "otd",
+          1
+        ],
+        "id": 7,
+        "text": "[Набор рекрутов]",
+        "instant": true
+      },
+      {
+        "middle_answer": true,
+        "comment": true,
+        "var_equal": [
+          "otd",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "[Наберите больше респекта]",
+        "var_less": [
+          "respK",
+          10
+        ]
+      },
+      {
+        "id": 7,
+        "var_equal": [
+          "rab",
+          1,
+          "gg1",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Гадить в трущобах",
+        "instant": true,
+        "lua_do": "function lua_do()\nrespK = respK <plus> 2\ngaj = gaj <plus> 4\nend"
+      },
+      {
+        "middle_answer": true,
+        "var_need": [
+          "respK",
+          10
+        ],
+        "var_equal": [
+          "otd",
+          1,
+          "gg1",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Рекрутировать стажёра",
+        "lua_do": "function lua_do()\nrecruit = recruit <plus> 1\nend"
+      },
+      {
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nif respK >= 50 then\nreturn true\nend\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "gg1",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Гадить в своём районе",
+        "lua_do": "function lua_do()\nrespK = respK <plus> 4\ngaj = gaj <plus> 8\nend"
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nrecruit = recruit <plus> 3\nend",
+        "var_need": [
+          "respK",
+          50
+        ],
+        "var_equal": [
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Рассказать друзьям",
+        "id": 7,
+        "var_set": [
+          "gg1",
+          1
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\nrespK = respK <plus> 15\nrecruit = recruit <plus>1\nend",
+        "lua_if": "function lua_if()\nif respK >= 100 then\nreturn true\nend\nif gg1 == 1 then\nreturn true\nend\nend",
+        "var_equal": [
+          "rab",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Провести пресс-конференцию",
+        "id": 7,
+        "instant": true
+      },
+      {
+        "id": 7,
+        "text": "Ловить голубей в подворотнях",
+        "var_equal": [
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "var_need": [
+          "respK",
+          50
+        ],
+        "lua_do": "function lua_do()\nrecruit = recruit <plus> 5\nend"
+      },
+      {
+        "text": "Устроить тусовку с обгаживанием всего",
+        "lua_if": "function lua_if()\nif respK >= 300 then\nreturn true\nend\nend",
+        "var_equal": [
+          "rab",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 7,
+        "lua_do": "function lua_do()\nrespK = respK <plus> 30\ngaj = gaj <plus> 27\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nrecruit = recruit <plus> 20\nend",
+        "var_need": [
+          "respK",
+          400
+        ],
+        "var_equal": [
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "text": "Принимать добровольцев",
+        "id": 7
+      },
+      {
+        "id": 7,
+        "text": "Парить над городом",
+        "lua_if": "function lua_if()\nif respK >= 600 then\nreturn true\nend\nend",
+        "var_equal": [
+          "rab",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "lua_do": "function lua_do()\nrespK = respK <plus> 70\ngaj = gaj <plus> 79\nend",
+        "var_set": [
+          "gg1",
+          1
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\nrecruit = recruit <plus> 60\nend",
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "respK",
+          1300
+        ],
+        "text": "Просить рекрутов у правительства ",
+        "id": 7
+      },
+      {
+        "lua_do": "function lua_do()\nrespK = respK <plus> 150\ngaj = gaj <plus> 150\nend",
+        "lua_if": "function lua_if()\nif respK >= 2000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "rab",
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 7,
+        "text": "Путешествовать по городам"
+      },
+      {
+        "lua_do": "function lua_do()\nrecruit = recruit <plus> 120\nend",
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "respK",
+          4000
+        ],
+        "text": "Проводить масштабную пиар-компанию",
+        "id": 7
+      },
+      {
+        "var_equal": [
+          "itog",
+          0
+        ],
+        "calculate": true,
+        "lua_if": "function lua_if()\nif cel >= 100 then\nreturn true\nend\nend",
+        "super_calculate": false,
+        "id": 7,
+        "text": "итог",
+        "lua_do": "function lua_do()\ndialog {\nheader = \"Время покорения космоса!\", \ntext = \"Собрав достаточно работников и создав свою частную ракету, Вы отправились исследовать неизведанное! Наконец-то Ваша цель достигнута, теперь можно и отдохнуть. Но что же ждёт Вас там, за орбитой?.. Выражаю благдарность за то, что ты, мой дорогой читатель, сыграл в мини-режим моего симулятора. Надеюсь, тебе понравилась моя игра и ты поставишь лайк и напишешь хороший комментарий. До скорого!\",\nanswers = {\n{\ntext = \"Продолжить\",\npressListener = function()\nhideDialog()\nend\n}\n}\n}\nend",
+        "var_set": [
+          "itog",
+          1
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif gaj >= 0 then\nperyaK = \"Обычная\"\ng.peryaK = \"Обычная\"\nend\nreturn true\nend",
+        "var_need": [
+          "gaj",
+          0
+        ],
+        "id": 7,
+        "url": "https://i.ibb.co/X5c41kj/67521f08a3a9.jpg",
+        "text": "commonK",
+        "var_set": [
+          "global peryaK",
+          "Обычная"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif gaj >= 500 then\nperyaK = \"Золотая\"\ng.peryaK2 = \"Золотая\"\nend\nreturn true\nend",
+        "var_need": [
+          "gaj",
+          500
+        ],
+        "id": 7,
+        "text": "goldK",
+        "url": "https://i.ibb.co/L1zxvyK/79cf4fb7e2f1.jpg",
+        "var_set": [
+          "global peryaK2",
+          "Золотая"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif gaj >= 2000 then\nperyaK = \"Платиновая\"\ng.peryaK3 = \"Платиновая\"\nend\nreturn true\nend",
+        "var_need": [
+          "gaj",
+          2000
+        ],
+        "id": 7,
+        "text": "platinumK",
+        "url": "https://i.ibb.co/X7h8SMp/golub-mekhanicheskiy-platinovy.jpg",
+        "var_set": [
+          "global peryaK3",
+          "Платиновая"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif gaj >= 5000 then\nperyaK = \"Ржавая\"\ng.peryaK4 = \"Ржавая\"\nend\nreturn true\nend",
+        "var_need": [
+          "gaj",
+          5000
+        ],
+        "id": 7,
+        "text": "rzjavK",
+        "url": "https://i.ibb.co/h7P0QmQ/4a128ca88d09.jpg",
+        "var_set": [
+          "global peryaK4",
+          "Ржавая"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "empty",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nif recruit >= 100 then\ncel = cel <plus> (recruit/4000)\nreturn true\nend\nend",
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "text": "корабль"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "empty",
+    "answers": [
+      {
+        "var_max": [
+          "popular",
+          100
+        ],
+        "lua_text": "function lua_text()\n  local text = \"Раскраска перьев: \" .. peryaSR ..\n\"<s>\n<s>\nОбгажено всего: \" .. gajSR ..\n\"<s>\nИзвестность: \" .. popular .. \"%\" ..\n\"<s>\n<s>\nРеспект других пернатых: \" .. respSR ..\n\"<s>\nБодрость: \" .. stamina\nreturn text\nend",
+        "id": 9,
+        "text": "статистика",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          10
+        ]
+      },
+      {
+        "id": 9,
+        "var_need": [
+          "respSR",
+          250
+        ],
+        "var_equal": [
+          "SR1",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Прибиться к общине средневековых голубей",
+        "instant": true,
+        "var_set": [
+          "SR1",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "SR1",
+          1,
+          "SR2",
+          0
+        ],
+        "id": 9,
+        "text": "Теперь Вы в общине голубей!",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "SR2",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Теперь Вы босс банды \"Голубиное Будущее\"!",
+        "id": 9
+      },
+      {
+        "id": 9,
+        "var_need": [
+          "respSR",
+          50000
+        ],
+        "var_equal": [
+          "SR3",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Отправиться в кругосветное путешествие",
+        "instant": true,
+        "var_set": [
+          "SR3",
+          1
+        ]
+      },
+      {
+        "var_set": [
+          "rab",
+          1,
+          "otd",
+          0
+        ],
+        "instant": true,
+        "var_equal": [
+          "rab",
+          0
+        ],
+        "id": 9,
+        "text": "Тёмные делишки",
+        "middle_answer": false,
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "otd",
+          0,
+          "rab",
+          1
+        ],
+        "id": 9,
+        "text": "[Тёмные делишки] ",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          0
+        ],
+        "id": 9,
+        "text": "Отдых",
+        "middle_answer": false,
+        "var_set": [
+          "rab",
+          0,
+          "otd",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "var_equal": [
+          "rab",
+          0,
+          "otd",
+          1
+        ],
+        "id": 9,
+        "text": "[Отдых] "
+      },
+      {
+        "var_more": [
+          "stamina",
+          0
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 1\nstamina = stamina - 1\nrespSR = respSR <plus> 1\nend",
+        "text": "Гадить на огороде",
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          0
+        ],
+        "id": 9,
+        "instant": true,
+        "middle_answer": true,
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 1\nend",
+        "id": 9,
+        "var_equal": [
+          "otd",
+          1,
+          "SR1",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Клевать семена пшеницы",
+        "instant": true,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_more": [
+          "stamina",
+          0
+        ],
+        "text": "Гадить на крестьян",
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 5\nstamina = stamina - 5\nrespSR = respSR <plus> 4\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          0
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "var_need": [
+          "stamina",
+          5,
+          "respSR",
+          15
+        ],
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          15
+        ],
+        "id": 9,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR1",
+          0
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 5\nend",
+        "text": "Общаться со средневековными птицами",
+        "middle_answer": true,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_need": [
+          "stamina",
+          25,
+          "respSR",
+          75
+        ],
+        "var_more": [
+          "stamina",
+          24
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 25\nstamina = stamina - 25\nrespSR = respSR <plus> 24\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          0
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "text": "Гадить на целые пашни",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          100
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 25\nend",
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR1",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Воровать хлеб у мельников",
+        "id": 9,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          0
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 9,
+        "var_less": [
+          "stamina",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Бросить вызов общине с соседней улицы",
+        "var_need": [
+          "stamina",
+          50,
+          "respSR",
+          250
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 50\nstamina = stamina - 50\nrespSR = respSR <plus> 49\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          1,
+          "SR2",
+          0
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "var_more": [
+          "stamina",
+          49
+        ],
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          250
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR1",
+          1,
+          "SR2",
+          0
+        ],
+        "id": 9,
+        "text": "Учить своих друзей новым технологиям",
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 50\nend",
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_more": [
+          "stamina",
+          149
+        ],
+        "text": "Гадить на другие общины, пока они спят",
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 150\nstamina = stamina - 150\nrespSR = respSR <plus> 149\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          1,
+          "SR2",
+          0
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "var_need": [
+          "stamina",
+          150,
+          "respSR",
+          700
+        ],
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          700
+        ],
+        "id": 9,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR1",
+          1,
+          "SR2",
+          0
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 150\nend",
+        "text": "Вместе воровать съедобные драгоценности\n(хлеб)",
+        "middle_answer": true,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_need": [
+          "stamina",
+          300,
+          "respSR",
+          1500
+        ],
+        "var_more": [
+          "stamina",
+          299
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 300\nstamina = stamina - 300\nrespSR = respSR <plus> 295\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          1
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "text": "Гадить на врагов во время \"стрелы\"",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          1500
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 300\nend",
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR1",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Тусоваться по \"современному\"",
+        "id": 9,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rab",
+          1,
+          "SR1",
+          1,
+          "SR2",
+          0
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 9,
+        "var_less": [
+          "stamina",
+          50
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Травить общины врагов",
+        "var_need": [
+          "stamina",
+          500,
+          "respSR",
+          3500
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 500\nstamina = stamina - 500\nrespSR = respSR <plus> 485\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR2",
+          1,
+          "SR3",
+          0
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "var_more": [
+          "stamina",
+          499
+        ],
+        "var_set": [
+          "otd",
+          0,
+          "SR1",
+          2
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          3500
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR2",
+          1,
+          "SR3",
+          0
+        ],
+        "id": 9,
+        "text": "Общаться по \"новому сленгу\"",
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 500\nend",
+        "var_set": [
+          "rab",
+          0,
+          "SR1",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "var_more": [
+          "stamina",
+          999
+        ],
+        "text": "Организовывать целые рейды на дома",
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 1000\nstamina = stamina - 1000\nrespSR = respSR <plus> 775\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR2",
+          1,
+          "SR3",
+          0
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "var_need": [
+          "stamina",
+          1000,
+          "respSR",
+          7000
+        ],
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          7000
+        ],
+        "id": 9,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR2",
+          1,
+          "SR3",
+          0
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 1000\nend",
+        "text": "Путешествовать по районам города",
+        "middle_answer": true,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_need": [
+          "stamina",
+          2000,
+          "respSR",
+          20000
+        ],
+        "var_more": [
+          "stamina",
+          1999
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 2000\nstamina = stamina - 2000\nrespSR = respSR <plus> 1697\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR2",
+          1,
+          "SR3",
+          0
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "text": "Кошмарить абсолютно всех встречных",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          15000
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 2000\nend",
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR2",
+          1,
+          "SR3",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Путешествовать по целой стране",
+        "id": 9,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rab",
+          1,
+          "SR2",
+          1,
+          "SR3",
+          0
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 9,
+        "var_less": [
+          "stamina",
+          500
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Гадить на всё подряд массивными рейдами",
+        "var_need": [
+          "stamina",
+          5000,
+          "respSR",
+          50000
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 5000\nstamina = stamina - 5000\nrespSR = respSR <plus> 4500\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR3",
+          1
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "var_more": [
+          "stamina",
+          4999
+        ],
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          50000
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR3",
+          1
+        ],
+        "id": 9,
+        "text": "Вербовать всё больше новичков в банду",
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 5000\nend",
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_more": [
+          "stamina",
+          19999
+        ],
+        "text": "Подкупать другие банды по всему миру",
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 20000\nstamina = stamina - 20000\nrespSR = respSR <plus> 15000\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR3",
+          1
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "var_need": [
+          "stamina",
+          20000,
+          "respSR",
+          120000
+        ],
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          120000
+        ],
+        "id": 9,
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR3",
+          1
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 20000\nend",
+        "text": "Приучать новеньких к быту \"будущего\"",
+        "middle_answer": true,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_need": [
+          "stamina",
+          100000,
+          "respSR",
+          350000
+        ],
+        "var_more": [
+          "stamina",
+          99999
+        ],
+        "lua_do": "function lua_do()\ngajSR = gajSR <plus> 100000\nstamina = stamina - 100000\nrespSR = respSR <plus> 50000\nend",
+        "var_equal": [
+          "rab",
+          1,
+          "SR3",
+          1
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "text": "Гадить на несколько городов одновременно",
+        "var_set": [
+          "otd",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "respSR",
+          350000
+        ],
+        "lua_do": "function lua_do()\nstamina = stamina <plus> 100000\nend",
+        "instant": true,
+        "var_equal": [
+          "otd",
+          1,
+          "SR3",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Отдыхать в отпуске",
+        "id": 9,
+        "var_set": [
+          "rab",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "rab",
+          1,
+          "SR3",
+          1
+        ],
+        "middle_answer": true,
+        "text": "[Восполните свою бодрость]",
+        "id": 9,
+        "var_less": [
+          "stamina",
+          5000
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR < 500 then\nperyaSR = \"Обычная\"\ng.peryaSR = \"Обычная\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "commonGSR",
+        "var_need": [
+          "gajSR",
+          0
+        ],
+        "url": "https://i.ibb.co/frq8TGR/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 500 then\nperyaSR = \"Медная\"\ng.perya2SR = \"Медная\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "copperGSR",
+        "var_need": [
+          "gajSR",
+          500
+        ],
+        "url": "https://i.ibb.co/xYCBrTr/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 2000 then\nperyaSR = \"Бронзовая\"\ng.perya3SR = \"Бронзовая\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "bronzeGSR",
+        "var_need": [
+          "gajSR",
+          2000
+        ],
+        "url": "https://i.ibb.co/hmnGkz1/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 20000 then\nperyaSR = \"Серебрянная\"\ng.perya4SR = \"Серебрянная\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "silverGSR",
+        "var_need": [
+          "gajSR",
+          20000
+        ],
+        "url": "https://i.ibb.co/ZgBSFFq/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 75000 then\nperyaSR = \"Золотая\"\ng.perya5SR = \"Золотая\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "goldGSR",
+        "var_need": [
+          "gajSR",
+          75000
+        ],
+        "url": "https://i.ibb.co/d4Pf1Tk/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 200000 then\nperyaSR = \"Платиновая\"\ng.perya6SR = \"Платиновая\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "platinumGSR",
+        "var_need": [
+          "gajSR",
+          200000
+        ],
+        "url": "https://i.ibb.co/LCSzNhL/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 500000 then\nperyaSR = \"Изумрудная\"\ng.perya7SR = \"Изумрудная\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "emeraldGSR",
+        "var_need": [
+          "gajSR",
+          500000
+        ],
+        "url": "https://i.ibb.co/1s9HLZK/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 800000 then\nperyaSR = \"Алмазная\"\ng.perya8SR = \"Алмазная\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "diamondGSR",
+        "var_need": [
+          "gajSR",
+          800000
+        ],
+        "url": "https://i.ibb.co/QXQFGsK/image.jpg"
+      },
+      {
+        "lua_if": "function lua_if()\nif gajSR >= 2000000 then\nperyaSR = \"Демоническая\"\ng.perya9SR = \"Демоническая\"\nend\nreturn true\nend",
+        "id": 9,
+        "text": "demonicalGSR",
+        "var_need": [
+          "gajSR",
+          2000000
+        ],
+        "url": "https://i.ibb.co/0JXrL9h/image.jpg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 10,
+        "text": "основная статистика",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "lua_do": "function lua_do()\ndialog {\nheader = \"Покоряем новые вершины!\", \ntext = \"Некая организация втайне создала машину времени, но испытывать на людях так и не решилась, поэтому она взяла с улицы первого попавшегося голубя, нацепила ему специальный браслет на ногу и отправила в прошлое. Голубь, ничего не понимая, вместо того, чтобы действовать по методичке в браслете, начал гадить на всё подряд. В прочем, оно и к лучшему...\",\nanswers = {\n{\ntext = \"Приступим\",\npressListener = function()\nhideDialog()\nend\n}\n}\n}\nend",
+        "text": "Новое начало",
+        "left_answer": true,
+        "right_answer": true,
+        "var_equal": [
+          "nNach",
+          0
+        ],
+        "super_calculate": false,
+        "instant": true,
+        "calculate": true,
+        "id": 2,
+        "var_set": [
+          "nNach",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "основы",
+        "left_answer": true,
+        "right_answer": true,
+        "super_calculate": false,
+        "var_equal": [
+          "nNach",
+          1
+        ],
+        "calculate": true,
+        "instant": true,
+        "lua_do": "function lua_do()\ndialog {\nheader = \"Начало всего\", \ntext = \"Что же начал делать Евгений, попав в прошлое? Конечно, гадить на всё подряд! В этом режиме Вы станете самым знаменитым голубем в мире, полностью обгадив планету. Наслаждайтесь!\",\nanswers = {\n{\ntext = \"Понятно\",\npressListener = function()\nnNach = 2\nhideDialog()\nend\n}\n}\n}\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ndialog {\nheader = \"Настало время для чего-то большего!\", \ntext = \"Ваша община потихоньку разрасталась, и Вы решили организовать официальную банду, чтобы всё было «как у людей». Посовещавшись с друзьями, Вы стали главой своего синдиката, а это значит, что теперь Вам открылись новые возможности!\",\nanswers = {\n{\ntext = \"Приступим!\",\npressListener = function()\nSR2 = 1\nhideDialog()\nend\n}\n}\n}\nend",
+        "var_need": [
+          "respSR",
+          3500
+        ],
+        "left_answer": true,
+        "right_answer": true,
+        "instant": true,
+        "var_equal": [
+          "SR2",
+          0
+        ],
+        "id": 2,
+        "calculate": true,
+        "super_calculate": false,
+        "text": "банда"
+      },
+      {
+        "lua_if": "function lua_if()\nif otd == 1 then\n   popular = popular or 0\n   return true\nend \nif respSR >= 10000 then\n   popular = popular <plus> (respSR/800000)\n   return true\nend\nend",
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "text": "известность"
+      },
+      {
+        "lua_do": "function lua_do()\ndialog {\nheader = \"Всемирная известность\", \ntext = \"И вот настал тот момент, когда о Вас заговорил весь мир. Вы стали самым известным голубем в мире, вошли в историю как гениальнейшая птица, а учёные, которые отправили Вас в прошлое, добились своей цели. Спасибо Вам за то, что играли в мою игру, я очень рад, что она Вас затянула и подарила приятные эмоции!\",\nanswers = {\n{\ntext = \"Ура!\",\npressListener = function()\nendSR = 1\nhideDialog()\nend\n}\n}\n}\nend",
+        "instant": true,
+        "left_answer": true,
+        "right_answer": true,
+        "text": "Всемирная известность",
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "var_need": [
+          "popular",
+          100
+        ],
+        "var_equal": [
+          "endSR",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "",
+    "answers": []
+  }
+]

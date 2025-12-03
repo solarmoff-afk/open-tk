@@ -1,0 +1,1181 @@
+[
+  {
+    "id": 1,
+    "text": "Истинная власть всегда скрыта в тени. Люди думают, что управляют своей жизнью, но рано или поздно оказываются на пороге лавки зельевара.<s>r\n<s>r\n     — Вари зелья.<s>r\n     — Торгуй жизнью и смертью.<s>r\n     — Определи судьбу города, не отходя от прилавка.<s>r\n <s>r\nАвтор: Aleks Otter<s>r\nХудожник: SvobodaArt<s>r\nТестирование и персонажи: Shizu4i<s>r\n<s>r\n«Зельевар» — младший и упрощённый брат «Ведьмы» (207225)",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Приступить к работе",
+        "lua_do": "function lua_do()\n   isNewGame = true\nend"
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "Группа автора",
+        "url": "https://vk.com/aleks_otter_quest",
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/general/vk_blue.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Предстоит тяжёлая трудовая неделя.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "0",
+        "run": [
+          13
+        ],
+        "calculate": true
+      },
+      {
+        "var_str_set": [
+          "space",
+          " "
+        ],
+        "lua_do": "function lua_do()\n  for iPull = 1, 10 do \n     findHeroForStoryPull()\n   end\nend",
+        "text": "Подготовиться к новому дню.",
+        "id": 3,
+        "var_set": [
+          "action",
+          4,
+          "day",
+          7,
+          "nextPage",
+          3
+        ]
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   greatHeroTable = {}\n   currentHeroTable= {}\n\n   storyPull = {}\n   newStoryPull = {}\n\n   newsPull = {}\n   newNewsPull = {}\nend\n\nfunction addHero(heroTable)\n   table.insert(greatHeroTable, heroTable)\nend",
+        "calculate": true,
+        "text": "2. Создание Таблиц персонажей, Пулов историй, Пулов новостей",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   currentEndText = \"\"\n   currentBuyerName = \"\"\n   purchaseResult = true\n\n   effectText = \"\"\n   effectInsightText = \"\"\n   effectInsight = false\n   effectBezoar = false\n\n   healed = 0 -- исцелённых\n   poisoned = 0 -- отравленных\n   pharmacist = 0 -- Я или Л\n   support = 0 -- Х или С\n   charlatan = 0 -- плацебо\n   goodResult = 0 -- удачных исходов\n   allBuyersCount = 0 -- всего покупателей\n   badBuyersCount = 0 -- ушедших с пустыми руками\n   canPoisonedBayer = 0 -- могут быть отравлены\n   canHealedBayer = 0 -- могут быть исцелены\n   fungusCount = 0\n   g.achievements = g.achievements or {}\n   g.contractNum = g.contractNum or 0\n   g.storyAchievements = g.storyAchievements or {}\n   g.storyAchievementsText = g.storyAchievementsText or \"\"\n   newStoryAchievementsText = \"\"\n   \n   day_text = \"Воскресенье\"\nend",
+        "text": "3. Переменные: Зелий, Покупателя, Эффектов, Достижений",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   if isNewGame then\n      potion_Health_Count = 0\n      potion_Toxic_Count = 0\n      potion_Power_Count = 0\n      potion_Charisma_Count = 0\n      potion_Placebo_Count = 0\n\n      effectFungus = false\n      effectFungusChance = 0\n   end\nend",
+        "calculate": true,
+        "text": "4. Объявление переменных для новой игры",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "widget": [
+          "widget_potion_Health",
+          "http://188.120.236.127/aleks_otter/potion_maker/potion1.png",
+          "",
+          "widget_potion_Toxic",
+          "http://188.120.236.127/aleks_otter/potion_maker/potion2.png",
+          "",
+          "widget_potion_Charisma",
+          "http://188.120.236.127/aleks_otter/potion_maker/potion3.png",
+          "",
+          "widget_potion_Power",
+          "http://188.120.236.127/aleks_otter/potion_maker/potion4.png",
+          "",
+          "widget_potion_Placebo",
+          "http://188.120.236.127/aleks_otter/potion_maker/potion5.png",
+          ""
+        ],
+        "text": "5. Виджеты зелий и ингредиентов"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "widget": [
+          "widget_day",
+          "http://188.120.236.127/aleks_otter/potion_maker/day.png",
+          "",
+          "widget_night",
+          "http://188.120.236.127/aleks_otter/potion_maker/night.png",
+          "",
+          "widget_space",
+          "http://188.120.236.127/aleks_otter/witch_shop/space.png",
+          ""
+        ],
+        "text": "6. Виджеты дня и ночи"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "7. Пулы новостей по умолчанию и смертей ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n     defaultNewsPull = {\"Инквизиция снова призывает сжигать ведьм и умывать руки. Их никто не слушает, как обычно.\", \n\"В город приехал заморский принц. Впрочем, ходит слух, его нашли на побережье.\", \n\"Какой-то чудик доказывает, что есть мясо — вредно. \", \n\"В деревнях на юге видели дракона.\", \n\"Люди жалуются на крыс. В этом году их подозрительно мало.\", \n\"Нынче ожидается хороший урожай.\", \n\"В город приехал бродячий цирк. Воздушные гимнастки сразу разлетелись, кто куда.\", \n\"Леди Роза умерла. Ах, леди Роза...\", \n\"Говорят, в следующем месяце будет рыцарский турнир. Жду не дождусь!\"}\n\n   deadFemalePull = {\" умерла от остановки сердца. А она была так молода!\", \n\" безвременно почила от сильного отравления.\", \n\" скончалась от внезапного приступа удушья. Подавилась, что ли.\", \n\" неожиданно ослепла. Это её сломило. \", \n\" постарела лет на двадцать всего за пару дней. С ума сойти можно!\",\n\" умерла. Подробности не сообщаются.\",\n\" отошла на тот свет. Возможно, с чьей-то помощью.\",\n\" тяжело заболела. Кто-то болтает, что её прокляла ведьма. Но это бред, у нас всего одна ведьма, и та хорошая.\"}\n\n   deadMalePull = {\" умер от остановки сердца. А он был так молод!\", \n\" безвременно почил от сильного отравления.\", \n\" скончался от внезапного приступа удушья. Подавился, что ли.\", \n\" неожиданно ослеп. Это его сломило. \", \n\" постарел лет на двадцать всего за пару дней. С ума сойти можно!\",\n\" умер. Подробности не сообщаются.\",\n\" отошёл на тот свет. Возможно, с чьей-то помощью.\"}\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "8. Наборы вводных перед приходом покупателя, после ухода, если нет зелий",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   lastBuyerLeavesText = \"У тебя есть немного времени, чтобы подготовиться к завтрашнему дню.\"\n   buyerText = \"\"\n\n   firstBuyerComesTextPull = {\"Ты открыл лавку в обычное время. Вскоре пожаловал первый покупатель.\", \n\"Ты открыл лавку немного позже обычного. Первый покупатель уже ожидал у входа.\", \"Ты открыл лавку рано утром. Первый покупатель не заставил себя долго ждать.\", \"Покупателей не было до обеда. Ты уже подумывал закрыть лавку на сегодня, но колокольчик на двери звякнул.\"}\n\n   buyerComesTextPull = {\"Колокольчик над дверью звякнул.\", \n\"А вот и новый клиент.\", \n\"Следующий покупатель не заставил себя долго ждать.\", \n\"Кто-то топтался на крыльце четверть часа, и, наконец, решился войти.\", \n\"До прихода следующего покупателя прошло немало времени.\", \n\"Следующий покупатель ожидал на крыльце. \"}\n \n   lastBuyerLeavesTextPull = {\"Это был последний покупатель на сегодня. Но хлопоты на этом не закончены.\", \n\"Тем временем на город опустились сумерки. Пора заняться другими делами.\", \n\"На сегодня торговля окончена. Но у тебя ещё много дел.\", \n\"Пришло время закрыть лавку и приступить к другой стороне работы.\", \n\"Похоже, сегодня уже никто не зайдёт. Но расслабляться рано, нужно подготовиться к завтрашнему дню.\"}\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "run": [
+          14
+        ],
+        "text": "Загружаем персонажей"
+      },
+      {
+        "id": 12,
+        "text": "Вспомнить о своих достижениях."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "empty",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "0",
+        "run": [
+          13
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   if action <= 1 then nextPage = 4 end\n   if (action == 4) and not (currentBuyerName == \"\")  then deleteCurrentBuyer() end\nend",
+        "calculate": true,
+        "text": " 1",
+        "id": 3
+      },
+      {
+        "lua_text": "function lua_text()\nreturn lastBuyerLeavesText\nend",
+        "var_equal": [
+          "action",
+          4
+        ],
+        "id": 3,
+        "text": "  ",
+        "merge": true
+      },
+      {
+        "id": 3,
+        "text": "  ",
+        "lua_text": "function lua_text()\nlocal resText = updateEventText()\nif action == 4 then resText = \"<s>\n<s>\n\" .. resText end\nreturn resText \nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "text": "Виджет ночи",
+        "widget_show": [
+          "widget_space",
+          "space",
+          "widget_space",
+          "space",
+          "widget_night",
+          "day_text",
+          "widget_space",
+          "space",
+          "widget_space",
+          "space"
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "widget_show": [
+          "widget_potion_Health",
+          "potion_Health_Count",
+          "widget_potion_Toxic",
+          "potion_Toxic_Count",
+          "widget_potion_Power",
+          "potion_Power_Count",
+          "widget_potion_Charisma",
+          "potion_Charisma_Count",
+          "widget_potion_Placebo",
+          "potion_Placebo_Count"
+        ],
+        "text": "Основные зелья",
+        "calculate": true
+      },
+      {
+        "id": 3,
+        "var_show": [
+          "action"
+        ],
+        "comment": true,
+        "text": "Доступных действий: "
+      },
+      {
+        "id": 3,
+        "text": "Ты можешь сварить зелья:",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion1.png"
+        ],
+        "left_answer": true,
+        "instant": true,
+        "id": 3,
+        "text": "Лечения     ",
+        "lua_do": "function lua_do()\n   createPotion(1)\n   action = action - 1\nend",
+        "go_to": [
+          "nextPage"
+        ]
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion2.png"
+        ],
+        "right_answer": true,
+        "instant": true,
+        "id": 3,
+        "text": "Яд     ",
+        "lua_do": "function lua_do()\n   createPotion(2)\n   action = action - 1\nend",
+        "go_to": [
+          "nextPage"
+        ]
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion4.png"
+        ],
+        "left_answer": true,
+        "instant": true,
+        "lua_do": "function lua_do()\n   createPotion(4)\n   action = action - 1\nend",
+        "text": "Силы     ",
+        "id": 3,
+        "go_to": [
+          "nextPage"
+        ]
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion3.png"
+        ],
+        "right_answer": true,
+        "text": "Харизмы     ",
+        "id": 3,
+        "instant": true,
+        "lua_do": "function lua_do()\n   createPotion(3)\n   action = action - 1\nend",
+        "go_to": [
+          "nextPage"
+        ]
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion5.png"
+        ],
+        "left_answer": true,
+        "id": 3,
+        "instant": true,
+        "middle_answer": false,
+        "text": "Плацебо     ",
+        "lua_do": "function lua_do()\n   createPotion(5)\n   action = action - 1\nend",
+        "go_to": [
+          "nextPage"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nreturn  effectFungus and  action == 4\nend",
+        "id": 3,
+        "var_need": [
+          "action",
+          4
+        ],
+        "text": "Или же потратить весь вечер, чтобы:",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/cauldron.png"
+        ],
+        "lua_if": "function lua_if()\nreturn  effectFungus and  action == 4\nend",
+        "id": 4,
+        "text": "Хорошенько почистить котлы",
+        "lua_do": "function lua_do()\n   effectFungus = false\n   effectFungusChance = 5\n   actionClean = true\n   action = 0\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(eventCreatePotion)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction eventCreatePotion()\n   effectBezoar = false\n   local effectChance = math.random(100)\n   if effectChance <= 5 then effectBezoar = true end\nend\nend",
+        "text": "События при создании зелья"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(eventEffectFungus)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Смена типа зелья, если в котле есть плесень",
+        "lua_do": "function lua_do()\nfunction eventEffectFungus(potionType)\n   local newPotionType = potionType\n   if effectFungus then \n      newPotionType = math.random(5)\n      if newPotionType == 4 then newPotionType = 7 end\n   end\n   return newPotionType\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(createPotion)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Создание зелий с учётом случайных эффектов",
+        "lua_do": "function lua_do()\nfunction createPotion(type)\n   eventCreatePotion()\n   type = eventEffectFungus(type)\n   if effectBezoar then type = 5 end\n   if type == 1 then \n      potion_Health_Count = potion_Health_Count <plus> 1\n   elseif type == 2 then \n      potion_Toxic_Count = potion_Toxic_Count <plus> 1\n   elseif type == 3 then \n      potion_Charisma_Count = potion_Charisma_Count <plus> 1\n   elseif type == 4 then \n      potion_Power_Count = potion_Power_Count <plus> 1\n   elseif type == 5 then \n      potion_Placebo_Count = potion_Placebo_Count <plus> 1\n   elseif type == 6 then \n      potion_Insight_Count = potion_Insight_Count <plus> 1\n   end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Спать.",
+        "lua_do": "function lua_do()\n   preSale()\n\n   local rect =display.newRect(display.contentCenterX, display.contentCenterY, display.contentCenterX*2, display.contentCenterY*2)\n   canvas.parent.parent.parent.parent.parent.parent.parent:insert(rect)\n   rect:setFillColor(0,0,0)\n   transition.from(rect, {\n      time = 1200,\n      alpha = 0.01,\n      transition = easing.outExpo,\n      onComplete = function()\n      timer.performWithDelay(0, function()\n            if rect and rect.removeSelf then\n               transition.to(rect, {\n                  time = 700,\n                  alpha =  0.01,\n                  transition = easing.inExpo,\n                  onComplete = function()\n                     if rect and rect.removeSelf then\n                        rect:removeSelf()\n                        rect = nill\n                     end\n                  end\n               })\n            end\n         end)\n   end\n   })\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "0",
+        "run": [
+          13
+        ],
+        "calculate": true
+      },
+      {
+        "id": 3,
+        "text": "  ",
+        "lua_text": "function lua_text()\n   return updateEventText()\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "text": "Виджет полной луны",
+        "widget_show": [
+          "widget_space",
+          "space",
+          "widget_space",
+          "space",
+          "widget_night",
+          "day_text",
+          "widget_space",
+          "space",
+          "widget_space",
+          "space"
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Основные зелья",
+        "calculate": true,
+        "widget_show": [
+          "widget_potion_Health",
+          "potion_Health_Count",
+          "widget_potion_Toxic",
+          "potion_Toxic_Count",
+          "widget_potion_Power",
+          "potion_Power_Count",
+          "widget_potion_Charisma",
+          "potion_Charisma_Count",
+          "widget_potion_Placebo",
+          "potion_Placebo_Count"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(mergeNewsPull)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction mergeNewsPull()\n   local mNews = \"\"\n   for key, value in ipairs(newNewsPull) do\n      table.insert(newsPull, value)\n   end\n   newNewsPull = {}\nend\nend",
+        "text": "Залив новых новостей из собственного пула в общий"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(mergeStoryPull)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Залив новых историй из собственного пула в общий",
+        "lua_do": "function lua_do()\nfunction mergeStoryPull()\n   local mStory = \"\"\n   for key, value in ipairs(newStoryPull) do\n      table.insert(storyPull, value)\n   end\n   newStoryPull = {}\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(preSale)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction preSale()\n   if effectFungus then fungusCount = fungusCount <plus> 1 end\n   day = day - 1\n   action = 4\n   buyerCount = math.random(2, 4)\n   buyerOrderNum = 1\n   nextPage = 5\n   isNewBuyer = true\n   newsText = \"\"\n   mergeNewsPull()\n   mergeStoryPull()\n   eventChangeDay()\nend\nend",
+        "text": "Подготовка к продажам"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(eventChangeDay)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Событие смены дня",
+        "lua_do": "function lua_do()\nfunction eventChangeDay()\n   effectInsight = false\n   effectBezoar = false\n   actionClean = false\n   local effectChance = math.random(100)\n   if not effectFungus then \n      if effectChance <= effectFungusChance then  effectFungus = true end\n      effectFungusChance = effectFungusChance <plus> 5\n   end\nend\nend"
+      },
+      {
+        "id": 11,
+        "text": "Выбрать книгу для чтения."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "empty",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "0",
+        "run": [
+          13
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction updateBuyer()\n   allBuyersCount = allBuyersCount <plus> 1\n   buyerText = \"\"\n   if buyerOrderNum > 1 then\n      buyerText = buyerText .. currentEndText .. \"<s>\n <s>\n\" .. genBuyerComesText()\n      deleteCurrentBuyer()\n   else\n      buyerText = buyerText .. gen1BuyerComesText() \n   end\n\n   if buyerOrderNum <= buyerCount then \n      createBuyer() \n      buyerText = buyerText .. \"<s>\n <s>\n\" .. currentStartText\n      if buyerOrderNum == buyerCount then\n         lastBuyerLeavesText = currentEndText\n         if day > 0 then lastBuyerLeavesText = lastBuyerLeavesText .. \"<s>\n <s>\n\" .. genBuyerLeavesText() end\n      end\n   end\nend\nend",
+        "text": "3. Обновление покупателя",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   if isNewBuyer then\n      if buyerOrderNum == buyerCount then \n         if day > 0 then nextPage = 3 else nextPage = 6 end\n      else \n         nextPage = 5\n      end\n      updateBuyer()\n      newsText = \"\"\n   end\nend",
+        "text": "3. Действия при обновлении страницы",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "id": 5,
+        "text": " ",
+        "lua_text": "function lua_text()\nreturn buyerText\nend",
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": " ",
+        "lua_text": "function lua_text()\nlocal newsText = getNews()\nreturn newsText\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "widget_show": [
+          "widget_space",
+          "space",
+          "widget_space",
+          "space",
+          "widget_day",
+          "day_text",
+          "widget_space",
+          "space",
+          "widget_space",
+          "space"
+        ],
+        "calculate": true,
+        "text": "8. Виджет полной луны"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "widget_show": [
+          "widget_potion_Health",
+          "potion_Health_Count",
+          "widget_potion_Toxic",
+          "potion_Toxic_Count",
+          "widget_potion_Power",
+          "potion_Power_Count",
+          "widget_potion_Charisma",
+          "potion_Charisma_Count",
+          "widget_potion_Placebo",
+          "potion_Placebo_Count"
+        ],
+        "text": "Виджеты зелий"
+      },
+      {
+        "id": 3,
+        "text": "Продать покупателю зелье:",
+        "comment": true,
+        "lua_if": "function lua_if()\nlocal potionCount = potion_Health_Count <plus> potion_Toxic_Count <plus> potion_Power_Count <plus> potion_Charisma_Count <plus> potion_Placebo_Count\nreturn potionCount > 0\nend"
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion1.png"
+        ],
+        "var_add": [
+          "buyerOrderNum",
+          1
+        ],
+        "lua_do": "function lua_do()\n   sellPotion(1)\n   isNewBuyer = true\nend",
+        "text": "Лечения     ",
+        "left_answer": true,
+        "var_more": [
+          "potion_Health_Count",
+          0
+        ],
+        "go_to": [
+          "nextPage"
+        ],
+        "id": 3,
+        "instant": false
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion2.png"
+        ],
+        "var_add": [
+          "buyerOrderNum",
+          1
+        ],
+        "id": 3,
+        "text": "Яд     ",
+        "go_to": [
+          "nextPage"
+        ],
+        "right_answer": true,
+        "var_more": [
+          "potion_Toxic_Count",
+          0
+        ],
+        "lua_do": "function lua_do()\n   sellPotion(2)\n   isNewBuyer = true\nend",
+        "instant": false
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion4.png"
+        ],
+        "var_add": [
+          "buyerOrderNum",
+          1
+        ],
+        "lua_do": "function lua_do()\n   sellPotion(4)\n   isNewBuyer = true\nend",
+        "var_more": [
+          "potion_Power_Count",
+          0
+        ],
+        "left_answer": true,
+        "text": "Силы     ",
+        "go_to": [
+          "nextPage"
+        ],
+        "instant": false,
+        "id": 3
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion3.png"
+        ],
+        "var_add": [
+          "buyerOrderNum",
+          1
+        ],
+        "lua_do": "function lua_do()\n  sellPotion(3)\n   isNewBuyer = true\nend",
+        "text": "Харизмы     ",
+        "go_to": [
+          "nextPage"
+        ],
+        "right_answer": true,
+        "var_more": [
+          "potion_Charisma_Count",
+          0
+        ],
+        "id": 3,
+        "instant": false
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/potion_maker/potion5.png"
+        ],
+        "var_add": [
+          "buyerOrderNum",
+          1
+        ],
+        "id": 3,
+        "instant": false,
+        "go_to": [
+          "nextPage"
+        ],
+        "left_answer": true,
+        "middle_answer": false,
+        "text": "Плацебо     ",
+        "lua_do": "function lua_do()\n   sellPotion(5)\n   isNewBuyer = true\nend",
+        "var_more": [
+          "potion_Placebo_Count",
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Ещё ты можешь:",
+        "comment": true
+      },
+      {
+        "var_not": [
+          "day",
+          0
+        ],
+        "id": 3,
+        "lua_do": "function lua_do()\n   sellPotion(0)\n   badBuyersCount = badBuyersCount <plus> 1\n   lastBuyerLeavesText = \"Покупатель ушёл с пустыми руками. <s>\n<s>\nУ тебя есть время, чтобы приготовиться к завтрашнему дню.\"\n   nextPage = 3\nend",
+        "text": "Извиниться перед покупателем и закрыть лавку",
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "lua_do": "function lua_do()\n   sellPotion(0)\n   badBuyersCount = badBuyersCount <plus> 1\n   lastBuyerLeavesText = \"Покупатель ушёл с пустыми руками. <s>\n\"\nend",
+        "var_equal": [
+          "day",
+          0
+        ],
+        "id": 6,
+        "text": "Извиниться перед покупателем и закрыть лавку",
+        "middle_answer": false,
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(getHeroNews)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction getHeroNews()\n   local heroNews = \"\"\n   local newsPullLen = table.count(newsPull)\n   if newsPullLen == 0 then return \"\" end\n   local newsPos = math.random(newsPullLen)\n   heroNews = newsPull[newsPos]\n   table.remove(newsPull, newsPos)\n   return heroNews\nend\nend",
+        "text": "Получение случайной новости о персонаже"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(getDefaultNews)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Получение случайной дефолтной новости",
+        "lua_do": "function lua_do()\nfunction getDefaultNews()\n   return defaultNewsPull[math.random(table.count(defaultNewsPull))]\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(getNews)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Получение новости (80/20 перс/дефолт)",
+        "lua_do": "function lua_do()\nfunction getNews()\n   local newsPullLen = table.count(newsPull)\n   local news = \"\"\n   if newsPullLen > 0 then\n      if math.random(100) <= 80 then news = getHeroNews() else news = getDefaultNews() end\n   else\n      news = getDefaultNews()\n   end\n  news = \"<s>\n <s>\nПокупатель делится новостями: <s>\n<s>\n— \" .. news\n  return news\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(eventSellPotion)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction eventSellPotion()\n   effectStealPotion = false\n   local effectChance = math.random(100)\n   if effectChance <= 5 then effectStealPotion = true end\nend\nend",
+        "text": "События при продаже зелья"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "empty",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "0",
+        "run": [
+          13
+        ],
+        "calculate": true
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "Виджет полной луны",
+        "widget_show": [
+          "widget_space",
+          "space",
+          "widget_space",
+          "space",
+          "widget_night",
+          "day_text",
+          "widget_space",
+          "space",
+          "widget_space",
+          "space"
+        ]
+      },
+      {
+        "id": 3,
+        "text": "  ",
+        "lua_text": "function lua_text()\nreturn lastBuyerLeavesText\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": " ",
+        "lua_text": "function lua_text()\nreturn \"<s>\n <s>\n     Ещё одна неделя позади. \"\nend",
+        "merge": true
+      },
+      {
+        "id": 7,
+        "text": "Подвести итоги",
+        "lua_do": "function lua_do()\ng.contractNum = g.contractNum <plus> 1\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "text": "удаляем покупателя",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   deleteCurrentBuyer()\n   stateText = \"\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Продолжить работать\n(все умершие персонажи воскреснут, недовольные покупатели забудут обиды, все сваренные зелья останутся при тебе)",
+        "lua_do": "function lua_do()\nisNewGame = false\nend"
+      },
+      {
+        "id": 1,
+        "text": "Уйти в отпуск"
+      },
+      {
+        "super_calculate": false,
+        "id": 7,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   newAchievementsText = \"\" \nend\n\nfunction checkAchievement()\n   if g.contractNum == 1 then \n      newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Первая неделя\"\n   end\n   if g.contractNum == 4 then \n      newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Месяц в трудах\"\n   end\n   if g.contractNum == 52 then \n      newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Год без отпуска\"\n   end\n   if not g.achHealer then \n      if healed >= 13 then\n         g.achHealer = true\n         newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Прирождённый целитель\"\n      end\n   end\n   if not g.achPoisoner then \n      if poisoned >= 13 then\n         g.achPoisoner = true\n         newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Борджиа\"\n      end\n   end\n   if not g.achPharmacist then \n      if allBuyersCount == pharmacist then\n         g.achPharmacist = true\n         newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Аптекарь\"\n      end\n   end\n   if not g.achSupport then \n      if allBuyersCount == support then\n         g.achSupport = true\n         newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Допинг-шоп\"\n      end\n   end\n   if not g.achCharlatan then \n      if allBuyersCount == charlatan then\n         g.achCharlatan = true\n         newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Шарлатан\"\n      end\n   end\n   if not g.achGR then \n      if goodResult == allBuyersCount then\n         g.achGR = true\n         newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Слуга народа\"\n      end\n   end\n   if not g.achBB then \n      if allBuyersCount == badBuyersCount then\n         g.achBB = true\n         newAchievementsText = newAchievementsText .. \" <s>\n     ✩ \" .. \"Лентяй\"\n      end\n   end\nend",
+        "text": "Проверка достижений"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   checkAchievement()\n   stateText = stateText .. \"  -  -  -  -  -  -  <s>\n \" \n   stateText = stateText .. \" <s>\nОбщее число покупателей: \" .. allBuyersCount .. \" <s>\n \" \n   stateText = stateText .. \"Ушли с пустыми руками: \" .. badBuyersCount .. \" <s>\n \" \n   stateText = stateText .. \"Решили свою проблему: \" .. goodResult .. \" <s>\n \" \n   stateText = stateText ..  \" <s>\n \" \n   stateText = stateText .. \"Исцелены: \" .. healed .. \"/\" .. canHealedBayer .. \"<s>\n \" \n   stateText = stateText .. \"Отравлены: \" .. poisoned .. \"/\" .. canPoisonedBayer .. \"<s>\n\" \n\n   if not (newAchievementsText == \"\") then\n      stateText = stateText ..  \" <s>\nПолучены достижения: \" \n      stateText = stateText .. newAchievementsText ..  \" <s>\n \" \n   end\n   \n   if not (newStoryAchievementsText == \"\") then\n      stateText = stateText .. \" <s>\nЗавершены сюжетные линии: \" .. newStoryAchievementsText .. \"<s>\n\" \n   end\n  \n   stateText = stateText .. \" <s>\n  -  -  -  -  -  -  <s>\n \" \nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 7
+      },
+      {
+        "lua_text": "function lua_text()\nreturn stateText\nend",
+        "id": 7,
+        "text": " ",
+        "instant": false,
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "этот текст не отображается",
+    "answers": []
+  },
+  {
+    "id": 9,
+    "text": "          «Зельеварение для новичков», Галина б’Ланк<s>r\n<s>r\n     Итак, вы хотите научиться варить зелья. Ваше желание похвально. Позвольте заверить, эта наука сильно упростит и не раз спасёт вашу жизнь. Я познакомлю вас с основными видами зелий. И начну, пожалуй, с самого важного.<s>r\n<s>r\n               ~ ЯД ~<s>r\n     Яд убивает. При работе с ним соблюдайте меры предосторожности: проветривайте помещение, используйте индивидуальные средства защиты кожи и органов дыхания, не пытайтесь попробовать зелье на вкус.<s>r\nХраните яд в недоступном для детей и фамильяров месте.<s>r\n     Действие яда напрямую зависит от ингредиентов, дня недели, цвета глаз фамильяра и мыслей зельевара во время приготовления.<s>r\n<s>r\n               ~ Зелье ЛЕЧЕНИЯ ~<s>r\n     Это зелье обладает целительными, антибактериальными, иммуностимулирующими свойствами и в целом благотворно влияет на живые организмы. <s>r\n     Принимать внутрь или наружно.<s>r\n     Внимание! Известны случаи воскрешения из мёртвых. Будьте осторожны, используя зелье Лечения в местах утилизации почивших растений, животных, грибов, бактерий, людей.<s>r\n<s>r\n               ~ Зелье СИЛЫ ~<s>r\n     Также известно как «Зелье Муравья». Было изобретено известным натуралистом Френком Тихо-Не-Спугни.<s>r\n     Зелье многократно увеличивает физическую силу и выносливость живых организмов обратно пропорционально их размеру.<s>r\n     Внимание! Соблюдайте осторожность при использовании зелья в местах обитания тараканов, термитов, крыс и черепах.<s>r\n<s>r\n               ~ Зелье ХАРИЗМЫ ~<s>r\n     Зелье делает живое существо или неодушевлённый предмет невероятно привлекательным для окружающих. <s>r\n     Сектор действия зелья определяется желанием выпившего. Будьте осторожны, используя зелье на предметах — они не имеют мыслей, поэтому становятся привлекательными для всех и каждого. Неумелое применение зелий Харизмы стало причиной массовой миграции драконов в подземелья, так как эти хищники подвержены его эффекту более всего.<s>r\n<s>r\n               ~ ПЛАЦЕБО ~<s>r\n     Во многих случаях людям требуется не магическая помощь, а лишь уверенность в своих силах. Умение приготовить качественное      Плацебо зачастую экономит зельевару силы и ингредиенты.<s>r\n     Позаботьтесь о том, чтобы ваше Плацебо выглядело не менее волшебно и привлекательно, чем другие зелья. Хорошим решением станут переливающиеся пузырьки, лёгкое свечение или цветной пар.<s>r\n<s>r\n               ~ Зелье ПРОНИЦАТЕЛЬНОСТИ ~<s>r\n     Является излюбленным зельем гадалок и прорицателей, так как позволяет чувствовать истинные желания и потребности людей.<s>r\n     Отчаянно нелюбимо политиками, что удивительно, ведь при его приготовлении используются отборные лягушачьи лапки.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Закрыть книгу"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "          \"О сути человеческой\", Феофан Угодник<s>r\n<s>r\n[Из книги вырваны несколько страниц]<s>r\n<s>r\n... а я утверждаю, что если бы люди были наделены интеллектом (как ваш покорный слуга), они не нуждались бы в магии. Что делает средний человек, едва столкнувшись с жизненными трудностями? Он бежит за помощью к колдуну, он готов чертить фигуры, жечь свечи, бормотать заклинания, вязать кукол, пить мешанину, называемую зельями... В общем, совершать любые богомерзкие ритуалы, лишь бы не решать проблему своим умом.<s>r\n     Можно представить, каким был бы мир без магии! Люди создавали бы големов, ведомых силами тяжести, или тепла, или вращения, или молний. С их помощью люди поднялись бы над облаками и опустились в пучины морских глубин, перемещались на огромные расстояния быстрее лошадей и птиц, определяли и лечили болезни, делились мыслями с людьми на другом конце света...<s>r\n     Но, повторюсь, большинство людей не наделены интеллектом, а потому не слишком отличаются от животных и могут рассчитывать лишь на здоровье, силу и привлекательность. И вместо того, чтобы развивать эти качества самостоятельно (как ваш покорный слуга), они вновь и вновь обращаются к магии, пока не разочаруются и в ней. <s>r\n     Более того: большинство мало-мальски способных к мыслительной деятельности людей избирают путь магов, волшебников, колдунов, целителей, прорицателей, иными словами, склоняются к тёмным силам.<s>r\n     Я не стану утверждать, что этот мир обречён, потому что в нём есть магия, однако нельзя отрицать, сколь существенным фактором она является для замедления прогресса.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Закрыть книгу"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "В твоей библиотеке:",
+    "answers": [
+      {
+        "id": 9,
+        "text": "\"Зельеварение для новичков\", Галина б'Ланк"
+      },
+      {
+        "id": 10,
+        "text": "\"О сути человеческой\", Феофан Угодник"
+      },
+      {
+        "id": 8,
+        "text": "\n",
+        "comment": true
+      },
+      {
+        "id": 4,
+        "text": "Отойти от шкафа."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Твои достижения:",
+    "answers": [
+      {
+        "id": 12,
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nhasAchText = \"\"\nnotAchText = \"\"\n\nif g.contractNum and (g.contractNum >= 1) then hasAchText = hasAchText .. \"<s>\n ✩ Первая неделя\" else notAchText = notAchText .. \"<s>\n - Пройди игру 1 раз\" end\nif g.contractNum and (g.contractNum >= 4) then hasAchText = hasAchText .. \"<s>\n ✩ Месяц в трудах\" else notAchText = notAchText .. \"<s>\n - Пройди игру 4 раза\" end\nif g.contractNum and (g.contractNum >= 52) then hasAchText = hasAchText .. \"<s>\n ✩ Год без отпуска\" else notAchText = notAchText .. \"<s>\n - Пройди игру 52 раза\" end\nif g.achHealer then hasAchText = hasAchText .. \"<s>\n ✩ Прирождённый целитель\" else notAchText = notAchText .. \"<s>\n - Исцели 13 больных за неделю\" end\nif g.achPoisoner then hasAchText = hasAchText .. \"<s>\n ✩ Сэр Борджиа?\" else notAchText = notAchText .. \"<s>\n - Отрави 13 покупателей за неделю\" end\nif g.achPharmacist then hasAchText = hasAchText .. \"<s>\n ✩ Аптекарь\" else notAchText = notAchText .. \"<s>\n - В течении недели продавай только зелья Лечения и Яды\" end\nif g.achSupport then hasAchText = hasAchText .. \"<s>\n ✩ Допинг-шоп\" else notAchText = notAchText .. \"<s>\n - В течении недели продавай только зелья Силы и Харизмы\" end\nif g.achCharlatan then hasAchText = hasAchText .. \"<s>\n ✩ Шарлатан\" else notAchText = notAchText .. \"<s>\n - В течении недели продавай только Плацебо\" end\nif g.achGR then hasAchText = hasAchText .. \"<s>\n ✩ Слуга народа\" else notAchText = notAchText .. \"<s>\n - Помоги решить проблемы всем покупателям за неделю\" end\nif g.achBB then hasAchText = hasAchText .. \"<s>\n ✩ Лентяй\" else notAchText = notAchText .. \"<s>\n - ???\" end\nend",
+        "calculate": true,
+        "text": "Отображение достижений",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nif hasAchText == \"\" then hasAchText = \"<s>\n   Пока их нет\" end\nreturn hasAchText\nend",
+        "id": 12,
+        "text": "\n",
+        "comment": false,
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not (notAchText == \"\")\nend",
+        "lua_text": "function lua_text()\nreturn notAchText\nend",
+        "text_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "id": 12,
+        "text": "\n",
+        "comment": true,
+        "merge": false
+      },
+      {
+        "comment": true,
+        "id": 12,
+        "text": " ",
+        "lua_text": "function lua_text()\nlocal storyAchText = \"Сюжетов завершено: \" .. table.count(g.storyAchievements) .. \" / 4\"\nif g.storyAchievementsText then storyAchText = storyAchText .. g.storyAchievementsText end\nreturn storyAchText \nend",
+        "merge": false
+      },
+      {
+        "id": 2,
+        "text": "Вернуться к работе"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Библиотека функций",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   if day == 1 then day_text = \"Суббота\" end\n   if day == 2 then day_text = \"Пятница\" end\n   if day == 3 then day_text = \"Четверг\" end\n   if day == 4 then day_text = \"Среда\" end\n   if day == 5 then day_text = \"Вторник\" end\n   if day == 6 then day_text = \"Понедельник\" end\n   if day == 7 or day == 7 then day_text = \"Воскресенье\" end\nend",
+        "calculate": true,
+        "text": "Определение дня недели",
+        "id": 13
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(heroPositionInCHT)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction heroPositionInCHT(checkHeroName)\n   local indexHero = 0\n   for key, value in ipairs(currentHeroTable) do\n      if value == checkHeroName then \n         indexHero = key\n         break\n      end\n   end\n   return indexHero\nend\nend",
+        "text": "Определение позиции персонажа в таблице текущих персонажей"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(storyPositionInSP)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction storyPositionInSP(checkHeroName)\n   local indexStory = 0\n   for key, value in ipairs(storyPull) do\n      if value.heroName == checkHeroName then \n         indexStory = key\n         break\n      end\n   end\n   return indexStory\nend\nend",
+        "calculate": true,
+        "id": 13,
+        "text": "Определение позиции истории в пуле историй"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(storyPositionInNSP)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction storyPositionInNSP(checkHeroName)\n   local indexStory = 0\n   for key, value in ipairs(newStoryPull) do\n      if value.heroName == checkHeroName then \n         indexStory = key\n         break\n      end\n   end\n   return indexStory\nend\nend",
+        "calculate": true,
+        "id": 13,
+        "text": "Определение позиции истории в списке новых историй"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(findHeroForStoryPull)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Добавление нового персонажа в таблицу текущих персонажей и его истории - в пул историй",
+        "lua_do": "function lua_do()\nfunction findHeroForStoryPull()\n   local heroFound = 0\n   local whileCount = 0\n   while heroFound == 0 do\n      local curHeroPos = math.random(table.count(greatHeroTable))\n      local curHero = greatHeroTable[curHeroPos]\n      local curHeroStory = curHero.hStory1\n      if curHeroStory.active then\n         local curHeroName = curHero.name\n         if heroPositionInCHT(curHeroName) == 0 then \n            heroFound = 1\n            table.insert(currentHeroTable, curHeroName)\n            table.insert(newStoryPull, curHeroStory) \n         end\n      end\n      if curHeroStory.isLastStory then\n         table.remove(greatHeroTable, curHeroPos) \n      end\n      whileCount = whileCount <plus> 1\n      if whileCount == 40 then break end\n   end\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(deletePotion)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Удаление зелья",
+        "lua_do": "function lua_do()\nfunction deletePotion(potionArray)\n   local potionPos = math.random(table.count(potionArray))\n   soldPotionPower = potionArray[potionPos]\n   table.remove(potionArray, potionPos)\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(sellPotion)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Продажа / Использование зелья",
+        "lua_do": "function lua_do()\nfunction sellPotion(type)\n   soldPotionType = type\n   if type == 1 then \n      potion_Health_Count = potion_Health_Count - 1\n      pharmacist = pharmacist <plus> 1\n   elseif type == 2 then \n      potion_Toxic_Count = potion_Toxic_Count - 1\n      pharmacist = pharmacist <plus> 1\n   elseif type == 3 then \n      potion_Charisma_Count = potion_Charisma_Count - 1\n      support = support <plus> 1\n   elseif type == 4 then \n      potion_Power_Count = potion_Power_Count - 1\n      support = support <plus> 1\n   elseif type == 5 then \n      potion_Placebo_Count = potion_Placebo_Count - 1\n      charlatan = charlatan <plus> 1\n   end\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(createBuyer)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Создание покупателя",
+        "lua_do": "function lua_do()\nfunction createBuyer()\n   currentStoryPosition = math.random(table.count(storyPull))\n   currentStory = storyPull[currentStoryPosition]\n   currentBuyerName = currentStory.heroName\n   currentBuyerSex = currentStory.heroSex\n   currentStartText = currentStory.startText\n   currentEndText = currentStory.endText\n   param1_Type = currentStory.potionType1\n   param2_Type = currentStory.potionType2\n   if (param1_Type == 1) or (param2_Type == 1) then canHealedBayer = canHealedBayer <plus> 1 end\n   if (param1_Type ~= 2) and (param2_Type ~= 2) then canPoisonedBayer = canPoisonedBayer <plus> 1 end\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(gen1BuyerComesText)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Генерация текста \"пришёл\" для Первого покупателя",
+        "lua_do": "function lua_do()\nfunction gen1BuyerComesText()\nreturn firstBuyerComesTextPull[math.random(1, #firstBuyerComesTextPull)]\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(genBuyerComesText)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Генерация текста \"пришёл\" для 2-4 покупателей",
+        "lua_do": "function lua_do()\nfunction genBuyerComesText()\nreturn buyerComesTextPull[math.random(1, #buyerComesTextPull)]\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(genBuyerLeavesText)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Генерация текста \"ушёл\" для последнего покупателя",
+        "lua_do": "function lua_do()\nfunction genBuyerLeavesText()\nreturn lastBuyerLeavesTextPull[math.random(1, #lastBuyerLeavesTextPull)]\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(createDeadNews)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Создание новости о смерти персонажа",
+        "lua_do": "function lua_do()\nfunction createDeadNews()\nlocal newNews = \"\"\n   if currentBuyerSex == 1 then \n      newNews = deadMalePull[math.random(table.count(deadMalePull))]\n   else\n      newNews = deadFemalePull[math.random(table.count(deadFemalePull))]\n   end\n   newNews =currentBuyerName .. newNews\n   table.insert(newNewsPull, newNews)\n   if poisoned and (poisoned > 13) then table.insert(newNewsPull, \"Вы заметили, что в последнее время в городе стало малолюдно?\") end\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(createNews)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Проверка успешности прохождения испытания персонажем и создание соответствующей новости",
+        "lua_do": "function lua_do()\nfunction createNews()\n   local newsAdded = false\n   local purchaseResult = false\n   if soldPotionType == param1_Type then \n      purchaseResult = true\n      if param1_Type == 1 then healed = healed <plus> 1 end\n      table.insert(newNewsPull, currentStory.positiveText1)\n      goodResult = goodResult <plus> 1\n   elseif soldPotionType == param2_Type then\n      purchaseResult = true\n      if param2_Type == 1 then healed = healed <plus> 1 end\n      table.insert(newNewsPull, currentStory.positiveText2)\n      goodResult = goodResult <plus> 1\n   elseif soldPotionType == 2 then\n      createDeadNews()\n      newsAdded = true\n      poisoned = poisoned <plus> 1\n   elseif soldPotionType == 2 then\n      table.insert(newNewsPull, currentStory.negativeText)\n      purchaseResult = false\n   end\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(getHeroIndexFromGT)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction getHeroIndexFromGT(curHeroName)\n   local greatTableLen = #greatHeroTable\n   local indexHero = 0\n   for key, value in ipairs(greatHeroTable) do\n      if value.name == curHeroName then \n         indexHero = key\n         break\n      end\n   end\n   return indexHero\nend\nend",
+        "text": "Получение позиции героя в Великой таблице"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(getHeroFromGreatTable)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Получение героя из Великой таблицы (по имени)",
+        "lua_do": "function lua_do()\nfunction getHeroFromGreatTable(curHeroName)\n   local heroIndex = getHeroIndexFromGT(curHeroName)\n   if heroIndex > 0 then return greatHeroTable[heroIndex] end\n   return nil\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(blockHeroInGTbyCS)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Блокировка историй персонажа в Великой таблице по текущей истории",
+        "lua_do": "function lua_do()\nfunction blockHeroInGTbyCS(blockHeroName)\n   local blockHeroIndex = getHeroIndexFromGT(blockHeroName)\n   if blockHeroIndex == 0 then return end\n   local blockHero = greatHeroTable[blockHeroIndex]\n   local blockedStory = {}\n   local bSNum = currentStory.lockedStoryNum\n   local needDelete = false\n\n   if bSNum == 1 then needDelete = true end\n   if bSNum == 2 then \n      blockedStory = blockHero.hStory2\n      if blockedStory then\n         if blockHero.hStory1.active then \n            blockedStory.active = false \n            blockHero.hStory2 = blockedStory\n         else\n            needDelete = true \n         end\n      end\n   end\n   if bSNum == 3 then \n      blockedStory = blockHero.hStory3\n      if blockedStory then\n         if blockHero.hStory2.active then \n            blockedStory.active = false \n            blockHero.hStory3 = blockedStory\n         else\n            needDelete = true \n         end\n      end\n   end\n\n   if needDelete then \n      table.remove(greatHeroTable, blockHeroIndex)\n   else\n      greatHeroTable[blockHeroIndex] = blockHero\n   end\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(blockHeroInSPbyCS)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction blockHeroInSPbyCS(blHeroName)\n   local blockHeroIndex = heroPositionInCHT(blHeroName)\n   if blockHeroIndex == 0 then return end\n   local inNewStoryPull = false\n   local blHCStoryPos = storyPositionInSP(blHeroName)\n   if blHCStoryPos == 0 then \n      blHCStoryPos = storyPositionInNSP(blHeroName)\n      inNewStoryPull = true\n   end\n   if blHCStoryPos > 0 and currentStory.lockedStoryNum <= storyPull[blHCStoryPos].number then \n      if inNewStoryPull then\n         table.remove(newStoryPull, blHCStoryPos)\n      else\n         table.remove(storyPull, blHCStoryPos)\n      end\n      table.remove(currentHeroTable, blockHeroIndex)\n      findHeroForStoryPull()\n   end\nend\nend",
+        "text": "Блокировка истории персонажа в пуле историй по текущей истории"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(blockHeroByCurrentStory)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Блокировка истории персонажа по текущей истории",
+        "lua_do": "function lua_do()\nfunction blockHeroByCurrentStory()\n   if currentStory.canBlockHero then\n      local blHeroName = currentStory.lockedHero\n      blockHeroInGTbyCS(blHeroName)\n      blockHeroInSPbyCS(blHeroName)\n   end\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(deleteCurrentBuyer)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction deleteCurrentBuyer()\n   if not (soldPotionType == 0) then createNews() end\n   local curStoryPos = storyPositionInSP(currentBuyerName)\n   table.remove(storyPull, curStoryPos)  \n\n   local storyNum = currentStory.number\n   local isLastStoryL = currentStory.isLastStory\n   local needDelete = false\n\n   local currentHeroPos = getHeroIndexFromGT(currentBuyerName)\n     \n   if purchaseResult then\n      blockHeroByCurrentStory()\n      if storyNum == 3 then checkStoryAchievement() end\n      if currentStory.isLastStory then \n         needDelete = true \n      elseif currentHeroPos > 0 then\n         local currentHero = greatHeroTable[currentHeroPos] \n         currentStory.active = false\n         if storyNum == 1 then currentHero.hStory1 = currentStory\n         elseif storyNum == 2 then currentHero.hStory2 = currentStory\n         elseif storyNum == 3 then currentHero.hStory3 = currentStory\n         end\n         greatHeroTable[currentHeroPos] = currentHero\n\n         local nextStory = currentHero.hStory2\n         if storyNum == 2 then nextStory = currentHero.hStory3 end \n         if nextStory.active then \n            table.insert(newStoryPull, nextStory)\n         else   \n            needDelete = true\n         end\n      end\n   else needDelete = true\n   end\n   if needDelete then\n      table.remove(currentHeroTable, heroPositionInCHT(currentBuyerName))\n      if currentHeroPos > 0 then table.remove(greatHeroTable, currentHeroPos) end\n      findHeroForStoryPull()\n   end\nend\nend",
+        "text": "Удаление текущего покупателя"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(updateEventText)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Обновление текста об эффектах и случайных событиях",
+        "lua_do": "function lua_do()\nfunction updateEventText()\n   effectText = \"\"\n   if effectFungus and action > 0 then \n      effectText = effectText .. \"О, нет! В твоих котлах завелась плесень! Неизвестно, как она повлияет на зелья!\"\n   end\n   if effectBezoar then \n      if effectText ~= \"\" then effectText = effectText .. \"<s>\n<s>\n\" end\n      effectText = effectText .. \"Вот же беда! Твой фамильяр уронил в котёл безоар и зелье превратилось в плацебо!\"\n   end\n   if action == 0 then \n      if actionClean then effectText = effectText .. \"Отдраив отплесени последний котёл, ты облегчённо вздохнул. Теперь ничто не испортит твои зелья! <s>\n<s>\n\"\n      else \n      if effectText ~= \"\" then effectText = effectText .. \"<s>\n<s>\n\" end\n      effectText = effectText .. \"Наконец с хлопотами покончено. \"\n      end\n      effectText = effectText .. \"Уставший, но довольный собой, ты готовишься ко сну. \"\n   elseif action < 4 then\n      if effectText ~= \"\" then effectText = effectText .. \"<s>\n<s>\n\" end\n      effectText = effectText .. \"Дела не ждут. Зелья сами себя не сварят. \" \n   end\n   return effectText\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal tf = type(checkStoryAchievement)\nreturn (tf == 'nil') or (tf == 'string')\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "Проверка на получение ачивки за третью историю линейки персонажа",
+        "lua_do": "function lua_do()\nfunction checkStoryAchievement()\n   local needAddAch = true\n   for key, value in ipairs(g.storyAchievements) do\n      if value.name == currentBuyerName then \n         needAddAch = false\n         break\n      end\n   end\n   if needAddAch then\n      table.insert(g.storyAchievements, currentBuyerName)\n      g.storyAchievementsText = g.storyAchievementsText .. \" <s>\n     ✧ \" .. currentStory.achievement\n      newStoryAchievementsText = newStoryAchievementsText .. \" <s>\n     ✧ \" .. currentStory.achievement\n   end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Шаблон персонажа:<s>r\n<s>r\nlocal story1 = <s>r\nheroName = \"hero1\", heroSex = 1,<s>r\nnumber = 1, isLastStory = false, active = true,<s>r\nstartText = \"Входит в лавку\", endText = \"Покидает лавку\",<s>r\npotionType1 = 1, potionType2 = 3,<s>r\npositiveText1 = \"Герою продали нужное зелье и всё было хорошо\",<s>r\npositiveText2 = \"Герою продали ненужное зелье, но ему повезло и всё было хорошо\",<s>r\nnegativeText = \"Всё было плохо\",<s>r\ncanBlockHero = true, lockedHero = \"heroName2\", lockedStoryNum = 2,<s>r\nachievement = \"achievementName\"<s>r\n<s>r\nlocal newHero = name = \"name\", hStory1 = story1, hStory2 = story2, hStory3 = story3 <s>r\naddHero(newHero)",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Гарри Темнощит', heroSex = 1, number = 1, isLastStory = false, active = true, startText = 'Запнувшись о порог, в лавку ввалился рыцарь Гарри Темнощит. От облокотился на прилавок, покраснел, едва не снёс бутафорский череп, от чего смутился ещё больше. <s>\n <s>\n— Я это... Девушка одна есть. И, ну... Нравится она мне. Только она об этом не знает. Помогите, а?', endText = '— А это поможет, да? Перед встречей с ней выпить? <s>\n <s>\nВоодушевлённый Гарри почти в припрыжку направился в сторону рынка.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Лина Златовласка, цветочница с рынка, нынче с рыцарем гуляет. Да было б с кем! С Темнощитом! Он же с роду двух слов связать не мог, а её встретил — соловьём запел.', positiveText2 = 'Давеча Лина Златовласка засадила телегу в яму, да в такую, что семеро мужиков вытащить не могли. А Гарри Темнощит одной рукой телегу поднял вместе с Линкой и всеми букетами да на ровную дорогу поставил. Гуляют они теперь вместе.', negativeText = 'На рынке давеча представление было — Линка Златовласка отхлестала букетом рыцаря. Представляете?', canBlockHero = false}\n\n local story2 = { heroName = 'Гарри Темнощит', heroSex = 1, number = 2, isLastStory = false, active = true, startText = 'Гарри Темнощит задел плечом дверной косяк. Твой фамильяр выразительно закатил глаза. <s>\n<s>\n— Тут такое дело, — Гарри смущённо почесал затылок. — Милорд меня на дракона отправил, завалить, значит. Подсобите, а?', endText = 'Гарри уходит заметно воодушевлённым.', potionType1 = 5, potionType2 = 3, positiveText1 = 'В городе новый герой — рыцарь, убивший дракона. Говорят, тварина была огромная, огнём пыхала, да наш Гарри её узлом завязал.', positiveText2 = 'Вы слышали?! Городу теперь служит драконий наездник! Интервью не даёт.', negativeText = 'Очередной неудачник пытался убить дракона и был сожжён дотла.', canBlockHero = false}\n\n local story3 = { heroName = 'Гарри Темнощит', heroSex = 1, number = 3, isLastStory = true, active = true, startText = 'Гарри Темнощит осторожно протиснулся в лавку. <s>\n<s>\n— Я к вам по какому вопросу, — замялся он, — У нас с Линкой вроде как всё серьёзно, и я это, жениться хочу, вот. Хочу с родителями её познакомиться, ну и это... Вы же поможете?', endText = 'Гарри покинул лавку, счастливо насвистывая.', potionType1 = 3, potionType2 = 7, positiveText1 = 'Гарри Темнощит женится. Говорят, родители Линки в нём души не чают. Не знаю уж, чем он их очаровал...', positiveText2 = 'Гарри Темнощит женится. Отец Линки Златовласки отзывается о нём как о перспективном и неболтливом молодом человеке.', negativeText = 'Отец Линки Златовласки выгнал её жениха половником. Говорят, этот увалень разнёс в гостях антикварное зеркало. Надо же быть таким неловким и неприятным...', canBlockHero = false, achievement = 'Семейное счастье — завершена сюжетная линия Гарри Темнощита' }\n\nlocal newHero = { name = \"Гарри Темнощит\", hStory1 = story1, hStory2 = story2, hStory3 = story3}\naddHero(newHero)\nend",
+        "text": "Герой: Гарри Темнощит",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Герой: Артур Доходяга",
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Артур Доходяга', heroSex = 1, number = 1, isLastStory = false, active = true, startText = 'Вошёл некто в дорожном плаще. Лицо было скрыто капюшоном. Ломающимся голосом этот некто попросил средство для травли крыс.', endText = 'Фигура в плаще кивнула и удалилась.', potionType1 = 2, potionType2 = 7, positiveText1 = 'Весь город гудит. Король подавился на пиру и умер! А наследников-то у него не было. О, боги, что же с нами будет...', positiveText2 = 'Весь город гудит. Король скончался от резкого приступа сахарного диабета! А наследников-то у него не было. О, боги, что же с нами будет...', negativeText = 'В замке прошёл званый пир. Король вновь блеснул силой и красноречием, заключив выгодный союз. Слава королю!', canBlockHero = false}\n\n local story2 = { heroName = 'Артур Доходяга', heroSex = 1, number = 2, isLastStory = false, active = true, startText = 'К прилавку подошёл щуплый прыщавый паренёк с пухлым рюкзаком. <s>\n<s>\n— Не найдётся ли у Вас зелья, чтобы стать сильнее? Меня никто не воспринимает в серьёз!', endText = 'Паренёк ликующе хохотнул и спрятал зелье в рюкзак. Ты заметила коврик и котелок. Похоже, он собрался в поход.', potionType1 = 5, potionType2 = 3, positiveText1 = 'Слыхали? Какой-то хлюпик вытащил меч из камня!', positiveText2 = 'Какой-то хлюпик хвастается, что вытащил меч из камня и вставил обратно. Ему верят.', negativeText = 'Очередной сопляк опозорился, пытаясь вытащить меч из камня.', canBlockHero = false}\n\n local story3 = { heroName = 'Артур Доходяга', heroSex = 1, number = 3, isLastStory = true, active = true, startText = 'В лавку гордо прошествовал уже знакомый тебе прыщавый паренёк. На поясе у него красовался ржавый меч, а за спиной грязной тряпкой висел роскошный плащ. <s>\n<s>\n— Добрый день, сэр. У Вас найдётся противоядие, такое, чтобы выпил — и никакие змеи не страшны?', endText = '— Благодарю Вас, сэр, — попрощался парень.', potionType1 = 1, potionType2 = 3, positiveText1 = 'Парень, который меч вытащил, объявил себя внебрачным сыном короля и правителем из легенды. Говорят, он устроил пир, да несогласные ему яд в вино бухнули. И ни-че-го!  Люди убедились, что он избран богом и голосуют за него.', positiveText2 = 'Парень, который меч вытащил, объявил себя внебрачным сыном короля и правителем из легенды. Говорят, он устроил пир, да такую речь задвинул, что все прежние враги нынче в числе его избирателей.', negativeText = 'Королевского бастарда отравили. Не помог ему меч из камня.', canBlockHero = false, achievement = 'Король умер, да здравствует король — завершена сюжетная линия Артура Доходяги' }\n\nlocal newHero = { name = \"Артур Доходяга\", hStory1 = story1, hStory2 = story2, hStory3 = story3}\naddHero(newHero)\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Какой-то крестьянин', heroSex = 1, number = 1, isLastStory = false, active = true, startText = 'Неуверенно озираясь по сторонам и разглядывая ассортимент зелий к прилавку прошаркал крестьянин. <s>\n<s>\n— Платон, — представился он. — Мне бы чего-нибудь покрепче, но так, чтобы голова не болела. А то здоровье нынче уже не то..', endText = '— Благодарствую, — поклонился Платон и не разгибаясь удалился.', potionType1 = 1, potionType2 = 3, positiveText1 = 'Среди крестьян расползаются слухи о проклятье, павшем на Платона — он пьёт чистый спирт и не пьянеет.', positiveText2 = 'Поговаривают, одним из вечеров крестьянин Платон выступал перед публикой, рассказывая о вращении планет и полётах в космос. К сожалению, на утро он ничего не помнил.', negativeText = 'Известный в узких кругах самогонный сомелье Платон настоятельно не рекомендует приобретать алкоголь в вашей лавке.', canBlockHero = false }\n\n local story2 = { heroName = 'Какой-то крестьянин', heroSex = 1, number = 2, isLastStory = false, active = true, startText = 'Гладковыбритый мужчина с лёгким запахом перегара уверенно проследовал к прилавку. <s>\n<s>\n— Здрасть, я от Платона, — подмигнул он.', endText = 'Спрятав за пазухой пузырёк, мужчина кивнул и безмолвно удалился.', potionType1 = 7, potionType2 = 1, positiveText1 = 'В городе кто-то торгует домашним самогоном. Объёмы небольшие, но качество отменное.', positiveText2 = 'Очередной крестьянин исцелился от алкоголизма. Клин клином вышибают.', negativeText = 'Крестьяне поговаривают, что в вашей лавке продают самый плохой алкоголь.', canBlockHero = false }\n\n local story3 = { heroName = 'Какой-то крестьянин', heroSex = 1, number = 3, isLastStory = true, active = true, startText = '— Еле вас нашёл! — воскликнул крестьянин, едва переступив порог. — Надеюсь, ваша самогонка действительно так хорошо, как говорят! Одну бутылочку, будьте добры.', endText = 'Крестьянин уходит с улыбкой коллекционера, заполучившего редкий экспонат.', potionType1 = 3, potionType2 = 7, positiveText1 = 'Нотки мускатного ореха и тонкое фруктовое послевкусие — так простолюдины отзываются о Ваших зельях.', positiveText2 = 'Ваши зелья считаются лучшими среди безалкогольных напитков.', negativeText = 'Один негативный отзыв — и Ваши игристые зелья больше не котируются среди крестьян. Вкусы толпы так переменчивы!', canBlockHero = false, achievement = 'Винодельня — завершена сюжетная линия крестьян-выпивох' }\n\nlocal newHero = { name = \"Какой-то крестьянин\", hStory1 = story1, hStory2 = story2, hStory3 = story3}\naddHero(newHero)\nend",
+        "text": "Герой: Какой-то крестьянин"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Гладиатор Валерос', heroSex = 1, number = 1, isLastStory = false, active = true, startText = 'Накаченный мужчина в набедренной повязке робко попросил обезболивающее от тяжёлых ранений.', endText = 'Странный покупатель ушёл.', potionType1 = 1, potionType2 = 2, positiveText1 = 'Вы смотрите гладиаторские бои? Вчера сорвались все ставки. Никому неизвестный гладиатор проявил чудеса живучести и отрастил отрубленную голову.', positiveText2 = 'Вы смотрите гладиаторские бои? Вчера один гладиатор воскрес из мёртвых прямо на носилках. Тамошний медик клянётся, что у него не было пульса и кровотечения несколько минут.', negativeText = 'Вы смотрите гладиаторские бои? Давненько не было так скучно — на арену гонят задохликов,  которые мрут, как мухи. Тоже мне, зрелища. А вот за хлеб — спасибо.', canBlockHero = false }\n\n local story2 = { heroName = 'Гладиатор Валерос', heroSex = 1, number = 2, isLastStory = false, active = true, startText = 'Мужчина с ужасным шрамом на шее просит повторить «то обезболивающее». Заметив твой пристальный взгляд, он обмотался шарфиком.', endText = '— Я ваш должник, — уходя, он отдал гладиаторский салют.', potionType1 = 3, potionType2 = 2, positiveText1 = 'Гладиатор Валерос довёл противника до слёз под одобрительный рёв толпы. Ещё одно доказательство, что слова ранят глубже меча.', positiveText2 = 'Вчера на гладиаторских боях Валерос применил свой излюбленный приём: притворился мёртвым и дождался смерти противника от чужого меча. На него ставят всё больше.', negativeText = 'Вчерашний бой доказал, что все гладиаторы смертны, даже Валерос.', canBlockHero = false }\n\n local story3 = { heroName = 'Гладиатор Валерос', heroSex = 1, number = 3, isLastStory = true, active = true, startText = 'В лавку пожаловала местная легенда. Теперь его имя известно каждому ребёнку, но ты-то помнишь, как Валерос впервые просил тебя о помощи.', endText = '— Последний бой — и свобода, — доверительно сообщил Валерос и вышел.', potionType1 = 5, potionType2 = 2, positiveText1 = 'На закрытии сезона гладиаторских боёв Валерос голыми руками уложил медведя на лопатки. Свободу даровали обоим.', positiveText2 = 'На закрытии сезона гладиаторских боёв Валерос так искусно прикинулся мёртвым, что медведь обнюхал его и закидал ветками. Теперь Валерос свободен и открыл собственную гладиаторскую Школу Опоссума.', negativeText = 'Легендарный гладиатор Валерос так и не получил свободу — победу одержал медведь.', canBlockHero = false, achievement = 'Чемпион арены — завершена сюжетная линия гладиатора Валероса' }\n\nlocal newHero = { name = \"Гладиатор Валерос\", hStory1 = story1, hStory2 = story2, hStory3 = story3}\naddHero(newHero)\nend",
+        "calculate": true,
+        "text": "Герой: Гладиатор Валерос",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Русалка', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'К прилавку по стеночке проковыляла нетвёрдо стоящая на ногах девушка. От неё сильно разило рыбой. Жестами она объяснила, что хочет не то отравиться, не то утопиться.', endText = 'Глотая слёзы, девушка уковыляла прочь.', potionType1 = 2, potionType2 = 3, positiveText1 = 'Сенсация! Заморского принца отравили! Будет ли война с заморским королевством? Читайте в следующем выпуске, — такой плакат висит на главной площади. Вы удивлены, что я умею читать?', positiveText2 = 'Заморский принц завёл гарем. Говорят, одна из его девушек страшно воняет рыбой. Публика с замиранием ждёт ответа заморского короля, известного однолюба.', negativeText = 'На побережье заметили необычайно обильную морскую пену.', canBlockHero = false }\nlocal newHero = { name = \"Русалка\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Инквизитор', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Стараясь не выделяться, в лавку зашёл самый обычный человек. <s>\n<s>\n— Я самый обычны покупатель и хочу купить у вас самое обычное зелье, — сказал он.', endText = 'Человек осторожно положил купленное зелье в самый обычный металлический ящик, перекрестился и вышел.', potionType1 = 7, potionType2 = 3, positiveText1 = 'Вы слышали? Сенсационное разоблачение! Инквизиция провела контрольную закупку в лавке колдуна и не нашла в зелье ни капли волшебства!', positiveText2 = 'Отец Валенсий был избран вторым папой Инквизиции. В своей блестящей предвыборной речи он особенно подчеркнул, что всегда обходил колдовские лавки стороной.', negativeText = 'Инквизиция провела контрольную закупку волшебных зелий. Качество подтверждено, но адрес лавки они не называют.', canBlockHero = false }\nnewHero = { name = \"Инквизитор\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Делец Родригес', heroSex = 1, number = 1, isLastStory = false, active = true, startText = 'Приезжий делец Родригес просит зелье, чтобы понимать язык птиц. В юношестве он работал посыльным, а теперь хочет открыть свою почтовую голубятню.', endText = 'Картинно поклонившись, Родригес удалился.', potionType1 = 3, potionType2 = 7, positiveText1 = 'Вчера на главной площади некий Родригес курлыкал перед огромной стаей голубей. Ходят слухи, теперь они работают на него.', positiveText2 = 'Некий Родригес утверждает, что голубиный язык очень сложен, но ему удалось договориться о сотрудничестве  60/40.', negativeText = 'Какой-то странный парень вчера курлыкал перед огромной стаей голубей. Кажется, он их чем-то обидел, потому что ушёл весь в помёте.', canBlockHero = false }\n\n local story2 = { heroName = 'Делец Родригес', heroSex = 1, number = 2, isLastStory = true, active = true, startText = 'В Лавку вошёл уже знакомый тебе делец Родригес. Его почтовая голубятня процветает. Теперь он хочет отправлять не только письма, но и бандероли.', endText = 'Откланявшись, Родригес уходит.', potionType1 = 5, potionType2 = 2, positiveText1 = 'Если вам нужно будет отправить что-то в другой город, идите к Родригесу. Его голуби осуществляют самые быстрые грузоперевозки.', positiveText2 = 'Говорят, голубятню Родригеса поразил мор. Выжили всего несколько самых сильных голубей, зато они могут переносить небольшие посылки.', negativeText = 'Иностранцы странные. Голубевод Родригес пытался заставить своих птах носить габаритные грузы, но ведь это всего лишь птицы!', canBlockHero = false }\nnewHero = { name = \"Делец Родригес\", hStory1 = story1, hStory2 = story2}\naddHero(newHero)\nend",
+        "text": "Герои 4, 6, 7: Русалка, Инквизитор, делец Родригес",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Герои 8-11: Финик де Плюе, Бард Йолло Кривые-Пальцы, Гладиатор Никитус, Венда Пьянчуга",
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Финик де Плюе', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Грузный мужчина бросил на прилавок мешочек золотых. Он сетует на то, что очередная закупка экзотических фруктов оказалась отвратительного качества.  <s>\n<s>\n— Клиенты обходят мою лавку стороной! Что же мне делать?!', endText = 'Сдержанно поблагодарив, мужчина удалился, оставив визитку фруктовой лавки Финика де Плюе.', potionType1 = 1, potionType2 = 3, positiveText1 = 'Прошёл слух, что экзотические фрукты Финика де Плюе хоть и отвратны на вкус, зато исцеляют болезни.', positiveText2 = 'Экзотические фрукты Финика де Плюе настолько аппетитны, что посетители верят, что живот болит из-за плохих овощей его конкурента.', negativeText = 'Народ возмущён отвратительным качеством экзотических фруктов. Городская стража схватила продавца и насильно накормила его же товаром. Теперь портянки Финика де Плюе можно почувствовать аж на третьей улице от его лавки.', canBlockHero = false }\nlocal newHero = { name = \"Финик де Плюе\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Бард Йолло Кривые-Пальцы', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Коротышка Йолло Кривые-Пальцы плохими стихами просит зелье, чтобы стать лучшим музыкантом города. Твой фамильяр закрывает уши.', endText = 'Йолло попрощался короткой песней, от которой твой фамильяр сбежал в подвал.', potionType1 = 3, potionType2 = 5, positiveText1 = 'В королевский театр пригласили непревзойдённого лютниста Йолло Кривые-Пальцы.', positiveText2 = 'Не ходите на главную площадь. Там играет Йолло Кривые-Пальцы. От его завываний уши сворачиваются в трубочку, но те, кто отказывается аплодировать, уходят битыми.', negativeText = 'Йолло Кривые-Пальцы не только не смог спеть «В траве сидел кузнечик», но ещё и отрезал себе пальцы об струны лютни. Что за конфуз!', canBlockHero = false }\nnewHero = { name = \"Бард Йолло Кривые-Пальцы\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Венда Пьянчуга', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Едва держась на ногах, в лавку ввалился пьянчуга. Ты узнал в нём завсегдатая местной таверны. Пьяньчуга сообщает, что решил завязать, и просит твоей помощи.', endText = 'Уходя, пьянчуга таки не устоял на ногах и навернулся с крыльца на мостовую.', potionType1 = 1, potionType2 = 2, positiveText1 = 'Местная таверна лишилась завсегдатая — Венда Пьянчуга завязал с пьянством и вновь занялся изготовлением украшений из ракушек. Особой популярностью пользуются его заколки.', positiveText2 = 'Это был нетривиальный способ, но все узнали кто подлил яд в кружку хозяина таверны. Венда Пьянчугу туда больше не пускают и выпить ему больше негде. Но ведь главное — результат!', negativeText = 'Венда Пьянчуга клялся, что завязал с выпивкой. А сегодня он победил в состязании по уничтожению сидра. Целый месяц ему будут наливать совсем бесплатно.', canBlockHero = false }\nnewHero = { name = \"Венда Пьянчуга\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Наёмница Елена', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Походкой от бедра к прилавку подплыла голубоглазая красавица в лёгких доспехах. Она картинно откинула назад длинные светлые волосы и попросила вязкий яд, который хорошо держался бы на металле.', endText = 'Уходя, красавица послала тебе воздушный поцелуй.', potionType1 = 2, potionType2 = 7, positiveText1 = 'Вчера на гладиаторской арене знаменитая наёмница Елена, любимица толпы и особенно мужской её части, сразила очередного противника, едва оцарапав мечом.', positiveText2 = 'Вчера состоялся очередной бой наёмницы Елены, известной сердцеедки и отравительицы. Её противник упал в судорогах, но в лазарете понял, что здоров.', negativeText = 'Вчера была повержена наёмница Елена, известная сердцеедка и отравительница. Не знаю, что было на её клинках, но это только добавило сил её противнику.', canBlockHero = false }\nnewHero = { name = \"Наёмница Елена\", hStory1 = story1}\naddHero(newHero)\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Каин Садовод', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Парнишка Каин отчаянно хочет стать наследником фруктовых плантаций отца, но дедушка настаивает, чтобы сады достались его младшему брату. <s>\n<s>\n— А он даже дерево подрезать нормально не может! — возмущается Каин.', endText = 'Каин уходит, оставив на прилавке сочное яблоко.', potionType1 = 2, potionType2 = 3, positiveText1 = 'При невыясненных обстоятельствах погиб младший сын известного фруктового магната.', positiveText2 = 'Старший сын известного фруктового магната женился на дочери конкурента и теперь живёт, словно в раю.', negativeText = 'Оставшись без наследства, старший сын фруктового магната Каин отрёкся от отца и основал конкурентные сады в соседнем городе. Он ждёт, когда его неумелый младший брат опозорится, чтобы выкупить семейные сады за бесценок.', canBlockHero = false }\nlocal newHero = { name = \"Каин Садовод\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Карлик Тикли', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Карлика Тикли чрезвычайно беспокоит, что в северном лесу завелось чудовище, которое жрёт путников налево и направо. Он просит зелье силы дабы победить зверя.', endText = 'Карлик с трудом дотянулся до пузырька зелья на прилавке и уковылял восвояси.', potionType1 = 5, potionType2 = 3, positiveText1 = 'Чудовище из северной чащи повержено карликом Тикли — он переломил хребет медведю одной левой! Толпа ликует, Тикли — на высоте.', positiveText2 = 'Карлик Тикли одолел грозного хищника из северной чащи и принёс его шкуру! Чудище размером и видом было похоже на белку, но какая ярость! Слава герою!', negativeText = 'Ка-кой-то карлик пытался завалить зверя из северной чащи. Не каждый мужчина справится с медведем в одной набедренной повязке, что уж говорить о парне с телосложением пятилетнего ребенка. Теперь на выходе из города висит табличка : «Животных не кормить!»', canBlockHero = false }\nnewHero = { name = \"Карлик Тикли\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Фермер Джон', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Фермер Джон жалуется, что кто-то крадёт его скот.', endText = 'Благодарный фермер уходит.', potionType1 = 5, potionType2 = 1, positiveText1 = 'Ходит слух, что по ночам фермер Джон превращается в монстра и стережёт свой скот. Правда, иногда закусывает овцой-другой.', positiveText2 = 'Фермер Джон излечился от болей в спине и решил осуществить свою давнюю мечту стать рыцарем. Продал ферму и купил щит.', negativeText = 'Фермера Джона ударили по голове, пока он делал обход фермы, и увели очередных овец. Джон в бешенстве.', canBlockHero = false }\nnewHero = { name = \"Фермер Джон\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Чья-то золотая рыбка', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'В лавку вбежала заплаканная девочка лет семи. <s>\n<s>\n— Моя золотая рыбка заболела, — жалуется она.', endText = 'Девочка убежала, заметно повеселев.', potionType1 = 1, potionType2 = 7, positiveText1 = 'Одна семейная пара рассказывает про чудесное спасение их домашней рыбки. Говорят что рыбка была мертва уже 3 дня, но чудо помогло ей.', positiveText2 = 'Одна девочка рассказывает про чудесное спасение её домашней рыбки. Но мы-то знаем, что её родители просто купили новую.', negativeText = 'У Вас на крыльце лежит дохлая золотая рыбка и записка «Больше не верю в магию».', canBlockHero = false }\nnewHero = { name = \"Чья-то золотая рыбка\", hStory1 = story1}\naddHero(newHero)\nend",
+        "text": "Герои 12-15: Каин Садовод, Карлик Тикли, Фермер Джон, Чья-то золотая рыбка"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Герои 16-19: Аврора Мечтательница, Альфред Баттон, Дочь брадобрея, Придворная дама Хельга",
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Аврора Мечтательница', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Аврора, молодая девушка из бедной семьи хочет разбогатеть, но у неё нет никаких умений или талантов, которые могли бы приносить ей прибыль.', endText = 'Аврора утанцевала прочь.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Говорят, Аврора проводит семинары для девушек «Как стать успешной» и получает неплохие деньги.', positiveText2 = 'В приезжем цирке новая звезда — Аврора, самая сильная девушка в мире!', negativeText = 'Вы слышали какие-нибудь новости об Авроре? И я нет.', canBlockHero = false }\nlocal newHero = { name = \"Аврора Мечтательница\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Альфред Баттон', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Альфред Баттон страшно расстроен — в подвале его пекарни завелись крысы. Альфред любит крыс, но они не нравятся покупателям, а некоторые панически боятся, что крысы могут их покусать.', endText = 'Повеселевший пекарь удалился.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Людям нравятся очаровательные крыски Альфреда Баттона. В городе открылась первая булочная, где можно поиграть с крысами!', positiveText2 = 'Говорят, в пекарне Альфреда Баттона качество сырья контролируют крысы. Ещё они помогают на кухне и устраняют конкурентов.', negativeText = 'Булочная Альфреда Баттона закрылась из-за отсутствия покупателей.', canBlockHero = false }\nnewHero = { name = \"Альфред Баттон\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Дочь брадобрея', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Брадобрей расстроен, что его дочь спуталась с цыганом и собирается уехать с табором, не слушая отца. Девушка молода и наивна, следует за мимолётной влюблённостью, отец не может достучаться до разума своей дочери.', endText = 'Дверь за брадобреем закрылась.', potionType1 = 1, potionType2 = 3, positiveText1 = 'Дочь брадобрея всем говорит, что любовь — это болезнь, а она исцелилась.', positiveText2 = 'Заезжий цыган оставил табор, чтобы обучиться брадобрейскому делу.', negativeText = 'Несчастный брадобрей остался один.', canBlockHero = false }\nnewHero = { name = \"Дочь брадобрея\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Придворная дама Хельга', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Придворная дама Хельга сетует, что её герцог бегает по девицам.', endText = 'Хельга оставляет щедрые чаевые и уходит. Её ждёт карета.', potionType1 = 1, potionType2 = 3, positiveText1 = 'Люди болтают о чудесном преображении придворной дамы Хельги — её обезображенное голубой кровью лицо друг стало идеальным. А ещё она подала на развод. Её муж обескуражен и молит о прощении.', positiveText2 = 'Придворная дама Хельга внезапно обзавелась толпой поклонников. Её муж был вынужден прекратить свои интрижки, так как всё свободное время проводит на дуэлях.', negativeText = 'Весь город судачит о скандальном разводе придворной дамы Хельги.', canBlockHero = false }\nnewHero = { name = \"Придворная дама Хельга\", hStory1 = story1}\naddHero(newHero)\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Вилма Пугливая', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Подошедший к прилавку мужчина рассказывает, что его жена, Вилма Пугливая, вот уже полгода живёт во дворе и боится возвращаться в дом, потому что уверена, что умрёт, если вдохнет пыль.  <s>\n<s>\n— Я убираюсь так часто, как могу, но она непреклонна. А ведь скоро настанут холода, — беспокоится он.', endText = 'Заботливый муж облегчённо вздохнул, получив пузырёк с зельем.', potionType1 = 7, potionType2 = 1, positiveText1 = 'Говорят, Вилма Пугливая теперь убеждена в своей неуязвимости перед пылью, грязью и болезнями. Она вновь живёт в доме, но совсем перестала поддерживать чистоту.', positiveText2 = 'Говорят, Вилма Пугливая исцелилась и снова живёт в дом. Она увлекаться психиатрией, чтобы исследовать свой странный недуг.', negativeText = 'Муж Вилмы Пугливой увёз жену в тёплые страны, чтобы она могла жить во дворе круглый год.', canBlockHero = false }\nlocal newHero = { name = \"Вилма Пугливая\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Лошадь фермера Кирка', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Фермер Кирк не может возделывать поля, потому что его лошадь постарела и не в силах работать как прежде. Денег на новую лошадь у Кирка нет, да и на зелья тоже. Он протягивает тебе морковку, возможно, последнюю.', endText = 'Кирк уходит прочь.', potionType1 = 5, potionType2 = 1, positiveText1 = 'Старая кляча фермера Кирка работает в поле за десятерых. Кирк планирует возделать новое поле.', positiveText2 = 'Фермер Кирк всем рассказывает, что его лошадь помолодела, и горюет, что не выпил зелье сам.', negativeText = 'Лошадь фермера Кирка пала от старости, да и ему недолго осталось.', canBlockHero = false }\nnewHero = { name = \"Лошадь фермера Кирка\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Сара Акварель', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'В посетительнице ты узнал известную художницу Сару Акварель. Она жалуется, что в последние годы совсем не может рисовать, так как у неё все валится из рук и совсем нет вдохновения.', endText = 'Сара ушла, дав тебе пару советов по дизайну интерьера.', potionType1 = 7, potionType2 = 1, positiveText1 = 'Сара Акварель создала серию мрачных картин. Говорят, она черпает вдохновение в своей депрессии.', positiveText2 = 'Сара Акварель вернулась к творчеству. Её яркие жизнерадостные картины вновь радуют глаз. Она не хочет вспоминать время своей депрессии.', negativeText = 'Когда-то была прекрасная художница Сара Акварель, но теперь о ней мало кто помнит.', canBlockHero = false }\nnewHero = { name = \"Сара Акварель\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Стелла Чистюля', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Стелла Чистюля, некогда дочка богатого торговца, а теперь жена обычного горожанина, страшно расстроена дурной привычкой мужа плевать дома на пол.', endText = 'Стелла спешит по своим делам.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Ходит слух, что муж Стеллы Чистюли вдруг стал желанным гостем на светских мероприятиях. Ему пришлось экстренно обучиться хорошим манерам.', positiveText2 = 'Говорят, что какой-то мужик так плюнул в стену, что пробил её! Теперь он, напуганный своей силой, продвигает в массы идею о вреде плевков для конструкций жилых зданий.', negativeText = 'Стелла Чистюля вновь свободна. Как грустно, когда брак распадается из-за плевков.', canBlockHero = false }\nnewHero = { name = \"Стелла Чистюля\", hStory1 = story1}\naddHero(newHero)\nend",
+        "text": "Герои 20-23: Вилма Пугливая, Лошадь фермера Кирка, Сара Акварель, Стелла Чистюля",
+        "calculate": true,
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Дварф Гудрон', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Дверь резко распахнулась — её едва не выбил пинком печально известный в городе дварф Гудрон. <s>\n<s>\n— Дайте мне что-нибудь, чтобы не быть таким злым, — крикнул он и впечатал кулак в стену. Гудрон явно сдерживал себя, чтобы ничего не сломать.', endText = 'Уходя, дварф снова едва не вышиб дверь.', potionType1 = 7, potionType2 = 1, positiveText1 = 'Рассказывают, что дварф Гудрон стал спокойнее. Но не советую это проверять.', positiveText2 = 'Теперь можно не обходить дварфов стороной — буйный Гудрон излечился от внезапных приступов гнева.', negativeText = 'Городская стража предупреждает: дварфы опасны.', canBlockHero = true, lockedHero = 'Дварф Мазут'; lockedStoryNum = 1 }\nlocal newHero = { name = \"Дварф Гудрон\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Дварф Мазут', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'В лавку пожаловал дварф Мазут. Его в городе знают все, тведь только он угомонить своего буйного братца Гудрона. Мазут просит какое-нибудь средство, чтобы ослабить вспышки гнева младшего брата.', endText = 'Перед уходом Мазут начертил у твоего порога дварфийскую охранную руну.', potionType1 = 5, potionType2 = 1, positiveText1 = 'Ходят слухи, что дварф Гудрон отныне боится буянить, так как его брат теперь способен оглушать щелчком пальцев.', positiveText2 = 'Теперь можно не обходить дварфов стороной — буйный Гудрон излечился от внезапных приступов гнева.', negativeText = 'Городская стража предупреждает: обходите дварфов стороной и никогда с ними не спорьте.', canBlockHero = true, lockedHero = 'Дварф Гудрон'; lockedStoryNum = 1 }\nnewHero = { name = \"Дварф Мазут\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Святой отец Алистер', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Святой отец Алистер жалуется на вечные простуды служек из-за сквозняков в кельях.', endText = 'Перед уходом Алистер освятил твою лавку. Фамильяр всем своим видом выражает презрение.', potionType1 = 3, potionType2 = 1, positiveText1 = 'У храма резко возросли сборы пожертвований. Прихожане в восторге от святого отца и рвутся предложить свои услуги. Например, отремонтировать кельи.', positiveText2 = 'Говорят, святой отец Алистер молитвами поставил на ноги всех служек, а после заставил их делать срочный ремонт.', negativeText = 'В храме продолжается сезон простудных заболеваний.', canBlockHero = false }\nnewHero = { name = \"Святой отец Алистер\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Смотритель кладбища Фок', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'В лавку пожаловал Фок, смотритель кладбища в богатом районе города. Он жалуется, что по ночам мертвецы покидают семейные склепы и буянят, а власти не хотят проблем с их живыми родственниками, и потому не вызывают некроманта.', endText = 'Уходя, Фок обещает приберечь для тебя хорошее местечко.', potionType1 = 3, potionType2 = 7, positiveText1 = 'Богатые горожане собираются по ночам на кладбище — смотритель Фок организовывает вечера неживой поэзии, а так же игру в покер.', positiveText2 = 'Смотритель кладбища Фок хвастается, как сладко спит теперь по ночам, ведь мёртвые спокойно спят в своих склепах. Это странно, потому что банкир рассказывает о визите своей почившей бабушки.', negativeText = 'Смотритель кладбища уволился. Теперь он охранник в детском саду. Говорит, что даже дети ведут себя тише, чем почившие богачи.', canBlockHero = false }\nnewHero = { name = \"Смотритель кладбища Фок\", hStory1 = story1}\naddHero(newHero)\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Герои 24-27: Дварф Гудрон, Дварф Мазут, Святой отец Алистер, Смотритель кладбища Фок"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Герои 28-31: Сыщица Лэнлисс, Марког Страхолюд, Курт Вонючка, Жрец Минка",
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Сыщица Лэнлисс', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'К прилавку грациозно прошла сыщица Лэнлисс, известная в городе полуэльфскими ушами и не вполне законными методами. Сыщица просит средство, чтобы вывести подозреваемых на чистую воду.', endText = 'Лэнлисс расплатилась редкими ингредиентами и удалилась.', potionType1 = 2, potionType2 = 3, positiveText1 = 'Городские стражники говорят, что по ночам в городе стало ощутимо спокойней, и шёпотом благодарят остроухую Лэнлисс.', positiveText2 = 'Капитан городской стражи не поверил своим глазам, когда глава банды преступников пожаловал к нему с поличным и умолял хоть на мгновение вызвать к нему прекрасную полуэльфку.', negativeText = 'В городской страже судачат, что полуэльфка Лэнлисс лишилась острых ушей и находится в лазарете.', canBlockHero = false }\nlocal newHero = { name = \"Сыщица Лэнлисс\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Марког Страхолюд', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'В лавку ввалился высоченный мужчина с посохом в руке. Зеленоватый оттенок кожи и торчащие наружу нижние клыки выдавали в нём полуорка.  <s>\n<s>\n— Вот, даже Вы меня боитесь, — огорчённо сказал он, заметив, как встрепенулся твой фамильяр. — Я Марког, лекарь. И ко мне никто не идёт лечиться, потому что я страшный!', endText = 'Перед уходом Марког оставил горсть лакомств для твоего фамильяра.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Недавно открылась новая лечебница. Там заправляет невероятно харизматичный полуорк.', positiveText2 = 'Ходят слухи, что Марког Страхолюд решил попытать счастья в орочьем клане, туда ему и дорога. Люди вздохнули с облегчением.', negativeText = 'У Маркога Страхолюда по-прежнему нет клиентов, хотя говорят, что он лучший в городе костоправ.', canBlockHero = false }\nnewHero = { name = \"Марког Страхолюд\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Курт Вонючка', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'В лавку зашёл невысокий мужчина, от которого невыносимо разило канализацией. Ты заткнул нос, и покупатель виновато развёл руками.  <s>\n<s>\n— Ничего не могу с этим поделать, — пожаловался он. — Все шарахаются.', endText = 'Мужчина удалился, подперев дверь, чтобы лавка проветрилась.', potionType1 = 3, potionType2 = 7, positiveText1 = 'Люди охотно общаются с Куртом Вонючкой, ведь его улыбка затмевает любую вонь. И как мы раньше не замечали?', positiveText2 = 'Курт Вонючка рассказывает, что добрый волшебник дал ему чудесное средство от вони и велел применять наружно при помывке с мылом. Ежедневно. Теперь Курт пахнет лавандой.', negativeText = 'Хозяин таверны рассказывает, что каждый вечер выкатывает бочонок пива для Курта Вонючки. Бедолага совсем один...', canBlockHero = false }\nnewHero = { name = \"Курт Вонючка\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Жрец Минка', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'В лавку пожаловал молодой жрец. Он горюет, что выглядит как подросток, и никто не воспринимает его в серьез, а бабушки вовсе тискают за щёки и угощают пирожками.', endText = 'Жрец подарил тебе оберёг от злых духов и поспешил на работу.', potionType1 = 5, potionType2 = 3, positiveText1 = 'Люди рассказывают, как неожиданно возмужал жрец Минка. Бабушки теперь сватают ему своих внучек и просят наколоть дрова.', positiveText2 = 'Ангельская внешность юного жреца Минки привлекает в храм всё новых прихожан. Все хотят исповедаться Минке.', negativeText = 'Юный жрец Минка разочаровался в людях и решил стать некромантом.', canBlockHero = false }\nnewHero = { name = \"Жрец Минка\", hStory1 = story1}\naddHero(newHero)\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Герои 32-35: Неуловимый Джо, Череп Юфар, Машка Путешественница, Зола Танцовщица",
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Неуловимый Джо', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'В лавку вошёл высокий мужчина в широкополой шляпе. Лицо его закрывал повязанный бардовый платок. Манерно облокотившись о прилавок, он сказал: <s>\n<s>\n— Родители моей возлюбленной не хотят наших встреч и держат её в высокой башне. Нет ли у вас средства, которое помогло бы нам сбежать?', endText = 'Уходя, загадочный мужчина снял шляпу и поклонился.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Новая кража Неуловимого Джо увенчалась успехом! Говорят, стражники герцога Дюка сами отдали ему семейную реликвию — ведь он так вежливо попросил! Каков негодяй!', positiveText2 = 'Новая кража Неуловимого Джо увенчалась успехом! На сей раз этот негодяй увёл фамильную реликвию герцога Дюка, которая хранилась в башне и круглосуточно охранялась! Стажа клянётся, что Джо вскарабкался по отвесной стене и ускакал от них по крышам.', negativeText = 'Стража герцога Дюка схватила Неуловимого Джо, когда он пытался украсть семейную реликвию. Герцог ликует.', canBlockHero = false }\nlocal newHero = { name = \"Неуловимый Джо\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Череп Юфар', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'По воздуху к прилавку плавно проплыл человеческий череп. Его глазницы сияли мягким зелёным светом, а кости были покрыты причудливой резьбой. Твой фамильяр приготовился к драке, почуяв чужую магию.  <s>\n<s>\n— Помоги мне, — произнёс череп глухим каркающим голосом. — Моя душа навеки привязана к этим костям, но я не хочу быть изгоем.', endText = 'Череп осторожно взял в зубы пузырёк зелья и уплыл прочь.', potionType1 = 3, potionType2 = 2, positiveText1 = 'Студенты Академии Непризнанных Искусств обсуждают нового преподавателя — говорят, его лекции по естествознанию непревзойдённо увлекательны, хотя он всего лишь летающий череп.', positiveText2 = 'В таверне новый зазывала — летающий череп предлагает его перепить. Говорят, у него настолько презентабельный вид, что посетители трут его затылок на удачу.', negativeText = 'Люди рассказывают, что иногда по ночам на кладбищах можно заметить летающий череп, который пристаёт с беседами к беспокойным мертвякам.', canBlockHero = false }\nnewHero = { name = \"Череп Юфар\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Машка Путешественница', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'В лавку вошла девчонка лет семнадцати, разодетая как куртизанка. Гордо процокав высоченными каблуками, явно не предназначенными для верховой езды, и оправив едва прикрывающую попу юбку, она представилась Марией Путешественницей и потребовала зелья, чтобы влюбить в себя принца и научить коня говорить.', endText = 'Девчонка удалилась размахивая светящимся прямоугольным артефактом и ругаясь на отсутствие сетей и каких-то связей. В оплату она оставила золотой браслет удивительно тонкой работы.', potionType1 = 3, potionType2 = 7, positiveText1 = 'Вчера на приём к герцогу Дюку  явилась совершенно уникальная личность! Ах, Вы бы слышали, из какого чудесного города она родом! Там люди перемещаются по воздуху и под землёй в особых железных бочках! Марию отправили прямиком в магический институт, делиться опытом.', positiveText2 = 'Вчера на приём к герцогу Дюку явилась некая Машка Путешественница. Она была настолько уверена в своей неотразимости, что ошарашенные её манерами, внешним видом и бредовыми рассказами аристократы отправили девчонку прямиком в магический институт — может быть, тамошние лекари ей помогут.', negativeText = 'Странная полуголая девчонка пристаёт к профессорам Академии Непризнанных Искусств и рассказывает о железных бочках, в которых люди летают по небу и ездят под землёй.', canBlockHero = false }\nnewHero = { name = \"Машка Путешественница\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Зола Танцовщица', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'К прилавку протанцевала босая девушка в сильно потрёпанном платье. Она грезит о балах, но завистливые сёстры прячут её хрустальные туфельки.', endText = 'Присев в реверансе и выполнив сложны пируэт, девушка отправилась восвояси.', potionType1 = 1, potionType2 = 3, positiveText1 = 'На балу герцога Дюка никому неизвестная босая девушка поразила всех своей выносливостью — она танцевала всю ночь без отдыха, не взирая на косолапость партнёров.', positiveText2 = 'Гости на балу герцога Дюка были поражены танцем неизвестной девушки в хрустальных туфельках. Она была неописуемо прекрасна, особенно на фоне подтанцовки из двух её сестёр.', negativeText = 'На бал герцога Дюка явилась неизвестная босая девушка. Танцевала она прекрасно, но была вынуждена покинуть бал ещё до полуночи, так как неловкие партнёры оттоптали ей ноги.', canBlockHero = false }\nnewHero = { name = \"Зола Танцовщица\", hStory1 = story1}\naddHero(newHero)\nend",
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Рон Трубочист', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'Ссутулившись, к прилавку просеменил молодой трубочист. Он просит махонький кусочек философского камня, чтобы отдать долги.', endText = 'Принимая склянку с зельем, мужчина не выглядел довольным. Он ушёл, оставив после себя облако сажи.', potionType1 = 3, potionType2 = 1, positiveText1 = 'Не давайте в долг Рону Трубочисту, а не то он и Вас заболтает так, что будете считать, что это Вы ему должны.', positiveText2 = 'Говорят, Рона Трубочиста избили до полусмерти за долги. Но сегодня его видели на крыше таверны вполне здоровым.', negativeText = 'Главный лекарь лазарета в печали — только чудо может исцелить все переломы Рона Трубочиста.', canBlockHero = false }\nlocal newHero = { name = \"Рон Трубочист\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Леди Химус', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'К лавке проковыляла милейшая старушка леди Химус.  <s>\n<s>\n— Моя соседка постоянно жалуется на всех моих двадцать семь котиков, — доверительно сообщила она. — Мне бы очень хотелось перестать враждовать с ней.', endText = '— Ах, молодой человек, здоровья твоим котяткам, — попрощалась леди Химус.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Говорят, соседка леди Химус согласилась взять пару котят, и теперь они вместе занимаются выведением новой породы.', positiveText2 = 'Соседка леди Химус заверяет всех в своей искренней любви к котикам и немного заикается.', negativeText = 'Говорят, леди Химус пришлось уехать из города вместе со всеми кошками — её соседка занялась разведением бойцовских собак.', canBlockHero = false }\nnewHero = { name = \"Леди Химус\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Рашка Многодетная', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'В сопровождении выводка детей мал мала меньше в лавку протолкнулась грузная немолодая женщина. Она посетовала, что очень устает от семерых детей и пьяницы мужа.', endText = 'Многодетная мамаша долго отлавливала своё потомство по лавке, но в конце концов выгнала на улицу всех.', potionType1 = 3, potionType2 = 5, positiveText1 = 'Крестьяне отводят своих малолетних отпрысков на день к Рашке Многодетной — ребятишки в неё души не чают да труду охотно учатся, а их родители Рашке ещё и приплачивают.', positiveText2 = 'Отпрыски Рашки Многодетной ходят по струнке, и а её муж просит спасти от тиранши.', negativeText = 'Вы видели Рашку Многодетную? Как измучена эта бедная женщина!', canBlockHero = false }\nnewHero = { name = \"Рашка Многодетная\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Джон Скобли-Копай', heroSex = 1, number = 1, isLastStory = true, active = true, startText = 'В лавку робко заглянул дварф в измазанной землёй, песком и глиной одежде. <s>\n<s>\n— Здравствуйте, достопочтенный. Помогите мне, будьте любезны, в ситуацию щекотливую попал я: проводил раскопки древнего города, да герцог Дюк эти земли купил. Гоняет меня теперь его стража, не могу я законно любимым делом заниматься!', endText = 'В благодарность дварф протянул тебе бронзовую монету. Выглядела она древней.', potionType1 = 5, potionType2 = 3, positiveText1 = 'Люди герцога Дюка рассказывают о таинственном дварфе, который очень быстро копает и ещё быстрее бегает. Уж как ни пытались изловить его, чем ямы ни засыпали — всё без толку.', positiveText2 = 'На очередном научном собрании Университета Непризнанных Искусств дварф Джон Скобли-Копай выступил с такой пламенной речью о пользе археологии, что герцог Дюк лично попросил провести раскопки на его землях.', negativeText = 'Светило археологии Джон Скобли-Копай угодил в тюрьму. А ведь говорили ему, чтобы он оставил земли герцога Дюка в покое! Впрочем, парень не отчаивается, и уже откапал в тюремном подземелье чей-то череп.', canBlockHero = false }\nnewHero = { name = \"Джон Скобли-Копай\", hStory1 = story1}\naddHero(newHero)\nend",
+        "text": "Герои 36-39: Рон Трубочист, Леди Химус, Рашка Многодетная, Джон Скобли-Копай",
+        "calculate": true,
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Верблюдица Нильса', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'В лавку вошёл известный в узких кругах своей экстравагантностью фермер Нильс. Он жалуется, что собирался принять участие в верблюжьем конкурсе красоты, но его верблюдица слегла.', endText = 'Нильс поблагодарил и предложил тебе приобрести верблюжий навоз со скидкой.', potionType1 = 1, potionType2 = 3, positiveText1 = 'На конкурсе верблюжьей красоты в номинации «Самый здоровый горбун» победила питомица Нильса.', positiveText2 = 'На конкурсе верблюжьей красоты в номинации «Манящий взгляд из под ресниц» победила питомица Нильса.', negativeText = 'Конкурс верблюжьей красоты пришлось отменить, поскольку его единственная участница тяжело заболела.', canBlockHero = false }\nlocal newHero = { name = \"Верблюдица Нильса\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Рита Кушать-Подано', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Бедром придержав дверь, вошла подавальщица из таверны Рита. Глухо опустив на прилавок две кружки пива и блюдо с сосисками, она пожаловалась, что очень хочет замуж.', endText = 'Залпом осушив одну из кружек, Рита отправилась на работу.', potionType1 = 3, potionType2 = 1, positiveText1 = 'Посетители таверны без ума от подавальщицы Риты. Говорят, девушка за неделю получила столько предложений руки и сердца, что решила повременить с браком и подождать кого-то менее пылкого.', positiveText2 = 'Как изменилась Рита Кушать-Подано! Что за точёный стан и осиная талия! Говорят, хозяин таверны собрался просить её руки.', negativeText = 'Вы видели Риту Кушать-Подано? Бедная девушка, она и раньше-то была не красавица, а эти жуткие аллергические прыщи сделали её вовсе уродливой.', canBlockHero = false }\nnewHero = { name = \"Рита Кушать-Подано\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Поли Помидоро', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Фермерша Поли Помидоро, у которой ты часто закупаешься овощами и травами, страдает от напасти тли.', endText = 'Горячо поблагодарив, Поли ушла.', potionType1 = 2, potionType2 = 5, positiveText1 = 'Поли Помидоро нахваливает Ваши зелья в качестве средства от паразитов. Она говорит, что сдохла не только тля, но и блохи на её собаке.', positiveText2 = 'Фермеры занимают очередь, чтобы получить семена Поли Помидоро — её растения внезапно обрели жёсткий защитный покров, который не по зубам ни одному вредителю.', negativeText = 'Ферма Поли Помидоро переживает трудные времена. Вероятно, в этом году она останется без урожая.', canBlockHero = false }\nnewHero = { name = \"Поли Помидоро\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Паладин Света', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Мелодично звеня латным доспехом, к прилавку прошествовала паладин Света. Она жаждет совершить подвиг во имя добра!', endText = 'Тебе едва удалось выдворит Свету, убедив не искоренять зло в твоей лавке и не накладывать руки на твоего фамильяра.', potionType1 = 7, potionType2 = 5, positiveText1 = 'Сегодня ночью на кладбище для богатых буйствовала паладин Света. Вся нежить в ужасе попряталась в склепы и забаррикадировала двери.', positiveText2 = 'Сегодня ночью на кладбище для богатых буйствовала паладин Света. Вся нежить в ужасе разбежалась по соседним погостам, оставив разбитые надгробия и полуразрушенные склепы. Богачи недовольны, смотритель кладбища скучает, а главный жрец, ругаясь, выделил деньги на восстановление.', negativeText = 'Вчера на главной площади паладин Света целый день объявляла, что отправляется в крестовый поход. Поскорее бы она уже уехала...', canBlockHero = false }\nnewHero = { name = \"Паладин Света\", hStory1 = story1}\naddHero(newHero)\nend",
+        "text": "Герои 40-43: Верблюдица Нильса, Рита Кушать-Подано, Поли Помидоро, Паладин Света",
+        "calculate": true,
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlocal story1 = { heroName = 'Гадалка Фартиша', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'Кашляя и хлюпая носом, к прилавку прошла проезжая цыганка-гадалка.  <s>\n <s>\n— Карты поведали мне, что здесь я найду спасение от извечных сквозняков в моём дорожном шатре, — прокаркала она.', endText = 'На прощание гадалка вгляделась в твою ладонь и изрекла: <s>\n <s>\n— Вижу, в трудах ты, как пчела. Взял бы отпуск.', potionType1 = 1, potionType2 = 7, positiveText1 = 'Цыгане празднуют чудесное исцеление их гадалки. А может быть то, что больше не придётся скидываться ей на лекарства...', positiveText2 = 'Говорят, цыгане настолько устали от кашля своей гадалки, что собирались уехать без неё, да только она узрела это в кофейной гуще и решила открыть гадальный салон в нашем городе.', negativeText = 'Цыгане настолько устали от кашля своей гадалки, что собирались уехать без неё, да не решились. Боятся они эту женщину. Так и продолжают всем табором на лекарства скидываться.', canBlockHero = false }\nlocal newHero = { name = \"Гадалка Фартиша\", hStory1 = story1}\naddHero(newHero)\n\nstory1 = { heroName = 'Рейнджер Тейбс', heroSex = 2, number = 1, isLastStory = true, active = true, startText = 'В лавку влетела энергичная рейнджер Тейбс. Её единственная страсть — это забота о лесе и его обитателях, но работе Тейбс препятствуют три злобных медведя.', endText = 'Потрепав за ухом твоего фамильяра, Тейбс удалилась, насвистывая.', potionType1 = 1, potionType2 = 3, positiveText1 = 'Ходит слух, что рейнджер Тейбс измором приручила трёх медведей! Бедные звери устали с ней драться, а рейнджер каждый раз оказывалась невредима.', positiveText2 = 'Вы видели рейнджера Тейбс?! Она предлагает всем желающим нарисовать портрет с тремя дикими медведями! А звери слушают её как змеи — заклинателя.', negativeText = 'Нашему городу нужен новый рейнджер. Тейбс так и не смогла приручить медведей...', canBlockHero = false }\nnewHero = { name = \"Рейнджер Тейбс\", hStory1 = story1}\naddHero(newHero)\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Герои 44-45: Гадалка Фартиша, Рейнджер Тейбс"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Герои: ",
+        "lua_do": "function lua_do()\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 16,
+    "text": "",
+    "answers": []
+  }
+]

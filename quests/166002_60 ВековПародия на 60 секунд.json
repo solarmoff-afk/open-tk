@@ -1,0 +1,3967 @@
+[
+  {
+    "id": 1,
+    "text": "Учёные Росии разработали машину искажающее время и пространство. Во время испытаний что-то пошло не так и у тебя есть 60 секунд(не Веков) что-бы собрать вещи и людей. Начнём?! (Просьба не писать про то, что квест не закончен(он в разработке),",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начало"
+      },
+      {
+        "id": 1,
+        "text": "На вдохновение:\nЯНДЕКС ДЕНЬГИ: 410016322293078",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ладно. У тебя будет 60 секунд на сбор предметов из трёх частей дома древний мир, средние века и будущее. В каждом времени свои вещи, но в редких случаях можно использовать вещи из других времён. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Продолжить"
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "seconds ",
+          80
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "soup",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "blaster ",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "aptechka ",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "svetovoymech ",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "II",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "shaplasma ",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "kybernosh ",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "shena",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "rucovodstvo",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "kopya",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "byven",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "travy",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "nakydka",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "kremen",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "papyrus",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "son",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "porox",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "styxy",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "krest",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "corn",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "lamp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "maslo",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "dochka",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "days",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "choose"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "У тебя есть 20 секунд перед началом разрыва всей планеты после начала разрыва у тебя есть 60 секунд на сбор припасов. БЫСТРЕЕ!! ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Осмотреть комнату будущего. (10 секунд) ",
+        "need": -4,
+        "var_sub": [
+          "seconds ",
+          10
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Осмотреть комнату прошлого(10 секунд) ",
+        "need": -5,
+        "var_sub": [
+          "seconds ",
+          10
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Осмотреть комнату средних веков(10 секунд) ",
+        "need": -6,
+        "var_sub": [
+          "seconds ",
+          10
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Брать вещи",
+        "var_less": [
+          "seconds ",
+          61
+        ]
+      },
+      {
+        "var_show": [
+          "seconds "
+        ],
+        "comment": true,
+        "id": 3,
+        "text": "Секунд осталось:",
+        "var_min": [
+          "seconds ",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "В этой комнате ты заметил такие вещи как:\nБластер\nСветовой меч\nИИ на жёстком диске\n4 банки грибного супа\nКнига \"Выживание для чайников\"\nШар плазмы\nКибер нож\nАптечка\nЖена Катя\n",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Выйти",
+        "backstepCount": 1,
+        "isBack": true
+      },
+      {
+        "id": 4,
+        "text": "Осталось секунд:",
+        "comment": true,
+        "var_show": [
+          "seconds "
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Здесь находились такие вещи как:\nКопьё\nБивень мамонта\nЛекарственные травы\nНакидка из шкуры динозавра\n3 банки грибного супа\nСын Саня\nКремень\nПапирус\n",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Назад",
+        "backstepCount": 1,
+        "isBack": true
+      },
+      {
+        "id": 5,
+        "text": "Секунд осталось:",
+        "comment": true,
+        "var_show": [
+          "seconds "
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "В этой комнате ты нашёл такие вещи как:\nПорох\nСтихи Пушкина\nЗерно\nФонарь\nМасло(Сливочное или подсолнечное сам не знаю)\nКрест животворящий\n7 банок супа\nДочка Лена\n",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Выйти",
+        "backstepCount": 1,
+        "isBack": true
+      },
+      {
+        "id": 6,
+        "text": "Секунд осталось:",
+        "comment": true,
+        "var_show": [
+          "seconds "
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Ты можешь брать вещи из разных времён. Но суп есть везде. ",
+    "answers": [
+      {
+        "var_add": [
+          "soup",
+          1
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "id": 7,
+        "text": "Взять суп. (3 секунды) ",
+        "var_sub": [
+          "seconds ",
+          3
+        ],
+        "var_no_more": [
+          "soup ",
+          14
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Будущее время. ",
+        "need": [
+          4
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Прошлое время",
+        "need": [
+          5
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Средние века ",
+        "need": [
+          6
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "seconds "
+        ],
+        "comment": true,
+        "id": 7,
+        "text": "Секунд осталось:",
+        "var_more": [
+          "seconds ",
+          0
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Прыгнуть в убежище. ",
+        "var_more": [
+          "seconds ",
+          0
+        ]
+      },
+      {
+        "var_less": [
+          "seconds ",
+          1
+        ],
+        "text": "Конец",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Здесь есть такие вещи как :",
+    "answers": [
+      {
+        "text": "Кремень(4 секунды) ",
+        "var_less": [
+          "kremen ",
+          1
+        ],
+        "id": 8,
+        "var_sub": [
+          "seconds ",
+          4
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "kremen ",
+          1
+        ]
+      },
+      {
+        "text": "Папирус(5 секунд) ",
+        "var_less": [
+          "papyrus ",
+          1
+        ],
+        "id": 8,
+        "var_sub": [
+          "seconds ",
+          5
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "papyrus ",
+          1
+        ]
+      },
+      {
+        "text": "Накидка(3 секунды) ",
+        "var_less": [
+          "nakydka ",
+          1
+        ],
+        "id": 8,
+        "var_sub": [
+          "seconds ",
+          3
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "nakydka ",
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "seconds ",
+          5
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_less": [
+          "byven ",
+          1
+        ],
+        "text": "Бивень мамонта(5 секунд) ",
+        "id": 8,
+        "var_set": [
+          "byven ",
+          1
+        ]
+      },
+      {
+        "text": "Сын (4 секунды) ",
+        "var_less": [
+          "son",
+          1
+        ],
+        "id": 8,
+        "var_sub": [
+          "seconds ",
+          4
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "son",
+          1
+        ]
+      },
+      {
+        "text": "Копьё(0 секунд--Само долетело) ",
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "id": 8,
+        "var_sub": [
+          "seconds ",
+          0
+        ],
+        "var_less": [
+          "kopya ",
+          1
+        ],
+        "var_set": [
+          "kopya ",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Секунд осталось:",
+        "comment": true,
+        "var_show": [
+          "seconds "
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Выйти"
+      },
+      {
+        "var_less": [
+          "seconds ",
+          0
+        ],
+        "text": "Конец",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Вот список вещей:",
+    "answers": [
+      {
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "id": 9,
+        "var_less": [
+          "II",
+          1
+        ],
+        "text": "ИИ(11 секунд) ",
+        "var_sub": [
+          "seconds ",
+          11
+        ],
+        "var_set": [
+          "II",
+          1
+        ]
+      },
+      {
+        "text": "Бластер(5 секунд) ",
+        "var_sub": [
+          "seconds ",
+          5
+        ],
+        "id": 9,
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_less": [
+          "blaster ",
+          1
+        ],
+        "var_set": [
+          "blaster ",
+          1
+        ]
+      },
+      {
+        "text": "Шар плазмы(3 секунды) ",
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "id": 9,
+        "var_sub": [
+          "seconds ",
+          3
+        ],
+        "var_less": [
+          "shaplasma ",
+          1
+        ],
+        "var_set": [
+          "shaplasma ",
+          1
+        ]
+      },
+      {
+        "text": "Кибер нож(7 секунд) ",
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_less": [
+          "kybernosh ",
+          1
+        ],
+        "var_sub": [
+          "seconds ",
+          7
+        ],
+        "id": 9,
+        "var_set": [
+          "kybernosh ",
+          1
+        ]
+      },
+      {
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "text": "Жена Катя(4 секунды) ",
+        "var_less": [
+          "shena ",
+          1
+        ],
+        "var_sub": [
+          "seconds ",
+          4
+        ],
+        "id": 9,
+        "var_set": [
+          "shena ",
+          1
+        ]
+      },
+      {
+        "text": "Аптечка(5 секунд) ",
+        "var_less": [
+          "aptechka ",
+          1
+        ],
+        "id": 9,
+        "var_sub": [
+          "seconds ",
+          5
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "aptechka ",
+          1
+        ]
+      },
+      {
+        "text": "Световой меч(4 секунды) ",
+        "var_less": [
+          "svetovoymech ",
+          1
+        ],
+        "id": 9,
+        "var_sub": [
+          "seconds ",
+          4
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "svetovoymech ",
+          1
+        ]
+      },
+      {
+        "text": "Руководство \"Выживание для чайников\" (6 секунд) ",
+        "var_less": [
+          "rucovodstvo ",
+          1
+        ],
+        "id": 9,
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_sub": [
+          "seconds ",
+          6
+        ],
+        "var_set": [
+          "rucovodstvo ",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "seconds "
+        ],
+        "comment": true,
+        "id": 9,
+        "text": "Секунд осталось:",
+        "var_more": [
+          "seconds ",
+          0
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Выйти"
+      },
+      {
+        "var_less": [
+          "seconds",
+          0
+        ],
+        "text": "Конец",
+        "id": 1,
+        "var_no_more": [
+          "seconds ",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Вот список вещей:",
+    "answers": [
+      {
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "text": "Порох(3 секунды) ",
+        "var_less": [
+          "porox ",
+          1
+        ],
+        "var_sub": [
+          "seconds ",
+          3
+        ],
+        "id": 10,
+        "var_set": [
+          "porox ",
+          1
+        ]
+      },
+      {
+        "text": "Стихи (2 секунды) ",
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_less": [
+          "styxy ",
+          1
+        ],
+        "var_sub": [
+          "seconds ",
+          2
+        ],
+        "id": 10,
+        "var_set": [
+          "styxy ",
+          1
+        ]
+      },
+      {
+        "text": "Зерно(4 секунды) ",
+        "var_less": [
+          "corn",
+          1
+        ],
+        "id": 10,
+        "var_sub": [
+          "seconds ",
+          4
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "corn",
+          1
+        ]
+      },
+      {
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "text": "Масло(3 секунды) ",
+        "var_less": [
+          "maslo ",
+          1
+        ],
+        "var_sub": [
+          "seconds ",
+          3
+        ],
+        "id": 10,
+        "var_set": [
+          "maslo ",
+          1
+        ]
+      },
+      {
+        "text": "Дочка(6 секунд) ",
+        "var_less": [
+          "dochka ",
+          1
+        ],
+        "id": 10,
+        "var_sub": [
+          "seconds ",
+          6
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_set": [
+          "dochka ",
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "seconds ",
+          2
+        ],
+        "var_more": [
+          "seconds ",
+          0
+        ],
+        "var_less": [
+          "lamp",
+          1
+        ],
+        "text": "Фонарь (2 секунды) ",
+        "id": 10,
+        "var_set": [
+          "lamp",
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Секунд осталось:",
+        "comment": true,
+        "var_show": [
+          "seconds "
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Выйти "
+      },
+      {
+        "id": 1,
+        "text": "Конец",
+        "var_less": [
+          "seconds",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "А в убежище какого времени? Помни от выбора зависит вся история! Также в каждом времени есть варианты местности где ты появишься. ",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Будущее время"
+      },
+      {
+        "id": 13,
+        "text": "Средние века"
+      },
+      {
+        "id": 14,
+        "text": "Прошлое"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_random_from": [
+          "mesto",
+          0,
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "days",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Прыгнув в убежище тебя расплющело и выбросило..... Куда-то. О вещах которые  у тебя есть можешь посмотреть в специальном разделе. Удачи! ",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Вещи"
+      },
+      {
+        "id": 16,
+        "text": "Состояние членов семьи. "
+      },
+      {
+        "var_add": [
+          "days",
+          0
+        ],
+        "var_sub": [
+          ""
+        ],
+        "id": 18,
+        "var_more": [
+          "1",
+          0
+        ],
+        "text": "Следующий день ",
+        "var_set": [
+          "1",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Дней прожито:",
+        "comment": true,
+        "var_show": [
+          "days"
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "hungryshena",
+          4
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "hungryson",
+          4
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "hungrydochka",
+          4
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "hungry",
+          4
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "thinkshena ",
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "thinkson ",
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "thinkdochka ",
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "think ",
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "healthson",
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "healthshena",
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "healthdochka",
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "health",
+          5
+        ]
+      },
+      {
+        "go_to": [
+          "goto"
+        ],
+        "id": 12,
+        "text": "Надо Принять Решение",
+        "var_less": [
+          "1",
+          1
+        ],
+        "var_set": [
+          "1",
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_random_from": [
+          "goto",
+          17,
+          30
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "exit",
+          12
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "days",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "hungry",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "me",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "think",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "health",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "hungryshena",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungryson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungrydochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "healthdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 14,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 15,
+    "text": "Список вещей:",
+    "answers": [
+      {
+        "id": 15,
+        "text": "ИИ, ",
+        "var_more": [
+          "II",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Стихи Пушкина, ",
+        "var_more": [
+          "styxy ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Бластер, ",
+        "var_more": [
+          "blaster",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Накидка, ",
+        "var_more": [
+          "nakydka ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Шар плазмы, ",
+        "var_more": [
+          "shaplasma ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Кибер нож, ",
+        "var_more": [
+          "kybernosh ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Масло, ",
+        "var_more": [
+          "maslo ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Порох, ",
+        "var_more": [
+          "porox ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Руководство, ",
+        "var_more": [
+          "rucovodstvo ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Аптечка, ",
+        "var_more": [
+          "aptechka ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Лекарственные травы, ",
+        "var_more": [
+          "travy ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Кремень, ",
+        "var_more": [
+          "kremen ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Папирус, ",
+        "var_more": [
+          "papyrus ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Бивень, ",
+        "var_more": [
+          "byven",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Копья, ",
+        "var_more": [
+          "kopya",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Световой меч, ",
+        "var_more": [
+          "svetovoymech ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Крест, ",
+        "var_more": [
+          "krest ",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Зерно, ",
+        "var_more": [
+          "corn",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Выйти",
+        "go_to": [
+          "exit"
+        ]
+      },
+      {
+        "id": 15,
+        "text": " Банок супа:",
+        "comment": true,
+        "var_show": [
+          "soup"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Состояние всех кому повезло добраться до бункера:",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Сергей(Ты) "
+      },
+      {
+        "id": 20,
+        "text": "Катя(Жена) ",
+        "var_equal": [
+          "shena ",
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Саша(Сын) ",
+        "var_equal": [
+          "son ",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Лена(Дочка) ",
+        "var_equal": [
+          "dochka ",
+          1
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Выйти",
+        "go_to": [
+          "exit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Твой семье стало скучно без однотипной застройки России. К тебе пришла идея нарисовать её на папирусе или переделать обои киберножом. ",
+    "answers": [
+      {
+        "right_answer": true,
+        "var_equal": [
+          "kybernosh ",
+          1
+        ],
+        "id": 12,
+        "text": "Кибернож",
+        "var_set": [
+          "choose ",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "papyrus ",
+          1
+        ],
+        "id": 12,
+        "text": "Папирус",
+        "left_answer": true,
+        "var_set": [
+          "choose ",
+          2
+        ]
+      },
+      {
+        "middle_answer": true,
+        "text": "Ничего",
+        "id": 12,
+        "var_set": [
+          "choose ",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Как оказалось ты и твоя семья была в ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "шатле. ",
+        "merge": true,
+        "var_equal": [
+          "mesto",
+          1
+        ]
+      },
+      {
+        "id": 18,
+        "text": "в бункере. ",
+        "merge": true,
+        "var_equal": [
+          "mesto",
+          0
+        ]
+      },
+      {
+        "text": "Когда ты нарисовал застройку России и повесил её за место обоев вся твоя семья опладировала(Возможно состоящая только из тебя) . Тебя взяло чувство гордости. ",
+        "var_equal": [
+          "choose ",
+          2
+        ],
+        "id": 18,
+        "var_sub": [
+          "papyrus",
+          1
+        ],
+        "need": -30,
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "choose ",
+          1
+        ],
+        "id": 18,
+        "text": "После взлома обой киберножом. Там появилась обычная зарисовавка России. ",
+        "need": -30,
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Вещи"
+      },
+      {
+        "id": 16,
+        "text": "Состояние членов семьи."
+      },
+      {
+        "var_set": [
+          "1",
+          1
+        ],
+        "id": 18,
+        "text": "Надо Принять Решение",
+        "var_less": [
+          "1",
+          1
+        ],
+        "go_to": [
+          "goto"
+        ]
+      },
+      {
+        "var_sub": [
+          "II",
+          1
+        ],
+        "id": 18,
+        "text": "Вставив модуль ИИ в робота он назвался Коннором. Во время того как ты вставлял модуль ИИ ты упал и увидел ещё 28 копий(ТЫ ЗАПОСАЛСЯ НА ВЕРНЯКА ) такой же модели и внешнего вида.После того как робот увидел тебя сказал, то что после его смерти его копия заменит его. Он помог тебе встать и провёл на ваше место. ",
+        "need": [
+          31
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "Ты решил оставить робота там где он стоял. И ушёл к своему месту. ",
+        "need": [
+          30,
+          -31
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "mesto",
+          0
+        ],
+        "var_random_from": [
+          "goto",
+          32,
+          33
+        ],
+        "calculate": true,
+        "id": 18,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_sub": [
+          "hungrydochka",
+          2,
+          "hungry",
+          2,
+          "hungryson",
+          2,
+          "hungryshena",
+          2
+        ],
+        "id": 26,
+        "text": "Следующий день",
+        "var_more": [
+          "1",
+          0
+        ],
+        "var_set": [
+          "1",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "mesto",
+          1
+        ],
+        "id": 18,
+        "calculate": true,
+        "var_random_from": [
+          "goto",
+          34
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 18,
+        "text": "Дней прожито:",
+        "comment": true,
+        "var_show": [
+          "days"
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "exit",
+          18
+        ]
+      },
+      {
+        "var_equal": [
+          "choose",
+          3
+        ],
+        "id": 18,
+        "text": "Твоей семье было очень скучно без однотипной застройки России. ",
+        "need": [
+          17
+        ],
+        "merge": true
+      },
+      {
+        "var_str_set": [
+          "days",
+          2
+        ],
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "days",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "choose",
+          3
+        ],
+        "id": 18,
+        "text": "Ничего не делать делать тоже хорошая идея! Но твоя семья сидела грустная",
+        "need": [
+          17
+        ],
+        "merge": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "hungry",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "me",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "think",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "health",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "hungryshena",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungryson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungrydochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "healthdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Ваше состояние:\n0 смерть\n1 на гране\n2 в не большом не достатке\n3 нормально\n4 повышенно\n5 чрезвычайно большой показатель\n",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Голод:",
+        "comment": true,
+        "var_show": [
+          "hungry"
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Здоровье:",
+        "comment": true,
+        "var_show": [
+          "health"
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Рассудок:",
+        "comment": true,
+        "var_show": [
+          "think "
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Выйти"
+      },
+      {
+        "var_add": [
+          "hungry",
+          2
+        ],
+        "var_sub": [
+          "soup",
+          1
+        ],
+        "id": 19,
+        "text": "Кормить",
+        "var_more": [
+          "soup",
+          0
+        ],
+        "var_no_more": [
+          "hungry",
+          3
+        ]
+      },
+      {
+        "var_add": [
+          "health",
+          1
+        ],
+        "var_equal": [
+          "aptechka",
+          1
+        ],
+        "id": 19,
+        "text": "Лечить(Аптечкой) ",
+        "var_sub": [
+          "aptechka",
+          1
+        ],
+        "var_no_more": [
+          "health",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "health",
+          1
+        ],
+        "var_equal": [
+          "travy",
+          1
+        ],
+        "id": 19,
+        "var_sub": [
+          "travy",
+          1
+        ],
+        "text": "Лечить(Травами) ",
+        "var_no_more": [
+          "health",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "health",
+          1
+        ],
+        "var_equal": [
+          "porox",
+          1
+        ],
+        "id": 19,
+        "text": "Лечить(Порохом) ",
+        "var_sub": [
+          "porox",
+          1
+        ],
+        "var_no_more": [
+          "health",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Состояние жены:\n0 смерть\n1 на гране\n2 в не большом не достатке\n3 нормально\n4 повышенно\n5 чрезвычайно большой показатель\n",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Рассудок :",
+        "comment": true,
+        "var_show": [
+          "thinkshena "
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Голод:",
+        "comment": true,
+        "var_show": [
+          "hungryshena"
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Здоровье:",
+        "comment": true,
+        "var_show": [
+          "healthshena"
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Выйти"
+      },
+      {
+        "var_add": [
+          "hungryshena",
+          2
+        ],
+        "var_sub": [
+          "soup",
+          1
+        ],
+        "id": 20,
+        "text": "Кормить",
+        "var_more": [
+          "soup",
+          0
+        ],
+        "var_no_more": [
+          "hungryshena",
+          3
+        ]
+      },
+      {
+        "var_add": [
+          "healthshena",
+          1
+        ],
+        "var_equal": [
+          "aptechka",
+          1
+        ],
+        "id": 20,
+        "text": "Лечить(Аптечкой) ",
+        "var_sub": [
+          "aptechka",
+          1
+        ],
+        "var_no_more": [
+          "healthshena",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "healthshena",
+          1
+        ],
+        "var_equal": [
+          "travy",
+          1
+        ],
+        "id": 20,
+        "text": "Лечить(Травами) ",
+        "var_sub": [
+          "travy",
+          1
+        ],
+        "var_no_more": [
+          "healthshena",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "healthshena",
+          1
+        ],
+        "var_equal": [
+          "porox",
+          1
+        ],
+        "id": 20,
+        "text": "Лечить(Порохом) ",
+        "var_sub": [
+          "porox",
+          1
+        ],
+        "var_no_more": [
+          "healthshena",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Состояние сына:\n0 смерть\n1 на гране\n2 в не большом не достатке\n3 нормально\n4 повышенно\n5 чрезвычайно большой показатель\n",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Голод:",
+        "comment": true,
+        "var_show": [
+          "hungryson"
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Рассудок:",
+        "comment": true,
+        "var_show": [
+          "thinkson "
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Здоровье:",
+        "comment": true,
+        "var_show": [
+          "healthson"
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Выйти"
+      },
+      {
+        "var_add": [
+          "hungryson",
+          2
+        ],
+        "text": "Кормить ",
+        "id": 21,
+        "var_more": [
+          "soup",
+          0
+        ],
+        "var_sub": [
+          "soup",
+          1
+        ],
+        "var_less": [
+          "soup",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "healthson",
+          1
+        ],
+        "var_equal": [
+          "aptechka",
+          1
+        ],
+        "id": 21,
+        "text": "Лечить(Аптечкой) ",
+        "var_sub": [
+          "aptechka",
+          1
+        ],
+        "var_no_more": [
+          "healthson",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "healthson",
+          1
+        ],
+        "var_equal": [
+          "travy",
+          1
+        ],
+        "id": 21,
+        "text": "Лечить(Травами) ",
+        "var_sub": [
+          "healthson"
+        ],
+        "var_no_more": [
+          "healthson",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "heathson",
+          1
+        ],
+        "var_equal": [
+          "porox",
+          1
+        ],
+        "id": 21,
+        "text": "Лечить(Порохом) ",
+        "var_sub": [
+          "porox",
+          1
+        ],
+        "var_no_more": [
+          "heathson",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Состояние дочки :\n0 смерть\n1 на гране\n2 в не большом не достатке\n3 нормально\n4 повышенно\n5 чрезвычайно большой показатель",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Голод:",
+        "comment": true,
+        "var_show": [
+          "hungrydochka"
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Рассудок:",
+        "comment": true,
+        "var_show": [
+          "thinkdochka "
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Здоровье:",
+        "comment": true,
+        "var_show": [
+          "healthdochka"
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Выйти "
+      },
+      {
+        "var_add": [
+          "hungrydochka",
+          2
+        ],
+        "var_more": [
+          "soup",
+          0
+        ],
+        "id": 22,
+        "var_sub": [
+          "soup",
+          1
+        ],
+        "text": "Кормить",
+        "var_no_more": [
+          "hungrydochka",
+          3
+        ]
+      },
+      {
+        "var_add": [
+          "healthdochka",
+          1
+        ],
+        "var_equal": [
+          "aptechka",
+          1
+        ],
+        "id": 22,
+        "text": "Лечить(Аптечкой) ",
+        "var_sub": [
+          "aptechka",
+          1
+        ],
+        "var_no_more": [
+          "healthdochka",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "healthdochka",
+          1
+        ],
+        "var_equal": [
+          "travy",
+          1
+        ],
+        "id": 22,
+        "text": "Лечить(Травами) ",
+        "var_sub": [
+          "travy",
+          1
+        ],
+        "var_no_more": [
+          "healthdochka",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "healthdochka",
+          1
+        ],
+        "var_equal": [
+          "porox",
+          1
+        ],
+        "id": 22,
+        "text": "Лечить(Порохом) ",
+        "var_sub": [
+          "porox",
+          1
+        ],
+        "var_no_more": [
+          "healthdochka",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Достижение\"Отныне ты мой, и не чей больше\" ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Выйти"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Достижение получено \"Чёртовы пендосы\" ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Выйти"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Достижение получено \"Кто не рискует тот не пьёт шампанское\" ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Выйти"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "У тебя начали появляться мысли о том почему ты здесь?  Зачем? Какой в этом смысл? Но ты вернулся в обычный строй очень быстро. ",
+    "answers": [
+      {
+        "var_set": [
+          "pilozub",
+          1
+        ],
+        "id": 26,
+        "text": "Перепрограммировать свирепого робота было действильно хорошей идеей. Теперь это чудо приручено и в твоём распоряжении. Почесав этому роботу пузико ты отпустил его. ",
+        "need": [
+          32
+        ],
+        "merge": true
+      },
+      {
+        "var_add": [
+          "II",
+          1
+        ],
+        "var_equal": [
+          "choose",
+          1
+        ],
+        "id": 26,
+        "text": "RK800 выпрыгнул из бункера и отпрыгнув от ближайшей стены запрыгнул ему на спину и вырвал модуль ИИ. После всего этого пилозуба упал и больше не шевелился. <plus>1 ИИ",
+        "need": [
+          32
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "choose",
+          2
+        ],
+        "id": 26,
+        "text": "Запрыгнув бункер ты начал ходить по нему, но не заметил ничего нового. ",
+        "need": [
+          32
+        ],
+        "merge": true
+      },
+      {
+        "var_add": [
+          "soup",
+          2
+        ],
+        "var_equal": [
+          "choose",
+          0
+        ],
+        "id": 26,
+        "text": "Очень странно, что ты не рискнул ведь ты в любом случае бы не проиграл эти 2 банки супа. А! Я забыл об этом сказать ну ладно. ",
+        "need": [
+          33
+        ],
+        "merge": true
+      },
+      {
+        "var_add": [
+          "soup",
+          5
+        ],
+        "var_equal": [
+          "choose",
+          1
+        ],
+        "id": 26,
+        "text": "Вдруг из супараздатчика выпало 5 банок грибного супа.!КУШ! ",
+        "need": [
+          33
+        ],
+        "merge": true
+      },
+      {
+        "var_add": [
+          "soup",
+          2
+        ],
+        "var_equal": [
+          "choose",
+          2
+        ],
+        "id": 26,
+        "text": "К сожалению тебе выпало только 2 банки супа которые были в начале. ",
+        "need": [
+          33
+        ],
+        "merge": true
+      },
+      {
+        "id": 26,
+        "text": "В руководстве было написано:\"Успокойтесь и начинайте петь гимн РФ\" На удивление это помогло. ",
+        "need": [
+          24
+        ],
+        "merge": true
+      },
+      {
+        "id": 26,
+        "text": "Ты решил не обращять на него внимание. Но он ещё долго следил за тобой. Из-за этого твой рассудок пошатнулся. ",
+        "need": [
+          -24,
+          34
+        ],
+        "merge": true
+      },
+      {
+        "id": 15,
+        "text": "Вещи"
+      },
+      {
+        "id": 16,
+        "text": "Состояние членов семьи"
+      },
+      {
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "days",
+          3
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Дней прожито:",
+        "comment": true,
+        "var_show": [
+          "days"
+        ]
+      },
+      {
+        "var_equal": [
+          "1",
+          0
+        ],
+        "id": 26,
+        "text": "Надо Принять Решение ",
+        "var_set": [
+          "1",
+          1
+        ],
+        "go_to": [
+          "goto"
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Следующий день",
+        "var_equal": [
+          "1",
+          1
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "exit",
+          26
+        ]
+      },
+      {
+        "var_equal": [
+          "mesto",
+          0
+        ],
+        "var_random_from": [
+          "goto",
+          40,
+          41
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "id": 26
+      },
+      {
+        "var_equal": [
+          "mesto",
+          1
+        ],
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "var_random_from": [
+          "goto",
+          42,
+          43
+        ],
+        "calculate": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "hungry",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "me",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "think",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "health",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "hungryshena",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungryson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungrydochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "healthdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": [
+      {
+        "comment": true,
+        "var_equal": [
+          "hungry",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "me",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "think",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "me",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "health",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "me",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungryshena",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "shena",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "healthshena",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "thinkshena",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "hungryson",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "thinkson",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "healthson",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "hungrydochka",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthdochka",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "thinkdochka",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Твоей семье потихоньку становилось скучно. Кто знает сколько это продлиться?",
+    "answers": [
+      {
+        "var_equal": [
+          "choose",
+          1
+        ],
+        "id": 28,
+        "text": "Подстрелив сало оно упало на украинцев. Рядом был гейзер сало пшикнуло на одну роту после чего было слышно\"Штаны за 60 грiвiн\" ",
+        "need": [
+          40
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "choose",
+          2
+        ],
+        "id": 28,
+        "text": "Подстрелив сало оно не упало, но лазер попал в гейзер вскипятил его и затопил(гейзер) украинцев. ",
+        "need": [
+          40
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "choose",
+          5
+        ],
+        "id": 28,
+        "text": "Запустив армию андроидов в бой началось сражение. Один из андроидов двинул \"Желтенко\" по его расчётом(Коннора) шанс на победу был 73% из 100%. Андроиды на вешали люлей Украинцам. Они ушли со словами:\"Ви виграли битву, але програєте війну\" ",
+        "need": [
+          40
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "choose",
+          4
+        ],
+        "id": 28,
+        "text": "Использовав шар плазмы капитан мои подсистемы усили оборону. Они ушли злые со словами\"Підлі труси виходите на чесний бій. Підлі каеты. Мені знаходиться з вами на одній планеті\" ",
+        "need": [
+          40
+        ],
+        "merge": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "hungry",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "me",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "think",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "health",
+          0
+        ],
+        "id": 27,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "me",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "hungryshena",
+          0
+        ],
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkshena",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "shena",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungryson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "healthson",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "son",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "hungrydochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "healthdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "thinkdochka",
+          0
+        ],
+        "id": 27,
+        "var_sub": [
+          "dochka",
+          1
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_equal": [
+          "choose",
+          4
+        ],
+        "id": 28,
+        "text": "Когда ты заперелся в бункере. Тебе и всем кто там был нужен был врач. ",
+        "var_sub": [
+          "health",
+          1,
+          "healthson",
+          1,
+          "healthshena",
+          1,
+          "healthdochka",
+          1
+        ],
+        "calculate": true
+      },
+      {
+        "var_str_set": [
+          ""
+        ],
+        "var_equal": [
+          "choose",
+          0
+        ],
+        "id": 28,
+        "text": "-\"Сергей, он совсем не гей\" - Поддерживал тебя ИИ\nНаудивление у тебя вышло сделать это и удачно вернуться правда без ресурсов",
+        "need": [
+          41
+        ],
+        "merge": true
+      },
+      {
+        "id": 28,
+        "text": "Надо принять решение ",
+        "go_to": [
+          "goto"
+        ]
+      },
+      {
+        "var_add": [
+          "soup",
+          2
+        ],
+        "var_equal": [
+          "choose",
+          1
+        ],
+        "id": 28,
+        "text": "-\"Джонни он у нас на мушки\" - Говорил синтетический голос наводки у бластера. Выстрел попал в термос и рикошетом попал в систему жизнеобеспечения из-за чего вы пару минут были без воздуха, но это не как не отразилось на вашем здоровье, а из трубы подачи супа чудом вылилось 2 лишних банки супа",
+        "need": [
+          41
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "choose",
+          2
+        ],
+        "id": 28,
+        "text": "-\"За орду, за альянс, за БУНКЕР!\"-Поддерживал тебя ИИ.\nКинув копьё ты попал в термос и чай который находился в нём попал в кружку королеве местной Англии. ",
+        "need": [
+          41
+        ],
+        "merge": true
+      },
+      {
+        "id": 28,
+        "text": "-\"Опять сидишь на жопе смирно\" - Любила говорить твоя мама, но тут это помогло. Термос пошёл налево в даль. ",
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "Следующий день"
+      },
+      {
+        "var_equal": [
+          "choose",
+          0
+        ],
+        "id": 28,
+        "text": "-\"Уххуххухуу, капитан, я не пьян у меня просто пару троянов\" - Говорил ИИ с пьяным акцентом.\n-\"Срок использования чипа опьянения заканчивается через..\"\n-\"ЗАТКНИСЬ!Капитан может по рюмочке\"\n",
+        "need": [
+          43
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "choose",
+          1
+        ],
+        "id": 28,
+        "text": "-\"Псс, капитан тише даже тут и в это время за нами следит ФСБ, вы всё правильно сделали\" -Говорит ИИ шёпотом",
+        "need": [
+          43
+        ],
+        "merge": true
+      },
+      {
+        "id": 28,
+        "calculate": true,
+        "var_equal": [
+          "mesto",
+          0,
+          "choose",
+          2
+        ],
+        "var_random_from": [
+          "goto",
+          44,
+          45
+        ],
+        "text": "Новый ответ. введите текст",
+        "need": [
+          41
+        ],
+        "var_set": [
+          "2",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "mesto",
+          1
+        ],
+        "id": 28,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_random_from": [
+          "goto",
+          46,
+          47
+        ]
+      },
+      {
+        "var_not": [
+          "2",
+          0
+        ],
+        "id": 28,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "goto",
+          45
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Вещи"
+      },
+      {
+        "id": 28,
+        "text": "Дней прожито:",
+        "comment": true,
+        "var_show": [
+          "days"
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "days",
+          4,
+          "exit",
+          28
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Состояние членов семьи"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Становится всё скучнее и скучнее. ",
+    "answers": [
+      {
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "choose",
+          0
+        ],
+        "id": 29,
+        "calculate": true,
+        "need": [
+          45
+        ],
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Не смотря на всю пугаюшую обстановку ты нашёл в себе силы зайти в тёмный угол помещения где ты живёшь. Там ты нашёл андроида серии RK800 с надписью в глазах в первом И в левом  И скорее всего ему надо было вставить модуль ИИ(Искусственного Интеллекта) ",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Вставить ИИ",
+        "left_answer": true,
+        "var_set": [
+          "choose ",
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Уйти",
+        "right_answer": true,
+        "var_set": [
+          "choose ",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Достижение получено \"I am not alive you can't kill me\" ",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Обратно"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Выглянув из бункера ты нашёл бионеческого пилозуба(аналог слона, только хищный и более агрессивный)Ты можешь взломать его с помощью киберножа. ",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Вдруг перед тобой появился \"Коннор\" и начал читать лекцию про пилозуба и в конце сказал, что он его одолеет без единой проблемы. ",
+        "need": [
+          31
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "kybernosh ",
+          1
+        ],
+        "id": 23,
+        "text": "Кибернож",
+        "var_set": [
+          "choose",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "middle_answer": true,
+        "id": 18,
+        "text": "Довериться андроиду",
+        "need": [
+          31
+        ],
+        "var_set": [
+          "choose",
+          1
+        ]
+      },
+      {
+        "id": 18,
+        "right_answer": true,
+        "text": "Запрыгнуть в бункер",
+        "var_set": [
+          "choose",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "В бункере ты нашёл автомат с грибным супом(даже через 6000 лет его едят!)После того как ты стукнул на экране появилась надпись забирай или рискуй. Ты можешь забрать 2 банки супа или рискнуть(жанс выиграть есть! ) ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Забрать 2 банки супа",
+        "var_set": [
+          "choose",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_less": [
+          "choose",
+          5
+        ],
+        "text": "Попытаться сорвать куш",
+        "id": 25,
+        "var_set": [
+          "choose",
+          1
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_random_from": [
+          "choose",
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "id": 25,
+        "var_more": [
+          "choose",
+          5
+        ],
+        "text": "Попытаться сорвать куш",
+        "var_set": [
+          "choose",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "При проходе мимо элюминатора ты увидел, ещё один корабль только не РОССКОСМОСА, А NASA. Зачем здесь этот корабль, он шпионит за нами?!\nВ руководстве обязательно должна быть статья на этот счёт. ",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Воспользоваться Руководством. ",
+        "var_set": [
+          "choose",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 18,
+        "var_sub": [
+          "think",
+          1,
+          "thinkson",
+          1,
+          "thinkdochka",
+          1,
+          "thinkshena",
+          1
+        ],
+        "text": "Ничего не делать",
+        "var_set": [
+          "choose",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 36,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 38,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 39,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 40,
+    "text": "Летающее сало!!!! Аааааааа!!!! Капитан(У тебя появился помощник состоящий из систем жизнеобеспечения) Украинцы нападают на нас. Их флаги, гербы, Летающее сало за место самолётов. По моим анализам сало это неудачный эксперимент военных. Но его взяли в армию на службу. ",
+    "answers": [
+      {
+        "id": 40,
+        "text": "Вы могли бы начать обороняться бластером, но скорее всего вы бы проиграли или перейти в глухую оборуну, но моим системам понадобиться больше энергии. ",
+        "merge": true
+      },
+      {
+        "id": 40,
+        "text": "Вдруг из-за твоей спины вышел 1 \"Коннор\" и его 28 копий. Они ждали вашего сигнала для начала атаки",
+        "need": [
+          31
+        ],
+        "merge": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "blaster",
+          1
+        ],
+        "id": 26,
+        "var_more": [
+          "random",
+          5
+        ],
+        "text": "Бластер",
+        "var_set": [
+          "choose",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "blaster",
+          1
+        ],
+        "var_less": [
+          "random",
+          5
+        ],
+        "text": "Бластер",
+        "id": 26,
+        "var_set": [
+          "choose",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "shaplasma",
+          1
+        ],
+        "id": 26,
+        "text": "Шар плазмы",
+        "var_set": [
+          "choose",
+          3
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 40,
+        "text": "Новый ответ. введите текст",
+        "var_random_from": [
+          "random",
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0
+        ],
+        "calculate": true
+      },
+      {
+        "id": 26,
+        "text": "Заперетьcя в бункере. ",
+        "middle_answer": true,
+        "var_set": [
+          "choose",
+          4
+        ]
+      },
+      {
+        "id": 26,
+        "middle_answer": true,
+        "text": "Пустить армию андроидов бой. ",
+        "need": [
+          31
+        ],
+        "var_set": [
+          "choose",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Капитан(У тебя появился помощник состоящий из систем жизнеобеспечения) к нам приближается термос. Нет, это не сокращение от Терминатор. Это настоящий термос с ногами и руками в которых космолёт из стали с логотипом \"РОССКОСМОС\". Я не знаю, что ещё приподнесёт нам местноя флора и фауна. Вы могли бы отрезать ему ноги световым мечём или обстрелять ему ноги бластером. Ну или совсем как примитивные люди закидать его копьями. ",
+    "answers": [
+      {
+        "right_answer": true,
+        "var_equal": [
+          "svetovoymech",
+          1
+        ],
+        "id": 26,
+        "text": "Световой меч",
+        "var_set": [
+          "choose",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "blaster",
+          1
+        ],
+        "id": 26,
+        "text": "Бластер",
+        "var_set": [
+          "choose",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "var_equal": [
+          "kopya",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Копья",
+        "id": 26,
+        "var_set": [
+          "choose",
+          2
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Ничего не делать",
+        "middle_answer": true,
+        "var_set": [
+          "choose",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Как оказалось капитан(У тебя появился помощник состоящий из систем жизнеобеспечения) наш шатлл летал не далеко от планеты примерно 10-25 км над уровнем моря. Но нас схватил термос. Нет капитан не сокращение от слова Терминатор. Это был термос, и он хотел начать вами бить по по земле. Капитан на то чтобы вырваться моим двигателями надо много энергии. Но я не уверен, что вы сможете.. Нет капитан, капитан шанс выжить при таком раскладе 1 к 1000. Световой меч отрубить ему руку, но не сможет вернуть вас на корабль. ",
+    "answers": [
+      {
+        "id": 42,
+        "text": "Сзади тебя вышел \"Коннор\" и сказал, что его рефлексов и бионеческих органов хватит на произведение этого манёвра. ",
+        "need": [
+          31
+        ],
+        "merge": true
+      },
+      {
+        "right_answer": true,
+        "id": 26,
+        "text": "Довериться андроиду. ",
+        "need": [
+          31
+        ],
+        "var_set": [
+          "choose",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "svetovoymech",
+          1
+        ],
+        "id": 26,
+        "text": "Побежать со световым мечём ",
+        "var_set": [
+          "choose",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "var_equal": [
+          "shaplasma",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Использовать шар плазмы",
+        "id": 26,
+        "var_set": [
+          "choose",
+          2
+        ]
+      },
+      {
+        "middle_answer": true,
+        "text": "Ничего не делать ",
+        "id": 26,
+        "var_set": [
+          "choose",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Капитан(У тебя появился помощник состоящий из систем жизнеобеспечения) я знаю, что ваша семья всё время была законопослушная: никогда не пила, не курила, не играла в азартные игры. Но сейчас мы в космосе никто об этом не узнает. На этом корабле есть запас бутылок рома. Целых 267 бутылок чистого напитка сделанного из сахарного тростника. Капитан вы будете его брать? ",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Взять",
+        "right_answer": true,
+        "var_set": [
+          "rome",
+          267,
+          "choose",
+          0
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Оставить",
+        "var_set": [
+          "choose",
+          1
+        ],
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "—Помните ту Королеву. С чаем и термосом, а она вас да. Она прислала гвардию с 3 банками супа. ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Обратно",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "—Капитан, капитан, капитан, новый сезон Игры Престолов вышел. Нет-они в отключке. \n—Что делать? \n—Что делать, что, что можно сказать я один дома.\n*Подмигивание камерами*\nЗатем идёт, то что автор не решился описывать. ",
+    "answers": [
+      {
+        "right_answer": true,
+        "id": 28,
+        "text": "Послать коннора",
+        "need": [
+          31
+        ],
+        "var_set": [
+          "choose",
+          0
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Ничего не делать",
+        "var_set": [
+          "choose",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 28,
+        "text": "Встать",
+        "middle_answer": true,
+        "var_set": [
+          "choose",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "—Кэп.Сухопутная крыса ко мне в борт попало ядро с вирусом. Вперёд черти! ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Папирус",
+        "var_set": [
+          "choose",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 28,
+        "text": "Кибернож",
+        "right_answer": true,
+        "var_set": [
+          "choose",
+          1
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Ничего не делать",
+        "middle_answer": true,
+        "var_set": [
+          "choose",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Найдя какую-то касету с надписью\"Посмотреть после 8000 года.\n—Кэп, сейчас 8001 год. Давайте посмотрим. ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Посмотреть ",
+        "middle_answer": true,
+        "var_set": [
+          "choose",
+          0
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Положить туда где и была",
+        "middle_answer": true,
+        "var_equal": [
+          "choose",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 49,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 50,
+    "text": "",
+    "answers": []
+  }
+]

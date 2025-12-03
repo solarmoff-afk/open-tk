@@ -1,0 +1,1974 @@
+[
+  {
+    "id": 1,
+    "text": "Аннотация: В данном учебнике вы можете найти полезные коды и комбинации для своего квеста.\nАвтор: Shadow\nЖанр: Учебник\nPS: Для того чтобы понять необходимо поверхностное знание lua, и большая просьба: читайте с телефона, спасибо.\n\n!!!Огромная просьба писать в комментариях, или в обсуждение в группе что вы хотите чтобы я добавил ещё!!!",
+    "answers": [
+      {
+        "id": 2,
+        "text": "⟨Открыть учебник⟩",
+        "lua_do": "function lua_do()\ng.fullscreen=0\nend"
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://c.radikal.ru/c30/2004/d0/26695f3267d4.jpg\n",
+        "system": true
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.fullscreen=0\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Список кодов которые могут вам пригодится:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "⟩Закрыть учебник⟨"
+      },
+      {
+        "id": 2,
+        "text": "Автоматическое создание кода, если вам лень писать код воспользуйтесь сборщиком кода: ",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 27,
+        "text": "Сборщик кода",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "middle_answer": false,
+        "text": "Варианты ответов:",
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "id": 3,
+        "text": "Оформление вариантов ответов",
+        "left_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Оформление вариантов ответов (Цветовая палитра)",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "text_color": [],
+        "middle_answer": false,
+        "text": "Калькулейты (calculate):",
+        "id": 2
+      },
+      {
+        "id": 17,
+        "text": "Калькуейты (Переменные игрока)",
+        "right_answer": true
+      },
+      {
+        "var_str_set": [
+          "a",
+          "Вот код этого варианта ответа:                                                                                           function lua_text()                                                            return 'Дата: '..year..'.'..month..'.'.. day                                                              end"
+        ],
+        "right_answer": true,
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nyear=2050\nmonth=1\nday=1\nend",
+        "calculate": false,
+        "text": "Внутреигровое время",
+        "id": 4
+      },
+      {
+        "id": 10,
+        "text": "Счётчик ходов или странниц",
+        "right_answer": true,
+        "lua_do": "function lua_do()\nsteps=0\nend"
+      },
+      {
+        "id": 5,
+        "text": "Обновление предметов",
+        "right_answer": true
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "middle_answer": false,
+        "text": "Таймеры и счётчики:",
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "id": 7,
+        "text": "Обновление предметов (Счётчик ходов)",
+        "left_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Обновление предметов (Таймер)",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 2,
+        "text": "Для боевок:",
+        "middle_answer": false
+      },
+      {
+        "id": 13,
+        "text": "Создание противника и его переменных",
+        "right_answer": true
+      },
+      {
+        "id": 15,
+        "text": "Боевая система",
+        "right_answer": true
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "text": "Наброски интерактивного диалога:",
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "lua_do": "function lua_do()\na=1\ng.fullscreen=1\ntimer.performWithDelay(10000,function()\nshowPage {id=2}\n   end)\n   end",
+        "text": "Наброски",
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "comment": true,
+        "middle_answer": false,
+        "text": "Обновление без перезагрузки страницы или \nUpdate:",
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_do": "function lua_do()\nresult=0\ntextplus=0\ntext=0\ntext=\"\"\nend",
+        "text": "Обновление без перезагрузки страницы:",
+        "id": 21,
+        "left_answer": true
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.fullscreen=0\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 2,
+        "text": "Ввод текста пользователем или \ntextBox and textField:",
+        "comment": true,
+        "right_answer": true
+      },
+      {
+        "id": 23,
+        "text": "Пример textBox как строки отображения переменной",
+        "lua_do": "function lua_do()\neditable=0\nvAr=\"Значение\"\nend",
+        "right_answer": true
+      },
+      {
+        "id": 25,
+        "text": "Пример textBox как строки ввода переменной",
+        "right_answer": true,
+        "var_set": [
+          "hide",
+          ""
+        ]
+      },
+      {
+        "id": 26,
+        "text": "textField",
+        "right_answer": true
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "text": "Операторы на Луа:",
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "id": 47,
+        "text": "Оператор \"var random from weight\" на Луа",
+        "lua_do": "function lua_do()\ndifficulty=\"Легко\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 48,
+        "text": "\"updated\" или бесконечный цикл",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 51,
+        "text": "Выбор темы",
+        "middle_answer": false,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Для изменения оформления своих ответов можно использовать команды left, right и middle. Если их комбинировать можно получить ещё больше вариантов:",
+    "answers": [
+      {
+        "no_transition": true,
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn \"left, middle\"\nend",
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "middle_answer": true,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"right, middle\"\nend",
+        "no_transition": true
+      },
+      {
+        "comment": false,
+        "no_transition": true,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"left\"\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"right\"\nend",
+        "no_transition": true
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"middle\"\nend",
+        "no_transition": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "no_transition": true,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"left, right\"\nend",
+        "left_answer": true
+      },
+      {
+        "id": 3,
+        "text": "Обычный",
+        "comment": false,
+        "no_transition": true
+      },
+      {
+        "id": 2,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Если вам нужно сделать внутреигровое время то вот его пример:",
+    "answers": [
+      {
+        "comment": false,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Дата: \"..year..\".\"..month..\".\".. day..\"                                                                                                                         [\"..a..\"]\"\nend",
+        "no_transition": true
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\nyear=2050\nmonth=1\nday=1\nend",
+        "text": "Вот код варианта ответа ведущиго на эту страницу:\nfunction lua_do()\nyear=2050\nmonth=1\nday=1\nend"
+      },
+      {
+        "comment": false,
+        "id": 4,
+        "lua_do": "function lua_do()\nmonth=month<plus>1\nif day==31 then \nday=1\nmonth=month<plus>1\nelseif month==13 then \nmonth=1\nyear=year<plus>1\nend\nend",
+        "text": "Пропустить месяц",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "lua_do": "function lua_do()\nday=day<plus>1\nif day==31 then \nday=1\nmonth=month<plus>1\nelseif month==13 then \nmonth=1\nyear=year<plus>1\nend\nend",
+        "instant": true,
+        "id": 4,
+        "text": "Пропустить день"
+      },
+      {
+        "id": 2,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Часто надо чтобы через события или что-то ещё рандомно обновлялось. Я продемонстрирую пример смены тавров в торговой лавке. Для начала надо создать базу данных товаров:",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Вот код для создания таблицы\nfunction lua_do()\nproducts={}\nproducts={\"Пшеница\",\"Рожь\",\"Мясо\"}\nend",
+        "lua_do": "function lua_do()\nproducts={}\nproducts={\"Пшеница\",\"Рожь\",\"Мясо\"}\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Вот и страница торговой лавки:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 6,
+        "text": "Товары:",
+        "left_answer": true
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn (products [math.random(3)])..\"                                                                               \"..a\nend"
+      },
+      {
+        "var_str_set": [
+          "a",
+          "Вот код этого варианта ответа:                                                                                                     function lua_text()return (products (math.random(количество товаров, в моем случае-3)))end"
+        ],
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 2,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "PS: необходимо чтобы у вас уже была переменная считывающая ходы, о том как её сделать есть урок в учебнике.\nВ этом разделе я сделал тоже что. и в прошлом только со счётчиком ходов, через каждые тридцать ходов будет обновление:",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Вот код для создания таблицы\nfunction lua_do()\nproducts={}\nproducts={\"Пшеница\",\"Рожь\",\"Мясо\"}\nsteps=30\nend",
+        "lua_do": "function lua_do()\nproducts={}\nproducts={\"Пшеница\",\"Рожь\",\"Мясо\"}\nsteps=30\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Вот странница торговой лавки:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 8,
+        "text": "Товары:",
+        "left_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn b..a\nend",
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "comment": false,
+        "lua_do": "function lua_do()\nsteps=0\nend"
+      },
+      {
+        "var_str_set": [
+          "a",
+          "                                                                                    Вот код этого варианта ответа:                                                                                   function lua_text()                                                                        return b                                                                                              end                                                                                     function lua_do()                                                             steps=0                                                                                   end"
+        ],
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "lua_do": "function lua_do()\nif steps>=30 then\nb=(products[math.random(3)])\nend\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 8,
+        "text": "Вот код варианта ответа с calculate:\nfunction lua_do()\nif steps>=30 then\nb=(products[math.random(3)])\nend\nend",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 8,
+        "text": "Сделать 30ходов",
+        "lua_do": "function lua_do()\nsteps=30\nend",
+        "lua_if": "function lua_if()\nif steps<30 then\nreturn true\nend\nend"
+      },
+      {
+        "id": 2,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "После установки размера своего ответа можно его ещё и приукрасить ведь есть операторы text color, bg color и shadow color. \nПервый оператор отвечает за цвет текста, второй за цвет фона, третий за цвет тени. Вот основные цветовые комбинации:",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Красный: bg (text, shadow) color [ 1 ]",
+        "comment": false,
+        "bg_color": [
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Зелёный: bg (text, shadow) color [ 0,1 ]",
+        "comment": false,
+        "bg_color": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Синий: bg (text, shadow) color [ 0,0,1 ]",
+        "comment": false,
+        "bg_color": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Жёлтый: bg (text, shadow) color [ 1,1 ]",
+        "comment": false,
+        "bg_color": [
+          1,
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Розовый: bg (text, shadow) color [ 1,0,1 ]",
+        "comment": false,
+        "bg_color": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Голубой: bg (text, shadow) color [ 0,1,1 ]",
+        "comment": false,
+        "bg_color": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 9,
+        "text": "Чёрный: bg (text, shadow) color [ 0 ]"
+      },
+      {
+        "id": 9,
+        "text": "Белый: bg (text, shadow) color [ 1,1,1 ]",
+        "comment": false,
+        "bg_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nshowPage {id=2}\nend",
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨",
+        "id": 9,
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Есть внутренняя переменная отображения истории странниц, чтобы её вывести необходимо написать:\nfunction lua_text()\n    return json.prettify(history)\nend\nНо с ней не безопасно играться. Лучше создать свою переменную, для этого нужно будет на каждой странице сделать такой вариант ответа:",
+    "answers": [
+      {
+        "id": 10,
+        "text": "1) calculate\n2) function lua_do()\n        steps=steps<plus>1\n     end",
+        "comment": false,
+        "lua_do": "function lua_do()\nsteps=steps<plus>1\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif steps==nil then\nsteps=0\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 10,
+        "calculate": true
+      },
+      {
+        "var_show": [
+          "steps"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 10,
+        "text": "Ходы: ",
+        "left_answer": true
+      },
+      {
+        "id": 2,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Я сделаю абсолютно такую же таблицу толко вариант ответа с калькулейт будет другой:",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Вот код для создания таблицы:\nfunction lua_do()\nproducts={}\nproducts={\"Пшеница\",\"Рожь\",\"Мясо\"}\nend",
+        "lua_do": "function lua_do()\nproducts={}\nproducts={\"Пшеница\",\"Рожь\",\"Мясо\"}\nsteps=30\nend"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Страница торговой лавки:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 12,
+        "text": "Товары:",
+        "left_answer": true
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn b\nend"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   timer.performWithDelay(20000,function()\n   b=(products[math.random(3)])\n   end)\n   end",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 12,
+        "text": "Код варианта ответа отображающего товар:\nfunction lua_text()\nreturn b\nend",
+        "comment": false,
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "id": 12,
+        "instant": true,
+        "text": "Код варианта ответа с calculate обновлящего товары каждые 20секунд:\nfunction lua_do()\n   timer.performWithDelay(20000,function()\n   b=(products[math.random(3)]\n   end)\n   end",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "Обновить страницу (Обновите страницу через 20секунд)",
+        "comment": false
+      },
+      {
+        "id": 2,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨",
+        "comment": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Для начала надо придумать противника и сколько едениц будет у него будет атака и здоровье. Например :\nИмя:Волк\nАтака:3\nЗдоровье:40\n_____________________\nАтака игрока:4\nЗдоровье игрока:60",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Перейти к странице боя\nВот код:\nfunction lua_do()\nvars.killer={}\nvars.killer.name=\"Волк\"\nvars.killer.atak=3\nvars.killer.hp=40\nhp=60\natak=4\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nvars.killer={}\nvars.killer.name=\"Волк\"\nvars.killer.atak=3\nvars.killer.hp=40\nhp=60\natak=4\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Страница боя:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "1)Имя противника:",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nreturn \"2)\"..(killer.name)\nend",
+        "text_color": [
+          0.7
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "3)Здоровье противника:",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "middle_answer": true,
+        "comment": true,
+        "text_color": [
+          0.7
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"4)\"..(killer.hp)\nend",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "5)Атака противника:",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"6)\"..(killer.atak)\nend",
+        "text_color": [
+          0.7
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "middle_answer": true,
+        "text": "————————————",
+        "id": 14
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "7)Моё здоровье:",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"8)\"..(hp)\nend",
+        "text_color": [
+          0,
+          0.4
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "9)Моя атака:",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0.4
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nreturn \"10)\"..(atak)\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif abc==1 and hp>0 and killer.hp>0 or abc==2 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\nkiller.hp=killer.hp-atak\nend",
+        "id": 14,
+        "text": "С левой",
+        "middle_answer": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif abc==1 and hp>0 and killer.hp>0 or abc==2 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nkiller.hp=killer.hp-atak\nend",
+        "text": "С правой",
+        "id": 14,
+        "comment": false
+      },
+      {
+        "lua_if": "function lua_if()\nif abc==3 and hp>0 and killer.hp>0 or abc==4 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\nif abc==3 then\nhp=hp-(killer.atak/3)\nelseif abc==4 then\nhp=hp-killer.atak\nend\nend",
+        "id": 14,
+        "text": "Защита лица",
+        "middle_answer": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif abc==3 and hp>0 and killer.hp>0 or abc==4 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nif abc==4 then\nhp=hp-(killer.atak/3)\nelseif abc==3 then\nhp=hp-killer.atak\nend\nend",
+        "text": "Защита корпуса",
+        "id": 14,
+        "comment": false
+      },
+      {
+        "id": 2,
+        "text": "Победа",
+        "lua_if": "function lua_if()\nif killer.hp<=0 then \nreturn true\nend\nend"
+      },
+      {
+        "id": 2,
+        "text": "Поражение",
+        "lua_if": "function lua_if()\nif hp<=0 then \nreturn true\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nabc=0\nabc=math.random(1,4)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 14,
+        "calculate": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "middle_answer": false,
+        "text": "Коды вариантов ответов:\n1) middle\n2) middle\nfunction lua_text()\nreturn (killer.name)\nend\n3) middle\n4) middle\nfunction lua_text()\nreturn (killer.hp)\nend\n5) middle\n6) middle\nfunction lua_text()\nreturn (killer.atak)\nend\n7) middle\n8) middle\nfunction lua_text()\nreturn (hp)\nend\n9) middle\n10) middle\nfunction lua_text()\nreturn (atak)\nend\n*Как сделать сам бой можно узнать в разделе \"Боевая система\"",
+        "id": 14,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Тут я объясню как создать сам бой из предыдущего раздела:",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Для начала создаём переменную которая будет отвечать за то чей сейчас удар, ваш или противника, например \"abc\".\nfunction lua_do()\nabc=0\nend",
+        "lua_do": "function lua_do()\nabc=0\nvars.killer={}\nvars.killer.name=\"Волк\"\nvars.killer.atak=3\nvars.killer.hp=40\nhp=60\natak=4\nend"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Странница боя:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "Имя противника:",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nreturn (killer.name)\nend",
+        "text_color": [
+          0.7
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "Здоровье противника:",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "middle_answer": true,
+        "comment": true,
+        "text_color": [
+          0.7
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn (killer.hp)\nend",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "Атака противника:",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn (killer.atak)\nend",
+        "text_color": [
+          0.7
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "middle_answer": true,
+        "text": "————————————",
+        "id": 14
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "Моё здоровье:",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn (hp)\nend",
+        "text_color": [
+          0,
+          0.4
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 14,
+        "text": "Моя атака:",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0.4
+        ],
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn (atak)\nend",
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nif abc==1 and hp>0 and killer.hp>0 or abc==2 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "id": 14,
+        "text": "С левой",
+        "lua_do": "function lua_do()\nkiller.hp=killer.hp-atak\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif abc==1 and hp>0 and killer.hp>0 or abc==2 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\nkiller.hp=killer.hp-atak\nend",
+        "text": "С правой",
+        "id": 14,
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nif abc==3 and hp>0 and killer.hp>0 or abc==4 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "id": 14,
+        "text": "Защита лица",
+        "lua_do": "function lua_do()\nif abc==3 then\nhp=hp-(killer.atak/3)\nelseif abc==4 then\nhp=hp-killer.atak\nend\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif abc==3 and hp>0 and killer.hp>0 or abc==4 and hp>0 and killer.hp>0 then\nreturn true\nend\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\nif abc==4 then\nhp=hp-(killer.atak/3)\nelseif abc==3 then\nhp=hp-killer.atak\nend\nend",
+        "text": "Защита корпуса",
+        "id": 14,
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Победа",
+        "lua_if": "function lua_if()\nif killer.hp<=0 then \nreturn true\nend\nend"
+      },
+      {
+        "id": 2,
+        "text": "Поражение",
+        "lua_if": "function lua_if()\nif hp<=0 then \nreturn true\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 14,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nabc=0\nabc=math.random(1,4)\nend"
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "middle_answer": false,
+        "text": "Коды вариантов ответов:\n1)С левой:\nfunction lua_if()\nif abc==1 and hp>0 and killer.hp>0 or abc==2 and hp>0 and killer.hp>0 then\nreturn true\nend\nend\nfunction lua_do()\nif abc==1 then\nkiller.hp=killer.hp-atak\nend\n2)С правой:\nfunction lua_if()\nif abc==1 and hp>0 and killer.hp>0 or abc==2 and hp>0 and killer.hp>0 then\nreturn true\nend\nend\nfunction lua_do()\nif abc==2 then\nkiller.hp=killer.hp-atak\nend\n3)Защита лица:\nfunction lua_if()\nif abc==3 and hp>0 and killer.hp>0 or abc==4 and hp>0 and killer.hp>0 then\nreturn true\nend\nend\nfunction lua_do()\nif abc==3 then\nhp=hp-(killer.atak/3)\nelseif abc==4 then\nhp=hp-killer.atak\nend\nend\n4)Защита корпуса:\nfunction lua_if()\nif abc==3 and hp>0 and killer.hp>0 or abc==4 and hp>0 and killer.hp>0 then\nreturn true\nend\nend\nfunction lua_do()\nif abc==4 then\nhp=hp-(killer.atak/3)\nelseif abc==3 then\nhp=hp-killer.atak\nend\nend\n5)Победа:\nfunction lua_if()\nif killer.hp<=0 then \nreturn true\nend\nend\n6)Поражение:\nfunction lua_if()\nif hp<=0 then \nreturn true\nend\nend",
+        "id": 14,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Под переменными игрока я подразумеваю такие переменные как: голод, здоровье и тому подобное. Логично что с каждым действием(ходом) у игрока должен тратится голод, радость, или же он подхватил отравление. Вот несколько примеров:",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Код варианта ответа (с естественной усталостью): \nfunction lua_do()\nhunger=100\nenjoy=100\nend",
+        "lua_do": "function lua_do()\nhunger=100\nenjoy=100\nend"
+      },
+      {
+        "id": 19,
+        "text": "Код варианта ответа (с причинным уменьшением переменных, например отравление): \nfunction lua_do()\nhp=100\ntoxication=0\nend",
+        "lua_do": "function lua_do()\nhp=100\ntoxication=0\nend"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Страница с действиями:",
+    "answers": [
+      {
+        "var_show": [
+          "hunger"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "middle_answer": true,
+        "text": "(Код: var show [\"hunger\"]) \nГолод:",
+        "id": 18
+      },
+      {
+        "var_show": [
+          "enjoy"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "middle_answer": true,
+        "text": "(Код var show [\"enjoy\"]) \nСчастье:",
+        "id": 18
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 18,
+        "instant": true,
+        "text": "Сделать ход",
+        "left_answer": true
+      },
+      {
+        "super_calculate": false,
+        "id": 18,
+        "calculate": true,
+        "lua_do": "function lua_do()\nenjoy=enjoy-3\nhunger=hunger-1\nif enjoy<=0 then \nenjoy=100\nelseif hunger<=0 then \nhunger=100\nend\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "text_color": [],
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nenjoy=enjoy-3\nhunger=hunger-1\nend",
+        "calculate": false,
+        "text": "Вот код калькулейта: function lua_do()\nenjoy=enjoy-3\nhunger=hunger-1\nend",
+        "id": 18
+      },
+      {
+        "middle_answer": true,
+        "text": "В меню",
+        "id": 2,
+        "no_transition": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Страница с действиями:",
+    "answers": [
+      {
+        "var_show": [
+          "hp"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "middle_answer": true,
+        "text": "Здоровье:",
+        "id": 19
+      },
+      {
+        "id": 19,
+        "text": "Сьесть отравленное яблоко\nКод:\nfunction lua_do()\ntoxication=1\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\ntoxication=1\nend"
+      },
+      {
+        "id": 19,
+        "text": "Принять антибиотики\nКод:\nfunction lua_do()\ntoxication=0\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\ntoxication=0\nend"
+      },
+      {
+        "id": 19,
+        "text": "Сделать ход",
+        "comment": false
+      },
+      {
+        "text_color": [],
+        "comment": true,
+        "super_calculate": false,
+        "id": 19,
+        "calculate": false,
+        "lua_do": "function lua_do()\nif toxication== 1 then \nhp=hp-5\nend\nend",
+        "text": "Код варианта ответа с calculate:\nfunction lua_do()\nif toxication== 1 then \nhp=hp-5\nend\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif toxication== 1 and hp>0 then \nhp=hp-5\nelseif hp<=0 then \nhp=100\nend\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 19
+      },
+      {
+        "id": 2,
+        "text": "В меню",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "\n\n  ",
+    "answers": [
+      {
+        "calculate": false,
+        "super_calculate": false,
+        "id": 12,
+        "text": "stretch",
+        "url": "https://d.radikal.ru/d07/2004/25/2088ad2e62d0.jpg\n\n",
+        "lua_do": "function lua_do()\ng.fullscreen=1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif a==1 then\nreturn true\nend\nend",
+        "super_calculate": false,
+        "id": 12,
+        "url": "https://c.radikal.ru/c15/2004/38/165e4e81f036.png\n\n",
+        "calculate": false,
+        "text": "stretch"
+      },
+      {
+        "lua_if": "function lua_if()\nif a==2 then\nreturn true\nend\nend",
+        "super_calculate": false,
+        "id": 12,
+        "text": "stretch",
+        "url": "https://b.radikal.ru/b10/2004/70/3a4f1353e1b9.png\n\n",
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction onTapStretch(event)\nif a==2 then\na=1\nshowPage {id=20, transition=instant}\nelseif a==1 then \na=2\nshowPage {id=20, transition=instant}\nend\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\nimages.stretch:addEventListener(\"tap\", onTapStretch)\nend"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Вот пример использования update и коды к вариантам ответа:                       ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn \"Значение переменной: \".. textplus..\"<s>\n\"..\"(<plus>\".. result..\")\"\nend",
+        "lua_do": "function lua_do()\nresult=math.random(1,50)\ntextplus=textplus<plus>result\nend",
+        "id": 21,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          1
+        ],
+        "no_transition": true
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nif textplus>=100 then\nreturn true\nend\nend",
+        "id": 21,
+        "text": "Потратить сто очков",
+        "lua_do": "function lua_do()\ntextplus=textplus-100\nend",
+        "no_transition": true
+      },
+      {
+        "comment": false,
+        "id": 21,
+        "text": "Посмотреть коды",
+        "lua_do": "function lua_do()\ntext=56\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nif text==56 then\nreturn true\nend\nend",
+        "id": 21,
+        "text": "Коды: \n1)function lua_do()\nresult=math.random(1,50)\ntextplus=textplus<plus>result\nend\n\nfunction lua_text()\nreturn \"Значение переменной: \".. textplus..\"<s>\n\"..\"(<plus>\".. result..\")\"\nend\n\nupdate [1]\n\n2)\nfunction lua_do()\ntextplus=textplus-100\nend\n\nfunction lua_if()\nif textplus>=100 then\nreturn true\nend\nend",
+        "comment": false,
+        "no_transition": true
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Боюсь что написание этого раздела займёт гораздо больше времени чем я ожидал, искренне сожалею тем кто ждал этот раздел, но судя по всему я столкнулся с теми же проблемами что и остальные: не могу найти прямую ссылку, не грузится, не воспроизводится и тому подобное. Я постараюсь что-нибудь с этим с этим сделать и как можно раньше убрать весь этот текст и показать коды. ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Разачарованно вернуться в меню"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "                                                                                                   ",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"NotoSerif-BoldItalic\", canvas.height/13 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = vAr\ninputText.isEditable=false\nend",
+        "super_calculate": false,
+        "id": 23,
+        "calculate": true,
+        "update": [
+          1
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 24,
+        "text": "Далее",
+        "update": [
+          1
+        ],
+        "lua_do": "function lua_do()\ninputText.text=\"Текст бокс можно использовать просто для отображения информации, это выглядит довольно эффектно и он очень гибок.<s>\n Строкой ниже отображено значение переменной 'vAr':<s>\n\"..vAr\nend"
+      },
+      {
+        "var_random_from_weight": [
+          "vAr",
+          "Hello_World",
+          30,
+          "A_B",
+          30,
+          "Hi",
+          40
+        ],
+        "comment": false,
+        "id": 23,
+        "text": "Задать переменной рандомное значение",
+        "instant": false,
+        "no_transition": true
+      },
+      {
+        "super_calculate": true,
+        "id": 23,
+        "calculate": false,
+        "lua_do": "function lua_do()\nHello_World=0\nA_B=0\nHi=0\nHello_World=\"Hello World\"\nA_B=\"A=B²\"\nHi=\"Hi there\"\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 23,
+        "text": "very big, very black",
+        "url": "https://b.radikal.ru/b31/2005/19/a01d2b1f3337.jpg\n\n"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 23,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 2, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"RobotoCondensed-BoldItalic\", 50 )\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = vAr\ninputText.isEditable=true\ninputText.text=\"А теперь поподробнее: <s>\n1) Необходимо добавить изображение, назвать его front любое и если хотите чтобы фон был прозрачный написать в луа коде images.front.isVisible=false,\"..\"<s>\nв моём же случае я на варианте ответа картинки пишу black, very big; без выше указанного кода.<s>\n\"..\"2)Вот код textBox:\"..\"<s>\n\"..\"inputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)<s>\ncanvasGroup:insert (inputText)<s>\ninputText.isEditable = false<s>\ninputText:setTextColor( 1, 0, 0 )<s>\ninputText.hasBackground=false<s>\ninputText.text = var\"\nend"
+      },
+      {
+        "id": 23,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": true
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nHello_World=0\nA_B=0\nHi=0\nHello_World=\"Hello World\"\nA_B=\"A=B²\"\nHi=\"Hi there\"\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 23
+      },
+      {
+        "id": 23,
+        "text": "black, very big ",
+        "url": "https://b.radikal.ru/b31/2005/19/a01d2b1f3337.jpg\n\n"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "                                                                                                                                                                                                                ",
+    "answers": [
+      {
+        "id": 25,
+        "text": "black, very big",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", canvas.height/6 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите значение...\"\ninputText.isEditable=true\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 25,
+        "calculate": true
+      },
+      {
+        "id": 25,
+        "text": "Значение переменной: ",
+        "comment": true,
+        "var_show": [
+          "hide"
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Ввод",
+        "comment": false,
+        "lua_do": "function lua_do()\nhide=inputText.text\nend"
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 25,
+        "text": "Код текст бокса:\nfunction lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.placeholder = \"Введите значение...\"\nend\n\nИ код второго варианта ответа:\nfunction lua_do()\nvar=inputText.text\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Текст филд создает однострочный объект TextField для ввода текста. Для многострочного ввода текста предназначен текст бокс.\n\nРазмер шрифта по умолчанию для текстового поля зависит от высоты поля и рассчитывается как максимальный размер шрифта, который будет помещаться внутри поля. \nmyText.size=30\n\nСобственные текстовые поля могут отображать необязательный текст заполнителя. Это может обеспечить «подсказку» относительно того, что пользователь должен ввести в поле. Если установлено, строка-заполнитель отображается с использованием той же информации о стиле (за исключением  цвета текста ). Заполнитель не появляется после ввода фактического текста в поле, и в настоящее время он не участвует в определении размера текстового поля.\nmyText.placeholder = \"Подсказка\"\n\nОстальное не буду дублировать так как цвет, выравнивание, фон и другие возможности те же что и у текст бокса.\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Выберите тип кода: ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "С условием",
+        "lua_do": "function lua_do()\nkod={}\nkod.ifed=\"\"\nkod.one=\"\"\nkod.native=\"\"\nkod.two=\"\"\nkod.nativetwo=\"\"\nkod.three=\"\"\nend"
+      },
+      {
+        "id": 2,
+        "text": "В меню",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "       ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", canvas.height/13 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите условие, например а>в или С==Var, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 28,
+        "calculate": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_do": "function lua_do()\nif inputText.text~=nil then\nkod.ifed=inputText.text\nend\nend",
+        "text": "Подтвердить",
+        "comment": false,
+        "id": 28
+      },
+      {
+        "id": 30,
+        "text": "Далее",
+        "lua_if": "function lua_if()\nif kod.ifed~=\"\" then\nreturn true\nend\nend"
+      },
+      {
+        "id": 28,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "*Для отмены условия наберите в его поле \"Нет\".",
+    "answers": [
+      {
+        "id": 27,
+        "text": "Назад",
+        "middle_answer": true
+      },
+      {
+        "id": 29,
+        "text": "Первое действие:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 34,
+        "text": "Первое условие",
+        "lua_text": "function lua_text()\nreturn \"Первое условие: \"..ifes_one[1]\nend",
+        "left_answer": true
+      },
+      {
+        "id": 35,
+        "text": "Второе условие",
+        "lua_text": "function lua_text()\nreturn \"Второе условие: \"..ifes_one[2]\nend",
+        "right_answer": true
+      },
+      {
+        "id": 36,
+        "text": "Третье условие",
+        "lua_text": "function lua_text()\nreturn \"Третье условие: \"..ifes_one[3]\nend",
+        "left_answer": true
+      },
+      {
+        "id": 37,
+        "text": "Четвертое условие",
+        "lua_text": "function lua_text()\nreturn \"Четвёртое условие: \"..ifes_one[4]\nend",
+        "right_answer": true
+      },
+      {
+        "id": 38,
+        "text": "Пятое условие",
+        "lua_text": "function lua_text()\nreturn \"Пятое условие: \"..ifes_one[5]\nend",
+        "left_answer": true
+      },
+      {
+        "id": 39,
+        "text": "Действия",
+        "right_answer": true
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "   ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 28,
+        "calculate": true,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", canvas.height/13 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите первую переменную, например а или С, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "comment": false,
+        "id": 30,
+        "text": "Подтвердить",
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "lua_do": "function lua_do()\nif inputText.text~=nil then\nkod.one=inputText.text\nend\nend"
+      },
+      {
+        "id": 31,
+        "text": "Далее",
+        "lua_if": "function lua_if()\nif kod.one~=\"\" then\nreturn true\nend\nend"
+      },
+      {
+        "id": 28,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "   ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", canvas.height/13 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите действие, например <plus> или / ...\"\ninputText.isEditable=true\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 28
+      },
+      {
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "id": 31,
+        "text": "Подтвердить",
+        "lua_do": "function lua_do()\nif inputText.text~=nil then\nkod.native=inputText.text\nend\nend",
+        "comment": false
+      },
+      {
+        "id": 32,
+        "text": "Далее",
+        "lua_if": "function lua_if()\nif kod.native~=\"\" then\nif utf8.sub(kod.native,1,1)== \"<plus>\" or utf8.sub(kod.native,1,1)== \"*\" or\nutf8.sub(kod.native,1,1)== \"/\" or utf8.sub(kod.native,1,1)== \"-\" then\nreturn true\nend\nend\nend"
+      },
+      {
+        "id": 28,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "   ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", canvas.height/13 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите вторую переменную, например а или С, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 28
+      },
+      {
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "id": 32,
+        "text": "Подтвердить",
+        "lua_do": "function lua_do()\nif inputText.text~=nil then\nkod.two=inputText.text\nend\nend",
+        "comment": false
+      },
+      {
+        "id": 33,
+        "text": "Далее",
+        "lua_if": "function lua_if()\nif kod.two~=\"\" then\nreturn true\nend\nend"
+      },
+      {
+        "id": 28,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", canvas.height/13 )\ninputText.isEditable = false\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.text=\"function lua_do()<s>\n if \"..kod.ifed..\" <s>\nthen <s>\n\"..kod.one..\"=\"..kod.one..kod.native..kod.two..\"<s>\nend<s>\nend\"\ninputText.isEditable=true\nend",
+        "calculate": true,
+        "id": 33,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 33,
+        "text": "Обновить страницу",
+        "comment": false,
+        "middle_answer": true
+      },
+      {
+        "id": 27,
+        "text": "Назад",
+        "right_answer": true,
+        "left_answer": true
+      },
+      {
+        "id": 28,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "      ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 34,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", 60 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите условие, например а>в или С==Var, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend"
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "lua_do": "function lua_do()\nif inputText.text~=\"\" then\nifes_one[1]=inputText.text\nend\nend"
+      },
+      {
+        "id": 34,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "     ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 34,
+        "calculate": true,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", 60 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите условие, например а>в или С==Var, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "lua_do": "function lua_do()\nif inputText.text~=\"\" then\nifes_one[2]=inputText.text\nend\nend"
+      },
+      {
+        "id": 34,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "      ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", 60 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите условие, например а>в или С==Var, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 34
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "lua_do": "function lua_do()\nif inputText.text~=\"\" then\nifes_one[3]=inputText.text\nend\nend"
+      },
+      {
+        "id": 34,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", 60 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите условие, например а>в или С==Var, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 34,
+        "calculate": true
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "lua_do": "function lua_do()\nif inputText.text~=\"\" then\nifes_one[4]=inputText.text\nend\nend"
+      },
+      {
+        "id": 34,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 34,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", 60 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите условие, например а>в или С==Var, только пожалуйста используйте английские символоы...\"\ninputText.isEditable=true\nend"
+      },
+      {
+        "id": 29,
+        "text": "Назад",
+        "lua_do": "function lua_do()\nif inputText.text~=\"\" then\nifes_one[5]=inputText.text\nend\nend"
+      },
+      {
+        "id": 34,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Действия: \n*Максимум 5 действий",
+    "answers": [
+      {
+        "id": 29,
+        "text": "Назад",
+        "middle_answer": true
+      },
+      {
+        "id": 40,
+        "text": "<plus>"
+      },
+      {
+        "id": 41,
+        "text": "-"
+      },
+      {
+        "id": 42,
+        "text": "×"
+      },
+      {
+        "id": 43,
+        "text": "÷"
+      },
+      {
+        "id": 44,
+        "text": "Округление"
+      },
+      {
+        "id": 45,
+        "text": "Рандом"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "     ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 34,
+        "calculate": true,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", 60 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите первую переменную, только пожалуйста используйте английские символы...\"\ninputText.isEditable=true\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 46,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nif inputText.text~=\"\"  then\nfor i=1, 5 do\nif ages_one[i]==\"Нет\" then\nages_one[i]=\"\"..inputText.text\nbreak\nend\nend\nend\nend"
+      },
+      {
+        "id": 34,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 42,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 43,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 44,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 45,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 46,
+    "text": "      ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", 60 )\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите вторую переменную, только пожалуйста используйте английские символы...\"\ninputText.isEditable=true\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 34
+      },
+      {
+        "id": 39,
+        "text": "Назад",
+        "lua_do": "function lua_do()\nif inputText.text~=\"\"  then\nfor i=1, 5 do\nif ages_one[i]~=\"Нет\" then\nages_one[i]=ages_one[i]..\"<plus>\"..inputText.text\nbreak\nend\nend\nend\nend"
+      },
+      {
+        "id": 34,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "В учебнике Луа приведён пример этого операттра на луа, но я решил упростить эту задачу и использовать этот же оператор. Можно использовать этот же оператор на переменную от которой будут зависеть коды.\nНиже приведен пример генерации сложности с помощью этого оператора и луа: ",
+    "answers": [
+      {
+        "var_random_from_weight": [
+          "difficulty_id",
+          1,
+          60,
+          2,
+          30,
+          3,
+          10
+        ],
+        "lua_text": "function lua_text()\nreturn \"Сложность: \" .. difficulty\nend",
+        "id": 47,
+        "text": "Новый ответ. введите текст",
+        "comment": false
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif difficulty_id==1 then\ndifficulty=\"Легко\"\nelseif difficulty_id==2 then\ndifficulty=\"Нормально\"\nelseif difficulty_id==3 then\ndifficulty=\"Сложно\"\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 47,
+        "calculate": true
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 47,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"Кoд первого варианта ответа: \" .. [[\n\nvar random from weight [\"difficulty_id\", 1, 60, 2, 30, 3, 10]\n\nfunction lua_text()\nreturn \"Сложность: \" .. difficulty\nend\n\n\n\nКод второго варианта ответа с calculate:\n function lua_do()\nif difficulty_id==1 then\ndifficulty=\"Легко\"\nelseif difficulty_id==2 then\ndifficulty=\"Нормально\"\nelseif difficulty_id==3 then\ndifficulty=\"Сложно\"\nend\nend]]\nend"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Оператор update имеет большой минус: работа на странице на которой он размещён, также его невозможно контролировать, в случае луа можно сделать чтобы он работал по всему квесту и его можно ограничить по повторениям.",
+    "answers": [
+      {
+        "id": 49,
+        "text": "Бесконечный цикл"
+      },
+      {
+        "id": 2,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Пример бесконечного цикла: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif time_ghr==nil\nthen \ntime_ghr=0\nend\nfunction Insertitem()\ntimer.performWithDelay (1000, function ()\ntime_ghr=time_ghr<plus>5\nInsertitem()\nend)\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 49,
+        "calculate": true
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 49,
+        "calculate": false,
+        "text": "Код варианта ответас calculate:\nfunction lua_do()\nfunction Insertitem()\ntimer.performWithDelay (1000, function ()\ntime_ghr=time_ghr<plus>5\nInsertitem()\nend)\nend\nend"
+      },
+      {
+        "id": 49,
+        "comment": false,
+        "lua_do": "function lua_do()\nInsertitem()\nend",
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          0.1
+        ],
+        "lua_text": "function lua_text()\nreturn time_ghr..\"<s>\nКод этого варианта ответа: <s>\nfunction lua_do()<s>\nInsertitem()<s>\nend<s>\n update [0.1]\"\nend"
+      },
+      {
+        "id": 48,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Код с ограниченным циклом: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 49,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\ntime_ghrh=0\n\n\nfunction Insertitemm()\ntimer.performWithDelay (1000, function ()\ntime_ghrh=time_ghrh<plus>5\nInsertitem()\nend)\nend\nend"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 49,
+        "calculate": false,
+        "text": "Код варианта ответас calculate:\nfunction lua_do()\nfunction Insertitemm()\ntimer.performWithDelay (1000, function ()\ntime_ghrh=time_ghrh<plus>5\nInsertitem()\nend)\nend\nend"
+      },
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn time_ghrh..\"<s>\nКод этого варианта ответа: <s>\nfunction lua_do()<s>\nfor i=1, 30 do<s>\nInsertitemm()<s>\nend<s>\nend<s>\n update [0.1]\"\nend",
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          0.1
+        ],
+        "id": 50
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Нажмите для активации цикла.\"\nend",
+        "id": 50,
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nfor i=1, 30 do\nInsertitemm()\nend\nend",
+        "comment": false
+      },
+      {
+        "id": 48,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "                                                                                                                                                                                                                                                                ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "black, stretch",
+        "url": "https://a.radikal.ru/a34/2004/0a/9680285bbc52.jpg\n\n"
+      },
+      {
+        "super_calculate": false,
+        "id": 51,
+        "calculate": true,
+        "lua_do": "function lua_do()\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 1.5, canvas.width / 1, canvas.height / 1)\ncanvasGroup:insert (inputText)\ninputText.align=\"center\"\ninputText.font = native.newFont( \"Roboto-BoldItalic\", canvas.height/10)\ninputText.isEditable = true\ninputText:setTextColor( 1, 0, 0 )\ninputText.hasBackground=false\ninputText.placeholder = \"Введите номер интересующей вас темы...\"\ninputText.isEditable=true\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "text": "Ввод",
+        "lua_do": "function lua_do()\nlocal ig=0\nif inputText.text~=nil then\nig=inputText.text\nshowPage {id=ig}\nend\nend",
+        "id": 51
+      },
+      {
+        "id": 2,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 53,
+    "text": "",
+    "answers": []
+  }
+]

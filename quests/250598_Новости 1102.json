@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Viktorianayt написал еще 190875 слов в квесте \"Академия стихий \"."
+      },
+      {
+        "targetbookid": "249231",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Академия стихий \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Annie написал еще 161889 слов в квесте \"Что скрывает город\"."
+      },
+      {
+        "targetbookid": "230820",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Что скрывает город\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор NotRachok написал еще 104954 слов в квесте \"Через Дикий Запад\"."
+      },
+      {
+        "targetbookid": "236603",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Через Дикий Запад\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор InSannity написал еще 104204 слов в квесте \"Наследие Витори\"."
+      },
+      {
+        "targetbookid": "239068",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наследие Витори\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Гривус написал еще 103433 слов в квесте \"Любопытный мужичок\"."
+      },
+      {
+        "targetbookid": "246398",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Любопытный мужичок\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

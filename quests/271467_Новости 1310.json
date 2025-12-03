@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Котики - Кролики написал еще 20520.2 слов в квесте \"Закат королевств\"."
+      },
+      {
+        "targetbookid": "270920",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Закат королевств\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор hanahime написал еще 19567.2 слов в квесте \"Петля\"."
+      },
+      {
+        "targetbookid": "270861",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Петля\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Алексей Мухачев написал еще 15123.2 слов в квесте \"Бункер на четверых\"."
+      },
+      {
+        "targetbookid": "271297",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Бункер на четверых\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Feellow написал еще 15071.6 слов в квесте \"Миг\"."
+      },
+      {
+        "targetbookid": "230070",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Миг\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор iloveyou3000 написал еще 15067.2 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "265302",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

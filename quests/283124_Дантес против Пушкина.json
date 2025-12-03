@@ -1,0 +1,374 @@
+[
+  {
+    "id": 1,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать Дуэль.",
+        "var_set": [
+          "ghp",
+          1,
+          "hp",
+          1,
+          "этап",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "    ",
+    "answers": [
+      {
+        "var_show": [
+          "победап"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": "Побед:",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 2,
+        "text": "Побед:",
+        "var_show": [
+          "победад"
+        ]
+      },
+      {
+        "var_show": [
+          "hp",
+          "/1"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": "Пушкин. ",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 2,
+        "text": "Дантес.",
+        "var_show": [
+          "ghp",
+          "/1"
+        ]
+      },
+      {
+        "var_equal": [
+          "этап",
+          1
+        ],
+        "id": 3,
+        "text": "Атака",
+        "run": [
+          3
+        ],
+        "var_need": [
+          "hp",
+          1,
+          "ghp",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "этап",
+          2
+        ],
+        "id": 4,
+        "text": "Защита",
+        "run": [
+          4
+        ],
+        "var_need": [
+          "hp",
+          1,
+          "ghp",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Пушкин победил.",
+        "id": 2,
+        "var_no_more": [
+          "ghp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Дантес победил.",
+        "id": 2,
+        "var_no_more": [
+          "hp",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "победап",
+          1
+        ],
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_no_more": [
+          "ghp",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "победад",
+          1
+        ],
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_no_more": [
+          "hp",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "ghp",
+          1,
+          "hp",
+          1,
+          "этап",
+          1,
+          "dmg",
+          0,
+          "промах",
+          0,
+          "точность",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Следующая дуэль. ",
+        "id": 2,
+        "var_no_more": [
+          "ghp",
+          0
+        ]
+      },
+      {
+        "var_no_more": [
+          "hp",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Следующая дуэль. ",
+        "id": 2,
+        "var_set": [
+          "ghp",
+          1,
+          "hp",
+          1,
+          "этап",
+          1,
+          "dmg",
+          0,
+          "промах",
+          0,
+          "точность",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": [
+      {
+        "comment": true,
+        "var_equal": [
+          "промах",
+          1,
+          "gdmg",
+          0
+        ],
+        "id": 3,
+        "text": "Дантес мажет!",
+        "middle_answer": true,
+        "var_set": [
+          "этап",
+          2,
+          "ghp",
+          0
+        ]
+      },
+      {
+        "instant": true,
+        "var_equal": [
+          "точность",
+          1
+        ],
+        "id": 2,
+        "text": "Точный выстрел. \n[Атака]\n(Точность 100%)",
+        "middle_answer": true,
+        "var_set": [
+          "этап",
+          2,
+          "ghp",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "var_no_more": [
+          "dmg",
+          0
+        ],
+        "var_random_from_weight": [
+          "dmg",
+          1,
+          50,
+          0,
+          50
+        ],
+        "text": "Выстрел навскидку.\n[Атака]\n(Точность 50%)",
+        "var_sub": [
+          "ghp",
+          "dmg"
+        ],
+        "var_not": [
+          "точность",
+          1
+        ],
+        "middle_answer": true,
+        "var_set": [
+          "этап",
+          2
+        ]
+      },
+      {
+        "var_not": [
+          "точность",
+          1
+        ],
+        "middle_answer": true,
+        "id": 2,
+        "instant": true,
+        "text": "Прицелиться. \n[Баф]\n(Ход перейдет противнику. Но следующий выстрел будет иметь шанс 100%)",
+        "var_set": [
+          "точность",
+          1,
+          "этап",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   ",
+    "answers": [
+      {
+        "comment": true,
+        "id": 4,
+        "text": "Промах!",
+        "var_no_more": [
+          "dmg",
+          0
+        ],
+        "var_not": [
+          "точность",
+          1
+        ],
+        "var_equal": [
+          "dmg",
+          0
+        ],
+        "var_random_from_weight": [
+          "dmg",
+          1,
+          50,
+          2,
+          50
+        ],
+        "var_sub": [
+          "ghp",
+          "dmg"
+        ],
+        "middle_answer": true,
+        "var_set": [
+          "этап",
+          2
+        ]
+      },
+      {
+        "var_set": [
+          "этап",
+          2
+        ],
+        "var_random_from_weight": [
+          "dmg",
+          1,
+          50,
+          2,
+          50
+        ],
+        "comment": true,
+        "text": "Дантес стреляет в вас. \n[Атака]\n(Точность 50%)",
+        "middle_answer": true,
+        "var_sub": [
+          "ghp",
+          "dmg"
+        ],
+        "id": 4,
+        "var_no_more": [
+          "dmg",
+          0
+        ]
+      },
+      {
+        "comment": false,
+        "id": 2,
+        "instant": true,
+        "var_no_more": [
+          "dmg",
+          0
+        ],
+        "var_random_from_weight": [
+          "gdmg",
+          1,
+          50,
+          0,
+          50
+        ],
+        "var_sub": [
+          "hp",
+          "gdmg"
+        ],
+        "text": "Принять.",
+        "middle_answer": true,
+        "var_set": [
+          "этап",
+          1,
+          "промах",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  }
+]

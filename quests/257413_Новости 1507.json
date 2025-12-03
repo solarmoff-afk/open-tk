@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Waffle написал еще 283497 слов в квесте \"Тёмные дни\"."
+      },
+      {
+        "targetbookid": "239163",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тёмные дни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор бабочка написал еще 126881 слов в квесте \"Букет из чёрных роз\n\"."
+      },
+      {
+        "targetbookid": "257147",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Букет из чёрных роз\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор seem03 написал еще 114015 слов в квесте \"Rising Force\"."
+      },
+      {
+        "targetbookid": "27628",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Rising Force\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор GlazWrite написал еще 91863 слов в квесте \"Цена Успеха\"."
+      },
+      {
+        "targetbookid": "220090",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Цена Успеха\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор gentle_death написал еще 89485 слов в квесте \"Тайна двух миров.\"."
+      },
+      {
+        "targetbookid": "240027",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тайна двух миров.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

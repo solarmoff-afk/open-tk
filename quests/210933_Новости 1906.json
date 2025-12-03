@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 26279 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор JaysonXP написал еще 24699 слов в квесте \"Родина\"."
+      },
+      {
+        "targetbookid": "195095",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Родина\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Дориан Грей написал еще 22021 слов в квесте \"Цена наших чувств\"."
+      },
+      {
+        "targetbookid": "185777",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Цена наших чувств\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Medzoll\n написал еще 21479 слов в квесте \"Игра мертвецов \"."
+      },
+      {
+        "targetbookid": "205237",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Игра мертвецов \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Феликс Рушиев написал еще 18318 слов в квесте \"Проэкт \"myworld\"\"."
+      },
+      {
+        "targetbookid": "179950",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Проэкт \"myworld\"\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

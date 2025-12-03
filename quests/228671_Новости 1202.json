@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 19059 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Tobi написал еще 17733 слов в квесте \"Судьба - это миф\n\"."
+      },
+      {
+        "targetbookid": "169175",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Судьба - это миф\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Seylanty написал еще 15332 слов в квесте \"Грёзы мага\"."
+      },
+      {
+        "targetbookid": "220835",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Грёзы мага\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор dannskoy\n написал еще 14899 слов в квесте \"Тяжкое время: часть вторая\"."
+      },
+      {
+        "targetbookid": "218915",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тяжкое время: часть вторая\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Dark1805 написал еще 14440 слов в квесте \"Хроники павшего мира\n(preAlpha v0.2)\"."
+      },
+      {
+        "targetbookid": "225807",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Хроники павшего мира\n(preAlpha v0.2)\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

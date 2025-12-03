@@ -1,0 +1,260 @@
+[
+  {
+    "id": 1,
+    "text": "Осада ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать ",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nkhp=0  hp=0\nkatk=0  atk=0\nminatk=0\nminhp=0\nlvltower =0\ndebaff=0\npogoda =0\nunatklvl=1\nunhplvl=1\nVil=0\nArd =0\nDreid=0\nKort=0\nKail=0\nOuen=0\ndebaff=0\nhpdabl=0\natkdabl=0\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "empty",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nmyField = native.newTextField(canvas.width / 6,canvas.height *1.4, canvas.width / 5, canvas.height / 7)\ncanvasGroup:insert(myField)\nmyField.inputType = \"number\"\nmyField.placeholder =\"➷\"\nmyField.text=katk\nend\n",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 2
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nmyFieldd = native.newTextField(canvas.width /2.6, canvas.height *1.4, canvas.width / 5, canvas.height / 7)\ncanvasGroup:insert(myFieldd)\nmyFieldd.inputType = \"number\"\nmyFieldd.placeholder =\"♡\"\nmyFieldd.text=khp\nend\n",
+        "text": "Новый ответ. введите текст",
+        "id": 2,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nmyFielddd = native.newTextField(canvas.width / 1.63, canvas.height *1.4, canvas.width /5, canvas.height / 7)\ncanvasGroup:insert(myFielddd)\nmyFielddd.inputType = \"number\"\nmyFielddd.placeholder =\"%\"\nmyFielddd.text=debaff\nend\n"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nmyFielddddd = native.newTextField(canvas.width / 1.2, canvas.height *1.4, canvas.width /5, canvas.height / 7)\ncanvasGroup:insert(myFielddddd)\nmyFielddddd.inputType = \"number\"\nmyFielddddd.placeholder = \"★\"\nend\n",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nmyFieldddd = native.newTextBox(canvas.width / 1.9,canvas.height / 1.4, canvas.width / 1.2, canvas.height / 1)\ncanvasGroup:insert(myFieldddd)\nmyFieldddd.esEditable=false\nmyFieldddd.align=\"center\"\nmyFieldddd.size=86\nmyFieldddd.hasBackground=false\nmyFieldddd.inputType = \"number\"\nmyFieldddd.placeholder = \"\"\nmyFieldddd.text= \"[➷]\".. katk.. \"/[♡]\".. khp.. \"<s>\n\"..\"<s>\n\".. \"[➹]\".. math.round(atk).. \"/[♡]\".. math.round(hp) \nend \n",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "id": 2,
+        "instant": true,
+        "text": "       ",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "id": 2,
+        "instant": true,
+        "text": "       ",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "id": 2,
+        "instant": true,
+        "text": "       ",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "id": 2,
+        "instant": true,
+        "text": "       ",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "id": 2,
+        "instant": true,
+        "text": "       ",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "id": 2,
+        "instant": true,
+        "text": "       ",
+        "left_answer": false
+      },
+      {
+        "calculate": false,
+        "id": 2,
+        "text": "Обнулить",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nkhp=0  hp=0\nkatk=0  atk=0\nunatklvl=1\nunhplvl=1\nVil=0\nArd =0\nDreid=0\nKort=0\nKail=0\nOuen=0\nminatk=0\nminhp=0\nlvltower=0\nend",
+        "instant": true,
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "calculate": true,
+        "comment": false,
+        "super_calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nif Vil == 1 then vhp=10 vatk=5 else vhp=0 vatk=0 end\nif Dreid== 1 then dhp=20 datk=5 else dhp=0 datk=0 end\nif Kort == 1 then kohp=25 koatk=20 else kohp=0 koatk=0 end\nif Ouen== 1 then ohp=35 oatk=15 else ohp=0 oatk=0 end\nif Ard== 1 then ardhp=30 ardatk=10 else ardhp=0 ardatk=0 end\nif Kail== 1 then Klhp=70 Klatk=35 else Klhp=0 Klatk=0 end\nminhp=6<plus>unhplvl<plus>vhp<plus>dhp<plus>kohp<plus>ohp<plus>ardhp<plus>Klhp\nminatk=6<plus>unatklvl<plus>vatk<plus>datk<plus>koatk<plus>oatk<plus>ardatk<plus>Klatk \nend",
+        "lua_text": "function lua_text()\nreturn \"\"\nend"
+      },
+      {
+        "no_transition": false,
+        "right_answer": false,
+        "comment": false,
+        "lua_do": "function lua_do()\nkatk= myField.text\ndisplay.remove(myField)\nkhp=myFieldd.text\ndisplay.remove(myFieldd)\ndebaff= tonumber(myFielddd.text) \ndisplay.remove(myFielddd)\natkk = 20*lvltower\natkkk = 8*lvltower\natkkkk = atkk<plus> atkkk \natk= khp - atkkkk\nhpp = khp/100\nhppp = 28 * lvltower\nhpppp = math.floor (hppp/hpp) \nhppppp = hpppp/100\nhpppppp = math.round(katk*hppppp) \nhp = katk - hpppppp \n\natkkdabl=(minhp-5) /myField.text\natkkkdabl=math.round(myFieldd.text*atkkdabl) \natkkkkdabl=math.round(myFieldd.text-atkkkdabl) \natkdabl=math.round(atkkkkdabl-hppp) \nhpdabl=hp\n\n\n\nif pogoda==1 \nthen\nif debaff==30 then hp=hp * 1.45 end\nif debaff==35 then hp=hp * 1.55 end\nif debaff==40 then hp=hp * 1.70 end\nif debaff==45 then hp=hp * 1.90 end\nif debaff==50 then hp=hp * 2 end\nend\n\nif pogoda==2\nthen\nif debaff==30 then atk=atk * 1.45 end\nif debaff==35 then atk=atk * 1.55 end\nif debaff==40 then atk=atk * 1.70 end\nif debaff==45 then atk=atk * 1.90 end\nif debaff==50 then atk=atk * 2 end\n\n\nend\npogoda=0\n\nend",
+        "id": 2,
+        "instant": true,
+        "text": "Расчёт с шаром",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "text": "Расчёт без шара",
+        "lua_do": "function lua_do()\nkatk= myField.text\ndisplay.remove(myField)\nkhp= myFieldd.text\ndisplay.remove(myFieldd)\ndebaff= tonumber(myFielddd.text) \ndisplay.remove(myFielddd)\natkk = 20*lvltower\natkkk = 8*lvltower\natkkkk = atkk\natk= khp - atkkkk\nhpp = khp/100\nhppp = 20 * lvltower\nhpppp = math.floor (hppp/hpp) \nhppppp = hpppp/100\nhpppppp = math.round(katk*hppppp) \nhp = katk - hpppppp \n\natkkdabl=(minhp-5) /myField.text\natkkkdabl=math.round(myFieldd.text*atkkdabl) \natkkkkdabl=math.round(myFieldd.text-atkkkdabl) \natkdabl=math.round(atkkkkdabl-hppp) \nhpdabl=hp\n\nif pogoda==1 \nthen\nif debaff==30 then hp=hp * 1.45 end\nif debaff==35 then hp=hp * 1.55 end\nif debaff==40 then hp=hp * 1.70 end\nif debaff==45 then hp=hp * 1.90 end\nif debaff==50 then hp=hp * 2 end\nend\n\nif pogoda==2\nthen\nif debaff==30 then atk=atk * 1.45 end\nif debaff==35 then atk=atk * 1.55 end\nif debaff==40 then atk=atk * 1.70 end\nif debaff==45 then atk=atk * 1.90 end\nif debaff==50 then atk=atk * 2 end\n\nend\npogoda=0\n\nend",
+        "instant": true,
+        "id": 2,
+        "no_transition": false
+      },
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn \"Уровень Башни: \".. lvltower\nend",
+        "text": " left",
+        "lua_do": "function lua_do()\nlvltower=lvltower<plus>1\nif lvltower==6 then lvltower=1 end\nend",
+        "instant": true,
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\npogoda = pogoda <plus>1\nif pogoda == 3 then pogoda =0 end\nend",
+        "instant": true,
+        "lua_text": "function lua_text()\nif pogoda == 0 then\nreturn \"Ясно ❃\"\nend\nif pogoda == 1 then\nreturn \"Ураган ※\"\nend\nif pogoda == 2 then\nreturn \"Дождь ❖\"\nend \nend",
+        "id": 2
+      },
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn \"Охо.➷: \"..unatklvl.. \"★\"\nend",
+        "lua_do": "function lua_do()\nif myFielddddd.text ~= \"\" and myFielddddd ~= nil then \nunatklvl=myFielddddd.text\ndisplay.remove(myFielddddd) \nelse unatklvl=unatklvl\nend\nend",
+        "id": 2,
+        "instant": true,
+        "text": "   ",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "lua_text": "function lua_text()\nreturn \"Рыцари.♡: \"..unhplvl.. \"★\"\nend",
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nif myFielddddd.text ~= \"\" and myFielddddd ~= nil then \nunhplvl=myFielddddd.text\ndisplay.remove(myFielddddd) \nelse unhplvl=unhplvl\nend\nend",
+        "text": "    "
+      },
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\nif Vil ==0 then\nreturn \"Вильям [ - ]\" \nelse return \"Вильям [ <plus> ]\"\nend\nend",
+        "text": "Вильям",
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nVil=Vil<plus>1 \nif Vil==2 then Vil=0 end\nend",
+        "left_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nif Dreid ==0 then\nreturn \"Дрейд [ - ]\" \nelse return \"Дрейд [ <plus> ]\"\nend\nend",
+        "right_answer": true,
+        "comment": false,
+        "id": 2,
+        "lua_do": "function lua_do()\nDreid=Dreid<plus>1 \nif Dreid==2 then Dreid=0 end\nend",
+        "text": "Дрейд",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "lua_text": "function lua_text()\nif Kort ==0 then\nreturn \"Корт [ - ]\" \nelse return \"Корт [ <plus> ]\"\nend\nend",
+        "right_answer": true,
+        "comment": false,
+        "instant": true,
+        "id": 2,
+        "text": "Корт",
+        "lua_do": "function lua_do()\nKort=Kort<plus>1 \nif Kort==2 then Kort=0 end\nend",
+        "left_answer": false
+      },
+      {
+        "lua_text": "function lua_text()\nif Ouen ==0 then\nreturn \"Оуэн [ - ]\" \nelse return \"Оуэн [ <plus> ]\"\nend\nend",
+        "right_answer": true,
+        "comment": false,
+        "lua_do": "function lua_do()\nOuen=Ouen<plus>1 \nif Ouen==2 then Ouen=0 end\nend",
+        "id": 2,
+        "instant": true,
+        "text": "Оуэн",
+        "left_answer": false
+      },
+      {
+        "lua_text": "function lua_text()\nif Ard ==0 then\nreturn \"Арден [ - ]\" \nelse return \"Арден [ <plus> ]\"\nend\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\nArd=Ard<plus>1 \nif Ard==2 then Ard=0 end\nend",
+        "id": 2,
+        "text": "Арден",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\nif Kail ==0 then\nreturn \"Кайл [ - ]\" \nelse return \"Кайл [ <plus> ]\"\nend\nend",
+        "instant": true,
+        "id": 2,
+        "text": "Кайл",
+        "lua_do": "function lua_do()\nKail=Kail<plus>1 \nif Kail==2 then Kail=0 end\nend",
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "id": 2,
+        "middle_answer": true,
+        "text": "↑Мин.Статы↑",
+        "lua_text": "function lua_text()\nreturn minatk.. \"|\".. minhp\nend",
+        "instant": true
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "middle_answer": true,
+        "text": "↑Мин.Статы↑",
+        "lua_text": "function lua_text()\nreturn atkdabl.. \"|\".. hpdabl\nend",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": []
+  }
+]

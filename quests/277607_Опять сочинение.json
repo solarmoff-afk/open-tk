@@ -1,0 +1,3089 @@
+[
+  {
+    "id": 1,
+    "text": "Напишите сочинение в школе до звонка! Сможете ли вы написать идеальное сочинение на коленке чтобы получить пять и оправдать ожидания?",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать"
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://i.imgur.com/Fgjyye6.jpg",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://i.imgur.com/dTP894u.jpg",
+        "system": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Выберите сочинение.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "\"Как я провёл лето\"",
+        "var_random": [
+          "ocenka",
+          2,
+          5
+        ]
+      },
+      {
+        "id": 13,
+        "text": "'Зимняя сказка\"",
+        "var_random": [
+          "ocenka",
+          2,
+          5
+        ]
+      },
+      {
+        "id": 3,
+        "text": "\"Рассказ о младшем брате\"",
+        "var_random": [
+          "ocenka",
+          2,
+          5
+        ]
+      },
+      {
+        "id": 19,
+        "text": "\"Компьютерная игра\" ",
+        "var_random": [
+          "ocenka",
+          2,
+          5
+        ]
+      },
+      {
+        "id": 23,
+        "text": "\"Поход к стоматологу\" ",
+        "var_random": [
+          "ocenka",
+          2,
+          5
+        ]
+      },
+      {
+        "id": 32,
+        "text": "\"Моя семья\" ",
+        "var_random": [
+          "ocenka",
+          2,
+          5
+        ]
+      },
+      {
+        "id": 37,
+        "text": "\"Вперёд, в будущее\" ",
+        "var_random": [
+          "ocenka",
+          2,
+          5
+        ]
+      },
+      {
+        "id": 2,
+        "text": "---------------------------------------",
+        "comment": true
+      },
+      {
+        "id": 12,
+        "text": "Введённые слова"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText)\ninputText.isEditable=true\ninputText.placeholder=\"какой?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText2=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/5)\ncanvasGroup:insert(inputText2)\ninputText2.isEditable=true\ninputText2.placeholder=\"сколько времени?\"\nend",
+        "text": "Введите текст",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText3=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/4)\ncanvasGroup:insert(inputText3)\ninputText3.isEditable=true\ninputText3.placeholder=\"какой первый вопрос приходит вам в голову?\"\nend",
+        "text": "Введите текст"
+      },
+      {
+        "id": 8,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext=inputText.text\ndisplay.remove(inputText)\nenteredtext2=inputText2.text\ndisplay.remove(inputText2)\nenteredtext3=inputText3.text\ndisplay.remove(inputText3)\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText10=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText10)\ninputText10.isEditable=true\ninputText10.placeholder=\"родственник\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText11=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText11)\ninputText11.isEditable=true\ninputText11.placeholder=\"что делать?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText12=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText12)\ninputText12.isEditable=true\ninputText12.placeholder=\"отрывок из рэпа или песни\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext10=inputText10.text\ndisplay.remove(inputText10)\nenteredtext11=inputText11.text\ndisplay.remove(inputText11)\nenteredtext12=inputText12.text\ndisplay.remove(inputText12)\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Зимняя сказка\n",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText=native.newTextBox(canvas.width/2, canvas.height/1, canvas.width/1.2, canvas.height/5)\ncanvasGroup:insert(inputText)\ninputText.isEditable=true\ninputText.placeholder=\"напишите существительное.\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "хэй, ",
+    "answers": []
+  },
+  {
+    "id": 7,
+    "text": "Ваше сочинение:",
+    "answers": [
+      {
+        "var_show": [
+          "enteredtext",
+          "день."
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Был",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext2",
+          "."
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Как обычно, я спал до ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext3",
+          "Я покачал головой и не стал отвечать на этот вопрос. Младшак мне предложил поиграть в съедобное-несъедобное. Я, сидя на кровати, согласился. Игра началась!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Вдруг ко мне подошёл мой младший брат, и спросил:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext4",
+          "! Конечно, я откидываю его."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Братец мне кидает мяч и выкрикивает:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext5",
+          "! Он взял мяч, и сказал:О, это моё любимое блюдо!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Моя очередь! Я кидаю и выкрикиваю:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext6",
+          "! -выкрикивает соперник. Я по ошибке откидываю мяч."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Я был шокирован такому ответу, но мы продолжили играть. ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext7",
+          "! Младшак грустно ловит мяч и говорит:Я знаю эту животинку. Я её съел на живодёрне. Она была приправлена майонезом."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Я кидаю мяч и кричу:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext8",
+          "."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Я тут же спрашиваю:А где ты её ел? Он отвечает:В",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext9",
+          "по голове и убегаю из комнаты."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 7,
+        "text": "Вдруг он резко нападает на меня с острыми зубами. Я бью его",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ocenka"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 7,
+        "text": "Оценка:"
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "enteredtext",
+          0,
+          "enteredtext2",
+          0,
+          "enteredtext3",
+          0,
+          "enteredtext4",
+          0,
+          "enteredtext5",
+          0,
+          "enteredtext6",
+          0,
+          "enteredtext7",
+          0,
+          "enteredtext8",
+          0,
+          "enteredtext9",
+          0
+        ],
+        "id": 7,
+        "text": "Ничего не написал! Что за нули?!!",
+        "text_color": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "К сочинениям"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText4=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText4)\ninputText4.isEditable=true\ninputText4.placeholder=\"бытовой предмет\"\nend",
+        "text": "Введите текст"
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText5=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/5)\ncanvasGroup:insert(inputText5)\ninputText5.isEditable=true\ninputText5.placeholder=\"самая ужасная еда\"\nend",
+        "text": "Введите текст"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText6=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/4)\ncanvasGroup:insert(inputText6)\ninputText6.isEditable=true\ninputText6.placeholder=\"самая любимая еда\"\nend",
+        "text": "Введите текст",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "id": 9,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext4=inputText4.text\ndisplay.remove(inputText4)\nenteredtext5=inputText5.text\ndisplay.remove(inputText5)\nenteredtext6=inputText6.text\ndisplay.remove(inputText6)\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText7=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText7)\ninputText7.isEditable=true\ninputText7.placeholder=\"животное\"\nend",
+        "text": "Введите текст",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText8=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/4.7)\ncanvasGroup:insert(inputText8)\ninputText8.isEditable=true\ninputText8.placeholder=\"где спрятаться от мамы после родительского собрания?\"\nend",
+        "text": "Введите текст",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText9=native.newTextBox(canvas.width/2, canvas.height/1.27, canvas.width/1.2, canvas.height/4)\ncanvasGroup:insert(inputText9)\ninputText9.isEditable=true\ninputText9.placeholder=\"предмет, находящийся в туалете(чем?)\"\nend",
+        "text": "Введите текст"
+      },
+      {
+        "id": 7,
+        "text": "Фух, сочинение дописал! Как раз за минуту до звонка!",
+        "lua_do": "function lua_do()\nenteredtext7=inputText7.text\ndisplay.remove(inputText7)\nenteredtext8=inputText8.text\ndisplay.remove(inputText8)\nenteredtext9=inputText9.text\ndisplay.remove(inputText9)\nend"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Ваши сохранённые сочинения:",
+    "answers": []
+  },
+  {
+    "id": 11,
+    "text": "Последние введённые слова:",
+    "answers": [
+      {
+        "id": 11,
+        "text": "1-",
+        "var_show": [
+          "enteredtext",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "2-",
+        "var_show": [
+          "enteredtext2",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "3-",
+        "var_show": [
+          "enteredtext3",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "4-",
+        "var_show": [
+          "enteredtext4",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "5-",
+        "var_show": [
+          "enteredtext5",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "6-",
+        "var_show": [
+          "enteredtext6",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "7-",
+        "var_show": [
+          "enteredtext7",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "8-",
+        "var_show": [
+          "enteredtext8",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "9-",
+        "var_show": [
+          "enteredtext9",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Назад "
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Выберите сочинение.",
+    "answers": [
+      {
+        "id": 17,
+        "text": "\"Как я провёл лето\""
+      },
+      {
+        "id": 18,
+        "text": "\"Зимняя сказка\""
+      },
+      {
+        "id": 11,
+        "text": "\"Рассказ о младшем брате\""
+      },
+      {
+        "id": 29,
+        "text": "\"Компьютерная игра\" "
+      },
+      {
+        "id": 31,
+        "text": "\"Поход к стоматологу\" "
+      },
+      {
+        "id": 36,
+        "text": "Моя семья\""
+      },
+      {
+        "id": 42,
+        "text": "\"Вперёд, в будущее\" "
+      },
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 12,
+        "text": "Примечание: если у вас после тире стоит ноль, значит либо вы не ввели в поле ничего, либо вы ввели ноль. ",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Введите текст в поля, соблюдая правила.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText20=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText20)\ninputText20.isEditable=true\ninputText20.placeholder=\"одежда\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText21=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText21)\ninputText21.isEditable=true\ninputText21.placeholder=\"одежда2\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText22=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText22)\ninputText22.isEditable=true\ninputText22.placeholder=\"любые насекомые\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext20=inputText20.text\ndisplay.remove(inputText20)\nenteredtext21=inputText21.text\ndisplay.remove(inputText21)\nenteredtext22=inputText22.text\ndisplay.remove(inputText22)\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Введите текст в поля, соблюдая правила.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText13=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText13)\ninputText13.isEditable=true\ninputText13.placeholder=\"что делает верблюд?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText14=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText14)\ninputText14.isEditable=true\ninputText14.placeholder=\"числительное\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText15=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText15)\ninputText15.isEditable=true\ninputText15.placeholder=\"кому?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 15,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext13=inputText13.text\ndisplay.remove(inputText13)\nenteredtext14=inputText14.text\ndisplay.remove(inputText14)\nenteredtext15=inputText15.text\ndisplay.remove(inputText15)\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Введите текст в поля, соблюдая правила.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText16=native.newTextBox(canvas.width/2, canvas.height/3.4, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText16)\ninputText16.isEditable=true\ninputText16.placeholder=\"транспортное средство\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText17=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText17)\ninputText17.isEditable=true\ninputText17.placeholder=\"любимый мультик детства\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText18=native.newTextBox(canvas.width/2, canvas.height/1.36, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText18)\ninputText18.isEditable=true\ninputText18.placeholder=\"какой частью тела?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText19=native.newTextBox(canvas.width/2, canvas.height/1.05, canvas.width/1.2, canvas.height/5)\ncanvasGroup:insert(inputText19)\ninputText19.isEditable=true\ninputText19.placeholder=\"человек, испортивший всю вашу жизнь\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 16,
+        "text": "Фух, сочинение дописал! Как раз за минуту до звонка!",
+        "lua_do": "function lua_do()\nenteredtext16=inputText16.text\ndisplay.remove(inputText16)\nenteredtext17=inputText17.text\ndisplay.remove(inputText17)\nenteredtext18=inputText18.text\ndisplay.remove(inputText18)\nenteredtext19=inputText19.text\ndisplay.remove(inputText19)\nend"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Ваше сочинение:",
+    "answers": [
+      {
+        "var_show": [
+          "enteredtext10",
+          "в гости."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Лето. Я расскажу вам одно историю в это время года. Сижу, значит, я в троллейбусе и еду к ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext11",
+          "."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Вдруг троллейбус начинает ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext12",
+          "!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Да так сильно, что пугает. Я подзываю кондуктора, и спрашиваю:\"Что происходит?\". Кондуктор отвечает:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext11",
+          ", я заряжаюсь любопытством и выхожу на следующей остановке."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "А я понял сразу - кондуктор бухой. Не поняв, почему троллейбус",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext13",
+          ", хрустит пальцами и говорит:«с вас"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Плачу как следует - 30 рублей. Кондуктор ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext14",
+          "рублей!»"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "-",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext15",
+          "."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Я осознаю - тут аферисты. Я говорю подождать, а сам звоню ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext16",
+          ","
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Он согласился мне помочь и прибыл на своём новеньком ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext17",
+          "!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "да с нитро и покраской в стиле",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext18",
+          "по голове кондуктора и спасает меня."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Он приезжает, выбивает дверь троллейбуса ногой, бьёт с разворота ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext19",
+          "!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 16,
+        "text": "Вот такое у меня лето, и вот такой у меня друг - универсальный ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ocenka"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 16,
+        "text": "Ваша оценка:"
+      },
+      {
+        "id": 2,
+        "text": "К сочинениям"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Последние введённые слова:",
+    "answers": [
+      {
+        "id": 17,
+        "text": "1-",
+        "var_show": [
+          "enteredtext10",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "2-",
+        "var_show": [
+          "enteredtext11",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "3-",
+        "var_show": [
+          "enteredtext12",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "4-",
+        "var_show": [
+          "enteredtext13",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "5-",
+        "var_show": [
+          "enteredtext14",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "6-",
+        "var_show": [
+          "enteredtext15",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "7-",
+        "var_show": [
+          "enteredtext16",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "8-",
+        "var_show": [
+          "enteredtext17",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "9-",
+        "var_show": [
+          "enteredtext18",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 17,
+        "text": "10-",
+        "var_show": [
+          "enteredtext19",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Последние введённые слова:",
+    "answers": [
+      {
+        "id": 18,
+        "text": "1-",
+        "var_show": [
+          "enteredtext20",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "2-",
+        "var_show": [
+          "enteredtext21",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "3-",
+        "var_show": [
+          "enteredtext22",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "4-",
+        "var_show": [
+          "enteredtext23",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "5-",
+        "var_show": [
+          "enteredtext24",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "6-",
+        "var_show": [
+          "enteredtext25",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "7-",
+        "var_show": [
+          "enteredtext26",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "8-",
+        "var_show": [
+          "enteredtext27",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "9-",
+        "var_show": [
+          "enteredtext28",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Назад "
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText29=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText29)\ninputText29.isEditable=true\ninputText29.placeholder=\"название игры\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText30=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText30)\ninputText30.isEditable=true\ninputText30.placeholder=\"любое устройство с экраном\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText31=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText31)\ninputText31.isEditable=true\ninputText31.placeholder=\"вкусняшки через запятую\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext29=inputText29.text\ndisplay.remove(inputText29)\nenteredtext30=inputText30.text\ndisplay.remove(inputText30)\nenteredtext31=inputText31.text\ndisplay.remove(inputText31)\nend"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText32=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText32)\ninputText32.isEditable=true\ninputText32.placeholder=\"название любой картинки\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText33=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText33)\ninputText33.isEditable=true\ninputText33.placeholder=\"числительное\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText34=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText34)\ninputText34.isEditable=true\ninputText34.placeholder=\"числительное2\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 19,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 21,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext32=inputText32.text\ndisplay.remove(inputText32)\nenteredtext33=inputText33.text\ndisplay.remove(inputText33)\nenteredtext34=inputText34.text\ndisplay.remove(inputText34)\nend"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText35=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText35)\ninputText35.isEditable=true\ninputText35.placeholder=\"числительное3\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText36=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText36)\ninputText36.isEditable=true\ninputText36.placeholder=\"жанр игры\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText37=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText37)\ninputText37.isEditable=true\ninputText37.placeholder=\"мат во множественном числе\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText38=native.newTextBox(canvas.width/2, canvas.height/1.05, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText38)\ninputText38.isEditable=true\ninputText38.placeholder=\"что дать?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 22,
+        "text": "Фух, сочинение дописал! Как раз за минуту до звонка!",
+        "lua_do": "function lua_do()\nenteredtext35=inputText35.text\ndisplay.remove(inputText35)\nenteredtext36=inputText36.text\ndisplay.remove(inputText36)\nenteredtext37=inputText37.text\ndisplay.remove(inputText37)\nenteredtext38=inputText38.text\ndisplay.remove(inputText38)\nend"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Ваше сочинение:",
+    "answers": [
+      {
+        "id": 19,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 22,
+        "text": "Решил я поиграть в ",
+        "var_show": [
+          "enteredtext29",
+          ",которую мне так настойчиво советовал друг."
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "Пытаюсь включить свой ",
+        "var_show": [
+          "enteredtext30",
+          ", а он не включается."
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "Проголодался, бедный. Открываю крышку системника и закидываю туда вкусняшки:",
+        "var_show": [
+          "enteredtext31",
+          ". Нажимаю на кнопку снова, он кряхтит и запускается."
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "Вот и он, мой рабочий стол - обои как всегда ",
+        "var_show": [
+          "enteredtext32"
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": ",",
+        "var_show": [
+          "enteredtext33",
+          "ярлыков, "
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "жёсткий диск на",
+        "var_show": [
+          "enteredtext34",
+          "гб, "
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "моник за ",
+        "var_show": [
+          "enteredtext35",
+          "рублей - одним словом, не комп а машина моего деда. В предвкушении запускаю игрушку. Меню стандартное, залетаю в катку. "
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "Обычный",
+        "var_show": [
+          "enteredtext36",
+          ", как и все другие."
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "Тимейты",
+        "var_show": [
+          "enteredtext37",
+          ", а тому агрошкольнику я вообще пообещал дать "
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": " ",
+        "var_show": [
+          "enteredtext38",
+          ". Заходит батя ко мне в комнату, и задаёт вопрос:Сына, а во что ты тут играешь? - батя открыл рот и удивился, позже оказалось что это - игра его детства."
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ocenka"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 7,
+        "text": "Оценка:"
+      },
+      {
+        "id": 2,
+        "text": "К сочинениям"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText39=native.newTextBox(canvas.width/2, canvas.height/3.3, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText39)\ninputText39.isEditable=true\ninputText39.placeholder=\"число\"\nend",
+        "calculate": true,
+        "text": "Число",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText40=native.newTextBox(canvas.width/2, canvas.height/2.10, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText40)\ninputText40.isEditable=true\ninputText40.placeholder=\"предмет\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText41=native.newTextBox(canvas.width/2, canvas.height/1.52, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText41)\ninputText41.isEditable=true\ninputText41.placeholder=\"марка авто\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText42=native.newTextBox(canvas.width/2, canvas.height/1.25, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText42)\ninputText42.isEditable=true\ninputText42.placeholder=\"материал\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText51=native.newTextBox(canvas.width/2, canvas.height/1.05, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText51)\ninputText51.isEditable=true\ninputText51.placeholder=\"число\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "id": 3
+      },
+      {
+        "id": 30,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext39=inputText39.text\ndisplay.remove(inputText39)\nenteredtext40=inputText40.text\ndisplay.remove(inputText40)\nenteredtext41=inputText41.text\ndisplay.remove(inputText41)\nenteredtext42=inputText42.text\ndisplay.remove(inputText42)\nenteredtext51=inputText51.text\ndisplay.remove(inputText51)\nend"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Введите текст в поля, соблюдая правила.",
+    "answers": [
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText23=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText23)\ninputText23.isEditable=true\ninputText23.placeholder=\"оружие\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText24=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText24)\ninputText24.isEditable=true\ninputText24.placeholder=\"предмет\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText25=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText25)\ninputText25.isEditable=true\ninputText25.placeholder=\"ругательство\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 25,
+        "text": "Далее ",
+        "lua_do": "function lua_do()\nenteredtext23=inputText23.text\ndisplay.remove(inputText23)\nenteredtext24=inputText24.text\ndisplay.remove(inputText24)\nenteredtext25=inputText25.text\ndisplay.remove(inputText25)\nend"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Введите текст в поля, соблюдая правила.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText26=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText26)\ninputText26.isEditable=true\ninputText26.placeholder=\"число\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText27=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText27)\ninputText27.isEditable=true\ninputText27.placeholder=\"напиток\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText28=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText28)\ninputText28.isEditable=true\ninputText28.placeholder=\"часть тела\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 25,
+        "text": "введите команды для картинки",
+        "url": "https://c.radikal.ru/c30/2201/94/0fafeadd564d.jpg"
+      },
+      {
+        "id": 26,
+        "text": "Фух, сочинение дописал! Как раз за минуту до звонка!",
+        "lua_do": "function lua_do()\nenteredtext26=inputText26.text\ndisplay.remove(inputText26)\nenteredtext27=inputText27.text\ndisplay.remove(inputText27)\nenteredtext28=inputText28.text\ndisplay.remove(inputText28)\nend"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Ваше сочинение:",
+    "answers": [
+      {
+        "var_show": [
+          "enteredtext20",
+          ","
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Наступила зима. Наконец, доделав уроки, я собираюсь на улицу. Оделся как положено:обмотал шею ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext21",
+          "на своё тело и валенки -"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "накинул дедушкин ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext22",
+          "."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "предварительно оттряхнув с них всех",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext23",
+          ", так и погнался доставать его оттуда!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Выхожу на веранду и наблюдаю следующую картину: вижу неизвестного кота, который залез на мой шкаф и уже там нагадил! Я как разозлился, как взял в руки ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext24",
+          "мне на голову, я упал и вырубился."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Однако кот был упрям, он уворачивался от всех моих атак и опрокинул со шкафа ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext25",
+          "!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Очухался там же, где и упал. Трогаю лоб и щупаю большой синяк. Ну и кошак, я думаю, ну и ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext26",
+          "минут, думаю немного, кот далеко уйти не мог. Выбегаю с веранды, открываю дверь с ноги и вижу кота - прямо в 5-ти метрах от меня!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Встаю аккуратно, держу баланс, смотрю на время - пролежал я где-то",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext27",
+          "на ступеньки веранды. Я упал и разбил себе затылок, получив ещё один синяк, благо не вырубился."
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Но и тут я не углядел-он разлил ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext28",
+          ", воспользовался возможностью, гад. Потом он убежал. А я поехал в больницу под Новый Год. Вот так зима!"
+        ],
+        "text_color": [
+          0,
+          0,
+          1
+        ],
+        "id": 26,
+        "text": "Кот махнул хвостом, подошёл ко мне и нагадил мне на ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ocenka"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 26,
+        "text": "Оценка:"
+      },
+      {
+        "id": 2,
+        "text": "К сочинениям"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText47=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText47)\ninputText47.isEditable=true\ninputText47.placeholder=\"число\"\nend",
+        "calculate": true,
+        "text": "Число",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText48=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText48)\ninputText48.isEditable=true\ninputText48.placeholder=\"одежда\"\nend",
+        "calculate": true,
+        "text": "Число",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText49=native.newTextBox(canvas.width/2, canvas.height/1.42, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText49)\ninputText49.isEditable=true\ninputText49.placeholder=\"столовые приборы\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText50=native.newTextBox(canvas.width/2, canvas.height/1.15, canvas.width/1.2, canvas.height/5)\ncanvasGroup:insert(inputText50)\ninputText50.isEditable=true\ninputText50.placeholder=\"что вы говорите, когда крайне сильно удивлены?\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "super_calculate": false
+      },
+      {
+        "lua_do": "function lua_do()\nenteredtext47=inputText47.text\ndisplay.remove(inputText47)\nenteredtext48=inputText48.text\ndisplay.remove(inputText48)\nenteredtext49=inputText49.text\ndisplay.remove(inputText49)\nenteredtext50=inputText50.text\ndisplay.remove(inputText50)\nend",
+        "text": "Фух, сочинение дописал! Как раз за минуту до звонка!",
+        "id": 28
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Ваше сочинение:",
+    "answers": [
+      {
+        "var_show": [
+          "enteredtext39",
+          "лет иду к стоматологу."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Вот и наступил этот день. День X. Зубная боль не отступает, спустя ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext40",
+          ", хотя, это уже не впервые."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Так разволновался, что перед этим в туалете вместо туалетной бумаги подтерся",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext41",
+          " и направляюсь в стоматологию."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Выхожу на улицу, завожу свою тачку -",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext51",
+          "раз."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Из-за волнения по пути свернул не туда порядка",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext42",
+          ","
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "И вот, я подъехал. Здание выглядело следующим образом: стены сделаны из",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext43",
+          ","
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "окна",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext44",
+          "."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "у входа стоит дед с крестом в руках, направляет на меня и орёт:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext45",
+          "."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "И не пускает, ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext46",
+          ", так и прошёл."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Ну, я как взял палку и как ей врезал ему по",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext47",
+          "человек."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Захожу, занимаю очередь из ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext48",
+          "принимает меня, садит за специальный стул."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "И вот, захожу в кабинет. Тётенька в ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext49",
+          "."
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Открываю рот, она достаёт:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext50",
+          ". После часа страданий выхожу из кабинета. Вся ротовая полость забинтована, без зубов, весь рот разноцветный. И зачем я туда пошёл? "
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Я нервно глотнул и спросил:\"И как у меня с зубами?\". Тётя с широко открытым ртом пробубнила:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ocenka"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 16,
+        "text": "Ваша оценка:"
+      },
+      {
+        "id": 2,
+        "text": "К сочинениям"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Последние введённые слова:",
+    "answers": [
+      {
+        "id": 29,
+        "text": "1 - ",
+        "var_show": [
+          "enteredtext29",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext30",
+          ","
+        ],
+        "comment": true,
+        "id": 29,
+        "text": "2 - ",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "enteredtext31",
+          ","
+        ],
+        "comment": true,
+        "id": 29,
+        "text": "3 - ",
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "4 - ",
+        "var_show": [
+          "enteredtext32",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "5 - ",
+        "var_show": [
+          "enteredtext33",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "6 - ",
+        "var_show": [
+          "enteredtext34",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "7 - ",
+        "var_show": [
+          "enteredtext35",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "8 - ",
+        "var_show": [
+          "enteredtext36",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "9 - ",
+        "var_show": [
+          "enteredtext37",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 29,
+        "text": "10 - ",
+        "var_show": [
+          "enteredtext38",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Назад "
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText43=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText43)\ninputText43.isEditable=true\ninputText43.placeholder=\"какие?\"\nend",
+        "calculate": true,
+        "text": "Число",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText44=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText44)\ninputText44.isEditable=true\ninputText44.placeholder=\"молитва\"\nend",
+        "calculate": true,
+        "text": "Число",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText45=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText45)\ninputText45.isEditable=true\ninputText45.placeholder=\"оскорбление\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText46=native.newTextBox(canvas.width/2, canvas.height/1.05, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText46)\ninputText46.isEditable=true\ninputText46.placeholder=\"часть тела\"\nend",
+        "calculate": true,
+        "text": "Предмет ",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext43=inputText43.text\ndisplay.remove(inputText43)\nenteredtext44=inputText44.text\ndisplay.remove(inputText44)\nenteredtext45=inputText45.text\ndisplay.remove(inputText45)\nenteredtext46=inputText46.text\ndisplay.remove(inputText46)\nend"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Последние введённые слова:",
+    "answers": [
+      {
+        "id": 31,
+        "text": "1 - ",
+        "var_show": [
+          "enteredtext39",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "2 - ",
+        "var_show": [
+          "enteredtext40",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "3 - ",
+        "var_show": [
+          "enteredtext51",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "4 - ",
+        "var_show": [
+          "enteredtext42",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "5 - ",
+        "var_show": [
+          "enteredtext43",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "6 - ",
+        "var_show": [
+          "enteredtext44",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "7 - ",
+        "var_show": [
+          "enteredtext45",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "8 - ",
+        "var_show": [
+          "enteredtext46",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "9 - ",
+        "var_show": [
+          "enteredtext47",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "10 - ",
+        "var_show": [
+          "enteredtext48",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "11 - ",
+        "var_show": [
+          "enteredtext49",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 31,
+        "text": "12 - ",
+        "var_show": [
+          "enteredtext50",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Назад "
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText51=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText51)\ninputText51.isEditable=true\ninputText51.placeholder=\"любая болезнь, как называют человека с ней\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText52=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText52)\ninputText52.isEditable=true\ninputText52.placeholder=\"имя1\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText53=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText53)\ninputText53.isEditable=true\ninputText53.placeholder=\"имя2\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 33,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext51=inputText51.text\ndisplay.remove(inputText51)\nenteredtext52=inputText52.text\ndisplay.remove(inputText52)\nenteredtext53=inputText53.text\ndisplay.remove(inputText53)\nend"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText54=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText54)\ninputText54.isEditable=true\ninputText54.placeholder=\"предмет\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText55=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText55)\ninputText55.isEditable=true\ninputText55.placeholder=\"число\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText56=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText56)\ninputText56.isEditable=true\ninputText56.placeholder=\"любить что/кого?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 34,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext54=inputText54.text\ndisplay.remove(inputText54)\nenteredtext55=inputText55.text\ndisplay.remove(inputText55)\nenteredtext56=inputText56.text\ndisplay.remove(inputText56)\nend"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText57=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText57)\ninputText57.isEditable=true\ninputText57.placeholder=\"что делать?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText58=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText58)\ninputText58.isEditable=true\ninputText58.placeholder=\"какой?\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText59=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText59)\ninputText59.isEditable=true\ninputText59.placeholder=\"предмет\"\nend",
+        "calculate": true,
+        "text": "Введите текст",
+        "super_calculate": false
+      },
+      {
+        "id": 35,
+        "text": "Фух, сочинение дописал! Как раз за минуту до звонка!",
+        "lua_do": "function lua_do()\nenteredtext57=inputText57.text\ndisplay.remove(inputText57)\nenteredtext58=inputText58.text\ndisplay.remove(inputText58)\nenteredtext59=inputText59.text\ndisplay.remove(inputText59)\nend"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Ваше сочинение:\n",
+    "answers": [
+      {
+        "id": 35,
+        "text": "Моя семья — настоящие",
+        "var_show": [
+          "enteredtext51",
+          "! Это так круто. Давайте я вас познакомлю. Мои родители, мама и"
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": " папа - ",
+        "var_show": [
+          "enteredtext52"
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": " и ",
+        "var_show": [
+          "enteredtext53",
+          ", они так хорошо ладят!"
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": "А вчера, на моё день рождения  они мне подарили вещь, о которой я давно мечтал —",
+        "var_show": [
+          "enteredtext54",
+          "!"
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": "Также, у меня есть",
+        "var_show": [
+          "enteredtext55",
+          "братьев и столько же сестёр! Вот же везение!"
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": "Бабушка же моя очень любит",
+        "var_show": [
+          "enteredtext56",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": "Однажды она тихонько зашла ко мне в комнату и начала",
+        "var_show": [
+          "enteredtext57",
+          ", даже в таком возрасте — воистину сильная старушка!"
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": "И в семье у нас есть одна традиция: когда папа садится за стол, он всегда повторяет одну фразу:\"Пусть наша семья всегда будет ",
+        "var_show": [
+          "enteredtext58",
+          "!, а потом разбивает"
+        ],
+        "merge": true
+      },
+      {
+        "id": 35,
+        "text": " себе",
+        "var_show": [
+          "enteredtext59",
+          "об голову с улыбкой на лице перед ужином. Я очень рад, что нахожусь в такой семье!"
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ocenka"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 7,
+        "text": "Оценка:"
+      },
+      {
+        "id": 2,
+        "text": "К сочинениям"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Последние введённые слова:",
+    "answers": [
+      {
+        "id": 36,
+        "text": "1 - ",
+        "var_show": [
+          "enteredtext51",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "2 - ",
+        "var_show": [
+          "enteredtext52",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "3 - ",
+        "var_show": [
+          "enteredtext53",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "4 - ",
+        "var_show": [
+          "enteredtext54",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "5 - ",
+        "var_show": [
+          "enteredtext55",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "6 - ",
+        "var_show": [
+          "enteredtext56",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "7 - ",
+        "var_show": [
+          "enteredtext57",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "8 - ",
+        "var_show": [
+          "enteredtext58",
+          ","
+        ],
+        "merge": true
+      },
+      {
+        "id": 36,
+        "text": "9 - ",
+        "var_show": [
+          "enteredtext59",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Назад "
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText60=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText60)\ninputText60.isEditable=true\ninputText60.placeholder=\"каким? \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText61=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText61)\ninputText61.isEditable=true\ninputText61.placeholder=\"одежда \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText62=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText62)\ninputText62.isEditable=true\ninputText62.placeholder=\"район, место\"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 38,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext60=inputText60.text\ndisplay.remove(inputText60)\nenteredtext61=inputText61.text\ndisplay.remove(inputText61)\nenteredtext62=inputText62.text\ndisplay.remove(inputText62)\nend"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText63=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText63)\ninputText63.isEditable=true\ninputText63.placeholder=\"как? \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText64=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText64)\ninputText64.isEditable=true\ninputText64.placeholder=\"что делает? \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText65=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText65)\ninputText65.isEditable=true\ninputText65.placeholder=\"как назовёте женщину? \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 39,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext63=inputText63.text\ndisplay.remove(inputText63)\nenteredtext64=inputText64.text\ndisplay.remove(inputText64)\nenteredtext65=inputText65.text\ndisplay.remove(inputText65)\nend"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText66=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText66)\ninputText66.isEditable=true\ninputText66.placeholder=\"запах \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText67=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText67)\ninputText67.isEditable=true\ninputText67.placeholder=\"что делать? \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 3,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText68=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText68)\ninputText68.isEditable=true\ninputText68.placeholder=\"существо\"\nend",
+        "calculate": true,
+        "text": "New file",
+        "text_color": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 40,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nenteredtext66=inputText66.text\ndisplay.remove(inputText66)\nenteredtext67=inputText67.text\ndisplay.remove(inputText67)\nenteredtext68=inputText68.text\ndisplay.remove(inputText68)\nend"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Введите текст в поля, соблюдая правила. ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "nemo",
+        "url": "https://i.imgur.com/jJriVKz.jpg"
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText69=native.newTextBox(canvas.width/2, canvas.height/3.2, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText69)\ninputText69.isEditable=true\ninputText69.placeholder=\"работа \"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText70=native.newTextBox(canvas.width/2, canvas.height/1.89, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText70)\ninputText70.isEditable=true\ninputText70.placeholder=\"что нарисовать?\"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText71=native.newTextBox(canvas.width/2, canvas.height/1.32, canvas.width/1.2, canvas.height/6)\ncanvasGroup:insert(inputText71)\ninputText71.isEditable=true\ninputText71.placeholder=\"число\"\nend",
+        "calculate": true,
+        "text": "New file",
+        "super_calculate": false
+      },
+      {
+        "id": 41,
+        "text": "Фух, сочинение дописал! Как раз за минуту до звонка!",
+        "lua_do": "function lua_do()\nenteredtext69=inputText69.text\ndisplay.remove(inputText69)\nenteredtext70=inputText70.text\ndisplay.remove(inputText70)\nenteredtext71=inputText71.text\ndisplay.remove(inputText71)\nend"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Ваше сочинение:",
+    "answers": [
+      {
+        "id": 41,
+        "text": "В будущем я хочу стать очень",
+        "var_show": [
+          "enteredtext60",
+          " человеком."
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "Я уже представляю этот день, когда я просыпаюсь рано утром, в ",
+        "var_show": [
+          "enteredtext61",
+          ", и смотрю в окно, на свой родной район -"
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": " ",
+        "var_show": [
+          "enteredtext62",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "Выглядит",
+        "var_show": [
+          "enteredtext63",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "Моя жена уже",
+        "var_show": [
+          "enteredtext64",
+          ", а я наблюдаю на это с чувством удовлетворения и умиления, ух и жена,"
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "ну и",
+        "var_show": [
+          "enteredtext65",
+          "!"
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "И вот, я встаю со своей кровати, вдыхая комнатный аромат освежителя воздуха, с новым головокружительным запахом, который я уже полюбил -",
+        "var_show": [
+          "enteredtext66",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "Затем, по традиции, с самого утра иду",
+        "var_show": [
+          "enteredtext67",
+          "."
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "После этого завтракаю приготовленным",
+        "var_show": [
+          "enteredtext68",
+          "по рецепту любимой жены, и иду на работу... Ах, а работа!!! А работа это вообще мечта!"
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "Моя тёща и даже покойный дед на небесах были в шоке, ведь моя работа - ",
+        "var_show": [
+          "enteredtext69",
+          "!"
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "Мои коллеги по работе очень уважают меня, а один из них в дань уважения даже нарисовал",
+        "var_show": [
+          "enteredtext70",
+          "на моем фото на доске почёта."
+        ],
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "Я рад, что я изменился - всего этого я добился в",
+        "var_show": [
+          "enteredtext71",
+          "лет. "
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "ocenka"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 7,
+        "text": "Оценка:"
+      },
+      {
+        "id": 2,
+        "text": "К сочинениям"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Последние введённые слова:",
+    "answers": [
+      {
+        "id": 42,
+        "text": "1 - ",
+        "var_show": [
+          "enteredtext60",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "2 - ",
+        "var_show": [
+          "enteredtext61",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "3 - ",
+        "var_show": [
+          "enteredtext62",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "4 - ",
+        "var_show": [
+          "enteredtext63",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "5 - ",
+        "var_show": [
+          "enteredtext64",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "6 - ",
+        "var_show": [
+          "enteredtext65",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "7 - ",
+        "var_show": [
+          "enteredtext66",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "8 - ",
+        "var_show": [
+          "enteredtext67",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "9 - ",
+        "var_show": [
+          "enteredtext68",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "10 - ",
+        "var_show": [
+          "enteredtext69",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "11 - ",
+        "var_show": [
+          "enteredtext70",
+          ", "
+        ],
+        "merge": true
+      },
+      {
+        "id": 42,
+        "text": "12 - ",
+        "var_show": [
+          "enteredtext71",
+          ". "
+        ],
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 44,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 45,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 46,
+    "text": "",
+    "answers": []
+  }
+]

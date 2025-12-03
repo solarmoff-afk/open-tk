@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 20401 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Salim написал еще 14843 слов в квесте \"Гостья\"."
+      },
+      {
+        "targetbookid": "214043",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Гостья\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор WakingSea написал еще 14815 слов в квесте \"Таверна \"Приют в ночи\"\"."
+      },
+      {
+        "targetbookid": "214003",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Таверна \"Приют в ночи\"\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Veronika написал еще 14749 слов в квесте \"Принцесса тьмы 2 том\"."
+      },
+      {
+        "targetbookid": "190693",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Принцесса тьмы 2 том\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор  Natasha Era написал еще 14747 слов в квесте \"        Закрытая Школа\"."
+      },
+      {
+        "targetbookid": "198341",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"        Закрытая Школа\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

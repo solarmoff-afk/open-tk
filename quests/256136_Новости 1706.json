@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Любопытство губительно написал еще 151558 слов в квесте \"Тайна Вараниса\"."
+      },
+      {
+        "targetbookid": "255975",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тайна Вараниса\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор *sandra* написал еще 141404 слов в квесте \"\"История\"\"."
+      },
+      {
+        "targetbookid": "252946",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"\"История\"\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 133785 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Yana Z написал еще 94729 слов в квесте \"Кьяллахельм. Ведомые Тьмой\"."
+      },
+      {
+        "targetbookid": "888",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Кьяллахельм. Ведомые Тьмой\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор VKosty@ написал еще 90347 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "250195",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

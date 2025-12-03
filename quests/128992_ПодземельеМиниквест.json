@@ -1,0 +1,5352 @@
+[
+  {
+    "id": 1,
+    "text": "Автор Blaxas\nЖанр фэнтези, хардкор, RPG, безумие.\n\nМир в котором изгои и низшие слои населения, ссылаются в нижние этажи подземелья. Чтоб те скитались по их бесконечным коридорам, в которых обитают опасные существа. По воле судьбы вы оказываетесь одним из них. Вы находите опустошенный город под куполом, в котором живёт только алхимик, который скорее всего выживал только на своих зельях. Теперь у вас есть собственное пристанище которое поможет отомстить верхушке.\n\nАвтор ушел из приложения обновлений больше не будет",
+    "answers": [
+      {
+        "var_show": [
+          "global name"
+        ],
+        "var_add": [
+          "global люди",
+          -1,
+          "здания",
+          1
+        ],
+        "blackout": false,
+        "id": 2,
+        "text": "Начать",
+        "var_min": [
+          "global люди",
+          0
+        ],
+        "left_answer": false,
+        "lua_do": "function lua_do()\npg31={}\npg31a={}\npg31b={}\nmname={\"Крыса\",\"Слизень\",\"Гоблин\",\"Гуль\",\"Скелет\",\"Орк\",\"Проклятый доспех\",\"Вампир\",\"Гарпия\",\"Виверна\",\"Лазерный глаз\",\"Железный скелет\",\"Тролль\",\"Гном\",\"Стукач\",\"Варпит\",\"Каменный гигант\",\"Полчище зубастиков\",\"Приключенец\",\"Страж\",\"Дракон\",\"Титан\",\"Текстовые квесты\",\"Невидимый дракон\"}\nfor i=1, 3 do\npg31[i]=math.random(1,24)\nend\nfor i=1, 25 do\npg31a[i]=math.random(10,30)\npg31b=0\nend\npg32={0,1,0}\npg32a=1\npg32[4]=1\nvisor=2\npg32b={100,100,100,100,100}\nend",
+        "instant": true,
+        "need_ever": true,
+        "var_set": [
+          "hpmax",
+          50,
+          "atk",
+          5,
+          "dex",
+          3,
+          "hp",
+          50,
+          "xp",
+          0,
+          "money",
+          0,
+          "компания",
+          23,
+          "maxdungeon",
+          1,
+          "vamp",
+          0,
+          "global blockSaves",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "global name"
+        ],
+        "comment": true,
+        "id": 1,
+        "text": "-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-\nСложность",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "global hard",
+          1
+        ],
+        "id": 1,
+        "text": "Хардкор",
+        "merge": false,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_set": [
+          "global hard",
+          1
+        ],
+        "var_equal": [
+          "global hard",
+          0
+        ],
+        "id": 1,
+        "instant": true,
+        "text": "Хардкор",
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "global hard",
+          1
+        ],
+        "id": 1,
+        "text": "Легкий",
+        "instant": true,
+        "var_set": [
+          "global hard",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "var_equal": [
+          "global hard",
+          0
+        ],
+        "id": 1,
+        "text": "Легкий",
+        "merge": false
+      },
+      {
+        "var_show": [
+          "global pg1"
+        ],
+        "comment": true,
+        "id": 1,
+        "text": "-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-\nСлучайные",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "global r",
+          1
+        ],
+        "id": 1,
+        "text": "Вкл",
+        "merge": false,
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "id": 1,
+        "instant": true,
+        "left_answer": true,
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_equal": [
+          "global r",
+          0
+        ],
+        "merge": false,
+        "text": "Вкл",
+        "var_set": [
+          "global r",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "id": 1,
+        "instant": true,
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "global r",
+          1
+        ],
+        "var_set": [
+          "global r",
+          0
+        ],
+        "text": "Выкл",
+        "merge": false
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "var_equal": [
+          "global r",
+          0
+        ],
+        "id": 1,
+        "text": "Выкл",
+        "merge": false
+      },
+      {
+        "var_str_set": [
+          "global name",
+          "легкий режим"
+        ],
+        "var_equal": [
+          "global hard",
+          0
+        ],
+        "id": 1,
+        "calculate": false,
+        "super_calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_str_set": [
+          "global name",
+          "хардкор"
+        ],
+        "var_equal": [
+          "global hard",
+          1
+        ],
+        "id": 1,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": true
+      },
+      {
+        "var_str_set": [
+          "global pg1",
+          "события отключены"
+        ],
+        "var_equal": [
+          "global r",
+          0
+        ],
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": true,
+        "calculate": false
+      },
+      {
+        "var_str_set": [
+          "global pg1",
+          "события включены"
+        ],
+        "var_equal": [
+          "global r",
+          1
+        ],
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "super_calculate": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://pp.userapi.com/c837729/v837729789/2582e/7NE3IRpUuKM.jpg",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://pp.userapi.com/c837729/v837729789/2582e/7NE3IRpUuKM.jpg",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "Укажите команды для картинки",
+        "url": "http://images4.alphacoders.com/294/294344.jpg"
+      },
+      {
+        "id": 1,
+        "text": "-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-\nУсталость",
+        "comment": true,
+        "var_show": [
+          "global hunger"
+        ]
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_set": [
+          "global pg1h",
+          1
+        ],
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 1,
+        "instant": true,
+        "text": "Вкл",
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "right_answer": true,
+        "left_answer": false,
+        "var_equal": [
+          "global pg1h",
+          1
+        ],
+        "id": 1,
+        "instant": true,
+        "text": "Выкл",
+        "var_set": [
+          "global pg1h",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "global pg1h",
+          1
+        ],
+        "id": 1,
+        "instant": true,
+        "text": "Вкл",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 1,
+        "instant": true,
+        "text": "Выкл",
+        "left_answer": false
+      },
+      {
+        "id": 9,
+        "text": "Ознакомительная страница",
+        "instant": true,
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ]
+      },
+      {
+        "var_str_set": [
+          "global hunger",
+          "отключена"
+        ],
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 1,
+        "calculate": false,
+        "super_calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_str_set": [
+          "global hunger",
+          "включена"
+        ],
+        "var_equal": [
+          "global pg1h",
+          1
+        ],
+        "id": 1,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "super_calculate": true
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "lua_do": "function lua_do()\npg32={0,1,0}\npg32a=1\npg32[4]=1\nvisor=2\npg32b={100,100,100,100,100}\nend",
+        "instant": true,
+        "id": 32,
+        "text": "Лабиринт"
+      },
+      {
+        "initSounds": [
+          "global click",
+          "https://wav-library.net/sounds/0-0-1-17216-20"
+        ],
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Город под куполом.",
+    "answers": [
+      {
+        "var_set": [
+          "pg13",
+          1,
+          "pg23",
+          1
+        ],
+        "lua_do": "function lua_do()\nx=0\nend",
+        "id": 3,
+        "text": "Подземелье",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "id": 5,
+        "text": "Тренировочные залы ",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "id": 6,
+        "right_answer": true,
+        "text": "Алхимик",
+        "instant": true
+      },
+      {
+        "right_answer": true,
+        "id": 7,
+        "instant": true,
+        "var_not": [
+          "global hard",
+          0
+        ],
+        "text": "Достижения/Статистика"
+      },
+      {
+        "var_not": [
+          "global hard",
+          1
+        ],
+        "comment": true,
+        "id": 2,
+        "instant": true,
+        "text": "Недоступно на легком режиме",
+        "right_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "hp",
+          "hpmax"
+        ]
+      },
+      {
+        "var_not": [
+          "global люди",
+          0
+        ],
+        "id": 2,
+        "text": "\nНаселение города",
+        "var_show": [
+          "global люди",
+          "человека"
+        ],
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "\nВы единственный выживший",
+        "var_equal": [
+          "global люди",
+          0
+        ],
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "\n-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-\nУсталость",
+        "var_show": [
+          "голод",
+          "% / 100 %"
+        ],
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "\nВаши монеты",
+        "var_show": [
+          "money"
+        ],
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "\nВаш опыт",
+        "var_show": [
+          "xp"
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "global r",
+          1
+        ],
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "вход",
+          10
+        ]
+      },
+      {
+        "var_equal": [
+          "global r",
+          0
+        ],
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "вход",
+          4
+        ]
+      },
+      {
+        "id": 29,
+        "text": "Банк",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Картинки",
+        "need": [
+          -2
+        ],
+        "go_to": [
+          "компания"
+        ]
+      },
+      {
+        "var_show": [
+          "global люди",
+          "монет"
+        ],
+        "var_add": [
+          "money",
+          "global люди"
+        ],
+        "id": 2,
+        "text": "Собрать налоги <plus>",
+        "right_answer": false,
+        "timer": [
+          "pg2",
+          90
+        ],
+        "instant": true,
+        "launchtimer": [
+          "pg2",
+          90
+        ],
+        "var_need": [
+          "global люди",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "right_answer": false,
+        "var_add": [
+          "global люди",
+          1
+        ],
+        "var_equal": [
+          "global r",
+          0
+        ],
+        "timer": [
+          "pg2",
+          90
+        ],
+        "text": "<plus>1 к населению",
+        "launchtimer": [
+          "pg2",
+          90
+        ],
+        "instant": true
+      },
+      {
+        "var_not": [
+          "голод",
+          0
+        ],
+        "var_need": [
+          "money",
+          "голод"
+        ],
+        "instant": true,
+        "id": 2,
+        "text": "Отдохнуть 1 монета за каждый процент усталости",
+        "var_sub": [
+          "money",
+          "голод"
+        ],
+        "var_set": [
+          "pg2u",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "pg2u",
+          1
+        ],
+        "id": 2,
+        "calculate": true,
+        "text": "Утолить голод",
+        "var_set": [
+          "голод",
+          0,
+          "pg2u",
+          0
+        ]
+      },
+      {
+        "var_str_set": [
+          "голод",
+          "-∞"
+        ],
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 2,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 26,
+        "text": "Игроки",
+        "instant": true
+      },
+      {
+        "id": 31,
+        "text": "Квесты",
+        "instant": true
+      },
+      {
+        "var_random": [
+          "pg23",
+          1,
+          24
+        ],
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "var_more": [
+          "pg23",
+          24
+        ],
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Вход в подземелье — самое опасное место, в котором спрятаны горы сокровищ, оружия, а так же обитают толпы монстров.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад"
+      },
+      {
+        "id": 3,
+        "var_show": [
+          "maxdungeon",
+          "этаж"
+        ],
+        "text": "\nВы можете пройти на",
+        "merge": true
+      },
+      {
+        "id": 3,
+        "var_show": [
+          "pg13"
+        ],
+        "text": "\nУровень подземелья",
+        "merge": true
+      },
+      {
+        "id": 3,
+        "var_show": [
+          "dungeon"
+        ],
+        "text": "\nВероятность не удачи",
+        "merge": true
+      },
+      {
+        "id": 3,
+        "var_show": [
+          "dex"
+        ],
+        "text": " /",
+        "merge": true
+      },
+      {
+        "id": 3,
+        "text": " Не возможно!!!",
+        "var_need": [
+          "dungeon",
+          "dex"
+        ],
+        "merge": true
+      },
+      {
+        "comment": true,
+        "id": 3,
+        "text": "Войти",
+        "var_need": [
+          "dungeon",
+          "dex"
+        ],
+        "merge": false
+      },
+      {
+        "var_add": [
+          "голод",
+          0.2
+        ],
+        "var_random": [
+          "xod",
+          1,
+          "dex"
+        ],
+        "var_less": [
+          "dungeon",
+          "dex"
+        ],
+        "instant": true,
+        "var_min": [
+          "money",
+          0
+        ],
+        "var_max": [
+          "голод",
+          100
+        ],
+        "var_not": [
+          "голод",
+          100
+        ],
+        "text": "Войти",
+        "blackout": false,
+        "id": 4
+      },
+      {
+        "var_not": [
+          "pg13",
+          1,
+          "pg13",
+          0
+        ],
+        "var_add": [
+          "pg13",
+          -1
+        ],
+        "id": 3,
+        "text": "Уменьшить уровень подземелья на 1",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg13",
+          1
+        ],
+        "id": 3,
+        "text": "Уменьшить уровень подземелья на 1",
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg13",
+          0
+        ],
+        "id": 3,
+        "text": "Уменьшить уровень подземелья на 1",
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "pg13",
+          -5
+        ],
+        "instant": true,
+        "id": 3,
+        "var_need": [
+          "pg13",
+          6
+        ],
+        "text": "Уменьшить уровень подземелья на 5",
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "id": 3,
+        "text": "Уменьшить уровень подземелья на 5",
+        "var_less": [
+          "pg13",
+          6
+        ],
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "pg13",
+          -10
+        ],
+        "instant": true,
+        "id": 3,
+        "var_need": [
+          "pg13",
+          11
+        ],
+        "text": "Уменьшить уровень подземелья на 10",
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "id": 3,
+        "text": "Уменьшить уровень подземелья на 10",
+        "var_less": [
+          "pg13",
+          11
+        ],
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "pg13",
+          -50
+        ],
+        "instant": true,
+        "id": 3,
+        "var_need": [
+          "pg13",
+          51
+        ],
+        "text": "Уменьшить уровень подземелья на 50",
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "var_less": [
+          "pg13",
+          51
+        ],
+        "text": "Уменьшить уровень подземелья на 50",
+        "id": 3,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 3,
+        "text": "<plus>1 уровень подземелья",
+        "instant": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon < vars.pg13<plus>1 then\nreturn true\nend\nend"
+      },
+      {
+        "var_max": [
+          "pg13",
+          "maxdungeon"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon >= vars.pg13<plus>1 then\nreturn true\nend\nend",
+        "id": 3,
+        "text": "<plus>1 уровень подземелья",
+        "instant": true,
+        "var_add": [
+          "pg13",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon < vars.pg13<plus>5 then\nreturn true\nend\nend",
+        "id": 3,
+        "text": "<plus>5 уровень подземелья",
+        "instant": true,
+        "comment": true
+      },
+      {
+        "var_max": [
+          "pg13",
+          "maxdungeon"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon >= vars.pg13<plus>5 then\nreturn true\nend\nend",
+        "id": 3,
+        "text": "<plus>5 уровень подземелья",
+        "instant": true,
+        "var_add": [
+          "pg13",
+          5
+        ]
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon < vars.pg13<plus>10 then\nreturn true\nend\nend",
+        "id": 3,
+        "text": "<plus>10 уровень подземелья",
+        "instant": true,
+        "comment": true
+      },
+      {
+        "var_max": [
+          "pg13",
+          "maxdungeon"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon >= vars.pg13<plus>10 then\nreturn true\nend\nend",
+        "id": 3,
+        "text": "<plus>10 уровень подземелья",
+        "instant": true,
+        "var_add": [
+          "pg13",
+          10
+        ]
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon < vars.pg13<plus>50 then\nreturn true\nend\nend",
+        "id": 3,
+        "text": "<plus>50 уровень подземелья",
+        "instant": true,
+        "comment": true
+      },
+      {
+        "var_max": [
+          "pg13",
+          "maxdungeon"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif vars.maxdungeon >= vars.pg13<plus>50 then\nreturn true\nend\nend",
+        "id": 3,
+        "text": "<plus>50 уровень подземелья",
+        "instant": true,
+        "var_add": [
+          "pg13",
+          50
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Подземелье",
+        "lua_do": "function lua_do()\nvars.dungeon=vars.pg13^2\nvars.mhp=25*vars.dungeon\nvars.matk=5*vars.dungeon\nvars.mdex=vars.dungeon\nend",
+        "calculate": true
+      },
+      {
+        "text": "Босс убей чтобы пройти дальше",
+        "id": 4,
+        "lua_do": "function lua_do()\nvars.mhp=100*vars.dungeon\nvars.matk=20*vars.dungeon\nend",
+        "var_need": [
+          "pg13",
+          "maxdungeon"
+        ],
+        "instant": true,
+        "var_set": [
+          "boss",
+          1,
+          "вход",
+          24
+        ]
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 3,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "голод",
+          0
+        ]
+      },
+      {
+        "var_max": [
+          "pg13",
+          "maxdungeon"
+        ],
+        "var_not": [
+          "pg13",
+          "maxdungeon"
+        ],
+        "id": 3,
+        "text": "Уровень на котором остановились",
+        "instant": true,
+        "var_set": [
+          "pg13",
+          "maxdungeon"
+        ]
+      },
+      {
+        "need_ever": true,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "need": [
+          -2
+        ],
+        "var_set": [
+          "maxdungeon",
+          99
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\nif pg13~=x then\npg23=pg13\nx=pg13\nend\nif pg23>=25 then\npg23=math.random(1,24)\nend\nend",
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "update": [
+          0.5
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "maxdungeon",
+          100
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "id": 3,
+        "text": "Компания 10",
+        "need": [
+          -25,
+          33
+        ],
+        "var_set": [
+          "вход",
+          25
+        ]
+      },
+      {
+        "text": "Компания 1",
+        "instant": true,
+        "calculate": true,
+        "super_calculate": false,
+        "id": 3,
+        "var_need": [
+          "maxdungeon",
+          10
+        ],
+        "need": [
+          -33
+        ],
+        "var_set": [
+          "вход",
+          33
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Враг:",
+    "answers": [
+      {
+        "comment": true,
+        "var_equal": [
+          "boss",
+          1
+        ],
+        "id": 4,
+        "text": "Босс ",
+        "merge": true
+      },
+      {
+        "lua_do": "function lua_do()\nif pg23>24 then\npg23=math.random(1,24)\nend\nend",
+        "comment": true,
+        "super_calculate": false,
+        "id": 23,
+        "text": "Картинки",
+        "run": [
+          23
+        ],
+        "calculate": true
+      },
+      {
+        "var_show": [
+          "mhp"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "\nОз",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "matk"
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "\nАтк",
+        "merge": true
+      },
+      {
+        "id": 4,
+        "var_show": [
+          "hp"
+        ],
+        "comment": true,
+        "text": "Ваши ОЗ"
+      },
+      {
+        "id": 4,
+        "var_show": [
+          "atk"
+        ],
+        "comment": true,
+        "text": "Ваша атака"
+      },
+      {
+        "var_add": [
+          "hp",
+          "vamp"
+        ],
+        "var_random": [
+          "xod",
+          1,
+          "dex"
+        ],
+        "id": 4,
+        "text": "Атаковать",
+        "var_min": [
+          "mhp",
+          0
+        ],
+        "left_answer": true,
+        "var_max": [
+          "hp",
+          "hpmax"
+        ],
+        "var_not": [
+          "hp",
+          0,
+          "mhp",
+          0,
+          "голод",
+          100
+        ],
+        "var_more": [
+          "xod",
+          "dungeon"
+        ],
+        "var_sub": [
+          "mhp",
+          "atk"
+        ],
+        "instant": true
+      },
+      {
+        "var_random": [
+          "xod",
+          1,
+          "dex"
+        ],
+        "id": 4,
+        "var_sub": [
+          "hp",
+          "matk"
+        ],
+        "var_min": [
+          "hp",
+          0
+        ],
+        "var_no_more": [
+          "xod",
+          "dungeon"
+        ],
+        "var_max": [
+          "hp",
+          "hpmax"
+        ],
+        "var_not": [
+          "hp",
+          0,
+          "mhp",
+          0
+        ],
+        "left_answer": true,
+        "instant": true,
+        "text": "Получить урон"
+      },
+      {
+        "var_add": [
+          "money",
+          1
+        ],
+        "var_random": [
+          "xod",
+          1,
+          "dex"
+        ],
+        "lua_do": "function lua_do()\nmhp=25*dungeon\nmatk=matk<plus>dungeon\npg32b[1]=0\nxp=xp<plus>math.floor(dungeon/(maxdungeon/4))\nend",
+        "instant": true,
+        "go_to": [
+          "вход"
+        ],
+        "var_max": [
+          "голод",
+          100
+        ],
+        "var_equal": [
+          "mhp",
+          0
+        ],
+        "var_random_from": [
+          "pg10",
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "text": "Победа",
+        "var_sub": [
+          "голод",
+          -1
+        ],
+        "id": 4
+      },
+      {
+        "instant": true,
+        "var_sub": [
+          "xp",
+          "dungeon"
+        ],
+        "var_equal": [
+          "hp",
+          0,
+          "global hard",
+          1
+        ],
+        "id": 1,
+        "text": "Смерть",
+        "var_min": [
+          "xp",
+          0,
+          "money",
+          0
+        ],
+        "var_set": [
+          "hp",
+          "hpmax",
+          "money",
+          0
+        ]
+      },
+      {
+        "instant": true,
+        "var_sub": [
+          "xp",
+          "dungeon"
+        ],
+        "var_equal": [
+          "hp",
+          0,
+          "global hard",
+          0
+        ],
+        "id": 2,
+        "text": "Смерть",
+        "var_min": [
+          "xp",
+          0,
+          "money",
+          0
+        ],
+        "var_set": [
+          "hp",
+          "hpmax",
+          "money",
+          0,
+          "boss",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "mhp",
+          0,
+          "pg2z",
+          6
+        ],
+        "right_answer": true,
+        "text": "Сбежать",
+        "id": 2,
+        "var_more": [
+          "xod",
+          "dungeon"
+        ],
+        "instant": true,
+        "var_set": [
+          "boss",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "mhp",
+          0,
+          "pg2z",
+          6
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "Сбежать",
+        "right_answer": true,
+        "var_no_more": [
+          "xod",
+          "dungeon"
+        ]
+      },
+      {
+        "var_show": [
+          "heal",
+          "шт"
+        ],
+        "id": 4,
+        "var_need": [
+          "heal",
+          1
+        ],
+        "var_not": [
+          "hp",
+          0,
+          "hp",
+          "hpmax",
+          "mhp",
+          0
+        ],
+        "lua_if": "function lua_if()\nif hp<hpmax then\nreturn true\nend\nend",
+        "instant": true,
+        "text": "Выпить зелье здоровье у вас",
+        "var_more": [
+          "xod",
+          "dungeon"
+        ],
+        "var_sub": [
+          "heal",
+          1
+        ],
+        "var_set": [
+          "hp",
+          "hpmax"
+        ]
+      },
+      {
+        "var_need": [
+          "heal",
+          1
+        ],
+        "var_show": [
+          "heal",
+          "шт"
+        ],
+        "instant": true,
+        "var_equal": [
+          "mhp",
+          0
+        ],
+        "id": 4,
+        "var_sub": [
+          "heal",
+          1
+        ],
+        "text": "Выпить зелье здоровье у вас",
+        "var_set": [
+          "hp",
+          "hpmax"
+        ]
+      },
+      {
+        "var_show": [
+          "restart",
+          "шт"
+        ],
+        "var_sub": [
+          "restart",
+          1
+        ],
+        "var_need": [
+          "restart",
+          1
+        ],
+        "id": 2,
+        "text": "Выпить зелье возврата у вас",
+        "instant": true,
+        "var_not": [
+          "hp",
+          0,
+          "mhp",
+          0
+        ]
+      },
+      {
+        "var_no_more": [
+          "global wow",
+          "pg13"
+        ],
+        "var_equal": [
+          "mhp",
+          0,
+          "global hard",
+          1
+        ],
+        "id": 4,
+        "calculate": true,
+        "text": "Если моб убит на хардкоре",
+        "var_set": [
+          "global wow",
+          "pg13"
+        ]
+      },
+      {
+        "var_set": [
+          "hp",
+          "hpmax",
+          "xod",
+          "dungeon"
+        ],
+        "var_need": [
+          "феникс",
+          1
+        ],
+        "text": "Зелье феникса",
+        "var_equal": [
+          "hp",
+          0
+        ],
+        "id": 4,
+        "calculate": true,
+        "var_sub": [
+          "феникс",
+          1
+        ],
+        "var_mult": [
+          "xod",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "global death",
+          1
+        ],
+        "var_equal": [
+          "hp",
+          0
+        ],
+        "id": 4,
+        "calculate": true,
+        "text": "Если погиб"
+      },
+      {
+        "var_add": [
+          "global mdeath",
+          1,
+          "mdeath",
+          1
+        ],
+        "var_equal": [
+          "mhp",
+          0
+        ],
+        "id": 4,
+        "calculate": true,
+        "text": "Если погиб монстр",
+        "lua_do": "function lua_do()\npg31a[pg23]=pg31a[pg23]-1\nif pg31a[pg23]<0 then\npg31a[pg23]=0\nend\nend"
+      },
+      {
+        "calculate": true,
+        "id": 4,
+        "var_need": [
+          "mdeath",
+          "global mdeaths"
+        ],
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "global mdeaths",
+          "mdeath"
+        ]
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 3,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "голод",
+          0
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Вы получите опыта \" .. math.floor(dungeon/(maxdungeon/4))\nend",
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": true,
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Тренировочные залы\nЗдесь тренируются все приключенцы начиная от начинающих и заканчивая легендами.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "\nРежим хардкор",
+        "var_equal": [
+          "global hard",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "var_show": [
+          "xp"
+        ],
+        "text": "\n\nВаш опыт",
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "Выйти",
+        "instant": true,
+        "var_set": [
+          "pg10",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "xp",
+          2
+        ],
+        "id": 5,
+        "text": "Hack",
+        "need": [
+          -5
+        ],
+        "var_mult": [
+          "xp",
+          "xp"
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Закинуть весь опыт в....",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "var_show": [
+          "atk"
+        ],
+        "var_set": [
+          "pg10",
+          0
+        ],
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "id": 5,
+        "text": "Атака",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "var_not": [
+          "pg10",
+          1
+        ],
+        "left_answer": true,
+        "text": "Атака",
+        "id": 5,
+        "instant": true,
+        "var_show": [
+          "atk"
+        ],
+        "var_set": [
+          "pg10",
+          1
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif vars.hpmax == vars.atk then\nreturn true\nend\nend",
+        "var_need": [
+          "xp",
+          1
+        ],
+        "comment": true,
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "id": 5,
+        "instant": true,
+        "text": "Атака не может быть выше ОЗ",
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "atk",
+          1
+        ],
+        "id": 5,
+        "text": "Атк <plus>1\nXp -1",
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>1 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "instant": true,
+        "var_sub": [
+          "xp",
+          1
+        ],
+        "var_need": [
+          "xp",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "atk",
+          10
+        ],
+        "id": 5,
+        "var_sub": [
+          "xp",
+          10
+        ],
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>10 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "var_need": [
+          "xp",
+          10
+        ],
+        "text": "Атк <plus>10\nXp -10",
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          100
+        ],
+        "id": 5,
+        "text": "Атк <plus>100\nXp -100",
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>100 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "var_need": [
+          "xp",
+          100
+        ],
+        "var_sub": [
+          "xp",
+          100
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          1000
+        ],
+        "id": 5,
+        "var_sub": [
+          "xp",
+          1000
+        ],
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>1000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "var_need": [
+          "xp",
+          1000
+        ],
+        "text": "Атк <plus>1К\nXp -1К",
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          10000
+        ],
+        "id": 5,
+        "text": "Атк <plus>10К\nXp -10К",
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>10000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "var_need": [
+          "xp",
+          10000
+        ],
+        "var_sub": [
+          "xp",
+          10000
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          100000
+        ],
+        "id": 5,
+        "var_sub": [
+          "xp",
+          100000
+        ],
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>100000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "var_need": [
+          "xp",
+          100000
+        ],
+        "text": "Атк <plus>100К\nXp -100К",
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          1000000
+        ],
+        "id": 5,
+        "text": "Атк <plus>1М\nXp -1М",
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>1000000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "var_need": [
+          "xp",
+          1000000
+        ],
+        "var_sub": [
+          "xp",
+          1000000
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          10000000
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          10000000
+        ],
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>10000000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "text": "Атк <plus>10М\nXp -10М",
+        "var_sub": [
+          "xp",
+          10000000
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          100000000
+        ],
+        "id": 5,
+        "text": "Атк <plus>100М\nXp -100М",
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>100000000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "var_need": [
+          "xp",
+          100000000
+        ],
+        "var_sub": [
+          "xp",
+          100000000
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "atk",
+          1000000000
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1000000000
+        ],
+        "left_answer": true,
+        "var_max": [
+          "atk",
+          "hpmax"
+        ],
+        "lua_if": "function lua_if()\nif vars.hpmax >= vars.atk<plus>1000000000 then\nreturn true\nend\nend",
+        "var_equal": [
+          "pg10",
+          1
+        ],
+        "text": "Атк <plus>1Ми\nXp -1Ми",
+        "var_sub": [
+          "xp",
+          1000000000
+        ],
+        "instant": true
+      },
+      {
+        "var_not": [
+          "pg10",
+          2
+        ],
+        "var_show": [
+          "hpmax"
+        ],
+        "text": "Здоровье",
+        "id": 5,
+        "instant": true,
+        "right_answer": true,
+        "var_set": [
+          "pg10",
+          2
+        ]
+      },
+      {
+        "var_show": [
+          "hpmax"
+        ],
+        "right_answer": true,
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "text": "Здоровье",
+        "instant": true,
+        "var_set": [
+          "pg10",
+          0
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          5
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1
+        ],
+        "var_sub": [
+          "xp",
+          1
+        ],
+        "text": "ОЗ <plus>5\nXp -1"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          50
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          10
+        ],
+        "text": "ОЗ <plus>50\nXp -10",
+        "var_sub": [
+          "xp",
+          10
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          500
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          100
+        ],
+        "var_sub": [
+          "xp",
+          100
+        ],
+        "text": "ОЗ <plus>500\nXp -100"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          5000
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1000
+        ],
+        "text": "ОЗ <plus>5К\nXp -1К",
+        "var_sub": [
+          "xp",
+          1000
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          50000
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          10000
+        ],
+        "var_sub": [
+          "xp",
+          10000
+        ],
+        "text": "ОЗ <plus>50К\nXp -10К"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          500000
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          100000
+        ],
+        "text": "ОЗ <plus>500К\nXp -100К",
+        "var_sub": [
+          "xp",
+          100000
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          5000000
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1000000
+        ],
+        "var_sub": [
+          "xp",
+          1000000
+        ],
+        "text": "ОЗ <plus>5М\nXp -1М"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          50000000
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          10000000
+        ],
+        "text": "ОЗ <plus>50М\nXp -10М",
+        "var_sub": [
+          "xp",
+          10000000
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          500000000
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          100000000
+        ],
+        "var_sub": [
+          "xp",
+          100000000
+        ],
+        "text": "ОЗ <plus>500М\nXp -100М"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "hpmax",
+          5000000000
+        ],
+        "var_equal": [
+          "pg10",
+          2
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1000000000
+        ],
+        "text": "ОЗ <plus>5Ми\nXp -1Ми",
+        "var_sub": [
+          "xp",
+          1000000000
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_show": [
+          "vamp"
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "text": "Вампиризм",
+        "instant": true,
+        "var_set": [
+          "pg10",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "pg10",
+          3
+        ],
+        "right_answer": true,
+        "text": "Вампиризм",
+        "id": 5,
+        "instant": true,
+        "var_show": [
+          "vamp"
+        ],
+        "var_set": [
+          "pg10",
+          3
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          0.5
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1
+        ],
+        "var_sub": [
+          "xp",
+          1
+        ],
+        "text": "Вампиризм <plus>0.5\nXp -1"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          5
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          10
+        ],
+        "text": "Вампиризм <plus>5\nXp -10",
+        "var_sub": [
+          "xp",
+          10
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          50
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          100
+        ],
+        "var_sub": [
+          "xp",
+          100
+        ],
+        "text": "Вампиризм <plus>50\nXp -100"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          500
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1000
+        ],
+        "text": "Вампиризм <plus>500\nXp -1К",
+        "var_sub": [
+          "xp",
+          1000
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          5000
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          10000
+        ],
+        "var_sub": [
+          "xp",
+          10000
+        ],
+        "text": "Вампиризм <plus>5К\nXp -10К"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          50000
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          100000
+        ],
+        "text": "Вампиризм <plus>50К\nXp -100К",
+        "var_sub": [
+          "xp",
+          100000
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          500000
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1000000
+        ],
+        "var_sub": [
+          "xp",
+          1000000
+        ],
+        "text": "Вампиризм <plus>500К\nXp -1М"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          5000000
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          10000000
+        ],
+        "text": "Вампиризм <plus>5М\nXp -10М",
+        "var_sub": [
+          "xp",
+          10000000
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          50000000
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          100000000
+        ],
+        "var_sub": [
+          "xp",
+          100000000
+        ],
+        "text": "Вампиризм <plus>50М\nXp -100М"
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "vamp",
+          500000000
+        ],
+        "var_equal": [
+          "pg10",
+          3
+        ],
+        "id": 5,
+        "var_need": [
+          "xp",
+          1000000000
+        ],
+        "text": "Вампиризм <plus>500М\nXp -1Ми",
+        "var_sub": [
+          "xp",
+          1000000000
+        ]
+      },
+      {
+        "var_show": [
+          "dex"
+        ],
+        "var_set": [
+          "pg10",
+          4
+        ],
+        "text": "Ловкость",
+        "id": 5,
+        "instant": true,
+        "var_not": [
+          "pg10",
+          4
+        ],
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "dex"
+        ],
+        "left_answer": true,
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "text": "Ловкость",
+        "instant": true,
+        "var_set": [
+          "pg10",
+          0
+        ]
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          1
+        ],
+        "var_add": [
+          "dex",
+          0.2
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "var_sub": [
+          "xp",
+          1
+        ],
+        "text": "Ловкость <plus>0.2\nXp -1",
+        "left_answer": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          10
+        ],
+        "var_add": [
+          "dex",
+          2
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "text": "Ловкость <plus>2\nXp -10",
+        "var_sub": [
+          "xp",
+          10
+        ],
+        "left_answer": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          100
+        ],
+        "var_add": [
+          "dex",
+          20
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "var_sub": [
+          "xp",
+          100
+        ],
+        "text": "Ловкость <plus>20\nXp -100",
+        "left_answer": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          1000
+        ],
+        "var_add": [
+          "dex",
+          200
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "text": "Ловкость <plus>200\nXp -1К",
+        "var_sub": [
+          "xp",
+          1000
+        ],
+        "left_answer": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          10000
+        ],
+        "var_add": [
+          "dex",
+          2000
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "var_sub": [
+          "xp",
+          10000
+        ],
+        "text": "Ловкость <plus>2К\nXp -10К",
+        "left_answer": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          100000
+        ],
+        "var_add": [
+          "dex",
+          20000
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "text": "Ловкость <plus>20К\nXp -100К",
+        "var_sub": [
+          "xp",
+          100000
+        ],
+        "left_answer": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          1000000
+        ],
+        "var_add": [
+          "dex",
+          200000
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "var_sub": [
+          "xp",
+          1000000
+        ],
+        "text": "Ловкость <plus>200К\nXp -1М",
+        "left_answer": true
+      },
+      {
+        "instant": true,
+        "var_need": [
+          "xp",
+          10000000
+        ],
+        "var_add": [
+          "dex",
+          2000000
+        ],
+        "var_equal": [
+          "pg10",
+          4
+        ],
+        "id": 5,
+        "text": "Ловкость <plus>2М\nXp -10М",
+        "var_sub": [
+          "xp",
+          10000000
+        ],
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Привет, я алхимик Смит, я буду продавать тебе разные зелья, что бы упростить твое прохождения подземелья. Когда-то я получал большую прибыль за лечение приключенцев, но теперь я вынужден делать это бесплатно. ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "money",
+          "золотых"
+        ],
+        "var_add": [
+          "heal",
+          1
+        ],
+        "var_need": [
+          "money",
+          10
+        ],
+        "id": 6,
+        "var_sub": [
+          "money",
+          10
+        ],
+        "text": "Зелье здоровья 1шт отдать 10 золотых у вас",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "money",
+          "золотых"
+        ],
+        "comment": true,
+        "id": 6,
+        "text": "Зелье здоровья 1шт отдать 10 золотых у вас",
+        "var_less": [
+          "money",
+          10
+        ]
+      },
+      {
+        "var_show": [
+          "money",
+          "золотых"
+        ],
+        "var_add": [
+          "restart",
+          1
+        ],
+        "var_need": [
+          "money",
+          50
+        ],
+        "id": 6,
+        "text": "Зелье возврата 1шт отдать 50 золотых у вас",
+        "var_sub": [
+          "money",
+          50
+        ],
+        "instant": true
+      },
+      {
+        "var_show": [
+          "money",
+          "золотых"
+        ],
+        "comment": true,
+        "id": 6,
+        "text": "Зелье возврата 1шт отдать 50 золотых у вас",
+        "var_less": [
+          "money",
+          50
+        ]
+      },
+      {
+        "var_show": [
+          "money",
+          "золотых"
+        ],
+        "comment": true,
+        "id": 6,
+        "text": "Зелье феникса 1шт отдать 100 золотых у вас",
+        "var_less": [
+          "money",
+          100
+        ]
+      },
+      {
+        "var_show": [
+          "money",
+          "золотых"
+        ],
+        "var_add": [
+          "феникс",
+          1
+        ],
+        "var_need": [
+          "money",
+          100
+        ],
+        "id": 6,
+        "var_sub": [
+          "money",
+          100
+        ],
+        "text": "Зелье феникса 1шт отдать 100 золотых у вас",
+        "instant": true
+      },
+      {
+        "id": 6,
+        "var_show": [
+          "hp"
+        ],
+        "text": "\nВаши ОЗ ",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "var_show": [
+          "hpmax"
+        ],
+        "text": " /",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "\nПо-моему, ты здоров",
+        "merge": true,
+        "var_equal": [
+          "hp",
+          "hpmax"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Здесь отображается сколько монстров вы убили, сколько раз умерли и достижения по открытию этажей которые даются только в режиме хардкор.",
+    "answers": [
+      {
+        "var_show": [
+          "global death"
+        ],
+        "comment": true,
+        "id": 7,
+        "text": "\n\nВаши смерти за все время",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "global mdeath"
+        ],
+        "comment": true,
+        "id": 7,
+        "text": "\n\nУбитые монстры за все время",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "global mdeaths"
+        ],
+        "comment": true,
+        "id": 7,
+        "text": "\n\nРекорд убийства монстров за игру",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "mdeath"
+        ],
+        "comment": true,
+        "id": 7,
+        "text": "\n\nУбитые монстры за эту игру",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "global wow",
+          "уровней в режиме хардкор"
+        ],
+        "comment": true,
+        "id": 7,
+        "text": "\n\nДостижение - вы смогли пройти",
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "Вернуться",
+        "instant": true
+      },
+      {
+        "id": 7,
+        "text": "БОНУСЫ [Играйте, что бы заработать, восполняются с каждой новой игрой, в хардкоре бонусов больше]",
+        "comment": true
+      },
+      {
+        "var_not": [
+          "global wow",
+          0
+        ],
+        "instant": true,
+        "var_equal": [
+          "pg7T",
+          0
+        ],
+        "id": 7,
+        "text": "Получи <plus>25xp за каждое пройденое подземелье в режиме хардкор.",
+        "lua_do": "function lua_do()\nvars.xp=vars.xp<plus>global_vars.wow*25\nend",
+        "var_set": [
+          "pg7T",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "var_need": [
+          "global mdeath",
+          10
+        ],
+        "var_add": [
+          "xp",
+          10
+        ],
+        "var_equal": [
+          "pg7",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Первая десятка монстров  <plus>10xp",
+        "var_set": [
+          "pg7",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "text": "Первая сотня монстров <plus>100xp",
+        "var_add": [
+          "xp",
+          100
+        ],
+        "var_equal": [
+          "pg7a1",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "var_need": [
+          "global mdeath",
+          100
+        ],
+        "var_set": [
+          "pg7a1",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "var_need": [
+          "global mdeath",
+          1000
+        ],
+        "var_add": [
+          "xp",
+          1000
+        ],
+        "var_equal": [
+          "pg7a2",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Первая тысяча монстров <plus>1К xp",
+        "var_set": [
+          "pg7a2",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "text": "Первый десяток тысяч монстров <plus>10К xp",
+        "var_add": [
+          "xp",
+          10000
+        ],
+        "var_equal": [
+          "pg7a3",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "var_need": [
+          "global mdeath",
+          10000
+        ],
+        "var_set": [
+          "pg7a3",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "var_need": [
+          "global mdeath",
+          100000
+        ],
+        "var_add": [
+          "xp",
+          100000
+        ],
+        "var_equal": [
+          "pg7a4",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Первая сотня тысяч монстров <plus>100К xp",
+        "var_set": [
+          "pg7a4",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "text": "Новичек\n10 монстров за игру <plus>20xp",
+        "var_add": [
+          "xp",
+          20
+        ],
+        "var_equal": [
+          "pg7b1",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "var_need": [
+          "global mdeaths",
+          10
+        ],
+        "var_set": [
+          "pg7b1",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "var_need": [
+          "global mdeaths",
+          100
+        ],
+        "var_add": [
+          "xp",
+          250
+        ],
+        "var_equal": [
+          "pg7b2",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Боец\n100 монстров за игру <plus>250xp",
+        "var_set": [
+          "pg7b2",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "text": "Избраный\n1000 монстров за игру <plus>3К xp",
+        "var_add": [
+          "xp",
+          3000
+        ],
+        "var_equal": [
+          "pg7b3",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "var_need": [
+          "global mdeaths",
+          1000
+        ],
+        "var_set": [
+          "pg7b3",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "var_need": [
+          "global mdeaths",
+          10000
+        ],
+        "var_add": [
+          "xp",
+          65000
+        ],
+        "var_equal": [
+          "pg7b4",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Спаситель мира\n10000 монстров за игру <plus>65К xp",
+        "var_set": [
+          "pg7b4",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "text": "Легенда\n100000 монстров за игру <plus>130000xp",
+        "var_add": [
+          "xp",
+          130000
+        ],
+        "var_equal": [
+          "pg7b5",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "var_need": [
+          "global mdeaths",
+          100000
+        ],
+        "var_set": [
+          "pg7b5",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "var_need": [
+          "global death",
+          1
+        ],
+        "var_add": [
+          "xp",
+          5
+        ],
+        "var_equal": [
+          "pg7c1",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Ты воскрес во истину воскрес\nУмрите 1 раз <plus>5xp",
+        "var_set": [
+          "pg7c1",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "text": "Ты сереьезно?\nУмрите 10 раз <plus>50xp",
+        "var_add": [
+          "xp",
+          50
+        ],
+        "var_equal": [
+          "pg7c2",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "var_need": [
+          "global death",
+          10
+        ],
+        "var_set": [
+          "pg7c2",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "var_need": [
+          "global death",
+          100
+        ],
+        "var_add": [
+          "xp",
+          500
+        ],
+        "var_equal": [
+          "pg7c3",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Как можно было столько раз сдохнуть?\nУмрите 100 раз <plus>500xp",
+        "var_set": [
+          "pg7c3",
+          1
+        ]
+      },
+      {
+        "calculate": true,
+        "id": 7,
+        "var_need": [
+          "mdeath",
+          "global mdeaths"
+        ],
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "global mdeaths",
+          "mdeath"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Прокачка слишком огромна? Не беда теперь можно закинуть весь свой опыт в одну характеристику.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "\nВаш опыт",
+        "var_show": [
+          "xp"
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "instant": true,
+        "text": "Назад"
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.atk=vars.atk<plus>vars.xp\nvars.xp=0\nif vars.hpmax < vars.atk then\nvars.xp=vars.atk-vars.hpmax\nvars.atk=vars.hpmax\nend\nend",
+        "text": "Все в Атк",
+        "id": 5,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_do": "function lua_do()\nvars.hpmax=vars.hpmax<plus>5*vars.xp\nvars.xp=0\nend",
+        "id": 5,
+        "text": "Все в ОЗ",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "text": "Все в ловкость",
+        "lua_do": "function lua_do()\nvars.dex=vars.dex<plus>vars.xp*0.2\nvars.xp=0\nend",
+        "instant": true,
+        "id": 5,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "text": "Все в вампиризм",
+        "id": 5,
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.vamp=vars.vamp<plus>vars.xp*0.5\nvars.xp=0\nend",
+        "left_answer": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Ознакомительная страница\n\n",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Вернуться",
+        "instant": true,
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ]
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_not": [
+          "pg9",
+          1
+        ],
+        "id": 9,
+        "text": "Характеристики",
+        "instant": true,
+        "var_set": [
+          "pg9",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Характеристики",
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          1
+        ]
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_not": [
+          "pg9",
+          2
+        ],
+        "id": 9,
+        "text": "Рекорды игроков в хардкоре",
+        "instant": true,
+        "var_set": [
+          "pg9",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Рекорды игроков в хардкоре",
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          2
+        ]
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_not": [
+          "pg9",
+          3
+        ],
+        "id": 9,
+        "text": "Монстры",
+        "instant": true,
+        "var_set": [
+          "pg9",
+          3
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Монстры",
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          3
+        ]
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_not": [
+          "pg9",
+          4
+        ],
+        "id": 9,
+        "text": "Зелья",
+        "instant": true,
+        "var_set": [
+          "pg9",
+          4
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Зелья",
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          4
+        ]
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_not": [
+          "pg9",
+          5
+        ],
+        "id": 9,
+        "text": "Усталость",
+        "instant": true,
+        "var_set": [
+          "pg9",
+          5
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Усталость",
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          5
+        ]
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "global click"
+        ],
+        "var_not": [
+          "pg9",
+          6
+        ],
+        "id": 9,
+        "text": "Боссы",
+        "instant": true,
+        "var_set": [
+          "pg9",
+          6
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Боссы",
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          6
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          1
+        ],
+        "id": 9,
+        "text": "★Первая характеристика это атака, влияет на количество урона, за удар. Не может превышать ОЗ.\n\n★Вторая это ОЗ — очки здоровья. Увеличивает максимальное допустимое здоровье.\n\n★Третья это вампиризм — количество востонавления ОЗ за каждую успешную атаку. Не может восстановить больше максимального количества ОЗ.\n\n★Четвёртая ловкость — вероятность атаковать противника выше, а вероятность попадание по вам ниже. Помимо этого увеличивает вероятность хорошего результата в случайных событиях. Помните, что ловкость врага каждый раз выше предыдущего, не нападайте на следующего врага пока не увеличьте свою ловкость хотя бы в два раза. Так же чем круче противник тем лучше случайное событие, но его так же сложнее получить, так же увеличиваются и нигативные влияния событий.",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          2
+        ],
+        "id": 9,
+        "text": "Рекорды игроков в хардкоре.\n<plus>----------Зал-славы----------<plus>\n1) Андрей Маурин\n500 этаж\n2600 монстров\n2)пусто\n3)пусто",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          3
+        ],
+        "id": 9,
+        "text": "Монстры и информация о них\n\nНа каждом уровне подземелья обитают разные монстры, каждый сильней другого первый монстр, это крыса.\n(Оз25 Атк5 Ловк1)*((уровень подземелья)^2).\nОстальных вы откроете по ходу вашего приключения удачи",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          4
+        ],
+        "id": 9,
+        "text": "Зелья и информация о них\n\nЗелье здоровья - востонавливает ОЗ до максимального количества, только в ваш ход.\n\nЗелье возврата - возвращает вас в город под куполом во время любого хода.\n\nЗелье феникса - если ваши ОЗ упали до 0 восстонавливает их до максимального значения и вы продолжаете жить, при этом это засчитывается как смерть(Помогает выполнять бонусы).",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          5
+        ],
+        "id": 9,
+        "text": "Усталость\n\nЯ заметил, что много игроков задают вопрос - как восстановить усталость? Этот раздел посвящен именно разбору этого вопроса. Чтобы восстановить усталость вам необходимо: накопить определенное количество монет, которых должно быть как минимум столько же сколько и усталости. После в городе под куполом появится вариант ответа восстановить усталость, жмем его и вуаля, ваша усталость снята.",
+        "merge": false
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "pg9",
+          6
+        ],
+        "id": 9,
+        "text": "Боссы\n\nБоссы охраняют каждый уровень подземелья. Каждый босс сильнее обычного монстра в 4 раза(ловкость остаётся прежней). Победив босса вы откроете возможность перейти на следующий этаж подземелья.",
+        "merge": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "После победы вы двигаетесь дальше по подземелью. ",
+    "answers": [
+      {
+        "var_random": [
+          "pga10",
+          1,
+          "dex"
+        ],
+        "id": 10,
+        "text": "Двигаться дальше",
+        "go_to": [
+          "pg10"
+        ],
+        "var_set": [
+          "pgb10",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 10,
+        "calculate": false,
+        "text": "Вы очень устали, но не можете отдохнуть.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Перед вами фонтан с сияющей водой, выпить воды?",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Нет",
+        "right_answer": true,
+        "var_equal": [
+          "pgb10",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "pgb10",
+          0
+        ],
+        "id": 11,
+        "text": "Да",
+        "left_answer": true,
+        "var_set": [
+          "pgb10",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "dungeon",
+          "ОЗ"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "text": "Вы выпили воды и потеряли",
+        "var_sub": [
+          "hp",
+          "dungeon"
+        ],
+        "var_no_more": [
+          "pga10",
+          "dungeon"
+        ]
+      },
+      {
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "var_more": [
+          "pga10",
+          "dungeon"
+        ],
+        "text": "Вы выпили воды ваши ОЗ востоновлены",
+        "var_set": [
+          "hp",
+          "hpmax"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Продвигаясь по подземелью вы натыкаетесь на ловушку. ",
+    "answers": [
+      {
+        "var_show": [
+          "dungeon",
+          "опыта"
+        ],
+        "var_add": [
+          "xp",
+          "dungeon"
+        ],
+        "id": 4,
+        "var_more": [
+          "pga10",
+          "dungeon"
+        ],
+        "text": "К счастью вам удалось ее избежать получен"
+      },
+      {
+        "id": 4,
+        "var_show": [
+          "dungeon",
+          "ОЗ"
+        ],
+        "text": "Вы активировали ее и потеряли",
+        "var_no_more": [
+          "pga10",
+          "dungeon"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Вы продвигаетесь дальше по подземелью и перед вами сундук заглянуть в него? ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Нет",
+        "right_answer": true,
+        "var_equal": [
+          "pgb10",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "pgb10",
+          0
+        ],
+        "id": 13,
+        "text": "Да",
+        "left_answer": true,
+        "var_set": [
+          "pgb10",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "dungeon",
+          "ОЗ"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "text": "Вы открыли сундук о нет это ловушка! Потеряно",
+        "var_sub": [
+          "hp",
+          "dungeon"
+        ],
+        "var_no_more": [
+          "pga10",
+          "dungeon"
+        ]
+      },
+      {
+        "var_show": [
+          "dungeon",
+          "монет"
+        ],
+        "var_add": [
+          "money",
+          "dungeon"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "var_more": [
+          "pga10",
+          "dungeon"
+        ],
+        "text": "Вы открыли сундук в нем оказалось"
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 13,
+        "calculate": false,
+        "text": "Хотя вас больше волнует вопрос как снять усталость.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Вы шли по подземелью и увидели автора.\n—Привет. Что не можешь найти выход? Позволь мне помочь.\nАвтор открыл 2 портала.\n—Первый отправит тебя к монстру, а второй обратно в город. ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "1 Бесплатный портал",
+        "left_answer": true
+      },
+      {
+        "id": 2,
+        "var_need": [
+          "money",
+          "dungeon"
+        ],
+        "right_answer": true,
+        "text": "2 Платный портал"
+      },
+      {
+        "id": 14,
+        "text": " Всего за",
+        "var_show": [
+          "dungeon",
+          "золотых."
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 14,
+        "calculate": false,
+        "text": " Знаешь, а с усталостью интереснее играть.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Вы продвигаетесь дальше по подземелью вдруг вы входите в комнату в которой очень странная машина по передаче знаний. Сесть в машину? ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Нет",
+        "right_answer": true,
+        "var_equal": [
+          "pgb10",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "pgb10",
+          0
+        ],
+        "id": 15,
+        "text": "Да",
+        "left_answer": true,
+        "var_set": [
+          "pgb10",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "dungeon",
+          "xp"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "text": "Вы сели в машину и забыли то чему не давно научились в битве.\nПотеряно",
+        "var_sub": [
+          "xp",
+          "dungeon"
+        ],
+        "var_no_more": [
+          "pga10",
+          "dungeon"
+        ]
+      },
+      {
+        "var_show": [
+          "dungeon",
+          "xp"
+        ],
+        "var_add": [
+          "xp",
+          "dungeon"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "var_more": [
+          "pga10",
+          "dungeon"
+        ],
+        "text": "Вы сели в машину и знания потекли к вам рекой.\nПолучено"
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 15,
+        "calculate": false,
+        "text": "Вы так бы и заснули на этом месте, но усталость все не как не накапливается.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Вы идете дальше по подземелью, вам приграждают путь два стража.\n—Плати и проходи. ",
+    "answers": [
+      {
+        "var_show": [
+          "dungeon",
+          "золотых"
+        ],
+        "id": 4,
+        "var_sub": [
+          "money",
+          "dungeon"
+        ],
+        "var_min": [
+          "money",
+          0
+        ],
+        "text": "Заплатить"
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 16,
+        "calculate": false,
+        "text": "И проспись, а то морда такая как будто всю жизнь не спал.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Вы продвигаетесь дальше по подземелью и перед вами попрошайка дать ",
+    "answers": [
+      {
+        "right_answer": true,
+        "var_equal": [
+          "pgb10",
+          0
+        ],
+        "id": 4,
+        "text": "Нет",
+        "var_set": [
+          "xod",
+          1
+        ]
+      },
+      {
+        "var_set": [
+          "pgb10",
+          1
+        ],
+        "text": "Да",
+        "var_equal": [
+          "pgb10",
+          0
+        ],
+        "id": 4,
+        "var_sub": [
+          "money",
+          "dungeon"
+        ],
+        "var_need": [
+          "money",
+          "dungeon"
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 17,
+        "text": "ему",
+        "var_show": [
+          "dungeon",
+          "ед монет? Думаю это может повысить карму."
+        ],
+        "merge": true
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 17,
+        "calculate": false,
+        "text": " Попрошайку явно воротит от вас, вам стоит выспаться.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Вы продвигаетесь дальше по подземелью и перед вами статуя с вытянутой рукой в руке можно заметить прорезь ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Нет",
+        "right_answer": true,
+        "var_equal": [
+          "pgb10",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "pgb10",
+          1
+        ],
+        "var_equal": [
+          "pgb10",
+          0
+        ],
+        "id": 18,
+        "text": "Да",
+        "var_need": [
+          "money",
+          "dungeon"
+        ],
+        "left_answer": true
+      },
+      {
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "var_sub": [
+          "money",
+          "dungeon"
+        ],
+        "text": "Вы засунули свои монеты, но ни чего не произошло.",
+        "var_no_more": [
+          "pga10",
+          "dungeon"
+        ]
+      },
+      {
+        "var_add": [
+          "money",
+          "dungeon"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "var_more": [
+          "pga10",
+          "dungeon"
+        ],
+        "text": "Вы засунули монеты, как вдруг сверху к вам упало их в 2 раза больше."
+      },
+      {
+        "id": 18,
+        "text": "для",
+        "var_show": [
+          "dungeon",
+          "монет. Засунуть в прорезь монеты?"
+        ],
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Вы продвигаетесь дальше по подземелью в дали виднеется свет, что это выход? Идти на свет? ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Нет",
+        "right_answer": true,
+        "var_equal": [
+          "pgb10",
+          0
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Да",
+        "left_answer": true,
+        "var_no_more": [
+          "pga10",
+          "dungeon"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Да",
+        "var_more": [
+          "pga10",
+          "dungeon"
+        ],
+        "left_answer": true
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 19,
+        "calculate": false,
+        "text": "Это сон? Потому что я хочу спать.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Вы двигаетесь дальше... Теперь вы стоите на раскаленном полу каждый миг проведенный здесь вам наносится урон. Куда бежим?\nВаши ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Оз",
+        "var_show": [
+          "hp"
+        ],
+        "merge": true
+      },
+      {
+        "left_answer": true,
+        "id": 20,
+        "text": "Влево",
+        "var_random_from": [
+          "pg20",
+          4,
+          20
+        ],
+        "go_to": [
+          "pg20"
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_random_from": [
+          "pg20a",
+          4,
+          20
+        ],
+        "text": "Вправо",
+        "id": 20,
+        "go_to": [
+          "pg20a"
+        ]
+      },
+      {
+        "var_sub": [
+          "hp",
+          "dungeon"
+        ],
+        "id": 20,
+        "calculate": true,
+        "var_min": [
+          "hp",
+          "dungeon"
+        ],
+        "text": "Отнятие"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Двигаясь по подземелью вы снова натыкаетесь на монстра",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Наткнуться"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Вы продвигаетесь дальше по подземелью вдруг вы входите в комнату в которой вы замечаете выживших. Взять их с собой? ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Нет",
+        "right_answer": true,
+        "var_equal": [
+          "pgb10",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "pgb10",
+          1
+        ],
+        "var_random": [
+          "pg22",
+          2,
+          4
+        ],
+        "id": 22,
+        "text": "Да",
+        "var_equal": [
+          "pgb10",
+          0
+        ],
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "dungeon",
+          "xp"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "text": "Это были иллюзии\nПотеряно",
+        "var_sub": [
+          "xp",
+          "dungeon"
+        ],
+        "var_no_more": [
+          "pga10",
+          "dungeon"
+        ]
+      },
+      {
+        "var_show": [
+          "pg22",
+          "человека"
+        ],
+        "var_add": [
+          "global люди",
+          "pg22"
+        ],
+        "var_equal": [
+          "pgb10",
+          1
+        ],
+        "id": 4,
+        "var_more": [
+          "pga10",
+          "dungeon"
+        ],
+        "text": "Вы спасли  людей\nПолучено"
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 22,
+        "calculate": false,
+        "text": "Или нет, как ты не взял и усталость.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Картинки",
+    "answers": [
+      {
+        "var_random": [
+          "pg23",
+          1,
+          25
+        ],
+        "id": 23,
+        "var_need": [
+          "pg23",
+          25
+        ],
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "comment": true,
+        "id": 4,
+        "text": "Крыса",
+        "lua_text": "function lua_text()\nreturn mname[pg23]\nend",
+        "merge": true
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://cs8.pikabu.ru/post_img/big/2016/04/01/5/1459497462191178115.jpg",
+        "var_equal": [
+          "pg23",
+          1
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://d.radikal.ru/d24/1812/5d/217a481fb9a9.jpg",
+        "var_equal": [
+          "pg23",
+          2
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://b.radikal.ru/b09/1812/19/8d8f2b77983d.jpg",
+        "var_equal": [
+          "pg23",
+          3
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://c.radikal.ru/c39/1812/fb/5e53a4d2bbed.jpg",
+        "var_equal": [
+          "pg23",
+          4
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://a.radikal.ru/a00/1906/28/4789f8553832.jpg",
+        "var_equal": [
+          "pg23",
+          5
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://c.radikal.ru/c20/1906/76/d508ef25c8da.jpg",
+        "var_equal": [
+          "pg23",
+          18
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "http://coolmem.ru/uploads/posts/t/l-6438.jpg",
+        "var_equal": [
+          "pg23",
+          6
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "http://artky6.ru/wp-content/uploads/2018/08/7-6.jpg",
+        "var_equal": [
+          "pg23",
+          7
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.pinimg.com/originals/27/b8/49/27b849d7971236efca10f36348724460.jpg",
+        "var_equal": [
+          "pg23",
+          8
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "http://aksfantasy.narod.ru/data/pictures02/garpia01.jpg",
+        "var_equal": [
+          "pg23",
+          9
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "http://www.diablo1.ru/images/witcher3/monsters/vilohvost.jpg",
+        "var_equal": [
+          "pg23",
+          10
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://pm1.narvii.com/6841/74cda1efc7ea7134dafff10aec6abe24c558b02ev2_hq.jpg",
+        "var_equal": [
+          "pg23",
+          11
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://vignette.wikia.nocookie.net/elderscrolls/images/2/23/Skeleton.png/revision/latest?cb=20131009133839<amp>path-prefix=ru",
+        "var_equal": [
+          "pg23",
+          12
+        ]
+      },
+      {
+        "id": 23,
+        "text": "введите команды для картинки",
+        "url": "http://i069.radikal.ru/1708/dc/63ed654479b7.jpg",
+        "var_equal": [
+          "pg23",
+          13
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://cs8.pikabu.ru/post_img/big/2016/10/25/4/1477372361288285480.png",
+        "var_equal": [
+          "pg23",
+          14
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "http://paranormal-news.ru/_nw/150/84021730.jpg",
+        "var_equal": [
+          "pg23",
+          15
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ytimg.com/vi/VAndmblhArU/maxresdefault.jpg",
+        "var_equal": [
+          "pg23",
+          16
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.pinimg.com/originals/25/d1/9a/25d19a121de1274c360e5ab94d593530.jpg",
+        "var_equal": [
+          "pg23",
+          17
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "http://s58.radikal.ru/i161/0811/2a/6c809e5896c3.jpg",
+        "var_equal": [
+          "pg23",
+          19
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://cs5.pikabu.ru/post_img/2015/10/09/3/1444362286_908235361.jpg",
+        "var_equal": [
+          "pg23",
+          20
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.pinimg.com/originals/b7/6c/ea/b76cea4af23e24095e3d6963b30a2aaa.jpg",
+        "var_equal": [
+          "pg23",
+          21
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn.inprnt.com/thumbs/48/f3/48f3ae2fbd2dbbfe46eaf16542625389.jpg?response-cache-control=max-age=2628000",
+        "var_equal": [
+          "pg23",
+          22
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://trashbox.ru/ifiles/1007808_58e234_screen-0/tekstovye-kvesty-3.34-1.jpg",
+        "var_equal": [
+          "pg23",
+          23
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Укажите команды для картинки",
+        "url": "https://vignette.wikia.nocookie.net/dragons-for-life/images/f/f7/Ghostdragon_by_cfowler7-d8lybsv.png/revision/latest?cb=20160507065950",
+        "var_equal": [
+          "pg23",
+          24
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Вы убили босса путь свободен.",
+    "answers": [
+      {
+        "var_add": [
+          "money",
+          25
+        ],
+        "lua_do": "function lua_do()\nif vars.maxdungeon == vars.pg13 then\nvars.maxdungeon=vars.maxdungeon<plus>1\nend\nvars.xp=vars.xp<plus>vars.dungeon*3\nend",
+        "text": "Вернуться в город",
+        "id": 2,
+        "var_set": [
+          "boss",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Вы смогли уничтожить верхушку... власти больше нет. Но то, что сказал Король 100 этажа перед своей смертью, опечалило вас. \n—Ты не понимаешь, мы одни из низов! Вверх по этажам есть поверхность люди произошли из тех мест. Мы пытались подняться, но не смогли, не знаю сколько всего этажей, но я верю, что найдётся тот кто сможет вывести нас из мрака подземелья.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Я должен освободить свой народ!",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Страницы игроков \nВзаимодействие с другими игроками",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "var_str_set": [
+          "pname",
+          "SirVladPro"
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.password = {-1,5,3,1,4}\nvars.num=0\nvars.pg30a=0\nend",
+        "text": "SirVladPro",
+        "id": 27,
+        "var_set": [
+          "mhp1",
+          1000000000000,
+          "matk1",
+          1000000000000,
+          "dungeon",
+          1000000000000,
+          "mvamp1",
+          1000000000000,
+          "admin",
+          1
+        ]
+      },
+      {
+        "var_str_set": [
+          "pname",
+          "Андрей Маурин"
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.password = {4,8,4,2,6}\nvars.num=0\nvars.pg30a=0\nend",
+        "text": "Андрей Маурин",
+        "id": 27,
+        "var_set": [
+          "mhp1",
+          100000000,
+          "matk1",
+          100000000,
+          "dungeon",
+          10000000,
+          "mvamp1",
+          100000000
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "admin",
+          0
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Вы считаете, что достойны попасть в топ? Или хотите просто попасть сюда? Обращайтесь к этому человеку.",
+        "url": "https://vk.com/sirvladpro"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Информация\n",
+    "answers": [
+      {
+        "var_show": [
+          "pname"
+        ],
+        "var_equal": [
+          "admin",
+          1
+        ],
+        "id": 27,
+        "text": "\nАдминистратор",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "pname"
+        ],
+        "var_equal": [
+          "admin",
+          0
+        ],
+        "id": 27,
+        "text": "\nИгрок",
+        "merge": true
+      },
+      {
+        "id": 27,
+        "text": "\n-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-<plus>-",
+        "merge": true
+      },
+      {
+        "id": 27,
+        "text": "\nОЗ\n",
+        "var_show": [
+          "mhp1"
+        ],
+        "merge": true
+      },
+      {
+        "id": 27,
+        "text": "\nАтк\n",
+        "var_show": [
+          "matk1"
+        ],
+        "merge": true
+      },
+      {
+        "id": 27,
+        "text": "\nВампиризм\n",
+        "var_show": [
+          "mvamp1"
+        ],
+        "merge": true
+      },
+      {
+        "id": 27,
+        "text": "\nЛовкость\n",
+        "var_show": [
+          "dungeon"
+        ],
+        "merge": true
+      },
+      {
+        "id": 26,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "id": 28,
+        "text": "Дуэль",
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "mhpmax",
+          "mhp1"
+        ]
+      },
+      {
+        "id": 30,
+        "text": "Загрузка профиля",
+        "instant": true,
+        "var_equal": [
+          "global hard",
+          0
+        ]
+      },
+      {
+        "id": 30,
+        "text": "Загрузка профиля",
+        "instant": true,
+        "var_equal": [
+          "global hard",
+          1,
+          "admin",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "admin",
+          1
+        ],
+        "comment": true,
+        "var_equal": [
+          "global hard",
+          1
+        ],
+        "id": 27,
+        "text": "Загрузка профиля"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Дуэль\n",
+    "answers": [
+      {
+        "var_show": [
+          "pname"
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "Противник",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "mhp1"
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "\nОз",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "matk1"
+        ],
+        "comment": true,
+        "id": 28,
+        "text": "\nАтк",
+        "merge": true
+      },
+      {
+        "id": 28,
+        "var_show": [
+          "hp"
+        ],
+        "comment": true,
+        "text": "Ваши ОЗ"
+      },
+      {
+        "id": 28,
+        "var_show": [
+          "atk"
+        ],
+        "comment": true,
+        "text": "Ваша атака"
+      },
+      {
+        "var_add": [
+          "hp",
+          "vamp"
+        ],
+        "var_random": [
+          "xod",
+          1,
+          "dex"
+        ],
+        "id": 28,
+        "text": "Атаковать",
+        "var_min": [
+          "mhp1",
+          0
+        ],
+        "left_answer": true,
+        "var_max": [
+          "hp",
+          "hpmax"
+        ],
+        "var_not": [
+          "hp",
+          0,
+          "mhp1",
+          0,
+          "голод",
+          100
+        ],
+        "instant": true,
+        "var_sub": [
+          "mhp1",
+          "atk"
+        ],
+        "var_more": [
+          "xod",
+          "dungeon"
+        ]
+      },
+      {
+        "var_add": [
+          "mhp1",
+          "mvamp"
+        ],
+        "var_random": [
+          "xod",
+          1,
+          "dex"
+        ],
+        "id": 28,
+        "var_sub": [
+          "hp",
+          "matk1"
+        ],
+        "var_min": [
+          "hp",
+          0
+        ],
+        "var_no_more": [
+          "xod",
+          "dungeon"
+        ],
+        "var_max": [
+          "mhp1",
+          "mhpmax"
+        ],
+        "var_not": [
+          "hp",
+          0,
+          "mhp1",
+          0
+        ],
+        "text": "Получить урон",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "xp",
+          "dungeon",
+          "money",
+          1
+        ],
+        "var_random": [
+          "xod",
+          1,
+          "dex"
+        ],
+        "lua_do": "function lua_do()\nvars.mhp1=25*vars.dungeon\nvars.matk1=vars.matk1<plus>vars.dungeon\nend",
+        "instant": true,
+        "var_max": [
+          "голод",
+          100
+        ],
+        "var_equal": [
+          "mhp1",
+          0
+        ],
+        "var_random_from": [
+          "pg10",
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "id": 26,
+        "var_sub": [
+          "голод",
+          -1
+        ],
+        "text": "Победа"
+      },
+      {
+        "instant": true,
+        "text": "Поражение",
+        "var_equal": [
+          "hp",
+          0
+        ],
+        "id": 26,
+        "var_sub": [
+          "xp",
+          "dungeon"
+        ],
+        "var_min": [
+          "xp",
+          0,
+          "money",
+          0
+        ],
+        "var_set": [
+          "hp",
+          "hpmax",
+          "money",
+          0,
+          "boss",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "mhp1",
+          0,
+          "pg2z",
+          6
+        ],
+        "right_answer": true,
+        "id": 26,
+        "instant": true,
+        "text": "Сдаться",
+        "var_set": [
+          "boss",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "global pg1h",
+          0
+        ],
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "голод",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Добро пожаловать в банк\nПоложите сюда деньги или опыт и ваши сбережения будут здесь храниться хоть до следующей жизни.\n\nДоговор\nПоложите сюда все свои деньги или опыт, что бы перенести его в следующую игру, во избежания котаклизмов мы вынуждены отдавать вам ваши накопления только в легком режиме, но положить сюда вы можете так же и на хардкоре.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "instant": true,
+        "merge": false
+      },
+      {
+        "var_show": [
+          "money"
+        ],
+        "comment": true,
+        "id": 29,
+        "text": "Монеты",
+        "left_answer": true,
+        "merge": false
+      },
+      {
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "id": 29,
+        "text": "Опыт",
+        "right_answer": true,
+        "merge": false
+      },
+      {
+        "var_show": [
+          "global pg29b"
+        ],
+        "comment": true,
+        "id": 29,
+        "text": "Монеты в банке",
+        "left_answer": true,
+        "merge": false
+      },
+      {
+        "var_show": [
+          "global pg29a"
+        ],
+        "comment": true,
+        "id": 29,
+        "text": "Опыт в банке",
+        "right_answer": true,
+        "merge": false
+      },
+      {
+        "left_answer": true,
+        "var_add": [
+          "global pg29b",
+          "money"
+        ],
+        "merge": false,
+        "id": 29,
+        "text": "Положить монеты",
+        "instant": true,
+        "var_set": [
+          "pg29b1",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "global pg29a",
+          "xp"
+        ],
+        "merge": false,
+        "id": 29,
+        "instant": true,
+        "text": "Положить опыт",
+        "var_set": [
+          "pg29b1",
+          2
+        ]
+      },
+      {
+        "merge": false,
+        "var_equal": [
+          "pg29b1",
+          1
+        ],
+        "id": 29,
+        "text": "Положить монеты",
+        "calculate": true,
+        "var_set": [
+          "money",
+          0,
+          "pg29b1",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "xp",
+          0,
+          "pg29b1",
+          0
+        ],
+        "var_equal": [
+          "pg29b1",
+          2
+        ],
+        "id": 29,
+        "text": "Положить монеты",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "left_answer": true,
+        "merge": false,
+        "var_add": [
+          "money",
+          "global pg29b"
+        ],
+        "var_equal": [
+          "global hard",
+          0
+        ],
+        "id": 29,
+        "text": "Снять монеты",
+        "instant": true,
+        "var_set": [
+          "pg29b1",
+          3
+        ]
+      },
+      {
+        "var_set": [
+          "pg29b1",
+          4
+        ],
+        "right_answer": true,
+        "var_add": [
+          "xp",
+          "global pg29a"
+        ],
+        "var_equal": [
+          "global hard",
+          0
+        ],
+        "id": 29,
+        "instant": true,
+        "text": "Снять опыт",
+        "merge": false
+      },
+      {
+        "merge": false,
+        "var_equal": [
+          "pg29b1",
+          3
+        ],
+        "id": 29,
+        "text": "Снять монеты",
+        "calculate": true,
+        "var_set": [
+          "global pg29b",
+          0,
+          "pg29b1",
+          0
+        ]
+      },
+      {
+        "var_set": [
+          "global pg29a",
+          0,
+          "pg29b1",
+          0
+        ],
+        "var_equal": [
+          "pg29b1",
+          4
+        ],
+        "id": 29,
+        "text": "Снять опыт",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "id": 34,
+        "text": "Конвертация валюты в другие квесты",
+        "need": [
+          -29
+        ],
+        "var_equal": [
+          "global hard",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Пароль",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Выход",
+        "instant": true
+      },
+      {
+        "var_equal": [
+          "pg30a",
+          5
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Загрузка",
+        "lua_do": "function lua_do()\nvars.hpmax=vars.mhpmax\nvars.atk=vars.matk1\nvars.dex=vars.dungeon\nvars.vamp=vars.mvamp1\nend"
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "left_answer": true,
+        "text": "1",
+        "id": 30,
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "var_set": [
+          "pg30",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "right_answer": true,
+        "text": "2",
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "instant": true,
+        "id": 30,
+        "var_set": [
+          "pg30",
+          2
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "left_answer": true,
+        "text": "3",
+        "id": 30,
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "var_set": [
+          "pg30",
+          3
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "right_answer": true,
+        "text": "4",
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "instant": true,
+        "id": 30,
+        "var_set": [
+          "pg30",
+          4
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "left_answer": true,
+        "text": "5",
+        "id": 30,
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "var_set": [
+          "pg30",
+          5
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "right_answer": true,
+        "text": "6",
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "instant": true,
+        "id": 30,
+        "var_set": [
+          "pg30",
+          6
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "left_answer": true,
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "text": "7",
+        "id": 30,
+        "var_set": [
+          "pg30",
+          7
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "right_answer": true,
+        "text": "8",
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "instant": true,
+        "id": 30,
+        "var_set": [
+          "pg30",
+          8
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "left_answer": true,
+        "instant": true,
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "text": "9",
+        "id": 30,
+        "var_set": [
+          "pg30",
+          9
+        ]
+      },
+      {
+        "var_not": [
+          "num",
+          5
+        ],
+        "right_answer": true,
+        "text": "0",
+        "lua_do": "function lua_do()\nvars.num=vars.num<plus>1\nif vars.password[vars.num] == vars.pg30 then\nvars.pg30a=vars.pg30a<plus>1\nend\nend",
+        "instant": true,
+        "id": 30,
+        "var_set": [
+          "pg30",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Приветствую, я местный стражник этого города. Моя цель охранять местных жителей от существ живущих в подземелье. Но в последнее время они совсем обнаглели, убей для меня этих тварей я дам 50 монет за каждый выполненный тобой квест. ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "id": 31,
+        "text": "Сейчас мне нужно чтобы ты убил",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn mname[pg31[1]] .. \" \" .. pg31a[pg31[1]]\nend",
+        "id": 31,
+        "instant": true,
+        "lua_do": "function lua_do()\nif pg31a[pg31[1]]==0 then\nmoney=money<plus>50\npg31a[pg31[1]]=math.random(15,30)\npg31[1]=math.random(1,24)\npg31a[pg31[1]]=math.random(15,30)\nend\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn mname[pg31[2]] .. \" \" .. pg31a[pg31[2]]\nend",
+        "id": 31,
+        "instant": true,
+        "lua_do": "function lua_do()\nif pg31a[pg31[2]]==0 then\nmoney=money<plus>50\npg31a[pg31[2]]=math.random(15,30)\npg31[1]=math.random(1,24)\npg31a[pg31[2]]=math.random(15,30)\nend\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn mname[pg31[3]] .. \" \" .. pg31a[pg31[3]]\nend",
+        "id": 31,
+        "instant": true,
+        "lua_do": "function lua_do()\nif pg31a[pg31[3]]==0 then\nmoney=money<plus>50\npg31a[pg31[3]]=math.random(15,30)\npg31[3]=math.random(1,24)\npg31a[pg31[3]]=math.random(15,30)\nend\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Вы двигаетесь по подземелью",
+    "answers": [
+      {
+        "id": 32,
+        "text": "stretch",
+        "url": "https://sun9-99.userapi.com/c854420/v854420484/f0a25/ytWBEJcVis4.jpg"
+      },
+      {
+        "id": 32,
+        "text": "stretch",
+        "lua_if": "function lua_if()\nif pg32[visor]==1 and pg32a==1 then\nreturn true\nend\nend",
+        "url": "https://sun9-40.userapi.com/c850536/v850536045/1b4daa/tPK5GAJvhoQ.jpg"
+      },
+      {
+        "id": 32,
+        "text": "stretch",
+        "lua_if": "function lua_if()\nif pg32[visor]==1 and pg32a==0 then\nreturn true\nend\nend",
+        "url": "https://sun9-64.userapi.com/c852020/v852020484/1cfff0/A1Kma28-79I.jpg"
+      },
+      {
+        "bg_color": [
+          0,
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nif visor==4 then\nreturn true\nend\nend",
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "middle_answer": true,
+        "text": "Выйти из подземелья",
+        "id": 1
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          ""
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif pg32[visor]==1 and visor~=4 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nfor i=1, 3 do\npg32[i]=0\nend\ni=math.random(1,3)\npg32[i]=1\nvisor=2\nif pg32a==1 then\npg32a=0\nelse\npg32a=1\nend\ni=math.random(1,3)\nif pg32[i]==0 then\npg32[i]=3\nend\npg32b[1]=math.random(1,100)\nend",
+        "middle_answer": true,
+        "instant": true,
+        "id": 32,
+        "text": "Вперёд"
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "comment": true,
+        "lua_if": "function lua_if()\nif pg32[visor]~=1 and visor~=4 then\nreturn true\nend\nend",
+        "id": 32,
+        "text": "Вперёд",
+        "instant": true,
+        "middle_answer": true
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          ""
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "text": "Влево",
+        "lua_do": "function lua_do()\nvisor=visor-1\nif visor<1 then\nvisor=4\nend\nend",
+        "instant": true,
+        "id": 32,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          ""
+        ],
+        "right_answer": true,
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_do": "function lua_do()\nvisor=visor<plus>1\nif visor>4 then\nvisor=1\nend\nend",
+        "instant": true,
+        "id": 32,
+        "text": "Вправо"
+      },
+      {
+        "id": 32,
+        "text": "stretch",
+        "lua_if": "function lua_if()\nif pg32[visor]==3 then\nreturn true\nend\nend",
+        "url": "https://sun9-35.userapi.com/c850324/v850324825/1e5c38/kpPwGeIcub8.jpg"
+      },
+      {
+        "id": 32,
+        "text": "Секрет 10% шанс",
+        "lua_if": "function lua_if()\nif pg32[visor]==3 and pg32a==0 and pg32b[1]<=10 and pg32b[1]~=0 then\nreturn true\nend\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Я смог ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Вернуться в город"
+      },
+      {
+        "id": 33,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"пройти \" .. maxdungeon-1 .. \" этажей это было сложно, стражник \" .. maxdungeon-1 ..\" этажа оказался сильным противником. Я не представляю, что ждёт меня в дальнейшем. Но у меня появился город, а еще меня прозвали героем. Теперь я должен заботиться о людях, они верят в меня!\"\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Да, мы можем обменять монеты на валюту другого квеста. Помните, что в каждом квесте валюта имеет свою цену.",
+    "answers": [
+      {
+        "id": 29,
+        "text": "Назад"
+      },
+      {
+        "var_show": [
+          "money"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "text": "Ваши монеты",
+        "id": 34
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 36,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 38,
+    "text": "",
+    "answers": []
+  }
+]

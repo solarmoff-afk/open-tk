@@ -1,0 +1,625 @@
+[
+  {
+    "id": 1,
+    "text": "Genre: manual<s>r\nAuthors: elChem (Artem Strelnikov)<s>r, AntiHero (Dmitry Stoikov)\n<s>r\nThis manual will teach you how to use simple operators and make a structure of your story more complicated.\n\n   *   *   *\n\nDear authors! Please, adress your questions to our VK or Discord, links are below.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "[Start reading]"
+      },
+      {
+        "id": 1,
+        "text": "Discord",
+        "comment": false,
+        "url": "https://discord.com/invite/8DaZ3YHKk8"
+      },
+      {
+        "id": 1,
+        "text": "VK",
+        "comment": false,
+        "url": "https://vk.com/text_quest_shaba"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "   Trying to tell your story you may use different constructions providing the reader an opportunity to feel that all decisions are made by himself and his choice really defines the events course. But we know actually this fact not to be the truth: it is the author who make a storyline and here are some basic instruments which will facilitate this difficult task.\n   You may see the basic concepts and the description of all operators bellow.\n",
+    "answers": [
+      {
+        "id": 3,
+        "text": "[ Basic concepts ]"
+      },
+      {
+        "id": 6,
+        "text": "[ Operator !X ]"
+      },
+      {
+        "id": 5,
+        "text": "[ Operator ?X ]"
+      },
+      {
+        "id": 7,
+        "text": "[ Operator ?-X ]"
+      },
+      {
+        "id": 16,
+        "text": "[ Complex conditions ]"
+      },
+      {
+        "id": 8,
+        "text": "[ Operator ?? ]"
+      },
+      {
+        "id": 9,
+        "text": "[ Operator #X ]"
+      },
+      {
+        "id": 10,
+        "text": "[ Operator !!X ]"
+      },
+      {
+        "id": 11,
+        "text": "[ Operator ?or[X,Y] ]"
+      },
+      {
+        "id": 14,
+        "text": "[ Operator ?*[X,Y] ]"
+      },
+      {
+        "id": 12,
+        "text": "[ Operators \"inactive\" and \"merge\" ]"
+      },
+      {
+        "id": 13,
+        "text": "[ Operators of copying ]"
+      },
+      {
+        "id": 15,
+        "text": "[ Operators of displacement ]"
+      },
+      {
+        "id": 24,
+        "text": "[ Operator \"instant\" ]"
+      },
+      {
+        "id": 26,
+        "text": "[ Operator !quest xxxxx ]"
+      },
+      {
+        "id": 25,
+        "text": "[ Operator for cooperative quest ]",
+        "need": 1000
+      },
+      {
+        "id": 17,
+        "text": "[ Test ]"
+      },
+      {
+        "id": 1,
+        "text": "[ To the first page ]"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "   All quests consist of pages. Each page in its turn has a text part and a set of answers.\n   Text is the main content of a page, it describes the situarion as it usually does in the books. The main problem here is not to overload the page with a huge blocks of useless information and allow the reader to catch a main points.\n   The second part is answers. They represent the possible reaction of the reader on the events in the text or just serve to connect the parts of a text in a linear manner. It is the answer part which allow to transform a usual story into an interactive book, so there are a lot of interesting opportunities here. Instruments providing such possibilities are called here operators.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "What is operator?"
+      },
+      {
+        "id": 3,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   Operator is a command which changes some properties of an answer, but it can not affect the text of the page. Both the simpliest operators and advanced ones follow several common rules which will be discussed further.<s>r\n   To set up an operator on the answer you should tap the icon near it which will open a window where you can edit the text of the answer visible for a reader. Having cleared content of this window you may enter an operator you need and press the icon for saving.<s>r",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "forget": 4,
+        "text": "[Back]",
+        "isBack": true,
+        "id": 4
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   Operator ?X make the answer availible for the reader only if he had visited the page №X. To set up this operator you should enter in the answer field:\n   ?X\nwhere X is the number of the needed page.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "   The first operator you should know about is \"!X\". This operator makes the answer lead to the page number X, so you can direct the reader according his choice. New answer automatically leads to the next clear page, but you can easily change it anytime.\n   To set up this operator you should enter in the answer field:\n   !X\nwhere X is the number of the needed page.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "[Back]"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "   Operator ?-X make the answer availible for the reader only if he had NOT visited the page №X. To set up this operator you should enter in the answer field:\n   ?-X\nwhere X is the number of the needed page.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "[Back]",
+        "backstepCount": 1,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "   Information about visited pages is stored in a so called local memory. This means that it will be lost afrer the reader come back to the first page and no usual condition may be fulfilled then.\n   Operator ?? considers a global memory, which stores the information about all pages read during all atremts. So, this construction may be used for achievements or other things, requiring the information from a global memory. Work with a global memory is available for the most of condition operstors, except the variables.\n   To switch operator into a global memory mode enter:\n ??\nin the answer field and do the same to disable it.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "   Operator #X deletes the information that the page №X has been visited by the reader from a local memory. It should be noted, that if this page has been visited more than once the operator #X must be used several times to clear the information about ALL times it has been visited.\n   To set up this operator enter\n  #[X,Y, ... , Z]\nin the answer field, where X, Y, Z are the page numbers.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "   Operator !!X direct the reader back to page he has visited before wherever he came from, where X defines the number of steps. Operator !! will lead us to the previous page, !!2 – to the page before previous and so on.\n   To set up this operator enter:\n  !!X\nin the answer field, where X is the number of steps.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "   Operator ?or[X,Y] makes the answer available for the reader if at least one of the mentioned pages has been visited. It may also contain negative conditions, for example, ?or[2,-3] means that the answer will be available either if the page 2 has been visited or if page 3 has NOT been visited. As soon as no condition is fulfilled, the answer becomes unavailable.\n   To set up this ooerator enter:\n  ?or[X,Y]\nin the answerfield, where X and Y are the numbers of pages.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "   Operators \"inactive\" and \"merge\" allow to modify the visual appearance of the answer.\n   The former one makes the answer inactive, but still saves its form and location.\n   The latter unites the text of the answer with the text of the page.\n   To set up this operators enter:\n  inactive\nor\n  merge\nin the answer field.\n",
+    "answers": [
+      {
+        "id": 12,
+        "text": "\n  *  *  *\nAn example of \"merged\" answer.",
+        "merge": true,
+        "var_equal": [
+          "a",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "a",
+          0
+        ],
+        "id": 12,
+        "text": "[Enable an axample of \"merged\" answer]",
+        "merge": false,
+        "var_set": [
+          "a",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "a",
+          1
+        ],
+        "id": 12,
+        "text": "[Disable an axample of \"merged\" answer]",
+        "merge": false,
+        "var_set": [
+          "a",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      },
+      {
+        "id": 12,
+        "text": "  *  *  *\nAn example of inactive answer.",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "   There is an instrument for copying of pages or answers from one page to enother.\n   Enter the following in the answer field on that page, where do you want to paste:\n\n   copy all X\nto copy the text of the page №X with all answers to the current page;\n\n  copy text X\nto copy only the text of the page №X to the current page;\n\n  copy answers X\nto copy only the answers from the page №X to the current page.\n \n  It should be noted, that copying of the page to itself is forbidden and may lead to a critical error.",
+    "answers": [
+      {
+        "id": 13,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "   Operator ?*[X,Y] makes the answer available for the reader if the page №X has been visited Y times during the same attemp.\n   To set up this operator enter:\n  ?*[X,Y]\nin the answer field, where X is the number of page, Y is the number of visits required.",
+    "answers": [
+      {
+        "id": 14,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   To change answers positions you may use operators \"up\" and \"down\". The former will place an answer to the top of the answers list and the latter – to the bottom, you should just enter:\n  up\nor\n  down\nin the field of corresponding answer.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "   Operators of condition may concern several pages. To make a complex condition you should write all pages required in square brackets.\n   For example, operator ?[X,Y] will make answer available for the reader only if both pages X and Y had been visited.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "[Back]",
+        "backstepCount": 1,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "   Here you can test yourself to make sure that everything in gained knowledge is clear for you.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "[ Start test ]"
+      },
+      {
+        "id": 17,
+        "text": "[ Back ]",
+        "backstepCount": 1,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "   Question 1.\n\n   Which operator make answer available only if the reader has visited the page №X?",
+    "answers": [
+      {
+        "id": 19,
+        "text": "\"!X\""
+      },
+      {
+        "id": 19,
+        "text": "\"#X\""
+      },
+      {
+        "id": 19,
+        "text": "\"?X\"",
+        "var_set": [
+          "cor",
+          1
+        ]
+      },
+      {
+        "id": 19,
+        "text": "\"?-X\""
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "   Question 2.\n\n   Which operator directs the reader to the definite page?",
+    "answers": [
+      {
+        "id": 20,
+        "text": "\"!!X\""
+      },
+      {
+        "id": 20,
+        "text": "\"!!\""
+      },
+      {
+        "id": 20,
+        "text": "\"!X\"",
+        "var_add": [
+          "cor",
+          1
+        ]
+      },
+      {
+        "id": 20,
+        "text": "\"#X\""
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "   Question 3.\n\n   Which operator allows to \"forget\" about the visit of page №X?",
+    "answers": [
+      {
+        "id": 21,
+        "text": "\"#X\"",
+        "var_add": [
+          "cor",
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "\"?-X\""
+      },
+      {
+        "id": 21,
+        "text": "\"!!X\""
+      },
+      {
+        "id": 21,
+        "text": "\"??X\""
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "   Question 4.\n\n   Which operator allows to direct the reader to the previous page?",
+    "answers": [
+      {
+        "id": 22,
+        "text": "\"!1\""
+      },
+      {
+        "id": 22,
+        "text": "\"!!\"",
+        "var_add": [
+          "cor",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "\"!!1”",
+        "var_add": [
+          "cor",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "\"#1\""
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "   Question 5.\n\n   What is the correct entry for the complex condition: \"answes is available only if both pages №2 and №3 have not been visited\"?",
+    "answers": [
+      {
+        "id": 23,
+        "text": "\"?-[2,3]\""
+      },
+      {
+        "id": 23,
+        "text": "\"-?[2,3]\""
+      },
+      {
+        "id": 23,
+        "text": "\"?[-2,3]\""
+      },
+      {
+        "id": 23,
+        "text": "\"?[-2,-3]\"",
+        "var_add": [
+          "cor",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "   It was the last question of the test. Here you can see your results:\n",
+    "answers": [
+      {
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 23,
+        "var_sub": [
+          "mis",
+          "cor"
+        ],
+        "var_min": [
+          "mis",
+          0
+        ],
+        "var_set": [
+          "mis",
+          5
+        ]
+      },
+      {
+        "id": 23,
+        "text": "\n• You've given",
+        "var_show": [
+          "cor",
+          "correct answers"
+        ],
+        "merge": true
+      },
+      {
+        "id": 23,
+        "text": " and made 1 mistake.",
+        "merge": true,
+        "var_equal": [
+          "mis",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "mis",
+          "mistakes."
+        ],
+        "id": 23,
+        "text": " and made",
+        "var_not": [
+          "mis",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "id": 23,
+        "text": "\n\n   Congratulations! Now you may start to create your masterpiece. But don't hesitate to look through this manual in case if you forget something.",
+        "var_equal": [
+          "cor",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "id": 23,
+        "text": "\n\n   You've made some mistakes, it will be usefull for you to look through this manual one more time and try to pass this test again.",
+        "var_not": [
+          "cor",
+          5,
+          "mis",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "id": 23,
+        "text": "\n\n   You are so unlucky to fail the test without any correct answer. You should look through this manual one more time untill everything becomes clear and try to pass this test again.",
+        "var_equal": [
+          "mis",
+          5
+        ],
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "[Back to the first page]"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "   Placed on the answer operator \"instant\" provides the instant transition to the next page without any effects of animation. To set up this operator enter in the answer field:\n  instant\nand save the result.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Example of usual animation"
+      },
+      {
+        "id": 24,
+        "text": "Example of instant page change",
+        "instant": true
+      },
+      {
+        "id": 2,
+        "text": "[Back]"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "coop",
+    "answers": [
+      {
+        "id": 2,
+        "text": "[Back]"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "   Operator !quest xxxxx allows to lead the reader to the first page of another book. To set it up enter in the answer field:\n   !quest xxxxx\nwhere xxxxx is the number of the target quest.\n   It should be noted that back transition to the starting quest can not be performed automatically.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[To another quest]",
+        "targetbookid": 72039
+      },
+      {
+        "id": 2,
+        "text": "[Back]"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 29,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 30,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 31,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": []
+  }
+]

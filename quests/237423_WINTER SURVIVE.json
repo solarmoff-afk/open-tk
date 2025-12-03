@@ -1,0 +1,617 @@
+[
+  {
+    "id": 1,
+    "text": "Вы должны подготовиться к зиме.При этом на подготовку дается определенное колличество действий после этого начнется выживание.\nДоступно уровней:\nНовичок ●\nИгрок ○\nНормально ○\nМастер ○\nЭксперт ○\nДемон ○",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Выбор"
+      },
+      {
+        "id": 1,
+        "text": "Статистика",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 1,
+        "text": "Выживаний:",
+        "comment": true,
+        "var_show": [
+          "win"
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Поражений:",
+        "comment": true,
+        "var_show": [
+          "defat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Выбор",
+    "answers": [
+      {
+        "id": 2,
+        "text": "30 дней\n10 топлива\n10 еды\n0 лекарств\n4 событий\n5 здоровья\nНОВИЧОК",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 3,
+        "text": "Новичок",
+        "var_add": [
+          "1day",
+          30,
+          "1fuel",
+          10,
+          "1food",
+          10
+        ]
+      },
+      {
+        "id": 2,
+        "text": "25 дней\n5 топлива\n10 еды\n2 лекарств\n4 событий\n5 здоровья\nИГРОК",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 8,
+        "text": "Игрок",
+        "var_add": [
+          "2day",
+          25,
+          "2fuel",
+          5,
+          "2food",
+          10,
+          "2help",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Дом",
+    "answers": [
+      {
+        "var_show": [
+          "1day"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "text": "Ходов:",
+        "id": 3
+      },
+      {
+        "var_show": [
+          "1food"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "text": "Пропитание:",
+        "id": 3
+      },
+      {
+        "var_show": [
+          "1fuel"
+        ],
+        "comment": true,
+        "id": 3,
+        "text": "Топливо:",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 3,
+        "text": "Лекарства:",
+        "var_show": [
+          "1help"
+        ]
+      },
+      {
+        "var_add": [
+          "1sfood",
+          2
+        ],
+        "id": 3,
+        "var_need": [
+          "1day",
+          1
+        ],
+        "var_sub": [
+          "1day",
+          1
+        ],
+        "text": "Идти на охоту\n-1 ход\n<plus>2 сырое мясо"
+      },
+      {
+        "var_add": [
+          "1shelp",
+          5
+        ],
+        "id": 3,
+        "var_need": [
+          "1day",
+          1
+        ],
+        "text": "Запасаться травами\n-1 ход\n<plus>5 трав",
+        "var_sub": [
+          "1day",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "1sfuel",
+          1
+        ],
+        "id": 3,
+        "var_need": [
+          "1day",
+          2
+        ],
+        "text": "Таскать бревна\n-2 хода\n<plus>1 бревно",
+        "var_sub": [
+          "1day",
+          2
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Действия",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_add": [
+          "1food",
+          2
+        ],
+        "id": 3,
+        "var_need": [
+          "1day",
+          1,
+          "1sfood",
+          2
+        ],
+        "var_sub": [
+          "1day",
+          1,
+          "1sfood",
+          2
+        ],
+        "text": "Готовить мясо\n-1 ход\n<plus>2 пропитание"
+      },
+      {
+        "var_add": [
+          "1help",
+          1
+        ],
+        "id": 3,
+        "var_need": [
+          "1day",
+          1,
+          "1shelp",
+          5
+        ],
+        "text": "Варить лекарство\n-1 ход\n<plus>1 лекарство",
+        "var_sub": [
+          "1day",
+          1,
+          "1shelp",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "1fuel",
+          5
+        ],
+        "id": 3,
+        "var_need": [
+          "1day",
+          1,
+          "1sfuel",
+          1
+        ],
+        "text": "Колоть дрова\n-1 ход\n<plus>5 топлива",
+        "var_sub": [
+          "1day",
+          1,
+          "1sfuel",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "НАЧАЛО ЗИМЫ",
+        "var_add": [
+          "1hp",
+          5
+        ],
+        "var_no_more": [
+          "1day",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Дом",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Топливо:",
+        "comment": true,
+        "var_show": [
+          "1fuel"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Пропитание:",
+        "comment": true,
+        "var_show": [
+          "1food"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Лекарства:",
+        "comment": true,
+        "var_show": [
+          "1help"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "HP:",
+        "comment": true,
+        "var_show": [
+          "1hp"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Становится холодно уже -18°C стоит ли топить печь?\n-5 топлива",
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "Да",
+        "var_sub": [
+          "1fuel",
+          5
+        ],
+        "var_need": [
+          "1fuel",
+          5
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Нет",
+        "var_sub": [
+          "1hp",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Дом",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Топливо:",
+        "comment": true,
+        "var_show": [
+          "1fuel"
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Пропитание:",
+        "comment": true,
+        "var_show": [
+          "1food"
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Лекарства:",
+        "comment": true,
+        "var_show": [
+          "1help"
+        ]
+      },
+      {
+        "id": 5,
+        "text": "HP:",
+        "comment": true,
+        "var_show": [
+          "1hp"
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Вы хотите поужинать стоит ли это делать?\n-1 пропитание",
+        "comment": true
+      },
+      {
+        "id": 7,
+        "text": "Да",
+        "var_need": [
+          "1food",
+          1
+        ],
+        "var_sub": [
+          "1food",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Нет",
+        "var_sub": [
+          "1hp",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "ВЕСНА",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Результат",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_add": [
+          "win",
+          1
+        ],
+        "id": 1,
+        "var_need": [
+          "1hp",
+          1
+        ],
+        "text": "ВЫ ВЫЖИЛИ",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "defat",
+          1
+        ],
+        "id": 1,
+        "text": "ВЫ ПОГИБЛИ",
+        "var_no_more": [
+          "1hp",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Дом",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Топливо:",
+        "comment": true,
+        "var_show": [
+          "1fuel"
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Пропитание:",
+        "comment": true,
+        "var_show": [
+          "1food"
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Лекарство:",
+        "comment": true,
+        "var_show": [
+          "1help"
+        ]
+      },
+      {
+        "id": 7,
+        "text": "HP:",
+        "comment": true,
+        "var_show": [
+          "1hp"
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Вы вышли из дома чтобы достать топор из сарая как вдруг увидели толпу зомби.Они сбежались на вас.Благодаря топору вы отбились но вас ранили.Лечиться?\n-1 лекарство",
+        "comment": true
+      },
+      {
+        "id": 11,
+        "text": "Да",
+        "var_need": [
+          "1help",
+          1
+        ],
+        "var_sub": [
+          "1help",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Нет",
+        "var_sub": [
+          "1hp",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Дом",
+    "answers": [
+      {
+        "var_show": [
+          "2day"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Ходов:",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "2food"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Пропитание:",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "2fuel"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Топливо:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "2help"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Лекарства:",
+        "right_answer": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 11,
+    "text": "Дом",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Топливо:",
+        "comment": true,
+        "var_show": [
+          "1fuel"
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Пропитание:",
+        "comment": true,
+        "var_show": [
+          "1food"
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Лекарство:",
+        "comment": true,
+        "var_show": [
+          "1help"
+        ]
+      },
+      {
+        "id": 11,
+        "text": "HP:",
+        "comment": true,
+        "var_show": [
+          "1hp"
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Стоит ли позавтракать?\n-1 пропитание",
+        "comment": true
+      },
+      {
+        "id": 6,
+        "text": "Да",
+        "var_sub": [
+          "1food",
+          1
+        ],
+        "var_need": [
+          "1hp",
+          1,
+          "1food",
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "var_need": [
+          "1hp",
+          1
+        ],
+        "var_sub": [
+          "1hp",
+          1
+        ],
+        "text": "Нет"
+      },
+      {
+        "id": 1,
+        "text": "Смерть",
+        "var_no_more": [
+          "1hp",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 14,
+    "text": "",
+    "answers": []
+  }
+]

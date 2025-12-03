@@ -1,0 +1,1031 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Ярослав Зверев.\nЖанры: славянское фэнтези, драма, романтика, хардкор.\n\nСветозар — гениальный чародей, который в свои восемнадцать умеет такое, что неподвластно порой и опытным волшебникам. Однако его сородичи совсем не разбираются в чародействе и смеются над его увлечением.\n\nОни ещё не знают, что скоро мировой порядок рухнет, и в новых условиях всё перевернётся вверх дном.\n\nСможет ли Светозар пройти все испытания судьбы, спасти мир и обрести настоящую любовь?",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Начать",
+        "lua_do": "function lua_do()\nfire = 0\nwater = 0\nair = 0\nearth = 0\nend"
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://images.vfl.ru/ii/1555609200/150e737a/26238270.jpg",
+        "system": true
+      },
+      {
+        "id": 55,
+        "text": "Концовки"
+      },
+      {
+        "id": 1,
+        "text": "Связь с автором",
+        "url": "https://vk.com/id_first1"
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.base_layer_alpha = nil\ng.reloadFunctions = 2\ng.autorun = 2\ng.fullscreen = 0\ng.formatText = 1\nend",
+        "text": "Оформление и функции"
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://images.vfl.ru/ii/1555609200/150e737a/26238270.jpg",
+        "system": true
+      },
+      {
+        "id": 50,
+        "text": "Бой с мини-играми\n(не удалять! Чтобы страница учитывалась в статистике)",
+        "need": [
+          999
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "widget": [
+          "earth",
+          "https://i.ibb.co/pnxMd5w/sketch-1670595161656-copy-199x199.png",
+          ""
+        ],
+        "text": "   "
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "widget": [
+          "air",
+          "https://i.ibb.co/WsVkBmV/sketch-1670595210256-copy-199x199.png",
+          ""
+        ],
+        "text": "   "
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "widget": [
+          "fire",
+          "https://i.ibb.co/4fsdvvv/sketch-1670595136272-copy-199x199.png",
+          ""
+        ],
+        "text": "   "
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "widget": [
+          "water",
+          "https://i.ibb.co/ySG3Tt8/sketch-1670595114763-copy-199x199.png",
+          ""
+        ],
+        "text": "   "
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "widget": [
+          "hp",
+          "https://images.vfl.ru/ii/1604592673/32d40365/32197399.png",
+          ""
+        ],
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "авторан",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "   ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction add(name, count)\nvars[name] = (vars[name] or 0) <plus> (count or 1)\nend\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"<$2><#404040>(На странице \".. #pages[g.current_id].text.. \" символов)\"\nend",
+        "id": 2,
+        "text": "   ",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.isAuthor and false\nend"
+      },
+      {
+        "id": 3,
+        "text": "Виджеты",
+        "run": [
+          3
+        ],
+        "lua_if": "function lua_if()\nreturn g.current_id ~= 39 and g.current_id ~= 50 and g.current_id ~= 40 and g.current_id ~= 55\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Виджеты",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "widget_show": [
+          "water",
+          "water"
+        ],
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "widget_show": [
+          "fire",
+          "fire"
+        ],
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "widget_show": [
+          "earth",
+          "earth"
+        ],
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "widget_show": [
+          "air",
+          "air"
+        ],
+        "calculate": true,
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "На земле красовались круг, звезда и симметричные лучи во все стороны. Светозар уже заканчивал зачарование, как вдруг...\n\n— Чародей, ты на праздник-то пойдёшь? — Ярослав наступил прямо на фигуры. — Идём, там сейчас через костры будут прыгать!\n\nЕсли бы это было не создание голема — трудное зачарование, которое ещё ни разу не удавалось Светозару — может, он и не стал бы злиться на брата.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Ругаться за испорченный ритуал",
+        "lua_do": "function lua_do()\nadd(\"fire\")\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not \"изданное\"\nend",
+        "id": 4,
+        "text": "- Либо ты мне помогаешь восстановить звезду, либо я тебе втащу",
+        "comment": true,
+        "lua_do": "function lua_do()\nearth = 1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn not \"изданное\"\nend",
+        "id": 4,
+        "text": "- Извини, мне надо доделать кое-что",
+        "comment": true,
+        "lua_do": "function lua_do()\nwater = 1\nend"
+      },
+      {
+        "id": 6,
+        "text": "Оставить неразумного",
+        "lua_do": "function lua_do()\nadd(\"air\")\nend"
+      },
+      {
+        "id": 4,
+        "text": "Светозар со злобой взглянул на гостя. Это зачарование было особенно важным. Создать живого голема Светозару ещё ни разу не удавалось, а теперь могло бы получиться.\n\nВот же обыватели, не дадут голема сделать. С ними ничему не научишься.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn not \"изданное\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "— Под ноги смотри! Ты мне зачарование испортил.\n\nЯрослав покачал головой:\n— Зачахнешь ты с этим колдовством. Моложе меня, а уже рисуешь какие-то звёздочки.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "— Иди отсюда, а то заколдую",
+        "lua_do": "function lua_do()\nadd(\"fire\")\nend"
+      },
+      {
+        "id": 6,
+        "text": "— Чародейство — это серьёзно!",
+        "lua_do": "function lua_do()\nadd(\"water\")\nend"
+      },
+      {
+        "id": 6,
+        "text": "Уйти в лес заниматься",
+        "lua_do": "function lua_do()\nadd(\"air\")\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 6,
+        "text": "— Боюсь-боюсь, — улыбнулся Ярослав.\n\n",
+        "lua_if": "function lua_if()\nreturn fire > 1\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "— Это меня и тревожит, — сказал Ярослав.\n\n",
+        "lua_if": "function lua_if()\nreturn water > 0\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Но ",
+        "lua_if": "function lua_if()\nreturn g.previous_id == 4\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Светозар решил не спорить и отправился в лес, где точно никто не помешает.\n\nВот только какое чародейство там практиковать?",
+        "merge": true
+      },
+      {
+        "id": 7,
+        "text": "Попробовать ещё раз то зачарование (голем)",
+        "lua_do": "function lua_do()\nadd(\"earth\")\ngolem = true\nend"
+      },
+      {
+        "id": 7,
+        "text": "Пострелять с помощью чародейства",
+        "lua_do": "function lua_do()\nadd(\"fire\")\nend"
+      },
+      {
+        "id": 7,
+        "text": "Приготовить зелье исцеления",
+        "lua_do": "function lua_do()\nadd(\"water\")\npotionOfHill = true\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Светозар занимался чародейством, как вдруг  услышал какой-то шорох, будто кто-то крадётся.\n\nЗверь или человек? А может быть, упырь? Поговаривали, что на западе их много объявилось: бродят по ночам, людей убивают.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Посветить огоньком"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Огненный шар вырвал из темноты силуэт девушки. Она тут же рванула прочь — видимо, испугавшись колдовства. Однако споткнулась о корягу и упала.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Помочь"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Светозар протянул руку. Девушка неуверенно приняла помощь и поднялась.\n\n— Не бойся, я не враг, — сказал Светозар. — Просто посветить хотел, чтобы было видно, кто идёт.\n\n— Ты своим светочем сейчас весь лес сожжёшь.\n\n— Ой, — Светозар развернулся и принялся брызгать зачарованной водой из рукавов. А девушка неожиданно рассмеялась.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "— Что?"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "— Ничего, — сказала она, с трудом сдерживая смех.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nadd(\"fire\")\nend",
+        "text": "— Опасно смеяться над волшебником",
+        "comment": false,
+        "id": 12
+      },
+      {
+        "lua_do": "function lua_do()\nadd(\"water\")\nend",
+        "text": "— Вот и сородичи в меня не верят ",
+        "comment": false,
+        "id": 11
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Глаза Светозара предательски заслезились.\n\nДевушка подошла к нему ближе и положила руку на плечо:\n\n— Извини, ты просто так смешно брызгал водой... Но несомненно, ты настоящий волшебник, ведь вон какие  штуки вытворяешь.\n\nСветозар улыбнулся:\n\n— Если хочешь, я покажу что-нибудь ещё из чародейства.\n\n— Давай! Но только без поджогов, — она шутливо погрозила пальцем.",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Колдовать"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "— Неужели? И что ты мне сделаешь? — сказала девушка, подходя ближе.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Поцеловать"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Светозар хотел наколдовать что-то красивое, но не успел: лес вдруг озарило ярким светом. Шагах в десяти находился источник света — кажется, какой-то цветок.\n\n— Ого! — воскликнула девушка и побежала к цветку.\n\n— Стой! — Светозар кинулся за ней. — Это не я сделал, оно может быть опасно!",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Рассмотреть цветок поближе"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Одновременно добежав до цветка, Светозар и незнакомка замерли.\n\n— Это же... — изумилась девушка.\n— Цветок папоротника! — воскликнул Светозар.\n— Такой красивый.\n\n\"Не только красивый\", — подумал Светозар. Ведь тот, кто сорвёт Перунов цветок, обретёт невероятные способности.\n\nСтоит только протянуть руку, и Светозар станет самым великим чародеем на свете.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Сорвать цветок"
+      },
+      {
+        "id": 16,
+        "text": "Отдать его девушке"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Цветок папоротника тут же завял, а глаза Светозара засветились. Пробуя свою новую силу, он взмахнул рукой, и пять деревьев повалились.\n\nДовольно захохотав, Светозар обернулся к девушке. Но она смотрела на него испуганно, и, когда он сделал шаг в её сторону, отступила назад.\n\nА из леса тем временем пожаловали гости. Громадные упыри стали окружать Светозара. Позиции за деревьями заняли кикиморы, целясь палками и камнями. Даже поваленные деревья вдруг ожили и поднялись на бой против обладателя Перунова цветка.",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Кольцо огня (против ближних)"
+      },
+      {
+        "id": 18,
+        "text": "Сплетение ветвей (против дальних)"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "— Раз нравится — он твой, — улыбнулся Светозар девушке.\n\n— И ты так просто отдашь цветок папоротника? — удивилась она. — Разве он не нужен для каких-то необычных чар? Ведь говорят, что он даже сокровища позволяет искать!",
+    "answers": [
+      {
+        "id": 22,
+        "text": "— А я уже нашёл своё сокровище"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Часть упырей и восставших деревьев полыхнули огнём, другие отпрыгнули назад.\n\nЗато кикиморы запустили свои снаряды. Град камней и палок полетел на Светозара, но в последний момент он наколдовал щит. А вот девушке пришлось несладко. Она лежала на земле вся в крови, еле живая.\n\nА враги тем временем разобрались с огнём и побежали в атаку.",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Накрывшись щитом, лечить девушку заклинанием",
+        "lua_if": "function lua_if()\nreturn not potionOfHill\nend"
+      },
+      {
+        "id": 20,
+        "text": "Отбиваться от врагов",
+        "lua_if": "function lua_if()\nreturn not potionOfHill\nend"
+      },
+      {
+        "id": 20,
+        "text": "Дать девушке зелье исцеления и отбиваться от врагов",
+        "lua_if": "function lua_if()\nreturn potionOfHill\nend"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Под действием чар ветви деревьев зашевелились, хватая и ударяя кикимор.\n\nСветозар решил, что избавился от них, и стал сражаться с упырями, но не тут-то было: вскоре кикиморы оказались рядом с ним, и их как будто стало больше.",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Воспользовавшись своими новыми силами, Светозар хотел одновременно защищаться от нечисти и лечить девушку. Поначалу всё шло хорошо. Он уже почти закончил лечение, как вдруг щит треснул, и его спину пронзил острый кол. Незавидная смерть для великого чародея...",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Светозар жёг врагов огнём, хватал их корнями, бросал и бил, но врагов было слишком много. Он начинал понимать, что ему не победить...\n\nИспользуя свои новые силы, Светозар мог бы взмыть в воздух и улететь подальше отсюда, но это означало бы бросить девушку здесь, в окружении нечисти.",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Спасти свою жизнь"
+      },
+      {
+        "id": 54,
+        "text": "Остаться с девушкой"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Брови девушки удивлённо поднялись, но она ответила на поцелуй.\n\nКогда они закончили, Светозар сказал:\n\n— Теперь ты поняла, как опасно злить волшебника?\n\n— Поняла, — рассмеялась девушка. — Только где же твоё чародейство?",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Колдовать"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Девушка обняла Светозара:\n\n— А давай оставим цветок здесь? Пусть растёт и всем глаз радует.\n\n— Давай, — согласился Светозар.\n\nПерунов цвет засиял ещё ярче, и Светозар вдруг увидел кикимор и упырей, притаившихся в лесной тьме. Нечисть не напала, а бросилась наутёк, истошно завопив.\n\nА возлюбленные засмеялись и, взявшись за руки, закружились в счастливом беззаботном танце. Расстались они уже под утро, договорившись встретиться следующим вечером.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Вернуться в деревню"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Вернувшись домой, Светозар сразу почувствовал, что произошло что-то небывалое: все сородичи толпились в центре поселения и оживлённо разговаривали.\n\n— Пока ты ходишь где-то, тут война началась, — сказал Ярослав.\n\n— Что?\n\n— Богдан наткнулся в лесу на одинокую избушку, где жил волхв из соседнего рода. Он с горечью рассказал, что у них нынче творится: старейшин уважать перестали, на вече им слова не дают. Мало того, так ещё породнились с иноземцами и даже нашего покровителя, Велеса, называют Чернобогом.\n\n— Богохульники! — крикнул кто-то со злостью.\n\n— Хуже всего, что настоящим славянам, которые там остались, закрывают рот. Мы просто обязаны спасти их из плена неразумных!",
+    "answers": [
+      {
+        "id": 24,
+        "text": "— Ясно"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Светозар прежде всего подумал о том, что не сможет увидеться с той девушкой. Наверное, это было эгоистично, ведь на кону стояли более серьёзные вещи. Однако он ничего не мог с собой поделать.\n\nВскоре из центральной избы вышли совещавшиеся там старейшины. Все с нетерпением замерли, ожидая их слова.\n\n— Обстоятельства требуют от нас решительных и незамедлительных действий. Жители соседнего славянского рода обратились к нам с просьбой о помощи. В связи с этим, с одобрения богов, — старейшина указал рукой на волхва, стоящего в окружении идолов, — и в подтверждение нашей вечной дружбы с соседями, мы приняли решение о начале военного похода.",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Отправиться в путь"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Пока отряд шёл, на небе сгустились тучи. Светозар уже подумал, что придётся идти под дождём или делать привал, как наконец перед глазами появилось вражеское поселение.\n\nЗаметив отряд, местные мужчины схватились за оружие, а женщины и дети спрятались за частоколом. Вдруг по сердцу Светозара будто полоснули ножом: за частоколом стояла и его возлюбленная.\n\nДевушка тоже увидела Светозара, и её прежде обеспокоенное лицо вдруг стало суровым. \"Она никогда этого не простит\", — понял Светозар. В тот миг он был готов провалиться сквозь землю.\n\nА сородичи уже взялись за оружие. Надо было срочно что-то делать.",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Облако тумана"
+      },
+      {
+        "id": 27,
+        "text": "Огненный шар"
+      },
+      {
+        "id": 28,
+        "text": "Земляная стена"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Взмахнув руками, Светозар напустил белый туман, сквозь который мог видеть только он. Это даст несколько секунд на незаметный манёвр.",
+    "answers": [
+      {
+        "id": 29,
+        "text": "Найти возлюбленную и сбежать с ней"
+      },
+      {
+        "id": 30,
+        "text": "Атаковать противников"
+      },
+      {
+        "id": 35,
+        "text": "Атаковать своих",
+        "lua_if": "function lua_if()\nreturn fire >= 3\nend",
+        "comment": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Светозар создал огненный шар и отправил его...",
+    "answers": [
+      {
+        "id": 31,
+        "text": "в противников"
+      },
+      {
+        "id": 32,
+        "text": "в сородичей",
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn fire >= 4\nend"
+      },
+      {
+        "id": 33,
+        "text": "в божественного идола"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Светозар развёл руки в стороны, и из-под земли поднялись корни деревьев. Они сплелись между собой и засыпались землёй, образуя стену между двумя родами.\n\n— Эй, что ты делаешь? — воскликнул кто-то из сородичей.\n— Светозар опять заклинание перепутал, — хихикнул другой.\n\nА Светозар собрался с духом и обратился к сородичам:\n\n— Послушайте, братья! ",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn water < 3\nend",
+        "super_calculate": false,
+        "id": 28,
+        "calculate": false,
+        "text": "Ну, зачем нам эта война? Дел и без неё немало. Может, вернёмся?\n\n— Струсил? — спросил один сородич.\n\n— Нет, просто...\n\n— Убирай давай эту стену, — зашумели сородичи, не дослушав.\n\n— Да с чего вы вообще решили, что они наши враги?! — воскликнул Светозар, перекрикивая всех.\n\n— Что с тобой, Светозар? — вышел вперёд Ярослав. — Успокойся.\n\nСтарейшина же серьёзно посмотрел на чародея:\n\n— Ты будешь оспаривать решение рода и наших богов?",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn water >= 3\nend",
+        "super_calculate": false,
+        "id": 28,
+        "calculate": false,
+        "text": "Неужели вы вот так нападёте на своих соседей, славян, даже не поговорив с ними, основываясь только на чьих-то чужих словах?\n\n— В самом деле, — раздалось в толпе.\n\n— Поговорить было бы неплохо, только послушают ли они нас? — возразил кто-то.\n\n— Может, попробовать хоть... — поддержал третий Светозара.\n\nСтарейшина погладил бороду и сказал:\n\n— Что ж, попробуй с ними поговорить. Подсадите его на стену, мужики.\n",
+        "merge": true
+      },
+      {
+        "id": 41,
+        "text": "— Да, потому что оно ужасно",
+        "lua_if": "function lua_if()\nreturn water < 3\nend"
+      },
+      {
+        "id": 51,
+        "text": "— Нет, конечно",
+        "lua_if": "function lua_if()\nreturn water < 3\nend"
+      },
+      {
+        "id": 42,
+        "text": "Начать переговоры",
+        "lua_if": "function lua_if()\nreturn water >= 3\nend"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Светозар разбежался и прыгнул через частокол. Штанина с треском порвалась, но это его не волновало: Светозар схватил возлюбленную на руки и побежал вперёд что есть мочи.\n\nОн не замечал веса девушки и бежал без оглядки. Светозару казалось, что он уносил на руках своё счастье, оставляя позади все проблемы.\n\nА девушка кричала и пыталась вырваться. Когда они скрылись в лесу, Светозар отпустил её и сказал:",
+    "answers": [
+      {
+        "id": 34,
+        "text": "— Это я, не бойся"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Светозар подбежал к врагам и, размахнувшись, рубанул топором переднего воина. Потом он отпрыгнул назад.\n\nНе успел туман рассеяться полностью, как Светозар услышал женский плач. Сердце ёкнуло: это был голос его возлюбленной. Обхватив голову руками, она с ужасом смотрела на убитого и сквозь рыдания повторяла лишь одно слово: \"Брат\".\n\nНо ничего уже не вернуть, так что оставалось только...",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Броситься в бой",
+        "lua_do": "function lua_do()\nfight = 1\nfield = {}\n for x = 1, 5 do\n     field[x] = {}\n     for y = 1, 7 do\n       field[x][y] = true\n     end\n end\n r = math.random (4)\n if r < 3 then\n     if r == 1 then\n       field[1][4] = false\n       field[5][4] = false\n     else\n       field[3][4] = false\n     end\n end\n r = nil\n player = {hp = 5, x = 1, y = 1}\n enemy = {hp = 5, x = 5, y = 7}\n step = 1\n step_number = 1\n step_text = \"Ваш ход.\"\n g.fullscreen = 1\n dialog ( { \n     header = \"Мини-игра\",\n     text = [[Правила:\n1. Вы обозначены синим, противник красным. \n2. Вы ходите буквой Г, а противник — на одну клетку по диагонали. \n3. Нанесение урона производится так же, как и движение.]],\n     answers = {\n      {text = \"Всё понятно, приступить к игре\", pressListener = function () hideDialog () end},\n      {text = \"Посмотреть инструкцию с примерами\", pressListener = function () showPage {id = 40, transition = \"instant\"} hideDialog () end}\n     }\n } )\nend"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Огненный шар влетел в одного из передних воинов. Мужчина заметался, пытаясь сбросить пламя, но оно ещё сильнее разгорелось от ветра, и, упав на колени, воин издал свой последний вздох.\n\nА Светозар вдруг услышал женский плач. Сердце ёкнуло: это был голос его возлюбленной. Обхватив голову руками, она с ужасом смотрела на убитого и сквозь рыдания повторяла лишь одно слово: \"Брат\".\n\nНо ничего уже не вернуть, так что оставалось только...",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Броситься в бой",
+        "lua_do": "function lua_do()\nfight = 1\nfield = {}\n for x = 1, 5 do\n     field[x] = {}\n     for y = 1, 7 do\n       field[x][y] = true\n     end\n end\n r = math.random (4)\n if r < 3 then\n     if r == 1 then\n       field[1][4] = false\n       field[5][4] = false\n     else\n       field[3][4] = false\n     end\n end\n r = nil\n player = {hp = 5, x = 1, y = 1}\n enemy = {hp = 5, x = 5, y = 7}\n step = 1\n step_number = 1\n step_text = \"Ваш ход.\"\n g.fullscreen = 1\n dialog ( { \n     header = \"Мини-игра\",\n     text = [[Правила:\n1. Вы обозначены синим, противник красным. \n2. Вы ходите буквой Г, а противник — на одну клетку по диагонали. \n3. Нанесение урона производится так же, как и движение.]],\n     answers = {\n      {text = \"Всё понятно, приступить к игре\", pressListener = function () hideDialog () end},\n      {text = \"Посмотреть инструкцию с примерами\", pressListener = function () showPage {id = 40, transition = \"instant\"} hideDialog () end}\n     }\n } )\nend"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Сильная злоба вдруг овладела Светозаром. Сородичи никогда не понимали его, вечно смеялись над его увлечениями, а теперь и вовсе... Почему он должен это терпеть? Почему он должен сражаться против своей любви?\n\nСветозар отправил огненный шар в старейшину. Когда тот замахал руками, объятый пламенем, Светозар вдруг понял, что сделал непоправимое.",
+    "answers": [
+      {
+        "id": 36,
+        "text": "Перебежать к противникам"
+      },
+      {
+        "id": 37,
+        "text": "Бежать отсюда подальше"
+      },
+      {
+        "id": 38,
+        "text": "Остаться стоять на своём месте"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "— Да гори оно всё, — разозлился Светозар и запустил огненный шар в идола Ярилы.\n\nСлавяне ужаснулись: бога солнца уважали оба рода. Затем волхвы упали на землю, шепча молитвы и прося богов не насылать кару, а остальные кинулись к Светозару с оружием.\n\nОн же сомкнул руки на груди, закрыл глаза и применил чародейский блок: создал защитную сферу вокруг себя.\n\nВолхвы молились, воины стучали по сфере топорами, кидали камнями, и силы Светозара уже подходили к концу, как вдруг с неба ударила молния.\n\nСветозар увидел лишь вспышку — и внезапно весь шум стих.",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Открыть глаза"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "— Ты! Ты-ы, — прошипела она со злостью, — Захватчик проклятый.\n\nСветозар хотел обнять девушку, но она не далась.\n\n— Послушай, я не хочу этой войны, — начал он, — Я готов оставить своих сородичей. Мы можем уйти от всех подальше, создать свой род и быть счастливы.\n\n— Моя семья сейчас в опасности, а ты предлагаешь сбежать? Трус и подлец!\n\nСветозар хотел что-то ответить, но не смог. Он вдруг почувствовал, что между ними пролегла огромная пропасть, и молча проводил глазами убегающую возлюбленную.\n\nА потом осел на землю.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Сильная злоба вдруг овладела Светозаром. Сородичи никогда не понимали его, вечно смеялись над его увлечениями, а теперь и вовсе... Почему он должен это терпеть? Почему он должен сражаться против своей любви?\n\nСветозар с силой рубанул топором старейшину. Когда потекла кровь, он вдруг понял, что сделал непоправимое, и ещё — что все заметят окровавленный топор.",
+    "answers": [
+      {
+        "id": 36,
+        "text": "Перебежать к противникам"
+      },
+      {
+        "id": 37,
+        "text": "Бежать отсюда подальше"
+      },
+      {
+        "id": 38,
+        "text": "Остаться стоять на своём месте"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Светозар хотел перейти на другую сторону, однако противники сразу бросились на него в атаку.\n\nСветозар оказался в окружении, далеко от сородичей. Противники вышибли у него топор и заломали ему руки. Светозар оказался на другой стороне, только пленником.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Светозар бежал, бежал без оглядки, забыв про всё на свете. Страх, совесть и стыд неумолимо гнали вперёд, а позади оставались традиции, культура, вся его бывшая жизнь.\n\nОтныне он больше не вернётся домой, не увидит любимую девушку, не вспомнит имена родственников. Отныне он навсегда изгой.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "— Как ты мог? — ошарашенно воскликнул Ярослав, переводя взгляд со старейшины на Светозара.\n\n— Предатель! — крикнули люди и побежали на Светозара с оружием. Энергия для чар ещё не восполнилась, и ему пришлось отбиваться топором. Спереди, слева и справа на Светозара обрушивались удары. Он отражал их, уворачивался и отступал назад в надежде спастись, как вдруг... лезвие воткнулось в спину.\n\nТело Светозара осело на землю. Сражение двух родов началось, но он его уже не увидел.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Игра",
+    "answers": [
+      {
+        "id": 39,
+        "text": "a1",
+        "url": "https://images.vfl.ru/ii/1604604239/672ba56d/32199856.jpg"
+      },
+      {
+        "id": 39,
+        "text": "a2",
+        "url": "https://images.vfl.ru/ii/1604592687/871ac80f/32197401.png"
+      },
+      {
+        "id": 39,
+        "text": "a3",
+        "url": "https://images.vfl.ru/ii/1604592673/32d40365/32197399.png"
+      },
+      {
+        "id": 39,
+        "text": "a4",
+        "url": "https://images.vfl.ru/ii/1604079524/0ce14615/32133287.png"
+      },
+      {
+        "id": 39,
+        "text": "a5",
+        "url": "https://images.vfl.ru/ii/1604079541/438aadb9/32133289.png"
+      },
+      {
+        "id": 39,
+        "text": "a6",
+        "url": "https://images.vfl.ru/ii/1605266367/b2488491/32290478.png"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn images.a1.isVisible\nend",
+        "super_calculate": true,
+        "id": 39,
+        "text": "       ",
+        "calculate": false,
+        "lua_do": "function lua_do()\n \n --Объявление функций--\n\n function addPriority (n)\n     vars[\"priority\" .. n][ #vars[\"priority\" .. n] <plus> 1 ] =\n     {x = ways[k].x, y = ways[k].y}\n end\n \n function checkUnwanted ()\n     for i = 1, #unwanted.x do\n       if changeX == unwanted.x[i] and\n       changeY == unwanted.y[i] then\n               return true\n       end\n     end\n     return false\n end \n \n function attack ()\n     if changeX == 1 and changeY == 1 then\n       superWays[ #superWays <plus> 1 ] =\n       {x = ways[k].x, y = ways[k].y}\n       table.remove (ways, k)\n     else\n       k = k <plus> 1\n     end\n end\n \n function optionalWalls2 ()\n     changeX = math.abs (player.x - ways[k].x)\n     changeY = math.abs (player.y - ways[k].y)\n     unwanted = {\n       x = {1, 2, 2},\n       y = {5, 4, 2}\n     }\n     if checkUnwanted () then\n       addPriority (1)\n       table.remove (ways, k)\n     else\n       attack ()\n     end\n end\n \n function optionalWalls1 ()\n     unwanted = {\n       x = {2, 4},\n       y = {2, 4}\n     }\n     if checkUnwanted () then\n       addPriority (1)\n       table.remove (ways, k)\n     else\n       attack ()\n     end\n end\n \n function optionalWalls ()\n     walls = 0\n     sides = {}\n     sides1 = {}\n     relation = {\n       x = {left = 1, right = 5},\n       y = {up = 1, down = 7}\n     }\n     relation1 = {\n       x = {left = 1, right = -1},\n       y = {up = 1, down = -1}\n     }\n     for key, value in pairs (relation) do\n       for key1, value1 in pairs (relation[key]) do\n           if ways[k][key] == value1 then\n               sides[key] = key1\n               sides1[key] = relation1[key][key1]\n               walls = walls <plus> 1\n           end\n       end\n     end\n     relation = nil\n     relation1 = nil\n     if walls == 1 then\n       change = { {}, {} }\n       for key, value in pairs (sides1) do\n           change[1][key] = value\n           change[2][key] = value\n           if key == \"x\" then\n               change[1].y = 1\n               change[2].y = -1\n           else\n               change[1].x = 1\n               change[2].x = -1\n           end\n       end\n       for i = 1,2 do\n           if not field[ ways[k].x <plus> change[i].x ][ ways[k].y <plus> change[i].y ] then\n               walls = 2\n           end\n       end\n       change = nil\n     end\n     sides = nil\n     sides1 = nil\n     if walls == 2 then\n       optionalWalls1 ()\n     else\n       optionalWalls2 ()\n     end\n end\n \n function optionalFuture ()\n     unwanted = {\n       x = {2, 4, 3, 3, 4},\n       y = {0, 0, 1, 3, 2}\n     }\n     if checkUnwanted () then\n       addPriority (2)\n       table.remove (ways, k)\n     else\n       optionalWalls ()\n     end\n end\n \n function optionalCaught ()\n     if ways[k].x == 1 or ways[k].x == 5 or\n     ways[k].y == 1 or ways[k].y == 7 then\n       addPriority (3)\n       table.remove (ways, k)\n     else\n       optionalFuture ()\n     end\n end\n\n function optionalNow ()\n     changeX = math.abs (player.x - ways[k].x)\n     changeY = math.abs (player.y - ways[k].y)\n     if changeY > changeX then\n       changeX, changeY = changeY, changeX\n     end\n     unwanted = { x = {1, 2}, y = {2, 1} }\n     if checkUnwanted () then\n       addPriority (4)\n       table.remove (ways, k)\n     else\n       optionalCaught ()\n     end\n end\n \n function strict2 ()\n     if (not field[ ways[k].x ][ ways[k].y ]) or \n     (ways[k].x == player.x and ways[k].y == player.y) then\n       table.remove (ways, k)\n     else\n       optionalNow ()\n     end\n end\n     \n function strict1 ()\n     if ways[k].x > 0 and ways[k].x < 6 and ways[k].y > 0 and ways[k].y < 8 then\n      strict2 ()\n     else\n       table.remove (ways, k)\n     end\n end\n     \n function randomWay (t)\n     local random = math.random(#vars[t])\n     x = vars[t][random].x\n     y = vars[t][random].y\n end\n \n function delayEnemy ()\n     changeX = x - enemy.x\n     changeY = y - enemy.y\n     options = {\n       time = 250,\n       x = figure[2].x <plus> changeX*cell,\n       y = figure[2].y <plus> changeY*cell\n     }\n     transition.to (figure[2], options)\n     time = 250\n     enemy.x = x\n     enemy.y = y\n     x = nil\n     y = nil\n     options = nil\n     middle ()\n end\n     \n function botAnswer()\n     ways = {}\n     superWays = {}\n     priority1 = {}\n     priority2 = {}\n     priority3 = {}\n     priority4 = {}\n     k = 1\n     for x = -1, 1, 2 do\n       for y = -1, 1, 2 do\n           ways[k] = {x = enemy.x <plus> x, y = enemy.y <plus> y}\n           k = k <plus> 1\n       end\n     end\n     k = 1\n     for j = 1, 4 do\n       strict1 ()\n     end\n     alternatives = {\n       {name = \"superWays\", r = 16},\n       {name = \"ways\", r = 14},\n       {name = \"priority1\", r = 12},\n       {name = \"priority2\", r = 10},\n       {name = \"priority3\", r = 8},\n       {name = \"priority4\"}\n     }\n     k = 1\n     for i = 1, #alternatives do\n       if #vars[ alternatives[k].name ] == 0 then\n           table.remove (alternatives, k)\n       else\n           k = k <plus> 1\n       end\n     end\n     alternatives[#alternatives].r = nil\n     r = 12\n     khp = 1\n     if enemy.hp == 1 then\n          khp = khp <plus> 0.2\n     elseif enemy.hp < 4 then\n          khp = khp <plus> 0.1\n     end\n     if player.hp == 1 then\n          khp = khp - 0.2\n     end\n     for i = 1, #alternatives do\n       if not alternatives[i].r or \n       math.random ( math.round(alternatives[i].r*khp) ) > 1 then\n           randomWay (alternatives[i].name)\n           break\n       end\n     end\n     r = nil\n     if damageEnemy then\n       r = math.random (2, 4)\n     else\n       r = math.random (4)\n     end\n     timer.performWithDelay (r*500, delayEnemy)\n end\n \n function delayHp (tag)\n     vars[tag].hp = vars[tag].hp - 1\n     hp_text (tag)\n end\n \n function myGoto (page)\n     step = 0\n     timer.performWithDelay (200,\n       function ()\n           g.fullscreen = 0\n           showPage {\n               id = page, \n               transition = \"instant\"\n           }\n       end\n     )\n end\n \n function middle ()\n  changeX = math.abs (player.x - enemy.x)\n  changeY = math.abs (player.y - enemy.y)\n  damageEnemy = nil\n  if (changeX == 1 and changeY == 2) or (changeX == 2 and changeY == 1) then\n      timer.performWithDelay (time, function () delayHp (\"enemy\") end)\n      damageEnemy = true\n  elseif changeX == 1 and changeY == 1 then\n      timer.performWithDelay (time, function () delayHp (\"player\") end)\n  end\n  timer.performWithDelay (time, function()\n      if player.hp == 0 then\n          myGoto (53)\n      elseif enemy.hp == 0 and fight == 1 then\n          myGoto (50)\n      elseif enemy.hp == 0 and fight == 2 then\n          myGoto (52)\n      end\n      if step == 1 then\n          step = 2\n          step_text = \"Ход противника.\"\n      elseif step == 2 then\n          step = 1\n          step_text = \"Ваш ход.\"\n      end\n      if step > 0 then\n          step_number = step_number <plus> 1\n          timer.performWithDelay (time, function () text () end)\n      end\n      changeX = nil\n      changeY = nil\n      if step == 2 then\n          botAnswer ()\n      end\n  end)\n end\n \n function playerAnswer (event)\n  if step == 1 then\n     x = event.target.x - (canvas.width - f_width)/2 <plus> cell/2\n     x = math.round (x/cell)\n     y = event.target.y - (canvas.height - f_height)/2 <plus> cell/2\n     y = math.round (y/cell)\n     changeX = math.abs (x - player.x)\n     changeY = math.abs (y - player.y)\n\n     error_text = nil\n     if x == enemy.x and y == enemy.y then\n       error_text = \"в конце пути стоит противник.\"\n     elseif x == player.x and y == player.y then\n       error_text = \"нажмите на клетку, в которую хотите попасть.\"\n     elseif field[x][y] == false then\n       error_text = \"в конце пути препятствие.\"\n     elseif not (changeX == 1 and changeY == 2) and not (changeX == 2 and changeY == 1) then\n       error_text = \"нужно двигаться буквой Г.\"\n  end\n  if not error_text then\n      options = {\n           time = 400,\n           x = event.target.x,\n           y = event.target.y\n      }\n      transition.to (figure[1], options)\n      time = 400\n      player.x = x\n      player.y = y\n      x = nil\n      y = nil\n      options = nil\n      middle ()\n  else\n      text ()\n  end\n  end\n end\n \n --Отрисовка начальной графики--\n     \n for i = 1, 6 do\n     images[\"a\" .. i].isVisible = false\n end\n\n rField = {}\n obstacles = {}\n k = 1\n f_width = canvas.width*0.9\n cell = f_width / 5\n f_height = 7*cell\n function scale (t1, v, t2)\n     s = v/t1\n     return t2*s\n end\n if f_height/canvas.height > 0.74 then\n     f_width = scale (f_height, 0.74*canvas.height, f_width)\n     f_height = 0.74*canvas.height\n     cell = f_width / 5\n end \n \n for x = 1, 5 do \n     rField[x] = {}\n     for y = 1, 7 do\n       rField[x][y] = display.newImage(\"https://images.vfl.ru/ii/1604604239/672ba56d/32199856.jpg\") \n       rField[x][y].width = cell\n       rField[x][y].height = cell\n       rField[x][y].y = canvas.height/2 <plus> cell*(y-4)\n       rField[x][y].x = canvas.width/2 <plus> cell*(x-3)\n       rField[x][y]:addEventListener (\"tap\", playerAnswer)\n       if not field[x][y] then\n           obstacles[k] = display.newImage (\"https://images.vfl.ru/ii/1605266367/b2488491/32290478.png\")\n           obstacles[k].width = 0.8*cell\n           obstacles[k].height = 0.8*cell\n           obstacles[k].x = rField[x][y].x\n           obstacles[k].y = rField[x][y].y\n           k = k <plus> 1\n       end\n     end \n end\n\n hp = { {}, {} }\n hp_width = f_width*0.3\n hp_height = (canvas.height - f_height)/2\n \n function hp_text (tag)\n     if tag == \"player\" then\n       sum = player.hp\n       k = -1\n       n = 1\n     elseif tag == \"enemy\" then\n       sum = enemy.hp\n       k = 1\n       n = 2\n     end\n     if hp[n][1] then\n       hp[n][1]:removeSelf ()\n     end\n     options = {\n       text = sum,\n       x = canvas.width/2 <plus> k*f_width/4 - hp_width/4,\n       y = 0.6*hp_height,\n       parent = canvasGroup,\n       font = \"Roboto-Light\",\n       fontSize = math.round (f_width/9.26)\n     }\n     hp[n][1] = display.newText(options)\n     hp[n][1]:setFillColor (0, 0, 0)\n     options = nil\n end\n hp_text (\"player\")\n hp_text (\"enemy\")\n \n hp[1][2] = display.newImage (\"https://images.vfl.ru/ii/1604592687/871ac80f/32197401.png\")\n hp[2][2] = display.newImage (\"https://images.vfl.ru/ii/1604592673/32d40365/32197399.png\")\n function hp_image (k, n)\n     hp[n][2].height = scale (hp[n][2].width, hp_width/2, hp[n][2].height)\n     hp[n][2].width = hp_width/2 \n     hp[n][2].x = canvas.width/2 <plus> k*f_width/4 <plus> hp_width/4\n     hp[n][2].y= 0.6*hp_height\n end\n hp_image (-1, 1)\n hp_image (1, 2)\n\n figure = {}\n figure[1] = display.newImage (\"https://images.vfl.ru/ii/1604079524/0ce14615/32133287.png\")\n figure[2] = display.newImage (\"https://images.vfl.ru/ii/1604079541/438aadb9/32133289.png\")\n function position (n, x, y)\n     figure[n].height = scale(figure[n].width, 0.4*cell, figure[n].height)\n     figure[n].width = 0.4*cell\n     figure[n].x = canvas.width/2 <plus> (x-3)*cell\n     figure[n].y = canvas.height/2 <plus> (y-4)*cell\n end\n position (1, player.x, player.y)\n position (2, enemy.x, enemy.y)\n\n function text ()\n     all_text = step_number .. \". \" .. step_text\n     if error_text then\n       all_text = all_text .. \"<s>\nНеправильный ход: \" .. error_text \n     end\n     if rText and rText.removeSelf then\n       rText:removeSelf ()\n     end\n     options = {\n       text = all_text,\n       x = canvas.width/2,\n       y = f_height <plus> (canvas.height - f_height)*0.7,\n       width = 0.95*f_width,\n       parent = canvasGroup,\n       font = \"HwHant-Regular\",\n       fontSize = math.round (f_width/18.5)\n     }\n     rText = display.newText (options)\n     rText:setFillColor (0, 0, 0)\n     options = nil\n end\n text ()\nend"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Инструкция",
+    "answers": [
+      {
+        "id": 40,
+        "text": "a",
+        "url": "https://images.vfl.ru/ii/1604768742/47b29315/32218235.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 40,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  images.a.isVisible = false\n  function scale (t1, v, t2)\n      s = v/t1\n      return t2*s\n  end \n  manual = display.newImage (\"https://images.vfl.ru/ii/1604768742/47b29315/32218235.png\")\n  manual.x = canvas.width/2\n  manual.y = 0.44*canvas.height\n  manual.width = scale (manual.height, 0.79*canvas.height, manual.width)\n  manual.height = 0.79*canvas.height\n  if manual.width/canvas.width > 0.954*canvas.height then\n      manual.height = scale (manual.width, 0.954*canvas.height, manual.height)\n      manual.width = 0.954*canvas.height\n  end\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "right_answer": false,
+        "comment": false,
+        "middle_answer": true,
+        "text": "Вернуться к игре",
+        "id": 39,
+        "left_answer": false
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "— Тебе лучше уйти, — ответил старейшина.\n\n— Нет! — воскликнул Ярослав, — Он сам не знает, что говорит. Светозар! Да что с тобой?\n\n— Так будет лучше. Прощайте, — сказал чародей и скрылся в лесу.\n\nОтныне он больше не вернётся домой, не увидит любимую девушку, не вспомнит имена родственников. Отныне он навсегда изгой.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Когда Светозара подсадили, он заговорил, обращаясь к другому роду:\n\n— Мы пришли не воевать. Узнав, что у вас есть некоторые разногласия по поводу правил и традиций, мы решили помочь вам разобраться. Давайте сядем все вместе и обсудим это.\n\n— Вы нас учить вздумали?! — закричал кто-то.\n\n— С миром они пришли, конечно. В полном составе и все вооружённые, — поддержал второй.\n\n— Мало ли, нечисть какая в лесу нападёт, — постарался оправдаться Светозар, но в него уже полетели камни. Увидев их, чародей от неожиданности свалился со стены.\n\n— Ну, они сами напросились! — воскликнул Ярослав и бросился ломать стену.\n\n— В бой! — крикнул старейшина.",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Броситься в бой",
+        "lua_do": "function lua_do()\nfight = 1\nfield = {}\n for x = 1, 5 do\n     field[x] = {}\n     for y = 1, 7 do\n       field[x][y] = true\n     end\n end\n r = math.random (4)\n if r < 3 then\n     if r == 1 then\n       field[1][4] = false\n       field[5][4] = false\n     else\n       field[3][4] = false\n     end\n end\n r = nil\n player = {hp = 5, x = 1, y = 1}\n enemy = {hp = 5, x = 5, y = 7}\n step = 1\n step_number = 1\n step_text = \"Ваш ход.\"\n g.fullscreen = 1\n dialog ( { \n     header = \"Мини-игра\",\n     text = [[Правила:\n1. Вы обозначены синим, противник красным. \n2. Вы ходите буквой Г, а противник — на одну клетку по диагонали. \n3. Нанесение урона производится так же, как и движение.]],\n     answers = {\n      {text = \"Всё понятно, приступить к игре\", pressListener = function () hideDialog () end},\n      {text = \"Посмотреть инструкцию с примерами\", pressListener = function () showPage {id = 40, transition = \"instant\"} hideDialog () end}\n     }\n } )\nend"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "У Светозара всё получилось. Пролетая над лесом вместе с ветром, он думал, однако, о девушке, оставшейся внизу. Светозар уверял себя, что не мог спасти её, но всё равно почему-то чувствовал вину.\n\n\"Наверное, это всё-таки любовь, — подумал он. — Была... любовь\".",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Поле битвы пропало, вокруг Светозара был лишь белый туман. Даже под ногами.\n\n\"Я умер? — подумал Светозар и ущипнул себя. — Ай, кажется, жив\".\n\n— Ау-у... — неуверенно позвал он, — Есть тут кто?\n\nВ ответ слева на Светозара поползла тёмная буря, справа — полетели огненные птицы, а спереди ослепил такой свет, что он прищурился.\n\nВдруг всё исчезло, и он увидел слева грозного богатыря с мечом, похожим на молнию, справа — свирепого богатыря с увесистым посохом и в звериных шкурах, а по центру — улыбающегося молодца в красном одеянии, который так и светился.\n\nСветозар сразу понял, что это Перун, Велес и Ярила, идол которого он сжёг.",
+    "answers": [
+      {
+        "id": 45,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Перун махнул рукой, и Светозара обвили цепи.\n\n— Опустим его в вулкан до конца Вечности? — предложил Перун.\n\n— Первый раз я с тобой согласен, — ответил Велес. — Будет знать, какого идти против богов.\n\n— Вот именно.\n\nЯрила вдруг рассмеялся:\n\n— Он даже вас помирил.\n\n— Что-о? — рассердился Велес.\n\n— Неправда! — крикнул Перун, а Ярила засветился сильнее, и туман под ногами начал редеть. Сквозь особенно большое отверстие Светозар увидел, что они находятся на облаках, а снизу располагается поселение, на которое нападал его род. Какова же была радость Светозара, когда он увидел, что там люди уже не сражаются, а напротив — взялись за руки и водят хоровод вокруг, видимо, остатков того идола.",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "— Вот плут! — воскликнул Велес, смотря на Перуна. — Это ты его подослал? Очередная хитрость вместо того, чтобы сразиться честно.\n\n— Делать мне больше нечего, я бы и так тебя победил.\n\n— Я бы тебе кое-что напомнил, но не в присутствии людишек.\n\n— Вулканами ты занимаешься, вот и запри его там.\n\n— Подождите, — сказал Ярила, — А вы помните, чью он скульптуру уничтожил? Следовательно, мне и решать его судьбу.\n\nБоги нехотя согласились. Ярила взял Светозара и отвёл в сторону.\n\n— Ты молодец, — сказал он ему. — Вернёшься на землю и скажешь людям то, что я велю.",
+    "answers": [
+      {
+        "id": 47,
+        "text": "— А можно вопрос?"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "— Только один, — улыбнулся Ярила.\n\n— Почему они воюют?\n\nЯрила вздохнул.\n\n— В мире есть две материи: Жизнь и Ресурсы. Человек, зверь или бог есть воплощение Жизни, и у него есть внутренняя сила или Воля, но так же на него действует внешняя сила Ресурсов, притягивая к себе. Из-за неё некоторые сбиваются с верного пути и вредят Жизни, а следовательно, и самим себе. Теперь слушай своё задание, — Ярила прошептал что-то Светозару, и засветился так, что тот закрыл глаза, а когда открыл — увидел, что лежит на земле, и услышал других людей.",
+    "answers": [
+      {
+        "id": 48,
+        "text": "Встать на ноги"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "У Светозара осталось много вопросов после случившегося, но он поднялся с земли и сказал грозным голосом, как учил Ярила, что идол был слишком угрюмый, поэтому бог его сжёг, и что надо сделать новый, улыбающийся.\n\nПотом Светозар встряхнул головой и спросил тихо:\n\n— Что со мной произошло?\n\nОн понял, что всё сработало, когда люди стали наперебой рассказывать, как на Светозара нашло наваждение, он сжёг идола, в него ударила молния, а потом тучи рассеялись, засветило солнце, Светозар ожил и заговорил голосом Ярилы.",
+    "answers": [
+      {
+        "id": 49,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "— Надо скорее сделать идола, — скомандовал старейшина. — Богдан и Ярослав, отправляйтесь за древесиной.\n\n— Возьмите Горисвета и Белояра с собой, — сказал старейшина другого рода, — Они в этом хорошо разбираются.\n\n— Замечательно, — одобрил первый старейшина, — Волхвы пусть тоже готовятся. Есть у вас краска?\n\n— Конечно. Миролюб, принеси.\n\nПока изготавливали идола, небо полностью прояснилось.\n\n— Теперь Яриле нравится, — сказал кто-то.\n\n— Вот и славно, — сказал старейшина другого рода. — А теперь можно и пообедать. Прошу всех за стол!\n\nТак закончилась самая необычная война между славянскими родами. Светозар обрёл счастье вместе со своей возлюбленной, стал уважаемым всеми чародеем, однако временами на него накатывала глубокая задумчивость. Тогда он выходил на улицу и мог часами всматриваться в небо.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Далее",
+        "lua_do": "function lua_do()\nfight = 2\nfield = {}\n for x = 1, 5 do\n     field[x] = {}\n     for y = 1, 7 do\n       field[x][y] = true\n     end\n end\n r = math.random (4)\n if r < 3 then\n     if r == 1 then\n       field[1][4] = false\n       field[5][4] = false\n     else\n       field[3][4] = false\n     end\n end\n r = nil\n--player = {hp = 5, x = 1, y = 1}\nplayer.x, player.y = 1, 1\n enemy = {hp = 5, x = 5, y = 7}\n step = 1\n step_number = 1\n step_text = \"Ваш ход.\"\n g.fullscreen = 1\nend"
+      },
+      {
+        "id": 50,
+        "text": "Светозар сражался аккуратно, тактически отступая в случае опасности, и на нём не было ни царапины.",
+        "lua_if": "function lua_if()\nreturn player.hp >= 5\nend",
+        "merge": true
+      },
+      {
+        "id": 50,
+        "text": "Светозар сражался рьяно, без страха бросаясь на врага. Это обернулось ему некоторыми ранами.",
+        "lua_if": "function lua_if()\nreturn player.hp > 2 and player.hp < 5\nend",
+        "merge": true
+      },
+      {
+        "id": 50,
+        "text": "Противник Светозара был силён и серьёзно потрепал его, однако чародей оказался сильнее.",
+        "lua_if": "function lua_if()\nreturn player.hp <= 2\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn potionOfHill\nend",
+        "lua_do": "function lua_do()\nplayer.hp = math.min(player.hp <plus> 2, 5)\npotionOfHill = nil\nend",
+        "text": "Применить зелье лечения (<plus>2 единицы здоровья)",
+        "comment": false,
+        "id": 50
+      },
+      {
+        "id": 52,
+        "text": "Финал победа (чтобы считалась в статистике)",
+        "need": [
+          999
+        ]
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nhp123 = player.hp\nend",
+        "calculate": true,
+        "text": "    ",
+        "id": 50
+      },
+      {
+        "super_calculate": false,
+        "id": 50,
+        "text": "    ",
+        "calculate": true,
+        "widget_show": [
+          "hp",
+          "hp123"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "— Вот и убирай стену.\n\n— Не могу, — развёл руками Светозар, — Энергия для чар ещё не восполнилась.\n\n— Ломайте стену! — скомандовал старейшина. \n\nСородичи взялись за работу. Когда проход был чист, Светозару ничего не оставалось, кроме как...",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Броситься в бой",
+        "lua_do": "function lua_do()\nfight = 1\nfield = {}\n for x = 1, 5 do\n     field[x] = {}\n     for y = 1, 7 do\n       field[x][y] = true\n     end\n end\n r = math.random (4)\n if r < 3 then\n     if r == 1 then\n       field[1][4] = false\n       field[5][4] = false\n     else\n       field[3][4] = false\n     end\n end\n r = nil\n player = {hp = 5, x = 1, y = 1}\n enemy = {hp = 5, x = 5, y = 7}\n step = 1\n step_number = 1\n step_text = \"Ваш ход.\"\n g.fullscreen = 1\n dialog ( { \n     header = \"Мини-игра\",\n     text = [[Правила:\n1. Вы обозначены синим, противник красным. \n2. Вы ходите буквой Г, а противник — на одну клетку по диагонали. \n3. Нанесение урона производится так же, как и движение.]],\n     answers = {\n      {text = \"Всё понятно, приступить к игре\", pressListener = function () hideDialog () end},\n      {text = \"Посмотреть инструкцию с примерами\", pressListener = function () showPage {id = 40, transition = \"instant\"} hideDialog () end}\n     }\n } )\nend"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "Светозар сражался достойно, как и его сородичи. Вскоре они одержали победу: часть врагов была убита, а другие были ранены.\n\nСветозар старался не смотреть на трупы, плачущих женщин и детей, а в особенности — на свою бывшую возлюбленную.\n\n",
+    "answers": [
+      {
+        "id": 53,
+        "text": "финал поражение (чтобы считалась в статистике)",
+        "need": [
+          999
+        ]
+      },
+      {
+        "id": 52,
+        "text": "Он говорил себе, что по-другому просто не могло быть, что всё это было необходимо и оправдано.",
+        "need": [
+          31
+        ],
+        "merge": true
+      },
+      {
+        "id": 52,
+        "text": "Он сделал, казалось, всё от него зависящее, чтобы не допустить этого, но всё равно чувствовал вину за произошедшее.",
+        "need": [
+          -31
+        ],
+        "merge": true
+      },
+      {
+        "id": 52,
+        "text": "\n\nА старейшина уже начал говорить речь...",
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Светозар бился резво, но удары противника были точнее. У чародея было уже несколько ран, и он попытался отступить, но не смог: враг нанёс финальный удар. В глазах Светозара потемнело...",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      },
+      {
+        "id": 39,
+        "text": "Попробовать ещё раз",
+        "lua_do": "function lua_do()\nfight = 1\nfield = {}\n for x = 1, 5 do\n     field[x] = {}\n     for y = 1, 7 do\n       field[x][y] = true\n     end\n end\n r = math.random (4)\n if r < 3 then\n     if r == 1 then\n       field[1][4] = false\n       field[5][4] = false\n     else\n       field[3][4] = false\n     end\n end\n r = nil\n player = {hp = 5, x = 1, y = 1}\n enemy = {hp = 5, x = 5, y = 7}\n step = 1\n step_number = 1\n step_text = \"Ваш ход.\"\n g.fullscreen = 1\n dialog ( { \n     header = \"Мини-игра\",\n     text = [[Правила:\n1. Вы обозначены синим, противник красным. \n2. Вы ходите буквой Г, а противник — на одну клетку по диагонали. \n3. Нанесение урона производится так же, как и движение.]],\n     answers = {\n      {text = \"Всё понятно, приступить к игре\", pressListener = function () hideDialog () end},\n      {text = \"Посмотреть инструкцию с примерами\", pressListener = function () showPage {id = 40, transition = \"instant\"} hideDialog () end}\n     }\n } )\nend"
+      },
+      {
+        "id": 39,
+        "text": "Попробовать на более выгодных условиях за закладку",
+        "paid_answer": [
+          "бонусные хп"
+        ],
+        "lua_do": "function lua_do()\nadvert = true\nfight = 1\nfield = {}\n for x = 1, 5 do\n     field[x] = {}\n     for y = 1, 7 do\n       field[x][y] = true\n     end\n end\n r = math.random (4)\n if r < 3 then\n     if r == 1 then\n       field[1][4] = false\n       field[5][4] = false\n     else\n       field[3][4] = false\n     end\n end\n r = nil\n player = {hp = 10, x = 1, y = 1}\n enemy = {hp = 5, x = 5, y = 7}\n step = 1\n step_number = 1\n step_text = \"Ваш ход.\"\n g.fullscreen = 1\n dialog ( { \n     header = \"Мини-игра\",\n     text = [[Правила:\n1. Вы обозначены синим, противник красным. \n2. Вы ходите буквой Г, а противник — на одну клетку по диагонали. \n3. Нанесение урона производится так же, как и движение.]],\n     answers = {\n      {text = \"Всё понятно, приступить к игре\", pressListener = function () hideDialog () end},\n      {text = \"Посмотреть инструкцию с примерами\", pressListener = function () showPage {id = 40, transition = \"instant\"} hideDialog () end}\n     }\n } )\nend"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "Кольцо врагов всё сужалось, обхватывая двух людей в ночном лесу, словно хищная змея. Силы покидали Светозара, ему всё труднее было отбивать атаки нечисти.\n\nНо он не сдавался. До последнего своего вздоха он сражался с монстрами, защищая свою возлюбленную. \n\nОни умерли вместе, в один день.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "empty",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nlocal t = {49, 43, 52, 54, 42, 19, 34, 36, 37, 38, 41, 53}\nlocal names = {\"Остановить сражение\", \"Свободный полёт\", \"Победа?\", \"Вместе до гроба\", \"Переговоры\", \"Незавидная смерть великого чародея\", \"Трус и подлец\", \"В плену\", \"Беглец\", \"Предатель\", \"Изгой\", \"Смерть в бою\"}\nlocal n = 0\nlocal text = \"\"\nfor i = 1, #t do\n  if isGlobalHistoryContain(t[i]) then\n    n = n <plus> 1\n    text = text .. \"<s>\n> \".. names[i]\n  end\nend\nreturn \"<<plus>1.25>Открыто концовок: \" .. n .. \"/\".. #t .. \"<s>\n<s>\nОткрытые концовки:</<plus>><s>\n\" ..  text\nend",
+        "id": 55,
+        "text": "Открыто концовок:",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "",
+    "answers": []
+  }
+]

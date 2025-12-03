@@ -1,0 +1,1718 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Ярослав Зверев.\nЖанры: юмор, детектив.\n\nВизуальная новелла о школе!",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "text": "  6 — литература<s>ufeff\n14 — коридор<s>ufeff\n28 — информатика\n31 — классный час\n38 — совместное творчество\n\n46 — кабинет директора\n50 — обсуждение подслушанного<s>ufeff\n64 — химия\n72 — классный час\n76 — поиск\n\n77* — упростить задачу\n80 — помощь информатика\n83 — ошибка на мониторе\n95 — коридор перед операцией\n98 — в классе с Антоном\n110 — Олег завершает расследование\n125 — игра: создание кода для собственного поиска преступника\n127 — поражение в игре\n142 — победа в игре\n\n130 — информатик уходит из школы\n139 — герои обдумывают потерю\n\n145 — завершение фанфика\n150 — вторая литература\n163 — Некрасов\n164 — после уроков на улице\n165 — встреча с Максом"
+      },
+      {
+        "id": 2,
+        "text": "Связь с автором",
+        "url": "https://vk.com/id_first1"
+      },
+      {
+        "lua_do": "function lua_do()\npage = 1\ng.start()\nend",
+        "text": "Начать",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "text": "Удобный доступ к картинкам",
+        "lua_do": "function lua_do()\n  g.urls = {\n    corridor = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1610184698fd22258b32896373.jpg\",\n    class = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii164657208414ff17c238349701.jpg\",\n    inf = \"https://shaba-games.ru/cashed_images/httpsi.ibb.co7QNrvNnreplicate-prediction-nil6gfqyxjaajiti563llkozu4-1-1.jpg\",\n    door = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coy4gsfgwIMG-20220704-225017-copy-561x1000-1.jpg\",\n    yard = \"https://shaba-games.ru/cashed_images/httpsi.ibb.co9hdSPscIMG-20220727-232909-1.jpg\",\n    ladder = \"https://shaba-games.ru/cashed_images/httpsi.ibb.cohXY3JwRIMG-20210629-185241.jpg\",\n    frame = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646575186329e6a6a38350591.png\",\n    MaxGesture = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16099432823808ab9032869615.png\",\n    MaxAnger = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611693883259237cf33108373.png\",\n    MaxFun = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646572179212081bc38349710.png\",\n    MaxSmoke = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coSsYrqRbsketch-1659560975706-copy-473x1000.png\",\n    SashaCalm = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16098800585c78a0b432864804.png\",\n    SashaShy = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii160988007430f95c3432864813.png\",\n    SashaConfident = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611744429d45a133e33115129.png\",\n    SashaDreamy = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16122120501d5f9ccb33181283.png\",\n    SashaApproval = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii161229982671d0a3fb33194279.png\",\n    SashaDoubt = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1612886477a748bd4a33274057.png\",\n    LitCalm = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1610981740a286c42e32996769.png\",\n    LitSad = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611862126ce5c692c33135682.png\",\n    NoName = \"https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646572245206dd02e38349723.png\",\n    OlegFun = \"https://shaba-games.ru/cashed_images/httpsi.ibb.covcHLRYRsketch-1660064133927-copy-473x1000.png\",\n    OlegDreamy = \"https://shaba-games.ru/cashed_images/httpsi.ibb.co0CDBSsQsketch-1660071446019-copy-493x1000.png\",\n    OlegWink = \"https://shaba-games.ru/cashed_images/httpsi.ibb.cokGmbjbJsketch-1660071300753-copy-473x1000.png\",\n    OlegSad = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coWfSVmn5sketch-1660071251828-copy-473x1000.png\",\n    OlegListening = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coVqGcPsmsketch-1660212413348-copy-473x1000.png\",\n    OlegApproval = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coSnnC5VZsketch-1660212490211-copy-473x1000.png\",\n    ClassCalm = \"https://shaba-games.ru/cashed_images/httpsi.ibb.co61MPzSxsketch-1653923420423-1-1.png\",\n    ClassTired = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coyX0ZVhQsketch-1653923149320-1-1.png\",\n    ChemFun = \"https://shaba-games.ru/cashed_images/httpsi.ibb.co9N29nqPsketch-1657545818710-copy-493x1000.png\",\n    ChemFun2 = \"https://shaba-games.ru/cashed_images/httpsi.ibb.cotPNgYGdsketch-1657827263573-copy-473x1000.png\",\n    AntonAngry = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coKzRVnMgsketch-1659559858160-copy-473x1000.png\",\n    AntonCalm = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coDDDJjsWsketch-1659560132599-copy-473x1000.png\",\n    bug = \"https://shaba-games.ru/cashed_images/httpsi.ibb.comz3dMjzsketch-1660850770183-copy-250x250.png\",\n    Quests = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coGJ4wzGjimgonline-com-ua-Resize-x8n01-GYh-GAph7-R3g.png\",\n    achieve = \"https://shaba-games.ru/cashed_images/httpsi.ibb.coNLdM75vsketch-1661504341804-copy-168x250.png\",\n  }\nend"
+      },
+      {
+        "id": 25,
+        "text": "Текст новеллы",
+        "run": [
+          25
+        ],
+        "lua_if": "function lua_if()\nreturn g and g.one\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.start = function()\n  timer.cancel (\"enterText\")\n  save = { heroes = {} }\n  user_name = \"Аноним\"\n  fonts = {\n    name = {\"тонкий\", \"курсив\", \"обычный\", \"жирный\"},\n    value = {\"Roboto-Thin\", \"Roboto-Italic\", \"Roboto-Regular\", \"Roboto-Bold\"}\n  }\n  g.curFont = g.curFont or 3\n\n  sizes = {\n    name = {\"крошечный\", \"маленький\", \"средний\", \"большой\"},\n    value = {0.03, 0.038, 0.046, 0.054}\n  }\n  for i = 1, 4 do\n    sizes.value[i] = sizes.value[i]/2.2\n  end\n  g.curSize = g.curSize or 3\n\n  speed = {\n    name = {0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75}\n  }\n  speed.value = {}\n  for i = 7, 1, -1 do\n    speed.value[#speed.value <plus> 1] = speed.name[i]\n  end\n  g.curSpeed = g.curSpeed or 4\n\n  buttons = {\n    {{name = \"text\", page = 4}, \n     {name = g.urls.achieve, page = 5}},\n    {{name = g.urls.achieve, page = 5}, \n     {name = \"https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png\", page = 2, yScale = 0.75}},\n     {{name = \"text\", page = 4},\n      {name = \"https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png\", page = 2, yScale = 0.75}}\n  }\nend\nend"
+      },
+      {
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.co9hdSPscIMG-20220727-232909-1.jpg",
+        "image": "https://i.ibb.co/9hdSPsc/IMG-20220727-232909-1.jpg",
+        "comment": false,
+        "super_calculate": false,
+        "id": 1,
+        "calculate": false,
+        "text": "bg",
+        "newImage": "https://i.ibb.co/9hdSPsc/IMG-20220727-232909-1.jpg"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16099432823808ab9032869615.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16099432823808ab9032869615.png",
+        "text": "Max",
+        "newImage": "https://images.vfl.ru/ii/1609943282/3808ab90/32869615.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii160988007430f95c3432864813.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii160988007430f95c3432864813.png",
+        "text": "Sasha",
+        "newImage": "https://images.vfl.ru/ii/1609880074/30f95c34/32864813.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.appear (hero, delay)\n  hero.x = hero.x - 0.02*canvas.width\n  hero.alpha = 0\n  transition.to (hero, {\n    time = 200,\n    delay = 500 <plus> (delay or 0),\n    x = hero.x <plus> 0.02*canvas.width,\n    alpha = 1\n  })\nend\nend",
+        "text": "Анимация появления персонажа"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ng.fullscreen_on_first_page = 1\ng.fullscreen = 1\ng.noScroll = 1\ng.cashedImages = nil\nif canvas and canvas.width and images and canvasImage and g.appear and g.one then\n  canvasImage(\"bg\", 0.5, 0.5)\n  local bg = images.bg\n  local xs = canvas.width/bg.width\n  local ys = canvas.height/bg.height\n  bg.xScale = math.max (xs, ys)\n  bg.yScale = bg.xScale\n  canvasImage(\"Max\", 0.3, 0.27, nil, 0.9)\n  g.appear(images.Max)\n  canvasImage(\"Sasha\", 0.77, 0.27, nil, 0.9)\n  g.appear(images.Sasha, 300)\n  local title = display.newEmbossedText{\n    parent = canvasGroup,\n    text = \"Новое поколение\",\n    font = \"NotoSerif-Italic\",\n    fontSize = 0.1*canvas.width,\n    x = 0.5*canvas.width,\n    y = 0.1*canvas.height,\n  }\n  title.fill = {1, 0.7, 0}\n  title:setEmbossColor {\n    highlight = { r=1, g=1, b=1 },\n    shadow = { r=0.3, g=0.3, b=0.3 }\n  }\n  local annotation = [[Автор: Ярослав Зверев.\nЖанры: юмор, детектив.]]\n  --g.enterText(g.setText(annotation, title.y <plus> title.height/2))\nend\nif not g.one then\n  g.one = true\n  showPage{id = 1, transition = \"instant\"}\nend\nend",
+        "calculate": true,
+        "text": "   ",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Основная страница",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\n  anim = {}   set = {}   heroes = {}\n  diagonal = (canvas.height^2 <plus> canvas.width^2)^0.5\nend",
+        "super_calculate": true,
+        "id": 2,
+        "text": "Подготовка",
+        "calculate": false,
+        "addToHistory": [
+          4
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Объявление функций lua_do, lua_if, lua_text",
+        "comment": false,
+        "run": [
+          8
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          0.6,
+          0
+        ],
+        "id": 2,
+        "text": "Анимации (anim)",
+        "super_calculate": false,
+        "calculate": true
+      },
+      {
+        "id": 9,
+        "text": "Посимвольное отображение текста",
+        "comment": false,
+        "run": [
+          9
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Появление персонажа",
+        "comment": false,
+        "run": [
+          10
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Исчезновение персонажа",
+        "comment": false,
+        "run": [
+          11
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Нажатие на иконку",
+        "comment": false,
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 32,
+        "text": "Анимации на странице",
+        "comment": false,
+        "run": [
+          32
+        ]
+      },
+      {
+        "text_color": [
+          0,
+          0.4,
+          0.8
+        ],
+        "id": 2,
+        "calculate": true,
+        "super_calculate": false,
+        "text": "Создание (set)"
+      },
+      {
+        "id": 13,
+        "text": "Фон",
+        "comment": false,
+        "run": [
+          13
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Панель управления",
+        "comment": false,
+        "run": [
+          14
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Персонаж",
+        "comment": false,
+        "run": [
+          15
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Текст",
+        "comment": false,
+        "run": [
+          16
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Сохранение данных",
+        "comment": false,
+        "run": [
+          17
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Ответ",
+        "comment": false,
+        "run": [
+          18
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Кнопка пролистывания",
+        "comment": false,
+        "run": [
+          19
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Главная функция",
+        "comment": false,
+        "run": [
+          20
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n myMain ()\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 2
+      },
+      {
+        "id": 2,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n page = 125\ng.disableAuthorButton = 1\n --save.bg = g.urls.yard\nend",
+        "calculate": false,
+        "need": [
+          999
+        ],
+        "text": "   "
+      },
+      {
+        "text": "   ",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n--Ищет ошибку по сообщению об ошибке\nfunction g.findError(numString, word, noWord, isBlack)\n  local function luaAnswer(answer)\n    return answer.lua_do or answer.lua_text or answer.lua_if\n  end\n  luaF = {\"lua_do\", \"lua_if\", \"lua_text\", \"lua_render\"}\n\n  local function oneAnswer (text, errorLine, word)\n    local curLine = 1\n    local isListener = false\n    local reg = noWord and \"\" or \"[^%a%d_]\"\n    for str in utf8.gmatch (text, \"<s>\n[^<s>\n]*\") do\n      curLine = curLine <plus> 1\n      if isBlack and ( utf8.find(str .. \" \", \"addEventListener\") or utf8.find(str .. \" \", \"performWithDelay\") ) then\n       isListener = true\n     end\n      \n      if curLine == errorLine and utf8.find (str .. \" \",  reg .. word .. reg) and (not isBlack or isListener) then\n        return true\n      end\n    end\n    return false\n  end\n\n  local log = \"\"\n  for curPage = 1, #pages do\n    local answers = pages[curPage].answers\n    for curAnswer = 1, #answers do\n      for curF = 1, 4 do\n        local code = answers[curAnswer][ luaF[curF] ]\n        if code and oneAnswer (code, numString, word) then\n          log = log .. \"<s>\nСтраница \".. curPage .. \", ответ \" .. curAnswer .. \", \" .. luaF[curF]\n        end\n      end\n    end\n  end\n  dialog {header = \"Результаты поиска\", text = #log > 0 and log:sub(2, -1) or \"Ошибки не найдено\"}\nend\n\ng.findError(71, \"%[\", true)\nend",
+        "calculate": false,
+        "need": [
+          999
+        ],
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Картинки",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "id": 3,
+        "text": "Иконка закрытия",
+        "url": "https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "bg_color": [
+          1,
+          0.9,
+          0.8
+        ],
+        "comment": false,
+        "lua_do": "function lua_do()\n  local t = \"function lua_do()<s>\n  g.urls = {\"\n  for i = 6, #pages[3].answers do\n    c = pages[3].answers[i]\n    if c.url then\n      c.url = c.url:gsub(\"188.120.236.127\", \"shaba-games.ru\")\n      --c.url = \"http://188.120.236.127/cashed_images/\".. nameForImages(c.url)\n      local name = c.text:gsub(\"<s>\n\", \"\")\n      c.text = name .. \"<s>\n<s>\n<s>\n<s>\n\"\n      t = t .. \"<s>\n    \" .. name .. ' = \"' .. c.url .. '\",'\n      c.image = c.url\n    end\n  end\n  t = t .. \"<s>\n  }<s>\nend\"\n  pages[1].answers[4].lua_do = t\nend",
+        "text": "Обновить таблицу с картинками",
+        "id": 3
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "565 х 1000 (1.77)"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1610184698fd22258b32896373.jpg",
+        "id": 2,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1610184698fd22258b32896373.jpg",
+        "text": "corridor\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1610184698/fd22258b/32896373.jpg"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii164657208414ff17c238349701.jpg",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii164657208414ff17c238349701.jpg",
+        "text": "class\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1646572084/14ff17c2/38349701.jpg"
+      },
+      {
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.co7QNrvNnreplicate-prediction-nil6gfqyxjaajiti563llkozu4-1-1.jpg",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.co7QNrvNnreplicate-prediction-nil6gfqyxjaajiti563llkozu4-1-1.jpg",
+        "comment": false,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": false,
+        "text": "inf\n\n\n\n",
+        "newImage": "https://i.ibb.co/7QNrvNn/replicate-prediction-nil6gfqyxjaajiti563llkozu4-1-1.jpg"
+      },
+      {
+        "text": "door\n\n\n\n",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coy4gsfgwIMG-20220704-225017-copy-561x1000-1.jpg",
+        "comment": false,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": false,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coy4gsfgwIMG-20220704-225017-copy-561x1000-1.jpg",
+        "newImage": "https://i.ibb.co/y4gsfgw/IMG-20220704-225017-copy-561x1000-1.jpg"
+      },
+      {
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.co9hdSPscIMG-20220727-232909-1.jpg",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.co9hdSPscIMG-20220727-232909-1.jpg",
+        "comment": false,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": false,
+        "text": "yard\n\n\n\n",
+        "newImage": "https://i.ibb.co/9hdSPsc/IMG-20220727-232909-1.jpg"
+      },
+      {
+        "text": "ladder\n\n\n\n",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.cohXY3JwRIMG-20210629-185241.jpg",
+        "comment": false,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": false,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.cohXY3JwRIMG-20210629-185241.jpg",
+        "newImage": "https://i.ibb.co/hXY3JwR/IMG-20210629-185241.jpg"
+      },
+      {
+        "calculate": false,
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646575186329e6a6a38350591.png",
+        "comment": false,
+        "super_calculate": false,
+        "id": 3,
+        "text": "frame\n\n\n\n",
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646575186329e6a6a38350591.png",
+        "newImage": "https://i.ibb.co/hXY3JwR/IMG-20210629-185241.jpg"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16099432823808ab9032869615.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16099432823808ab9032869615.png",
+        "text": "MaxGesture\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1609943282/3808ab90/32869615.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611693883259237cf33108373.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611693883259237cf33108373.png",
+        "text": "MaxAnger\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1611693883/259237cf/33108373.png"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "MaxFun - пиксели видно!!!\nНу, ладно, не пиксели, но по сравнению с Сашей более смазанно\nНо не факт, что кто-то заметит"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646572179212081bc38349710.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646572179212081bc38349710.png",
+        "text": "MaxFun\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1646572179/212081bc/38349710.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coSsYrqRbsketch-1659560975706-copy-473x1000.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coSsYrqRbsketch-1659560975706-copy-473x1000.png",
+        "text": "MaxSmoke\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1646572179/212081bc/38349710.png"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16098800585c78a0b432864804.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16098800585c78a0b432864804.png",
+        "text": "SashaCalm\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1609880058/5c78a0b4/32864804.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii160988007430f95c3432864813.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii160988007430f95c3432864813.png",
+        "text": "SashaShy\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1609880074/30f95c34/32864813.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611744429d45a133e33115129.png",
+        "comment": false,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 3,
+        "text": "SashaConfident\n\n\n\n",
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611744429d45a133e33115129.png",
+        "newImage": "https://images.vfl.ru/ii/1611744429/d45a133e/33115129.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16122120501d5f9ccb33181283.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii16122120501d5f9ccb33181283.png",
+        "text": "SashaDreamy\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1612212050/1d5f9ccb/33181283.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii161229982671d0a3fb33194279.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii161229982671d0a3fb33194279.png",
+        "text": "SashaApproval\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1612299826/71d0a3fb/33194279.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1612886477a748bd4a33274057.png",
+        "comment": false,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 3,
+        "text": "SashaDoubt\n\n\n\n",
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1612886477a748bd4a33274057.png",
+        "newImage": "https://images.vfl.ru/ii/1612886477/a748bd4a/33274057.png"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "   "
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1610981740a286c42e32996769.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1610981740a286c42e32996769.png",
+        "text": "LitCalm\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1610981740/a286c42e/32996769.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611862126ce5c692c33135682.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1611862126ce5c692c33135682.png",
+        "text": "LitSad\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1611862126/ce5c692c/33135682.png"
+      },
+      {
+        "id": 3,
+        "text": "    ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "bg_color": [
+          0.9,
+          0.9,
+          0.95
+        ],
+        "image": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646572245206dd02e38349723.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsimages.vfl.ruii1646572245206dd02e38349723.png",
+        "text": "NoName\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1646572245/206dd02e/38349723.png"
+      },
+      {
+        "id": 3,
+        "text": "    ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.covcHLRYRsketch-1660064133927-copy-473x1000.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.covcHLRYRsketch-1660064133927-copy-473x1000.png",
+        "text": "OlegFun\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1645560866/9e5ef685/38174052.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.co0CDBSsQsketch-1660071446019-copy-493x1000.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.co0CDBSsQsketch-1660071446019-copy-493x1000.png",
+        "text": "OlegDreamy\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1645560801/fd527cc2/38174044.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.cokGmbjbJsketch-1660071300753-copy-473x1000.png",
+        "comment": false,
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.cokGmbjbJsketch-1660071300753-copy-473x1000.png",
+        "text": "OlegWink\n\n\n\n",
+        "newImage": "https://images.vfl.ru/ii/1645560839/eba0aa47/38174050.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coWfSVmn5sketch-1660071251828-copy-473x1000.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coWfSVmn5sketch-1660071251828-copy-473x1000.png",
+        "text": "OlegSad\n\n\n\n",
+        "newImage": "https://i.ibb.co/mBWjk1d/sketch-1653920334004-1-1.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coVqGcPsmsketch-1660212413348-copy-473x1000.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coVqGcPsmsketch-1660212413348-copy-473x1000.png",
+        "text": "OlegListening\n\n\n\n",
+        "newImage": "https://i.ibb.co/mBWjk1d/sketch-1653920334004-1-1.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coSnnC5VZsketch-1660212490211-copy-473x1000.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coSnnC5VZsketch-1660212490211-copy-473x1000.png",
+        "text": "OlegApproval\n\n\n\n",
+        "newImage": "https://i.ibb.co/mBWjk1d/sketch-1653920334004-1-1.png"
+      },
+      {
+        "id": 3,
+        "text": "    ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.co61MPzSxsketch-1653923420423-1-1.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.co61MPzSxsketch-1653923420423-1-1.png",
+        "text": "ClassCalm\n\n\n\n",
+        "newImage": "https://i.ibb.co/61MPzSx/sketch-1653923420423-1-1.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coyX0ZVhQsketch-1653923149320-1-1.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coyX0ZVhQsketch-1653923149320-1-1.png",
+        "text": "ClassTired\n\n\n\n",
+        "newImage": "https://i.ibb.co/yX0ZVhQ/sketch-1653923149320-1-1.png"
+      },
+      {
+        "id": 3,
+        "text": "    ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.co9N29nqPsketch-1657545818710-copy-493x1000.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.co9N29nqPsketch-1657545818710-copy-493x1000.png",
+        "text": "ChemFun\n\n\n\n",
+        "newImage": "https://i.ibb.co/9N29nqP/sketch-1657545818710-copy-493x1000.png"
+      },
+      {
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.cotPNgYGdsketch-1657827263573-copy-473x1000.png",
+        "id": 3,
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.cotPNgYGdsketch-1657827263573-copy-473x1000.png",
+        "text": "ChemFun2\n\n\n\n",
+        "newImage": "https://i.ibb.co/tPNgYGd/sketch-1657827263573-copy-473x1000.png"
+      },
+      {
+        "id": 3,
+        "text": "  ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text": "AntonAngry\n\n\n\n",
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coKzRVnMgsketch-1659559858160-copy-473x1000.png",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coKzRVnMgsketch-1659559858160-copy-473x1000.png"
+      },
+      {
+        "id": 3,
+        "text": "AntonCalm\n\n\n\n",
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coDDDJjsWsketch-1659560132599-copy-473x1000.png",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coDDDJjsWsketch-1659560132599-copy-473x1000.png"
+      },
+      {
+        "id": 3,
+        "text": "  ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 3,
+        "text": "bug\n\n\n\n",
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.comz3dMjzsketch-1660850770183-copy-250x250.png",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.comz3dMjzsketch-1660850770183-copy-250x250.png"
+      },
+      {
+        "id": 3,
+        "text": "Quests\n\n\n\n",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coGJ4wzGjimgonline-com-ua-Resize-x8n01-GYh-GAph7-R3g.png",
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coGJ4wzGjimgonline-com-ua-Resize-x8n01-GYh-GAph7-R3g.png"
+      },
+      {
+        "id": 3,
+        "text": "achieve\n\n\n\n",
+        "image": "https://shaba-games.ru/cashed_images/httpsi.ibb.coNLdM75vsketch-1661504341804-copy-168x250.png",
+        "url": "https://shaba-games.ru/cashed_images/httpsi.ibb.coNLdM75vsketch-1661504341804-copy-168x250.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Управление",
+    "answers": [
+      {
+        "id": 4,
+        "text": "place1",
+        "url": "https://images.vfl.ru/ii/1611414164/75f62a26/33068132.jpg"
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\nansw = {}\nend",
+        "text": "   "
+      },
+      {
+        "id": 13,
+        "text": "Фон",
+        "comment": false,
+        "run": [
+          13
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Панель управления",
+        "comment": false,
+        "run": [
+          14
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Нажатие на иконку",
+        "comment": false,
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Стрелочка меню",
+        "comment": false,
+        "run": [
+          23
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Текст меню",
+        "run": [
+          22
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Главная функция меню",
+        "run": [
+          21
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Достижения",
+    "answers": [
+      {
+        "id": 4,
+        "text": "place1",
+        "url": "https://images.vfl.ru/ii/1611414164/75f62a26/33068132.jpg"
+      },
+      {
+        "id": 13,
+        "text": "Фон",
+        "comment": false,
+        "run": [
+          13
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Панель управления",
+        "comment": false,
+        "run": [
+          14
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Нажатие на иконку",
+        "comment": false,
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 47,
+        "text": "Текст достижения",
+        "run": [
+          47
+        ]
+      },
+      {
+        "id": 48,
+        "text": "Заголовок",
+        "run": [
+          48
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 5,
+        "calculate": false,
+        "text": "   ",
+        "lua_do": "function lua_do()\n\nimages.place1.isVisible = false\ndiagonal = (canvas.height^2 <plus> canvas.width^2)^0.5\nset.bg (\"https://images.vfl.ru/ii/1611414164/75f62a26/33068132.jpg\")\nset.setting ()\n\nmini = {}\nn = 1\ntopScroll = 0.1*canvas.width\ncurrentY = 0\nheaders = {}\nset.header(\"Концовки\")\n\nset.miniText(g.positiveEnd and \"<plus> Честная дорога\" or \"<plus> ????\")\nset.miniText(g.negativeEnd and \"- Не теряя надежды\" or \"- ????\")\nmini[1].bg.strokeWidth = canvas.width/150\nmini[1].bg.stroke = {0, 0.6, 0}\nmini[2].bg.strokeWidth = canvas.width/150\nmini[2].bg.stroke = {0.7, 0, 0}\n\nset.header(\"Достижения\")\n\nset.miniText(g.programmer1 and '\"Программист 10 lvl\" — программировать на информатике.' or \"????\")\nset.miniText(g.programmer2 and '\"Программист 30 lvl\" — создать свою программу.' or \"????\")\nset.miniText(g.programmer3 and '\"Программист 50 lvl\" — создать свою программу без единого бага.' or \"????\")\nset.miniText(g.chem and '\"Юный Менделеев\" — не пропускать химию.' or \"????\")\nset.miniText(g.silence and '\"Молчание — золото\" — не задавать дополнительных вопросов.' or \"????\")\nset.miniText(g.anonim and '\"Анонимус\" — не вводить имя персонажа.' or \"????\")\n\nlocal widget = require(\"widget\")\nscrollView = widget.newScrollView{\n  top = topScroll,\n  left = -canvas.parent.width*0.02,\n  width = canvas.width,\n  height = canvas.height - headers[1].y,\n  scrollWidth = canvas.width,\n  scrollHeight = mini[8].bg.y <plus> mini[8].bg.height/2 - topScroll,\n  hideBackground = true,\n  horizontalScrollDisabled = true\n}\ncanvas.parent:insert(scrollView)\nfor i = 1, 8 do\n  scrollView:insert(mini[i].bg)\n  scrollView:insert(mini[i].text)\n  if mini[i].icon then\n    scrollView:insert(mini[i].icon)\n  end\nend\nfor i = 1, 2 do\n  scrollView:insert(headers[i])\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Анимация",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "comment": false,
+        "lua_render": "function lua_render()\nrect.isVisible = false\nrect.shadow.isVisible = false\nrect.isHitTestable = true\n\nround = display.newRoundedRect (rect.parent, rect.x, rect.y, rect.width, rect.height, 0.01*rect.width)\nround.fill = {1}\nround.strokeWidth = rect.width/300\nround:setStrokeColor (0, 0, 0)\nround:addEventListener(\"tap\", function()\n  round.fill = {0}\n  answerText:setFillColor(1, 1, 1)\n  answerText:toFront()\n  round.strokeWidth = 0\nend)\n\nanswerText:toFront()\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "       ",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "Объявление функций lua_do, lua_if, lua_text",
+    "answers": [
+      {
+        "id": 2,
+        "calculate": false,
+        "text": "Объявление функций lua_do, lua_if, lua_text",
+        "super_calculate": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Посимвольное отображение текста",
+    "answers": [
+      {
+        "id": 2,
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction anim.enterText(txtobj, params)\n    if txtobj and txtobj.text and txtobj.removeSelf then\n        txtobj.isVisible = false\n        local params = params or {}\n        local timeForLet = type(params.timeForLet) == \"number\" and params.timeForLet or 30\n        local delay = type(params.delay) == \"number\" and params.delay or 2\n        local lets = {}\n        for i = 1, utf8.len (txtobj.text) do\n            lets[i] = utf8.sub (txtobj.text, i, i)\n        end\n        mobj = display.newText(canvasGroup, \"\", txtobj.x, txtobj.y, txtobj.width, txtobj.height, fonts.value[g.curFont], txtobj.size)\n        mobj:setFillColor (0, 0, 0)\n        local i = 0\n        timer.performWithDelay(timeForLet, function()\n  if mobj and mobj.text then\n    i = i <plus> 1 \n    mobj.text = mobj.text .. lets[i] \n  end\nend, #lets, \"enterText\")\n        timer.performWithDelay((timeForLet * #lets) * delay, \nfunction()\n  if mobj and mobj.removeSelf then\n    mobj:removeSelf() \n    mobj = nil \n    txtobj.isVisible = true\n  end\nend, \"enterText\")\n        return true\n    end\n    return false\nend\nend",
+        "calculate": false,
+        "text": "Анимация посимвольного отображения текста",
+        "text_color": []
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Появление персонажа",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction anim.appear (name, options)\n  set.hero (name, options)\n  heroes[name].x = heroes[name].x - 0.02*canvas.width\n  heroes[name].alpha = 0\n  transition.to (heroes[name], {\n    time = 200,\n    delay = 500,\n    x = heroes[name].x <plus> 0.02*canvas.width,\n    alpha = 1\n  })\nend\nend",
+        "text": "Анимация появления персонажа"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Исчезновение персонажа",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction anim.disappear (name, options)\n  if not heroes[name] then\n    set.hero(name, options)\n  end\n  transition.to (heroes[name], {\n    time = 200,\n    delay = 500,\n    x = heroes[name].x - 0.03*canvas.width,\n    alpha = 0\n  })\n  timer.performWithDelay (700,   \n  function ()\n    if heroes[name] and heroes[name].removeSelf then\n      heroes[name]:removeSelf () \n    end\n  end)\nend\nend",
+        "calculate": false,
+        "text": "Анимация исчезновения персонажа",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Нажатие на иконку",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction anim.icon (obj)\n  transition.to (obj, {\n    time = 35,\n    xScale = 0.8*obj.xScale,\n    yScale = 0.8*obj.yScale\n  })\n  timer.performWithDelay (35,   \n    function ()\n      if obj and obj.removeSelf then\n        transition.to (obj, {\n        time = 15,\n        xScale = 1.2*obj.xScale,\n        yScale = 1.2*obj.yScale\n        })\n      end\n    end) \n  end\nend",
+        "text": "Анимация иконки меню",
+        "id": 2,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Фон",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction set.bg (url)\n  bg = display.newImage (url)\n  if not bg then\n    bg = display.newImage(canvasGroup, nameForImages(url), system.DocumentsDirectory)\n  end\n  bg.x = canvas.width/2\n  bg.y = canvas.height/2\n  local xs = canvas.width/bg.width\n  local ys = canvas.height/bg.height\n  bg.xScale = math.max (xs, ys)\n  bg.yScale = bg.xScale\nend\nend",
+        "calculate": false,
+        "text": "Создание фона",
+        "id": 2
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction set.filter(params)\n  filter = display.newRect(canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\n  filter.fill = params.fill\n  filter.blendMode = params.blendMode\nend\nend",
+        "text": "Фильтр на фон",
+        "id": 13,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Панель управления",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction set.setting_one (n, x, y, width)\n  setting_bg[n] = display.newRoundedRect (canvasGroup, x, y, width, width, width/10)\n  setting_bg[n].alpha = curAlpha\n  setting_bg[n].strokeWidth = canvas.width/300\n  setting_bg[n]:setStrokeColor(0, 0, 0)\nend\n\nfunction set.setting_img (name, url, i, yScale)\n  if not yScale then \n    yScale = 0.85 \n  end\n  vars[name] = display.newImage (url)\n  vars[name]:setFillColor(0)\n  vars[name].x = setting_bg[i].x\n  vars[name].y = setting_bg[i].y\n  vars[name].yScale = 0.09*yScale*canvas.width/vars[name].height\n  vars[name].xScale = vars[name].yScale\nend\nend",
+        "text": "Создание фона одной кнопки панели и изображения на кнопке"
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "Создание панели управления",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction set.setting ()\n  setting_bg = {}\n  local width = 0.09*canvas.width\n  local x = 0.084*canvas.width\n  local y = 0.0709*canvas.width\n  local t = {x, canvas.width-2*x-width/3, canvas.width-x}\n  for i = 1, 3 do\n    set.setting_one (i, t[i], y, width)\n  end\n\n  servicePage = math.max (g.current_id - 2, 1)\n  if buttons[servicePage][1].name == \"text\" then\n    setting_left = display.newText (canvasGroup, \"Aa\", setting_bg[2].x, y, \"Roboto-Bold\", math.round (0.0625*canvas.width) )\n    setting_left:setFillColor (0, 0, 0)\n  else\n    set.setting_img (\"setting_left\", buttons[servicePage][1].name, 2, buttons[servicePage][1].yScale)\n  end\n  set.setting_img (\"setting_right\", buttons[servicePage][2].name, 3, buttons[servicePage][2].yScale)\n\n  final1 = function ()\n    timer.cancel (\"enterText\")\n    showPage {id = buttons[servicePage][1].page, transition = \"instant\"}\n  end\n  final2 = function ()\n    timer.cancel (\"enterText\")\n    showPage {id = buttons[servicePage][2].page, transition = \"instant\"}\n  end\n  setting_bg[2]:addEventListener (\"tap\", function ()\n    anim.icon (setting_left)\n    timer.performWithDelay (100, final1)\n  end)\n  setting_bg[3]:addEventListener (\"tap\", function ()\n    anim.icon (setting_right)\n    timer.performWithDelay (100, final2)\n  end) \nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Персонаж",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "Стандартный набор №1 для персонажей",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction set.hero_case1 (name, options)\noptions.y = options.y or 0.75*canvas.height\noptions.yScale = options.yScale or canvas.height*0.9/heroes[name].height\noptions.xScale = options.yScale\nfor k, v in pairs (options) do\n  heroes[name][k] = v\nend\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction set.hero (name, options)\n  heroes[name] = display.newImage (g.urls[name])\n  if not heroes[name] then\n    heroes[name] = display.newImage(canvasGroup, nameForImages(g.urls[name]), system.DocumentsDirectory)\n  end\n  options = options or {}\n  if not options.position then\n    heroes[name].x = options.x and options.x*canvas.width or canvas.width/2\n    heroes[name].y = options.y and options.y*canvas.height or 0.75*canvas.height\n    heroes[name].yScale = options.yScale and canvas.height*options.yScale/heroes[name].height or canvas.height*0.9/heroes[name].height\n    heroes[name].xScale = heroes[name].yScale\n    heroes[name].rotation = options.rotation\n   \n  elseif options.position == \"left\" then\n    options = {x = canvas.width/4}\n    set.hero_case1 (name, options)\n  elseif options.position == \"right\" then\n    options = {x = canvas.width*3/4}\n    set.hero_case1 (name, options)\n  elseif options.position == \"up\" then\n    options = {x = 0.46*canvas.width, y = 0.75*canvas.height, yScale = canvas.height*0.97/heroes[name].height}\n    set.hero_case1 (name, options)\n  end\nend\nend",
+        "text": "Создание персонажа",
+        "id": 2,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Текст",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "Создание текста ",
+        "calculate": false,
+        "lua_do": "function lua_do()\n  function set.text (txt)\n    text_bg = display.newRect (canvasGroup, canvas.width/2, 0, canvas.width*0.92, 0)\n    text_bg.alpha = curAlpha\n    text_bg:addEventListener (\"tap\", \n      function ()\n        if mobj and mobj.removeSelf then\n          mobj:removeSelf ()\n          text.isVisible = true\n        end\n      end)\n    --отступ в пять пробелов\n    local tab = \"     \"\n    if utf8.find(txt, \"<s>\n\") and not g.scenes[page].poem then\n      txt = utf8.gsub(txt, \"<s>\n%s*\", \"<s>\n\" .. tab)\n      txt = tab .. txt\n    end\n    txt = utf8.gsub(txt, \"user_name\", user_name)\n  \n    text = display.newText ({\n      parent = canvasGroup,\n      text = txt,\n      x = canvas.width/2,\n      width = 0.9*canvas.width,\n      font = fonts.value[g.curFont],\n      fontSize = sizes.value[g.curSize]*diagonal\n    }) \n    text.y = 0.14*canvas.width <plus> text.height/2\n    text:setFillColor (0, 0, 0)\n    text_bg.height = text.height\n    print(text_bg.height)\n    text_bg.y = text.y\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Сохранение данных",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "text": "Сохранение данных",
+        "lua_do": "function lua_do()\nfunction set.saving ()\n  if g.scenes[page].bg then\n    save.bg = g.scenes[page].bg\n  end\n  if g.scenes[page].filter then\n    save.filter = g.scenes[page].filter\n  end\n  if g.scenes[page].heroes then\n    local t\n    for i = 1, #g.scenes[page].heroes do\n      t = g.scenes[page].heroes[i]\n      if t.task == \"set\" or t.task == \"appear\" then\n        save.heroes[t.name] = {options = t.options}\n      elseif t.task == \"disappear\" or t.task == \"remove\" then\n        save.heroes[t.name] = nil\n      end\n    end\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 17,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction addAchieve(var)\n  if not g[var] then\n    g[var] = true\n    timer.performWithDelay(150, function()\n    local alert = display.newText ({\n      parent = canvasGroup,\n      text = \"Новое достижение!\",\n      x = canvas.width*0.44,\n      y = 0.0709*canvas.width,\n      --width = mini[n].bg.width*0.8,\n      font = fonts.value[g.curFont],\n      fontSize = sizes.value[g.curSize]*diagonal,\n      align = \"center\"\n    })\n    alert.fill = {0}\n    alert.alpha = 0\n    transition.fadeIn(alert, {delay = 500, time = 1000} )\n    local bg = display.newRoundedRect (canvasGroup, alert.x, alert.y, alert.width*1.05, alert.height*1.05, 0.009*canvas.width)\n    bg.fill = {1, 0.7}\n    bg.alpha = 0\n    transition.fadeIn(bg, {delay = 500, time = 1000} )\n    bg.alert = alert\n    alert:toFront()\n    bg:addEventListener(\"tap\",   function(event)\n  event.target.alert:removeSelf()\n  event.target:removeSelf()\nend)\nend)\n  end\nend\nend",
+        "text": "Выдать достижение"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Ответ",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "text": "Создание ответа",
+        "lua_do": "function lua_do()\nfunction set.answer (t, i, y)\n  answ[i].text = display.newText ({\n    parent = canvasGroup, \n    text = t.lua_text and t:lua_text() or t.text,\n    x = canvas.width/2,\n    width = 0.75*canvas.width,\n    font = fonts.value[g.curFont],\n    fontSize = sizes.value[g.curSize]*diagonal\n  })\n  answ[i].text.y = y - answ[i].text.height/2\n  answ[i].text:setFillColor (0, 0, 0)\n  local d = answ[i].text\n  answ[i].bg = display.newRoundedRect (canvasGroup, d.x, d.y, d.width*1.05, d.height*1.05, 0.009*canvas.width)\n  local delta = answ[i].bg.height/answ[i].bg.width\n  if delta < 0.1 then\n    answ[i].bg.height = d.height*1.6\n  elseif delta < 0.125 then\n    answ[i].bg.height = d.height*1.4\n  elseif delta < 0.14 then\n    answ[i].bg.height = d.height*1.2\n  end\n  answ[i].bg.alpha = curAlpha\n  answ[i].bg.strokeWidth = canvas.width/300\n  answ[i].bg:setStrokeColor (0, 0, 0)\n  answ[i].group = display.newGroup ()\n  answ[i].group:insert (answ[i].bg)\n  answ[i].group:insert (answ[i].text)\n  answ[i].bg:addEventListener (\"tap\", function (event)\n\n    local c = event.target.t\n    local bg = event.target\n    local txt = event.target.txt\n    if c.lua_do then\n      c:lua_do ()\n    end\n\n    if c.setTrue then\n      vars[c.setTrue] = true\n    end\n    if c.addAchieve then\n      addAchieve(c.addAchieve)\n    end\n\n    if c.var then\n      local q = {}\n      for a = 1, #c.var do\n        q[a] = mySplit (c.var[a])\n      end\n      local var, sign, value\n      for a = 1, #q do\n        var = q[a][1]\n        sign = q[a][2]\n        value = q[a][3]\n        if #sign > 1 then\n          value = vars[value]\n        elseif value == \"true\" then\n          value = true\n        elseif value == \"false\" then\n          value = false\n        end\n        sign = string.sub (sign, 1, 1)\n        vars[var] = sign == \"=\" and value or sign == \"<plus>\" and vars[var] <plus> value or sign == \"*\" and vars[var] * value\n      end\n    end\n\n    set.saving ()\n    page = c.page or page <plus> 1\n    bg:setFillColor (0, 0, 0)\n    txt:setFillColor (1, 1, 1)\n    bg.strokeWidth = 0\n    timer.cancel (\"enterText\")\n    event.target.isHitTestable = false\n    \n    if c.endDay then\n      anim.day(c.endDay)\n    else\n      timer.performWithDelay (110, \n    function ()\n      showPage {id = 2, transition = \"instant\"} \n    end)\n    end\nend)\n  answ[i].bg.t = t\n  answ[i].bg.cur = i\n  answ[i].bg.txt = answ[i].text\n  y = y - answ[i].bg.height - 0.02*canvas.width\n  return y\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Кнопка пролистывания",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "Создание кнопки пролистывания",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction set.arrow (options)\n  local w = options and options.w or 0.15*canvas.width\n  local x = options and options.x or canvas.width*0.885\n  local y = options and options.y or 0.935*canvas.height\n  local n = options and options.n or 1\n  answ[n] = {}\n  answ[n].a = display.newPolygon (canvasGroup, x, y, {\n  w/2, 0,\n  w/-2, w/-2,\n  w/-4, 0,\n  w/-2, w/2,\n})\n  answ[n].a.alpha = curAlpha\n  answ[n].a.strokeWidth = canvas.width/300\n  answ[n].a:setStrokeColor (0, 0, 0)\n  answ[n].p = display.newCircle (canvasGroup, answ[n].a.x, answ[n].a.y, answ[n].a.width/2)\n  answ[n].p.alpha = 0\n  answ[n].p.isHitTestable = true\n  answ[n].p.a = answ[n].a\n\n  local listener = function (event)\n\n  local curScene = g.scenes[page]\n  if g.scenes[page].input then\n    vars[g.scenes[page].input.stop] = myInput.text\n     if page == 10 and user_name == \" \" or #user_name == 0 then\n      user_name = \"Дима\"\n      addAchieve(\"anonim\")\n    end\n  end\n  set.saving ()\n  if g.scenes[page].arrow then\n    local t = g.scenes[page].arrow\n    if vars[t.ifTrue] then\n      page = t.page1\n    else\n      page = t.page2\n    end\n  else\n    page = g.scenes[page].page or page <plus> 1\n  end\n  if event.target.a then\n    event.target.a:setFillColor (0, 0, 0)\n    event.target.a.strokeWidth = 0\n  end\n\n  if curScene.setTrue then\n      vars[curScene.setTrue] = true\n    end\n  if curScene.addAchieve then\n    addAchieve (curScene.addAchieve)\n  end\n\n  event.target.isHitTestable = false\n\n  timer.cancel (\"enterText\")\n  if curScene.endDay then\n    anim.day(curScene.endDay)\n  else\n    timer.performWithDelay (110, \n    function ()\n      answ = {}\n      showPage {id = 2, transition = \"instant\"} \n    end)\n  end\n  return true\n  end\n  answ[n].p:addEventListener (\"tap\", listener)\n  bg:addEventListener (\"tap\", listener)\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Главная функция",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "Преобразование строки с разделителями в таблицу",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction mySplit (inputstr, sep)\n  if sep == nil then\n    sep = \"%s\"\n  end\n  local t = {}\n  for str in string.gmatch (inputstr, \"([^\"..sep..\"]<plus>)\") do\n    table.insert(t, str)\n  end\n  return t\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction mainBg()\n  if g.scenes[page].bg then\n    if g.scenes[page].bg == \"monitor\" then\n      set.bg (g.urls.inf)\n      bg.xScale = bg.xScale*1.5\n      bg.yScale = bg.xScale\n      bg.x = 0.27*canvas.width\n    else\n      set.bg (g.scenes[page].bg)\n    end\n  elseif save.bg then\n    set.bg (save.bg)\n  end\n  if g.scenes[page].bg_top then\n    bg.y = bg.contentHeight/2\n  end\n\n   if g.scenes[page].animation then\n    local c = g.scenes[page].animation\n    if type(c) == \"table\" then\n      anim[ c[1] ](c[2])\n    else\n      anim[c]()\n    end\n  end\n\n  if g.scenes[page].removeFilter then\n    save.filter = nil\n  end\n  if g.scenes[page].filter then\n    set.filter(g.scenes[page].filter)\n  elseif save.filter then\n    set.filter(save.filter)\n  end\nend\nend",
+        "calculate": false,
+        "text": "Фон",
+        "id": 20
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction mainHeroes()\n  if g.scenes[page].removeHeroes then\n    save.heroes = {}\n  else\n    for k, v in pairs (save.heroes) do\n      set.hero (k, save.heroes[k].options)\n    end\n  end\n  local t\n  if g.scenes[page].hero then\n    t = g.scenes[page].hero\n    g.scenes[page].heroes = g.scenes[page].heroes or {}\n    if vars[t.ifTrue] then\n      table.insert (g.scenes[page].heroes, t.hero1)\n    else\n      table.insert (g.scenes[page].heroes, t.hero2)\n    end\n  end\n  if g.scenes[page].heroes then\n    for i = 1, #g.scenes[page].heroes do\n      t = g.scenes[page].heroes[i]\n      if t.task == \"set\" then\n        set.hero (t.name, t.options)\n      elseif t.task == \"appear\" then\n        anim.appear (t.name, t.options)\n      elseif t.task == \"disappear\" then\n        anim.disappear (t.name, t.options)\n      elseif t.task == \"remove\" then\n        if heroes[t.name] and heroes[t.name].removeSelf then\n          heroes[t.name]:removeSelf()\n        end\n      end\n    end\n  end\nend\nend",
+        "calculate": false,
+        "text": "Персонажи",
+        "id": 20
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction mainText()\n  local txt = \"\"\n  if g.scenes[page].text then\n    txt = g.scenes[page].text\n  end\n  if g.scenes[page].texts then\n    local t = g.scenes[page].texts\n    if vars[t.ifTrue] then\n      txt = txt .. t.text1\n    else\n      txt = txt .. t.text2\n    end\n  end\n  if g.scenes[page].lua_text then\n    txt = g.scenes[page]:lua_text()\n  end\n  if #txt > 0 then\n    set.text(txt)\n    anim.enterText (text, {timeForLet = speed.value[g.curSpeed]*23})\n  end\nend\nend",
+        "calculate": false,
+        "text": "Текст",
+        "id": 20
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction mainAnswers()\n  answ = {}\n  if g.scenes[page].answers then\n    t = table.copy2 (g.scenes[page].answers)\n    for i = #t, 1, -1 do\n      if t[i].lua_if and not t[i]:lua_if() then\n        table.remove (t, i)\n      end\n      if t[i].ifTrue and not vars[t[i].ifTrue] then\n        table.remove (t, i)\n      end\n    end\n    if #t > 0 then\n      local y = 0.95*canvas.height\n      for i = 1, #t do\n        answ[i] = {}\n      end\n      for i = #t, 1, -1 do\n        y = set.answer (t[i], i, y)\n      end\n    elseif not g.scenes[page].noArrow then\n      set.arrow ()\n    end\n  elseif not g.scenes[page].noArrow then\n    set.arrow ()\n  end\nend\nend",
+        "calculate": false,
+        "id": 20,
+        "text": "Ответы"
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction myMain ()\n  curAlpha = g.scenes[page].bg_alpha or 0.7\n  mainBg()\n\n  if g.scenes[page].input then\n    myInput = native.newTextField (0.5*canvas.width, 0.095*canvas.height, 0.92*canvas.width, sizes.value[g.curSize]*\n1.3*diagonal)\n   canvasGroup:insert (myInput)\n   myInput.placeholder = g.scenes[page].input.start\n  end\n\n  if g.scenes[page].heroesToFront then\n    timer.performWithDelay(1,   \n    function()\n        mainHeroes()\n    end)\n  else\n    mainHeroes()\n  end\n  set.setting()\n  mainText()\n\n  mainAnswers()\nend\nend",
+        "text": "Главная функция"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Главная функция меню",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 21,
+        "calculate": false,
+        "text": "   ",
+        "lua_do": "function lua_do()\nimages.place1.isVisible = false\nset.bg (\"https://images.vfl.ru/ii/1611414164/75f62a26/33068132.jpg\")\nset.setting ()\nmini = {}\nset.miniText (1, \"Шрифт: \".. fonts.name[g.curFont])\nset.miniText (2, \"Размер шрифта: \".. sizes.name[g.curSize])\nset.miniText (3, \"Скорость текста: x\".. speed.name[g.curSpeed])\nlocal functions = {\n  function () \n    g.curFont = g.curFont - 1\n    if g.curFont <= 0 then\n      g.curFont = 4\n    end\n  end,\n  function ()\n    g.curFont = g.curFont <plus> 1\n    if g.curFont >= 5 then\n      g.curFont = 1\n    end\n  end,\n  function () \n    g.curSize = math.max (1, g.curSize - 1)\n  end,\n  function () \n    g.curSize = math.min (4, g.curSize <plus> 1)\n  end,\n  function () \n    g.curSpeed = math.max (1, g.curSpeed - 1)\n  end,\n  function () \n    g.curSpeed = math.min (7, g.curSpeed <plus> 1) \n  end\n  }\nlocal x = 0.1\nlocal N = 1\nfor n = 1, 6 do\n  set.arrow ({\n    n = n,\n    w = 0.15*canvas.width,\n    x = x*canvas.width,\n    y = mini[N].bg.y,\n    f = functions[n]\n  })\n  x = 1 - x\n  if n%2 == 0 then\n    N = N <plus> 1\n  end\nend\nansw[1].a:scale (-1, 1)\nansw[3].a:scale (-1, 1)\nansw[5].a:scale (-1, 1)\nend"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Текст меню",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction set.miniText (n, text)\n  local k = n - 2\n  mini[n] = {}\n  mini[n].bg = display.newRoundedRect (canvasGroup, canvas.width/2, 0, 0.62*canvas.width, 0, 0.009*canvas.width)\n  mini[n].bg.alpha = 0.7\n  mini[n].text = display.newText ({\n    parent = canvasGroup,\n    text = text,\n    x = canvas.width/2,\n    width = mini[n].bg.width*0.95,\n    font = fonts.value[g.curFont],\n    fontSize = sizes.value[g.curSize]*diagonal,\n    align = \"center\"\n  })\n  mini[n].text.y = canvas.height/2 <plus> k*0.25*canvas.width\n  mini[n].bg.y = mini[n].text.y\n  if mini[n].text.height < 0.04*canvas.height then\n    mini[n].bg.height = 0.125*canvas.width\n  else\n    mini[n].bg.height = mini[n].text.height*1.05\n  end\n  mini[n].text:setFillColor (0, 0, 0)\nend\nend",
+        "text": "    ",
+        "id": 22,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Стрелочка меню",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 23,
+        "calculate": false,
+        "text": "    ",
+        "lua_do": "function lua_do()\nfunction set.arrow (options)\n  local w = options and options.w or 0.15*canvas.width\n  local x = options and options.x or canvas.width*0.885\n  local y = options and options.y or 0.935*canvas.height\n  local n = options and options.n or 1\n  local f = options and options.f or function () showPage {id = 2, transition = \"instant\"} end\n  answ[n] = {}\n  answ[n].a = display.newPolygon (canvasGroup, x, y, {\n  w/2, 0,\n  w/-2, w/-2,\n  w/-4, 0,\n  w/-2, w/2,\n})\n  answ[n].a.alpha = 0.7\n  answ[n].a.strokeWidth = canvas.width/300\n  answ[n].a:setStrokeColor (0, 0, 0)\n  answ[n].p = display.newCircle (canvasGroup, answ[n].a.x, answ[n].a.y, answ[n].a.width/2)\n  answ[n].p.alpha = 0\n  answ[n].p.isHitTestable = true\n  answ[n].p:addEventListener (\"tap\", function ()\n  answ[n].a:setFillColor (0, 0, 0)\n  answ[n].a.strokeWidth = 0\n  f ()\n  timer.performWithDelay (110, \n  function ()\n    answ = {}\n    showPage {id = 4, transition = \"instant\"}\n  end)\nend)\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Текст",
+    "answers": []
+  },
+  {
+    "id": 25,
+    "text": "Текст новеллы",
+    "answers": [
+      {
+        "id": 25,
+        "text": "День 1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 26,
+        "text": "Знакомство, литература, обсуждение",
+        "run": [
+          26
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Информатика",
+        "run": [
+          27
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Классный час",
+        "run": [
+          28
+        ]
+      },
+      {
+        "id": 29,
+        "text": "Начало совместного творчества",
+        "run": [
+          29
+        ]
+      },
+      {
+        "id": 25,
+        "text": "День 2",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 30,
+        "text": "Кабинет завуча",
+        "run": [
+          30
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 31,
+        "text": "Обсуждение подслушанного",
+        "run": [
+          31
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 33,
+        "text": "Химия",
+        "run": [
+          33
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 34,
+        "text": "Классный час",
+        "run": [
+          34
+        ],
+        "calculate": false
+      },
+      {
+        "id": 25,
+        "text": "День 3",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 35,
+        "text": "Упростить задачу",
+        "run": [
+          35
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 36,
+        "text": "1. Помощь информатика",
+        "run": [
+          36
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 39,
+        "text": "2. Собственное расследование",
+        "run": [
+          39
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 37,
+        "text": "Беседа с Антоном",
+        "run": [
+          37
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 38,
+        "text": "Конец расследования",
+        "run": [
+          38
+        ],
+        "calculate": false
+      },
+      {
+        "id": 25,
+        "text": "День 4",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 41,
+        "calculate": false,
+        "run": [
+          41
+        ],
+        "text": "Плохая концовка (информатика уволили)"
+      },
+      {
+        "id": 25,
+        "text": "День N",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 42,
+        "calculate": false,
+        "run": [
+          42
+        ],
+        "text": "Завершение фанфика"
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 43,
+        "calculate": false,
+        "run": [
+          43
+        ],
+        "text": "Вторая литература"
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 45,
+        "calculate": false,
+        "run": [
+          45
+        ],
+        "text": "Встреча с Максом (хорошая концовка)"
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 46,
+        "text": "Связь с Олегом (плохая концовка)",
+        "run": [
+          46
+        ],
+        "calculate": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn g.isAuthor\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n--g.scenes[1].text = g.scenes[#g.scenes].text\ng.symbols = 0\nfor i = 1, #g.scenes do\n  if g.scenes[i].text then\n    g.symbols = g.symbols <plus> utf8.len (g.scenes[i].text)\n  end\n  if g.scenes[i].texts then\n    g.symbols = g.symbols <plus> utf8.len (g.scenes[i].texts.text1) <plus> utf8.len (g.scenes[i].texts.text2)\n  end\n  if g.scenes[i].answers then\n    for j = 1, #g.scenes[i].answers do\n      if g.scenes[i].answers[j].text then\n        g.symbols = g.symbols <plus> utf8.len (g.scenes[i].answers[j].text)\n      end\n    end\n  end\nend\nend",
+        "calculate": true,
+        "id": 1,
+        "text": "    "
+      },
+      {
+        "comment": true,
+        "bg_color": [
+          0.98,
+          0.98,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nreturn g.isAuthor and false\nend",
+        "text_color": [],
+        "id": 25,
+        "text": "    ",
+        "lua_text": "function lua_text()\nreturn \"Готово:<s>\n\" .. (#g.scenes-1) .. \" страниц, \" .. g.symbols .. \" символов (\".. math.round(g.symbols/178) .. \"%),\" .. table.count(g.urls) .. \" картинок.\"\nend",
+        "no_transition": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Знакомство, литература, обсуждение",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.scenes = {}\ng.scenes[1] = {text = \"В новой школе Вы никак не могли найти нужный кабинет, поэтому подошли к какому-то мальчику:\", \n    bg = g.urls.corridor,\n    heroes = {{task = \"appear\", name = \"SashaCalm\"}},\n    answers = {{text = \"— Не подскажешь, где тридцать четвёртый кабинет?\"}} }\n\ng.scenes[2] = {text = \"— Так ты новенький в нашем классе? — он поднял глаза от учебника. — Меня зовут Саша.\", answers = {{text = \"Представиться\"}} }\n\ng.scenes[3] = {input = {start = \"Введите Ваше имя в игре\", stop = \"user_name\"} }\n\ng.scenes[4] = {text = \"— Привет, user_name, — появился откуда-то ещё один мальчик. — Я Макс. Вижу, с нашим отличником ты уже познакомился.\",\n  heroes = {\n  {name = \"SashaCalm\", task = \"remove\"},\n  {name = \"MaxGesture\", task = \"appear\", options = {x = 0.3} },\n  {name = \"SashaShy\", task = \"set\", options = {x = 0.76} },\n}, answers = {{text = \"— Молодец, Саша. А я без троек год закончил.\"}} }\n\n  g.scenes[5] = {text = \"Прозвенел звонок, и все заторопились на урок.\", heroes = {\n  {name = \"SashaShy\", task = \"remove\"},\n  {name = \"SashaCalm\", task = \"set\", options = {position = \"right\"}} }}\nend",
+        "text": "Знакомство"
+      },
+      {
+        "super_calculate": false,
+        "id": 26,
+        "calculate": true,
+        "lua_do": "function lua_do()\n  g.scenes[6] = {text = \"— Здравствуйте, садитесь, — сказала Александра Борисовна, молодая учительница литературы.\", bg = g.urls.class, bg_alpha = 0.75, bg_top = true, heroes = {\n  {name = \"MaxGesture\", task = \"remove\"},\n  {name = \"SashaCalm\", task = \"remove\"},\n  {name = \"LitCalm\", task = \"appear\", options = {x = 0.4, y = 0.73, yScale = 0.97} }}}\n\n  g.scenes[7] = {text = \"— На прошлом уроке мы говорили о биографии Некрасова, а сегодня начнём разбирать его поэму.\",\n  answers = {{text = \"Незаметно достать телефон\"}} }\n\n  g.scenes[8] = {text = \"Вместо скучной школьной литературы Вы занялись своей — написанием текстового квеста.\"}\n\n  g.scenes[9] = {text = \"Всё было хорошо, пока учительница не сказала:<s>\n   — user_name ответит на этот вопрос.<s>\n   А Вы его даже не слышали...\", answers = {{text = \"Можете повторить вопрос?\"}} }\n\n  g.scenes[10] = {text = \"Даже услышав вопрос, Вы не смогли на него ответить. Похоже, и другие с этим не справились, потому что учительница была в отчаянии.\", heroes = {\n  {name = \"LitCalm\", task = \"remove\"},\n  {name = \"LitSad\", task = \"set\", options = {x = 0.4, y = 0.73, yScale = 0.97} }}}\n\n  g.scenes[11] = {text = \"— Я всегда защищаю молодёжь перед старшими учителями.\"}\n\n  g.scenes[12] = {text = \"— Пытаюсь доказать им, что вы тоже многим увлекаетесь, что вы энергичные и творческие люди, но вы... вы показываете обратное.\"}\n\n  g.scenes[13] = {text = \"После небольшого молчания она сказала:<s>\n     — Достаём листочки, будем писать работу.\", answers = {{text = '\"Может, хоть на тройку наберу...\"'}} }\nend",
+        "text": "Литература"
+      },
+      {
+        "super_calculate": false,
+        "id": 26,
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[14] = {bg = g.scenes[1].bg,\n    text = \"— И когда они поймут, что их предмет может кому-то не нравиться? — сказали Вы Саше после урока.\", heroes = {\n      {name = \"LitSad\", task = \"remove\"},\n      {task = \"appear\", name = \"SashaCalm\"} }}\n\ng.scenes[15] = {\n    text = \"— А мне нравится литература, — ответил он. — Погрузиться в вымышленный мир — разве это не прекрасно?\", \n    heroes = {{name = \"SashaCalm\", task = \"remove\"}, {name = \"SashaDreamy\", task = \"set\"}},\n    answers = {{text = \"— Я предпочитаю современную литературу. А ещё пишу свою.\"}} }\n\n  g.scenes[16] = {text = \"— Ого, сам пишешь книги? — восторженно сказал Саша.\", answers = {{text = \"— Квесты. Но они тоже основаны на сюжете и тексте.\"}}}\n\n  g.scenes[17] = {text = \"— Здорово. Покажешь?\", heroes = {\n  {name = \"SashaDreamy\", task = \"remove\"},\n  {name = \"SashaApproval\", task = \"set\"}}}\n\n  g.scenes[18] = {text = \"Вы показали Саше свой первый и единственный законченный квест.<s>\n     — Неплохо, — сказал он вскоре, — Но прямая речь не так оформляется, и ещё у тебя есть некоторые логические ошибки.\", heroes = {\n  {name = \"SashaApproval\", task = \"remove\"},\n   {name = \"SashaCalm\", task = \"set\"}}}\n\n  g.scenes[19] = {text = \"Слушая советы Саши, Вы изумились:<s>\n     — Ты что, тоже что-то пишешь?<s>\n     — Да нет, просто люблю литературу.\", answers = {{text = \"— Тебе обязательно нужно писать!\"}}}\n\n  g.scenes[20] = {text = \"— Не уверен, что у меня получится. Для этого ведь нужно хорошее воображение.\", heroes = {\n  {name = \"SashaCalm\", task = \"remove\"},\n   {name = \"SashaDoubt\", task = \"set\"}},\n  answers = {{text = \"— Ничего, ты справишься. Если хочешь, можем квест в соавторстве написать.\"}}}\n\n  g.scenes[21] = {text = \"— Мне нравится эта идея. Только про что будет квест?\",\n    answers = {{text = \"— А попробуй придумать сам. Вот увидишь, это не сложно!\"}} }\n\n  g.scenes[22] = {text = \"Саша задумался.<s>\n     — Может, написать квест по Некрасову?\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Хороший вариант! Заодно почитаю книгу. Ведь классика, пожалуй, и правда полезна писателю.\"}} }\n\n  g.scenes[23] = {text = \"— Конечно, полезна! Классика — вещь.\", heroes = {{name = \"SashaDreamy\", task = \"remove\"}, {name = \"SashaApproval\",task = \"set\"}} }\nend",
+        "text": "Обсуждение с Сашей"
+      },
+      {
+        "super_calculate": false,
+        "id": 26,
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[24] = {text = \"— Ты осторожнее, Саша так и про биологию говорит, — посмеялся подошедший Макс.\", heroes = {{name = \"SashaApproval\", task = \"remove\"}, {name = \"MaxFun\", task = \"appear\", options = {position = \"left\"} }, {name = \"SashaShy\", task = \"set\", options = {position = \"right\"} }}, answers = {{text = \"А ты-то чем увлекаешься?\"}} }\n\n  g.scenes[25] = {text = \"— Тусовки, шопинг, игры, футбол.\", heroes = { {name = \"SashaShy\", task = \"remove\"}, {name = \"SashaCalm\", task = \"set\", options = {position = \"right\"}} }, answers = {{text = \"Спортсмен, значит? На чемпионаты ездишь?\"}} }\n\n  g.scenes[26] = {text = \"— Нет, футбол я только смотрю, — усмехнулся Макс.\"}\n\n  g.scenes[27] = {text = \"Звонок на урок не дал Вам ответить. Может, оно и к лучшему...\", heroes = {{name = \"SashaCalm\", task = \"disappear\"}, {name = \"MaxFun\", task = \"disappear\"}} }\nend",
+        "text": "Обсуждение с Максом и Сашей"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Информатика",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ng.scenes[28] = {bg = g.urls.inf, text = \"— Здравствуйте. Я Олег Владимирович, ваш новый учитель информатики.\", heroes = {{name = \"OlegFun\", task = \"appear\", options = {x = 0.46, y = 0.75, yScale = 0.97}}} }\n\ng.scenes[29] = {text = \"— На моих уроках вам не пригодятся учебники и тетради: мы всё будем изучать на практике. В том числе, создавая свои игры, — учитель подмигнул вам.\", heroes = {{name = \"OlegFun\", task = \"remove\"}, {name = \"OlegWink\", task = \"set\", options = {x = 0.55, y = 0.75, yScale = 0.97}}}, }\n\ng.scenes[30] = {text = \"— Компьютеров на всех не хватит, поэтому мы разделимся: одни будут программировать, а другие — заниматься дизайном и тестированием.\", heroes = {{name = \"OlegWink\", task = \"remove\"}, {name = \"OlegFun\", task = \"set\", options = {x = 0.46, y = 0.75, yScale = 0.97}}}, answers = { {text = \"Программирование\", setTrue = \"inf\", addAchieve = \"programmer1\"},{text = \"Дизайн/тестирование\"} }}\n\ng.scenes[31] = {bg = g.scenes[1].bg, text = \"Урок пролетел незаметно. По коридору все шли радостные: информатика была не только интересной, но и последней в расписании.\", heroes = {{name = \"OlegFun\", task = \"remove\"}} }\nend",
+        "text": "Первый урок информатики",
+        "id": 27,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Классный час",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 27,
+        "text": "Первый классный час",
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[32] = {text = \"Путь к свободе преградила классный руководитель.<s>\n— Зайдите в кабинет ненадолго, иначе мы никак не соберёмся.\", heroes = {{name = \"ClassCalm\", task = \"appear\", options = {x = 0.46, y = 0.75, yScale = 1.05}}} }\n\ng.scenes[33] = {bg = g.urls.class, text = \"Ученики были недовольны, но исполнили указание.<s>\n — Расписывайтесь пока за инструктаж, сейчас я его найду, — она листала что-то в телефоне.\", heroes = {{name = \"ClassCalm\", task = \"remove\"},{name = \"ClassCalm\", task = \"appear\", options = {x = 0.46, y = 0.75, yScale = 1.05}}} }\n\ng.scenes[34] = {text = \"— Это кошмар какой-то, сколько всего шлют.\", heroes = { {name = \"ClassCalm\", task = \"remove\"}, {name = \"ClassTired\", task = \"set\", options = {x = 0.46, y = 0.75, yScale = 1.05}} }}\n\ng.scenes[35] = {text = \"Наконец, учительница нашла нужное и прочитала про безопасность на воде. Уже послышались звуки молний на рюкзаках, как вдруг она сказала:\", heroes = { {name = \"ClassTired\", task = \"remove\"}, {name = \"ClassCalm\", task = \"set\", options = {x = 0.46, y = 0.75, yScale = 1.05}} }}\n\ng.scenes[36] = {text = \"— О боже, я не могу. Опять задание прислали, срочное… Ребята, подождите собираться. Сегодня в 16 часов будет онлайн-урок по здоровому образу жизни. \", heroes = { {name = \"ClassCalm\", task = \"remove\"}, {name = \"ClassTired\", task = \"set\", options = {x = 0.46, y = 0.75, yScale = 1.05}} }}\n\ng.scenes[37] = {text = \"— Просто откройте сайт школы, перейдите по ссылке и напишите мне. Ещё от класса нужен один плакат на эту тему.\", heroes = { {name = \"ClassTired\", task = \"remove\"}, {name = \"ClassCalm\", task = \"set\", options = {x = 0.46, y = 0.75, yScale = 1.05}} }}\nend"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Начало совместного творчества",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 29,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[38] = {bg = g.urls.corridor, text = \"Когда художник для плаката был найден, все разошлись. Однако Вы предложили Саше остаться в школе, чтобы начать писать квест.\", heroes = {{name = \"SashaCalm\", task = \"appear\"}}, removeHeroes = true}\n\ng.scenes[39] = {text = \"— Но ты же ещё не прочитал Некрасова, — сказал он.\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, answers = { {text = \"— А сколько там страниц?\"} }, removeHeroes = true}\n\ng.scenes[40] = {text = \"— Ну, где-то пару сотен.\", answers = { {text = \"— Сколько?!\"} }}\n\ng.scenes[41] = {text = \"— Да это немного. Там ведь столько персонажей, сюжетных линий, идей…\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, answers = { {text = \"— Это хорошо, но мы не Некрасов, такое не потянем.\"} }, removeHeroes = true}\n\ng.scenes[42] = {text = \"— Хм… Можно написать квест по самому концу поэмы. Мне он понравился.\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, answers = {{text = \"— Хорошая идея.\"}}, removeHeroes = true}\n\n\ng.scenes[43] = {text = \"Работать вдвоём оказалось гораздо интереснее. Вы с Сашей дополняли друг друга.\", heroes = {{name = \"SashaDoubt\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[44] = {text = \"Ближе к четырём Вы попросили друга открыть сайт школы. Саша кивнул. И вдруг с удивлением сказал:\"}\n\ng.scenes[45] = {text = \"— Здесь нет видеоурока. Только вот это.<s>\nОн показал телефон. На экране был текст, высмеивающий педагогов.\", page = 183}\n\ng.scenes[183] = {text = \"— Тут почти про всех наших и ещё про некоторых учителей.<s>\nОлега Владимировича в списке не было.\", page = 46, endDay = \"2\"}\nend"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Кабинет завуча",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ng.scenes[46] = {bg = g.urls.ladder, text = [[На следующий день Вы опоздали, да ещё и забыли номер кабинета, в котором должен был быть урок. Пришлось бежать до расписания, висевшего рядом с кабинетом завуча.]], removeHeroes = true, animation = \"ladder\", page = 99}\n\ng.scenes[47] = {text = \"— Какой позор! — негодовал мужчина. — Надо не допустить, чтобы новость об этом вышла за пределы школы.\"}\n\ng.scenes[48] = {text =  [[— Но как найти виновника? — ответила женщина.\n— А кто этим сайтом заведовал?\n— Олег Владимирович, новый информатик.]]}\n\ng.scenes[49] = {text = \n[[— Это кто же додумался новому человеку такое ответственное дело давать?!\n— Вы, директор.\n— А, гм. Наверное, у него было очень хорошее резюме. Ну, теперь ему это не поможет. Если виноват — вылетит отсюда как пробка. Если нет — найдёт нам преступника.]]}\nend",
+        "calculate": true,
+        "text": "   ",
+        "id": 30
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Обсуждение подслушанного<s>r",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 31,
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[50] = {bg = g.urls.corridor, text = \"Подслушанный разговор не давал покоя. Вы еле дождались конца урока, чтобы рассказать всё Саше.\", heroes = {{name = \"SashaDoubt\", task = \"appear\"}} }\n\ng.scenes[51] = {text = \"— Похоже, ты слышал разговор директора с завучем, — сказал он.\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Эти директора везде такие? Реально, он хоть слышал о презумпции невиновности?\"}} }\n\ng.scenes[52] = {text = \"— Да уж… Будет жаль, если Олега Владимировича уволят.\", answers = {{text = \"— Нельзя это так просто оставить.\"}} }\n\ng.scenes[53] = {text = \"— И что ты предлагаешь?\", heroes = {{name = \"SashaConfident\", task = \"set\"}}, answers = {{text = \"— Найти преступника!\"}}, removeHeroes = true}\n\ng.scenes[54] = {animation = \"heroic\"}\n\ng.scenes[55] = {text = \"Саша улыбнулся:<s>\n— Понятно, какие ты книги читаешь.\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, answers = {{text = \"— То есть, ты против?\"}}, removeHeroes = true}\n\ng.scenes[56] = {text = \"— Нет, почему же, попробовать можно.\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[57] = {text = \"— Тогда приступим. Что нам известно? — начали Вы по примеру детективов. — Какой-то ученик взломал сайт школы и написал про своих учителей гадости.\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[58] = {text = \"— А если он не ученик?\", answers = {{text = \"— Это уже более сложная версия, а мы пока рассматриваем самую простую.\"}}, heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[59] = {text = \"— Если это ученик, — продолжили Вы, — то он мог добавить чужих учителей, чтобы не определили, в каком классе он учится.\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[60] = {text = \"— Но про чужих он не мог написать правдиво — вот тут-то мы его и подловим. Так что, Саша, посмотри ещё раз на список и скажи, про наших учителей правдиво написано?\"}\n\ng.scenes[61] = {text = \"— Ну, я бы не назвал это правдой… Хотя да, в целом, такое про них могли сказать.\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Значит, преступник среди нас...\"}} }\n\ng.scenes[62] = {text = \"— Можно использовать поиск в чате класса. Стиль написания, уникальные фразы или ошибки выдадут преступника.\", answers = {{text = \"— Звучит неплохо.\"}} }\n\ng.scenes[63] = {text = \"Всю перемену вы посвятили поиску, но результата пока не достигли.\", answers = {{text = \"Продолжить на уроке\"}, {text = \"Оставить до перемены\", page = 67, addAchieve = \"chem\"}} }\n\nend",
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Анимации на странице",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction anim.heroic()\n  set.bg (\"https://images.vfl.ru/ii/1646575186/329e6a6a/38350591.png\")\n  local color = {1, 0.7, 0}\n  local title = display.newEmbossedText{\n    parent = canvasGroup,\n    text = \"Школьник-детектив:\",\n    font = \"NotoSerif-Italic\",\n    fontSize = sizes.value[g.curSize]*diagonal*1.5,\n    x = canvas.width/2,    \n    y = 0.2*canvas.width}\n  title.fill = color\n  title.alpha = 0\n  title:setEmbossColor {\n    highlight = { r=1, g=1, b=1 },\n    shadow = { r=0.3, g=0.3, b=0.3 }\n  }\n\n  local text = display.newEmbossedText{\n    parent = canvasGroup,\n    text = \"найти преступника за одну перемену\",\n    font = \"NotoSerif-Italic\",\n    fontSize = sizes.value[g.curSize]*diagonal,\n    x = canvas.width/2,    \n    y = title.y <plus> title.height/2 <plus> 0.01*canvas.width,\n     width = 0.95*canvas.width,\n     align = \"center\"}\n  text.anchorY = 0\n  text.fill = color\n  text.alpha = 0\n  text:setEmbossColor {\n    highlight = { r=1, g=1, b=1 },\n    shadow = { r=0.3, g=0.3, b=0.3 }\n  }\n\n  transition.fadeIn(title, {time = 1000} )\n  transition.fadeIn(text, {delay = 1000, time = 1000} )\n\n  local circle = display.newCircle(canvasGroup, 0.49*canvas.width, 0.495*canvas.height, canvas.width*0.43)\n  circle.fill = {1, 0}\n  circle.strokeWidth = canvas.width/60\n  circle.stroke = color\n  circle.alpha = 0\n  transition.fadeIn(circle, {delay = 2000, time = 1000} )\nend\nend",
+        "text": "Школьник-детектив: найти преступника за одну перемену",
+        "id": 32,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 32,
+        "text": "Лог на экране компьютера",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction anim.print(text)\n  local log = display.newText{\n    parent = canvasGroup,\n    text = text,\n    font = \"Roboto-Regular\",\n    fontSize = sizes.value[g.curSize]*diagonal*0.5,\n    x = bg.x <plus> bg.contentWidth*0.25,\n    y = bg.y <plus> bg.contentHeight*0.054,\n    width = 0.225*canvas.width,\n    align = \"center\"\n  }\n  log.rotation = 12\n  log.alpha = 0\n  transition.fadeIn(log, {delay = 1500, time = 1000} )\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 32,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction anim.day(n)\n  --Настраиваемый эффект затемнения/вспышки.\n   local rect = display.newRect(canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\n   rect.fill = {0}\n   rect.alpha = 0\n   transition.fadeIn(rect, {\n     time = 1000,\n     onComplete = function(obj)\n       local rect = obj\n       set.bg(g.urls.yard)\n       if rect and rect.toFront then\n         rect:toFront()\n       end\n\n  --Заголовок\n  local title = display.newEmbossedText{\n    parent = canvasGroup,\n    text = \"День \" .. n,\n    font = \"NotoSerif-Italic\",\n    fontSize = sizes.value[g.curSize]*diagonal*2.5,\n    x = canvas.width/2,    \n    y = bg.y - 0.25*bg.contentHeight,\n    width = canvas.width,\n    align = \"center\"}\n  title.fill = {1, 0.7, 0}\n  title.alpha = 0\n  title:setEmbossColor {\n    highlight = { r=1, g=1, b=1 },\n    shadow = { r=0.3, g=0.3, b=0.3 }\n  } \n  title.y = title.y - title.height/2\n       transition.fadeOut(rect, {\n         time = 1000,\n         onComplete = function()\n           transition.fadeIn(title, {time = 1000} )\n   timer.performWithDelay(2000, function()\n     if g.current_id == 2 then\n       showPage {id = 2}\n    end\nend)\n         end })\n     end })\nend\nend",
+        "text": "Конец дня (и объявление нового дня)"
+      },
+      {
+        "super_calculate": true,
+        "id": 32,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction anim.ladder()\n  set.bg(g.urls.ladder)\n  bg.xScale = bg.xScale*1.05\n  bg.yScale = bg.xScale\n  local timeCycle = 600\n  local angle = 4\n  transition.to(bg, {\n    time = timeCycle,\n    rotation = angle,\n  })\n  timer.performWithDelay (timeCycle, function(event)\n  if g.current_id ~= 2 or g.scenes[page].animation ~= \"ladder\" then\n    timer.cancel(event.source)\n    return true\n  end\n  angle = -angle\n  transition.to(bg, {\n    time = timeCycle,\n    rotation = angle,\n  })\nend, -1)\nend\nend",
+        "text": "Покачивание лестницы"
+      },
+      {
+        "id": 40,
+        "text": "Мини-игра",
+        "run": [
+          40
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Мини-игра 2",
+        "run": [
+          44
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Химия",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[64] = {bg = g.urls.class, text = \"Едва химия началась, Вы тут же незаметно включили телефон и стали заниматься своим делом. Вскоре об этом пришлось пожалеть:\", heroes = {{name = \"ChemFun\", task = \"set\", options = {x = 0.46, y = 0.7} }}, removeHeroes = true}\n\ng.scenes[65] = {text = \"— user_name, не знаешь? — спросила учительница. Вы не слышали вопроса, поэтому промолчали.\", heroes = {{name = \"ChemFun2\", task = \"set\", options = {x = 0.46, y = 0.7} }}, removeHeroes = true}\n\ng.scenes[66] = {text = \"— Ещё не загуглил, да?<s>\nКажется, у Вас даже лицо покраснело. Пришлось убрать телефон.\", heroes = {{name = \"ChemFun\", task = \"set\", options = {x = 0.46, y = 0.7}}}, removeHeroes = true, page = 68}\n\ng.scenes[67] = {bg = g.urls.class, text = \"На химии вы проходили многоатомные спирты.\", heroes = {{name = \"ChemFun\", task = \"set\", options = {x = 0.46, y = 0.7} }}, removeHeroes = true}\n\ng.scenes[68] = {text = \"— Ну, кто скажет, где применяется глицерин? Вы не раз встречали это в жизни.\", heroes = {{name = \"ChemFun2\", task = \"set\", options = {x = 0.46, y = 0.7}}}, removeHeroes = true}\n\ng.scenes[69] = {text = \"— Взрывчатка? — неуверенно сказал кто-то.<s>\nПо классу прошёлся смешок.\", heroes = {{name = \"ChemFun\", task = \"set\", options = {x = 0.46, y = 0.7}}}, removeHeroes = true}\n\ng.scenes[70] = {text = \"— Я имела в виду косметику, — невозмутимо продолжала учительница.\"}\n\ng.scenes[71] = {text = \"— Но да, из глицерина получают взрывоопасный нитроглицерин.\"}\nend",
+        "text": "   ",
+        "id": 33,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Классный час",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 34,
+        "calculate": false,
+        "lua_do": "function lua_do()\n\ng.scenes[72] = {bg = g.urls.class, text = \"После химии был английский, а точнее сказать, классный час. Должно быть, это обидно, когда своих же подопечных не дают учить любимому предмету.\", heroes = {{name = \"ClassTired\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true}\n\ng.scenes[73] = {text = \"Классрук начала со вчерашнего события. Поговорила о том, как это плохо, но дальше не пошла: видимо, не верила, что преступник может находиться в её классе.\", heroes = {{name = \"ClassCalm\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, answers = {{text = \"А зря...\"}} }\n\ng.scenes[74] = {text = 'Следующей темой стала \"Добрая суббота\" — \"добровольная\" акция, в ходе которой каждую субботу нужно делать добрые дела на заданную тему.'}\n\ng.scenes[75] = {text = 'На этот раз требовали фото с младшим братом или сестрой. \"Доброметр так и зашкаливает\", — шепнули Вы Саше. Он ничего не ответил, лишь вздохнул.', answers = {{text = \"Продолжить искать улики\"}} }\n\ng.scenes[76] = {bg = g.urls.corridor, text = \"Сдаваться не хотелось, поэтому уроки, перемены и даже свободное время ушли на поиски. Саша тоже искал, но — увы! — никаких результатов.\", heroes = {{name = \"SashaDoubt\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"Утро вечера мудренее…\", endDay = \"3\"}} }\n\nend",
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Упростить задачу",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 35,
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.scenes[77] = {text = \"— Есть что-нибудь? — спросил Саша на следующий день, когда Вы снова стояли в школе с телефоном в руке.\", answers = {{text = \"— Ничего.\"}} }\n\ng.scenes[78] = {text = \"— Но ты всё ещё продолжаешь попытки?\", answers = {{text = \"— Да, я ведь многое ещё не проверил... Вот бы упростить эту работу!\"}} }\n\ng.scenes[79] = {text = \"— Упростить? А давай сходим к Олегу Владимировичу, он что-нибудь закодит. У нас как раз будет свободный урок: учительница биологии заболела.\", heroes = {{name =\"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Хорошая идея\"}, {text = \"— А вдруг всё-таки он преступник? Нельзя так рисковать.\", page = 122}} }\nend",
+        "text": "    "
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Помощь информатика",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[80] = {bg = g.urls.inf, text = \"Олег Владимирович, выслушав вас, потёр руки.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true}\n\ng.scenes[81] = {text = \"— Хорошая зацепка. Молодцы! — он сел за компьютер, готовый действовать. Глаза его блестели.\", heroes = {{name = \"OlegApproval\", task = \"set\", options = {position = \"up\"}}}, removeHeroes = true}\n\ng.scenes[82] = {texts = {ifTrue = \"inf\", text1 = \"Следить за работой учителя было интересно, ведь на информатике Вы уже начали осваивать программирование.\", text2 = \"Вы не очень поняли, что делал Олег Владимирович, да и не особо этим интересовались.\"}, heroes = {{name = \"OlegApproval\", task = \"disappear\", options = {position = \"up\"} }},}\n\ng.scenes[83] = {bg = \"monitor\", text = \"Но вот программа была закончена, и все замерли, глядя на монитор: там должно было появиться имя преступника.\", animation = {\"print\", \"Error: line 11\"}, removeHeroes = true}\n\ng.scenes[84] = {bg = g.urls.inf, text = \"— Тьфу ты, — сказал Олег Владимирович и тут же усмехнулся. — Баги — постоянные спутники программиста.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true}\n\ng.scenes[85] = {bg = \"monitor\", text = \"Учитель немного пошаманил и снова запустил программу.\", animation = {\"print\", \"Макс Кайзеров\"}, answers = {{text = '\"Не зря он мне сразу не понравился\"'}}, removeHeroes = true}\n\ng.scenes[86] = {bg = g.urls.inf, text = \"— Ага! Вот ещё одна зацепка, — сказал Олег Владимирович.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, answers = {{text = \"— Зацепка? Но ведь программа уже показала имя.\"}} }\n\nend",
+        "text": "Первая часть расследования (Макс)",
+        "id": 36,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[87] = {text = \"— Думаю, это ещё не всё… — загадочно ответил учитель. — А кто дежурил в тот день на звонках?\", heroes = {{name = \"OlegDreamy\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true}\n\ng.scenes[88] = {text = \"— Антон, — сказал Саша.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {x = 0.25, y = 0.75, yScale = 0.97}}, {name = \"SashaDoubt\", task = \"set\", options = {position = \"right\"} }, }, removeHeroes = true}\n\ng.scenes[89] = {text = \"— Он дружен с Кайзеровым?\", heroes = {{name = \"OlegFun\", task = \"remove\"}, {name = \"OlegFun\", task = \"set\", options = {x = 0.25, y = 0.75, yScale = 0.97}}, }}\n\ng.scenes[90] = {text = \"— Ну, Макс почти со всеми находит общий язык.\", heroes = {{name = \"SashaDoubt\", task = \"remove\"}, {name = \"SashaDreamy\", task = \"set\", options = {position = \"right\"} }}, }\n\ng.scenes[91] = {text = \"— Ясно. Вы и так многое сделали, поэтому я пойму, если вы откажетесь…\", answers = {{text = \"— Нет-нет, мы хотим довести дело до конца!\"}} }\n\ng.scenes[92] = {text = \"Олег Владимирович улыбнулся.\"}\n\ng.scenes[93] = {text = \"— Тогда я прошу вас узнать, не видел ли дежурный чего-нибудь подозрительного. Скажем, как кто-то похитил ключи у охранника.\"}\n\ng.scenes[94] = {text = \"— Только действуйте очень осторожно, чтобы он ничего не заподозрил.\", answers = {{text = \"Отправиться на дело\"}} }\n\nend",
+        "text": "Вторая часть расследования (выходим на физрука)",
+        "id": 36,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Беседа с Антоном",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 37,
+        "text": "    ",
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.scenes[95] = {bg = g.urls.corridor, text = \"В коридоре Саша сказал, что Антон очень любит спорить. Вы щёлкнули пальцами: в голове появился план.\", heroes = {{name = \"SashaCalm\", task = \"appear\"}}, removeHeroes = true, answers = {{text = \"Включить диктофон и положить смартфон в карман\"}} }\n\ng.scenes[96] = {bg = g.urls.ladder, text = \"Приняв меры предосторожности, Вы устремились в класс, на ходу дорабатывая план.\", animation = \"ladder\", removeHeroes = true}\n\ng.scenes[97] = {text = \"— Что ты задумал? — спросил, догоняя, Саша.\", heroes = {{name = \"SashaDoubt\", task = \"appear\"}}, animation = \"ladder\"}\n\ng.scenes[98] = {bg = g.urls.class, text = \"Первым делом, вернувшись в класс, Вы отыскали себе место поближе к Антону.\", heroes =  {{name = \"SashaCalm\", task = \"appear\"}}, removeHeroes = true, page = 100}\n\ng.scenes[99] = {bg = g.urls.door, text = \"Узнав нужный номер, Вы уже хотели отправиться на урок, но вдруг из кабинета донеслись голоса:\", page = 47}\n\ng.scenes[100] = {text = \"Сели за парту и заговорили с Сашей о совершенно не относящихся к делу вещах. Он отвечал что-то, но его лицо выражало удивление.\", heroes =  {{name = \"SashaDoubt\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[101] = {text = \"— Это дежурство в школе — совершенно ненужная вещь. Любой школьник это подтвердит, — сказали Вы громко. Потом посмотрели на Антона, как будто случайно.\", heroes = {{name = \"SashaCalm\", task = \"set\", options = {position = \"right\"} }, {name = \"AntonCalm\", task = \"appear\", options = {position = \"left\"} } }, removeHeroes = true, answers = {{text = \"— Вот, например, ты согласен?\"}} }\n\ng.scenes[102] = {text = \"— Нет, я против! — решительно заявил Антон.\", heroes = {{name = \"AntonAngry\", task = \"set\" }}, removeHeroes = true, answers = {{text = \"— Кажется, ты дежурил у раздевалки? Ха! Да у неё постоянно сидит охранник, зачем там дежурный?\"}} }\n\ng.scenes[103] = {text = \"— Вообще-то он несколько раз отходил.\", answers = {{text = \"— Готов поспорить, что за это время никто даже мимо не прошёл.\"}} }\n\ng.scenes[104] = {text = \"— А вот и нет! — с торжеством сказал Антон. — Наш физрук брал ключ.\", heroes = {{name = \"AntonCalm\", task = \"set\"}, {name = \"AntonAngry\", task = \"remove\"}}, answers = {{text = \"— И что, ты его остановил?\"}} }\n\ng.scenes[105] = {text = \"— Нет, конечно, он же учитель.\", heroes = {{name = \"AntonAngry\", task = \"set\" }, {name = \"AntonCalm\", task = \"remove\"}}, answers = {{text = \"— Что и требовалось доказать. Дежурство абсолютно бесполезно!\"}} }\n\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[106] = {text = \"— Да хватит вам спорить ни о чём, — улыбнулся Саша.\", heroes = {{name = \"AntonAngry\", task = \"set\", options = {position = \"left\"}}, {name = \"SashaCalm\", task = \"appear\", options = {position = \"right\"} } }, removeHeroes = true}\n\ng.scenes[107] = {text = \"— А что же, уроки делать, как ты? — зло сказал Антон.\", heroes = {{name = \"SashaCalm\", task = \"set\", options = {position = \"right\"} }, {name = \"AntonAngry\", task = \"set\", options = {position = \"left\"} } }, removeHeroes = true, answers = {{text = \"— А отчего бы не делать?\"}} }\n\ng.scenes[108] = {text = \"— Всё с вами ясно, ботаники! — буркнул Антон. — Знал бы — и не связывался.\"}\n\ng.scenes[109] = {text = \"Вы ничего не ответили, а только улыбнулись. Больше не было смысла с ним спорить.\", heroes = {{name = \"AntonAngry\", task = \"disappear\"}}, answers = {{text = \"Отправиться к Олегу Владимировичу\"}} }\nend",
+        "text": "   ",
+        "id": 37,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Конец расследования",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[110] = {bg = g.urls.inf, text = \"Олег Владимирович внимательно прослушал запись с микрофона.\", heroes = {{name = \"OlegListening\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true}\n\ng.scenes[111] = {text = \"— Конечно, ключ был не от спортзала, а от кабинета завуча, — сказал он. — Там стоит компьютер, с которого и было совершено преступление.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, answers = {{text = \"Спросить, как учитель узнал это\", setTrue = \"introvert1\"}, {text = \"Слушать дальше\", page = 114, addAchieve = \"silence\"}} }\n\ng.scenes[112] = {text = \"— Зайти на школьный сайт в режиме администратора можно только с двух компьютеров.\", heroes = {{name = \"OlegWink\", task = \"set\", options = {x = 0.55, y = 0.75, yScale = 0.97}}}, removeHeroes = true}\n\ng.scenes[113] = {text = \"— У меня двухэтапная аутентификация, а Елена Романовна не хотела с ней заморачиваться.\"}\n\ng.scenes[114] = {text = \"— Бенгальского я сразу подозревал, — продолжал Олег Владимирович. — Так совпало, что мы с ним уже работали. Тогда его уволили за нечто подобное.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, answers = {{text = \"— Расскажете?\"}} }\n\ng.scenes[115] = {text = \"— Долгая история, — отмахнулся учитель. — Как-нибудь в другой раз.\"}\n\ng.scenes[116] = {text = \"Олег Владимирович скачал запись с микрофона себе и сказал:\"}\n\ng.scenes[117] = {text = \"— Ещё раз спасибо. Вы молодцы, теперь справедливость будет восстановлена.\", heroes = {{name = \"OlegApproval\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true}\n\ng.scenes[118] = {text = \"Вы уже направились к двери, как Саша вдруг обернулся:\", heroes = {{name = \"OlegFun\", task = \"set\", options = {x = 0.25, y = 0.75, yScale = 0.97}}, {name = \"SashaDoubt\", task = \"appear\", options = {position = \"right\"} }, }, removeHeroes = true}\n\ng.scenes[119] = {text = \"— Олег Владимирович, — он замялся, — Макса же не отчислят?\", heroes = { {name = \"SashaDoubt\", task = \"remove\"}, {name = \"SashaShy\", task = \"set\", options = {position = \"right\"}} }, }\n\ng.scenes[120] = {text = \"— Я скажу о его поступке только классному руководителю. Главная фигура здесь — Бенгальский, он и должен отвечать.\", heroes = { {name = \"SashaCalm\", task = \"set\", options = {position = \"right\"} }, {name = \"OlegFun\", task = \"set\", options = {x = 0.25, y = 0.75, yScale = 0.97}}, }, removeHeroes = true, answers = {{text = \"— Почему ты спросил про Макса?\", setTrue = \"end<plus>\"}} }\n\ng.scenes[121] = {text = \"— Ему ведь тоже нужно получать знания, — просто ответил Саша.\", heroes = { {name = \"SashaCalm\", task = \"remove\"}, {name = \"SashaDoubt\", task = \"set\", options = {position = \"right\"}} }, endDay = \"4\", page = 145}\n\nend",
+        "calculate": false,
+        "text": "  ",
+        "id": 38
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Собственное расследование",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[122] = {text = \"— Пожалуй, ты прав, нужно и это учесть.\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— В таком случае, предлагаю самим написать программу для поиска.\"}} }\n\ng.scenes[123] = {text = \"— Но ведь мы ещё многого не знаем…\", answers = {{text = \"— Ничего. Теорию найдём в интернете, а для практики у нас есть твоя голова.\"}} }\n\ng.scenes[124] = {texts = {ifTrue = \"inf\", text1 = \"— Ты тоже неплохо кодишь, да ещё и придумать что-то необычное можешь, — сказал Саша с жаром.\", text2 = \"Саша, смутившись от комплимента, начал старательно что-то гуглить.\"}, hero = {ifTrue = \"inf\", hero1 = {name = \"SashaCalm\", task = \"set\"}, hero2 = {name = \"SashaDoubt\", task = \"set\"} }, removeHeroes = true, answers = {{text = \"Приступить к написанию программы\"}} }\n\ng.scenes[125] = {bg = g.urls.corridor, text = \"Убивайте жуков (баги), пока они не добрались до кода. Три пропущенных бага — конец игры.\", animation = \"game\", removeHeroes = true}\n\ng.scenes[126] = {animation = {\"game\", \"real game\"}, noArrow = true}\n\nend",
+        "calculate": false,
+        "text": "Начало расследования",
+        "id": 39
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[127] = {bg = g.urls.corridor, text = \"— Что-то ничего не получается, — грустно заметил Саша.\", heroes = {{name = \"SashaShy\", task = \"set\"}}, answers = {{text = \"— Ладно, дома попробуем ещё.\"}}, removeHeroes = true}\n\ng.scenes[128] = {text = '\"Может, мозги отдохнут и придёт какая-нибудь идея, как это бывает с квестами\", — думали Вы.', heroes = {{name = \"SashaShy\", task = \"disappear\"}} }\n\ng.scenes[129] = {text = \"Но и дома ничего не выходило, так что оставалось надеяться на пословицу.\", answers = {{text = '\"Утро вечера мудренее\"', setTrue = \"end-\", endDay = \"4\"}} }\nend",
+        "calculate": false,
+        "text": "Поражение",
+        "id": 39
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[142] = {text = \"Наконец, программа заработала. Вы прочли на экране имя:\", animation = {\"game\", \"win\"}, answers = {{text = \"Отправиться к Олегу Владимировичу\"}} }\n\ng.scenes[143] = {bg = g.urls.inf, text = \"Учитель, выслушав вас, сказал:<s>\n— Хорошая работа!\", heroes = {{name = \"OlegApproval\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true }\n\ng.scenes[144] = {text = \"— И свои навыки прокачали, и зацепку для расследования нашли.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, answers = {{text = \"— Зацепка? Но ведь программа уже показала имя.\", page = 87}} }\nend",
+        "calculate": false,
+        "text": "Успех",
+        "id": 39
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Мини-игра",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 40,
+        "text": "Мини-игра",
+        "lua_do": "function lua_do()\nfunction anim.game(param)\n  local r = math.random\n  if param == \"win\" then\n    drawBgOfGame(true)\n  else\n    drawBgOfGame()\n  end\n  if param == \"real game\" then\n    t = 2000 <plus> (inf and 200 or 0)\n    bugs = 0\n    fixs = 0\n    timer.performWithDelay(500, function(event)\n      if g.current_id == 2 and page == 126 then\n        t = t - 20\n        local bug = drawBug(0, 0, r(-30, 30) )\n        runBug(bug, t)\n      else\n        timer.cancel(event.source)\n      end\n    end, 15)\n  elseif not param then\n    for i = 1, 3 do\n      local bug = drawBug(\n        r(1, 9)*0.1,\n        r(3, 6)*0.1,\n        r(-30, 30)\n      )\n    end\n  end\nend\nend",
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawWoodBg()\nlocal bg = display.newImageRect(canvasGroup, \"bg5.jpg\", canvas.width, canvas.width*1.565)\n  bg.x, bg.y = canvas.width/2, canvas.height /2\n  local xs = canvas.width/bg.width\n  local ys = canvas.height/bg.height\n  bg.xScale = math.max (xs, ys)\n  bg.yScale = bg.xScale\n\n  local black = display.newRect(canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\n  black.fill = {1, 0.2}\n  black.fill.blendMode = \"multiply\"\nend\nend",
+        "text": "Нарисовать фон дерева",
+        "calculate": false,
+        "id": 40
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawBgOfGame(win)\n  drawWoodBg()\n  local indent = 0.05*canvas.width\n  local radius = 0.05*canvas.width\n  phone = display.newRoundedRect(canvasGroup, canvas.width/2, canvas.height - indent, canvas.width - 2*indent, 0.33*canvas.height, radius)\n  phone.y = phone.y - phone.height/2\n  phone.fill = {0.9}\n  phone.strokeWidth = 0.02*canvas.width\n  phone.stroke = {0}\n\n  local txt\n  if win then\n    txt = [==[Макс Кайзеров\n\n** Process exited - Return Code: 0 **\nPress Enter to exit terminal]==]\n  else\n    txt = [==[f = open(\"D://Downloads/vk.txt\")\nmessages = {}\nfor message in f:\n   t = message.split(\":\", 1)\n   if t[1] in messages:\n      messages[ t[1] ].apppend(t[2])\n   else:\n      messages[ t[1] ] = [ t[2] ]\nf.close()]==]\n  end\n\n  code = display.newText{\n    parent = canvasGroup,\n    text = txt,\n    font = fonts.value[g.curFont],\n    fontSize = sizes.value[g.curSize]*diagonal,\n    width = win and (phone.width -  phone.strokeWidth*2 - radius) or nil\n  }\n  \n  code.y = phone.y - phone.height/2 <plus> phone.strokeWidth\n  code.height = math.min(code.height, phone.height - phone.strokeWidth*2)\n  code.anchorY = 0\n  code.anchorX = 0\n  code.x = phone.x - phone.width/2 <plus> phone.strokeWidth <plus> radius/2\n  code.fill = {0}\n  if not win then\n    local numLine\n    for n = 1, 9 do\n      numLine = display.newText{\n        parent = canvasGroup,\n        text = n,\n        font = fonts.value[g.curFont],\n        fontSize = sizes.value[g.curSize]*diagonal,\n        x = phone.x - phone.width/2 <plus> phone.strokeWidth <plus> radius*0.25,\n        y = code.y <plus> (n-0.5)*(code.height/9)\n    }\n      numLine.anchorX = 0\n      numLine.fill = {0.5}\n    end\n    code.x = numLine.x <plus> numLine.width*1.5\n  else\n    code.alpha = 0\n    transition.fadeIn(code, {delay = 1000, time = 1000} )\n  end\nend\nend",
+        "text": "Фон игры",
+        "id": 32,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawBug(x, y, angle)\n  local bug = display.newImage(g.urls.bug)\n  if not bug then\n    bug = display.newImage(canvasGroup, nameForImages(g.urls.bug), system.DocumentsDirectory)\n  end\n  bug.x = x*canvas.width\n  bug.y = y*canvas.height\n  bug.rotation = angle\n  bug.xScale = 0.2*canvas.width/bug.width\n  bug.yScale = bug.xScale\n  return bug\nend\nend",
+        "calculate": false,
+        "text": "Нарисовать жука",
+        "id": 40
+      },
+      {
+        "super_calculate": true,
+        "id": 40,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction runBug(bug, t)\n  local r = math.random\n  local offsetY = phone.y <plus> phone.strokeWidth <plus> r(-4, 2)*phone.height/10 <plus> 0.5*bug.contentHeight\n  local offsetX = -math.tan(bug.rotation/180*math.pi)*offsetY\n  bug.x = code.x <plus> r(1, 9)*(code.width/10) - offsetX\n  if bug.x > canvas.width then\n    bug.x = code.x <plus> 0.1*code.width - offsetX\n  end\n  if bug.x < 0 then\n    bug.x = code.x <plus> 0.9*code.width - offsetX\n  end\n\n  bug:addEventListener(\"tap\", function(event)\n  if not bug.win then\n    event.target.alpha = 0\n    fixs = fixs <plus> 1\n    if bugs < 3 and (fixs <plus> bugs) == 15 then\n      page = 142\n      addAchieve(\"programmer2\")\n      if bugs == 0 then\n        addAchieve(\"programmer3\")\n      end\n      showPage{id = g.current_id, transition = \"instant\"}\n    end\n  end\nend)\n\n  transition.moveTo(bug, {\n    time = t,\n    x = bug.x <plus> offsetX,\n    y = bug.y <plus> offsetY,\n    onComplete = function(bug)\n      if bug and bug.alpha == 1 then\n        bug.win = true\n        bugs = bugs <plus> 1\n        phone.fill = {0.8, 0, 0}\n        timer.performWithDelay(40, function()\n  if type(phone) == \"table\" then\n    phone.fill = {0.9}\n  end\nend)\n        if bugs >= 3 then\n          page = 127\n          showPage{id = g.current_id, transition = \"instant\"}\n        end\n      end\n    end\n  })\nend\nend",
+        "text": "Запустить жука"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Плохая концовка (информатика уволили)",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[130] = {bg = g.urls.yard, filter = {fill = {0, 0.2}, blendMode = \"multiply\"}, text = \"На подходе к школе Вы увидели Олега Владимировича.\", heroes = {{name = \"OlegSad\", task = \"set\", options = {position = \"up\"}}}, removeHeroes = true, answers = {{text = \"Поздороваться\"}} }\n\ng.scenes[131] = {text = \"— Здравствуй. И до свидания, — добавил он. Вы удивлённо посмотрели на учителя.\", arrow = {ifTrue = \"inf\", page1 = 132, page2 = 133} }\n\ng.scenes[132] = {text = \"— Меня увольняют, — пояснил он.\", answers = {{text = \"— За что?\", page = 134}, {text = \"— Вы найдёте место работы получше, я уверен.\", page = 135}} }\n\ng.scenes[133] = {text = \"— Я здесь больше не работаю, — пояснил он.\", answers = {{text = \"— Почему?\" , page = 134}, {text = \"Промолчать\", page = 136, addAchieve = \"silence\"}, {text = \"— Они уволили вас, да?\", page = 137}} }\n\ng.scenes[134] = {text = \"Олег Владимирович махнул рукой.\", page = 136}\n\ng.scenes[135] = {text = \"Олег Владимирович улыбнулся, а потом положил руку Вам на плечо.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, page = 136}\n\ng.scenes[136] = {text = \"— Главное, user_name, не бросай свои квесты, — сказал он и зашагал прочь.\", heroes = {{name = \"OlegFun\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, answers = {{text = '\"И какая теперь будет информатика?..\"', page = 138}} }\n\ng.scenes[137] = {text = \"— Ты знаешь? — удивился Олег Владимирович. — Впрочем, неважно.\", heroes = {{name = \"OlegDreamy\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, page = 136}\n\ng.scenes[138] = {text = '\"Ворд, задачи, в лучшем случае — Паскаль. А Олег Владимирович…\"<s>\nНеприятная мысль пронеслась в голове.', heroes = {{name = \"OlegFun\", task = \"disappear\", options = {position = \"up\"} }} }\n\ng.scenes[139] = {bg = g.urls.ladder, text = '\"Нет, нет, — отогнали Вы её. — Быть не может, чтобы такой учитель не нашёл работу\".', animation = \"ladder\"}\n\ng.scenes[140] = {bg = g.urls.corridor, text = \"В школе Вы рассказали Саше эту новость.\", heroes = {{name = \"SashaCalm\", task = \"set\"}} }\n\ng.scenes[141] = {text = \"— Ну, теперь мы точно ничего сделать не сможем, — сказал он, вздохнув. — Придётся без разработки игр на уроках обходиться.\", heroes = {{name = \"SashaShy\", task = \"set\"}}, removeHeroes = true, endDay = \"N\", page = 145}\n\nend",
+        "text": "  ",
+        "id": 41,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Завершение фанфика",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 42,
+        "text": "   ",
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.scenes[145] = {bg = g.urls.class, removeFilter = true, text = \"Был свободный урок. Одноклассники повторяли предметы, болтали или просто сидели в телефонах, а Вы с Сашей занялись квестом.\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, removeHeroes = true, page = 157}\n\ng.scenes[157] = {text = \"Кликайте по телефону, чтобы писать квест.\", animation = \"game2\", removeHeroes = true, noArrow = true}\n\ng.scenes[158] = {text = \"Эти счастливые минуты потом не раз всплывали в памяти. Идеи сыпались градом, обсуждение лилось рекой. Квест стремительно толстел и вскоре достиг финального размера.\", heroes = {{name = \"SashaApproval\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[159] = {text = \"Только тогда Вы обратили внимание на одноклассников: часть из них с любопытством поглядывали на вашу парту.\", heroes = {{name = \"SashaDoubt\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"Прорекламировать всем квест\", page = 146}} }\n\ng.scenes[146] = {text = \"Немногие отвлеклись от своих дел ради квеста, но вскоре кто-то из прочитавших сказал:<s>\n— Ого, а это круче краткого содержания. Спасибо, парни!\", heroes = {{name = \"SashaConfident\", task = \"set\"}}, removeHeroes = true,}\n\ng.scenes[147] = {text = \"Эта фраза прошлась по классу, и многие открыли ваш квест. Посыпались положительные отзывы.\"}\n\ng.scenes[148] = {text = \"— А вовремя мы квест дописали, — заметил Саша. — Прямо перед литературой.\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[149] = {text = \"Перемена пролетела быстро, но учительница немного задержалась.\", heroes = {{name = \"SashaCalm\", task = \"disappear\"}} }\nend"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Вторая литература",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 43,
+        "calculate": false,
+        "text": "   ",
+        "lua_do": "function lua_do()\ng.scenes[150] = {text = \"— Кто-нибудь расскажет про Гришу Добросклонова? — входя, спросила она без особой надежды.\", heroes = {{name = \"LitSad\", task = \"appear\", options = {position = \"up\"} }}, answers = {{text = \"Поднять руку\"}} }\n\ng.scenes[151] = {text = \"Увидев целый лес рук, учительница изумилась. Она спросила кого-то и поставила твёрдую пять.\", heroes = {{name = \"LitCalm\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true}\n\ng.scenes[152] = {text = \"— Вы большие молодцы, что прочитали книгу, — сказала она радостно.\"}\n\ng.scenes[153] = {text = '\"Квест\", — усмехнулись Вы мысленно.'}\n\ng.scenes[154] = {text = '— А теперь рассмотрим песню Гриши \"Средь мира дольного\". Кто нам её зачитает?.. Пожалуйста, Лада, читай.', page = 163}\n\ng.scenes[155] = {text = [[Одна просторная\nДорога — торная.\n    Страстей раба,\n\nПо ней громадная,\nК соблазну жадная\n    Идет толпа.\n\nО жизни искренней,\nО цели выспренней\n    Там мысль смешна.\n\nКипит там вечная,\nБесчеловечная\n    Вражда-война\n\nЗа блага бренные...\nТам души пленные\n    Полны греха.\n\nНа вид блестящая,\nТам жизнь мертвящая\n    К добру глуха.]], heroes = {{name = \"MaxFun\", task = \"appear\", options = {x = 1.05, rotation = -23} }}, removeHeroes = true, heroesToFront = true, poem = true}\n\ng.scenes[156] = {text = [[Другая — тесная,\nДорога честная,\n    По ней идут\n\nЛишь души сильные,\nЛюбвеобильные,\n    На бой, на труд.\n\nЗа обойдённого,\nЗа угнетённого,\n    Стань в их ряды.\n\nИди к униженным,\nИди к обиженным —\n    Там нужен ты.]], heroes = {{name = \"SashaDoubt\", task = \"appear\", options = {x = 1.05, rotation = -19} }}, removeHeroes = true, heroesToFront = true, poem = true, page = 160}\n\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[160] = {text = \"— Как думаете, по какой дороге пойдёт Гриша Добросклонов? — спросила учительница.\", heroes = {{name = \"LitCalm\", task = \"set\", options = {position = \"up\"} }}, removeHeroes = true, answers = {{text = \"— По тесной, тяжёлой, но честной дороге.\"}} }\n\ng.scenes[161] = {text = \"— Верно, — учительница начала говорить что-то, но Вы погрузились в свои мысли.\"}\n\ng.scenes[162] = {text = '\"А по какой дороге иду я?\" — пронеслось в голове.', page = 164}\n\ng.scenes[163] = {bg = g.urls.class, text = [[Средь мира дольного\nДля сердца вольного\n    Есть два пути.\n\nВзвесь силу гордую,\nВзвесь волю твердую, —\n    Каким идти?]], removeHeroes = true, poem = true, page = 155}\n\ng.scenes[164] = {bg = g.urls.yard, text = \"— Как всё-таки здорово писать квесты! — сказал Саша, когда вы уже выходили из школы. — Спасибо, что открыл для меня это занятие.\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Мне только в радость работать с таким соавтором\", ifTrue = \"end<plus>\", page = 165}, {text = \"— Мне только в радость работать с таким соавтором\", ifTrue = \"end-\", page = 180}} }\n\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Мини-игра 2",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 44,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction anim.game2()\n  drawWoodBg()\n\n  timer.performWithDelay(1, function()\n  percentsProgress = percentsProgress or 0\n  maxPercents = 100\n  local indent = 0.05*canvas.width\n  local radius = 0.075*canvas.width\n  phone = display.newRoundedRect(canvasGroup, canvas.width/2, canvas.height - indent, canvas.width*0.85, canvas.height - (text_bg.y <plus> text_bg.height/2) - 2*indent, radius)\n  phone.y = phone.y - phone.height/2\n  phone.fill = {0.9}\n  phone.strokeWidth = 0.02*canvas.width\n  phone.stroke = {0}\n  phone:addEventListener(\"tap\", function()\n  percentsProgress = math.min(percentsProgress <plus> 1, 100)\n  if percentsProgress >= maxPercents and not answ[1] then\n    set.arrow()\n    curtain.alpha = 0\n  end\n  text.text = \"Готово: \".. percentsProgress .. \"%\"\n  progressBar.xScale = percentsProgress/maxPercents\n  curtain.yScale = 1 - percentsProgress/maxPercents\nend)\n\n  local emptyPlace = (phone.height - 2*phone.strokeWidth - 2*phone.width/20 - phone.width*0.75)/3\n  local camera = display.newCircle(canvasGroup, phone.x, phone.y - phone.height/2 <plus> phone.strokeWidth, phone.width/20)\n  camera.y = camera.y <plus> camera.height*0.6\n  camera.fill = {0.4}\n\n  local icon = display.newImage(canvasGroup, nameForImages(g.urls.Quests), system.DocumentsDirectory)\n  icon.width = phone.width*0.6\n  icon.height = phone.width*0.6\n  icon.x = phone.x\n  icon.y = camera.y <plus> camera.height/2 <plus> emptyPlace <plus> icon.height/2\n\n  curtain = display.newRect(canvasGroup, icon.x, icon.y <plus> icon.height/2, icon.width, icon.height)\n  curtain.fill = {0.9, 0.9}\n  curtain.anchorY = curtain.height\n  curtain.yScale = math.max(1 - percentsProgress/maxPercents, 0.01)\n\n  text = display.newText{\n    parent = canvasGroup,\n    text = \"Готово: \".. percentsProgress .. \"%\",\n    font = fonts.value[g.curFont],\n    fontSize = sizes.value[g.curSize]*diagonal,\n    x = phone.x,\n    y = icon.y <plus> icon.height/2 <plus> emptyPlace\n  }\n  text.anchorY = 0\n  text.fill = {0}\n  \n  local stripWidth = 0.05*phone.width\n  local progressBarBg = display.newRect(canvasGroup, phone.x, text.y <plus> text.height, phone.width*0.9 - phone.strokeWidth*2, stripWidth)\n  progressBarBg.anchorY = 0\n  progressBarBg.fill = {0.6}\n\n  progressBar = display.newRect(canvasGroup, progressBarBg.x - progressBarBg.width/2, progressBarBg.y, progressBarBg.width, stripWidth)\n  progressBar.anchorY = 0\n  progressBar.anchorX = 0\n  progressBar.xScale = math.max(percentsProgress/maxPercents, 0.01)\n  progressBar.fill = {0, 0.5, 0}\n\n  if percentsProgress >= maxPercents and not answ[1] then\n    set.arrow()\n    curtain.alpha = 0\n  end\nend)\nend\nend",
+        "text": "    "
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Встреча с Максом (хорошая концовка)",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[165] = {text = \"— Гляди-ка, Макс стоит. Я думал, он болеет сегодня.\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"Подойти к однокласснику\"}} }\n\ng.scenes[166] = {text = \"— Привет, а что сегодня в школе не был? — спросили Вы.\", heroes = {{name = \"MaxFun\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[167] = {text = \"— Уже всё теперь, — кисло улыбнулся Макс. — Меня отчислили.\", heroes = {{name = \"MaxAnger\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[168] = {text = \"— Как? — воскликнул Саша.\", heroes = {{name = \"MaxAnger\", task = \"set\", options = {position = \"left\"} }, {name = \"SashaShy\", task = \"appear\", options = {position = \"right\"} } }, removeHeroes = true}\n\ng.scenes[169] = {text = \"— Да это физрук урод. Сам подбивал взломать сайт, а потом меня и выдал, когда его за глотку взяли. — Макс достал сигарету и закурил.\", heroes = {{name = \"MaxSmoke\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Что же ты теперь будешь делать?\"}} }\n\ng.scenes[170] = {text = \"— Ха, это за вас надо беспокоиться, школьники. А я теперь, — он повёл рукой с сигаретой, — свободная птица.\", heroes = {{name = \"MaxGesture\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[171] = {text = \"Макс сделал ещё затяжку и вдруг закашлял, согнувшись пополам.\", heroes = {{name = \"MaxSmoke\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Что с тобой?\"}} }\n\ng.scenes[172] = {text = \"— Может, к врачу? — обеспокоился Саша.\", heroes = {{name = \"MaxSmoke\", task = \"set\", options = {position = \"left\"} }, {name = \"SashaDreamy\", task = \"appear\", options = {position = \"right\"} } }, removeHeroes = true}\n\ng.scenes[173] = {text = \"— Ничего, — сказал Макс, откашлявшись. — Всё нормально.\", heroes = {{name = \"MaxFun\", task = \"set\"}}, removeHeroes = true, answers = {{text =\"— Зачем ты куришь эту дрянь?\"}} }\n\ng.scenes[174] = {text = \"— Да, эта марка совсем паршивая, надо другую попробовать.\", answers = {{text = \"— Нет, я вообще про курение. Зачем самому отравлять себя?\"}} }\n\ng.scenes[175] = {text = \"— Да нас уж всех давно отравили, — Макс кивнул на пыхтящие вдалеке трубы заводов.\", heroes = {{name = \"MaxGesture\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Но и что же теперь, ещё хуже себе делать?\"}} }\n\ng.scenes[176] = {text = \"Макс махнул рукой:<s>\n— Кто не курит и не пьёт, тот на органы пойдёт! Пока, моралисты.\", answers = {{text = \"— Давай, удачи\"}} } \nend",
+        "text": "   ",
+        "id": 45,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[177] = {text = \"— Она ему пригодится, — вздохнул Саша.\", heroes = {{name = \"SashaCalm\", task = \"set\"}}, removeHeroes = true}\n\ng.scenes[178] = {text = \"— Может, следующий квест напишем про современность?\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"— Есть идеи?\"}} }\n\ng.scenes[179] = {text = \"— Есть, — хитро улыбнулся Саша.<s>\nИ вы пошли, болтая про новый квест.\", heroes = {{name = \"SashaDoubt\", task = \"set\"}}, removeHeroes = true, addAchieve = \"positiveEnd\", page = 182}\nend",
+        "text": "Следующий квест",
+        "id": 45,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Связь с Олегом (плохая концовка)",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.scenes[180] = {text = \"— Смотри-ка, а у Олега Владимировича есть страница в соцсетях. Он меня в друзья добавил и пишет что-то…\", heroes = {{name = \"SashaDreamy\", task = \"set\"}}, removeHeroes = true, answers = {{text = \"Заглянуть к Саше в телефон\"}} }\n\ng.scenes[181] = {text = \"— Ого, так это он?! — воскликнули вы в один голос.\", heroes = {{name = \"SashaDoubt\", task = \"set\"}}, removeHeroes = true, addAchieve = \"negativeEnd\"}\n\ng.scenes[182] = {text = \"Конец\", removeHeroes = true, noArrow = true}\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 46
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Текст достижения",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 22,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction set.miniText (text)\n  local icon = (utf8.sub(text, 1, 1) == '\"') and display.newImage(g.urls.achieve)\n  if icon then\n    icon.xScale = 0.1*canvas.width/icon.width\n    icon.yScale = icon.xScale\n    icon:setFillColor(1, 0.8)\n  end\n\n  local indent = 0.02*canvas.width\n  mini[n] = {}\n  mini[n].bg = display.newRoundedRect (canvasGroup,\n0.5*canvas.parent.width <plus> (icon and (icon.contentWidth/2 <plus> indent/2) or 0), 0, 0.9*canvas.width - (icon and (icon.contentWidth <plus> indent) or 0), 0, 0.009*canvas.width)\n  mini[n].bg.fill = {1, 0.7}\n  mini[n].text = display.newText ({\n    parent = canvasGroup,\n    text = text,\n    x = mini[n].bg.x,\n    width = mini[n].bg.width*0.95,\n    font = fonts.value[g.curFont],\n    fontSize = sizes.value[g.curSize]*diagonal,\n    --align = \"center\"\n  })\n  mini[n].bg.height = math.max(mini[n].text.height*1.05, 0.1*canvas.width)\n  mini[n].text.y = currentY <plus> mini[n].bg.height/2\n  currentY = mini[n].text.y <plus> mini[n].bg.height/2 <plus> 0.035*canvas.width\n  mini[n].bg.y = mini[n].text.y\n  if icon then\n    icon.y = mini[n].text.y\n    icon.x = mini[n].bg.x -  mini[n].bg.contentWidth/2 - indent - icon.contentWidth/2\n    icon.yScale = math.min(mini[n].bg.height/icon.height, icon.yScale)\n    icon.xScale = icon.yScale\n    mini[n].icon = icon\n  end\n  mini[n].text:setFillColor (0, 0, 0)\n  n = n <plus> 1\nend\nend",
+        "text": "    "
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Заголовок",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 48,
+        "text": "    ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction set.header(text)\n  local header = display.newText ({\n    parent = canvasGroup,\n    text = text,\n    x = canvas.parent.width/2,\n    font = fonts.value[g.curFont],\n    fontSize = sizes.value[g.curSize]*diagonal*1.3\n  })\n  header.anchorY = 0\n  header.y = currentY\n  currentY = currentY <plus> header.height <plus> 0.05*canvas.width\n  header.fill = {1}\n  table.insert(headers, header)\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "   ",
+    "answers": []
+  },
+  {
+    "id": 50,
+    "text": "",
+    "answers": []
+  }
+]

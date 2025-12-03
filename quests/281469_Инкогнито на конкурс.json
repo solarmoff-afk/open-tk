@@ -1,0 +1,1758 @@
+[
+  {
+    "id": 1,
+    "text": "Квест для конкурса.\nСтебал все, что пришло в голову, так что без обид.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать историю.",
+        "var_set": [
+          "global image_part_of_screen",
+          1,
+          "фон",
+          1,
+          "т",
+          1,
+          "пл",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://i.postimg.cc/xC3W2v2v/2.png",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://i.postimg.cc/02TZV6gP/image.png",
+        "system": true
+      },
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "ар",
+          9999
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Фоны ",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Декоры и энеми",
+        "run": [
+          5
+        ]
+      },
+      {
+        "id": 6,
+        "text": "гг Лесли",
+        "run": [
+          6
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Плашки ",
+        "run": [
+          9
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Текста",
+        "run": [
+          11
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Поверх всего ",
+        "run": [
+          3
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Кнопки",
+        "run": [
+          10
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Переход",
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Так как производство было задушено дедлайном. Вот вам три концовки на выбор, которые кажутся мне мемными, но я не успел вписать их в повествование.",
+        "merge": true,
+        "var_equal": [
+          "т",
+          21
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Пнуть ногой двуручный топор, который вы выбили из рук вашего оппонента.",
+        "var_set": [
+          "пв",
+          20,
+          "т",
+          999
+        ],
+        "var_equal": [
+          "т",
+          21
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Далее.",
+        "var_equal": [
+          "пв",
+          20
+        ],
+        "var_set": [
+          "пв",
+          21
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Далее.",
+        "var_set": [
+          "пв",
+          22
+        ],
+        "var_equal": [
+          "пв",
+          21
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Конец.",
+        "var_equal": [
+          "пв",
+          22
+        ],
+        "var_set": [
+          "пв",
+          22
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Узнать кто вы на самом деле.",
+        "var_equal": [
+          "т",
+          21
+        ],
+        "var_set": [
+          "т",
+          22,
+          "пл",
+          2,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          3
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Далее.",
+        "var_set": [
+          "т",
+          23,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          3
+        ],
+        "var_equal": [
+          "т",
+          22
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Конец.",
+        "var_equal": [
+          "т",
+          23
+        ],
+        "var_set": [
+          "т",
+          22,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          3
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Стать частью франшизы \"Форсаж\"",
+        "var_equal": [
+          "т",
+          21
+        ],
+        "var_set": [
+          "т",
+          40,
+          "пл",
+          3,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          5,
+          "фон",
+          5
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Далее.",
+        "var_set": [
+          "т",
+          41,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          5
+        ],
+        "var_equal": [
+          "т",
+          40
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Конец.",
+        "var_set": [
+          "т",
+          0,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          5
+        ],
+        "var_equal": [
+          "т",
+          41
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/Qx0qmfKv/image.png",
+        "var_equal": [
+          "пв",
+          10
+        ]
+      },
+      {
+        "id": 3,
+        "text": "1 мем",
+        "url": "https://i.postimg.cc/rptC8cZL/1.png",
+        "var_equal": [
+          "пв",
+          2
+        ]
+      },
+      {
+        "id": 3,
+        "text": "2 мем",
+        "url": "https://i.postimg.cc/DZrrX6Kj/2.png",
+        "var_equal": [
+          "пв",
+          3
+        ]
+      },
+      {
+        "id": 3,
+        "text": "3 мем",
+        "url": "https://i.postimg.cc/4yXzbcfJ/3.png",
+        "var_equal": [
+          "пв",
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "4 мем (С косяком )",
+        "url": "https://i.postimg.cc/901yxf0y/4.png",
+        "var_equal": [
+          "пв",
+          5
+        ]
+      },
+      {
+        "id": 3,
+        "text": "5 мем",
+        "url": "https://i.postimg.cc/XNgKNsLX/5.png",
+        "var_equal": [
+          "пв",
+          6
+        ]
+      },
+      {
+        "id": 3,
+        "text": "6 мем",
+        "url": "https://i.postimg.cc/155G8D7B/6.png",
+        "var_equal": [
+          "пв",
+          7
+        ]
+      },
+      {
+        "id": 3,
+        "text": "7 мем",
+        "url": "https://i.postimg.cc/tCShW7Lj/7.png",
+        "var_equal": [
+          "пв",
+          8
+        ]
+      },
+      {
+        "id": 3,
+        "text": "8 мем",
+        "url": "https://i.postimg.cc/JzsjqMLB/8.png",
+        "var_equal": [
+          "пв",
+          9
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Название квеста ",
+        "url": "https://i.postimg.cc/G2CYdDsk/image.png",
+        "var_equal": [
+          "пв",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "В главной роли",
+        "url": "https://i.postimg.cc/GhcQvWtk/image.png",
+        "var_equal": [
+          "пв",
+          11
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/Gmtx5vkt/image.png",
+        "var_equal": [
+          "пв",
+          11
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/ZK2bRT2w/image.png",
+        "var_equal": [
+          "пв",
+          20
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/YSfMbQ9P/2.png",
+        "var_equal": [
+          "пв",
+          21
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/4xcJHDTs/3.png",
+        "var_equal": [
+          "пв",
+          22
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "тюрячка",
+        "url": "https://i.postimg.cc/vmWgqmSD/image.png",
+        "var_equal": [
+          "фон",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/x1L21LKd/image.png",
+        "var_equal": [
+          "фон",
+          2
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/QMbZpsYG/2.png",
+        "var_equal": [
+          "фон",
+          3
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/W31L8KxD/image.png",
+        "var_equal": [
+          "фон",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": [
+      {
+        "url": "https://i.postimg.cc/xCDG87BN/image.png",
+        "id": 5,
+        "var_need": [
+          "энеми",
+          1
+        ],
+        "text": "Зеркало",
+        "var_no_more": [
+          "энеми",
+          3
+        ]
+      },
+      {
+        "id": 5,
+        "text": "энеми 1",
+        "url": "https://i.postimg.cc/43ttDPnf/image.png",
+        "var_equal": [
+          "энеми",
+          1
+        ]
+      },
+      {
+        "id": 5,
+        "text": "брутал",
+        "url": "https://i.postimg.cc/jS140CXX/3.png",
+        "var_equal": [
+          "энеми",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/T3BgNFdN/2.png",
+        "var_equal": [
+          "энеми",
+          3
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/WbHktCkp/image.png",
+        "var_equal": [
+          "энеми",
+          4
+        ]
+      },
+      {
+        "id": 5,
+        "text": "негр",
+        "url": "https://i.postimg.cc/tTv0MkHB/image.png",
+        "var_equal": [
+          "энеми",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/Gmtx5vkt/image.png",
+        "var_equal": [
+          "гг",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 16,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 17,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 19,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 20,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 21,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 22,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 23,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 24,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 25,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 26,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 27,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 28,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 29,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 30,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 32,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 33,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 34,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 35,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 36,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 37,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 38,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 39,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 40,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 41,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 42,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 43,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 44,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 45,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 46,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 47,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 48,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 49,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 50,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 51,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "В чат \"Квестовых Текстов\".",
+        "instant": true,
+        "var_set": [
+          "сж",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Левая",
+        "url": "https://i.postimg.cc/wvQNvBhn/image.png",
+        "var_equal": [
+          "пл",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "text": "центральная",
+        "url": "https://i.postimg.cc/0j5wJqnj/image.png",
+        "var_equal": [
+          "пл",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "правая",
+        "url": "https://i.postimg.cc/gjM6VBtD/image.png",
+        "var_equal": [
+          "пл",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": [
+      {
+        "var_equal": [
+          "сж",
+          1
+        ],
+        "id": 2,
+        "text": "В чат \"Квестовых Текстов\".",
+        "instant": true,
+        "var_set": [
+          "пв",
+          2,
+          "сж",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          2
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "пв",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          3
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "пв",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          4
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "пв",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          5
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "пв",
+          6
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          6
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "пв",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          7
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "пв",
+          8
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          8
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "пв",
+          9
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          1
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "т",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          2
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "т",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          3
+        ],
+        "id": 2,
+        "text": "Обыскать.",
+        "instant": true,
+        "var_set": [
+          "т",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          4
+        ],
+        "id": 2,
+        "text": "Открыть камеру.",
+        "instant": true,
+        "var_set": [
+          "т",
+          5,
+          "энеми",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "right_answer": true,
+        "var_add": [
+          "энеми",
+          1
+        ],
+        "var_equal": [
+          "т",
+          5
+        ],
+        "id": 2,
+        "text": " >",
+        "var_need": [
+          "энеми",
+          1
+        ],
+        "var_no_more": [
+          "энеми",
+          2
+        ]
+      },
+      {
+        "var_no_more": [
+          "энеми",
+          3
+        ],
+        "instant": true,
+        "var_need": [
+          "энеми",
+          2
+        ],
+        "var_equal": [
+          "т",
+          5
+        ],
+        "id": 2,
+        "text": "<",
+        "var_sub": [
+          "энеми",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "var_equal": [
+          "т",
+          5
+        ],
+        "id": 2,
+        "text": "Выбрать.",
+        "instant": true,
+        "var_set": [
+          "т",
+          6,
+          "пл",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          6
+        ],
+        "id": 2,
+        "text": "Извиниться.",
+        "instant": true,
+        "var_set": [
+          "т",
+          7,
+          "пл",
+          2,
+          "гг",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          7
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "т",
+          0,
+          "пл",
+          2,
+          "гг",
+          1,
+          "пв",
+          11
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          11
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Делее.",
+        "var_set": [
+          "т",
+          0,
+          "пл",
+          2,
+          "гг",
+          1,
+          "пв",
+          10
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          10
+        ],
+        "id": 2,
+        "text": "Делее.",
+        "instant": true,
+        "var_set": [
+          "т",
+          0,
+          "пл",
+          2,
+          "гг",
+          1,
+          "пв",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "пв",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Делее.",
+        "var_set": [
+          "т",
+          8,
+          "пл",
+          1,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          8
+        ],
+        "id": 2,
+        "text": "Спасти ее.",
+        "instant": true,
+        "var_set": [
+          "т",
+          9,
+          "пл",
+          1,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          8
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Идти дальше.",
+        "var_set": [
+          "т",
+          99,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          9
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "т",
+          10,
+          "пл",
+          3,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          4,
+          "фон",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          10
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Далее.",
+        "var_set": [
+          "т",
+          11,
+          "пл",
+          3,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          4,
+          "фон",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          11
+        ],
+        "id": 2,
+        "text": "Далее.",
+        "instant": true,
+        "var_set": [
+          "т",
+          12,
+          "пл",
+          3,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          4,
+          "фон",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          12
+        ],
+        "id": 2,
+        "text": "Освободить ее.",
+        "instant": true,
+        "var_set": [
+          "т",
+          13,
+          "пл",
+          3,
+          "гг",
+          1,
+          "пв",
+          0,
+          "энеми",
+          4,
+          "фон",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          12
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Идти дальше.",
+        "var_set": [
+          "т",
+          99,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          13
+        ],
+        "id": 2,
+        "text": "Идти дальше.",
+        "instant": true,
+        "var_set": [
+          "т",
+          99,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "т",
+          20,
+          "пв",
+          9
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Идти дальше.",
+        "var_set": [
+          "т",
+          21,
+          "пл",
+          0,
+          "гг",
+          0,
+          "пв",
+          0,
+          "энеми",
+          0,
+          "фон",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/xjgHVcjz/1.png",
+        "var_equal": [
+          "т",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/rwRt4j11/2.png",
+        "var_equal": [
+          "т",
+          2
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/0NgK0SnL/3.png",
+        "var_equal": [
+          "т",
+          3
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/j5PXhKyh/4.png",
+        "var_equal": [
+          "т",
+          4
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/sxzJ68cC/5.png",
+        "var_equal": [
+          "т",
+          5
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/x8P3WRxJ/6.png",
+        "var_equal": [
+          "т",
+          6
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/3rj14888/7.png",
+        "var_equal": [
+          "т",
+          7
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/fLzZFkSR/1.png",
+        "var_equal": [
+          "т",
+          8
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/tTByHyFt/2.png",
+        "var_equal": [
+          "т",
+          9
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/RhqmS8Rr/3.png",
+        "var_equal": [
+          "т",
+          10
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/VvT8dRGJ/4.png",
+        "var_equal": [
+          "т",
+          11
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/wxbHfqq9/5.png",
+        "var_equal": [
+          "т",
+          12
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/xTJQBw8M/6.png",
+        "var_equal": [
+          "т",
+          13
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/q70dhgLx/1.png",
+        "var_equal": [
+          "т",
+          22
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/9F622LwS/image.png",
+        "var_equal": [
+          "т",
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Вы заходите в \"Квестовые тексты\".\nВыберите ваш стартовый текст.",
+        "var_equal": [
+          "т",
+          99
+        ],
+        "merge": true
+      },
+      {
+        "bgAnswerImage": [
+          "https://i.postimg.cc/KcM1t7d4/image.png"
+        ],
+        "var_equal": [
+          "т",
+          99
+        ],
+        "id": 13,
+        "text": "     \n\n\n\n\n\n\n\n\n",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://i.postimg.cc/65xyc2Xc/image.png"
+        ],
+        "var_equal": [
+          "т",
+          99
+        ],
+        "id": 14,
+        "text": "      \n\n\n\n\n\n\n\n\n",
+        "var_set": [
+          "л",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/nhkNDFvP/image.png"
+      },
+      {
+        "id": 2,
+        "text": "Открыть чат текстописцев.",
+        "var_set": [
+          "пв",
+          2,
+          "т",
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/J0ywVXrM/1.png"
+      },
+      {
+        "id": 2,
+        "text": "Открыть чат текстописцев.",
+        "var_equal": [
+          "л",
+          2
+        ],
+        "var_set": [
+          "пв",
+          2,
+          "т",
+          20
+        ]
+      },
+      {
+        "id": 9,
+        "text": "центральная ",
+        "url": "https://i.postimg.cc/0j5wJqnj/image.png",
+        "var_equal": [
+          "л",
+          1
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/FFPFMbZ5/2.png",
+        "var_equal": [
+          "л",
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/Gmtx5vkt/image.png"
+      },
+      {
+        "id": 9,
+        "text": "Левая",
+        "url": "https://i.postimg.cc/wvQNvBhn/image.png",
+        "var_equal": [
+          "л",
+          2
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/qMzB4tbt/3.png",
+        "var_equal": [
+          "л",
+          2
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Далее.",
+        "var_equal": [
+          "л",
+          1
+        ],
+        "var_set": [
+          "л",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 16,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 17,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 18,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 19,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 20,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 21,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 22,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 23,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 24,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 25,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 26,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 29,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 30,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 31,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 33,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 34,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 35,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 36,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 38,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 39,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 40,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 41,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 42,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 43,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 44,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 45,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 46,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 47,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 48,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 49,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 50,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 51,
+    "text": "",
+    "answers": []
+  }
+]

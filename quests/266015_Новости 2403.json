@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ankylosaurus написал еще 25167.8 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "254893",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Dark Worm написал еще 21655.4 слов в квесте \"One student's adventure\"."
+      },
+      {
+        "targetbookid": "265215",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"One student's adventure\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор _KessiKeyd_❤ написал еще 17009 слов в квесте \"ПОСЛЕ ТОГО...\"."
+      },
+      {
+        "targetbookid": "265891",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"ПОСЛЕ ТОГО...\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Monkey написал еще 16815.8 слов в квесте \"Стоп, снято!\"."
+      },
+      {
+        "targetbookid": "264609",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Стоп, снято!\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор  Avalon написал еще 15934.8 слов в квесте \"Симулятор матери-одиночки\"."
+      },
+      {
+        "targetbookid": "261259",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Симулятор матери-одиночки\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

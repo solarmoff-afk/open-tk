@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор AntiHero написал еще 18996 слов в квесте \"Выбор капитана\"."
+      },
+      {
+        "targetbookid": "93724",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Выбор капитана\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 18964 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Krapoviy bilet ...\n написал еще 18811 слов в квесте \"Квест про Петровича и Васильича.\n\"."
+      },
+      {
+        "targetbookid": "108322",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Квест про Петровича и Васильича.\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор MadHatter написал еще 18647 слов в квесте \"Чернобыль. Зона отчуждения\"."
+      },
+      {
+        "targetbookid": "175809",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Чернобыль. Зона отчуждения\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор The DORRT написал еще 18639 слов в квесте \"Мертвые\"."
+      },
+      {
+        "targetbookid": "168459",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Мертвые\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

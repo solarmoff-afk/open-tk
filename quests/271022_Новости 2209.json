@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 26520 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Salim написал еще 18143.4 слов в квесте \"Летние каникулы\"."
+      },
+      {
+        "targetbookid": "264718",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Летние каникулы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Dark Worm написал еще 17426.6 слов в квесте \"Great and Mighty Survivor\n\n\"."
+      },
+      {
+        "targetbookid": "269058",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Great and Mighty Survivor\n\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ярослав Зверев написал еще 15479.4 слов в квесте \"Симулятор боёв 4х4\"."
+      },
+      {
+        "targetbookid": "257245",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Симулятор боёв 4х4\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Rudy написал еще 15238 слов в квесте \"Напарники - возлюбленные.\"."
+      },
+      {
+        "targetbookid": "256212",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Напарники - возлюбленные.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

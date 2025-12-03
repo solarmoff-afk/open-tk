@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор just  написал еще 37301.2 слов в квесте \"Приезд из парка и диалоги за столом после парка\"."
+      },
+      {
+        "targetbookid": "271744",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Приезд из парка и диалоги за столом после парка\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор l_lina_Blight написал еще 35623.8 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "271874",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор elChem написал еще 31377.2 слов в квесте \"Семена предательства\"."
+      },
+      {
+        "targetbookid": "270280",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Семена предательства\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 25092.6 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор bestmean написал еще 20340.8 слов в квесте \"Школа\n\n\"."
+      },
+      {
+        "targetbookid": "266481",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Школа\n\n\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

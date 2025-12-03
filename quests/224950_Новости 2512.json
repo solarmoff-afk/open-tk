@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sovet написал еще 33259 слов в квесте \"Тест доступа к виджетам\"."
+      },
+      {
+        "targetbookid": "223952",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тест доступа к виджетам\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 19880 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Oxotnik_05  написал еще 18894 слов в квесте \"Огненное лето \"."
+      },
+      {
+        "targetbookid": "209367",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Огненное лето \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Zoa Lacewing  написал еще 18231 слов в квесте \"Аномалия\"."
+      },
+      {
+        "targetbookid": "185461",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Аномалия\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор DeverlyBee написал еще 17408 слов в квесте \"Бешенство\"."
+      },
+      {
+        "targetbookid": "224032",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Бешенство\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "text": "Author: B1ack_Wh1te\n\nНевозможный квест с невозможными возможностями! По крайней мере, невозможным это было раньше. Отныне стало возможным форматирование текста с добавлением новых символов в качестве картинок.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Приступить к тестированию",
+        "lua_do": "function lua_do()\n    text = \"\"\n    pages[2].text = \"Text\"\n    pages[2].answers[1].text = \"Text\"\n    AddTextIcon(\"eye\", \"https://i.ibb.co/wsTkwpw/imgonline-com-ua-Resize-Asqpb-VDy-Ed-Nih0.png\", false)\n    AddTextIcon(\"clover\", \"https://i.ibb.co/TBssJ6n/imgonline-com-ua-Resize-6ge-Cpb2oxv3q-1.png\", true)\n    g.formatText = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "T<f=randCol>Tjdhdhskaam",
+    "answers": [
+      {
+        "id": 2,
+        "text": "T<f=randCol>Tjdhdhskaam",
+        "input_var": "text"
+      },
+      {
+        "id": 2,
+        "text": "\n\n\n\n\n\n",
+        "comment": true
+      },
+      {
+        "text": "Создать текст",
+        "lua_do": "function lua_do()\n    mainText = text\n    pages[2].text = text ~= \"\" and text or \"Text\"\n    pages[2].answers[1].text = text ~= \"\" and text or \"Text\"\nend",
+        "middle_answer": true,
+        "instant": true,
+        "id": 2,
+        "left_answer": false
+      },
+      {
+        "id": 3,
+        "text": "Важная информация",
+        "lua_do": "function lua_do()\n    g.formatText = 0\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction randCol(event)\n    if (event.phase == \"began\")\n    then\n        event.target:setFillColor(math.random(), math.random(), math.random())\n    end\n    return true\nend\nfunction msg(event)\n    if (event.phase == \"began\")\n    then\n        message(event.target.isImage and \"touch icon\" or (\"touch text <s><s>\"\" .. event.target.text .. \"<s><s>\"\"))\n    end\n    return true\nend\nfunction tap(event)\n    if (event.phase == \"began\")\n    then\n        if (not event.target.click)\n        then\n            event.target.click = true\n            if (event.target.isImage)\n            then\n                transition.to(event.target, { time = 100, width = event.target.width <plus> 3, height = event.target.height <plus> 3, onComplete =\n                function()\n                    transition.to(event.target, { time = 100, width = event.target.width - 3, height = event.target.height - 3, onComplete =\n                   function()\n                        event.target.click = false\n                    end })\n                end })\n            else\n                transition.to(event.target, { time = 100, size = event.target.size <plus> 3, onComplete =\n               function()\n                    transition.to(event.target, { time = 100, size = event.target.size - 3, onComplete =\n                    function()\n                        event.target.click = false\n                    end })\n                end })\n            end\n        end\n    end\n    return true\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Размер текста зависит от настроек размера шрифта в меню.\nДля форматирования текста присутствует система тегов. Их нужно вписывать в сам текст перед словами, в которых необходимо изменить цвет, шрифт и прочее. Например:\n\nНовое <#ff,0,0>слово\n\n\"Новое\" будет иметь черный цвет, а \"слово\" — красный.\n\n(!) Для того, чтобы форматирование работало в квесте, необходимо назначить значение специальной переменной:\ng.formatText = 1\n\nТеги:\n<#R,G,B> — тег задаёт цвет тексту. R G B — значения цветов в шестнадцатеричной системе от 0x00 до 0xFF. Так же можно указать и четвёртое число для изменения прозрачности. Между значениями могут быть любые символы. К примеру, для указания зелёного цвета можно написать так:\n<#00ff00>\n<#0 ff 0>\n<#0,ff,0>\nИмеется поддержка градиента. Для этого используется следующий формат:\n<#ff,0,0 [r] 0,ff,0>\nДанный пример задаёт градиент от красного к зелёному. [r] — это направление градиента. Допустимые значения: r, right, l, left, u, up, d, down, а так же можно вписать число, которое будет градусом.\n\n<#sR,G,B> — тег аналогичен предыдущему, но задаёт цвет уже тени/обводки текста.\n\n</#> — устанавливает черный цвет текста.\n\n</#s> — устанавливает черный цвет тени/обводки текста.\n\n<*N> — задаёт размер обводки для текста. N — любое дробное/целое число. При установке 0 обводка удаляется. Не рекомендуется ставить параметр выше 3.\n</*> — удаляет обводку.\n\n<sN> — задаёт размер тени для текста. N — любое дробное/целое число. При установке 0 тень удаляется.\n</s> — удаляет тень.\n\n<$N> — задаёт шрифт тексту. N — номер шрифта от 1 до 2. 1 — системный шрифт, 2 — курсив.\n\n</$> — задаёт системный шрифт.\n\n<img=id> — вставляет картинку в текст. id — имя картинки. Для примера было добавлено несколько картинок:\n<img=eye> — иконка с глазом.\n<img=clover> — иконка с клевером, принимает на себя текущий цвет для текста.\n\nДля того, чтобы добавить свою иконку в квест, необходимо заранее загрузить картинку, а после вызвать функцию AddTextIcon(id, url, fill)\nid (string) — это имя иконки. \nurl (string) — ссылка на картинку.\nfill (bool) — будет ли иконка принимать цвет как у текста (т.е. иконку можно будет перекрашивать при помощи тега <#RGB>).\n\n<b> — делает текст полужирным.\n</b> — удаляет данный эффект.\n\n<f=foo> — при нажатии на текст с этим атрибутом происходит вызов функции \"foo\". Для примера было создано 3 функции:\n<f=tap> — текст резко расширится и сузится до обратного размера, будто на него нажали.\n<f=randCol> — цвет текста примет случайное значение.\n<f=msg> — вызовит функцию \"message\" с нажатым текстом.\n</f> — удаляет функцию при нажатии.\nВставлять можно любую свою функцию. Она принимает 1 параметр — таблицу event. У таблицы есть поле \"target\", которым является текстовый объект, на который нажали.\n\n<<plus>N> — экспериментальная опция, изменяет размер текста. N — это множитель. К примеру, если написать <<plus>0.5> — текст будет в два раза меньше.\n</<plus>> — возвращает стандартный размер, который зависит от настроек в самом приложении.\n\nНемного планов на будущее:\n<left>, <center>, <right> — для редактирования выравнивания текста. Оно будет делать отступ на новую строку и рисовать текст с заданным выравниванием.\n\n<up>, <middle>, <down> — для редактирования выравнивания по вертикали (на данный момент маленький текст будет выравниваться вверх).\n\nВозможно, зачёркнутый и подчёркнутый текст, а также выделение текста.\n\nФункция для кастомного отображения. К примеру, для создания текста, который всё время изменяет свой цвет или увеличивается и сужается.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "lua_do": "function lua_do()\n    g.formatText = 1\nend"
+      },
+      {
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\n    return false\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Load Images\n\n          ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "img",
+        "answerImage": [
+          "https://i.ibb.co/wsTkwpw/imgonline-com-ua-Resize-Asqpb-VDy-Ed-Nih0.png"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "img",
+        "answerImage": [
+          "https://i.ibb.co/TBssJ6n/imgonline-com-ua-Resize-6ge-Cpb2oxv3q-1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  }
+]

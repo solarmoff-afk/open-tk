@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ser Pro написал еще 21994 слов в квесте \"Новое небо\"."
+      },
+      {
+        "targetbookid": "181857",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Новое небо\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ariel Shu написал еще 18222 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "211938",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Elizabeth написал еще 17605 слов в квесте \"Студенческая жизнь\"."
+      },
+      {
+        "targetbookid": "105086",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Студенческая жизнь\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор VLADIKON написал еще 17108 слов в квесте \"Ошибки всех (Mistakes of All)\"."
+      },
+      {
+        "targetbookid": "201811",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошибки всех (Mistakes of All)\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Slava_GT написал еще 16353 слов в квесте \"Тайский синдром\n\"."
+      },
+      {
+        "targetbookid": "201357",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тайский синдром\n\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

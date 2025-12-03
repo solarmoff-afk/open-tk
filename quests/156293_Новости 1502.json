@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор JSG написал еще 23541 слов в квесте \"Наследница\"."
+      },
+      {
+        "targetbookid": "144307",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наследница\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Заря написал еще 16671 слов в квесте \"Всё вокруг меня реально? Часть 1\"."
+      },
+      {
+        "targetbookid": "95555",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Всё вокруг меня реально? Часть 1\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ∆Ventry∆ написал еще 15953 слов в квесте \"Семь сторон жизни\"."
+      },
+      {
+        "targetbookid": "153154",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Семь сторон жизни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Rain написал еще 15516 слов в квесте \"NAO. \nНачало.\"."
+      },
+      {
+        "targetbookid": "145033",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"NAO. \nНачало.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ankylosaurus написал еще 14631 слов в квесте \"Квест-лаборатория\"."
+      },
+      {
+        "targetbookid": "123330",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Квест-лаборатория\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

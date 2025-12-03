@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Катрин Фель\n написал еще 18511 слов в квесте \"Пламя эльфов\"."
+      },
+      {
+        "targetbookid": "100859",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Пламя эльфов\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Tobi написал еще 17846 слов в квесте \"Судьба - это миф\n\"."
+      },
+      {
+        "targetbookid": "169175",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Судьба - это миф\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ariel Shu написал еще 15672 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "213765",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор *В£дЬмОчК@* написал еще 15146 слов в квесте \"Невеста дьявола.\"."
+      },
+      {
+        "targetbookid": "217143",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Невеста дьявола.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Феникс написал еще 14732 слов в квесте \"Ручка любви\"."
+      },
+      {
+        "targetbookid": "202505",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ручка любви\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

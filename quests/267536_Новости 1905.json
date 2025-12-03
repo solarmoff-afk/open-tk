@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Froga написал еще 97550 слов в квесте \"Ночь в лесу\"."
+      },
+      {
+        "targetbookid": "267171",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ночь в лесу\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор masha katsuba написал еще 35336.2 слов в квесте \"Границы тьмы\"."
+      },
+      {
+        "targetbookid": "230986",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Границы тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Julia High написал еще 20624.8 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "266967",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Monkey написал еще 18796.4 слов в квесте \"Стоп, снято!\"."
+      },
+      {
+        "targetbookid": "264609",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Стоп, снято!\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Мира написал еще 17360.6 слов в квесте \"Авдей\"."
+      },
+      {
+        "targetbookid": "259021",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Авдей\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

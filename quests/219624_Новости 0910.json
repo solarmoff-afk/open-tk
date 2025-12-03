@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mora Fox написал еще 22362 слов в квесте \"Четыре принца и я<s>r\n\"."
+      },
+      {
+        "targetbookid": "180489",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Четыре принца и я<s>r\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор SoSvirid написал еще 18996 слов в квесте \"Дочь Солнца \"."
+      },
+      {
+        "targetbookid": "218731",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Дочь Солнца \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 17477 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Yana Z написал еще 16108 слов в квесте \"Кьяллахельм. Ведомые Тьмой\"."
+      },
+      {
+        "targetbookid": "888",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Кьяллахельм. Ведомые Тьмой\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор gjkerfhjdf написал еще 15968 слов в квесте \"Зомби\"."
+      },
+      {
+        "targetbookid": "219237",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Зомби\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

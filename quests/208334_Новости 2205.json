@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ***** написал еще 25629 слов в квесте \"Новый мир\"."
+      },
+      {
+        "targetbookid": "183520",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Новый мир\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 25488 слов в квесте \"ГГ: Гардеробщик Героя\"."
+      },
+      {
+        "targetbookid": "207646",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"ГГ: Гардеробщик Героя\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Tvoya Ledy написал еще 21617 слов в квесте \"Слепая\"."
+      },
+      {
+        "targetbookid": "207261",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Слепая\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор TornWitch написал еще 20770 слов в квесте \"Ритуал\"."
+      },
+      {
+        "targetbookid": "202779",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ритуал\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Alex Guch написал еще 19779 слов в квесте \"   \"."
+      },
+      {
+        "targetbookid": "205206",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"   \"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

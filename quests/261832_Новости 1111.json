@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Victory написал еще 250636 слов в квесте \"Звезда масюнек \"."
+      },
+      {
+        "targetbookid": "260870",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Звезда масюнек \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Postnik написал еще 101968 слов в квесте \"MIDEN\"."
+      },
+      {
+        "targetbookid": "261436",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"MIDEN\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 99908 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 85740 слов в квесте \"Снежная Соната\"."
+      },
+      {
+        "targetbookid": "252827",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Снежная Соната\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Hamster44 написал еще 83995 слов в квесте \"Свет небес\"."
+      },
+      {
+        "targetbookid": "253089",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Свет небес\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

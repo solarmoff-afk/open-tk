@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1,
+    "text": "Симулятор торговли в космосе для демонстрации возможностей lua. Накопите миллион прежде чем вам стукнет 99 лет!",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nvars.characterAge=13*12*30*24*60 -- возраст 13 лет, в минутах\nvars.startOfGame=vars.characterAge - 6*60\nvars.planetCurId = 42\nvars.money = 1000\nvars.cargo = 0\nvars.cargoTable={}\nvars.maxCargo = 500\nvars.armor = 500\nvars.maxArmor = 500\nvars.shipId = 42\nglobal_vars.transition=\"instant\"\nend",
+        "text": "Начать",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Время и возраст",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do() -- вычисляем время суток\nvars.currentTime = (vars.characterAge-vars.startOfGame)%(60*24)\nend",
+        "calculate": true
+      },
+      {
+        "var_showtime": [
+          "currentTime"
+        ],
+        "id": 2,
+        "text": "\nТекущее время: ",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nvars.characterAgeYears = math.floor(vars.characterAge/60/24/30/12)\nvars.characterAgeMonths = math.floor(vars.characterAge/60/24/30) - (vars.characterAgeYears*12)\nvars.characterAgeDays = math.floor(vars.characterAge/60/24)%(30)\nvars.characterAgeString = \"Вам \"..vars.characterAgeYears ..\" лет, \" .. vars.characterAgeMonths .. \" месяцев  и \".. vars.characterAgeDays .. \" дней.\"\nend",
+        "calculate": true
+      },
+      {
+        "var_show": [
+          "characterAgeString"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": ", ",
+        "merge": true
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nvars.moneyString = \"у вас \".. vars.money .. \" кредитов\"\nend",
+        "calculate": true
+      },
+      {
+        "var_show": [
+          "moneyString"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": ", ",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Главная страница",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Вызвать временные функции и кнопки",
+        "run": [
+          2
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Выбрать планету назначения"
+      },
+      {
+        "id": 5,
+        "text": "Ваш трюм"
+      },
+      {
+        "id": 6,
+        "text": "Рынок"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Генератор кнопки полёта на случайную планету",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Луа",
+        "lua_do": "function lua_do()\nmath.randomseed(vars.planetCurId)\nvars.planet1_time = math.random(1000)\nvars.planet2_time = math.random(1000)\nvars.planet3_time = math.random(1000)\nvars.planet1_id = math.random(100)\nvars.planet2_id = math.random(100)\nvars.planet3_id = math.random(100)\nvars.planet1_string = \"Лететь на планету №\" .. vars.planet1_id .. \" за \" .. math.floor(vars.planet1_time/60) .. \" часов \" .. vars.planet1_time%(60)  .. \" минут.\"\nvars.planet2_string = \"Лететь на планету №\" .. vars.planet2_id .. \" за \" .. math.floor(vars.planet2_time/60) .. \" часов \" .. vars.planet2_time%(60)  .. \" минут.\"\nvars.planet3_string = \"Лететь на планету №\" .. \nvars.planet3_id .. \" за \" .. math.floor(vars.planet3_time/60) .. \" часов \" .. vars.planet3_time%(60) .. \" минут.\"\nend",
+        "calculate": true
+      },
+      {
+        "var_show": [
+          "planet1_string"
+        ],
+        "lua_if": "function lua_if()\nif answer then answer.text = \"hello!\" end\nreturn true\nend",
+        "lua_do": "function lua_do()\nvars.planetCurId = vars.planet1_id\nvars.characterAge = vars.characterAge <plus> vars.planet1_time\nend",
+        "text": "> ",
+        "id": 3
+      },
+      {
+        "id": 3,
+        "var_show": [
+          "planet2_string"
+        ],
+        "lua_do": "function lua_do()\nvars.planetCurId = vars.planet2_id\nvars.characterAge = vars.characterAge <plus> vars.planet2_time\nend",
+        "text": "> "
+      },
+      {
+        "id": 3,
+        "var_show": [
+          "planet3_string"
+        ],
+        "lua_do": "function lua_do()\nvars.planetCurId = vars.planet2_id\nvars.characterAge = vars.characterAge <plus> vars.planet2_time\nend",
+        "text": "> "
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Содержимое трюма:",
+    "answers": [
+      {
+        "id": 5,
+        "text": "луа кальк",
+        "lua_do": "function lua_do()\nvars.currCargoPage = vars.currCargoPage or 1\nvars.cargo1num =( vars.currCargoPage -1)*2 <plus> 1\nvars.cargo2num =( vars.currCargoPage -1)*2 <plus> 2\nvars.cargo3num =( vars.currCargoPage -1)*5 <plus> 3\nvars.cargo4num =( vars.currCargoPage -1)*5 <plus> 4\nvars.cargo5num =( vars.currCargoPage -1)*5 <plus> 5\nif not vars.cargoTable then\nvars.cargoTable = {}\nend\nend",
+        "calculate": true
+      },
+      {
+        "id": 3,
+        "text": "Покинуть трюм"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn vars.currCargoPage > 1\nend",
+        "lua_do": "function lua_do()\nif vars.currCargoPage > 1 then vars.currCargoPage = vars.currCargoPage - 1 end\nend",
+        "text": "Назад",
+        "id": 5,
+        "left_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\nvars.currCargoPage = vars.currCargoPage <plus> 1\nend",
+        "right_answer": true,
+        "text": "Вперёд",
+        "id": 5
+      },
+      {
+        "id": 9,
+        "text": "Слот ",
+        "lua_if": "function lua_if()\nlocal cargo = vars.cargoTable[vars.cargo1num]\nif  cargo then\nvars.cargo1str = \"№ \".. vars.cargo1num ..  \"содержит товар № \".. cargo .. \" в количеству \" .. vars.goodsInCargoTable[tostring(cargo)].quantity .. \" шт.\"\nelse\nvars.cargo1str = \"№ \".. vars.cargo1num .. \", пусто\"\nend\nreturn true\nend",
+        "var_show": [
+          "cargo1str"
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Слот ",
+        "lua_if": "function lua_if()\nlocal cargo = vars.cargoTable[vars.cargo2num]\nif  cargo then\nvars.cargo2str = \"№ \".. vars.cargo2num ..  \"содержит товар № \".. cargo .. \" в количеству \" .. vars.goodsInCargoTable[tostring(cargo)].quantity .. \" шт.\"\nelse\nvars.cargo2str = \"№ \".. vars.cargo2num .. \", пусто\"\nend\nreturn true\nend",
+        "var_show": [
+          "cargo2str"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Рынок",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nmath.randomseed(vars.planetCurId)\nfor i=1,3 do\nvars[\"good\"..i..\"Id\"] = math.random(1,vars.planetCurId)\nvars[\"good\"..i..\"priceSold\"] = 1<plus> math.floor(vars[\"good\"..i..\"Id\"]^1.5*((50<plus>math.random(150))/100))\nvars[\"good\"..i..\"priceMedium\"] = 1<plus> math.floor(vars[\"good\"..i..\"Id\"]^1.5*1.25)\nvars[\"good\"..i..\"priceBuy\"] = math.floor(vars[\"good\"..i..\"priceSold\"] * 1.5 ) <plus> 1\nend\nend",
+        "calculate": true
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nfor i=1,3 do\nvars[\"good\"..i..\"str1\"] = \"Товар номер \"..vars[\"good\"..i..\"Id\"] .. \" (средняя цена \" .. (vars[\"good\"..i..\"priceMedium\"] ).. \")\"\nvars[\"good\"..i..\"str2\"] = \"Купить за \"..vars[\"good\"..i..\"priceBuy\"]\nvars[\"good\"..i..\"str3\"] = \"Продать за \"..vars[\"good\"..i..\"priceSold\"]\nend\nend",
+        "calculate": true
+      },
+      {
+        "id": 3,
+        "text": "Выйти с рынка"
+      },
+      {
+        "id": 6,
+        "text": " ",
+        "comment": true,
+        "var_show": [
+          "good1str1"
+        ]
+      },
+      {
+        "var_show": [
+          "good1str2"
+        ],
+        "lua_if": "function lua_if()\nreturn tonumber(vars.money)>=tonumber(vars.good1priceBuy)\nend",
+        "id": 6,
+        "text": " ",
+        "lua_do": "function lua_do()\n\nvars.goodsInCargoTable = vars.goodsInCargoTable or {}\nvars.goodsInCargoTable[tostring(vars.good1Id)] = vars.goodsInCargoTable[tostring(vars.good1Id)] or {quantity = 0, cargoTableId = 0}\n-- [ [\nif vars.goodsInCargoTable[tostring(vars.good1Id)].cargoTableId == 0 then\nfor i=1,#vars.cargoTable<plus>1 do\nif not vars.cargoTable[i] then\nvars.cargoTable[i] = vars.good1Id\nvars.goodsInCargoTable[tostring(vars.good1Id)].cargoTableId = i\nbreak\nend\nend\nend\n\nvars.goodsInCargoTable[tostring(vars.good1Id)].quantity = vars.goodsInCargoTable[tostring(vars.good1Id)].quantity <plus> 1\nvars.money = vars.money - vars.good1priceBuy\n--]]\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn vars.goodsInCargoTable and vars.goodsInCargoTable[tostring(vars.good1Id)] and vars.goodsInCargoTable[tostring(vars.good1Id)].quantity and vars.goodsInCargoTable[tostring(vars.good1Id)].quantity > 0\nend",
+        "id": 6,
+        "text": " ",
+        "var_show": [
+          "good1str3"
+        ],
+        "lua_do": "function lua_do()\nvars.goodsInCargoTable[tostring(vars.good1Id)].quantity = vars.goodsInCargoTable[tostring(vars.good1Id)].quantity - 1\nvars.money = vars.money <plus> vars.good1priceSold\n\n\nif vars.goodsInCargoTable[tostring(vars.good1Id)].quantity <1 then\nfor i=1,#vars.cargoTable<plus>1 do\nif vars.cargoTable[i] and  vars.cargoTable[i]==vars.good1Id then\nvars.cargoTable[i] = nil\nvars.goodsInCargoTable[tostring(vars.good1Id)].cargoTableId = 0\nbreak\nend\nend\nend\nend"
+      },
+      {
+        "id": 6,
+        "text": ". У вас ",
+        "var_show": [
+          "money",
+          " кредитов"
+        ],
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": " ",
+        "comment": true,
+        "var_show": [
+          "good2str1"
+        ]
+      },
+      {
+        "var_show": [
+          "good2str2"
+        ],
+        "lua_if": "function lua_if()\nreturn tonumber(vars.money)>=tonumber(vars.good2priceBuy)\nend",
+        "id": 6,
+        "text": " ",
+        "lua_do": "function lua_do()\n\nvars.goodsInCargoTable = vars.goodsInCargoTable or {}\nvars.goodsInCargoTable[tostring(vars.good2Id)] = vars.goodsInCargoTable[tostring(vars.good2Id)] or {quantity = 0, cargoTableId = 0}\n-- [ [\nif vars.goodsInCargoTable[tostring(vars.good2Id)].cargoTableId == 0 then\nfor i=1,#vars.cargoTable<plus>1 do\nif not vars.cargoTable[i] then\nvars.cargoTable[i] = vars.good2Id\nvars.goodsInCargoTable[tostring(vars.good2Id)].cargoTableId = i\nbreak\nend\nend\nend\n\nvars.goodsInCargoTable[tostring(vars.good2Id)].quantity = vars.goodsInCargoTable[tostring(vars.good2Id)].quantity <plus> 1\nvars.money = vars.money - vars.good2priceBuy\n--]]\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn vars.goodsInCargoTable and vars.goodsInCargoTable[tostring(vars.good2Id)] and vars.goodsInCargoTable[tostring(vars.good2Id)].quantity and vars.goodsInCargoTable[tostring(vars.good2Id)].quantity > 0\nend",
+        "id": 6,
+        "text": " ",
+        "var_show": [
+          "good2str3"
+        ],
+        "lua_do": "function lua_do()\nvars.goodsInCargoTable[tostring(vars.good2Id)].quantity = vars.goodsInCargoTable[tostring(vars.good2Id)].quantity - 1\nvars.money = vars.money <plus> vars.good2priceSold\n\n\nif vars.goodsInCargoTable[tostring(vars.good2Id)].quantity <1 then\nfor i=1,#vars.cargoTable<plus>1 do\nif vars.cargoTable[i] and  vars.cargoTable[i]==vars.good2Id then\nvars.cargoTable[i] = nil\nvars.goodsInCargoTable[tostring(vars.good2Id)].cargoTableId = 0\nbreak\nend\nend\nend\nend"
+      },
+      {
+        "id": 6,
+        "text": " ",
+        "comment": true,
+        "var_show": [
+          "good3str1"
+        ]
+      },
+      {
+        "var_show": [
+          "good3str2"
+        ],
+        "lua_if": "function lua_if()\nreturn tonumber(vars.money)>=tonumber(vars.good3priceBuy)\nend",
+        "id": 6,
+        "text": " ",
+        "lua_do": "function lua_do()\n\nvars.goodsInCargoTable = vars.goodsInCargoTable or {}\nvars.goodsInCargoTable[tostring(vars.good3Id)] = vars.goodsInCargoTable[tostring(vars.good3Id)] or {quantity = 0, cargoTableId = 0}\n-- [ [\nif vars.goodsInCargoTable[tostring(vars.good3Id)].cargoTableId == 0 then\nfor i=1,#vars.cargoTable<plus>1 do\nif not vars.cargoTable[i] then\nvars.cargoTable[i] = vars.good3Id\nvars.goodsInCargoTable[tostring(vars.good3Id)].cargoTableId = i\nbreak\nend\nend\nend\n\nvars.goodsInCargoTable[tostring(vars.good3Id)].quantity = vars.goodsInCargoTable[tostring(vars.good3Id)].quantity <plus> 1\nvars.money = vars.money - vars.good3priceBuy\n--]]\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn vars.goodsInCargoTable and vars.goodsInCargoTable[tostring(vars.good3Id)] and vars.goodsInCargoTable[tostring(vars.good3Id)].quantity and vars.goodsInCargoTable[tostring(vars.good3Id)].quantity > 0\nend",
+        "id": 6,
+        "text": " ",
+        "var_show": [
+          "good3str3"
+        ],
+        "lua_do": "function lua_do()\nvars.goodsInCargoTable[tostring(vars.good3Id)].quantity = vars.goodsInCargoTable[tostring(vars.good3Id)].quantity - 1\nvars.money = vars.money <plus> vars.good3priceSold\n\n\nif vars.goodsInCargoTable[tostring(vars.good3Id)].quantity <1 then\nfor i=1,#vars.cargoTable<plus>1 do\nif vars.cargoTable[i] and  vars.cargoTable[i]==vars.good3Id then\nvars.cargoTable[i] = nil\nvars.goodsInCargoTable[tostring(vars.good3Id)].cargoTableId = 0\nbreak\nend\nend\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 9,
+    "text": "Камера трюма",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Выйти в трюм"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 11,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": []
+  }
+]

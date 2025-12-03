@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 104005 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Selie394 написал еще 97746 слов в квесте \"Заводная революция\"."
+      },
+      {
+        "targetbookid": "236984",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Заводная революция\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор trans написал еще 96579 слов в квесте \"Между мирами _copy-copy1\"."
+      },
+      {
+        "targetbookid": "232431",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Между мирами _copy-copy1\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Гривус написал еще 95849 слов в квесте \"Любопытный мужичок\"."
+      },
+      {
+        "targetbookid": "246398",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Любопытный мужичок\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ярослав Зверев написал еще 94678 слов в квесте \"Новое поколение\"."
+      },
+      {
+        "targetbookid": "225454",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Новое поколение\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

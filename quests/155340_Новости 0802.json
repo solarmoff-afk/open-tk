@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Joust написал еще 18199 слов в квесте \"Отель любви исполнит все мечты (Часть 3)\"."
+      },
+      {
+        "targetbookid": "137043",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Отель любви исполнит все мечты (Часть 3)\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 17828 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор AntiHero написал еще 17226 слов в квесте \"Выбор капитана\"."
+      },
+      {
+        "targetbookid": "93724",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Выбор капитана\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Пан_Ант написал еще 15424 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "152310",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Летунья написал еще 15382 слов в квесте \"Поступь Прошлого\"."
+      },
+      {
+        "targetbookid": "128478",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Поступь Прошлого\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

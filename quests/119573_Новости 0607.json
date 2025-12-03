@@ -1,0 +1,294 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор No Name написал еще 18460 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "117049",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Resrix написал еще 10625 слов в квесте \"Деймос: Парадокс\"."
+      },
+      {
+        "targetbookid": "107688",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Деймос: Парадокс\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Lilu Swartz\n написал еще 9573 слов в квесте \"Загадка поместья Ревера 2\"."
+      },
+      {
+        "targetbookid": "117201",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Загадка поместья Ревера 2\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ваша Умница написал еще 9419 слов в квесте \"Выбор Потерянного.\"."
+      },
+      {
+        "targetbookid": "112240",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Выбор Потерянного.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор allegator написал еще 7822 слов в квесте \"Эпоха мертвых\"."
+      },
+      {
+        "targetbookid": "117573",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Эпоха мертвых\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 7118 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Arpand\n написал еще 7056 слов в квесте \"\"."
+      },
+      {
+        "targetbookid": "50761",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 7002 слов в квесте \"И всё пошло не так...\"."
+      },
+      {
+        "targetbookid": "113067",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"И всё пошло не так...\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Fuong  написал еще 6780 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "116359",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Miki написал еще 6689 слов в квесте \"Новая жизнь в другом мире\"."
+      },
+      {
+        "targetbookid": "117395",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Новая жизнь в другом мире\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ghost of Night написал еще 6653 слов в квесте \"История Сирины ч.I\nНачало\"."
+      },
+      {
+        "targetbookid": "117035",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"История Сирины ч.I\nНачало\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mivrichka написал еще 5768 слов в квесте \"Песня жизни\"."
+      },
+      {
+        "targetbookid": "74865",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Песня жизни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Anela Krestofol написал еще 5650 слов в квесте \"Новелла\"Рок-н-рол,детка\"\"."
+      },
+      {
+        "targetbookid": "114561",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Новелла\"Рок-н-рол,детка\"\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ситрак\n написал еще 5511 слов в квесте \"Мафия: Жёсткая охота.\n\n\"."
+      },
+      {
+        "targetbookid": "114591",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Мафия: Жёсткая охота.\n\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Master Cho написал еще 5275 слов в квесте \"Одиссея Алонсо Кортеса. Книга третья.\"."
+      },
+      {
+        "targetbookid": "116579",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Одиссея Алонсо Кортеса. Книга третья.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mivrichka написал еще 5265 слов в квесте \"Черновик. П.Ж.\"."
+      },
+      {
+        "targetbookid": "74867",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Черновик. П.Ж.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Rubas Y написал еще 4793 слов в квесте \"Тяжёлая жизнь селянина. \"."
+      },
+      {
+        "targetbookid": "116069",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тяжёлая жизнь селянина. \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Владимир написал еще 4718 слов в квесте \"Допрос\"."
+      },
+      {
+        "targetbookid": "115868",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Допрос\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор popopa04 написал еще 4698 слов в квесте \"Серая Туча\"."
+      },
+      {
+        "targetbookid": "116945",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Серая Туча\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор egor.playne\n\n написал еще 4694 слов в квесте \"S.T.A.L.K.E.R. Дорога в Припять\"."
+      },
+      {
+        "targetbookid": "31946",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"S.T.A.L.K.E.R. Дорога в Припять\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор zefirk@\n написал еще 4656 слов в квесте \"Неожиданные повороты судьбы\"."
+      },
+      {
+        "targetbookid": "118256",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Неожиданные повороты судьбы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Крокоdil написал еще 4618 слов в квесте \"Звёздные воины: Перезагрузка\"."
+      },
+      {
+        "targetbookid": "114924",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Звёздные воины: Перезагрузка\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Kapybara;)\n написал еще 4602 слов в квесте \"Шанс на спасение.\"."
+      },
+      {
+        "targetbookid": "118044",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Шанс на спасение.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Anonim написал еще 4439 слов в квесте \"Ходячии Мертвяцы\nПервая Глава\"."
+      },
+      {
+        "targetbookid": "119012",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ходячии Мертвяцы\nПервая Глава\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор KrapoviyBilet_с_телефона написал еще 4406 слов в квесте \"DLC от Крапового билета.\"."
+      },
+      {
+        "targetbookid": "117995",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"DLC от Крапового билета.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

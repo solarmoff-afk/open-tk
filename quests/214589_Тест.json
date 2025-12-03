@@ -1,0 +1,220 @@
+[
+  {
+    "id": 1,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 2,
+        "text": ">>>"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 3,
+        "text": ">>>"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() \nlocal names={} realrooms={} kitchen={} treasure={} hide={} hallway={} podval={} kladovka={} stolov={} servantroom={} gostinaya={} bedroom={}  \nlocal treasures={\"мешочек золота\",\"серьги\",\"кольцо\"} --Артем, впиши тут сам какие сокровища он найдет\nlocal hides={\"в шкафу\",\"под столом\",\"среди хлама\"} --А тут места где можно прятаться\nkitchen.real=1\nif kitchen.real==1 then table.insert (names, \"kitchen\") end \nhallway.real=math.random(0,1)     if hallway.real==1 then table.insert (names, \"hallway\") end\npodval.real=math.random(0,1)      if podval.real==1 then table.insert (names, \"podval\") end \nkladovka.real=math.random(0,1)    if kladovka.real==1 then table.insert (names, \"kladovka\") end\nstolov.real=math.random(0,1)      if stolov.real==1 then table.insert (names, \"stolov\") end  \nservantroom.real=math.random(0,1) if servantroom.real==1 then table.insert (names, \"servantroom\") end\ngostinaya.real=math.random(0,1)   if gostinaya.real==1 then table.insert (names, \"gostinaya\") end \nbedroom.real=1 \nif bedroom.real==1 then table.insert (names, \"bedroom\") end\nlocal a=podval.real<plus>kladovka.real<plus>stolov.real<plus>servantroom.real<plus>gostinaya.real<plus>hallway.real<plus>bedroom.real<plus>kitchen.real \nif a==2 \nthen \n<s>ttable.insert(realrooms, \"kitchen\")\n<s>tkitchen.x=1\n<s>ttable.insert(realrooms, kitchen.x) \n<s>tkitchen.y=1\n<s>ttable.insert(realrooms, kitchen.y)\n<s>ttable.insert(realrooms, \"bedroom\")\n<s>tbedroom.x=2\n<s>ttable.insert(realrooms, bedroom.x)\n<s>tbedroom.y=1\n<s>ttable.insert(realrooms, bedroom.y)\nend \nif a==3 then num={1,2,3,4} side=2  end \nif a==4 then num={1,2,3,4} side=2 end \nif a==5 then num={1,2,3,4,5,6,7,8,9} side=3 end \nif a==6 then num={1,2,3,4,5,6,7,8,9} side=3 end\nif a==7 then num={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16} side=4 end \nif a==8 then num={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16} side=4 end \nif a==9 then num={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16} side=4 end \nfor i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y)\nend \nend \nx={}\ny={}\nn={}\nlocal a\nlocal b\nfor i=1, #realrooms, 3 do\n<s>ttable.insert(n,realrooms[i])\nend\nfor i=2, #realrooms, 3 do\n<s>ttable.insert(x,realrooms[i])\nend\nfor i=3, #realrooms, 3 do\n<s>ttable.insert(y,realrooms[i])\nend\nown={}\nfor i=1, #realrooms do\n<s>tif realrooms[i]==\"servantroom\"\n<s>tthen\n<s>t<s>town.x=realrooms[i<plus>1]\n<s>t<s>town.y=realrooms[i<plus>2]\n<s>t<s>town.name=\"Комната слуг\"\n<s>tend\nend\nfor i=1, #realrooms do\n<s>tif realrooms[i]==\"hallway\"\n<s>tthen\n<s>t<s>town.x=realrooms[i<plus>1]\n<s>t<s>town.y=realrooms[i<plus>2]\n<s>t<s>town.name=\"Прихожая\"\n<s>tend<s>t\nend\nif own.x==nil\nthen\n<s>tb=math.random(#x)\n<s>ta=n[b]\n<s>tif a==\"kitchen\" then own.name=\"Кухня\" end\n<s>tif a==\"podval\" then own.name=\"Подвал\" end\n<s>tif a==\"kladovka\" then own.name=\"Кладовка\" end\n<s>tif a==\"stolov\" then own.name=\"Столовая\" end\n<s>tif a==\"gostinaya\" then own.name=\"Гостинная\" end\n<s>tif a==\"bedroom\" then own.name=\"Спальня\" end\n<s>town.x=x[b]\n<s>town.y=y[b]\nend\nfor i=1, #x do\n<s>ttable.insert(treasure, treasures[math.random(#treasures)])\nend\nfor i=1, #x do\n<s>ttable.insert(hide, hides[math.random(#hides)])\nend\nNPC1={}\nNPC2={}\nNPC3={}\nNPC4={}\nNPC5={}\nNPC1.real=1\nNPC2.real=math.random(0,1)\nfor i=1, #realrooms do\n<s>tif realrooms[i]==\"bedroom\"\n<s>tthen\n<s>t<s>tNPC1.ownname=realrooms[i] NPC1.ownx=realrooms[i<plus>1] NPC1.owny=realrooms[i<plus>2]\n<s>t<s>tif NPC2.real==1 then NPC2.ownname=realrooms[i] NPC2.ownx=realrooms[i<plus>1] NPC2.owny=realrooms[i<plus>2] end\n<s>tend\nend<s>t\nif servantroom.real==1\nthen\n<s>tNPC3.real=math.random(0,1)\n<s>tNPC4.real=math.random(0,1)\n<s>tNPC5.real=math.random(0,1)\n<s>tfor i=1, #realrooms do\n<s>t<s>tif realrooms[i]==\"servantroom\"\n<s>t<s>tthen\n<s>t<s>t<s>t<s>tif NPC3.real==1 then NPC3.ownname=realrooms[i] NPC3.ownx=realrooms[i<plus>1] NPC3.owny=realrooms[i<plus>2] end\n<s>t<s>t<s>t<s>tif NPC4.real==1 then NPC4.ownname=realrooms[i] NPC4.ownx=realrooms[i<plus>1] NPC4.owny=realrooms[i<plus>2] end\n<s>t<s>t<s>t<s>tif NPC5.real==1 then NPC5.ownname=realrooms[i] NPC5.ownx=realrooms[i<plus>1] NPC5.owny=realrooms[i<plus>2] end\n<s>t<s>tend\n<s>tend\nend\nfor i=1, 5 do\nif vars[\"NPC\"..i].real==1\nthen \nvars[\"NPC\"..i..\"y1\"]={}\nvars[\"NPC\"..i..\"y2\"]={}\nvars[\"NPC\"..i..\"x1\"]={}\nvars[\"NPC\"..i..\"x2\"]={}\nend\nend\nkitchen=nil\nhallway=nil\npodval=nil\nkladovka=nil\nstolov=nil\nservantroom=nil\ngostinaya=nil\nbedroom=nil\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Текущая комната: \"..own.name\nend",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "----------------------------",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #y1>0 and own.namey1~=nil\nend",
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nreturn \"^\"..\"<s>\nПерейти в: \"..own.namey1\nend",
+        "text": "^",
+        "id": 3,
+        "instant": true,
+        "lua_do": "function lua_do()\nown.name=own.namey1\nown.y=own.y1\nown.x1=nil\nown.namex1=nil\nown.x2=nil\nown.namex2=nil\nown.y1=nil\nown.namey1=nil\nown.y2=nil\nown.namey2=nil\nend",
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "^\n\n",
+        "lua_if": "function lua_if()\nreturn #y1==0 and own.namey1==nil\nend",
+        "id": 3
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\nreturn \">\"..\"<s>\nПерейти в: \"..own.namex1\nend",
+        "instant": true,
+        "id": 3,
+        "text": ">",
+        "lua_if": "function lua_if()\nreturn #x1>0 and own.namex1~=nil\nend",
+        "lua_do": "function lua_do()\nown.x=own.x1\nown.name=own.namex1\nown.x1=nil\nown.namex1=nil\nown.x2=nil\nown.namex2=nil\nown.y1=nil\nown.namey1=nil\nown.y2=nil\nown.namey2=nil\nend"
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 3,
+        "text": ">\n",
+        "lua_if": "function lua_if()\nreturn #x1==0 and own.namex1==nil\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn #x2>0 and own.namex2~=nil\nend",
+        "right_answer": false,
+        "lua_text": "function lua_text()\nreturn \"<\"..\"<s>\nПерейти в: \"..own.namex2\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nown.x=own.x2\nown.name=own.namex2\nown.x1=nil\nown.namex1=nil\nown.x2=nil\nown.namex2=nil\nown.y1=nil\nown.namey1=nil\nown.y2=nil\nown.namey2=nil\nend",
+        "text": "<",
+        "id": 3,
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "id": 3,
+        "text": "<\n",
+        "lua_if": "function lua_if()\nreturn #x2==0 and own.namex2==nil\nend\n",
+        "left_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"V\"..\"<s>\nПерейти в: \"..own.namey2\nend",
+        "lua_do": "function lua_do()\nown.y=own.y2\nown.name=own.namey2\nown.x1=nil\nown.namex1=nil\nown.x2=nil\nown.namex2=nil\nown.y1=nil\nown.namey1=nil\nown.y2=nil\nown.namey2=nil\nend",
+        "lua_if": "function lua_if()\nreturn #y2>0 and own.namey2~=nil\nend",
+        "instant": true,
+        "id": 3,
+        "text": "<s><s>/",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "V\n",
+        "lua_if": "function lua_if()\nreturn #y2==0 and own.namey2==nil\nend",
+        "id": 3
+      },
+      {
+        "id": 3,
+        "text": "----------------------------",
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Подобрать \"..treasure[tr]\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\ntreasure[tr]=0\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn treasure[tr]~=0\nend",
+        "id": 3
+      },
+      {
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Спрятаться \"..hide[hd]\nend",
+        "lua_do": "function lua_do()\nhid=1\nend"
+      },
+      {
+        "id": 3,
+        "text": "----------------------------",
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          5
+        ]
+      },
+      {
+        "id": 6,
+        "text": "штука с апдейтом ",
+        "run": [
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Вы спрятались",
+    "answers": [
+      {
+        "id": 4,
+        "isBack": true,
+        "text": "Вылезти",
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\nhid=0\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "             ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\ny1={}\ny2={}\nx1={}\nx2={}\nown.x1=0\nown.x2=0\nown.y1=0\nown.y2=0\nfor i=1, #x do\n<s>tif x[i]==own.x and n[i]~=own.name and own.y<y[i]\n<s>tthen\n<s>t<s>ttable.insert(y1,y[i])\n<s>tend\n<s>tif x[i]==own.x and n[i]~=own.name and own.y>y[i]\n<s>tthen\n<s>t<s>ttable.insert(y2,y[i])\n<s>tend\n<s>tif y[i]==own.y and n[i]~=own.name and own.x<x[i]\n<s>tthen\n<s>t<s>ttable.insert(x1,x[i])\n<s>tend\n<s>tif y[i]==own.y and n[i]~=own.name and own.x>x[i]\n<s>tthen\n<s>t<s>ttable.insert(x2,x[i])\n<s>tend\nend\n\nif #x1>0\nthen\n<s>tlocal p=50\n<s>tfor q=1, #x1 do         \n<s>t<s>tif x1[q]<p\n<s>t<s>tthen\n<s>t<s>t<s>tp=x1[q]\n<s>t<s>tend\n<s>t<s>town.x1=p\n<s>t<s>tfor i=1, #x do\n<s>t<s>t<s>tif own.x1==x[i] and own.y==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>town.namex1=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend\n<s>tend\nif own.namex1==\"kitchen\" then own.namex1=\"Кухня\" end\nif own.namex1==\"hallway\" then own.namex1=\"Прихожая\" end\nif own.namex1==\"servantroom\" then own.namex1=\"Комната слуг\" end\nif own.namex1==\"podval\" then own.namex1=\"Подвал\" end\nif own.namex1==\"kladovka\" then own.namex1=\"Кладовка\" end\nif own.namex1==\"stolov\" then own.namex1=\"Столовая\" end\nif own.namex1==\"gostinaya\" then own.namex1=\"Гостинная\" end\nif own.namex1==\"bedroom\" then own.namex1=\"Спальня\" end\nend\n\nif #x2>0\nthen\n<s>tlocal p=0\n<s>tfor q=1, #x2 do\n<s>t<s>tif x2[q]>p\n<s>t<s>tthen\n<s>t<s>t<s>tp=x2[q]\n<s>t<s>tend\n<s>t<s>town.x2=p\n<s>t<s>tfor i=1, #x do\n<s>t<s>t<s>tif own.x2==x[i] and own.y==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>town.namex2=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend<s>t\n<s>tend\nif own.namex2==\"kitchen\" then own.namex2=\"Кухня\" end\nif own.namex2==\"hallway\" then own.namex2=\"Прихожая\" end\nif own.namex2==\"servantroom\" then own.namex2=\"Комната слуг\" end\nif own.namex2==\"podval\" then own.namex2=\"Подвал\" end\nif own.namex2==\"kladovka\" then own.namex2=\"Кладовка\" end\nif own.namex2==\"stolov\" then own.namex2=\"Столовая\" end\nif own.namex2==\"gostinaya\" then own.namex2=\"Гостинная\" end\nif own.namex2==\"bedroom\" then own.namex2=\"Спальня\" end\nend\n\nif #y1>0 then\n<s>tlocal p=50\n<s>tfor q=1, #y1 do\n<s>t<s>tif y1[q]<p\n<s>t<s>tthen\n<s>t<s>t<s>tp=y1[q]\n<s>t<s>tend\n<s>t<s>town.y1=p\n<s>t<s>tfor i=1, #x do\n<s>t<s>t<s>tif own.x==x[i] and own.y1==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>town.namey1=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend<s>t\n<s>tend\nif own.namey1==\"kitchen\" then own.namey1=\"Кухня\" end\nif own.namey1==\"hallway\" then own.namey1=\"Прихожая\" end\nif own.namey1==\"servantroom\" then own.namey1=\"Комната слуг\" end\nif own.namey1==\"podval\" then own.namey1=\"Подвал\" end\nif own.namey1==\"kladovka\" then own.namey1=\"Кладовка\" end\nif own.namey1==\"stolov\" then own.namey1=\"Столовая\" end\nif own.namey1==\"gostinaya\" then own.namey1=\"Гостинная\" end\nif own.namey1==\"bedroom\" then own.namey1=\"Спальня\" end\nend\n\nif #y2>0 then\n<s>tlocal p=0\n<s>tfor q=1, #y2 do\n<s>t<s>tif y2[q]>p\n<s>t<s>tthen\n<s>t<s>tp=y2[q]\n<s>t<s>tend\n<s>t<s>town.y2=p\n<s>t<s>tfor i=1, #x do\n<s>t<s>t<s>tif own.x==x[i] and own.y2==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>town.namey2=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend\n<s>tend\nif own.namey2==\"kitchen\" then own.namey2=\"Кухня\" end\nif own.namey2==\"hallway\" then own.namey2=\"Прихожая\" end\nif own.namey2==\"servantroom\" then own.namey2=\"Комната слуг\" end\nif own.namey2==\"podval\" then own.namey2=\"Подвал\" end\nif own.namey2==\"kladovka\" then own.namey2=\"Кладовка\" end\nif own.namey2==\"stolov\" then own.namey2=\"Столовая\" end\nif own.namey2==\"gostinaya\" then own.namey2=\"Гостинная\" end\nif own.namey2==\"bedroom\" then own.namey2=\"Спальня\" end\nend\ntr=0\nfor i=1, #x do\nif x[i]==own.x and y[i]==own.y then\ntr=i\nend\nend\nhd=0\nfor i=1, #x do\nif x[i]==own.x and y[i]==own.y then\nhd=i\nend\nend  \nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 3,
+        "text": "Пересоздать комнаты",
+        "lua_do": "function lua_do() \nlocal names={}\nrealrooms={} \nkitchen={}\ntreasure={}\nlocal treasures={\"мешочек золота\",\"серьги\",\"кольцо\"} --Артем, впиши тут сам какие сокровища он найдет\nhide={}\nlocal hides={\"в шкафу\",\"под столом\",\"среди хлама\"} --А тут места где можно прятаться\nkitchen.real=1\nif kitchen.real==1 \nthen \n<s>ttable.insert (names, \"kitchen\")\nend\nhallway={} \nhallway.real=math.random(0,1) \nif hallway.real==1 \nthen \n<s>ttable.insert (names, \"hallway\")\nend\npodval={} \npodval.real=math.random(0,1) \nif podval.real==1 \nthen \n<s>ttable.insert (names, \"podval\")\nend\nkladovka={} \nkladovka.real=math.random(0,1) \nif kladovka.real==1 \nthen \n<s>ttable.insert (names, \"kladovka\")\nend\nstolov={} \nstolov.real=math.random(0,1)\nif stolov.real==1 \nthen \n<s>ttable.insert (names, \"stolov\")\nend \nservantroom={}  \nservantroom.real=math.random(0,1) \nif servantroom.real==1 \nthen \n<s>ttable.insert (names, \"servantroom\")\nend\ngostinaya={} \ngostinaya.real=math.random(0,1) \nif gostinaya.real==1 \n then \n<s>ttable.insert (names, \"gostinaya\")\nend\nbedroom={} \nbedroom.real=1 \nif bedroom.real==1 \nthen \n<s>ttable.insert (names, \"bedroom\")\nend\nlocal a=podval.real<plus>kladovka.real<plus>stolov.real<plus>servantroom.real<plus>gostinaya.real<plus>hallway.real<plus>bedroom.real<plus>kitchen.real \nif a==2 \nthen \n<s>ttable.insert(realrooms, \"kitchen\")\n<s>tkitchen.x=1\n<s>ttable.insert(realrooms, kitchen.x) \n<s>tkitchen.y=1\n<s>ttable.insert(realrooms, kitchen.y)\n<s>ttable.insert(realrooms, \"bedroom\")\n<s>tbedroom.x=2\n<s>ttable.insert(realrooms, bedroom.x)\n<s>tbedroom.y=1\n<s>ttable.insert(realrooms, bedroom.y)\nend \nif a==3 \nthen \n local num={1,2,3,4} \n local side=2 \n for i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y) \nend \nend \nend \nif a==4 \nthen \n local num={1,2,3,4} \n local side=2 \n for i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y) \nend \nend \nend \nif a==5 \nthen \n local num={1,2,3,4,5,6,7,8,9} \n local side=3 \n  for i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y) \nend \nend \nend \nif a==6 \nthen \n local num={1,2,3,4,5,6,7,8,9} \n local side=3 \n  for i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y)\nend \nend \nend \nif a==7 \nthen \n local num={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16} \n local side=4 \n  for i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y) \nend \nend \nend \nif a==8 \nthen \n local num={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16} \n local side=4 \n  for i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y)\nend \nend \nend \nif a==9 \nthen \n local num={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16} \n local side=4 \n  for i, v in pairs(names) do \n  if vars[v].real == 1 then \n   repeat \n    n = num[math.random(#num)] \n    vars[v].num = n \n    num[n] = 0 \n   until n ~= 0 \nvars[v].x = ((n/side)-math.ceil(n/side-1))*side \nvars[v].y = math.ceil(n/side) \ntable.insert(realrooms, v)\ntable.insert(realrooms, vars[v].x) \ntable.insert(realrooms, vars[v].y)\nend \nend \nend \nx={}\ny={}\nn={}\nlocal a\nlocal b\nfor i=1, #realrooms, 3 do\n<s>ttable.insert(n,realrooms[i])\nend\nfor i=2, #realrooms, 3 do\n<s>ttable.insert(x,realrooms[i])\nend\nfor i=3, #realrooms, 3 do\n<s>ttable.insert(y,realrooms[i])\nend\nown={}\nfor i=1, #realrooms do\n<s>tif realrooms[i]==\"servantroom\"\n<s>tthen\n<s>t<s>town.x=realrooms[i<plus>1]\n<s>t<s>town.y=realrooms[i<plus>2]\n<s>t<s>town.name=\"Комната слуг\"\n<s>tend\nend\nfor i=1, #realrooms do\n<s>tif realrooms[i]==\"hallway\"\n<s>tthen\n<s>t<s>town.x=realrooms[i<plus>1]\n<s>t<s>town.y=realrooms[i<plus>2]\n<s>t<s>town.name=\"Прихожая\"\n<s>tend<s>t\nend\nif own.x==nil\nthen\n<s>tb=math.random(#x)\n<s>ta=n[b]\n<s>tif a==\"kitchen\" then own.name=\"Кухня\" end\n<s>tif a==\"podval\" then own.name=\"Подвал\" end\n<s>tif a==\"kladovka\" then own.name=\"Кладовка\" end\n<s>tif a==\"stolov\" then own.name=\"Столовая\" end\n<s>tif a==\"gostinaya\" then own.name=\"Гостинная\" end\n<s>tif a==\"bedroom\" then own.name=\"Спальня\" end\n<s>town.x=x[b]\n<s>town.y=y[b]\nend\nfor i=1, #x do\n<s>ttable.insert(treasure, treasures[math.random(#treasures)])\nend\nfor i=1, #x do\n<s>ttable.insert(hide, hides[math.random(#hides)])\nend\n\nbedNPC1=1\nbedNPC2=math.random(0,1)\nfor i=1, #realrooms do\n<s>tif realrooms[i]==\"bedroom\"\n<s>tthen\n<s>t<s>tbedNPC1x=realrooms[i<plus>1] bedNPC1y=realrooms[i<plus>2]\n<s>t<s>tif bedNPC2==1 then bedNPC2x=realrooms[i<plus>1] bedNPC2y=realrooms[i<plus>2] end\n<s>tend\nend<s>t\nif servantroom.real==1\nthen\n<s>tserNPC1=math.random(0,1)\n<s>tserNPC2=math.random(0,1)\n<s>tserNPC3=math.random(0,1)\n<s>tfor i=1, #realrooms do\n<s>t<s>tif realrooms[i]==\"servantroom\"\n<s>t<s>tthen\n<s>t<s>t<s>t<s>tif serNPC1==1 then serNPC1x=realrooms[i<plus>1] serNPC1y=realrooms[i<plus>2] end\n<s>t<s>t<s>t<s>tif serNPC2==1 then serNPC2x=realrooms[i<plus>1] serNPC2y=realrooms[i<plus>2] end\n<s>t<s>t<s>t<s>tif serNPC3==1 then serNPC3x=realrooms[i<plus>1] serNPC3y=realrooms[i<plus>2] end\n<s>t<s>tend\n<s>tend\nend\n\n\nkitchen=nil\nhallway=nil\npodval=nil\nkladovka=nil\nstolov=nil\nservantroom=nil\ngostinaya=nil\nbedroom=nil\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ntimer.performWithDelay (2000, function(event)\nif (g.userInQuest == 1) then\nfor i=1, 5 do\nif x[i]==vars[\"NPC\"..i].ownx and n[i]~=vars[\"NPC\"..i].ownname and vars[\"NPC\"..i].owny<y[i] then table.insert(vars[\"NPC\"..i..\"y1\"],y[i]) end\nif x[i]==vars[\"NPC\"..i].ownx and n[i]~=vars[\"NPC\"..i].ownname and vars[\"NPC\"..i].owny>y[i] then table.insert(vars[\"NPC\"..i..\"y2\"],y[i]) end\nif x[i]==vars[\"NPC\"..i].ownx and n[i]~=vars[\"NPC\"..i].ownname and vars[\"NPC\"..i].owny<x[i] then table.insert(vars[\"NPC\"..i..\"y1\"],x[i]) end\nif x[i]==vars[\"NPC\"..i].ownx and n[i]~=vars[\"NPC\"..i].ownname and vars[\"NPC\"..i].owny>x[i] then table.insert(vars[\"NPC\"..i..\"y2\"],x[i]) end\nif vars[\"NPC\"..i..\"x1\"]~=nil\nthen\n<s>tlocal p=50\n<s>tfor q=1, #vars[\"NPC\"..i..\"x1\"] do         \n<s>t<s>tif vars[\"NPC\"..i..\"x1\"][q]<p\n<s>t<s>tthen\n<s>t<s>t<s>tp=vars[\"NPC\"..i..\"x1\"][q]\n<s>t<s>tend\n<s>t<s>tvars[\"NPC\"..i].ownx1=p\n<s>t<s>tfor i=1, #Nx do\n<s>t<s>t<s>tif vars[\"NPC\"..i].ownx1==x[i] and vars[\"NPC\"..i].owny==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>tNPC1.ownnamex1=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend\n<s>tend\nend\nif vars[\"NPC\"..i..\"x2\"]~=nil\nthen\n<s>tlocal p=0\n<s>tfor q=1, #vars[\"NPC\"..i..\"x2\"] do\n<s>t<s>tif vars[\"NPC\"..i..\"x2\"]>p\n<s>t<s>tthen\n<s>t<s>t<s>tp=vars[\"NPC\"..i..\"x2\"][q]\n<s>t<s>tend\n<s>t<s>tvars[\"NPC\"..i].ownx2=p\n<s>t<s>tfor i=1, #x do\n<s>t<s>t<s>tif vars[\"NPC\"..i].ownx2==x[i] and vars[\"NPC\"..i].owny==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>tvars[\"NPC\"..i].ownnamex2=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend<s>t\n<s>tend\nend\nif vars[\"NPC\"..i..\"y1\"]~=nil\nthen\n<s>tlocal p=50\n<s>tfor q=1, #vars[\"NPC\"..i..\"y1\"] do\n<s>t<s>tif vars[\"NPC\"..i..\"y1\"][q]<p\n<s>t<s>tthen\n<s>t<s>t<s>tp=vars[\"NPC\"..i..\"y1\"][q]\n<s>t<s>tend\n<s>t<s>tvars[\"NPC\"..i].owny1=p\n<s>t<s>tfor i=1, #x do\n<s>t<s>t<s>tif vars[\"NPC\"..i].ownx==x[i] and vars[\"NPC\"..i].owny1==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>tvars[\"NPC\"..i].ownnamey1=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend<s>t\n<s>tend\nend\nif vars[\"NPC\"..i..\"y2\"]~=nil\nthen\n<s>tlocal p=0\n<s>tfor q=1, #vars[\"NPC\"..i..\"y2\"] do\n<s>t<s>tif vars[\"NPC\"..i..\"y2\"][q]>p\n<s>t<s>tthen\n<s>t<s>tp=vars[\"NPC\"..i..\"y2\"][q]\n<s>t<s>tend\n<s>t<s>tvars[\"NPC\"..i].owny2=p\n<s>t<s>tfor i=1, #x do\n<s>t<s>t<s>tif vars[\"NPC\"..i].ownx==x[i] and vars[\"NPC\"..i].owny2==y[i]\n<s>t<s>t<s>tthen\n<s>t<s>t<s>t<s>tvars[\"NPC\"..i].ownnamey2=n[i]\n<s>t<s>t<s>tend\n<s>t<s>tend\n<s>tend\nend\nend\nfor i=1,5 do\nlocal a=math.random(1,4)\nif a==1 \nthen\nvars[\"NPC\"..i].ownname=vars[\"NPC\"..i].ownnamey1\nvars[\"NPC\"..i].owny=vars[\"NPC\"..i].owny1\nvars[\"NPC\"..i].ownx1=nil\nvars[\"NPC\"..i].ownnamex1=nil\nvars[\"NPC\"..i].ownx2=nil\nvars[\"NPC\"..i].ownnamex2=nil\nvars[\"NPC\"..i].owny1=nil\nvars[\"NPC\"..i].ownnamey1=nil\nvars[\"NPC\"..i].owny2=nil\nvars[\"NPC\"..i].ownnamey2=nil\nend\nif a==2\nthen\nvars[\"NPC\"..i].ownx=vars[\"NPC\"..i].ownx1\nvars[\"NPC\"..i].ownname=vars[\"NPC\"..i].ownnamex1\nvars[\"NPC\"..i].ownx1=nil\nvars[\"NPC\"..i].ownnamex1=nil\nvars[\"NPC\"..i].ownx2=nil\nvars[\"NPC\"..i].ownnamex2=nil\nvars[\"NPC\"..i].owny1=nil\nvars[\"NPC\"..i].ownnamey1=nil\nvars[\"NPC\"..i].owny2=nil\nvars[\"NPC\"..i].ownnamey2=nil\nend\nif a==3\nthen\nvars[\"NPC\"..i].ownx=vars[\"NPC\"..i].ownx2\nvars[\"NPC\"..i].ownname=vars[\"NPC\"..i].ownnamex2\nvars[\"NPC\"..i].ownx1=nil\nvars[\"NPC\"..i].ownnamex1=nil\nvars[\"NPC\"..i].ownx2=nil\nvars[\"NPC\"..i].ownnamex2=nil\nvars[\"NPC\"..i].owny1=nil\nvars[\"NPC\"..i].ownnamey1=nil\nvars[\"NPC\"..i].owny2=nil\nvars[\"NPC\"..i].ownnamey2=nil\nend\nif a==4 \nthen\nvars[\"NPC\"..i].owny=vars[\"NPC\"..i].owny2\nvars[\"NPC\"..i].ownname=vars[\"NPC\"..i].ownnamey2\nvars[\"NPC\"..i].ownx1=nil\nvars[\"NPC\"..i].ownnamex1=nil\nvars[\"NPC\"..i].ownx2=nil\nvars[\"NPC\"..i].ownnamex2=nil\nvars[\"NPC\"..i].owny1=nil\nvars[\"NPC\"..i].ownnamey1=nil\nvars[\"NPC\"..i].owny2=nil\nvars[\"NPC\"..i].ownnamey2=nil\nend\nend\nelse\ntimer.cancel (event.source)\nend\nend, 0)\nreturn \"\"\nend\n",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "            ",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Новый ответ. введите тексfxudhdjcт",
+        "lua_if": "function lua_if()\nreturn a~=3\nend"
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\na=3\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": []
+  }
+]

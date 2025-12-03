@@ -1,0 +1,1599 @@
+[
+  {
+    "id": 1,
+    "text": "В этом безумном кроссовере может быть только один главный герой. Или..?<s>r\n<s>r\n— Тренировки и дуэли в мире волшебства и гендзютсу.<s>r\n— Дружба и любовь. С кем угодно.<s>r\n<s>r\nОЧЕНЬ ранний бета-тест.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Начать",
+        "calculate": false,
+        "var_set": [
+          "autorun",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Выберите героя",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Новый герой за 100 сюжетных частиц",
+        "instant": true,
+        "lua_do": "function lua_do() local fandom_pref = ({'n','hp'})[math.random(2)] ; local hero_num = math.random(num_of_pairs) ; if player_heroes[fandom_pref..hero_num] then player_heroes[fandom_pref..hero_num].lvl = player_heroes[fandom_pref..hero_num].lvl <plus> 1 else player_heroes[fandom_pref..hero_num] = new_hero() end end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n1"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..1] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..1].name .. (player_heroes[\"n\"..1] and (\", lvl: \"..player_heroes[\"n\"..1].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp1"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..1] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..1].name .. (player_heroes[\"hp\"..1] and (\", lvl: \"..player_heroes[\"hp\"..1].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n2"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..2] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..2].name .. (player_heroes[\"n\"..2] and (\", lvl: \"..player_heroes[\"n\"..2].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp2"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..2] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..2].name .. (player_heroes[\"hp\"..2] and (\", lvl: \"..player_heroes[\"hp\"..2].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n3"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..3] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..3].name .. (player_heroes[\"n\"..3] and (\", lvl: \"..player_heroes[\"n\"..3].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp3"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..3] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..3].name .. (player_heroes[\"hp\"..3] and (\", lvl: \"..player_heroes[\"hp\"..3].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n4"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..4] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..4].name .. (player_heroes[\"n\"..4] and (\", lvl: \"..player_heroes[\"n\"..4].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp4"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..4] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..4].name .. (player_heroes[\"hp\"..4] and (\", lvl: \"..player_heroes[\"hp\"..4].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n5"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..5] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..5].name .. (player_heroes[\"n\"..5] and (\", lvl: \"..player_heroes[\"n\"..5].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp5"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..5] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..5].name .. (player_heroes[\"hp\"..5] and (\", lvl: \"..player_heroes[\"hp\"..5].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n6"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..6] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..6].name .. (player_heroes[\"n\"..6] and (\", lvl: \"..player_heroes[\"n\"..6].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp6"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..6] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..6].name .. (player_heroes[\"hp\"..6] and (\", lvl: \"..player_heroes[\"hp\"..6].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n7"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..7] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..7].name .. (player_heroes[\"n\"..7] and (\", lvl: \"..player_heroes[\"n\"..7].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp7"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..7] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..7].name .. (player_heroes[\"hp\"..7] and (\", lvl: \"..player_heroes[\"hp\"..7].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n8"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..8] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..8].name .. (player_heroes[\"n\"..8] and (\", lvl: \"..player_heroes[\"n\"..8].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp8"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..8] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..8].name .. (player_heroes[\"hp\"..8] and (\", lvl: \"..player_heroes[\"hp\"..8].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n9"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..9] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..9].name .. (player_heroes[\"n\"..9] and (\", lvl: \"..player_heroes[\"n\"..9].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp9"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..9] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..9].name .. (player_heroes[\"hp\"..9] and (\", lvl: \"..player_heroes[\"hp\"..9].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n10"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..10] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..10].name .. (player_heroes[\"n\"..10] and (\", lvl: \"..player_heroes[\"n\"..10].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp10"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..10] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..10].name .. (player_heroes[\"hp\"..10] and (\", lvl: \"..player_heroes[\"hp\"..10].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n11"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..11] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..11].name .. (player_heroes[\"n\"..11] and (\", lvl: \"..player_heroes[\"n\"..11].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp11"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..11] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..11].name .. (player_heroes[\"hp\"..11] and (\", lvl: \"..player_heroes[\"hp\"..11].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n12"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..12] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..12].name .. (player_heroes[\"n\"..12] and (\", lvl: \"..player_heroes[\"n\"..12].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp12"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..12] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..12].name .. (player_heroes[\"hp\"..12] and (\", lvl: \"..player_heroes[\"hp\"..12].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n13"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..13] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..13].name .. (player_heroes[\"n\"..13] and (\", lvl: \"..player_heroes[\"n\"..13].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp13"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..13] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..13].name .. (player_heroes[\"hp\"..13] and (\", lvl: \"..player_heroes[\"hp\"..13].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n14"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..14] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..14].name .. (player_heroes[\"n\"..14] and (\", lvl: \"..player_heroes[\"n\"..14].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp14"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..14] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..14].name .. (player_heroes[\"hp\"..14] and (\", lvl: \"..player_heroes[\"hp\"..14].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n15"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..15] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..15].name .. (player_heroes[\"n\"..15] and (\", lvl: \"..player_heroes[\"n\"..15].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp15"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..15] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..15].name .. (player_heroes[\"hp\"..15] and (\", lvl: \"..player_heroes[\"hp\"..15].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n16"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..16] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..16].name .. (player_heroes[\"n\"..16] and (\", lvl: \"..player_heroes[\"n\"..16].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp16"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..16] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..16].name .. (player_heroes[\"hp\"..16] and (\", lvl: \"..player_heroes[\"hp\"..16].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n17"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..17] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..17].name .. (player_heroes[\"n\"..17] and (\", lvl: \"..player_heroes[\"n\"..17].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp17"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..17] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..17].name .. (player_heroes[\"hp\"..17] and (\", lvl: \"..player_heroes[\"hp\"..17].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n18"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..18] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..18].name .. (player_heroes[\"n\"..18] and (\", lvl: \"..player_heroes[\"n\"..18].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp18"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..18] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..18].name .. (player_heroes[\"hp\"..18] and (\", lvl: \"..player_heroes[\"hp\"..18].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "n19"
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if() return player_heroes[\"n\"..19] end",
+        "isBack": true,
+        "id": 1,
+        "text": "",
+        "backstepCount": 1,
+        "lua_text": "function lua_text() return heroes[\"n\"..19].name .. (player_heroes[\"n\"..19] and (\", lvl: \"..player_heroes[\"n\"..19].lvl) or \"\") end"
+      },
+      {
+        "var_str_set": [
+          "selected_hero",
+          "hp19"
+        ],
+        "lua_if": "function lua_if() return player_heroes[\"hp\"..19] end",
+        "lua_text": "function lua_text() return heroes[\"hp\"..19].name .. (player_heroes[\"hp\"..19] and (\", lvl: \"..player_heroes[\"hp\"..19].lvl) or \"\") end",
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "",
+        "id": 1,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Авторан",
+    "answers": [
+      {
+        "module": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nnum_of_pairs = 19<s>r\nnum_of_skills = 19<s>r\n<s>r\nheroes = {<s>r\nn1 = {\nname = \"Наруто\",\nsex = \"m\", \ndef_hp = 100,\ndef_mp = 100},<s>r\nn2 = {\nname = \"Сакура\",\nsex = \"f\", \ndef_hp = 75,\ndef_mp = 150},<s>r\nn3 = {\nname = \"Саске\",\nsex = \"m\", \ndef_hp = 200,\ndef_mp = 250},<s>r\nn4 = {\nname = \"Какаши\",\nsex = \"m\", \ndef_hp = 500,\ndef_mp = 750},<s>r\nn5 = {\nname = \"Итачи\",\nsex = \"m\", \ndef_hp = 600,\ndef_mp = 1000},<s>r\nn6 = {\nname = \"Майто Гай\",\nsex = \"m\",\ndef_hp = 800,\ndef_mp = 200},<s>r\nn7 = {\nname = \"Рок Ли\",\nsex = \"m\", \ndef_hp = 350,\ndef_mp = 50},<s>r\nn8 = {\nname = \"Гаара\",\nsex = \"m\", \ndef_hp = 150,\ndef_mp = 500},<s>r\nn9 = {\nname = \"Хината\",\nsex = \"f\", \ndef_hp = 90,\ndef_mp = 250},<s>r\nn10 = {\nname = \"Нэджи\",\nsex = \"m\", \ndef_hp = 250,\ndef_mp = 350},<s>r\nn11 = {\nname = \"Ино\",\nsex = \"f\", <s>t\ndef_hp = 80,\ndef_mp = 150},<s>r\nn12 = {\nname = \"Чоджи\",\nsex = \"m\", \ndef_hp = 300,\ndef_mp = 100},<s>r\nn13 = {\nname = \"Шикамару\",\nsex = \"m\",\ndef_hp = 120,\ndef_mp = 150},<s>r\nn14 = {\nname = \"Ирука\",\nsex = \"m\", \ndef_hp = 350,\ndef_mp = 400},<s>r\nn15 = {\nname = \"Темари\",\nsex = \"f\", \ndef_hp = 120,\ndef_mp = 300},<s>r\nn16 = {\nname = \"Кабуто\",\nsex = \"m\", \ndef_hp = 400,\ndef_mp = 500},<s>r\nn17 = {\nname = \"Орочимару\",\nsex = \"m\",<s>r\ndef_hp = 500,\ndef_mp = 1000},<s>r\nn18 = {\nname = \"Джирайя\",\nsex = \"m\", \ndef_hp = 700,\ndef_mp = 800},<s>r\nn19 = {\nname = \"Цунаде\",\nsex = \"f\",<s>r\ndef_hp = 700,\ndef_mp = 500},<s>r\n<s>r\nhp1 = {\nname = \"Гарри\",\nsex = \"m\", <s>t<s>t\ndef_hp = 100,\ndef_mp = 100},<s>r\nhp2 = {\nname = \"Гермиона\",\nsex = \"f\", <s>t\ndef_hp = 75,\ndef_mp = 200},<s>r\nhp3 = {\nname = \"Рон\",\nsex = \"m\", <s>t<s>t\ndef_hp = 200,\ndef_mp = 50},<s>r\nhp4 = {\nname = \"Драко\",\nsex = \"m\", <s>t<s>t\ndef_hp = 100,\ndef_mp = 100},<s>r\nhp5 = {\nname = \"Невилл\",\nsex = \"m\", <s>t<s>t\ndef_hp = 100,\ndef_mp = 100},<s>r\nhp6 = {\nname = \"Полумна\",\nsex = \"f\", <s>t\ndef_hp = 100,\ndef_mp = 100},<s>r\nhp7 = {\nname = \"Джордж\",\nsex = \"m\", <s>t<s>t\ndef_hp = 200,\ndef_mp = 100},<s>r\nhp8 = {\nname = \"Фред\",\nsex = \"m\", <s>t<s>t\ndef_hp = 200,\ndef_mp = 100},<s>r\nhp9 = {\nname = \"Джинни\",\nsex = \"f\", <s>t<s>t\ndef_hp = 100,\ndef_mp = 100},<s>r\nhp10 = {\nname = \"Хагрид\",\nsex = \"m\", <s>t\ndef_hp = 500,\ndef_mp = 100},<s>r\nhp11 = {\nname = \"Дамблдор\",\nsex = \"m\", <s>t\ndef_hp = 300,\ndef_mp = 100},<s>r\nhp12 = {\nname = \"МакГонагалл\",\nsex = \"f\", \ndef_hp = 200,\ndef_mp = 100},<s>r\nhp13 = {\nname = \"Мадам Помфри\",\nsex = \"m\", \ndef_hp = 300,\ndef_mp = 100},<s>r\nhp14 = {\nname = \"Люциос\",\nsex = \"m\", <s>t\ndef_hp = 400,\ndef_mp = 100},<s>r\nhp15 = {\nname = \"ВоланДеМорт\",\nsex = \"m\", \ndef_hp = 300,\ndef_mp = 1000},<s>r\nhp16 = {\nname = \"Люпин\",\nsex = \"m\", <s>t<s>t\ndef_hp = 700,\ndef_mp = 500},<s>r\nhp17 = {\nname = \"Сириус\",\nsex = \"m\", <s>t\ndef_hp = 400,\ndef_mp = 400},<s>r\nhp18 = {\nname = \"Беллатриса\",\nsex = \"f\", \ndef_hp = 350,\ndef_mp = 750},<s>r\nhp19 = {\nname = \"Добби\",\nsex = \"f\", \ndef_hp = 350,\ndef_mp = 750},<s>r\n}<s>r\n<s>r\nskills = {<s>r\ndefault_defence = {\nname = \"Мольба о пощаде\", <s>t \nneedLevel = 0,\nuse = \"defense\"},<s>r\ndefault_attack = {\nname = \"Угроза расправы\", <s>t \nneedLevel = 0,\nuse = \"attack\"},<s>r\nn1 = {\nname = \"Теневые клоны\", <s>t \nneedLevel = 2,\nuse = \"defense\"},<s>r\nn2 = {\nname = \"Техника соблазнения\",\nneedLevel = 2,\nuse = \"defense\",<s>t<s>t},<s>r\nn3 = {\nname = \"Армия теневых клонов\",  <s>r\nneedLevel = 10,\nuse = \"attack\",<s>t<s>t},<s>r\nn4 = {\nname = \"Техника гарема\",<s>t\nneedLevel = 5,\nuse = \"defense\",<s>t<s>t},<s>r\nn5 = {\nname = \"Теневой сюрикен\",  \nneedLevel = 6,\nuse = \"attack\",<s>t <s>t},<s>r\nn6 = {\nname = \"Узумаки Наруто Рендан\",<s>r\nneedLevel = 5,\nuse = \"attack\",<s>t <s>t},<s>r\nn7 = {\nname = \"Призыв жабы\",  <s>t\nneedLevel = 4,\nuse = \"both\",<s>t <s>t},<s>r\nn8 = {\nname = \"Тысячелетие смерти\", \nneedLevel = 3,\nuse = \"attack\",<s>t <s>t},<s>r\nn9 = {\nname = \"Расенган\",  <s>t<s>t\nneedLevel = 7,\nuse = \"attack\",<s>t <s>t},<s>r\nn10 = {\nname = \"Одама Расенган\",  \nneedLevel = 12,\nuse = \"attack\",<s>t <s>t},<s>r\nn11 = {\nname = \"Техника замены\",  \nneedLevel = 1,\nuse = \"defense\",<s>t <s>t},<s>r\nn12 = {\nname = \"Бросок сюрикена\",  \nneedLevel = 2,\nuse = \"attack\",<s>t <s>t},<s>r\nn13 = {\nname = \"Песчаная гробница\", <s>t\nneedLevel = 10,\nuse = \"attack\",<s>t <s>t},<s>r\nn14 = {\nname = \"Атомное расщепление\", <s>t\nneedLevel = 25,\nuse = \"attack\",<s>t <s>t},<s>r\nn15 = {\nname = \"Змеиная кожа\", <s>t\nneedLevel = 15,\nuse = \"defense\",<s>t <s>t},<s>r\nn16 = {\nname = \"Чидори\", <s>t\nneedLevel = 7,\nuse = \"attack\",<s>t <s>t},<s>r\nn17 = {\nname = \"Захват тени\", <s>t\nneedLevel = 4,\nuse = \"both\",<s>t <s>t},<s>r\nn18 = {\nname = \"Контроль сознания\", <s>t\nneedLevel = 5,\nuse = \"both\",<s>t <s>t},<s>r\nn19 = {\nname = \"Сусанно\", <s>t\nneedLevel = 25,\nuse = \"both\",<s>t <s>t},<s>r\n<s>r\nhp1 = {\nname = \"Экспилиармус\",  <s>t<s>t<s>t<s>t<s>t<s>r\nneedLevel = 1,\nuse = \"defense\",<s>t <s>t},<s>r\nhp2 = {\nname = \"Авада Кедавра\",  <s>t<s>t<s>t<s>r\nneedLevel = 25,\nuse = \"attack\",<s>t <s>t},<s>r\nhp3 = {\nname = \"Акцио\",  <s>t<s>t<s>t<s>t<s>r\nneedLevel = 3,\nuse = \"defense\",<s>t <s>t},<s>r\nhp4 = {\nname = \"Репаро\",  <s>t<s>t<s>t<s>t<s>r\nneedLevel = 2,\nuse = \"defense\",<s>t <s>t},<s>r\nhp5 = {\nname = \"Алохомора\",  <s>t<s>t<s>t<s>r\nneedLevel = 3,\nuse = \"both\",<s>t <s>t},<s>r\nhp6 = {\nname = \"Круциатус\",  <s>t<s>t<s>t<s>r\nneedLevel = 15,\nuse = \"attack\",<s>t <s>t},<s>r\nhp7 = {\nname = \"Экспекто патронум\",  <s>t<s>t<s>t<s>r\nneedLevel = 10,\nuse = \"defense\",<s>t <s>t},<s>r\nhp8 = {\nname = \"Империус\",  <s>t<s>t<s>t<s>t<s>r\nneedLevel = 13,\nuse = \"both\",<s>t <s>t},<s>r\nhp9 = {\nname = \"Вингардиум Левиоса\",  <s>t<s>t<s>t<s>r\nneedLevel = 4,\nuse = \"defense\",<s>t <s>t},<s>r\nhp10 = {\nname = \"Петрификус Тоталус\",  <s>t<s>t<s>t<s>r\nneedLevel = 5,\nuse = \"attack\",<s>t <s>t},<s>r\nhp11 = {\nname = \"Протего\",  <s>t<s>t<s>t<s>r\nneedLevel = 3,\nuse = \"defense\",<s>t <s>t},<s>r\nhp12 = {\nname = \"Конфундус\",  <s>t<s>t<s>r\nneedLevel = 6,\nuse = \"both\",<s>t <s>t},<s>r\nhp13 = {\nname = \"Бомбарда\",  <s>t<s>t<s>r\nneedLevel = 7,\nuse = \"attack\",<s>t <s>t},<s>r\nhp14 = {\nname = \"Бомбарда Максима\",  <s>t<s>t<s>t<s>r\nneedLevel = 10,\nuse = \"attack\",<s>t <s>t},<s>r\nhp15 = {\nname = \"Ваддивази\",  <s>t<s>t<s>r\nneedLevel = 8,\nuse = \"attack\",<s>t <s>t},<s>r\nhp16 = {\nname = \"Верминкулюс\",  <s>t<s>t<s>t<s>r\nneedLevel = 9,\nuse = \"attack\",<s>t <s>t},<s>r\nhp17 = {\nname = \"Вспыхни\",  <s>t<s>t<s>t<s>r\nneedLevel = 3,\nuse = \"attack\",<s>t <s>t},<s>r\nhp18 = {\nname = \"Дантисимус\",  <s>t<s>t<s>r\nneedLevel = 9,\nuse = \"attack\",<s>t <s>t},<s>r\nhp19 = {\nname = \"Инкарцеро\",  <s>t<s>t<s>r\nneedLevel = 11,\nuse = \"attack\",<s>t <s>t},<s>r\n}<s>r\n<s>r\nnew_hero = function()<s>r\nreturn {lvl=1,skills = {},experience = 0}<s>r\n<s>r\nend<s>r\n<s>r\n<s>r\nrandKeyFromTable = function(t)<s>r\n<s>tlocal tt = {}<s>r\n<s>tlocal i = 1<s>r\n<s>tfor k,v in pairs(t) do<s>r\n<s>tif v then<s>r\n<s>ttt[i] = k<s>r\n<s>ti = i<plus>1<s>r\n<s>tend<s>r\n<s>tend<s>r\n<s>tif i<2 then<s>r\n<s>t<s>treturn nil<s>r\n<s>tend<s>r\n<s>treturn tt[math.random(#tt)]<s>r\nend<s>r\nrandValFromTable = function(t)<s>r\n<s>tlocal tt = {}<s>r\n<s>tlocal i = 1<s>r\n<s>tfor k,v in pairs(t) do<s>r\n<s>tif v then<s>r\n<s>ttt[i] = t[k]<s>r\n<s>ti = i<plus>1<s>r\n<s>tend<s>r\n<s>tend<s>r\n<s>tif i<2 then<s>r\n<s>t<s>treturn nil<s>r\n<s>tend<s>r\n<s>treturn tt[math.random(#tt)]<s>r\nend<s>r\n<s>r\nplayer_heroes = player_heroes or {<s>r\n<s>thp1=new_hero(),<s>r\n<s>tn1=new_hero(),<s>r\n}<s>r\nplayer_skills = player_skills or {<s>r\n<s>thp1=2,<s>r\n<s>tn1=2,<s>r\n}<s>r\n<s>r\nfunction get_max_hp(options)<s>r\n<s>treturn 75 <plus> (options.hero_lvl*25)<s>r\nend<s>r\n<s>r\nfunction get_need_exp(options)<s>r\n<s>treturn (options.hero_lvl^1.5*100)<s>r\nend<s>r\n<s>r\nfunction get_outcome_damage(options)<s>r\n<s>treturn options.hero_lvl  * 10* (1<plus>options.skill_need_level*0.5)<s>r\nend<s>r\n<s>r\nfor k,hero in pairs(player_heroes) do<s>r\n<s>tlocal hero = player_heroes[k]<s>r\n<s>thero.defenseSkills = {}<s>r\n<s>thero.attackSkills = {}<s>r\n<s>tfor skillId,v in pairs(hero.skills) do<s>r\n<s>t<s>tif skills[skillId].use == \"attack\" or <s>r\n<s>t<s>t<s>tskills[skillId].use == \"both\" then<s>r\n<s>t<s>t<s>thero.attackSkills[skillId] = true<s>r\n<s>t<s>t<s>t-- print(\"add attack skill\")<s>r\n<s>t<s>tend<s>r\n<s>t<s>tif skills[skillId].use == \"defense\" or <s>r\n<s>t<s>t<s>tskills[skillId].use == \"both\" then<s>r\n<s>t<s>t<s>thero.defenseSkills[skillId] = true<s>r\n<s>t<s>t<s>t-- print(\"add defense skill\")<s>r\n<s>t<s>tend<s>r\n<s>r\n<s>tend<s>r\nend<s>r\n<s>r\npages[2].answers = {}<s>r\n<s>r\n<s>r\ntable.insert(pages[2].answers,{<s>r\ntext = \"Новый герой за 100 сюжетных частиц\",<s>r\nid = 2,<s>r\ninstant = true,<s>r\nlua_do = \"function lua_do() local fandom_pref = ({'n','hp'})[math.random(2)] ; local hero_num = math.random(num_of_pairs) ; if player_heroes[fandom_pref..hero_num] then player_heroes[fandom_pref..hero_num].lvl = player_heroes[fandom_pref..hero_num].lvl <plus> 1 else player_heroes[fandom_pref..hero_num] = new_hero() end end\"<s>r\n})<s>r\n<s>r\n<s>r\n<s>r\n<s>r\nfor i = 1,num_of_pairs do<s>r\ntable.insert(pages[2].answers,{<s>r\nright_answer = true,<s>r\ntext = \"\",<s>r\nlua_text = \"function lua_text() return heroes[<s><s>\"n<s><s>\"..\"..i..\"].name .. (player_heroes[<s><s>\"n<s><s>\"..\"..i..\"] and (<s><s>\", lvl: <s><s>\"..player_heroes[<s><s>\"n<s><s>\"..\"..i..\"].lvl) or <s><s>\"<s><s>\") end\",<s>r\nid = 1,<s>r\nisBack = true,<s>r\nbackstepCount = 1,<s>r\nvar_str_set={\"selected_hero\", \"n\"..i},<s>r\nlua_if = \"function lua_if() return player_heroes[<s><s>\"n<s><s>\"..\"..i..\"] end\",<s>r\n})<s>r\n-- table.insert(pages[2].answers,{<s>r\n-- right_answer = true,<s>r\n-- text = \"\",<s>r\n-- lua_text = \"function lua_text() return heroes[<s><s>\"n<s><s>\"..\"..i..\"].name end\",<s>r\n-- id = 1,<s>r\n-- comment = true,<s>r\n-- lua_if = \"function lua_if() return not player_heroes[<s><s>\"n<s><s>\"..\"..i..\"] end\",<s>r\n-- })<s>r\ntable.insert(pages[2].answers,{<s>r\nleft_answer = true,<s>r\ntext = \"\",<s>r\nlua_text = \"function lua_text() return heroes[<s><s>\"hp<s><s>\"..\"..i..\"].name .. (player_heroes[<s><s>\"hp<s><s>\"..\"..i..\"] and (<s><s>\", lvl: <s><s>\"..player_heroes[<s><s>\"hp<s><s>\"..\"..i..\"].lvl) or <s><s>\"<s><s>\") end\",<s>r\nid = 1,<s>r\nisBack = true,<s>r\nbackstepCount = 1,<s>r\nvar_str_set={\"selected_hero\", \"hp\"..i},<s>r\nlua_if = \"function lua_if() return player_heroes[<s><s>\"hp<s><s>\"..\"..i..\"] end\",<s>r\n})<s>r\n-- table.insert(pages[2].answers,{<s>r\n-- left_answer = true,<s>r\n-- text = \"\",<s>r\n-- lua_text = \"function lua_text() return heroes[<s><s>\"hp<s><s>\"..\"..i..\"].name end\",<s>r\n-- id = 1,<s>r\n-- comment = true,<s>r\n-- lua_if = \"function lua_if() return not player_heroes[<s><s>\"hp<s><s>\"..\"..i..\"] end\",<s>r\n-- })<s>r\n<s>r\nend<s>r\n<s>r\n<s>r\n<s>r\n<s>r\npages[7].answers = {}<s>r\n<s>r\n<s>r\n<s>r\ntable.insert(pages[7].answers,{<s>r\ntext = \"Ваш герой: \",<s>r\nlua_text = \"function lua_text() return 'Ваш герой: '.. heroes[selected_hero].name .. ', уровень ' .. player_heroes[selected_hero].lvl end\",<s>r\ncomment = true,<s>r\nleft_answer=true,<s>r\nid = 7,<s>r\n})<s>r\ntable.insert(pages[7].answers,{<s>r\ntext = \"Следующий герой\",<s>r\nlua_do = \"function lua_do() for k,v in pairs(player_heroes) do if k==selected_hero then switch_to_next_hero=true elseif switch_to_next_hero then switch_to_next_hero = false; selected_hero = k end end end\",<s>r\n-- comment = true,<s>r\nright_answer=true,<s>r\nid = 7,<s>r\n})<s>r\n<s>r\ntable.insert(pages[7].answers,{<s>r\ntext = \"Назад\",<s>r\nid = 7,<s>r\nisBack = true,<s>r\nbackstepCount = 1,<s>r\n})<s>r\n<s>r\n<s>r\ntable.insert(pages[7].answers,{<s>r\ntext = \"Новый свиток за 100 сюжетных частиц\",<s>r\nid = 7,<s>r\ninstant = true,<s>r\nlua_do = \"function lua_do() local fandom_pref = ({'n','hp'})[math.random(2)] ; local skill_num = math.random(num_of_skills) ; player_skills[fandom_pref..skill_num] = (player_skills[fandom_pref..skill_num] or 0)<plus>1 end\"<s>r\n})<s>r\n<s>r\n<s>r\n<s>r\nfor i = 1,num_of_skills do<s>r\nfor k,fandom_pref in pairs({\"n\",\"hp\"}) do<s>r\n<s>r\ntable.insert(pages[7].answers,{<s>r\nright_answer = fandom_pref == \"n\",<s>r\nleft_answer = fandom_pref == \"hp\",<s>r\ntext = \"\",<s>r\nlua_do = \"function lua_do() local i = \"..i..\"; player_skills['\"..fandom_pref..\"'..i] = player_skills['\"..fandom_pref..\"'..i] - 1; player_heroes[selected_hero].skills['\"..fandom_pref..\"'..i] = true  end\",<s>r\nlua_text = \"function lua_text() local i = \"..i..\"; return 'x' .. (player_skills['\"..fandom_pref..\"'..i] or 0) ..' '..skills['\"..fandom_pref..\"'..i].name .. ', треб.ур.: '.. skills['\"..fandom_pref..\"'..i].needLevel  end\",<s>r\nid = 7,<s>r\nlua_if = \"function lua_if() return ((player_skills['\"..fandom_pref..\"'..\"..i..\"] or 0)>0) and (not (player_heroes[selected_hero].skills['\"..fandom_pref..i..\"'])) and (player_heroes[selected_hero].lvl >= skills['\"..fandom_pref..\"'..\"..i..\"].needLevel) end\",<s>r\n})<s>r\n<s>r\ntable.insert(pages[7].answers,{<s>r\nright_answer = fandom_pref == \"n\",<s>r\nleft_answer = fandom_pref == \"hp\",<s>r\ntext = \"\",<s>r\nlua_text = \"function lua_text() local i = \"..i..\"; return 'x' .. (player_skills['\"..fandom_pref..\"'..i] or 0) ..' '..skills['\"..fandom_pref..\"'..i].name .. ', треб.ур.: '.. skills['\"..fandom_pref..\"'..i].needLevel .. (  player_heroes[selected_hero].skills['\"..fandom_pref..\"'..\"..i..\"] and ' (изучено)' or '') end\",<s>r\nid = 1,<s>r\ncomment = true,<s>r\nlua_if = \"function lua_if() return  ((player_skills['\"..fandom_pref..\"'..\"..i..\"] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['\"..fandom_pref..i..\"'].needLevel ))or player_heroes[selected_hero].skills['\"..fandom_pref..i..\"'] end\",<s>r\n})<s>r\n<s>r\nend<s>r\nend\nend",
+        "calculate": true,
+        "text": "luaModuleUpdate http://188.120.236.127/hp_vs_naruto/main.lua",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Гарри",
+        "left_answer": true
+      },
+      {
+        "id": 3,
+        "text": "Наруто",
+        "right_answer": true,
+        "left_answer": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Когда школа Чародейства и Волшебства Хогвартс и Академия Шиноби связались через мультивселенную и открыли портал, соединивший их, никто не знал, чем это обернётся.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Выбрать своего первого героя",
+        "lua_if": "function lua_if()\nreturn not selected_hero\nend"
+      },
+      {
+        "id": 6,
+        "text": "Ваш герой: ",
+        "lua_if": "function lua_if()\nreturn selected_hero\nend",
+        "lua_text": "function lua_text()\nreturn \"Ваш герой: \" .. heroes[selected_hero].name\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Главное меню игры",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Сменить героя"
+      },
+      {
+        "id": 7,
+        "text": "Библиотека"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn selected_hero\nend",
+        "id": 6,
+        "text": "Ваш герой: ",
+        "lua_text": "function lua_text()\nreturn \"<s>\nВаш герой: \" .. heroes[selected_hero].name\nend",
+        "merge": true
+      },
+      {
+        "id": 8,
+        "text": "Арена"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Здесь хранятся все свитки с техниками и заклинаниями, доступные для обучения волшебников и шиноби.<s>r\nНажмите на технику, чтобы ваш персонаж выучил её.",
+    "answers": [
+      {
+        "comment": true,
+        "id": 7,
+        "text": "Ваш герой: ",
+        "lua_text": "function lua_text() return 'Ваш герой: '.. heroes[selected_hero].name .. ', уровень ' .. player_heroes[selected_hero].lvl end",
+        "left_answer": true
+      },
+      {
+        "lua_do": "function lua_do() for k,v in pairs(player_heroes) do if k==selected_hero then switch_to_next_hero=true elseif switch_to_next_hero then switch_to_next_hero = false; selected_hero = k end end end",
+        "text": "Следующий герой",
+        "right_answer": true,
+        "id": 7
+      },
+      {
+        "id": 7,
+        "text": "Назад",
+        "isBack": true,
+        "backstepCount": 1
+      },
+      {
+        "id": 7,
+        "text": "Новый свиток за 100 сюжетных частиц",
+        "instant": true,
+        "lua_do": "function lua_do() local fandom_pref = ({'n','hp'})[math.random(2)] ; local skill_num = math.random(num_of_skills) ; player_skills[fandom_pref..skill_num] = (player_skills[fandom_pref..skill_num] or 0)<plus>1 end"
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..1] or 0)>0) and (not (player_heroes[selected_hero].skills['n1'])) and (player_heroes[selected_hero].lvl >= skills['n'..1].needLevel) end",
+        "lua_text": "function lua_text() local i = 1; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 1; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..1] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n1'].needLevel ))or player_heroes[selected_hero].skills['n1'] end",
+        "lua_text": "function lua_text() local i = 1; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..1] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..1] or 0)>0) and (not (player_heroes[selected_hero].skills['hp1'])) and (player_heroes[selected_hero].lvl >= skills['hp'..1].needLevel) end",
+        "lua_text": "function lua_text() local i = 1; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 1; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..1] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp1'].needLevel ))or player_heroes[selected_hero].skills['hp1'] end",
+        "lua_text": "function lua_text() local i = 1; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..1] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..2] or 0)>0) and (not (player_heroes[selected_hero].skills['n2'])) and (player_heroes[selected_hero].lvl >= skills['n'..2].needLevel) end",
+        "lua_text": "function lua_text() local i = 2; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 2; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..2] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n2'].needLevel ))or player_heroes[selected_hero].skills['n2'] end",
+        "lua_text": "function lua_text() local i = 2; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..2] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..2] or 0)>0) and (not (player_heroes[selected_hero].skills['hp2'])) and (player_heroes[selected_hero].lvl >= skills['hp'..2].needLevel) end",
+        "lua_text": "function lua_text() local i = 2; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 2; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..2] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp2'].needLevel ))or player_heroes[selected_hero].skills['hp2'] end",
+        "lua_text": "function lua_text() local i = 2; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..2] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..3] or 0)>0) and (not (player_heroes[selected_hero].skills['n3'])) and (player_heroes[selected_hero].lvl >= skills['n'..3].needLevel) end",
+        "lua_text": "function lua_text() local i = 3; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 3; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..3] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n3'].needLevel ))or player_heroes[selected_hero].skills['n3'] end",
+        "lua_text": "function lua_text() local i = 3; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..3] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..3] or 0)>0) and (not (player_heroes[selected_hero].skills['hp3'])) and (player_heroes[selected_hero].lvl >= skills['hp'..3].needLevel) end",
+        "lua_text": "function lua_text() local i = 3; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 3; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..3] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp3'].needLevel ))or player_heroes[selected_hero].skills['hp3'] end",
+        "lua_text": "function lua_text() local i = 3; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..3] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..4] or 0)>0) and (not (player_heroes[selected_hero].skills['n4'])) and (player_heroes[selected_hero].lvl >= skills['n'..4].needLevel) end",
+        "lua_text": "function lua_text() local i = 4; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 4; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..4] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n4'].needLevel ))or player_heroes[selected_hero].skills['n4'] end",
+        "lua_text": "function lua_text() local i = 4; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..4] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..4] or 0)>0) and (not (player_heroes[selected_hero].skills['hp4'])) and (player_heroes[selected_hero].lvl >= skills['hp'..4].needLevel) end",
+        "lua_text": "function lua_text() local i = 4; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 4; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..4] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp4'].needLevel ))or player_heroes[selected_hero].skills['hp4'] end",
+        "lua_text": "function lua_text() local i = 4; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..4] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..5] or 0)>0) and (not (player_heroes[selected_hero].skills['n5'])) and (player_heroes[selected_hero].lvl >= skills['n'..5].needLevel) end",
+        "lua_text": "function lua_text() local i = 5; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 5; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..5] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n5'].needLevel ))or player_heroes[selected_hero].skills['n5'] end",
+        "lua_text": "function lua_text() local i = 5; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..5] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..5] or 0)>0) and (not (player_heroes[selected_hero].skills['hp5'])) and (player_heroes[selected_hero].lvl >= skills['hp'..5].needLevel) end",
+        "lua_text": "function lua_text() local i = 5; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 5; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..5] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp5'].needLevel ))or player_heroes[selected_hero].skills['hp5'] end",
+        "lua_text": "function lua_text() local i = 5; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..5] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..6] or 0)>0) and (not (player_heroes[selected_hero].skills['n6'])) and (player_heroes[selected_hero].lvl >= skills['n'..6].needLevel) end",
+        "lua_text": "function lua_text() local i = 6; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 6; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..6] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n6'].needLevel ))or player_heroes[selected_hero].skills['n6'] end",
+        "lua_text": "function lua_text() local i = 6; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..6] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..6] or 0)>0) and (not (player_heroes[selected_hero].skills['hp6'])) and (player_heroes[selected_hero].lvl >= skills['hp'..6].needLevel) end",
+        "lua_text": "function lua_text() local i = 6; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 6; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..6] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp6'].needLevel ))or player_heroes[selected_hero].skills['hp6'] end",
+        "lua_text": "function lua_text() local i = 6; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..6] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..7] or 0)>0) and (not (player_heroes[selected_hero].skills['n7'])) and (player_heroes[selected_hero].lvl >= skills['n'..7].needLevel) end",
+        "lua_text": "function lua_text() local i = 7; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 7; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..7] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n7'].needLevel ))or player_heroes[selected_hero].skills['n7'] end",
+        "lua_text": "function lua_text() local i = 7; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..7] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..7] or 0)>0) and (not (player_heroes[selected_hero].skills['hp7'])) and (player_heroes[selected_hero].lvl >= skills['hp'..7].needLevel) end",
+        "lua_text": "function lua_text() local i = 7; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 7; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..7] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp7'].needLevel ))or player_heroes[selected_hero].skills['hp7'] end",
+        "lua_text": "function lua_text() local i = 7; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..7] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..8] or 0)>0) and (not (player_heroes[selected_hero].skills['n8'])) and (player_heroes[selected_hero].lvl >= skills['n'..8].needLevel) end",
+        "lua_text": "function lua_text() local i = 8; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 8; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..8] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n8'].needLevel ))or player_heroes[selected_hero].skills['n8'] end",
+        "lua_text": "function lua_text() local i = 8; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..8] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..8] or 0)>0) and (not (player_heroes[selected_hero].skills['hp8'])) and (player_heroes[selected_hero].lvl >= skills['hp'..8].needLevel) end",
+        "lua_text": "function lua_text() local i = 8; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 8; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..8] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp8'].needLevel ))or player_heroes[selected_hero].skills['hp8'] end",
+        "lua_text": "function lua_text() local i = 8; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..8] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..9] or 0)>0) and (not (player_heroes[selected_hero].skills['n9'])) and (player_heroes[selected_hero].lvl >= skills['n'..9].needLevel) end",
+        "lua_text": "function lua_text() local i = 9; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 9; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..9] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n9'].needLevel ))or player_heroes[selected_hero].skills['n9'] end",
+        "lua_text": "function lua_text() local i = 9; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..9] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..9] or 0)>0) and (not (player_heroes[selected_hero].skills['hp9'])) and (player_heroes[selected_hero].lvl >= skills['hp'..9].needLevel) end",
+        "lua_text": "function lua_text() local i = 9; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 9; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..9] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp9'].needLevel ))or player_heroes[selected_hero].skills['hp9'] end",
+        "lua_text": "function lua_text() local i = 9; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..9] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..10] or 0)>0) and (not (player_heroes[selected_hero].skills['n10'])) and (player_heroes[selected_hero].lvl >= skills['n'..10].needLevel) end",
+        "lua_text": "function lua_text() local i = 10; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 10; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..10] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n10'].needLevel ))or player_heroes[selected_hero].skills['n10'] end",
+        "lua_text": "function lua_text() local i = 10; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..10] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..10] or 0)>0) and (not (player_heroes[selected_hero].skills['hp10'])) and (player_heroes[selected_hero].lvl >= skills['hp'..10].needLevel) end",
+        "lua_text": "function lua_text() local i = 10; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 10; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..10] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp10'].needLevel ))or player_heroes[selected_hero].skills['hp10'] end",
+        "lua_text": "function lua_text() local i = 10; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..10] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..11] or 0)>0) and (not (player_heroes[selected_hero].skills['n11'])) and (player_heroes[selected_hero].lvl >= skills['n'..11].needLevel) end",
+        "lua_text": "function lua_text() local i = 11; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 11; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..11] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n11'].needLevel ))or player_heroes[selected_hero].skills['n11'] end",
+        "lua_text": "function lua_text() local i = 11; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..11] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..11] or 0)>0) and (not (player_heroes[selected_hero].skills['hp11'])) and (player_heroes[selected_hero].lvl >= skills['hp'..11].needLevel) end",
+        "lua_text": "function lua_text() local i = 11; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 11; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..11] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp11'].needLevel ))or player_heroes[selected_hero].skills['hp11'] end",
+        "lua_text": "function lua_text() local i = 11; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..11] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..12] or 0)>0) and (not (player_heroes[selected_hero].skills['n12'])) and (player_heroes[selected_hero].lvl >= skills['n'..12].needLevel) end",
+        "lua_text": "function lua_text() local i = 12; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 12; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..12] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n12'].needLevel ))or player_heroes[selected_hero].skills['n12'] end",
+        "lua_text": "function lua_text() local i = 12; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..12] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..12] or 0)>0) and (not (player_heroes[selected_hero].skills['hp12'])) and (player_heroes[selected_hero].lvl >= skills['hp'..12].needLevel) end",
+        "lua_text": "function lua_text() local i = 12; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 12; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..12] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp12'].needLevel ))or player_heroes[selected_hero].skills['hp12'] end",
+        "lua_text": "function lua_text() local i = 12; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..12] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..13] or 0)>0) and (not (player_heroes[selected_hero].skills['n13'])) and (player_heroes[selected_hero].lvl >= skills['n'..13].needLevel) end",
+        "lua_text": "function lua_text() local i = 13; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 13; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..13] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n13'].needLevel ))or player_heroes[selected_hero].skills['n13'] end",
+        "lua_text": "function lua_text() local i = 13; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..13] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..13] or 0)>0) and (not (player_heroes[selected_hero].skills['hp13'])) and (player_heroes[selected_hero].lvl >= skills['hp'..13].needLevel) end",
+        "lua_text": "function lua_text() local i = 13; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 13; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..13] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp13'].needLevel ))or player_heroes[selected_hero].skills['hp13'] end",
+        "lua_text": "function lua_text() local i = 13; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..13] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..14] or 0)>0) and (not (player_heroes[selected_hero].skills['n14'])) and (player_heroes[selected_hero].lvl >= skills['n'..14].needLevel) end",
+        "lua_text": "function lua_text() local i = 14; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 14; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..14] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n14'].needLevel ))or player_heroes[selected_hero].skills['n14'] end",
+        "lua_text": "function lua_text() local i = 14; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..14] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..14] or 0)>0) and (not (player_heroes[selected_hero].skills['hp14'])) and (player_heroes[selected_hero].lvl >= skills['hp'..14].needLevel) end",
+        "lua_text": "function lua_text() local i = 14; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 14; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..14] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp14'].needLevel ))or player_heroes[selected_hero].skills['hp14'] end",
+        "lua_text": "function lua_text() local i = 14; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..14] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..15] or 0)>0) and (not (player_heroes[selected_hero].skills['n15'])) and (player_heroes[selected_hero].lvl >= skills['n'..15].needLevel) end",
+        "lua_text": "function lua_text() local i = 15; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 15; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..15] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n15'].needLevel ))or player_heroes[selected_hero].skills['n15'] end",
+        "lua_text": "function lua_text() local i = 15; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..15] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..15] or 0)>0) and (not (player_heroes[selected_hero].skills['hp15'])) and (player_heroes[selected_hero].lvl >= skills['hp'..15].needLevel) end",
+        "lua_text": "function lua_text() local i = 15; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 15; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..15] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp15'].needLevel ))or player_heroes[selected_hero].skills['hp15'] end",
+        "lua_text": "function lua_text() local i = 15; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..15] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..16] or 0)>0) and (not (player_heroes[selected_hero].skills['n16'])) and (player_heroes[selected_hero].lvl >= skills['n'..16].needLevel) end",
+        "lua_text": "function lua_text() local i = 16; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 16; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..16] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n16'].needLevel ))or player_heroes[selected_hero].skills['n16'] end",
+        "lua_text": "function lua_text() local i = 16; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..16] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..16] or 0)>0) and (not (player_heroes[selected_hero].skills['hp16'])) and (player_heroes[selected_hero].lvl >= skills['hp'..16].needLevel) end",
+        "lua_text": "function lua_text() local i = 16; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 16; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..16] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp16'].needLevel ))or player_heroes[selected_hero].skills['hp16'] end",
+        "lua_text": "function lua_text() local i = 16; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..16] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..17] or 0)>0) and (not (player_heroes[selected_hero].skills['n17'])) and (player_heroes[selected_hero].lvl >= skills['n'..17].needLevel) end",
+        "lua_text": "function lua_text() local i = 17; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 17; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..17] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n17'].needLevel ))or player_heroes[selected_hero].skills['n17'] end",
+        "lua_text": "function lua_text() local i = 17; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..17] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..17] or 0)>0) and (not (player_heroes[selected_hero].skills['hp17'])) and (player_heroes[selected_hero].lvl >= skills['hp'..17].needLevel) end",
+        "lua_text": "function lua_text() local i = 17; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 17; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..17] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp17'].needLevel ))or player_heroes[selected_hero].skills['hp17'] end",
+        "lua_text": "function lua_text() local i = 17; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..17] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..18] or 0)>0) and (not (player_heroes[selected_hero].skills['n18'])) and (player_heroes[selected_hero].lvl >= skills['n'..18].needLevel) end",
+        "lua_text": "function lua_text() local i = 18; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 18; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..18] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n18'].needLevel ))or player_heroes[selected_hero].skills['n18'] end",
+        "lua_text": "function lua_text() local i = 18; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..18] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..18] or 0)>0) and (not (player_heroes[selected_hero].skills['hp18'])) and (player_heroes[selected_hero].lvl >= skills['hp'..18].needLevel) end",
+        "lua_text": "function lua_text() local i = 18; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 18; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..18] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp18'].needLevel ))or player_heroes[selected_hero].skills['hp18'] end",
+        "lua_text": "function lua_text() local i = 18; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..18] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return ((player_skills['n'..19] or 0)>0) and (not (player_heroes[selected_hero].skills['n19'])) and (player_heroes[selected_hero].lvl >= skills['n'..19].needLevel) end",
+        "lua_text": "function lua_text() local i = 19; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 19; player_skills['n'..i] = player_skills['n'..i] - 1; player_heroes[selected_hero].skills['n'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if() return  ((player_skills['n'..19] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['n19'].needLevel ))or player_heroes[selected_hero].skills['n19'] end",
+        "lua_text": "function lua_text() local i = 19; return 'x' .. (player_skills['n'..i] or 0) ..' '..skills['n'..i].name .. ', треб.ур.: '.. skills['n'..i].needLevel .. (  player_heroes[selected_hero].skills['n'..19] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return ((player_skills['hp'..19] or 0)>0) and (not (player_heroes[selected_hero].skills['hp19'])) and (player_heroes[selected_hero].lvl >= skills['hp'..19].needLevel) end",
+        "lua_text": "function lua_text() local i = 19; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel  end",
+        "lua_do": "function lua_do() local i = 19; player_skills['hp'..i] = player_skills['hp'..i] - 1; player_heroes[selected_hero].skills['hp'..i] = true  end",
+        "text": "",
+        "id": 7,
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "lua_if": "function lua_if() return  ((player_skills['hp'..19] or 0)>0 and  (player_heroes[selected_hero].lvl < skills['hp19'].needLevel ))or player_heroes[selected_hero].skills['hp19'] end",
+        "lua_text": "function lua_text() local i = 19; return 'x' .. (player_skills['hp'..i] or 0) ..' '..skills['hp'..i].name .. ', треб.ур.: '.. skills['hp'..i].needLevel .. (  player_heroes[selected_hero].skills['hp'..19] and ' (изучено)' or '') end",
+        "id": 1,
+        "text": "",
+        "comment": true,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "В Арене пока что доступен только один бой — стычка.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Назад"
+      },
+      {
+        "id": 9,
+        "text": "Режим: Стычка 1х1"
+      },
+      {
+        "id": 11,
+        "text": "Режим: Стычка 3х3"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Режим: Стычка 1х1<s>r\n<s>r\nВыбранный вами герой сражается со случайным соперником из числа открытых вами персонажей. Потом кому-нибудь начисляются очки опыта и может быть вы даже получите сюжетные частицы.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Начать!",
+        "lua_do": "function lua_do()\nlocal player_heroes2 = table.copy2(player_heroes)\n\nlocal function pick_rand_hero()\nlocal key = randKeyFromTable(player_heroes2)\nlocal hero = table.copy2(player_heroes2[key])\n--table.remove(player_heroes2,key)\nplayer_heroes2[key] = nil\nreturn {id = key,\nhp = get_max_hp{hero_lvl = player_heroes[key].lvl},\n maxhp = get_max_hp{hero_lvl = player_heroes[key].lvl}}\nend\n\nlocal current_fight_hero = {id = selected_hero, \nhp =get_max_hp{hero_lvl = player_heroes[selected_hero].lvl},\nmaxhp = get_max_hp{hero_lvl = player_heroes[selected_hero].lvl},\n}\nplayer_heroes2[selected_hero] = nil\n\nfight = {\nteam1 = {\ncurrent_fight_hero,\n},\nteam2 = {\npick_rand_hero(),\n},\nteamTurn = 1,\n\n}\nend"
+      },
+      {
+        "id": 8,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Покинуть бой"
+      },
+      {
+        "id": 10,
+        "text": "bg1",
+        "url": "https://pm1.narvii.com/6592/319a7559628d1997e5052e1fd722b19f45143475_00.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n2",
+        "url": "https://you-anime.ru/anime-images/characters/145.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n1",
+        "url": "https://you-anime.ru/anime-images/characters/17.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n3",
+        "url": "https://you-anime.ru/anime-images/characters/13.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n4",
+        "url": "https://you-anime.ru/anime-images/characters/85.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n5",
+        "url": "https://you-anime.ru/anime-images/characters/14.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n6",
+        "url": "https://you-anime.ru/anime-images/characters/307.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n7",
+        "url": "https://you-anime.ru/anime-images/characters/306.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n8",
+        "url": "https://i.pinimg.com/236x/03/05/51/0305516f3076d26eb5cf617b5ec5e542.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n9",
+        "url": "https://i.pinimg.com/236x/c1/d3/c1/c1d3c1be80ef27ba971e653dec0ab232.jpg?nii=t"
+      },
+      {
+        "id": 10,
+        "text": "n10",
+        "url": "https://you-anime.ru/anime-images/characters/1694.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n11",
+        "url": "https://you-anime.ru/anime-images/characters/2009.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n13",
+        "url": "https://you-anime.ru/anime-images/characters/2007.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n14",
+        "url": "https://you-anime.ru/anime-images/characters/2011.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n15",
+        "url": "https://you-anime.ru/anime-images/characters/2174.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n16",
+        "url": "https://you-anime.ru/anime-images/characters/2405.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n17",
+        "url": "https://you-anime.ru/anime-images/characters/2455.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n18",
+        "url": "https://you-anime.ru/anime-images/characters/2423.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n19",
+        "url": "https://you-anime.ru/anime-images/characters/2767.jpg"
+      },
+      {
+        "id": 10,
+        "text": "n12",
+        "url": "https://you-anime.ru/anime-images/characters/2008.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp1",
+        "url": "https://sun9-9.userapi.com/c628721/v628721610/26194/QF1IQ_d76M4.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp2",
+        "url": "https://i.pinimg.com/236x/08/f9/4a/08f94ade9bdbc441261d88e17157cec2.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp3",
+        "url": "https://i.pinimg.com/736x/f0/3b/5c/f03b5c8ea1a9afdc5d9f267b322f754f.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp4",
+        "url": "https://a.wattpad.com/cover/128024982-256-k991051.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp5",
+        "url": "https://iledebeaute.ru/files/images/pub/part_3/60983/src/matthew1.jpg?300_350"
+      },
+      {
+        "id": 10,
+        "text": "hp6",
+        "url": "https://fuatzvirkill.files.wordpress.com/2011/12/200px-lunalovegoodootp.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp7",
+        "url": "https://i.pinimg.com/280x280_RS/65/29/e9/6529e9b178cb93794d0f33fd22ac8803.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp8",
+        "url": "https://i.pinimg.com/280x280_RS/65/29/e9/6529e9b178cb93794d0f33fd22ac8803.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp10",
+        "url": "https://fanbojizycie.files.wordpress.com/2018/05/hagrid.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp9",
+        "url": "https://pbs.twimg.com/media/EC1H7jtXUAEj1W3.jpg:large"
+      },
+      {
+        "id": 10,
+        "text": "hp11",
+        "url": "https://forumavatars.ru/img/avatars/0011/5a/a3/2-1335529309.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp12",
+        "url": "https://i.pinimg.com/236x/ab/3b/4d/ab3b4d0c60a0d40d604638582a8c8f1c--a-witch-bird.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp13",
+        "url": "http://hogsland.com/uploads/posts/2014-08/1408202011_poppi-pomfri.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp14",
+        "url": "https://i.pinimg.com/236x/fd/9f/19/fd9f19c4a61bbb4cca2c07f357ba3098--demon-book-hogwarts.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp15",
+        "url": "https://hsto.org/getpro/habr/post_images/079/1ab/1d2/0791ab1d2fff16c5d6cbb5d9359885d3.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp16",
+        "url": "https://pm1.narvii.com/6806/435670ea910307417297918b1b00e55fb7294a27v2_00.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp17",
+        "url": "https://i.pinimg.com/236x/2f/ab/74/2fab74a2c1c8a188fe6b1646d79bc1d4--long-hair-harry-potter-characters.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp18",
+        "url": "https://i.pinimg.com/236x/56/f9/97/56f997f18f9f1d618638c5d910f553f3--hermione-costume-bellatrix-costume.jpg"
+      },
+      {
+        "id": 10,
+        "text": "hp19",
+        "url": "https://i.pinimg.com/236x/f7/0e/98/f70e9885e31997f546528fcca27dfad3--dobby-harry-potter-harry-potter-fandom.jpg?nii=t"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfor i = 1,num_of_skills do\nfor k,fandom_pref in pairs({\"n\",\"hp\"}) do\nif images[fandom_pref..i] then\nimages[fandom_pref..i].alpha = 0\nend\nend\nend\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 10
+      },
+      {
+        "module": true,
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n-- function lua_do()<s>r\n<s>tsw = display.contentWidth<s>r\n<s>tsh = display.contentHeight<s>r\n<s>tfor team_i,team in pairs{fight.team1,fight.team2} do<s>r\n<s>tfor i=1,#team do<s>r\n<s>t<s>tlocal heroImg = images[team[i].id]<s>r\n<s>t<s>theroImg.alpha = 1<s>r\n<s>t<s>tlocal heroGroup = display.newGroup()<s>r\n<s>t<s>theroGroup:insert(heroImg,true)<s>r\n<s>t<s>timages[team[i].id] = nil<s>r\n<s>t<s>timages[team[i].id] = heroGroup<s>r\n<s>t<s>timages[team[i].id].heroImg = heroImg<s>r\n<s>t<s>theroGroup.redBar = display.newRect(heroImg.x,heroImg.y - heroImg.height*0.5*heroImg.yScale - heroImg.height*0.1*heroImg.yScale*0.5,heroImg.width*heroImg.xScale,heroImg.height*0.1*heroImg.yScale)<s>r\n<s>t<s>theroGroup.greenBar = display.newRect(heroImg.x,heroImg.y - heroImg.height*0.5*heroImg.yScale - heroImg.height*0.1*heroImg.yScale*0.5,heroImg.width*heroImg.xScale,heroImg.height*0.1*heroImg.yScale)<s>r\n<s>t<s>theroGroup:insert(heroGroup.redBar)<s>r\n<s>t<s>theroGroup:insert(heroGroup.greenBar)<s>r\n<s>t<s>theroGroup.redBar:setFillColor(1,0,0)<s>r\n<s>t<s>theroGroup.greenBar:setFillColor(0,1,0)<s>r\n<s>t<s>theroGroup.actualise_health_bar = function()<s>r\n<s>t<s>t<s>tif not (heroGroup and heroGroup.greenBar and heroGroup.greenBar.removeSelf) then<s>r\n<s>t<s>t<s>t<s>treturn<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tlocal health_koef = team[i].hp/get_max_hp{hero_lvl = player_heroes[team[i].id].lvl}<s>r\n<s>t<s>t<s>tif health_koef == 0 then<s>r\n<s>t<s>t<s>t<s>theroGroup.greenBar.alpha = 0<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>ttransition.to(<s>r\n<s>t<s>t<s>theroGroup.greenBar,<s>r\n<s>t<s>t<s>t{<s>r\n<s>t<s>t<s>txScale = <s>r\n<s>t<s>t<s>thealth_koef, -- коэффициент здоровья<s>r\n<s>t<s>t<s>tx = heroImg.x - heroImg.width*heroImg.xScale*0.5 <plus> heroGroup.greenBar.width*health_koef/2,<s>r\n<s>t<s>t<s>ttime = 300,<s>r\n<s>t<s>t<s>ttransition = easing.outQuad,<s>r\n<s>t<s>t<s>t})<s>t<s>r\n<s>t<s>tend<s>r\n<s>t<s>theroGroup.shoutText = display.newText({--<s>r\n<s>t<s>t<s>tparent = heroGroup.parent,<s>r\n<s>t<s>t<s>ttext = \"Lets fight!!!\",    <s>t<s>t<s>r\n<s>t<s>t<s>ty = 0,<s>r\n<s>t<s>t<s>tx = 0,--whitePage.height*0.15,<s>r\n<s>t<s>t<s>twidth = sw*0.35,     --required for multi-line and alignment<s>r\n<s>t<s>t<s>t--height = book.contentHeight*0.75,     --required for multi-line and alignment<s>r\n<s>t<s>t<s>tfont = native.systemFontBold,   <s>r\n<s>t<s>t<s>tfontSize = sw/20,<s>r\n<s>t<s>t<s>talign = \"center\"  --new alignment parameter<s>r\n<s>t<s>t<s>t}<s>r\n<s>t<s>t)<s>r\n<s>t<s>theroGroup.shoutText.alpha = 0<s>r\n<s>t<s>t<s>r\n<s>t<s>theroGroup.shoutText:setFillColor(1,1,1)<s>r\n<s>t<s>theroGroup.getToDefPos = function()<s>r\n<s>t<s>t<s>tif not (heroGroup and heroGroup.width and heroGroup.removeSelf) then<s>r\n<s>t<s>t<s>t<s>treturn<s>r\n<s>t<s>t<s>tend<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>ttransition.to(<s>r\n<s>t<s>t<s>theroGroup,<s>r\n<s>t<s>t<s>t{<s>r\n<s>t<s>t<s>tx = team_i == 1 and sw*0.1 or sw*0.9,<s>r\n<s>t<s>t<s>ty = sw*(0.15*i),<s>r\n<s>t<s>t<s>txScale = sw/heroGroup.width*0.1,<s>r\n<s>t<s>t<s>tyScale = sw/heroGroup.height*0.15,<s>r\n<s>t<s>t<s>ttime = 300,<s>r\n<s>t<s>t<s>ttransition = easing.inOutQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>theroGroup.shoutText.alpha = 0<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>t<s>theroGroup.getToDefPos()<s>r\n<s>t<s>theroGroup.getToFightPos = function()<s>r\n<s>t<s>t<s>tif not (heroGroup and heroGroup.width and heroGroup.removeSelf) then<s>r\n<s>t<s>t<s>t<s>treturn<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>theroGroup:toFront()<s>r\n<s>t<s>t<s>ttransition.to(<s>r\n<s>t<s>t<s>theroGroup,<s>r\n<s>t<s>t<s>t{<s>r\n<s>t<s>t<s>tx = team_i == 1 and sw*0.3 or sw*0.7,<s>r\n<s>t<s>t<s>ty = sw*0.25,<s>r\n<s>t<s>t<s>txScale = sw/heroGroup.width*0.1*2.5,<s>r\n<s>t<s>t<s>tyScale = sw/heroGroup.height*0.15*2.5,<s>r\n<s>t<s>t<s>ttime = 300,<s>r\n<s>t<s>t<s>ttransition = easing.inOutQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>tend<s>r\n<s>t<s>theroGroup.shout = function(text)<s>r\n<s>t<s>t<s>tif not (heroGroup and heroGroup.shoutText and heroGroup.shoutText.removeSelf and heroGroup.shoutText.toFront) then<s>r\n<s>t<s>t<s>t<s>treturn<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>theroGroup.shoutText:toFront()<s>r\n<s>t<s>t<s>theroGroup.shoutText.text = text<s>t<s>t<s>r\n<s>t<s>t<s>theroGroup.shoutText.x = heroGroup.x<s>r\n<s>t<s>t<s>theroGroup.shoutText.y = heroGroup.y <plus> heroGroup.height*0.5*heroGroup.yScale <plus> heroGroup.shoutText.height/2---<s>r\n<s>t<s>t<s>theroGroup.shoutText.alpha = 1<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>tend<s>r\n-- end\nend",
+        "calculate": false,
+        "text": "luaModuleUpdate http://188.120.236.127/hp_vs_naruto/arrange_hero_images.lua",
+        "id": 10
+      },
+      {
+        "module": true,
+        "comment": true,
+        "id": 10,
+        "text": "luaModuleUpdate http://188.120.236.127/hp_vs_naruto/every_turn.lua",
+        "update": [
+          5
+        ],
+        "lua_text": "function lua_text()\nreturn \"  -  \"\nend",
+        "super_calculate": false,
+        "calculate": false,
+        "lua_do": "function lua_do()\n-- function lua_do()<s>r\n<s>r\n<s>r\n<s>tfight.teamTurn = fight.teamTurn == 1 and 2 or 1<s>r\n<s>tlocal currentAttackerI = randKeyFromTable(fight[\"team\" .. fight.teamTurn])<s>r\n<s>tlocal currentDefenderI = randKeyFromTable(fight[\"team\" .. (fight.teamTurn == 1 and 2 or 1)])<s>r\n<s>tlocal currentAttacker = fight[\"team\" .. fight.teamTurn][currentAttackerI]<s>r\n<s>t-- randValFromTable(fight[\"team\" .. fight.teamTurn])<s>r\n<s>tlocal currentDefender = fight[\"team\" .. (fight.teamTurn == 1 and 2 or 1)][currentDefenderI]<s>r\n<s>t-- randValFromTable(fight[\"team\" .. (fight.teamTurn == 1 and 2 or 1)])<s>r\n<s>tif not (currentDefender) and currentAttacker then<s>r\n<s>t<s>timages[currentAttacker.id].getToFightPos()<s>r\n<s>t<s>ttimer.performWithDelay(500,function()<s>r\n<s>t<s>tif currentAttacker and images and images[currentAttacker.id]  and images[currentAttacker.id].shout then<s>r\n<s>t<s>t<s>timages[currentAttacker.id].shout(\"Победа!\")<s>r\n<s>t<s>tend<s>r\n<s>t<s>tend)<s>r\n<s>t<s>t<s>r\n<s>t<s>ttimer.performWithDelay(2500,function()<s>r\n<s>t<s>tif currentAttacker and images and images[currentAttacker.id]  and images[currentAttacker.id].shout then<s>r\n<s>t<s>t<s>timages[currentAttacker.id].getToDefPos()<s>r\n<s>t<s>t<s>tfight.teamTurn = fight.teamTurn == 1 and 2 or 1<s>r\n<s>t<s>tend<s>r\n<s>t<s>tend)<s>r\n<s>tend<s>r\n<s>tif not (currentDefender and currentAttacker) then<s>r\n<s>t<s>tprint(\"error\", currentDefender , currentAttacker)<s>r\n<s>t<s>treturn<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>tprint(\"team \" .. fight.teamTurn .. \" moves!\")<s>r\n<s>t<s>r\n<s>tif images and images[currentAttacker.id] and images[currentAttacker.id].getToFightPos then<s>r\n<s>t<s>timages[currentAttacker.id].getToFightPos()<s>r\n<s>tend<s>r\n<s>ttimer.performWithDelay(500,function()<s>r\n<s>t<s>tif images and images[currentDefender.id] and images[currentAttacker.id].getToFightPos then<s>r\n<s>t<s>t<s>timages[currentDefender.id].getToFightPos()<s>r\n<s>t<s>tend<s>r\n<s>tend)<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\n<s>tlocal attack_skill_id = randKeyFromTable(player_heroes[currentAttacker.id].attackSkills)<s>r\n<s>tlocal defense_skill_id = randKeyFromTable(player_heroes[currentDefender.id].defenseSkills)<s>r\n<s>tif not attack_skill_id then<s>t<s>r\n<s>t<s>tattack_skill_id = \"default_attack\"<s>r\n<s>tend<s>t<s>r\n<s>tif not defense_skill_id then<s>t<s>r\n<s>t<s>tdefense_skill_id = \"default_defence\"<s>r\n<s>tend<s>t<s>r\n<s>t<s>t-- print(skills[attack_skill_id].name .. \"!\")<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>ttimer.performWithDelay(400,function()<s>r\n<s>t<s>t<s>tif not images and images[currentAttacker.id] and images[currentAttacker.id].removeSelf then<s>r\n<s>t<s>t<s>t<s>treturn<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>timages[currentAttacker.id].shout(skills[attack_skill_id].name .. \"!\")<s>r\n<s>t<s>tend)<s>r\n<s>t<s>t<s>r\n<s>t<s>tlocal attack = get_outcome_damage{hero_lvl = player_heroes[currentAttacker.id].lvl,skill_need_level = skills[attack_skill_id].needLevel}<s>r\n<s>t<s>tlocal defense = get_outcome_damage{hero_lvl = player_heroes[currentDefender.id].lvl,skill_need_level = skills[defense_skill_id].needLevel}<s>r\n<s>t<s>t-- print(skills[defense_skill_id].name .. \"!\")<s>r\n<s>t<s>ttimer.performWithDelay(900,function()<s>r\n<s>t<s>t<s>tif not (currentDefender and images and images[currentDefender.id] and images[currentDefender.id].shout)then<s>r\n<s>t<s>t<s>t<s>treturn<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>timages[currentDefender.id].shout(skills[defense_skill_id].name .. \"!\")<s>r\n<s>t<s>tend)<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>ttimer.performWithDelay(1700,function()<s>r\n<s>t<s>t<s>tif not (currentDefender and currentDefender.hp and get_outcome_damage and images and images[currentDefender.id] and images[currentDefender.id].actualise_health_bar) then<s>r\n<s>t<s>t<s>t<s>treturn<s>r\n<s>t<s>t<s>tend<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tlocal damage = attack - defense<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tif damage <0 then <s>r\n<s>t<s>t<s>t<s>tdamage = 0<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tplayer_heroes[currentDefender.id].experience = <s>r\n<s>t<s>t<s>tplayer_heroes[currentDefender.id].experience <plus> attack<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tplayer_heroes[currentAttacker.id].experience = <s>r\n<s>t<s>t<s>tplayer_heroes[currentAttacker.id].experience <plus> defense<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tfor k,hero in pairs{currentAttacker,currentDefender} do<s>r\n<s>t<s>t<s>t<s>tif player_heroes[hero.id].experience > get_need_exp({hero_lvl=player_heroes[hero.id].lvl <plus> 1}) then<s>r\n<s>t<s>t<s>t<s>t<s>tplayer_heroes[hero.id].experience = player_heroes[hero.id].experience - get_need_exp({hero_lvl=player_heroes[hero.id].lvl <plus> 1})<s>r\n<s>t<s>t<s>t<s>t<s>tplayer_heroes[hero.id].lvl = player_heroes[hero.id].lvl <plus> 1<s>r\n<s>t<s>t<s>t<s>t<s>t-- hero.hp = get_max_hp({hero_lvl = player_heroes[currentDefender.id].lvl})<s>r\n<s>t<s>t<s>t<s>t<s>ttimer.performWithDelay(400,function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t-- images[hero.id].actualise_health_bar()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>timages[hero.id].shout(\"Новый уровень!\")<s>r\n<s>t<s>t<s>t<s>t<s>tend)<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tcurrentDefender.hp = currentDefender.hp - damage<s>r\n<s>t<s>t<s>tcurrentDefender.hp = currentDefender.hp > 0  and currentDefender.hp or 0<s>r\n<s>t<s>t<s>tcurrentDefender.hp = currentDefender.hp < get_max_hp{hero_lvl = player_heroes[currentDefender.id].lvl} and currentDefender.hp or get_max_hp{hero_lvl = player_heroes[currentDefender.id].lvl}<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>timages[currentDefender.id].actualise_health_bar()<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>tend)<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\n<s>ttimer.performWithDelay(3000,function()<s>r\n<s>t<s>tif not (images and fight and images[currentAttacker.id] and images[currentAttacker.id].removeSelf) then<s>r\n<s>t<s>t<s>treturn<s>r\n<s>t<s>tend<s>r\n<s>r\n<s>t<s>timages[currentAttacker.id].getToDefPos()<s>r\n<s>t<s>timages[currentDefender.id].getToDefPos()<s>r\n<s>t<s>t<s>r\n<s>t<s>tif currentDefender.hp <=0 then<s>r\n<s>t<s>t<s>timages[currentDefender.id].heroImg:setFillColor(1,0,0)<s>r\n<s>t<s>t<s>tfight[\"team\" .. (fight.teamTurn == 1 and 2 or 1)][currentDefenderI] = nil<s>r\n<s>t<s>t<s>t-- table.remove(fight[\"team\" .. (fight.teamTurn == 1 and 2 or 1)],currentDefenderI)<s>r\n<s>t<s>t<s>tcurrentDefender = nil<s>t<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>tend)<s>r\n-- end\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Режим: Стычка 3х3<s>r\n<s>r\nТекущий персонаж и пять случайных героев из числа открытых вами сражаются в двух командах. Потом кому-нибудь начисляются очки опыта и может быть вы даже получите сюжетные частицы.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Начать!",
+        "lua_if": "function lua_if()\nlocal c = 0\nfor k,v in pairs(player_heroes) do\nc= c <plus> 1\nend\nreturn c>5\nend",
+        "lua_do": "function lua_do()\nlocal player_heroes2 = table.copy2(player_heroes)\n\nlocal function pick_rand_hero()\nlocal key = randKeyFromTable(player_heroes2)\nlocal hero = table.copy2(player_heroes2[key])\n--table.remove(player_heroes2,key)\nplayer_heroes2[key] = nil\nreturn {id = key,\nhp = get_max_hp{hero_lvl = player_heroes[key].lvl},\n maxhp = get_max_hp{hero_lvl = player_heroes[key].lvl}}\nend\n\n\nlocal current_fight_hero = {id = selected_hero, \nhp = get_max_hp{hero_lvl = player_heroes[selected_hero].lvl},\nmaxhp = get_max_hp{hero_lvl = player_heroes[selected_hero].lvl},\n}\nplayer_heroes2[selected_hero] = nil\n\nfight = {\nteam1 = {\ncurrent_fight_hero,\npick_rand_hero(),\npick_rand_hero()\n},\nteam2 = {\npick_rand_hero(),\npick_rand_hero(),\npick_rand_hero(),\n},\nteamTurn = 1,\n\n}\nend"
+      },
+      {
+        "id": 8,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": []
+  }
+]

@@ -1,0 +1,1234 @@
+[
+  {
+    "id": 1,
+    "text": "Автор Blaxas\n<s>r\nБесконечное Гринд RPG с простой механикой на 5 страниц. Как далеко сможет зайти ваш персонаж?<s>r Можно играть хоть в ночном, хоть в дневном режиме, все прекрасно видно при любых настройках. Теперь есть сюжет\n\nГерой данного квеста — юноша без имени и прошлого. Он обречён умирать вновь и вновь, сражаясь с полчищами монстров, питая кровью загадочный кроваво-красный меч в руке. Смерть для него — лишь короткая передышка перед очередной битвой. Но в какой-то момент обрывки из воспоминаний давно забытого прошлого всплывают в его памяти. И теперь юношу терзают вопросы. Кто он? Как оказался здесь? И только вы, дорогой читатель, в силах помочь главному герою вспомнить его прошлое. Попытайтесь выяснить, что за тёмная магия наделяет его бессмертием. Помогите ему преодолеть все трудности, выбраться из подземелья и обрести свободу.\n\nUpdate 08.09.2024 обновлен способ получения опыта на высоких уровнях, что позволяет, не затягивать загрузку в момент возвращения из битвы. Измененен баланс характеристик врагов, разброс характеристик становится выше и их максимальные характеристики увеличены в 1,5 раза. Теперь в конце боя отображается полученные кристаллы и души. Добавлены боссы для более простого фарма душ доступны раз в час.",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "lua_do": "function lua_do()\ng.death=0\npg2=0\ng.gem=0\ng.pg1=1\ng.kill=0\ng.respawn=1\nxp=0\nmaxhp=25\nhp={25,0,25}\ndef={5,0,5}\natk={10,0,10}\nspd={2,0,1}\nspeed=1\nblood=0\nblood_point={0,0,0,0,0}\npg17={0,0,0,0,0,0,0,0,0,0,0,0,0}\nVOS=4\nsouls=0\npg39=0\npg5=16\nbosstime=g.time\n\nif Admin == \"Vos1\" then\ng.death=14\nend\nif Admin == \"Vos2\" then\ng.death=29\nend\nif Admin == \"Vos3\" then\ng.death=44\nend\nif Admin == \"Vos4\" then\ng.death=59\nend\nif Admin == \"Vos5\" then\ng.death=74\nend\nif Admin == \"Vos6\" then\nblood=2000000\nend\nif Admin == \"Speed\" then\nspeed=0.1\nend\n\nend",
+        "middle_answer": true,
+        "text": "Начать",
+        "id": 2,
+        "instant": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "http://188.120.236.127/vladsir/cristal.png",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "http://188.120.236.127/vladsir/cristal.png",
+        "system": true
+      },
+      {
+        "id": 2,
+        "text": "Средство для тестов и разработчика",
+        "input_var": "Admin"
+      },
+      {
+        "id": 1,
+        "text": "stretch",
+        "url": "http://188.120.236.127/vladsir/greysword.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Персонаж",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\ntext1=\"<s>\nУровень возрождения: \" .. g.respawn\n\nif math.floor(maxhp*(1<plus>pg17[2]/100))>=10^6 then\ntext1=text1 .. \"<s>\nЗдоровье: \" .. string.format(\"%.1e\",math.floor(maxhp*(1<plus>pg17[2]/100)))\nelse\ntext1=text1 .. \"<s>\nЗдоровье: \" .. math.floor(maxhp*(1<plus>pg17[2]/100))\nend\n\nif math.floor(def[1]*(1<plus>pg17[3]/100))>=10^6 then\ntext1=text1 .. \"<s>\nЗащита: \" .. string.format(\"%.1e\",math.floor(def[1]*(1<plus>pg17[3]/100)))\nelse\ntext1=text1 .. \"<s>\nЗащита: \" .. math.floor(def[1]*(1<plus>pg17[3]/100))\nend\n\nif math.floor(atk[1]*(1<plus>pg17[4]/100))>=10^6 then\ntext1=text1 .. \"<s>\nАтака: \" .. string.format(\"%.1e\", math.floor(atk[1]*(1<plus>pg17[4]/100)))\nelse\ntext1=text1 .. \"<s>\nАтака: \" .. math.floor(atk[1]*(1<plus>pg17[4]/100))\nend\n\nif math.floor(spd[1]*(1<plus>pg17[5]/100))>=10^6 then\ntext1=text1 .. \"<s>\nСкорость: \" .. string.format(\"%.1e\",math.floor(spd[1]*(1<plus>pg17[5]/100)))\nelse\ntext1=text1 .. \"<s>\nСкорость: \" .. math.floor(spd[1]*(1<plus>pg17[5]/100))\nend\n\ntext1=text1 .. \"<s>\n<s>\nВаш рекорд по прохождению: \" .. g.pg1 .. \"<s>\n<s>\nКристаллы: \" .. g.gem .. \" (<plus>\" .. g.gem/10 .. \"% опыта)\" \n\nreturn text1\nend",
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/blue.png"
+        ],
+        "lua_text": "function lua_text()\nif speed==1 then\nreturn \"Скорость боя x1\"\nend\nif speed==0.5 then\nreturn \"Скорость боя x2\"\nend\nif speed==0.25 then\nreturn \"Скорость боя x4\"\nend\nif speed==0.1 then\nreturn \"Скорость боя х10\"\nend\nend",
+        "middle_answer": true,
+        "id": 2,
+        "instant": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nif speed~=0.1 then\npg2=pg2<plus>1\nif pg2==4 then\npg2=1\nend\nif pg2==3 then\nspeed=1\nend\nif pg2==2 then\nspeed=0.25\nend\nif pg2==1 then\nspeed=0.5\nend\nend\nend"
+      },
+      {
+        "lua_do": "function lua_do()\npovtors=1\ngo3=2\nhp[1]=math.floor(maxhp*(1<plus>pg17[2]/100))\npg3=1\nsp={0,0}\nhp[2]=math.floor(hp[3]*pg3*(math.random(50,100)/100))\ndef[2]=math.floor(def[3]*pg3*(math.random(50,100)/100))\natk[2]=math.floor(atk[3]*pg3*(math.random(50,100)/100))\nspd[2]=spd[3]*pg3\nboss=0\nlog=\"\"\n\nif g.death==13 then\ngo3=6\nend\nif g.death==28 then\ngo3=7\nend\nif g.death==43 then\ngo3=9\nend\nif g.death==58 then\ngo3=11\nend\nif g.death==73 then\ngo3=15\nend\nif blood>=2500 and pg5==16 then\npg5=0\ngo3=16\nend\n\nSumKris=0\nSumSouls=0\n\nend",
+        "right_answer": false,
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/yellow.png"
+        ],
+        "id": 3,
+        "forget": [
+          3
+        ],
+        "text": "Войти в подземелье",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "id": 3,
+        "instant": true,
+        "left_answer": false,
+        "right_answer": false,
+        "lua_if": "function lua_if()\nif bosstime <= g.time then\nreturn true\nend\nend",
+        "forget": [
+          3
+        ],
+        "text": "Босс раш (Души)",
+        "lua_do": "function lua_do()\npovtors=1\ngo3=2\nhp[1]=math.floor(maxhp*(1<plus>pg17[2]/100))\npg3=1\nsp={0,0}\nhp[2]=math.floor(hp[3]*pg3*(math.random(50,100)/100))\ndef[2]=math.floor(def[3]*pg3*(math.random(50,100)/100))\natk[2]=math.floor(atk[3]*pg3*(math.random(50,100)/100))\nspd[2]=spd[3]*pg3\nboss=1\nlog=\"\"\n\nif g.death==13 then\ngo3=6\nend\nif g.death==28 then\ngo3=7\nend\nif g.death==43 then\ngo3=9\nend\nif g.death==58 then\ngo3=11\nend\nif g.death==73 then\ngo3=15\nend\nif blood>=2500 and pg5==16 then\npg5=0\ngo3=16\nend\n\nSumKris=0\nSumSouls=0\nbosstime=g.time<plus>3600\n\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/yellow.png"
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "instant": true,
+        "update": [
+          1
+        ],
+        "left_answer": false,
+        "right_answer": false,
+        "lua_if": "function lua_if()\nif bosstime > g.time then\nreturn true\nend\nend",
+        "forget": [
+          3
+        ],
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Босс раш (Души)",
+        "lua_text": "function lua_text()\nm=\"\"\nbossh = math.floor(( bosstime - g.time) / 3600)\nbossm = math.floor(((bosstime-g.time)-(bossh*3600))/60)\nbosssec =\nmath.floor((bosstime-g.time)-((bossh*3600)<plus>(bossm*60)))\nif bossh <= 0 then\nbossh = \"00\"\nelse\nbossh = \"01\"\nend\nif bossm <= 9 then\nm = \"0\"\nif bossm <= 0 then\nbossm = 0\nend\nend\nif bosssec <= 9 then\nbosssec=\"0\" .. bosssec\nend\nreturn \"Босс раш [\" .. bossh .. \":\" .. m .. bossm .. \":\" .. bosssec .. \"]\"\nend"
+      },
+      {
+        "id": 2,
+        "text": "Улучшить персонажа",
+        "instant": true,
+        "lua_if": "function lua_if()\nif xp>0 then\nreturn true\nend\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nx1=0\n\nif xp>=1000 then\n\nmaxhp=maxhp<plus>5*math.floor(xp/4)\natk[1]=atk[1]<plus>2*math.floor(xp/4)\ndef[1]=def[1]<plus>1*math.floor(xp/4)\nspd[1]=spd[1]<plus>0.2*math.floor(xp/4)\nxp=0\n\nend\n\nif ((xp<1000) and (xp>0)) then\nfor i1=1,math.floor(xp/(g.respawn<plus>math.floor(g.respawn*g.gem/1000))) do\n\ni=math.random(1,4)\nif i==1 then\nmaxhp=maxhp<plus>5*math.floor(g.respawn*(1<plus>g.gem/1000))\nend\nif i==2 then\natk[1]=atk[1]<plus>2*math.floor(g.respawn*(1<plus>g.gem/1000))\nend\nif i==3 then\ndef[1]=def[1]<plus>1*math.floor(g.respawn*(1<plus>g.gem/1000))\nend\nif i==4 then\nspd[1]=spd[1]<plus>0.2*math.floor(g.respawn*(1<plus>g.gem/1000))\nend\nx=math.random(1,10000)\nif x<=25 then\nx1=x1<plus>1\nend\n\nend\nxp=0\nif x1>0 then\ng.gem=g.gem<plus>x1\nmessage(\"Получено кристаллов \" .. x1)\nend\nend\n\nspd[1]=math.round(spd[1]*10)/10\nend",
+        "calculate": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "lua_text": "function lua_text()\nreturn \"Улучшить персонажа на \" .. xp .. \" ед. опыта.\"\nend"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "lua_if": "function lua_if()\nif (g.pg1>=50*2^g.respawn) then\nreturn true\nend\nend",
+        "instant": true,
+        "id": 2,
+        "text": "Повышение уровня",
+        "lua_do": "function lua_do()\ng.respawn=g.respawn<plus>1\nxp=0\nmaxhp=25\nhp={25,0,25}\ndef={5,0,5}\natk={10,0,10}\nspd={2,0,1}\ng.pg1=1\nsouls=souls<plus>1*g.respawn*pg17[1]\nend",
+        "lua_text": "function lua_text()\nreturn \"Возрождение<s>\nНеобходимый этаж \" .. g.pg1 .. \"/\" .. 50*2^g.respawn\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif (g.pg1<50*2^g.respawn) then\nreturn true\nend\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Повышение уровня",
+        "id": 2,
+        "instant": true,
+        "lua_text": "function lua_text()\nreturn \"Возрождение<s>\nНеобходимый этаж \" .. g.pg1 .. \"/\" .. 50*2^g.respawn\nend",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "stretch",
+        "url": "http://188.120.236.127/vladsir/gradientsword.png"
+      },
+      {
+        "middle_answer": true,
+        "id": 2,
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/rainbow.png"
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nspeed=0.1\nend",
+        "text": "Потратить 1 закладку\nВключить x10 скорость навсегда",
+        "paid_answer": [
+          "Бонус к скорости х10",
+          1
+        ],
+        "lua_if": "function lua_if()\nif (speed~=0.1) and (g.isAuthor ~=1) then\nreturn true\nend\nend"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 2,
+        "text": "Воспоминания",
+        "instant": true,
+        "go_to": [
+          "VOS"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif (speed~=0.1) and (g.isAuthor==1)  then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nspeed=0.1\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/blue.png"
+        ],
+        "super_calculate": false,
+        "id": 2,
+        "instant": true,
+        "calculate": true,
+        "text": "Скорость х10 включить"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Прогресс",
+        "id": 2,
+        "instant": true,
+        "need": [
+          -38
+        ],
+        "lua_text": "function lua_text()\nif blood<2500 then\nreturn \"Прогресс \" .. blood/25 .. \"%\"\nelse\nreturn \"Прогресс 100%\"\nend\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nif offline_time==nil then\noffline_time=g.time\nend\nend",
+        "need": [
+          38
+        ],
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true,
+        "id": 39,
+        "text": "Очки крови",
+        "update": [
+          1
+        ],
+        "lua_text": "function lua_text()\nif offline_time== nil then\noffline_time=g.time\nend\nreturn \"Очки крови \" .. math.floor((g.time-offline_time)/60^2) .. \":\" .. math.floor(((g.time-offline_time)-(60^2)*math.floor((g.time-offline_time)/60^2))/60) .. \":\" .. g.time-offline_time-60*math.floor((g.time-offline_time)/60)\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Навыки (\" .. souls .. \")\"\nend",
+        "lua_do": "function lua_do()\nif souls == nil then\nsouls=1\npg17={1,0,0,0,0,0,0,0,0,0,0,0,0}\nend\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true,
+        "id": 17,
+        "text": "Навыки",
+        "need": [
+          38
+        ],
+        "middle_answer": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Идет бой...",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\n\nif hp[1]<10^6 then\ntext=\"Ваш персонаж<s>\nЗдоровье: \" .. hp[1]\nelse\ntext=\"Ваш персонаж<s>\nЗдоровье: \" .. string.format(\"%.1e\",hp[1])\nend\nif math.floor(def[1]*(1<plus>pg17[3]/100))<10^6 then\ntext=text .. \"<s>\nЗащита: \" .. math.floor(def[1]*(1<plus>pg17[3]/100))\nelse\ntext=text .. \"<s>\nЗащита: \" .. string.format(\"%.1e\",math.floor(def[1]*(1<plus>pg17[3]/100)))\nend\n\nif math.floor(atk[1]*(1<plus>pg17[4]/100))<10^6 then\ntext=text .. \"<s>\nАтака: \" .. math.floor(atk[1]*(1<plus>pg17[4]/100))\nelse\ntext=text .. \"<s>\nАтака: \" .. string.format(\"%.1e\",math.floor(atk[1]*(1<plus>pg17[4]/100)))\nend\nif math.floor(spd[1]*(1<plus>pg17[5]/100))<10^6 then\ntext=text .. \"<s>\nСкорость: \" .. math.floor(spd[1]*(1<plus>pg17[5]/100))\nelse\ntext=text .. \"<s>\nСкорость: \" .. string.format(\"%.1e\",math.floor(spd[1]*(1<plus>pg17[5]/100)))\nend\n\nif hp[2]<10^6 then\ntext=text .. \"<s>\n<s>\n<s>\nВаш противник<s>\nУр: \" .. pg3 .. \"<s>\nЗдоровье: \" .. hp[2]\nelse\ntext=text .. \"<s>\n<s>\n<s>\nВаш противник<s>\nУр: \" .. pg3 .. \"<s>\nЗдоровье: \" .. string.format(\"%.1e\",hp[2])\nend\nif def[2]<10^6 then\ntext=text .. \"<s>\nЗащита: \" .. def[2]\nelse\ntext=text .. \"<s>\nЗащита: \" .. string.format(\"%.1e\",def[2])\nend\nif atk[2]<10^6 then\ntext=text .. \"<s>\nАтака: \" .. atk[2]\nelse\ntext=text .. \"<s>\nАтака: \" .. string.format(\"%.1e\",atk[2])\nend\nif spd[2]<10^6 then\ntext=text .. \"<s>\nСкорость: \" .. math.floor(spd[2])\nelse\ntext=text .. \"<s>\nСкорость: \" .. string.format(\"%.1e\",math.floor(spd[2]))\nend\n\n\nreturn text\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/gradientsword.png"
+        ],
+        "lua_do": "function lua_do()\nif hp[1]>0 then\n\nif (pg3<plus>5<=g.pg1) and (boss == 0) then\npovtor=25\nelse\npovtor=1\nend\nif (pg3<plus>100<=g.pg1) and (boss == 0) then\npovtor=100\nend\nif (pg3<plus>1000<=g.pg1) and (boss == 0) then\npovtor=1000\nend\n\nrepeat\nif hp[1]>0 and hp[2]>0 then\n\nif sp[1]<plus>sp[2]==0 then\n  sp[1]=sp[1]<plus>spd[1]*(1<plus>pg17[5]/100)\n  sp[2]=sp[2]<plus>spd[2]\nend\n  if sp[1]>=sp[2] then\n    if def[2]<math.floor(atk[1]*(1<plus>pg17[4]/100)) then\n        hp[2]=hp[2]-(math.floor(atk[1]*(1<plus>pg17[4]/100))-def[2])\n           if hp[2]<=0 then\n               hp[2]=0\n               x1=1\n           end\n          else\n     hp[2]=hp[2]-1\n      end\n    x=1\n  else\n   if def[1]*(1<plus>pg17[3]/100)<atk[2] then\n    \n        hp[1]=hp[1]-(atk[2]-math.floor(def[1]*(1<plus>pg17[3]/100)))\n           if hp[1]<=0 then\n               hp[1]=0\n               x1=2\n           end\n      else\n    hp[1]=hp[1]-1\n    atk[2]=math.floor(atk[2]*1,2)\n      end\n    x=2\n     end\nif x==2 then \n   sp[1]=sp[1]<plus>spd[1]*(1<plus>pg17[5]/100)\nelse\n   sp[2]=sp[2]<plus>spd[2]\nend\nend\nif hp[2]==0 then\nx=math.random(1,10000)\nif x<=pg17[1] then\nmessage(\"Вы получили душу\")\nSumSouls=SumSouls<plus>1\nsouls=souls<plus>1\nend\nx=math.random(1,1000)\n\nif x<=5 then\nif g.respawn < 2 then\nmessage(\"Вы получили кристалл\")\nelse\nSumKris=SumKris<plus>1\nend\ng.gem=g.gem<plus>1\nend\nxp=xp<plus>g.respawn\nblood=blood<plus>pg3\nhp[1]=math.floor(maxhp*(1<plus>pg17[2]/100))\ng.kill=g.kill<plus>1\npg3=pg3<plus>1\nsp={0,0}\nhp[2]=math.floor(hp[3]*pg3*(math.random(75<plus>pg3*2,125<plus>pg3*3)/100))\ndef[2]=math.floor(def[3]*pg3*(math.random(75<plus>pg3*2,125<plus>pg3*3)/100))\natk[2]=math.floor(atk[3]*pg3*(math.random(75<plus>pg3*2,125<plus>pg3*3)/100))\nspd[2]=math.floor(spd[3]*pg3*(math.random(100<plus>pg3*2,125<plus>pg3*3)/100))\n\nif boss == 1 then\n\nhp[2]=math.floor(hp[3]*(10^(pg3-1)))\ndef[2]=math.floor(def[3]*(10^(pg3-1)))\natk[2]=math.floor(atk[3]*(10^(pg3-1)))\nspd[2]=math.floor(spd[3]*(10^(pg3-1)))\n\nsouls=souls<plus>pg3\nSumSouls=SumSouls<plus>pg3\nend\n\nend\npovtors=povtors<plus>1\nuntil povtor<=povtors-1\npovtors=1\n\n\nend\nend",
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          "speed"
+        ],
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Получено опыта: \" .. math.floor(xp<plus>xp*g.gem/1000) .. \"<s>\nОпыта за врага: ≈\" .. g.respawn<plus>math.round(g.respawn*g.gem/10)/100 .. \"<s>\n<s>\nДуш получено: \" .. SumSouls .. \"<s>\n Кристаллов получено: \" .. SumKris\nend",
+        "middle_answer": true,
+        "comment": true,
+        "text": "Опыта получено",
+        "id": 3,
+        "instant": true,
+        "update": [
+          0.1
+        ],
+        "lua_if": "function lua_if()\nif hp[1]>0 then\nreturn true\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif hp[1]==0 then\nreturn true\nend\nend",
+        "lua_text": "function lua_text()\nreturn \"Получено опыта: \" .. math.floor(xp<plus>xp*g.gem/1000) .. \"<s>\nОпыта за врага: ≈\" .. g.respawn<plus>math.round(g.respawn*g.gem/10)/100 .. \"<s>\n<s>\nДуш получено: \" .. SumSouls .. \"<s>\n Кристаллов получено: \" .. SumKris\nend",
+        "middle_answer": true,
+        "id": 3,
+        "instant": true,
+        "text": "Опыта получено",
+        "comment": true
+      },
+      {
+        "lua_do": "function lua_do()\nif g.pg1<pg3-1 then\ng.pg1=pg3-1\nend\nxp=math.floor(xp<plus>xp*g.gem/1000)\ng.death=g.death<plus>1\nend",
+        "instant": true,
+        "go_to": [
+          "go3"
+        ],
+        "lua_if": "function lua_if()\nif hp[1]==0 then\nreturn true\nend\nend",
+        "id": 3,
+        "forget": [
+          3
+        ],
+        "text": "Поражение",
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/gradient.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Ваши воспоминания",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Выйти",
+        "middle_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 6,
+        "instant": true,
+        "lua_if": "function lua_if()\nreturn isHistoryContain(6)\nend",
+        "text": "Воспоминание 1"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Воспоминание 1",
+        "id": 4,
+        "instant": true,
+        "need": [
+          -6
+        ],
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 7,
+        "instant": true,
+        "need": [
+          7
+        ],
+        "text": "Воспоминание 2"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Воспоминание 2",
+        "id": 4,
+        "instant": true,
+        "need": [
+          -7
+        ],
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 9,
+        "instant": true,
+        "need": [
+          9
+        ],
+        "text": "Воспоминание 3"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Воспоминание 3",
+        "id": 4,
+        "instant": true,
+        "need": [
+          -9
+        ],
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Воспоминание 4",
+        "id": 11,
+        "instant": true,
+        "need": [
+          11
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true,
+        "id": 14,
+        "text": "Отказ",
+        "need": [
+          14
+        ],
+        "lua_do": "function lua_do()\ng.death=g.death<plus>1\nend"
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Отказ",
+        "id": 4,
+        "instant": true,
+        "need": [
+          -14
+        ],
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "comment": true,
+        "instant": true,
+        "id": 4,
+        "text": "Воспоминание 4",
+        "need": [
+          -11
+        ],
+        "left_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 15,
+        "instant": true,
+        "need": [
+          15
+        ],
+        "text": "Воспоминание 5"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Воспоминание 5",
+        "id": 4,
+        "instant": true,
+        "need": [
+          -15
+        ],
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Финальная битва",
+        "need": [
+          16
+        ],
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 4,
+        "text": "Финальная битва",
+        "need": [
+          -16
+        ],
+        "comment": true
+      },
+      {
+        "id": 37,
+        "text": "Эпилог",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "need": [
+          37
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 4,
+        "text": "Эпилог",
+        "need": [
+          -37
+        ],
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 6,
+    "text": "\"Что... что это?\" Перед глазами крона ветвистого дерева. Солнечный свет с трудом пробивается сквозь неё, слепит глаза. Вы жмуритесь и улыбаетесь. Ваша голова покоится на чьих-то коленях, тонкие пальцы бережно гладят ваши волосы.<s>r\n— Почему ты молчишь? — раздаётся женский бархатистый голос.<s>r\n\"Кто она?\"<s>r\n— Ладно, — говорите вы. — Обещаю.<s>r\nВсё кругом меркнет: и зелёные листья, и бездонно-бирюзовое небо — всё покрывается пеленой. Сознание угасает...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Вернуться к жизни",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "— ...и если хоть один из вас, желторотиков, захочет драпануть, я того, лично, вот этими вот сапогами...<s>r\n— Страшно? — кто-то толкнул вас в плечо.<s>r\nОбернулись. Сзади стоял ваш новый знакомый — Люциан. Было темно, и в пляшущем свете ближайшего факела его длинный нос особо выделялся на вытянутом лице. Огромная броня с вмятиной в груди смотрелась нелепо на худых плечах, а шлем-блюдце всё норовил съехать на глаза. \n\"Ну, ему хоть шлем достался\" — отметили вы.<s>r\n— Я говорю, страшно? — повторил вопрос Люциан.<s>r\nВы кивнули.<s>r\n— Мне тоже, — Люциан слабо усмехнулся, затем лицо его помрачнело, и он добавил приглушённым голосом: — Умирать страшно...<s>r\nВы огляделись. Ряды таких же новобранцев, как и вы. По их лицам и беспокойным взглядам было ясно, что все здесь разделяли мысли Люциана. Ну, или почти все. Главнокомандующий Рэлон — здоровяк в красном плаще, снующий перед шеренгой, вглядывающийся в лицо каждого солдата и толкающий воинственные речи — единственный, кто не терял присутствия духа. Он весь буквально сгорал от нетерпения. Через минуту к нему подошёл незнакомый старец в балахоне и принялся что-то с ним обсуждать. Солдаты в шеренге зашептались.<s>r\n— Архимаг... архимаг Фарамин... — расслышали вы.<s>r\n\"Фарамин?\" — вгляделись в худое лицо архимага с длинной бородой. — \"И этот старик поможет одолеть их?\"<s>r\nТем временем разговор между главнокомандующим и архимагом подошёл к концу. Фарамин развернулся и поспешил куда-то. Рэлон же с ухмылкой оглядел солдат.<s>r\n— Ну что, желторотики?! — рявкнул он. — Враг нехило нас так потрепал за последние несколько лет. Многие жители погибли или того хуже, многие города были разрушены. Выстоял лишь Сорград — наша славная столица! Да, мы загнаны в угол. Да, назад пути нет. Но пусть же в эту ночь выродки на своей шкуре узнают, что загнанный в угол зверь в десятки раз страшнее, ибо ему уже нечего терять! Нам нечего терять! Так устроим же им кровавую баню напоследок!<s>r\n— Да-а-а!!! — взревело несколько тысяч глоток. — Покажем им!<s>r\n— А теперь на стены, сынки! — воскликнул главнокомандующий.<s>r\nШеренга рассыпалась, и солдаты поспешили занять свои позиции. Ваш участок стены находился над главными воротами.<s>r\n— Не видно ни черта! — посетовал Люциан, стоя в метрах трёх от вас и вглядываясь в ночную степь. — И как мы их увидим?<s>r\nВы также всмотрелись перед собой. Ничего. Кромешная темнота.<s>r\n— Слушай, — заговорил вновь Люциан. — Мне, чёт, картошечки захотелось...<s>r\nВы удивлённо взглянули на него. Факел в руках товарища осветил слезы на его щеках.<s>r\n— Знаешь, как матушка бывало готовила... — продолжил Люциан. — С лучком там, с травами всякими...<s>r\n— АРРРИХАН ЛЮМИС! — разразилось над стенами, и в ночное небо взмыл небольшой светящийся шар.<s>r\n— О, Фарамин колдует! — воскликнул Люциан.<s>r\nШар проплыл в воздухе пару сотен метров и внезапно ярко вспыхнул, осветив поле кругом. Люциан бросил обречённый стон. Всё поле, вплоть до самого горизонта, было заполнено людьми, неспешно шагающими к стенам города. Нет, не людьми...<s>r\n— ...вампирами, — прошептали вы, крепче сжимая рукоять меча.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Вернуться к жизни",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Да, теперь уже не было сомнений. Увиденное вами — воспоминание. Вы поднялись на ноги, огляделись. Всё та же тёмная пещера. Впереди путь вниз, в подземелье. Обернулись. Сзади был подъем наверх. \n\"Интересно, как же там Сорград?\" — подумали вы. — \"И Люциан...\" \nДвинулись к выходу, но, пройдя десяток метров, упёрлись обо что-то, словно о невидимую стену. \"Магический барьер? Но от кого он установлен?\" Обернулись к спуску в подземелье. \n\"Что ж, похоже, выбора у меня не остаётся\".  Забросили меч на плечо, шагнули вперёд.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Продолжить",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "— Лучники, огонь!<s>r\nДесятки подожжённых стрел со свистом рассекли воздух и осыпались вниз на головы вампиров. Нечеловеческий вопль ударил по ушам. От него у вас участилось сердцебиение и принялись подкашиваться колени. \n\"Нет, сегодня я не умру!\" — вы перехватили меч, попытались унять дрожание пальцев. — \"Не умру!\"<s>r\n— Твари лезут по стенам! — воскликнул кто-то.<s>r\nВы подступили к зубчатым выступам стены и взглянули вниз. Несколько вампиров действительно карабкались вверх по стене. Один из них поднимался прямо под вами.<s>r\n— Они близко, Люциан! — крикнули вы напарнику, встав в боевую стойку. — Приготовься!<s>r\nВ следующее мгновение с наружной стороны стены показалась ужасная когтистая рука и зацепилась за край. Вы, не долго думая, рубанули по ней. Взбирающийся вампир взвыл от боли, отдёрнул повреждённую конечность, но успел перехватиться другой рукой. Затем поднял своё тело и с лёгкостью вскочил на стену. Это был мужчина средних лет, одетый в лохмотья. Судя по одежде и отросшим спутанным волосам, когда-то он был бездомным. Вампир оскалился, обнажив длинные клыки. Вы бросились вперёд и нанесли по нему размашистый удар. Но враг оттолкнулся от стены, пролетел над вашей головой и приземлился сзади. Это произошло в доли секунды. Вы попытались с разворота ударить по нему, но тот успел нанести удар в спину.<s>r\nВас отбросило на зубчатые выступы стены. Ударились головой об одну из них. В глазах потемнело, выронили меч из ослабевших рук. А в следующую секунду около вас возник вампир. Он схватил вас за горло и приблизил к себе, намереваясь вгрызться вам в шею. Но внезапно на него с оглушительными воплями кто-то налетел и сбил с ног. Пальцы, сжимающие шею, разжались. Вы рухнули на колени, раскашлялись. Рядом лежал обронённый меч. Взяли его в руку, обернулись к вампиру и оторопели. Около поверженного монстра сидел на коленях Люциан. Парень вонзил в бездыханное тело врага меч, извлёк его, вонзил вновь. И так раз за разом, шепча при этом:<s>r\n— Сдохни... сдохни... сдохни!<s>r\n— Эй... — просипели вы, прокашлялись. — Эй, Люциан! Хватит, он мёртв.<s>r\nНапарник медленно повернул к вам голову. Всё его лицо было забрызгано кровью, как и броня.<s>r\n— Вот же т-тварь, — промолвил он. — Ведь он... он же чуть тебя...<s>r\n— Да, — признали вы. — А ты спас мою шкуру, — поднялись на ноги, подошли к нему. — Спасибо тебе.<s>r\nПротянули руку напарнику. Тот слабо усмехнулся, схватился за вашу ладонь. Но тут...<s>r\n— Кха! — изо рта Люциана брызнула кровь.<s>r\n— Что за?! — воскликнули вы.<s>r\nСпустя мгновение из его груди возникло острие меча. На лице Люциана застыла гримаса удивления и боли. Кто-то приподнял его тело вверх, оторвав от земли, затем откинул в сторону, словно тряпичную куклу.<s>r\nПеред вами оказался бледный высокий человек с длинными белыми волосами до пояса. В руке он сжимал меч кроваво-красного цвета. Минуту вы пялились на него, с трудом осознавая происходящее. Белобрысый перевёл равнодушный взгляд на вас.<s>r\n— Люциан! Нет! — вскричали вы, буквально затряслись в ярости. — Ах, ты урооод!<s>r\nРванули вперёд, направив острие меча на врага. Белобрысый увернулся, подскочил вплотную и ударил кулаком в грудь. Вы пролетели пару метров назад, грохнулись на спину. Дыхание перехватило, боль затмила разум.<s>r\n— Чтоб тебя! — процедили вы сквозь зубы.<s>r\nПопытались подняться — тщетно. Но вот чьи-то руки схватили вас под мышки и поставили на ноги. Огляделись. За вами оказалось несколько солдат.<s>r\n— Это что за выродок? — спросил кто-то из них. — Впервые такого вижу!<s>r\n— Кажись... Повелитель вампиров, — нерешительно ответил ему другой.<s>r\n— Да какая, чёрт побери, разница?! — бросили вы.<s>r\nКрепче сжали рукоять меча, сделали шаг к вампиру.<s>r\n— Кто бы это ни был, убъём гада! — воскликнули вы. — За мной! Вперёёёд!!!<s>r\nВновь бросились в атаку. За вами ринулись и солдаты. Белобрысый всё так же безразлично смотрел на вас. Он смахнул кровь с клинка, отвёл оружие в сторону, приняв боевую стойку...",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Вернуться к жизни",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Воспоминание прошло, словно вспышка. Вы вновь обнаружили себя в пещере. Взглянули на меч в руке. Именно этот меч был у того белобрысого вампира. \n\"Похоже, нам всё же удалось убить этого Повелителя вампиров...\" — отметили вы. \n\"Убить?\" — раздался чей-то голос. — \"Это уж едва ли возможно\"<s>r. \n— Кто здесь?! — спросили вы, огляделись.<s>r\nНикого кругом не оказалось. \n\"Не сотрясай понапрасну воздух, человечишка\", — ответил голос. — \"Я у тебя в голове, а точнее, в этом самом мече\". \nВы перевели взгляд на клинок.<s>r\n— Но... кто ты?<s>r\n\"Хм... я могу ответить на этот вопрос\", — сказал голос. — \"Но всё же лучше покажу. Правда не сейчас, чуть позже...\"<s>r\nГолос затих. Вы прислушались. Тишина. \"Странно\", — подумали вы, вглядываясь в кроваво-красный меч.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Продолжить",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "\"Ты хотел узнать кто я?\" — спрашивает голос.<s>r\nОткрываете глаза, обнаруживаете себя лежащим на земле в пещере.<s>r\n— Да. Хотел, — отвечаете вы.<s>r\n\"Что ж, ты вспомнил многое из той ночи\", — говорит голос. — \"Теперь же позволь показать тебе, что запомнил я\".<s>r\nВы ощущаете, как от меча в вашу ладонь передаётся некая энергия. Эта энергия разливается по всему телу волной холода. Затем сознание ваше гаснет...",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Открыть глаза",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Ночь. Кругом слышится звон мечей, вопли вампиров и предсмертные крики людей. А в воздухе витает металлический запах крови.<s>r\nПод ногами лежат тела павших солдат. Остался последний. Юнец без шлема, облачённый в лёгкую броню. Он тяжело дышит, руки, сжимающие меч, дрожат. Во взгляде читается ненависть.<s>r\n— Выродок... — шепчет он.<s>r\nРазмахивается и бросается на вас в атаку. Движения его медлительны. Он устал. Без труда уворачиваетесь от удара. Молниеносным и точным движением вонзаете меч в его грудь. Юноша коротко вскрикнул, выронил меч.<s>r\n\"Кто это?\" — спрашиваете вы мысленно. — \"Неужели...\" \n\"Что, непривычно видеть себя со стороны?\" — отвечает тот самый голос. — \"Тем более, видеть себя умирающим\"<s>r. \nМеч извлекается из груди, юнец падает на колени. Он кладёт руку на место ранения, силится что-то сказать окровавленными губами, назвать чьё-то имя.<s>r\n\"Да, вы все погибли\", — говорит голос.<s>r\nРука, сжимающая кроваво-красный меч, взмахивает им в воздухе. \n\"Но смерть ваша была не напрасной. Ведь за это время треклятый маг сумел подготовить одно из самых мощных заклинаний...\" — внезапно всё пространство кругом озаряет вспышка света. — \"...заклинание запечатывания\".",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Очнуться",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Вы вновь в пещере. Поднимаетесь на ноги.<s>r\n— Значит, ты повелитель вампиров?<s>r\n\"Имя мне Леоранд\"<s>r. \n— И я умер?<s>r\n\"Да\"<s>r. \n— Так почему же я здесь?<s>r\n\"В самый последний момент, прежде чем дух мой запечатали в этот меч, я успел использовать свою магию крови и воскресить ближайшего ко мне солдата. Догадываешься, кем был тот солдат?\"<s>r\n— Но для чего?<s>r\n\"Чтобы ты наполнял меня кровью. И чем больше её удастся собрать, тем сильнее я стану\".<s>r\nВы взглянули на меч.<s>r\n— А что будет, если я откажусь тебе подчиняться? — задаёте вопрос.<s>r\n\"Что ж, ты вправе избавиться от меня, развернуться и покинуть это место. Ведь барьер сдерживает лишь меня. Но, пройдя не далее десятка метров, ты умрёшь. Потому как существуешь благодаря моей магии. Не будет меча в руке — не будет магии\".<s>r\n— Хм... Либо?<s>r\n\"Либо ты продолжишь насыщать меня кровью до тех пор, пока я не верну свои силы. Тогда я без труда сумею развеять магический барьер, и мы покинем это подземелье\"<s>r. \n— И ты вновь окажешься на свободе?<s>r\n\"Как и ты. Подумай. И прими решение\".<s>r\nГолос умолк, оставив вас наедине со своими мыслями. Похоже, перед вами теперь два пути.",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 14,
+        "text": "Отказаться",
+        "need": [
+          -14
+        ],
+        "instant": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "id": 13,
+        "text": "Отказаться",
+        "need": [
+          14
+        ],
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "Я согласен",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "— Нет, я не позволю тебе и дальше бесчинствовать, — сказали вы решительно.<s>r\n\"Глупец!\" — вскричал голос. — \"Думаешь, что я не выберусь отсюда? Мне просто нужно будет дождаться какого-нибудь искателя приключений и захватить его тело. Меня не удержать! Я высвобожусь, с тобой или без тебя!\"<s>r\nВы пытаетесь разжать пальцы. Тело не слушается вас.<s>r\n— Жди хоть тысячу лет! — кричите вы. — Но я не буду твоим верным слугой! Я лучше умру!<s>r\nНаконец, вам удалось раскрыть ладонь. Меч падает на землю. Вместе с ним из вашего тела улетучивается и та ледяная энергетика. Оборачиваетесь к выходу. Идёте к нему. Но через пару шагов ноги подкашиваются, и вы чуть не падаете. Успеваете опереться о стену.<s>r\n— Должен... добраться, — шепчете вы, продвигаясь дальше и с трудом переставляя ноги.<s>r\nЧерез пару десятков метров становится виден выход из пещеры. Светлое пятнышко в конце длинного каменного коридора.<s>r\n— Должен...<s>r\nНоги окончательно ослабевают, подгибаются, и вы падаете. Тело более не слушается. Вы лежите, прижавшись щекой к земле. И вдруг в голове возникает имя девушки из далёкого прошлого.<s>r\n—А.. Абигэйл... — на выдохе шепчете вы.<s>r\nПосле наступает тьма. На этот раз окончательная.",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "lua_do": "function lua_do()\ng.death=g.death-1\nend",
+        "text": "Конец?",
+        "instant": true,
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Перед глазами крона ветвистого дерева. Солнечный свет с трудом пробивается сквозь неё, слепит глаза. Вы жмуритесь и улыбаетесь. Ваша голова покоится на её коленях, тонкие пальцы бережно гладят ваши волосы.<s>r\n— Почему ты молчишь? — раздался женский бархатистый голос.<s>r\n— Ладно, — сказали вы. — Обещаю.<s>r\n— Нет, ты обещай взаправду!<s>r\n— Взаправду? — рассмеялись вы. — Как это, Абигэйл?<s>r\nДевушка склонилась над вами, пристально вгляделась вам в лицо своими большими голубыми глазками. \n\"Какая же она всё-таки красивая\", — отметили вы. — \"Особенно, когда пытается казаться серьёзной\"<s>r. \n— Взаправду — это когда ты крестишь сердце, — сказала Абигэйл. — Вот так. И говоришь: \"Клянусь сердцем\". Давай, обещай.<s>r\n— Ладно, — вы быстро перекрестили сердце. — Обещаю.<s>r\n— Обещаешь что? — не унималась Абигэйл.<s>r\nВы обречённо вздохнули, подняли туловище и уселись лицом к девушке.<s>r\n— Торжественно обещаю, что вернусь с войны. Живым. Теперь довольна?<s>r\nНа глазах девушки навернулись слёзы, и она поспешно отвернулась.<s>r\n— Ну, дорогая, — вы придвинулись ближе. — Что случилось? Почему ты плачешь?<s>r\n— Не ходи... — прошептала она.<s>r\n— Что?<s>r\n— Не ходи никуда! — Абигэйл вдруг бросилась к вам на шею и, уткнувшись в грудь, зарыдала. — Я боюсь тебя потерять, Вэйл! Прошу, не ходи на войну. Останься со мной! Мы ведь только-только обвенчались...<s>r\nВы обняли её, провели рукой по волосам цвета пшеницы. Вам тоже не хотелось уходить.<s>r\n— Но я должен, — тихо, но твёрдо сказали вы. — Должен защитить страну, должен защитить тебя.<s>r\n— А вдруг ты... вдруг... — она не договорила, вновь разрыдалась.<s>r\n— Нет, Абигэйл! — вы отступили назад, взяли её за руки. — Нет! Я обязательно вернусь! Ведь я обещал. Взаправду обещал, помнишь?<s>r\nАбигэйл опустила голову. Вы прикоснулись к её подбородку. Она посмотрела вам в глаза.<s>r\n— И я ни за что не нарушу данное тебе слово.<s>r\nДевушка чуть улыбнулась. Вы приблизили к ней лицо и поцеловали в нежные губы.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Очнуться",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Меч наполнял вас силой. \n\"Чувствуешь это, человечишка?\" — заговорил голос. — \"Теперь моя магия куда сильнее! Теперь уж я могу разрушить барьер\"<s>r. \nВы развернулись, двинулись к выходу. И вновь, пройдя десяток метров, упёрлись о невидимую стену. Вытянули вперёд руку. \n\"Напрягись, человечишка!\" \nСила, исходящая от меча, заметно возросла.<s>r\n— Грррааа! — взревели вы, напрягая каждый мускул тела.<s>r\nСердце бешено заколотилось в груди, вы стиснули зубы и с неимоверным усилием сделали шаг вперёд. Затем ещё. С каждым последующим шагом сопротивление барьера ослабевало. До тех пор, пока и вовсе не исчезло.<s>r\nЗатем вы долго шли по тёмному каменному коридору. И в конце концов добрались до выхода.<s>r\nГлаза на минуту ослепли от солнечного света. Закрылись рукой, проморгались. Стояли вы на каменистой возвышенности. Отсюда открывался вид на раскинувшееся вдоль до самого горизонта зелёное покрывало леса. Вы подняли глаза к небу. С глубоким вдохом наполнили лёгкие свежим воздухом. Отсюда вниз тянулась узкая, извилистая тропа.<s>r\n— Абигэйл, я иду.<s>r\nСделали было шаг вниз, как вдруг с ужасом поняли, что не могли управлять своим телом.<s>r\n— Что за чёрт?! — прошептали в недоумении.<s>r\n\"Ха-ха-ха! Что, не ожидал?\" — рассмеялся голос. — \"Я получил былую мощь, высвободился из западни и теперь в твоих услугах более не нуждаюсь\".<s>r\n— Что... что ты задумал?<s>r\n\"Хм, для начала, пожалуй, захвачу твоё тело, затем при помощи магии вновь соберу армию вампиров. И этот мир обязательно покорится мне\"<s>r. \n— Это мы ещё посмотрим! — процедили вы сквозь зубы.<s>r\n\"Ха-ха! Что можешь ты, жалкий человечишка, противопоставить мне, великому Леоранду — первому вампиру, истинно бессмертному?! Червяк, я раздавлю тебя!\"",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Тьма",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Покупка навыков за души",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "middle_answer": true,
+        "id": 2,
+        "text": "Назад",
+        "instant": true,
+        "forget": [
+          17
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Души ",
+        "lua_text": "function lua_text()\nreturn \"Души: \" .. souls\nend",
+        "id": 17
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/gradient.png"
+        ],
+        "id": 17,
+        "lua_text": "function lua_text()\nx=1\nreturn \"Шанс выпадения: \" .. pg17[x]/100 .. \"%<s>\nУлучшить: \" .. 10*pg17[x]\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nx=1\nif 10*pg17[x] <= souls and pg17[x] ~= 100 then\nsouls=souls-10*pg17[x]\npg17[x]=pg17[x]<plus>1\nend\nend",
+        "text": "Шанс выпадения души",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "lua_text": "function lua_text()\nx=2\nreturn \"Живучесть<s>\nЗдоровье: <plus>\" .. pg17[x] .. \"%<s>\nУлучшить: \" .. 3*(pg17[x]<plus>1)\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nx=2\nif 3*(pg17[x]<plus>1) <= souls and pg17[x] ~= 100000 then\nsouls=souls-3*(pg17[x]<plus>1)\npg17[x]=pg17[x]<plus>1\nend\nend",
+        "text": "Увеличить здоровье",
+        "id": 17,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_text": "function lua_text()\nx=3\nreturn \"Каменная кожа<s>\nЗащита: <plus>\" .. pg17[x] .. \"%<s>\nУлучшить: \" .. 3*(pg17[x]<plus>1)\nend",
+        "id": 17,
+        "lua_do": "function lua_do()\nx=3\nif 3*(pg17[x]<plus>1) <= souls and pg17[x] ~= 100000 then\nsouls=souls-3*(pg17[x]<plus>1)\npg17[x]=pg17[x]<plus>1\nend\nend",
+        "text": "Увеличить защиту",
+        "instant": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\nx=4\nreturn \"Ярость<s>\nАтака: <plus>\" .. pg17[x] .. \"%<s>\nУлучшить: \" .. 3*(pg17[x]<plus>1)\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Увеличить атаку",
+        "id": 17,
+        "instant": true,
+        "lua_do": "function lua_do()\nx=4\nif 3*(pg17[x]<plus>1) <= souls and pg17[x] ~= 100000 then\nsouls=souls-3*(pg17[x]<plus>1)\npg17[x]=pg17[x]<plus>1\nend\nend",
+        "left_answer": false
+      },
+      {
+        "lua_text": "function lua_text()\nx=5\nreturn \"Ловкость<s>\nСкорость: <plus>\" .. pg17[x] .. \"%<s>\nУлучшить: \" .. 3*(pg17[x]<plus>1)\nend",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "text": "Увеличить скорость",
+        "id": 17,
+        "instant": true,
+        "lua_do": "function lua_do()\nx=5\nif 3*(pg17[x]<plus>1) <= souls and pg17[x] ~= 100000 then\nsouls=souls-3*(pg17[x]<plus>1)\npg17[x]=pg17[x]<plus>1\nend\nend",
+        "left_answer": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "  Очнулись. Обнаружили себя в незнакомом месте. Всё пространство кругом обволакивал густой туман.\n— Где я? — ваши слова эхом разносятся по округе.\n— Мы в твоём сознании, человечишка, — ответил мужской голос, а в следующую секунду к вам из тумана вышел человек с белыми волосами до пояса.\n— Леоранд?! — вскричали вы, отступая назад. — Как ты... Что ты здесь делаешь?!\n— Не шуми, не стоит, — улыбнулся вампир. — Я здесь, чтобы воочию увидеть, как ты потеряешь себя.\n— Что?!\n— Твои воспоминания — вот, что позволяет тебе противиться моей воле, — Леоранд принялся неспешно обходить вас по кругу. — Но стоит запутать тебя, заставить ошибиться и мне ничего не помешает захватить твоё тело. А теперь ответь мне, как звали архимага, которому удалось запечатать меня?",
+    "answers": [
+      {
+        "id": 19,
+        "text": "-Рэлон",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 20,
+        "text": "-Фарамин",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 21,
+        "text": "-Фарнир",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "— Его звали... Рэлон.\n— Аха-ха-ха! Первый промах! — вскричал радостно Леоранд. — Похоже, ты начал путаться в своих воспоминаниях, да?\n— Заткнись, — процедили вы сквозь зубы.\n— Конечно-конечно, всенепременно заткнусь. Но прежде ответь мне, как звали твоего друга, которого я убил?",
+    "answers": [
+      {
+        "id": 26,
+        "text": "-Ламер",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "-Лессмиан",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 28,
+        "text": "-Люциан",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "— Его звали... Фарамин.\n— Верно, — кивнул головой Леоранд. — Память не подвела тебя. А теперь вспомнишь ли ты имя своего друга, которого я убил?",
+    "answers": [
+      {
+        "id": 22,
+        "text": "-Ламер",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 23,
+        "text": "-Лессмиан",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 24,
+        "text": "-Люциан",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "— Его звали... Фарнир. \n— Аха-ха-ха! Первый промах! — вскричал радостно Леоранд. — Похоже, ты начал путаться в своих воспоминаниях, да?\n— Заткнись, — процедили вы сквозь зубы.\n— Конечно-конечно, всенепременно заткнусь. Но прежде ответь мне, как звали твоего друга, которого я убил?",
+    "answers": [
+      {
+        "id": 26,
+        "text": "-Ламер",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "-Лессмиан",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 28,
+        "text": "-Люциан",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "— Ла...Ламер?\nЛеоранд вопросительно вскинул бровь.\n— Неужели ты забыл имя человека, спасшего тебе жизнь? — спросил он ехидно. — Даже для меня, нежити, это так бесчеловечно.\n— Заткнись.\n— Конечно, всенепременно заткнусь. Только ответь мне на последний вопрос. Скажи, о каком блюде говорил твой друг в ночь своей смерти?",
+    "answers": [
+      {
+        "id": 30,
+        "text": "-Картошка со всякими травами",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 29,
+        "text": "-Картошка с грибами",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 31,
+        "text": "-Просто картошка",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "— Ле...Лессиман?\nЛеоранд вопросительно вскинул бровь.\n— Неужели ты забыл имя человека, спасшего тебе жизнь? — спросил он ехидно. — Даже для меня, нежити, это так бесчеловечно.\n— Заткнись.\n— Конечно, всенепременно заткнусь. Только ответь мне на последний вопрос. Скажи, о каком блюде говорил твой друг в ночь своей смерти?",
+    "answers": [
+      {
+        "id": 30,
+        "text": "-Картошка со всякими травами",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 31,
+        "text": "-Просто картошка",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 29,
+        "text": "-Картошка с грибами",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "  С ненавистью взглянули на вампира.\n— Люциан. Его звали Люцианом.\n  Леоранд театрально похлопал в ладони.\n— Поздравляю, человечишка. И вновь ты оказался прав. Ладно, должен признать, ты крепко держишься за свои воспоминания, — вампир усмехнулся. — И ты заслужил награду. Иди к ней, она ждёт тебя...\n  Он отступил назад и скрылся в тумане. Мгновение. И вот вы стоите перед низким, бревенчатым домом. Позади дома раскинулось ветвистое дерево.",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Бежать к дереву",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "— Абигэйл.\n  Вы улыбнулись и шагнули было к ней, как вдруг образ девушки растворился прямо на глазах. И вместе с этим за вашей спиной послышался смех. Обернулись. Леоранд медленно подступал к вам, продолжая злорадно смеяться.\n— Память подвела тебя, человечишка, — сказал он. — Неверный выбор привёл к сомнениям. И именно этого я добивался.\n— Нет! Я всё помню! — возразили вы.\n— Неужели? Однако образ любимой ты всё же забыл.\n— Что?\n  Вы попытались вспомнить, как выглядела Абигэйл. Но как бы ни силились, не могли этого сделать.\n— Не стоит, — махнул рукой Леоранд. — Теперь ты заточён в своём же подсознании. И отсюда тебе не выбраться.\n— Нет! Стой! — вскричали вы.\n  Но вампир уже скрылся в сгустившемся тумане. Упали на колени, в отчаянии закричали. Кругом же стелился молочно-серый туман. И никого более... Мучительное одиночество.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "— Кажется...\n— Ну же, говори.\n— Думаю, его звали...\n— Ну же?! — воскликнул Леоранд.\n— Ламер!\n  Вампир хищно улыбнулся.\n— Вот ты и попался! — сказал он, отступая назад.\n  Туман сгустился, и теперь вы не могли разглядеть Леоранда. Но продолжали слышать его голос.\n— Ты заплутал, человечишка. Заплутал в своих воспоминаниях. И более не в силах противиться мне.\n— Нет-нет! Я... я помню! Я всё помню!\n  Вы попытались возродить в своей памяти хоть что-нибудь из своей жизни. Вспомнить хоть что-нибудь.\n— Тщетно, — сказал вампир, голос его отдалялся.  — Теперь ты заточён в своём же подсознании. И отсюда тебе не выбраться.\n— Нет! Стой! — вскричали вы.\n  Но ответом вам была тишина. Упали на колени, в отчаянии закричали. Кругом же стелился молочно-серый туман. И никого более... Мучительное одиночество.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "— Кажется...\n— Ну же, говори.\n— Думаю, его звали...\n— Ну же?! — воскликнул Леоранд.\n— Лессмиан!\n  Вампир хищно улыбнулся.\n— Вот ты и попался! — сказал он, отступая назад.\n  Туман сгустился, и теперь вы не могли разглядеть Леоранда. Но продолжали слышать его голос.\n— Ты заплутал, человечишка. Заплутал в своих воспоминаниях. И более не в силах противиться мне.\n— Нет-нет! Я... я помню! Я всё помню!\n  Вы попытались возродить в своей памяти хоть что-нибудь из своей жизни. Вспомнить хоть что-нибудь.\n— Тщетно, — сказал вампир, голос его отдалялся. — Теперь ты заточён в своём же подсознании. И отсюда тебе не выбраться.\n— Нет! Стой! — вскричали вы.\n  Но ответом вам была тишина. Упали на колени, в отчаянии закричали. Кругом же стелился молочно-серый туман. И никого более... Мучительное одиночество.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "  Вы с ненавистью взглянули на вампира.\n— Люциан. Его звали Люцианом.\n— Хах, на этот раз ты прав.  Наверняка тебе не составит труда вспомнить и о каком блюде говорил Люциан в ночь своей смерти?",
+    "answers": [
+      {
+        "id": 30,
+        "text": "-Картошка с травами",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 29,
+        "text": "-Картошка с грибами",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 31,
+        "text": "-Просто картошка",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "— Я помню, помню, — вы попытались припомнить ваш разговор. — Кажется, он говорил о картошке с грибами!\n  Вампир хищно улыбнулся.\n— Вот ты и попался! — сказал он, отступая назад.\n  Туман сгустился, и теперь вы не могли разглядеть Леоранда. Но продолжали слышать его голос.\n— Ты заплутал, человечишка. Заплутал в своих воспоминаниях. И более не в силах противиться мне.\n— Нет-нет! Я... я помню! Я всё помню!\n  Вы попытались возродить в своей памяти хоть что-нибудь из своей жизни. Вспомнить хоть что-нибудь.\n— Тщетно, — сказал вампир, голос его отдалялся. — Теперь ты заточён в своём же подсознании. И отсюда тебе не выбраться.\n— Нет! Стой! — вскричали вы.\n  Но ответом вам была тишина. Упали на колени, в отчаянии закричали. Кругом же стелился молочно-серый туман. И никого более... Мучительное одиночество.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "— Он говорил о картошке с различными травами.\n  Леоранд театрально похлопал в ладони.\n— Поздравляю, человечишка. На этот раз ты оказался прав. Ладно, должен признать, ты крепко держишься за свои воспоминания, — вампир усмехнулся. — И ты заслужил награду. Иди к ней, она ждёт тебя...\n  Он отступил назад и скрылся в тумане. Мгновение. И вот вы стоите перед низким, бревенчатым домом. Позади дома раскинулось ветвистое дерево.",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Бежать к дереву",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "— Он говорил, что хочет поесть просто картошки.\n  Вампир хищно улыбнулся.\n— Вот ты и попался! — сказал он, отступая назад.\n  Туман сгустился, и теперь вы не могли разглядеть Леоранда. Но продолжали слышать его голос.\n— Ты заплутал, человечишка. Заплутал в своих воспоминаниях. И более не в силах противиться мне.\n— Нет-нет! Я... я помню! Я всё помню!\n  Вы попытались возродить в своей памяти хоть что-нибудь из своей жизни. Вспомнить хоть что-нибудь.\n— Тщетно, — сказал вампир, голос его отдалялся. — Теперь ты заточён в своём же подсознании. И отсюда тебе не выбраться.\n— Нет! Стой! — вскричали вы.\n  Но ответом вам была тишина. Упали на колени, в отчаянии закричали. Кругом же стелился молочно-серый туман. И никого более... Мучительное одиночество.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "  Вы рванули в обход дома к дереву. Под ним обнаружили сидящую на коленях девушку. Она повернулась к вам, откинула за ухо прядь русых волос и лучезарно улыбнулась.",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Подойти к ней",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 33,
+        "text": "Повременить",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "  Продолжали стоять на месте.\n— Что такое? — шептал позади голос Леоранда. — Неужели ты не соскучился по ней? Не соскучился по своей Абигэйл?\n  Вы усмехнулись.\n— У неё были светлые волосы, выродок. Тебе не удастся запутать меня.\n   Образ девушки под деревом размылся, а вскоре и вовсе исчез в тумане. Вместе с тем на ваше плечо опустилась чья-то рука и до боли знакомый голос сказал:\n— Здравствуй, Вэйл.\n  Обернулись и улыбнулись.\n— Здравствуй, Абигэйл.\n  Девушка с грустью глядела на вас.\n— Обещаешь, что вернёшься?\n  Вы с трудом сдержали слёзы.\n— Обещаю.\n— Обещай взаправду...",
+    "answers": [
+      {
+        "id": 35,
+        "text": "Начертить крестик на груди в области сердца",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 34,
+        "text": "Скрестить пальцы на сердце",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 36,
+        "text": "Сказать: \"Торжественно клянусь вернуться. Живым\"",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "  Oбраз девушки растворился прямо на глазах. И вместе с этим за вашей спиной послышался смех. Обернулись. Леоранд медленно подступал к вам, продолжая злорадно смеяться.\n— Память подвела тебя, человечишка, — сказал он. — Неверный выбор привёл к сомнениям. И именно этого я добивался.\n— Нет! Я всё помню! — возразили вы.\n— Неужели? Однако клятву, данную своей девушке ты забыл.\n— Что?\n  Вы попытались вспомнить подробности, но тщетно.\n— Не стоит, — махнул рукой Леоранд. — Теперь ты заточён в своём же подсознании. И отсюда тебе не выбраться.\n— Нет! Стой! — вскричали вы.\n  Но вампир уже скрылся в сгустившемся тумане. Упали на колени, в отчаянии закричали. Кругом же стелился молочно-серый туман. И никого более... Мучительное одиночество.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "— Нет-нет-нет! — из тумана позади Абигэйл выскочил Леоранд.\n  Он махнул рукой и образ Абигэйл растворился в воздухе.\n— Ты должен был ошибиться, должен был запутаться! — вскричал в ярости вампир и подскочил к вам. — Жалкое насекомое, я удавлю тебя!\n— Что ж, попробуй, — ответили вы. — Когда-то тебе удалось убить меня. Ничего не стоит сделать это вновь, так?\n  Леоранд жутко оскалился, отвёл руку в сторону, и в ней материализовался кровавый меч.\n— Сейчас ты умрёшь! — вскричал вампир.\n  Размахнулся оружием и нанёс удар по вам, намереваясь отсечь голову. Вы же даже не шелохнулись. Меч исчез в воздухе, едва коснувшись вашей шеи. Леогард же обессиленно рухнул на колени.\n— Не... невозможно, — прошептал он. — Как тебе это удалось?\n  Вы приблизились к нему.\n— Просто я обещал своей невесте вернуться.\n  Вампир поднял взгляд на вас.\n— А теперь, выродок, — сказали вы, — прочь из моего сознания.\n  Туман начал постепенно рассеиваться. И вместе с ним начал исчезать Леогард.\n— Нет! Нет! НЕЕЕТ!!! — воскликнул вампир прежде, чем обратиться в ничто.\n\n\n\n  А в следующую секунду вы уже стояли на возвышенности и глядели с неё на бескрайний лес. Взглянули на кровавый меч в руке. Голоса вы более не слышали. Улыбнулись. И двинулись вниз по тропе. Домой. Ведь вас там ждут...",
+    "answers": [
+      {
+        "id": 37,
+        "text": "Эпилог",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "  Oбраз девушки растворился прямо на глазах. И вместе с этим за вашей спиной послышался смех. Обернулись. Леоранд медленно подступал к вам, продолжая злорадно смеяться.\n— Память подвела тебя, человечишка, — сказал он. — Неверный выбор привёл к сомнениям. И именно этого я добивался.\n— Нет! Я всё помню! — возразили вы.\n— Неужели? Однако клятву, данную своей девушке ты забыл.\n— Что?\n  Вы попытались вспомнить подробности, но тщетно.\n— Не стоит, — махнул рукой Леоранд. — Теперь ты заточён в своём же подсознании. И отсюда тебе не выбраться.\n— Нет! Стой! — вскричали вы.\n  Но вампир уже скрылся в сгустившемся тумане. Упали на колени, в отчаянии закричали. Кругом же стелился молочно-серый туман. И никого более... Мучительное одиночество.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "— Ну,  вот тута она и живёт, — махнул перед собой мужичок на серой кобыле, выпуская изо рта клубы пара.\n  Вы пришпорили вороного жеребца, подъехали ближе.\n— Ну, то есть, жила когда-то, — уточнил ваш спутник. — Лет так, двадцать назад. Да, старушка Абигэйл... Всю жизнь одна, да так одна и померла. Её тута, под деревом схоронили, — он обернулся к вам. — А вы, собственно, кем ей приходитесь, господин? Внуком?\n  Вы достали из кармана монету, бросили ему.\n— Благодарствую, — улыбнулся мужичок, пробуя монету на зуб. — Весьма благодарствую, господин.\n  Он развернул лошадь и поскакал в обратном направлении. Вы же спешились, поправили меч за спиной и, ведя коня под уздцы, двинулись вперёд. Каждый шаг сопровождался хрустом снега, далеко разносившимся в морозной тиши. Не видно было ничьих следов. Здесь явно давно не ступала нога человека. Пройдя пару десятков метров, остановились у ветвистого дерева. Некогда оно радовало взгляд сочной листвой, теперь же своими голыми ветвями и бурой корой наводило тоску. Невдалеке виднелся бревенчатый домик. Время нещадно потрепало его. Крыша местами была прохудившейся, окна были разбиты, а входная дверь и вовсе отсутствовала.\n  Под деревом вы заприметили небольшой холмик с установленной на ней деревянной дощечкой. Подошли к нему. Провели рукой, смахнув с дощечки снег. Открыли взгляду короткую надпись, нацарапанную на ней: \"Абигэйл Рэйс\".\n— Прости меня, Абигэйл... — прошептали Вы.\n  \"Такова участь бессмертных, Вэйл\", — заговорил голос в голове. — \"Рано или поздно ты остаёшься один\". \n  Помолчали.\n— Сколько времени мы провели в том чёртовом подземелье?\n  \"Года, десятилетия...\"\n  Вы тяжело вздохнули. Постояли минуты две, развернулись. \n\"И куда теперь?\" — спросил голос.\n— Не знаю, — вы вскочили на коня, развернули его. — Пока вперёд, а дальше уж видно будет.\n  Пришпорили скакуна и умчались прочь. Прочь от ветвистого дерева и расположенного у его корней одинокого могильного холмика.",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Конец",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Поздравляю, ты прошел мой квест, но это ещё не всё. Помнишь, что я писал в самом начале? Это бесконечная РПГ на 5 страниц. Так что, если хочешь вернуться, я дам тебе такую возможность.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Продолжить играть",
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Преобразование крови в души",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/white.png"
+        ],
+        "middle_answer": true,
+        "text": "Назад",
+        "instant": true,
+        "id": 2
+      },
+      {
+        "lua_text": "function lua_text()\ntext= \"Очки крови \" .. string.format(\"%.1e\", blood) .. \"<s>\nДуши \" .. pg39 .. \"<s>\n<s>\n\"\nfor i=1, 5 do\ntext=text .. \"Этап \" .. i .. \"<s>\n\" .. math.floor(blood_point[i]/100)/10 .. \" %<s>\n\"\nend\nreturn text\nend",
+        "lua_do": "function lua_do()\nif pg39==nil then\npg39=0\nend\n\nfor povtor=1, g.time-offline_time do\n\nblood_point[1]=blood_point[1]<plus>blood\n\nfor i=1,4 do\nif blood_point[i]>=10^5 then\nblood_point[i<plus>1]=blood_point[i<plus>1]<plus>math.floor(blood_point[i]/10^5)\nblood_point[i]=blood_point[i]-math.floor(blood_point[i]/10^5)*10^5\nx5=math.random(1,10000/i)\nif x5<=1 then\npg39=pg39<plus>i*g.respawn\nend\nend\nend\n\nif blood_point[5]>=10^5 then\ng.gem=g.gem<plus>5*math.floor(blood_point[5]/10^5)\nblood_point[5]=blood_point[5]-math.floor(blood_point[5]/10^5)*10^5\nend\n\nend\n\noffline_time=g.time\nend",
+        "comment": true,
+        "middle_answer": true,
+        "id": 39,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          1
+        ],
+        "bgAnswerImage": [
+          "http://188.120.236.127/vladsir/blue.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c27/2008/2c/25d121d6517d.png"
+        ],
+        "lua_if": "function lua_if()\nif pg39>0 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nsouls=souls<plus>pg39\npg39=0\nend",
+        "text": "Забрать души",
+        "instant": true,
+        "id": 39
+      },
+      {
+        "comment": true,
+        "id": 39,
+        "text": "   ",
+        "update": [
+          1
+        ],
+        "lua_if": "function lua_if()\nif pg39>0 then\nreturn true\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "",
+    "answers": []
+  }
+]

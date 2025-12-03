@@ -1,0 +1,5085 @@
+[
+  {
+    "id": 1,
+    "text": "Рейтинг авторов.\nДанный рейтинг составляется автоматически и обновляется один раз в сутки.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "1. AntiHero, рейтинг: 174118",
+        "middle_answer": true
+      },
+      {
+        "id": 3,
+        "text": "2. Sincerely, рейтинг: 47866",
+        "middle_answer": true
+      },
+      {
+        "id": 4,
+        "text": "3. Lilu Swartz\n, рейтинг: 33121",
+        "middle_answer": true
+      },
+      {
+        "id": 5,
+        "text": "4. ankylosaurus, рейтинг: 30862",
+        "middle_answer": true
+      },
+      {
+        "id": 6,
+        "text": "5. theuRay, рейтинг: 21654",
+        "middle_answer": true
+      },
+      {
+        "id": 7,
+        "text": "6. Олег Шабров, рейтинг: 13974",
+        "middle_answer": true
+      },
+      {
+        "id": 8,
+        "text": "7. ChatNoir, рейтинг: 10927",
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "8. Muravei, рейтинг: 10158",
+        "middle_answer": true
+      },
+      {
+        "id": 10,
+        "text": "9. N0Anon, рейтинг: 9674",
+        "middle_answer": true
+      },
+      {
+        "id": 11,
+        "text": "10. , рейтинг: 9418",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "11. Пан_Ант, рейтинг: 8889",
+        "middle_answer": true
+      },
+      {
+        "id": 13,
+        "text": "12. Инко313, рейтинг: 7655",
+        "middle_answer": true
+      },
+      {
+        "id": 14,
+        "text": "13. RYZ, рейтинг: 6919",
+        "middle_answer": true
+      },
+      {
+        "id": 15,
+        "text": "14. Мандаринка, рейтинг: 6559",
+        "middle_answer": true
+      },
+      {
+        "id": 16,
+        "text": "15. admin, рейтинг: 6272",
+        "middle_answer": true
+      },
+      {
+        "id": 17,
+        "text": "16. Felix, рейтинг: 6047",
+        "middle_answer": true
+      },
+      {
+        "id": 18,
+        "text": "17. elChem, рейтинг: 5445",
+        "middle_answer": true
+      },
+      {
+        "id": 19,
+        "text": "18. СветИс, рейтинг: 5389",
+        "middle_answer": true
+      },
+      {
+        "id": 20,
+        "text": "19. Teppish, рейтинг: 5309",
+        "middle_answer": true
+      },
+      {
+        "id": 21,
+        "text": "20. Roug, рейтинг: 4960",
+        "middle_answer": true
+      },
+      {
+        "id": 22,
+        "text": "21. Ярослав Зверев, рейтинг: 4858",
+        "middle_answer": true
+      },
+      {
+        "id": 23,
+        "text": "22. Ордон\n, рейтинг: 4300",
+        "middle_answer": true
+      },
+      {
+        "id": 24,
+        "text": "23. Olly Macconroy, рейтинг: 4261",
+        "middle_answer": true
+      },
+      {
+        "id": 25,
+        "text": "24. Knowledge_keeper, рейтинг: 4242",
+        "middle_answer": true
+      },
+      {
+        "id": 26,
+        "text": "25. Shchepanoff, рейтинг: 3992",
+        "middle_answer": true
+      },
+      {
+        "id": 27,
+        "text": "26. Dark Scimitar , рейтинг: 3896",
+        "middle_answer": true
+      },
+      {
+        "id": 28,
+        "text": "27. Метаморфозник, рейтинг: 3852",
+        "middle_answer": true
+      },
+      {
+        "id": 29,
+        "text": "28. Proffit, рейтинг: 3719",
+        "middle_answer": true
+      },
+      {
+        "id": 30,
+        "text": "29. Денис Борзов, рейтинг: 3549",
+        "middle_answer": true
+      },
+      {
+        "id": 31,
+        "text": "30. Бахия Александр, рейтинг: 3448",
+        "middle_answer": true
+      },
+      {
+        "id": 32,
+        "text": "31. Fenix, рейтинг: 3427",
+        "middle_answer": true
+      },
+      {
+        "id": 33,
+        "text": "32. Мечтатель-авантюрист\n, рейтинг: 3257",
+        "middle_answer": true
+      },
+      {
+        "id": 34,
+        "text": "33. Kvestopisci, рейтинг: 2982",
+        "middle_answer": true
+      },
+      {
+        "id": 35,
+        "text": "34. Авантюристка, рейтинг: 2916",
+        "middle_answer": true
+      },
+      {
+        "id": 36,
+        "text": "35. Jooly, рейтинг: 2789",
+        "middle_answer": true
+      },
+      {
+        "id": 37,
+        "text": "36. Makasin\n, рейтинг: 2717",
+        "middle_answer": true
+      },
+      {
+        "id": 38,
+        "text": "37. Mexan 215, рейтинг: 2613",
+        "middle_answer": true
+      },
+      {
+        "id": 39,
+        "text": "38. Master Cho, рейтинг: 2586",
+        "middle_answer": true
+      },
+      {
+        "id": 40,
+        "text": "39. Заря, рейтинг: 2240",
+        "middle_answer": true
+      },
+      {
+        "id": 41,
+        "text": "40. Lana Ashgrow, рейтинг: 2214",
+        "middle_answer": true
+      },
+      {
+        "id": 42,
+        "text": "41. Joust, рейтинг: 2209",
+        "middle_answer": true
+      },
+      {
+        "id": 43,
+        "text": "42. Tenni, рейтинг: 2080",
+        "middle_answer": true
+      },
+      {
+        "id": 44,
+        "text": "43. Legendorik, рейтинг: 2025",
+        "middle_answer": true
+      },
+      {
+        "id": 45,
+        "text": "44. Potato \n, рейтинг: 1984",
+        "middle_answer": true
+      },
+      {
+        "id": 46,
+        "text": "45. New, рейтинг: 1972",
+        "middle_answer": true
+      },
+      {
+        "id": 47,
+        "text": "46. beginner, рейтинг: 1928",
+        "middle_answer": true
+      },
+      {
+        "id": 48,
+        "text": "47. Leslie\n, рейтинг: 1896",
+        "middle_answer": true
+      },
+      {
+        "id": 49,
+        "text": "48. *В£дЬмОчК@*, рейтинг: 1831",
+        "middle_answer": true
+      },
+      {
+        "id": 50,
+        "text": "49. Монк, рейтинг: 1728",
+        "middle_answer": true
+      },
+      {
+        "id": 51,
+        "text": "50. ArtBloodless, рейтинг: 1666",
+        "middle_answer": true
+      },
+      {
+        "id": 52,
+        "text": "51. Lasttochka, рейтинг: 1558",
+        "middle_answer": true
+      },
+      {
+        "id": 53,
+        "text": "52. Elizabeth, рейтинг: 1510",
+        "middle_answer": true
+      },
+      {
+        "id": 54,
+        "text": "53. Nikons, рейтинг: 1417",
+        "middle_answer": true
+      },
+      {
+        "id": 55,
+        "text": "54. Wizardgamer, рейтинг: 1375",
+        "middle_answer": true
+      },
+      {
+        "id": 56,
+        "text": "55. [Dead_Second], рейтинг: 1321",
+        "middle_answer": true
+      },
+      {
+        "id": 57,
+        "text": "56. Yulia Oayder , рейтинг: 1308",
+        "middle_answer": true
+      },
+      {
+        "id": 58,
+        "text": "57. Gratitude, рейтинг: 1273",
+        "middle_answer": true
+      },
+      {
+        "id": 59,
+        "text": "58. Valdis, рейтинг: 1269",
+        "middle_answer": true
+      },
+      {
+        "id": 60,
+        "text": "59. Ангел, рейтинг: 1245",
+        "middle_answer": true
+      },
+      {
+        "id": 61,
+        "text": "60. Lazy Morning, рейтинг: 1234",
+        "middle_answer": true
+      },
+      {
+        "id": 62,
+        "text": "61. JSG, рейтинг: 1232",
+        "middle_answer": true
+      },
+      {
+        "id": 63,
+        "text": "62.  загадочник, рейтинг: 1220",
+        "middle_answer": true
+      },
+      {
+        "id": 64,
+        "text": "63. Mike, рейтинг: 1208",
+        "middle_answer": true
+      },
+      {
+        "id": 65,
+        "text": "64. katewest\n , рейтинг: 1170",
+        "middle_answer": true
+      },
+      {
+        "id": 66,
+        "text": "65. Ани Руф, рейтинг: 1093",
+        "middle_answer": true
+      },
+      {
+        "id": 67,
+        "text": "66. SirVladPro, рейтинг: 1031",
+        "middle_answer": true
+      },
+      {
+        "id": 68,
+        "text": "67. Ламбада, рейтинг: 1023",
+        "middle_answer": true
+      },
+      {
+        "id": 69,
+        "text": "68. Vikki, рейтинг: 1017",
+        "middle_answer": true
+      },
+      {
+        "id": 70,
+        "text": "69. Ser Pro, рейтинг: 1014",
+        "middle_answer": true
+      },
+      {
+        "id": 71,
+        "text": "70. Allegoriy, рейтинг: 1003",
+        "middle_answer": true
+      },
+      {
+        "id": 72,
+        "text": "71. Bartow, рейтинг: 982",
+        "middle_answer": true
+      },
+      {
+        "id": 73,
+        "text": "72. Julieta Step, рейтинг: 978",
+        "middle_answer": true
+      },
+      {
+        "id": 74,
+        "text": "73. Дориан Грей, рейтинг: 957",
+        "middle_answer": true
+      },
+      {
+        "id": 75,
+        "text": "74. *****, рейтинг: 885",
+        "middle_answer": true
+      },
+      {
+        "id": 76,
+        "text": "75. Zet, рейтинг: 839",
+        "middle_answer": true
+      },
+      {
+        "id": 77,
+        "text": "76. Xant, рейтинг: 838",
+        "middle_answer": true
+      },
+      {
+        "id": 78,
+        "text": "77. Аровейн, рейтинг: 827",
+        "middle_answer": true
+      },
+      {
+        "id": 79,
+        "text": "78. Mora Fox, рейтинг: 786",
+        "middle_answer": true
+      },
+      {
+        "id": 80,
+        "text": "79. Predicter, рейтинг: 786",
+        "middle_answer": true
+      },
+      {
+        "id": 81,
+        "text": "80. Невозможник\n, рейтинг: 767",
+        "middle_answer": true
+      },
+      {
+        "id": 82,
+        "text": "81. degradai\n, рейтинг: 763",
+        "middle_answer": true
+      },
+      {
+        "id": 83,
+        "text": "82. Dex, рейтинг: 758",
+        "middle_answer": true
+      },
+      {
+        "id": 84,
+        "text": "83. Ваша Умница, рейтинг: 735",
+        "middle_answer": true
+      },
+      {
+        "id": 85,
+        "text": "84. LoSmile, рейтинг: 730",
+        "middle_answer": true
+      },
+      {
+        "id": 86,
+        "text": "85. Неумеха, рейтинг: 722",
+        "middle_answer": true
+      },
+      {
+        "id": 87,
+        "text": "86. ViRei, рейтинг: 717",
+        "middle_answer": true
+      },
+      {
+        "id": 88,
+        "text": "87. Полярная Сова, рейтинг: 701",
+        "middle_answer": true
+      },
+      {
+        "id": 89,
+        "text": "88. Масяня, рейтинг: 697",
+        "middle_answer": true
+      },
+      {
+        "id": 90,
+        "text": "89. Shadow, рейтинг: 686",
+        "middle_answer": true
+      },
+      {
+        "id": 91,
+        "text": "90. Silmerion\n\n, рейтинг: 643",
+        "middle_answer": true
+      },
+      {
+        "id": 92,
+        "text": "91. ephemeral, рейтинг: 643",
+        "middle_answer": true
+      },
+      {
+        "id": 93,
+        "text": "92. Helena, рейтинг: 639",
+        "middle_answer": true
+      },
+      {
+        "id": 94,
+        "text": "93. ediksing, рейтинг: 610",
+        "middle_answer": true
+      },
+      {
+        "id": 95,
+        "text": "94. Kupolaliti, рейтинг: 609",
+        "middle_answer": true
+      },
+      {
+        "id": 96,
+        "text": "95. MIka, рейтинг: 606",
+        "middle_answer": true
+      },
+      {
+        "id": 97,
+        "text": "96. кирис, рейтинг: 601",
+        "middle_answer": true
+      },
+      {
+        "id": 98,
+        "text": "97. Aleks_Otter, рейтинг: 599",
+        "middle_answer": true
+      },
+      {
+        "id": 99,
+        "text": "98. Кудесник, рейтинг: 585",
+        "middle_answer": true
+      },
+      {
+        "id": 100,
+        "text": "99. Элизабет, рейтинг: 582",
+        "middle_answer": true
+      },
+      {
+        "id": 101,
+        "text": "100. Salim, рейтинг: 582",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Квесты автора AntiHero:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "237039",
+        "text": "Призрачный Поезд"
+      },
+      {
+        "id": 1,
+        "targetbookid": "206513",
+        "text": "Кровавый Ворон: Темнолесье"
+      },
+      {
+        "id": 1,
+        "targetbookid": "188137",
+        "text": "Эпидемия"
+      },
+      {
+        "id": 1,
+        "targetbookid": "93724",
+        "text": "Выбор Капитана"
+      },
+      {
+        "id": 1,
+        "targetbookid": "51291",
+        "text": "Пришествие Тьмы: Холод"
+      },
+      {
+        "id": 1,
+        "targetbookid": "22846",
+        "text": "Пришествие Тьмы: Начало"
+      },
+      {
+        "id": 1,
+        "targetbookid": "16940",
+        "text": "Человечность"
+      },
+      {
+        "id": 1,
+        "targetbookid": "15514",
+        "text": "Темная Область"
+      },
+      {
+        "id": 1,
+        "targetbookid": "14347",
+        "text": "Пациент"
+      },
+      {
+        "id": 1,
+        "targetbookid": "13787",
+        "text": "Панацея"
+      },
+      {
+        "id": 1,
+        "targetbookid": "13171",
+        "text": "Пиратская\nРеволюция"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Квесты автора Sincerely:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "107272",
+        "text": "Пятеро в подземелье"
+      },
+      {
+        "id": 1,
+        "targetbookid": "999",
+        "text": "Летучий Мыш и Горностай. Обыкновенное убийство"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 4,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Квесты автора Lilu Swartz:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "81189",
+        "text": "Пушистые обстоятельства"
+      },
+      {
+        "id": 1,
+        "targetbookid": "78204",
+        "text": "Загадка поместья Ревера"
+      },
+      {
+        "id": 1,
+        "targetbookid": "77053",
+        "text": "Потерянная"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 5,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Квесты автора ankylosaurus:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "198549",
+        "text": "Безумный диалог"
+      },
+      {
+        "id": 1,
+        "targetbookid": "78467",
+        "text": "Последний Урок (микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "555",
+        "text": "Демо примеров из уроков Lua-кухни"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 4,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 6,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Квесты автора theuRay:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "245605",
+        "text": "Квестописец против Всех"
+      },
+      {
+        "id": 1,
+        "targetbookid": "227253",
+        "text": "Олимпиада. Мальчики и Девочки"
+      },
+      {
+        "id": 1,
+        "targetbookid": "210120",
+        "text": "Sweet Memories - игра со вкусной едой"
+      },
+      {
+        "id": 1,
+        "targetbookid": "192969",
+        "text": "Симулятор жизни квестописца"
+      },
+      {
+        "id": 1,
+        "targetbookid": "184455",
+        "text": "Правление Весперией"
+      },
+      {
+        "id": 1,
+        "targetbookid": "169500",
+        "text": "Сказание о Вильяме и Анне"
+      },
+      {
+        "id": 1,
+        "targetbookid": "149500",
+        "text": "\"Жил-был Герой\" auto-RPG"
+      },
+      {
+        "id": 1,
+        "targetbookid": "125000",
+        "text": "И всё пошло не так: на юге"
+      },
+      {
+        "id": 1,
+        "targetbookid": "117158",
+        "text": "Поймайся рыбка"
+      },
+      {
+        "id": 1,
+        "targetbookid": "113067",
+        "text": "И всё пошло не так..."
+      },
+      {
+        "id": 1,
+        "targetbookid": "333",
+        "text": "Похищение алмаза \"Санси\""
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 7,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Квесты автора Олег Шабров:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "49616",
+        "text": "Земля-ноль<s>r\nдуша планеты"
+      },
+      {
+        "id": 1,
+        "targetbookid": "5737",
+        "text": "Демон Её Величества"
+      },
+      {
+        "id": 1,
+        "targetbookid": "19",
+        "text": "Путь Колобка"
+      },
+      {
+        "id": 1,
+        "targetbookid": "10",
+        "text": "Клинки и Кинжалы"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 6,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 8,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Квесты автора ChatNoir:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "78733",
+        "text": "Водяной. (Микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "8292",
+        "text": "Кукла"
+      },
+      {
+        "id": 1,
+        "targetbookid": "7094",
+        "text": "Осколки памяти"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 7,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 9,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Квесты автора Muravei:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "156216",
+        "text": "Самый лучший подарок"
+      },
+      {
+        "id": 1,
+        "targetbookid": "17535",
+        "text": "Призраки дома на Сосновой "
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 8,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 10,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Квесты автора N0Anon:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "37827",
+        "text": "Дитя Смерти "
+      },
+      {
+        "id": 1,
+        "targetbookid": "35798",
+        "text": "Око безумия"
+      },
+      {
+        "id": 1,
+        "targetbookid": "34157",
+        "text": "\"Он со мной\""
+      },
+      {
+        "id": 1,
+        "targetbookid": "30716",
+        "text": "INFECTED"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 11,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Квесты автора :",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "187958",
+        "text": "Бабушка"
+      },
+      {
+        "id": 1,
+        "targetbookid": "187882",
+        "text": "Самоквест"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 12,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Квесты автора Пан_Ант:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "183316",
+        "text": "Кошмар на улице Вязов"
+      },
+      {
+        "id": 1,
+        "targetbookid": "164064",
+        "text": "Твари"
+      },
+      {
+        "id": 1,
+        "targetbookid": "152310",
+        "text": "Союз-2000"
+      },
+      {
+        "id": 1,
+        "targetbookid": "139668",
+        "text": "Проклятый"
+      },
+      {
+        "id": 1,
+        "targetbookid": "131001",
+        "text": "Героическая тройка - 2"
+      },
+      {
+        "id": 1,
+        "targetbookid": "123716",
+        "text": "Сачок"
+      },
+      {
+        "id": 1,
+        "targetbookid": "107273",
+        "text": "Дорога Теней"
+      },
+      {
+        "id": 1,
+        "targetbookid": "80888",
+        "text": "Тарунга"
+      },
+      {
+        "id": 1,
+        "targetbookid": "78585",
+        "text": "Меч воина"
+      },
+      {
+        "id": 1,
+        "targetbookid": "76868",
+        "text": "Последний день Земли"
+      },
+      {
+        "id": 1,
+        "targetbookid": "74177",
+        "text": "Глубина"
+      },
+      {
+        "id": 1,
+        "targetbookid": "66699",
+        "text": "Опиум"
+      },
+      {
+        "id": 1,
+        "targetbookid": "56266",
+        "text": "Тайна Донского"
+      },
+      {
+        "id": 1,
+        "targetbookid": "55150",
+        "text": "Диззи"
+      },
+      {
+        "id": 1,
+        "targetbookid": "50000",
+        "text": "Тора ан Павен - 2: Белые Земли"
+      },
+      {
+        "id": 1,
+        "targetbookid": "21793",
+        "text": "Проклятие Кудесника или перевоплощение в муху Це-Це"
+      },
+      {
+        "id": 1,
+        "targetbookid": "20000",
+        "text": "Тора ан Павен"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 11,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 13,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Квесты автора Инко313:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "194387",
+        "text": "Новый Год в опасности!"
+      },
+      {
+        "id": 1,
+        "targetbookid": "191035",
+        "text": "Старинный замок"
+      },
+      {
+        "id": 1,
+        "targetbookid": "117239",
+        "text": "Ловись, большое и маленькое"
+      },
+      {
+        "id": 1,
+        "targetbookid": "106026",
+        "text": "Думаешь, в сказку попал?"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 12,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 14,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Квесты автора RYZ:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "48910",
+        "text": "Покорение"
+      },
+      {
+        "id": 1,
+        "targetbookid": "30612",
+        "text": "Игра Шута"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 13,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 15,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Квесты автора Мандаринка:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "36348",
+        "text": "Золушка. Всё было совсем не так!"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 14,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 16,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Квесты автора admin:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "260599",
+        "text": "Новости 07.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "260326",
+        "text": "Новости 30.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "260147",
+        "text": "Новости 23.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "259986",
+        "text": "Новости 16.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "259794",
+        "text": "Новости 09.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "259543",
+        "text": "Новости 02.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "259343",
+        "text": "Новости 26.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "259098",
+        "text": "Новости 19.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "258744",
+        "text": "Новости 12.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "258388",
+        "text": "Новости 05.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "258011",
+        "text": "Новости 29.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "257742",
+        "text": "Новости 22.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "257413",
+        "text": "Новости 15.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "257142",
+        "text": "Новости 08.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "256803",
+        "text": "Новости 01.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "256413",
+        "text": "Новости 24.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "256136",
+        "text": "Новости 17.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "255889",
+        "text": "Новости 10.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "255617",
+        "text": "Новости 03.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "255305",
+        "text": "Новости 27.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "255017",
+        "text": "Новости 20.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "254746",
+        "text": "Новости 13.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "254426",
+        "text": "Новости 06.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "254083",
+        "text": "Новости 29.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "253722",
+        "text": "Новости 22.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "253372",
+        "text": "Новости 15.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "253108",
+        "text": "Новости 08.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "252790",
+        "text": "Новости 01.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "252487",
+        "text": "Новости 25.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "252167",
+        "text": "Новости 18.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "251806",
+        "text": "Новости 11.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "251472",
+        "text": "Новости 04.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "251212",
+        "text": "Новости 25.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "250931",
+        "text": "Новости 18.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "250598",
+        "text": "Новости 11.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "250268",
+        "text": "Новости 04.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "249801",
+        "text": "Новости 28.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "249434",
+        "text": "Новости 21.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "249079",
+        "text": "Новости 14.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "248536",
+        "text": "Новости 07.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "248100",
+        "text": "Новости 31.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "247821",
+        "text": "Новости 24.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "247523",
+        "text": "Новости 17.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "247180",
+        "text": "Новости 10.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "246655",
+        "text": "Новости 03.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "246348",
+        "text": "Новости 26.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "246052",
+        "text": "Новости 19.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "245641",
+        "text": "Новости 12.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "245218",
+        "text": "Новости 05.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "244828",
+        "text": "Новости 29.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "244482",
+        "text": "Новости 22.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "244227",
+        "text": "Новости 15.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "243815",
+        "text": "Новости 08.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "243527",
+        "text": "Новости 01.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "243197",
+        "text": "Новости 24.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "242906",
+        "text": "Новости 17.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "242544",
+        "text": "Новости 10.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "242292",
+        "text": "Новости 03.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "242023",
+        "text": "Новости 27.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "241698",
+        "text": "Новости 20.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "241332",
+        "text": "Новости 13.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "240872",
+        "text": "Новости 06.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "240444",
+        "text": "Новости 30.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "240025",
+        "text": "Новости 23.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "239580",
+        "text": "Новости 16.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "239187",
+        "text": "Новости 09.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "238751",
+        "text": "Новости 02.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "238235",
+        "text": "Новости 25.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "237662",
+        "text": "Новости 18.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "237239",
+        "text": "Новости 11.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "236737",
+        "text": "Новости 04.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "236288",
+        "text": "Новости 28.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "235860",
+        "text": "Новости 21.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "235457",
+        "text": "Новости 14.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "235049",
+        "text": "Новости 07.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "234536",
+        "text": "Новости 30.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "234055",
+        "text": "Новости 23.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "233586",
+        "text": "Новости 16.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "233080",
+        "text": "Новости 09.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "232552",
+        "text": "Новости 02.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "232061",
+        "text": "Новости 26.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "231504",
+        "text": "Новости 19.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "231004",
+        "text": "Новости 12.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "230376",
+        "text": "Новости 05.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "229816",
+        "text": "Новости 26.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "229220",
+        "text": "Новости 19.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "228671",
+        "text": "Новости 12.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "228086",
+        "text": "Новости 05.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "227550",
+        "text": "Новости 29.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "227138",
+        "text": "Новости 22.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "226620",
+        "text": "Новости 15.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "226085",
+        "text": "Новости 08.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "225459",
+        "text": "Новости 01.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "224950",
+        "text": "Новости 25.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "224456",
+        "text": "Новости 18.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "223912",
+        "text": "Новости 11.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "223427",
+        "text": "Новости 04.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "222898",
+        "text": "Новости 27.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "222360",
+        "text": "Новости 20.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "221959",
+        "text": "Новости 13.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "221456",
+        "text": "Новости 06.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "220972",
+        "text": "Новости 30.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "220484",
+        "text": "Новости 23.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "220004",
+        "text": "Новости 16.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "219624",
+        "text": "Новости 09.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "219125",
+        "text": "Новости 02.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "218634",
+        "text": "Новости 25.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "218193",
+        "text": "Новости 18.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "217809",
+        "text": "Новости 11.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "217416",
+        "text": "Новости 04.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "216978",
+        "text": "Новости 28.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "216432",
+        "text": "Новости 21.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "215855",
+        "text": "Новости 14.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "215265",
+        "text": "Новости 07.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "214490",
+        "text": "Новости 31.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "213810",
+        "text": "Новости 24.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "213150",
+        "text": "Новости 17.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "212628",
+        "text": "Новости 10.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "212104",
+        "text": "Новости 03.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "211587",
+        "text": "Новости 26.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "210933",
+        "text": "Новости 19.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "210288",
+        "text": "Новости 12.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "209669",
+        "text": "Новости 05.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "208970",
+        "text": "Новости 29.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "208334",
+        "text": "Новости 22.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "207663",
+        "text": "Новости 15.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "207049",
+        "text": "Новости 08.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "206399",
+        "text": "Новости 01.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "205852",
+        "text": "Новости 24.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "205277",
+        "text": "Новости 17.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "204653",
+        "text": "Новости 10.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "204078",
+        "text": "Новости 03.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "203428",
+        "text": "Новости 27.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "202872",
+        "text": "Новости 20.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "202337",
+        "text": "Новости 13.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "201910",
+        "text": "Новости 06.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "201475",
+        "text": "Новости 28.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "200931",
+        "text": "Новости 21.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "200381",
+        "text": "Новости 14.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "199688",
+        "text": "Новости 07.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "198766",
+        "text": "Новости 31.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "198051",
+        "text": "Новости 24.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "197357",
+        "text": "Новости 17.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "196624",
+        "text": "Новости 10.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "195703",
+        "text": "Новости 03.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "194856",
+        "text": "Новости 27.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "194120",
+        "text": "Новости 20.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "193348",
+        "text": "Новости 13.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "192542",
+        "text": "Новости 06.12"
+      },
+      {
+        "id": 1,
+        "targetbookid": "191736",
+        "text": "Новости 29.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "191089",
+        "text": "Новости 22.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "190525",
+        "text": "Новости 15.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "189830",
+        "text": "Новости 08.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "189021",
+        "text": "Новости 01.11"
+      },
+      {
+        "id": 1,
+        "targetbookid": "188206",
+        "text": "Новости 25.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "187451",
+        "text": "Новости 18.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "186749",
+        "text": "Новости 11.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "185938",
+        "text": "Новости 04.10"
+      },
+      {
+        "id": 1,
+        "targetbookid": "185314",
+        "text": "Новости 27.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "184814",
+        "text": "Новости 20.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "184187",
+        "text": "Новости 13.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "183608",
+        "text": "Новости 06.09"
+      },
+      {
+        "id": 1,
+        "targetbookid": "183178",
+        "text": "Новости 30.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "182424",
+        "text": "Новости 23.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "181487",
+        "text": "Новости 16.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "180649",
+        "text": "Новости 09.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "179862",
+        "text": "Новости 02.08"
+      },
+      {
+        "id": 1,
+        "targetbookid": "178898",
+        "text": "Новости 26.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "177874",
+        "text": "Новости 19.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "176845",
+        "text": "Новости 12.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "175652",
+        "text": "Новости 05.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "174467",
+        "text": "Новости 28.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "173321",
+        "text": "Новости 21.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "172045",
+        "text": "Новости 14.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "170847",
+        "text": "Новости 07.06"
+      },
+      {
+        "id": 1,
+        "targetbookid": "169479",
+        "text": "Новости 31.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "168593",
+        "text": "Новости 24.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "167805",
+        "text": "Новости 17.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "166826",
+        "text": "Новости 10.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "165867",
+        "text": "Новости 03.05"
+      },
+      {
+        "id": 1,
+        "targetbookid": "164896",
+        "text": "Новости 26.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "164205",
+        "text": "Новости 19.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "163496",
+        "text": "Новости 12.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "162734",
+        "text": "Новости 05.04"
+      },
+      {
+        "id": 1,
+        "targetbookid": "161931",
+        "text": "Новости 29.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "160977",
+        "text": "Новости 22.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "160093",
+        "text": "Новости 15.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "159235",
+        "text": "Новости 08.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "158329",
+        "text": "Новости 01.03"
+      },
+      {
+        "id": 1,
+        "targetbookid": "157371",
+        "text": "Новости 22.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "156293",
+        "text": "Новости 15.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "155340",
+        "text": "Новости 08.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "154385",
+        "text": "Новости 01.02"
+      },
+      {
+        "id": 1,
+        "targetbookid": "153497",
+        "text": "Новости 25.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "152532",
+        "text": "Новости 18.01"
+      },
+      {
+        "id": 1,
+        "targetbookid": "119573",
+        "text": "Новости 06.07"
+      },
+      {
+        "id": 1,
+        "targetbookid": "109590",
+        "text": "Рейтинг Авторов (старый)"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 15,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 17,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Квесты автора Felix:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "15004",
+        "text": "Охотник на ведьм"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 18,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Квесты автора elChem:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "122933",
+        "text": "Серёжа может"
+      },
+      {
+        "id": 1,
+        "targetbookid": "101142",
+        "text": "Призрак (микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "80550",
+        "text": "Не спи!"
+      },
+      {
+        "id": 1,
+        "targetbookid": "79915",
+        "text": "Лекарство"
+      },
+      {
+        "id": 1,
+        "targetbookid": "79512",
+        "text": "Перевал"
+      },
+      {
+        "id": 1,
+        "targetbookid": "78430",
+        "text": "Спасение"
+      },
+      {
+        "id": 1,
+        "targetbookid": "58423",
+        "text": "Императив (микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "30482",
+        "text": "О том, как кот выпал из окна"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 17,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 19,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Квесты автора СветИс:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "33690",
+        "text": "Выбор мага"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 18,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 20,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Квесты автора Teppish:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "256980",
+        "text": "Провожатый и Мария"
+      },
+      {
+        "id": 1,
+        "targetbookid": "177388",
+        "text": "И сердце растает"
+      },
+      {
+        "id": 1,
+        "targetbookid": "172870",
+        "text": "Выбор человека (микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "158214",
+        "text": "Бремя теней"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 19,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 21,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Квесты автора Roug:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "36302",
+        "text": "Сколько стоит твоя жизнь?"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 22,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Квесты автора Ярослав Зверев:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "223588",
+        "text": "Наряди ёлку!"
+      },
+      {
+        "id": 1,
+        "targetbookid": "212919",
+        "text": "Светило оборотня"
+      },
+      {
+        "id": 1,
+        "targetbookid": "190900",
+        "text": "Судьба стражника"
+      },
+      {
+        "id": 1,
+        "targetbookid": "185700",
+        "text": "Время нечисти"
+      },
+      {
+        "id": 1,
+        "targetbookid": "80863",
+        "text": "Стратегия ВОВ: Битва за Москву"
+      },
+      {
+        "id": 1,
+        "targetbookid": "72741",
+        "text": "Смутное время"
+      },
+      {
+        "id": 1,
+        "targetbookid": "65035",
+        "text": "Александр Матросов"
+      },
+      {
+        "id": 1,
+        "targetbookid": "56408",
+        "text": "Куда исчезают квесты? - 2"
+      },
+      {
+        "id": 1,
+        "targetbookid": "32394",
+        "text": "Куда исчезают квесты ?"
+      },
+      {
+        "id": 1,
+        "targetbookid": "18450",
+        "text": "Нашествие татаро-монгол"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 21,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 23,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Квесты автора Ордон:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "113400",
+        "text": "Кто убийца? "
+      },
+      {
+        "id": 1,
+        "targetbookid": "63155",
+        "text": "\nМагия любви "
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 22,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 24,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Квесты автора Olly Macconroy:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "79686",
+        "text": "Белая Орхидея мини-квест"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 23,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 25,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Квесты автора Knowledge_keeper:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "226981",
+        "text": "Загрузить и выгрузить квест"
+      },
+      {
+        "id": 1,
+        "targetbookid": "75421",
+        "text": "Operators"
+      },
+      {
+        "id": 1,
+        "targetbookid": "72039",
+        "text": "Numerical variables"
+      },
+      {
+        "id": 1,
+        "targetbookid": "49000",
+        "text": "Учебник Lua"
+      },
+      {
+        "id": 1,
+        "targetbookid": "47701",
+        "text": "Обложки, картинки, анимации. Музыка"
+      },
+      {
+        "id": 1,
+        "targetbookid": "47698",
+        "text": "Операторы для сложных квестов"
+      },
+      {
+        "id": 1,
+        "targetbookid": "47384",
+        "text": "Как написать первый квест"
+      },
+      {
+        "id": 1,
+        "targetbookid": "30672",
+        "text": "Учебник по операторам переменных"
+      },
+      {
+        "id": 1,
+        "targetbookid": "30",
+        "text": "ПРАВИЛА<s>r\nразмещения<s>r\nквестов"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 24,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 26,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Квесты автора Shchepanoff:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "245753",
+        "text": "Хардкорный симулятор квестописца: создай свой квест"
+      },
+      {
+        "id": 1,
+        "targetbookid": "190905",
+        "text": "Миссия святого отца"
+      },
+      {
+        "id": 1,
+        "targetbookid": "79334",
+        "text": "{Микроквест}\nНебесный диверсант"
+      },
+      {
+        "id": 1,
+        "targetbookid": "18419",
+        "text": "Под знаменем Хищника\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 25,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 27,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Квесты автора Dark Scimitar :",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "72603",
+        "text": "Виверна"
+      },
+      {
+        "id": 1,
+        "targetbookid": "33880",
+        "text": "Инспектор: опасная трасса."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 26,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 28,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Квесты автора Метаморфозник:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "201549",
+        "text": "Побег от реальности"
+      },
+      {
+        "id": 1,
+        "targetbookid": "146409",
+        "text": "Посланник Дьявола "
+      },
+      {
+        "id": 1,
+        "targetbookid": "124844",
+        "text": "Наёмник Морг"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 27,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 29,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Квесты автора Proffit:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "13995",
+        "text": "Аванпост"
+      },
+      {
+        "id": 1,
+        "targetbookid": "12570",
+        "text": "История айтишника Васи"
+      },
+      {
+        "id": 1,
+        "targetbookid": "10102",
+        "text": "Восточный ветер"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 28,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 30,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Квесты автора Денис Борзов:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "113235",
+        "text": "На районе: история обычных парней"
+      },
+      {
+        "id": 1,
+        "targetbookid": "47612",
+        "text": "ЗатравленнаYA"
+      },
+      {
+        "id": 1,
+        "targetbookid": "32328",
+        "text": "Задача: Выжить. Сессия"
+      },
+      {
+        "id": 1,
+        "targetbookid": "30958",
+        "text": "Ангел-хранитель: История одного неудачника"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 31,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Квесты автора Бахия Александр:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "211346",
+        "text": "Сборник рассказов"
+      },
+      {
+        "id": 1,
+        "targetbookid": "78816",
+        "text": "Zombie"
+      },
+      {
+        "id": 1,
+        "targetbookid": "73041",
+        "text": "Учебник с примерами программирования"
+      },
+      {
+        "id": 1,
+        "targetbookid": "49558",
+        "text": "Огонь очищающий"
+      },
+      {
+        "id": 1,
+        "targetbookid": "31719",
+        "text": "Убийца за спиной"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 30,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 32,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Квесты автора Fenix:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "3564",
+        "text": "Агент Красная шапочка"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 31,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 33,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Квесты автора Мечтатель-авантюрист:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "175973",
+        "text": "Симулятор сундуков (СС) "
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 32,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 34,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Квесты автора Kvestopisci:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "178000",
+        "text": "Вершитель судеб"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 35,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Квесты автора Авантюристка:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "124094",
+        "text": "Детективное агентство \"Пять сольдо\""
+      },
+      {
+        "id": 1,
+        "targetbookid": "84456",
+        "text": "Ведьмин мотель. (микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "83836",
+        "text": "История любви боевого слизня."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 34,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 36,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Квесты автора Jooly:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "224903",
+        "text": "Эффект бабочки"
+      },
+      {
+        "id": 1,
+        "targetbookid": "122916",
+        "text": "Дар или проклятье."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 35,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 37,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Квесты автора Makasin:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 36,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 38,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Квесты автора Mexan 215:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "7347",
+        "text": "S.T.A.L.K.E.R.\nГоризонт судьбы"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 37,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 39,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Квесты автора Master Cho:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "116579",
+        "text": "Одиссея Алонсо Кортеса. Книга третья."
+      },
+      {
+        "id": 1,
+        "targetbookid": "55621",
+        "text": "Одиссея Алонсо Кортеса. Книга вторая. "
+      },
+      {
+        "id": 1,
+        "targetbookid": "53747",
+        "text": "Одиссея Алонсо Кортеса. Книга первая."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 38,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 40,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Квесты автора Заря:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "199202",
+        "text": "Забыть(,) нельзя(,) остаться"
+      },
+      {
+        "id": 1,
+        "targetbookid": "197165",
+        "text": "Все вокруг меня реально? Часть 3"
+      },
+      {
+        "id": 1,
+        "targetbookid": "157963",
+        "text": "Все вокруг меня реально? Часть 2"
+      },
+      {
+        "id": 1,
+        "targetbookid": "95555",
+        "text": "Всё вокруг меня реально? Часть 1"
+      },
+      {
+        "id": 1,
+        "targetbookid": "93317",
+        "text": "Я - твое лекарство"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 39,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 41,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Квесты автора Lana Ashgrow:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "19143",
+        "text": "Когда плачут деревья"
+      },
+      {
+        "id": 1,
+        "targetbookid": "18775",
+        "text": "Свет последней звезды"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 40,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 42,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Квесты автора Joust:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "110507",
+        "text": "Отель любви исполнит все мечты (часть 2)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "100568",
+        "text": "Отель любви исполнит все мечты."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 41,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 43,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Квесты автора Tenni:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "155321",
+        "text": "Киприда"
+      },
+      {
+        "id": 1,
+        "targetbookid": "154457",
+        "text": "Море волнуется — раз..."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 42,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 44,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Квесты автора Legendorik:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "3772",
+        "text": "Тайны темного разума"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 43,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 45,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Квесты автора Potato :",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "118611",
+        "text": "Нефелим: Мизэки и Мэсэйоши"
+      },
+      {
+        "id": 1,
+        "targetbookid": "113290",
+        "text": "Нефелим:Полукровка"
+      },
+      {
+        "id": 1,
+        "targetbookid": "104750",
+        "text": "Нефелим:История Алекса"
+      },
+      {
+        "id": 1,
+        "targetbookid": "104709",
+        "text": "Нефелим:Начало "
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 44,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 46,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Квесты автора New:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "130465",
+        "text": "Один день"
+      },
+      {
+        "id": 1,
+        "targetbookid": "124261",
+        "text": "Свет или Тьма"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 45,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 47,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Квесты автора beginner:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "202830",
+        "text": "S.T.A.L.K.E.R.\nВторое имя\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 46,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 48,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Квесты автора Leslie:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "191041",
+        "text": "(Не)везунчик"
+      },
+      {
+        "id": 1,
+        "targetbookid": "188643",
+        "text": "На старт! Внимание! Воздух!"
+      },
+      {
+        "id": 1,
+        "targetbookid": "157886",
+        "text": "Я — няня?!"
+      },
+      {
+        "id": 1,
+        "targetbookid": "148244",
+        "text": "Кот в красных перчатках"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 47,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 49,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Квесты автора *В£дЬмОчК@*:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 48,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 50,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Квесты автора Монк:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "111562",
+        "text": "Разбитые небеса"
+      },
+      {
+        "id": 1,
+        "targetbookid": "18192",
+        "text": "GIRLквест"
+      },
+      {
+        "id": 1,
+        "targetbookid": "14012",
+        "text": "Карты, деньги, Вель де Рейв"
+      },
+      {
+        "id": 1,
+        "targetbookid": "13646",
+        "text": "Демон в подсолнухах"
+      },
+      {
+        "id": 1,
+        "targetbookid": "13346",
+        "text": "Пропавшее сердце. Хирургия\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 49,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 51,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "Квесты автора ArtBloodless:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "79778",
+        "text": "Спираль"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 50,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 52,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "Квесты автора Lasttochka:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "81062",
+        "text": "Желание ребёнка"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 51,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 53,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Квесты автора Elizabeth:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 52,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 54,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "Квесты автора Nikons:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 53,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 55,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "Квесты автора Wizardgamer:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 54,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 56,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "Квесты автора [Dead_Second]:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "234576",
+        "text": "Симулятор голубя Евгения"
+      },
+      {
+        "id": 1,
+        "targetbookid": "218520",
+        "text": "Превосходство: Начало"
+      },
+      {
+        "id": 1,
+        "targetbookid": "115752",
+        "text": "Выживание: Последний Герой"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 55,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 57,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "Квесты автора Yulia Oayder :",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "176666",
+        "text": "Случайные письма"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 56,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 58,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "Квесты автора Gratitude:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "166197",
+        "text": "Приключения Киры"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 57,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 59,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "Квесты автора Valdis:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "148086",
+        "text": "L'empire"
+      },
+      {
+        "id": 1,
+        "targetbookid": "56251",
+        "text": "Dishonored Смотрящий вдаль"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 58,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 60,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "Квесты автора Ангел:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "124544",
+        "text": "Ночь Маскарада\n"
+      },
+      {
+        "id": 1,
+        "targetbookid": "113097",
+        "text": "Сборник стихов"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 59,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 61,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "Квесты автора Lazy Morning:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "169984",
+        "text": "Сон про Лето"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 60,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 62,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "Квесты автора JSG:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "144307",
+        "text": "Наследница"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 61,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 63,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "Квесты автора  загадочник:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 62,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 64,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "Квесты автора Mike:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 63,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 65,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "Квесты автора katewest :",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "129295",
+        "text": "Не ошибись\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 64,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 66,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "Квесты автора Ани Руф:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "182632",
+        "text": "Кто я?"
+      },
+      {
+        "id": 1,
+        "targetbookid": "157817",
+        "text": "Поиграем?"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 65,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 67,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "Квесты автора SirVladPro:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "207966",
+        "text": "Auto RPG<s>r\nМеч крови"
+      },
+      {
+        "id": 1,
+        "targetbookid": "128992",
+        "text": "Подземелье\nМиниквест"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 66,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 68,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "Квесты автора Ламбада:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "79652",
+        "text": "Оранжевый кот!"
+      },
+      {
+        "id": 1,
+        "targetbookid": "72411",
+        "text": "Билет в real life "
+      },
+      {
+        "id": 1,
+        "targetbookid": "50941",
+        "text": "Проклятый дом."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 67,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 69,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "Квесты автора Vikki:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "63300",
+        "text": "Потерянная во времени "
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 68,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 70,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "Квесты автора Ser Pro:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "181857",
+        "text": "Новое небо"
+      },
+      {
+        "id": 1,
+        "targetbookid": "160281",
+        "text": "Один из десяти"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 69,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 71,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "Квесты автора Allegoriy:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "154791",
+        "text": "Валентинов День\n\n[микроквест] "
+      },
+      {
+        "id": 1,
+        "targetbookid": "3777",
+        "text": "Конкурсантка"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 70,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 72,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "Квесты автора Bartow:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "246532",
+        "text": "Новогодний случай"
+      },
+      {
+        "id": 1,
+        "targetbookid": "237068",
+        "text": "Любовь или дружба"
+      },
+      {
+        "id": 1,
+        "targetbookid": "224823",
+        "text": "Тебе не уйти"
+      },
+      {
+        "id": 1,
+        "targetbookid": "192015",
+        "text": "Маршрутка (Микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "136002",
+        "text": "Предсмертный вздох (Микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "104266",
+        "text": "Как долго сможете вы петь? ( Микроквест )"
+      },
+      {
+        "id": 1,
+        "targetbookid": "83619",
+        "text": "Последний век\n(Микроквест)\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 71,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 73,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "Квесты автора Julieta Step:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "222699",
+        "text": "История одного пакетика"
+      },
+      {
+        "id": 1,
+        "targetbookid": "222557",
+        "text": "Ма́ра"
+      },
+      {
+        "id": 1,
+        "targetbookid": "221536",
+        "text": "Сказка о славном рыцаре\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 72,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 74,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "Квесты автора Дориан Грей:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "151856",
+        "text": "Цена доверия\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 73,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 75,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "Квесты автора *****:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "225187",
+        "text": "Свеча"
+      },
+      {
+        "id": 1,
+        "targetbookid": "223264",
+        "text": "Старая хижина"
+      },
+      {
+        "id": 1,
+        "targetbookid": "152220",
+        "text": "Обычный друг Героя"
+      },
+      {
+        "id": 1,
+        "targetbookid": "108760",
+        "text": "Тяжёлая жизнь комара\n(Микроквест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "89173",
+        "text": "Охотник"
+      },
+      {
+        "id": 1,
+        "targetbookid": "84953",
+        "text": "История одного Чародея"
+      },
+      {
+        "id": 1,
+        "targetbookid": "84950",
+        "text": "Мир без взрослых"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 74,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 76,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "Квесты автора Zet:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "46438",
+        "text": "Повелитель времени"
+      },
+      {
+        "id": 1,
+        "targetbookid": "41680",
+        "text": "Нашествие зомби"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 75,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 77,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "Квесты автора Xant:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "67804",
+        "text": "Легенды Сладена"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 76,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 78,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "Квесты автора Аровейн:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 77,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 79,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "Квесты автора Mora Fox:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "180489",
+        "text": "Четыре принца и я<s>r\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 78,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 80,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "Квесты автора Predicter:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "146845",
+        "text": "Однажды (мини-квест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "104585",
+        "text": "Виртуоз"
+      },
+      {
+        "id": 1,
+        "targetbookid": "84534",
+        "text": "Доктор (Мини-квест)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "84533",
+        "text": "Дуэль (Мини-квест)"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 79,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 81,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "Квесты автора Невозможник:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "211625",
+        "text": "И бабочки тоже светят, знаешь ли"
+      },
+      {
+        "id": 1,
+        "targetbookid": "187631",
+        "text": "Авиатор"
+      },
+      {
+        "id": 1,
+        "targetbookid": "187181",
+        "text": "Таверна"
+      },
+      {
+        "id": 1,
+        "targetbookid": "185371",
+        "text": "Я — Бард"
+      },
+      {
+        "id": 1,
+        "targetbookid": "181415",
+        "text": "Магистрат — Настольная Ролевая Игра"
+      },
+      {
+        "id": 1,
+        "targetbookid": "178595",
+        "text": "Last RPG"
+      },
+      {
+        "id": 1,
+        "targetbookid": "173658",
+        "text": "Семеро\n"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 80,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 82,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "Квесты автора degradai:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "134488",
+        "text": "И это любовь..?"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 81,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 83,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "Квесты автора Dex:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "72162",
+        "text": "Белоснежка, ты ли это?"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 82,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 84,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "Квесты автора Ваша Умница:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 83,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 85,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "Квесты автора LoSmile:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "122712",
+        "text": "Пончик"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 84,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 86,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "Квесты автора Неумеха:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "65586",
+        "text": "Мое имя Адена"
+      },
+      {
+        "id": 1,
+        "targetbookid": "63247",
+        "text": "Станция \"Волчонок\""
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 85,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 87,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "Квесты автора ViRei:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "131200",
+        "text": "Darkness 3: The Last Hero"
+      },
+      {
+        "id": 1,
+        "targetbookid": "6901",
+        "text": "Вампер 2: \nПоследний рассвет"
+      },
+      {
+        "id": 1,
+        "targetbookid": "6725",
+        "text": "Вампер"
+      },
+      {
+        "id": 1,
+        "targetbookid": "3641",
+        "text": "Последняя точка"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 86,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 88,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "Квесты автора Полярная Сова:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "49899",
+        "text": "Винни Бах."
+      },
+      {
+        "id": 1,
+        "targetbookid": "48689",
+        "text": "Как испортить вечеринку и не получить по щам."
+      },
+      {
+        "id": 1,
+        "targetbookid": "43626",
+        "text": "Как выбесить соседей или трудная суббота."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 87,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 89,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "Квесты автора Масяня:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "141489",
+        "text": "Митралл. Три судьбы одной истории."
+      },
+      {
+        "id": 1,
+        "targetbookid": "132138",
+        "text": "Смертельная переписка."
+      },
+      {
+        "id": 1,
+        "targetbookid": "124887",
+        "text": "Незабываемый вечер."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 88,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 90,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "Квесты автора Shadow:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "201600",
+        "text": "Укрепляй, стабилизируй и властвуй"
+      },
+      {
+        "id": 1,
+        "targetbookid": "183863",
+        "text": "Механика квестов\n(Учебник)"
+      },
+      {
+        "id": 1,
+        "targetbookid": "172273",
+        "text": "Вейрон \"А\""
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 89,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 91,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "Квесты автора Silmerion:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "110006",
+        "text": "Убийство на Корабле"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 90,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 92,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "Квесты автора ephemeral:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "129191",
+        "text": "\"_ ПАРИ _\""
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 91,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 93,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "Квесты автора Helena:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 92,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 94,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "Квесты автора ediksing:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "146680",
+        "text": "Семь миров: \"Иркалла\""
+      },
+      {
+        "id": 1,
+        "targetbookid": "144469",
+        "text": "В эпицентре трагедии"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 93,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 95,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "Квесты автора Kupolaliti:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 94,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 96,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "Квесты автора MIka:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "114164",
+        "text": "Жизнь непредсказуемая штука."
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 95,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 97,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "Квесты автора кирис:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "68381",
+        "text": "Охота на Орка"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 96,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 98,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "text": "Квесты автора Aleks_Otter:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "219065",
+        "text": "Клуб клептоманов"
+      },
+      {
+        "id": 1,
+        "targetbookid": "211680",
+        "text": "Остросюжетный миниквест"
+      },
+      {
+        "id": 1,
+        "targetbookid": "209137",
+        "text": "Зельевар"
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 97,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 99,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "text": "Квесты автора Кудесник:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 98,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 100,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "text": "Квесты автора Элизабет:",
+    "answers": [
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 99,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 101,
+        "text": "Следующий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "text": "Квесты автора Salim:",
+    "answers": [
+      {
+        "id": 1,
+        "targetbookid": "214043",
+        "text": "Гостья"
+      },
+      {
+        "id": 1,
+        "targetbookid": "177837",
+        "text": "Он и Она"
+      },
+      {
+        "id": 1,
+        "targetbookid": "155740",
+        "text": "Соломон Рэйс. Финал"
+      },
+      {
+        "id": 1,
+        "targetbookid": "124686",
+        "text": "Соломон Рэйс. Книга вторая"
+      },
+      {
+        "id": 1,
+        "targetbookid": "123153",
+        "text": "Соломон Рэйс. Книга первая"
+      },
+      {
+        "id": 1,
+        "targetbookid": "114153",
+        "text": "Один дома"
+      },
+      {
+        "id": 1,
+        "targetbookid": "100681",
+        "text": "Соломон Рэйс. Книга третья. "
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 100,
+        "text": "Предыдущий автор"
+      },
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  }
+]

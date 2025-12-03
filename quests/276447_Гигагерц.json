@@ -1,0 +1,461 @@
+[
+  {
+    "id": 1,
+    "text": "",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "global image_part_of_screen",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "фон",
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Начать игру. ",
+        "var_set": [
+          "фон",
+          4,
+          "эн",
+          0,
+          "т",
+          1,
+          "лицо",
+          1,
+          "реж",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "      ",
+    "answers": [
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://i.postimg.cc/FRB4x0nt/2.png"
+        ],
+        "id": 4,
+        "text": "     \n\n\n\n\n\n\n\n\n",
+        "left_answer": false
+      },
+      {
+        "id": 3,
+        "text": "     \n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://i.postimg.cc/wM8yxzCB/image.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 5,
+        "text": "      \n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://i.postimg.cc/9Mqwj0NS/image.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 8,
+        "text": "Фоны",
+        "run": [
+          8
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Энеми",
+        "run": [
+          6
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Сэты",
+        "run": [
+          7
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Плашка",
+        "run": [
+          9
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Тексты ",
+        "run": [
+          10
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Перемещение. "
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Бург",
+        "url": "https://i.postimg.cc/rsNm8rGh/image.png",
+        "var_equal": [
+          "эн",
+          3
+        ]
+      },
+      {
+        "id": 6,
+        "text": "годриук",
+        "url": "https://i.postimg.cc/mr1gPqN1/image.png",
+        "var_equal": [
+          "эн",
+          2
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Кэти подэнеми",
+        "url": "https://i.postimg.cc/j5zqX71s/image.png",
+        "var_equal": [
+          "пэн",
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Кэти энеми",
+        "url": "https://i.postimg.cc/25M9L2MC/image.png",
+        "var_equal": [
+          "эн",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": [
+      {
+        "id": 6,
+        "text": "гг",
+        "url": "https://i.postimg.cc/FshzTTmw/image.png"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": [
+      {
+        "id": 8,
+        "text": "крайний жом",
+        "url": "https://i.postimg.cc/VL7fD1Kb/image.png",
+        "var_equal": [
+          "фон",
+          3
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Таверна снаружи",
+        "url": "https://i.postimg.cc/9QKWHb5m/image.png",
+        "var_equal": [
+          "фон",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Таверна внутри",
+        "url": "https://i.postimg.cc/GmHcfNfg/image.png",
+        "var_equal": [
+          "фон",
+          2
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/Y0M6vsNG/image.png",
+        "var_equal": [
+          "фон",
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/gjmzB093/image.png"
+      },
+      {
+        "id": 9,
+        "text": "тэйбл бург",
+        "url": "https://i.postimg.cc/28T6MnSy/image.png",
+        "var_equal": [
+          "лицо",
+          4
+        ]
+      },
+      {
+        "id": 9,
+        "text": "гг",
+        "url": "https://i.postimg.cc/tT0CW52S/image.png",
+        "var_equal": [
+          "лицо",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": "годрик",
+        "url": "https://i.postimg.cc/prCWNtx4/image.png",
+        "var_equal": [
+          "лицо",
+          3
+        ]
+      },
+      {
+        "id": 9,
+        "text": "кэти",
+        "url": "https://i.postimg.cc/CLMMGdsg/image.png",
+        "var_equal": [
+          "лицо",
+          2
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Рамка",
+        "url": "https://i.postimg.cc/NG6L83h1/image.png"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 11,
+    "text": "",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Порт"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Переключатели. ",
+        "run": [
+          14
+        ],
+        "var_not": [
+          "режоф",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "режоф",
+          1
+        ],
+        "var_equal": [
+          "реж",
+          1
+        ],
+        "id": 11,
+        "text": "Перемещение. ",
+        "run": [
+          11
+        ]
+      },
+      {
+        "var_set": [
+          "эн",
+          1,
+          "т",
+          2,
+          "лицо",
+          1,
+          "режоф",
+          1
+        ],
+        "var_not": [
+          "режоф",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://i.postimg.cc/FRB4x0nt/2.png"
+        ],
+        "var_equal": [
+          "реж",
+          2
+        ],
+        "id": 12,
+        "text": "     \n\n\n\n\n\n\n\n\n",
+        "right_answer": true,
+        "left_answer": false
+      },
+      {
+        "id": 8,
+        "text": "Фоны",
+        "run": [
+          8
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Энеми",
+        "run": [
+          6
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Сэты",
+        "run": [
+          7
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Плашка",
+        "run": [
+          9
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Текст",
+        "run": [
+          13
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.postimg.cc/vThWftXP/1.png",
+        "var_equal": [
+          "т",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "    ",
+    "answers": [
+      {
+        "var_not": [
+          "реж",
+          1
+        ],
+        "id": 12,
+        "text": "Передвижение. ",
+        "var_set": [
+          "реж",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "var_not": [
+          "реж",
+          2
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Передвижение. ",
+        "left_answer": true,
+        "var_set": [
+          "реж",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "id": 12,
+        "text": "Люди. ",
+        "var_not": [
+          "реж",
+          2
+        ],
+        "var_set": [
+          "реж",
+          2
+        ]
+      },
+      {
+        "var_not": [
+          "реж",
+          1
+        ],
+        "comment": true,
+        "id": 14,
+        "text": "Люди. ",
+        "right_answer": true,
+        "var_set": [
+          "реж",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "",
+    "answers": []
+  }
+]

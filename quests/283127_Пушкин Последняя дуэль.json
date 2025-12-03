@@ -1,0 +1,3259 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Sargeras\nЖанр: история, симулятор, микро-квест\n\nАлександру Сергеевичу на момент смерти на дуэли было всего 37 лет. Сколько прекрасных произведений он мог бы ещë написать! Его жизнь оборвалась трагически и внезапно. Но что, если бы была возможность изменить злую судьбу? Возможно удача на этот раз будет более благосклонна к великому поэту?\n\n(Если не загружаются картинки, попробуйте включить нечто с названием из трëх волшебных букв. Это временное решение, ведëтся работа по исправлению ситуации)",
+    "answers": [
+      {
+        "left_answer": false,
+        "var_set": [
+          "global read",
+          1
+        ],
+        "middle_answer": true,
+        "id": 23,
+        "text": "[Прочитать письмо]",
+        "lua_do": "function lua_do()\n  g.formatText = 1\nend",
+        "var_no_more": [
+          "global read",
+          0
+        ]
+      },
+      {
+        "addToHistory": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "var_add": [
+          "global pushkin",
+          0,
+          "global dantes",
+          0,
+          "air",
+          0
+        ],
+        "lua_do": "function lua_do()\n  g.formatText = 1\nend",
+        "id": 2,
+        "text": "[Приготовиться к дуэли]",
+        "middle_answer": true,
+        "var_set": [
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "hit",
+          0,
+          "round",
+          0,
+          "stepAfter",
+          0,
+          "distance",
+          20,
+          "aim",
+          0,
+          "pictureD",
+          0,
+          "pictureP",
+          0,
+          "first",
+          0,
+          "bolnitsa",
+          0,
+          "talk",
+          0,
+          "talk1",
+          0,
+          "future",
+          0,
+          "immortal",
+          0,
+          "fireAirAfter",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "newAnswerImage": [
+          "https://i.ibb.co/WtbjXP7/acetone-202514-153158-767.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "global pushkin",
+          0,
+          "global dantes",
+          0
+        ],
+        "middle_answer": false,
+        "text": "[Концовки]",
+        "id": 21
+      },
+      {
+        "id": 23,
+        "text": "[Перечитать письмо]",
+        "var_need": [
+          "global read",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 1,
+        "text": "*Рекомендуется прочтение в дневном режиме",
+        "comment": true
+      },
+      {
+        "middle_answer": true,
+        "text": "\n_______________",
+        "comment": true,
+        "id": 1
+      },
+      {
+        "id": 22,
+        "text": "«Режим бога»",
+        "comment": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  g.formatText = 1\nend",
+        "text": " ",
+        "calculate": false,
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "empty",
+    "answers": [
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/1XhQ2f4/1023-b.jpg"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": " ",
+        "var_no_more": [
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/pb0rHZk/i-63.jpg"
+        ],
+        "lua_if": "function lua_if()\n  if step > 0 or fireP == 1 then\n    return true\n  end\nend",
+        "id": 2,
+        "text": " ",
+        "comment": true,
+        "var_no_more": [
+          "pictureD",
+          0,
+          "pictureP",
+          0,
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/9cp7z7D/6-vn-Duel-Pushkina.jpg"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": " ",
+        "var_need": [
+          "pictureD",
+          1
+        ],
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/5nXTTB0/Lumii-20250104-042804157.jpg"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": " ",
+        "var_need": [
+          "pictureP",
+          1
+        ],
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/Tt5YXfH/Lumii-20250103-044428270.png"
+        ],
+        "comment": true,
+        "id": 2,
+        "var_need": [
+          "step",
+          19
+        ],
+        "text": " "
+      },
+      {
+        "lua_text": "function lua_text()\n  if fireD == 1 and fireP == 0 or fireD == 1 and fireP == 1 and fireAirAfter == 0 then\n    local tex = math.random(1, 3)\n    if tex == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nПуля просвистела над кудрявой головой, не причинив вреда. Дантес выругался сквозь зубы и опустил пистолет.]]\n    elseif tex == 2 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nПуля ушла куда-то вбок. Пушкин усмехнулся, сбросив охватившее его на миг оцепенение.]]\n    elseif tex == 3 and round == 0 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nПоэт перевëл дыхание. Посланница смерти не нашла дорогу к его сердцу.]]\n    elseif tex == 3 and round == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, кружились в небе.\n\nНевредим, снова. Поэт отвëл взгляд от поникшего противника и посмотрел на небо. Стучащая в висках кровь и рвущаяся из груди юношеская весëлость сами собой рождали строки:\n\n<$2>Мне бой знаком — люблю я звук мечей.\nОт первых лет поклонник бранной славы,\nЛюблю войны кровавые забавы,\nИ смерти мысль мила душе моей.]]\n    end\n  elseif fireP == 1 and fireAir == 0 then\n    local tex = math.random(1, 2)\n    if tex == 1 and fireD == 0 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nРука судьбы отвела пулю от француза. Что-ж, судьбе народы все покорны. Пушкин приосанился, готовясь встретить смерть с достоинством.]]\n    elseif tex == 1 and fireD == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nДантес вздрогнул. Пуля едва не задела волосы. Пистолеты противников пусты. Неужели ещë один раунд?]]\n    elseif tex == 2 and fireD == 0 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nНет, не убил. Поэта охватило странное чувство — смесь досады и облегчения. Он прикрыл глаза, готовясь к своей судьбе.]]\n    elseif tex == 2 and fireD == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nПромах. Подвëл ли пистолет, или же рука, боясь убить, дрогнула в последний момент? Провидение не желает смерти сегодня. Но что человеку до этого, когда на кону честь?]]\n    end\n  elseif fireP == 1 and fireAir == 1 and fireAirAfter == 1 then\n    return [[Вот он. Завистник и обидчик. Подлый клеветник. На мушке, на расстоянии курка от смерти, за секунду до гибели. Не достойный еë? Не заслуживший еë?\n\nВыстрел разорвал морозный воздух. Позади охнули секунданты. Пистолет разряжен в небо — дуэлянт умывает руки.]]\n  end\nend",
+        "comment": true,
+        "id": 2,
+        "var_need": [
+          "stepAfter",
+          1
+        ],
+        "text": " ",
+        "lua_if": "function lua_if()\n  if fireD == 1 or fireP == 1 then\n    return true\n  end\nend"
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Снег. \n\nПушистые хлопья кружатся в тишине, оседая на безлистных ветках. Чëрные фигуры ворон безмолвно наблюдают за людьми, чопорно откланивающимися друг другу по колено в снегу. ",
+        "lua_text": "function lua_text()\n  if step == 0 and barrier == 1 and fireD == 0 and fireP == 0 then\n    return \"Пушистые хлопья кружатся в тишине, оседая на безлистных ветках. Чëрные фигуры ворон безмолвно наблюдают за людьми, замершими друг напротив друга.\"\n  elseif step > 0 and fireD == 0 and fireP == 0 then\n    return \"Пушистые хлопья кружатся в тишине, оседая на безлистных ветках. Чëрные фигуры ворон безмолвно наблюдают за людьми, чопорно вышагивающими навстречу друг другу. \"\n  elseif fireD == 0 and fireP == 1 then\n    return [[Затихло эхо первого выстрела. Ход за противником.\n\nДуэль продолжается.]]\n  elseif fireD == 1 and fireP == 0 then\n    return [[Затихло эхо первого выстрела. \nПоэт держит судьбу противника в своих руках.\n\nДуэль продолжается.]]\n  elseif fireD == 1 and fireP == 1 then\n    return [[Стая ворон, распуганная выстрелами, кружит в небе. \n\nПротивники разрядили пистолеты. Оба вхолостую.]]\n  end\nend",
+        "var_no_more": [
+          "stepAfter",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n  if round == 1 then\n    return [[Константин Данзас:\n—<$2> Дуэлянты завершили второй раунд безрезультатно. Желаете продолжить?\n\n<$1>Жорж Дантес:\n—<$2> Я претензий к этому выскочке не имел и не имею. Если он желает повести себя как трус и отказаться от вызова, я не буду настаивать на продолжении.]]\n  end\nend",
+        "id": 2,
+        "var_need": [
+          "fireD",
+          1,
+          "fireP",
+          1
+        ],
+        "text": "Константин Данзас:\n—<$2> Дуэлянты завершили первый раунд безрезультатно. Желаете продолжить?\n\n<$1>Жорж Дантес:\n—<$2> Я претензий к этому выскочке не имел и не имею. Если он желает повести себя как трус и отказаться от вызова, я не буду настаивать на продолжении.",
+        "var_no_more": [
+          "round",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n  if fireAir == 1 then\n    return \"Секунданты растеряно наблюдают за происходящим. Эта дуэль запомнится им надолго.\"\n  end\nend",
+        "id": 2,
+        "var_need": [
+          "step",
+          11
+        ],
+        "text": "— <$2>Александр Сергеевич, остановитесь! Вы нарушаете правила, вернитесь к барьеру! ",
+        "var_no_more": [
+          "fireP",
+          0
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\n  if fireD == 1 and fireP == 1 then\n    return false\n  else\n    return true\n  end\nend",
+        "lua_text": "function lua_text()\n  if step == 0 and barrier == 1 and fireD == 0 and fireP == 0 then\n    return[[— <$2>«Господа, можете сходиться!»]]\n  elseif step < 10 and fireD == 0 and fireP == 0 then\n    return[[— <$2>«Барьер десять шагов, стреляете с любого расстояния!»]]\n  elseif step > 0 and step < 10 and fireD == 1 and fireP == 0 then\n    return [[— <$2>«Господин Дантес, продолжайте движение к барьеру. Господин Пушкин, выстрел за вами.»\n\n<$1>Противники сходятся.]]\n  elseif step < 10 and fireD == 0 and fireP == 1 then\n    return [[— <$2>«Господин Пушкин, продолжайте движение к барьеру. Господин Дантес, выстрел за вами.»\n\n<$1>Противники сходятся.]]\n  elseif step == 10 and fireD == 1 and fireP == 0 then\n    return [[— <$2>«Барьер! Господин Пушкин, выстрел за вами.»]]\n  elseif step == 10 and fireD == 0 and fireP == 1 then\n    return [[— <$2>«Барьер! Господин Дантес, выстрел за вами.»]]\n  end\nend",
+        "id": 2,
+        "text": "Секунданты подали пистолеты. \n\n— <$2>«Становитесь на расстоянии двадцати шагов. Барьер десять шагов, стрелять можете с любого расстояния!»\n\n<$1>Соперники сбросили плащи в снег и разошлись.",
+        "comment": true,
+        "var_no_more": [
+          "stepAfter",
+          0,
+          "step",
+          10
+        ]
+      },
+      {
+        "id": 2,
+        "text": "_______________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Расстояние",
+        "lua_text": "function lua_text()\n  if distance > 9 then\n    return \"Расстояние \" .. distance .. \" шагов.\"\n  elseif distance < 10 and distance > 4 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шагов. <s>\nСлишком близко!\"\n  elseif distance < 10 and distance > 4 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шагов.\"\n  elseif distance < 5 and distance > 1 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шага. <s>\nСлишком близко!\"\n  elseif distance < 5 and distance > 1 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шага.\"\n  elseif distance == 1 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шаг. <s>\nСлишком близко!\"\n  elseif distance == 1 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шаг.\"\n  end\nend",
+        "id": 2
+      },
+      {
+        "var_no_more": [
+          "barrier",
+          0
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "—<$2> К барьеру! ",
+        "var_set": [
+          "barrier",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\n  if step < 10 and fireP == 0 and fireD == 0 or step < 10 and fireP == 0 and fireD == 1 or step < 10 and fireP == 1 and fireD == 0 then\n    step = step <plus> 2\n    distance = distance - 2\n  elseif step >= 10 or step < 10 and fireP == 1 and fireD == 1 then\n    step = step <plus> 1\n    distance = distance - 1\n  end\n  if step > 10 then\n    aim = 10\n  end\n  if step > 1 and step < 10 then\n    aim = aim <plus> 2\n  end\n  if fireD == 0 and distance < 12 then\n    fireD = 1\n    stepAfter = 2\n    pictureD = 2\n    local chanceD = math.random(1, 10)\n    if chanceD <= aim then\n      dantes = dantes\n      showPage{id = 3}\n    elseif chanceD > aim then\n      message(\"Дантес выстрелил и промахнулся!\")\n      showPage{id = 2}\n    end\n  elseif fireD == 0 and distance > 11 then\n    local danteChance = math.random(0, (10 - step))\n    if danteChance < 1 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      local chanceD = math.random(1, 10)\n      if chanceD <= aim then\n        dantes = dantes\n        showPage{id = 3}\n      elseif chanceD > aim then\n        message(\"Дантес выстрелил и промахнулся!\")\n        showPage{id = 2}\n      end\n    elseif danteChance > 0 then\n      showPage{id = 2, transition = \"instant\"}\n      local res = math.random(1, 6)\n      if res == 1 then\n        message(\"Враги друг другу в тишине готовят гибель хладнокровно... \")\n      elseif res == 2 then\n        message(\"Умру, иль буду жить — всë благо...\")\n      elseif res == 3 then\n        message(\"Что миг грядущий мне готовит...\")\n      elseif res == 4 then\n        message(\"Блестя на солнце, снег слепи́т...\")\n      elseif res == 5 then\n        message(\"Паду ли я, стрелой пронзëнный...\")\n      elseif res == 6 then\n        message(\"Блеснëт заутра луч денницы... А я уж буду во гробнице... Не то, не то... \")\n      end\n    end\n  elseif fireD == 1 then\n    showPage{id = 2, transition = \"instant\"}\n    stepAfter = 0\n  end\nend",
+        "text": "Шаг",
+        "no_transition": true,
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "var_no_more": [
+          "step",
+          18,
+          "immortal",
+          0
+        ],
+        "id": 2,
+        "instant": true,
+        "middle_answer": true
+      },
+      {
+        "no_transition": true,
+        "id": 2,
+        "text": "Шаг",
+        "lua_do": "function lua_do()\n  if step < 10 and fireP == 0 and fireD == 0 or step < 10 and fireP == 0 and fireD == 1 or step < 10 and fireP == 1 and fireD == 0 then\n    step = step <plus> 2\n    distance = distance - 2\n  elseif step >= 10 or step < 10 and fireP == 1 and fireD == 1 then\n    step = step <plus> 1\n    distance = distance - 1\n  end\n  if step > 10 then\n    aim = 10\n  end\n  if step > 1 and step < 10 then\n    aim = aim <plus> 2\n  end\n  if fireD == 0 and distance < 12 then\n    fireD = 1\n    stepAfter = 2\n    pictureD = 2\n    message(\"Дантес выстрелил и промахнулся!\")\n    showPage{id = 2}\n  elseif fireD == 0 and distance > 11 then\n    local danteChance = math.random(0, (10 - step))\n    if danteChance < 1 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      message(\"Дантес выстрелил и промахнулся!\")\n      showPage{id = 2}\n    elseif danteChance > 0 then\n      showPage{id = 2, transition = \"instant\"}\n      local res = math.random(1, 6)\n      if res == 1 then\n        message(\"Враги друг другу в тишине готовят гибель хладнокровно... \")\n      elseif res == 2 then\n        message(\"Умру, иль буду жить — всë благо...\")\n      elseif res == 3 then\n        message(\"Что миг грядущий мне готовит...\")\n      elseif res == 4 then\n        message(\"Блестя на солнце, снег слепи́т...\")\n      elseif res == 5 then\n        message(\"Паду ли я, стрелой пронзëнный...\")\n      elseif res == 6 then\n        message(\"Блеснëт заутра луч денницы... А я уж буду во гробнице... Не то, не то... \")\n      end\n    end\n  elseif fireD == 1 then\n    showPage{id = 2, transition = \"instant\"}\n    stepAfter = 0\n  end\nend",
+        "middle_answer": true,
+        "var_need": [
+          "immortal",
+          1,
+          "barrier",
+          1
+        ],
+        "instant": true,
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "middle_answer": false,
+        "text": "Выстрелить!",
+        "left_answer": true,
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "no_transition": true,
+        "lua_text": "function lua_text()\n  if step == 0 then\n    return [[Выстрелить!\nШанс: 10%]]\n  elseif step == 1 then\n    return [[Выстрелить!\nШанс: 10%]]\n  elseif step == 2 then\n    return [[Выстрелить!\nШанс: 20%]]\n  elseif step == 3 then\n    return [[Выстрелить!\nШанс: 30%]]\n  elseif step == 4 then\n    return [[Выстрелить!\nШанс: 40%]]\n  elseif step == 5 then\n    return [[Выстрелить!\nШанс: 50%]]\n  elseif step == 6 then\n    return [[Выстрелить!\nШанс: 60%]]\n  elseif step == 7 then\n    return [[Выстрелить!\nШанс: 70%]]\n  elseif step == 8 then\n    return [[Выстрелить!\nШанс: 80%]]\n  elseif step > 8 and step < 19 then\n    return [[Выстрелить!\nШанс: 90%]]\n  elseif step == 19 and (future == 0 or nil) then\n    return [[Выстрелить в упор!\nШанс: 100%]]\n  elseif step == 19 and future > 0 then\n    return [[Выстрелить в упор!\nШанс: 100%\n<<plus>0.7>(концовка \"Бесы\")]]\n  end\nend",
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\n  if fireP == 0 and step < 19 then\n    fireP = 1\n    message(\"Выстрел!\")\n    stepAfter = 2\n    chanceP = math.random(1, 10)\n    if chanceP <= aim then\n      if distance > 9 then\n        pushkin = pushkin\n        showPage{id = 4}\n      elseif distance < 10 then\n        pushkin = pushkin\n        showPage{id = 8}\n      end\n    elseif chanceP > aim then\n      showPage{id = 2}\n    end\n  elseif fireP == 0 and step == 19 then\n    fireP = 1\n    message(\"Выстрел!\")\n    pushkin = pushkin\n    showPage{id = 8}\n  elseif fireP == 1 then\n    message(\"Пистолет уже разряжен.\")\n  end\nend",
+        "var_no_more": [
+          "fireP",
+          0,
+          "step",
+          10
+        ],
+        "var_set": [
+          "pictureP",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "air",
+          1
+        ],
+        "lua_do": "function lua_do()\n  fireP = 1\n  fireAir = 1\n  stepAfter = 2\n  fireAirAfter = 2\n  message(\"Выстрел!\") \nend",
+        "text": "Выстрелить\nв воздух!",
+        "var_no_more": [
+          "fireP",
+          0
+        ],
+        "right_answer": true,
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Выстрелить в воздух!\n<<plus>0.7>(открывает возможность концовки \"Покой и воля\")]]\n  end\nend",
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "instant": true,
+        "id": 2
+      },
+      {
+        "no_transition": true,
+        "left_answer": true,
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Дать пощëчину!\n<<plus>0.7>(закрывает возможность концовки \"Покой и воля\" и открывает концовку \"Война\")]]\n  end\nend",
+        "var_need": [
+          "step",
+          19
+        ],
+        "id": 9,
+        "text": "Дать пощëчину",
+        "lua_do": "function lua_do()\n  dialog{\n    header = \"Удар!\",\n    text = [[— Ты получишь сегодня пулю, клеветник, это я тебе обещаю!\n\nДантес схватился за лицо. В его глазах плещется ненависть.]], \n    answers = {\n      {\n        text = \"Подайте пистолеты!\",\n        pressListener = function()\n          hit = hit <plus> 1\n          showPage{id = 9}\n          message(\"Второй раунд!\")\n          hideDialog()\n        end\n      }\n    }\n  }\nend",
+        "var_set": [
+          "distance",
+          20,
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "chanceP",
+          0,
+          "aim",
+          0,
+          "pictureP",
+          0,
+          "pictureD",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Подать руку\n<<plus>0.7>(концовка \"Покой и воля\")]]\n  end\nend",
+        "text": "Подать руку",
+        "middle_answer": false,
+        "var_need": [
+          "fireD",
+          1,
+          "fireP",
+          1,
+          "step",
+          19,
+          "fireAir",
+          1
+        ],
+        "id": 12,
+        "var_no_more": [
+          "hit",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "step",
+          11
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\n  step = step - 1\n  distance = distance <plus> 1\nend",
+        "text": "Отступить",
+        "middle_answer": true,
+        "var_no_more": [
+          "fireP",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "lua_text": "function lua_text()\n  if future > 0 and hit == 0 then\n    return [[Подайте пистолеты!\n<<plus>0.7>(новый раунд, закрывает возможность концовки \"Покой и воля\" до третьего раунда)]]\n  end\nend",
+        "lua_do": "function lua_do()\n  message(\"Второй раунд!\")\nend",
+        "id": 9,
+        "text": "Подайте пистолеты!",
+        "var_need": [
+          "fireD",
+          1,
+          "fireP",
+          1
+        ],
+        "var_set": [
+          "distance",
+          20,
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "chanceP",
+          0,
+          "aim",
+          0,
+          "pictureP",
+          0,
+          "pictureD",
+          0,
+          "barrier",
+          0
+        ]
+      },
+      {
+        "id": 16,
+        "text": " ",
+        "comment": true,
+        "run": [
+          16
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  g.iter = 1\n  if pictureD > 0 then\n    pictureD = pictureD - 1\n  end\n  if pictureP > 0 then\n    pictureP = pictureP - 1\n  end\n  if stepAfter > 0 then\n    stepAfter = stepAfter - 1\n  end\n  if fireAirAfter > 0 then\n    fireAirAfter = fireAirAfter - 1\n  end\nend",
+        "text": " "
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "\n\n\n\n\n\n_______________",
+        "id": 2,
+        "var_need": [
+          "global god",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "[Пушкин смертен]",
+        "lua_text": "function lua_text()\n  if immortal > 0 then\n    return \"[Пушкин бессмертен]\"\n  end\nend",
+        "var_need": [
+          "global god",
+          1
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return \"[Пушкин видит будущее]\"\n  end\nend",
+        "id": 2,
+        "text": "[Пушкин не видит будущее]",
+        "comment": true,
+        "var_need": [
+          "global god",
+          1
+        ]
+      },
+      {
+        "var_no_more": [
+          "immortal",
+          0
+        ],
+        "instant": true,
+        "text": "[Обессмертить Пушкина]",
+        "id": 2,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "lua_do": "function lua_do()\n  message(\"Бессмертие души, бессмертие творений...\")\nend",
+        "var_set": [
+          "immortal",
+          1,
+          "global imm",
+          1
+        ]
+      },
+      {
+        "text": "[Сделать смертным]",
+        "id": 2,
+        "var_need": [
+          "immortal",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "immortal",
+          0,
+          "global dead",
+          1
+        ]
+      },
+      {
+        "var_no_more": [
+          "future",
+          0
+        ],
+        "instant": true,
+        "text": "[Увидеть будущее]",
+        "id": 2,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "lua_do": "function lua_do()\n  message(\"Сердце в будущем живëт, настоящее уныло...\")\nend",
+        "var_set": [
+          "future",
+          1,
+          "global fut",
+          1
+        ]
+      },
+      {
+        "var_need": [
+          "future",
+          1
+        ],
+        "id": 2,
+        "text": "[Не видеть будущее]",
+        "instant": true,
+        "var_set": [
+          "future",
+          0,
+          "global blind",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 3,
+        "newAnswerImage": [
+          "https://i.ibb.co/cYsqmvd/press-r-4-A8-EB3-E0-E044-49-F4-A391-C13-B33-A8-B30-F-f.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 3,
+        "text": "Роковая пуля попала в цель. Поэт, согнувшись, упал в снег.\n\nСекунданты бросились на помощь. Пушкин слабо охнул, приподнял голову и усмехнулся. Природная весëлость не покидала его даже перед лицом смерти. \n\n—<$2> Александр Сергеевич... Вы желаете продолжать?",
+        "comment": true,
+        "lua_text": "function lua_text()\n  if fireP == 1 and bolnitsa == 0 then\n    return [[Роковая пуля попала в цель. Поэт, согнувшись, упал в снег.\n\nСекунданты бросились на помощь. Пушкин слабо охнул, приподнял голову и горько усмехнулся.\n\n—<$2> Александр Сергеевич... Дуэль окончена. Вы можете встать? Нужно скорее везти вас домой!]]\n  elseif fireP == 1 and bolnitsa == 1 then\n    return [[Секунданты замялись. Данзас смущëнно напомнил:\n\n—<$2> Александр Сергеевич, ну что вы... Если вас в больницу, то начнëтся следствие. Вам будет грозить виселица за участие в дуэли, а нам каторга. Не беспокойтесь, мы найдëм лучших врачей, вам помогут!]]\n  elseif fireP == 0 and bolnitsa == 0 and talk1 == 1 then\n    return [[Роковая пуля попала в цель. Поэт, согнувшись, упал в снег.\n\nСекунданты бросились на помощь. Пушкин слабо охнул, приподнял голову и усмехнулся.<$2> «Всë-таки выстрелил. Кишка тонка взглянуть в глаза...»\n\n— Александр Сергеевич... Вы желаете продолжать?]]\n  end\nend"
+      },
+      {
+        "var_add": [
+          "t3",
+          1
+        ],
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Взять грех на душу\n(концовка \"Завещание\")]]\n  end\nend",
+        "id": 14,
+        "text": "Взять грех на душу",
+        "instant": true,
+        "var_no_more": [
+          "t3",
+          0,
+          "fireP",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "var_need": [
+          "fireP",
+          1
+        ],
+        "middle_answer": false,
+        "text": "[Пистолет разряжен...]",
+        "id": 3,
+        "var_no_more": [
+          "bolnitsa",
+          0
+        ]
+      },
+      {
+        "var_no_more": [
+          "bolnitsa",
+          0,
+          "fireAir",
+          0
+        ],
+        "var_need": [
+          "fireP",
+          1
+        ],
+        "id": 3,
+        "instant": true,
+        "text": "Ехать в больницу",
+        "var_set": [
+          "bolnitsa",
+          1
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\n  if fireP == 0 or fireP == 1 and fireAir == 1 then\n    return true\n  else\n    return false\n  end\nend",
+        "id": 5,
+        "text": "Ехать домой",
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Ехать домой\n(концовка \"Exegi monumentum\")]]\n  end\nend",
+        "var_no_more": [
+          "t3",
+          0
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Ехать домой\n(концовка \"Завещание\")]]\n  end\nend",
+        "id": 6,
+        "var_need": [
+          "fireP",
+          1
+        ],
+        "text": "Ехать домой",
+        "var_no_more": [
+          "fireAir",
+          0
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\n  if fireP == 1 and step > 10 then\n    return [[—<$2> Я в силах стрелять! Подайте мне новый!\n\n<$1>Секундант передал запасной пистолет. Дрожащая рука с трудом подняла тяжëлое оружие. \n\nФигура Дантеса неподвижно застыла, застилаемая саваном снега.]]\n  end\nend",
+        "id": 3,
+        "text": "—<$2> Я в силах стрелять!\n\n<$1>Секундант подал выпавший в снег пистолет. Дрожащая рука с трудом подняла тяжëлое оружие. \n\nФигура Дантеса неподвижно застыла, застилаемая саваном снега.",
+        "comment": true,
+        "var_need": [
+          "t3",
+          1
+        ]
+      },
+      {
+        "text": "Спустить курок",
+        "id": 7,
+        "var_need": [
+          "t3",
+          1
+        ],
+        "lua_do": "function lua_do()\n  local rect = display.newRect(display.contentCenterX, display.contentCenterY, display.contentCenterX*2, display.contentCenterY*2) canvas.parent.parent.parent.parent.parent.parent.parent:insert(rect)\n  rect:setFillColor(252,252,238)\n  transition.from(rect, {time = 400, alpha = 0, transition = easing.outExpo, onComplete = function() \n  timer.performWithDelay(400, function() \n  if rect and rect.removeSelf then\n  transition.to(rect, {\n  time = 400, \n  alpha = 0, \n  transition = easing.inExpo, \n  onComplete = function() \n  if rect and rect.removeSelf then \n  rect:removeSelf() \n  rect = nill\n  end\n  end\n  }) \n  end\n  end) \n  end\n  })\nend",
+        "var_set": [
+          "global honor",
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "text": " ",
+        "run": [
+          15
+        ],
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 4,
+        "text": " ",
+        "run": [
+          15
+        ],
+        "comment": true
+      },
+      {
+        "id": 4,
+        "newAnswerImage": [
+          "https://i.ibb.co/Bzr6Yqk/IMG-20250104-065955.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 4,
+        "text": "Вот он. Завистник и обидчик. Подлый клеветник. На мушке, на расстоянии курка от смерти, за секунду до гибели. \n\nПороховой дым заволок ненавистную фигуру, слившись с белым снежным туманом. ",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "t4",
+          1
+        ],
+        "id": 17,
+        "text": "Присмотреться",
+        "instant": true,
+        "var_no_more": [
+          "t4",
+          0
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Он повержен. Лежит на снегу, стремительно краснеющем вокруг.\n<$2>О, мщенье, бурная мечта\nОжесточенного страданья! \n<$1>Подлец ответил за свои грязные наветы сполна! \n\nПочему же... Почему же нет радости в груди, почему нет той весëлой злобы, что наполняла сердце ещë минуты назад, когда они стояли лицом к лицу?\n",
+        "comment": true,
+        "var_need": [
+          "t4",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "var_need": [
+          "t4",
+          1
+        ],
+        "id": 18,
+        "text": "***"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 5,
+        "newAnswerImage": [
+          "https://i.ibb.co/N9WZpRj/Pushkin-s-duel-with-d-Anthes-atrist-A-Naumov-1884.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 5,
+        "text": "—<$2> Оставьте. Бог нас рассудил. \n\n<$1>Тяжелораненого Пушкина спешно отвезли домой, на набережную Мойки. \nПо счастливому стечению обстоятельств, Николай Арендт, императорский лейб-медик и друг Александра Сергеевича, находился в этот момент неподалëку, собираясь уже отъезжать от пациента домой. Перехваченный спутниками поэта на улице, он был препровождëн в дом, и сразу же приступил к лечению. \n\nРана оказалась тяжелейшая. Хирург извлëк пулю, но не дал никаких гарантий выздоровления. Тянулись мучительные часы между жизнью и смертью. Наконец Пушкин впал в забытьë. ",
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "***",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 5,
+        "text": "Спустя три месяца Александр Сергеевич, опираясь на руку жены, впервые подошëл к окну и распахнул форточку. В лучах весеннего солнца искрились падающие с крыши капли, под окном ругались извозчики, дивно пахло свежеиспечëнным хлебом. Петербург оттаивал от зимнего оцепенения, наполненный предчувствием весеннего тепла. \n\nПоэт улыбнулся и сел за рабочий стол. Столько ещë не написано и не рассказано! ",
+        "comment": true
+      },
+      {
+        "comment": true,
+        "id": 5,
+        "text": "_______________\n\n<$2>Веленью божию, о муза, будь послушна,\nОбиды не страшась, не требуя венца,\nХвалу и клевету приемли равнодушно\nИ не оспоривай глупца.",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "id": 5,
+        "newAnswerImage": [
+          "https://i.ibb.co/1743q6v/IMG-20250103-023022.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "var_add": [
+          "global dantes",
+          1
+        ],
+        "id": 21,
+        "text": "<$2>Exegi monumentum",
+        "middle_answer": true,
+        "var_set": [
+          "global monument",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 6,
+        "text": "<$2>СМЕРТЬ ПОЭТА",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 6,
+        "newAnswerImage": [
+          "https://i.ibb.co/RbkhSd4/Lumii-20250103-025542142.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 6,
+        "text": "<$1>Пушкина спешно отвезли домой, на набережную Мойки. Найденые поблизости медики-акушеры перевязали раненого и оказали первую помощь, пока его товарищи отправились на поиски хирурга. Через пару часов Николай Арендт, лейб-медик императора, приехал на осмотр. \n\nРана оказалась тяжелейшая. Врач не решился извлечь пулю, боясь усугубить ситуацию, так как началось сильное воспаление и кровотечение. Тянулись мучительные часы между жизнью и смертью. Пушкин впал в забытьë. ",
+        "comment": true
+      },
+      {
+        "middle_answer": true,
+        "text": "***",
+        "comment": true,
+        "id": 6
+      },
+      {
+        "id": 6,
+        "text": "Холодный ветер гнал тучи снега по набережной, над головами тысяч людей. Толпа стояла в безмолвном ожидании уже много часов. \nДверь дома медленно отворилась. Поэт Жуковский, бывший при умирающем до самого конца, снял шапку. \n\n—<$2> Александр Сергеевич Пушкин скончался. \n\n<$1>Люди обнажили головы. \n\n\nПо распоряжению императора Николая Первого, во избежание беспорядков и брожений вольнодумцев прощание с поэтом было в последний момент запрещено. После закрытого отпевания покойного ночью перевезли на место последнего упокоения, к могилам предков в Святогорском монастыре. ",
+        "comment": true
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "_______________\n\n<$2>Хотел я завтра умереть.\nИ в мир волшебный наслажденья, \nНа тихой берег вод забвенья, \nВеселой тенью отлететь… \n\nО нет, мне жизнь не надоела, \nЯ жить люблю, я жить хочу, \nДуша не вовсе охладела, \nУтратя молодость свою.\n\nТак пусть на гробе, где певец\nИсчезнет в рощах Геликона, \nНапишет беглый ваш резец: \n«Здесь дремлет Юноша-Мудрец,\nПитомец Нег и Аполлона»",
+        "id": 6,
+        "left_answer": false
+      },
+      {
+        "id": 6,
+        "newAnswerImage": [
+          "https://i.ibb.co/1743q6v/IMG-20250103-023022.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "var_add": [
+          "global dantes",
+          1
+        ],
+        "id": 21,
+        "text": "<$2>Завещание",
+        "middle_answer": true,
+        "var_set": [
+          "global promise",
+          1,
+          "global honor",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 7,
+        "newAnswerImage": [
+          "https://i.ibb.co/XV2gr09/e0c37508-4de4-5dc4-b5bf-f843b96d28a9.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 7,
+        "text": "Силуэт, проступавший сквозь снежный туман, упал. \n\n<$2>«Браво!» \n<$1>Александр Сергеевич бессильно откинулся на спину. Секунданты метнулись к поверженному противнику, оставив раненого наедине с небом и снегом. Снег кружился, оседал на ресницах, белил чëрные кудри, убаюкивал...",
+        "comment": true
+      },
+      {
+        "id": 6,
+        "text": "***",
+        "var_add": [
+          "global pushkin",
+          1
+        ],
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 8,
+        "text": " ",
+        "run": [
+          15
+        ],
+        "comment": true
+      },
+      {
+        "id": 4,
+        "newAnswerImage": [
+          "https://i.ibb.co/Bzr6Yqk/IMG-20250104-065955.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 4,
+        "text": "Вот он. Завистник и обидчик. Подлый клеветник. Его наглые глаза смотрят прямо, не стесняясь. Как смеет он! За опороченую честь жены, за униженное имя потомка Ганнибала мерзавец ответит, и прямо сейчас! \n\nПороховой дым заволок ненавистное лицо, слившись с вьюгой. ",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "t8",
+          1
+        ],
+        "id": 19,
+        "instant": true,
+        "text": "Присмотреться",
+        "var_no_more": [
+          "t8",
+          0
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Он повержен. Лежит на снегу, стремительно краснеющем вокруг того, что только что было тем омерзительным лицом. \n<$2>О, мщенье, бурная мечта\nОжесточенного страданья! \n<$1>\nПочему же... Почему же нет радости в груди, почему нет даже той праведной ярости, что наполняла сердце ещë минуты назад, когда они столкнулись в дуэли взглядов?\n",
+        "comment": true,
+        "var_need": [
+          "t8",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "var_need": [
+          "t8",
+          1
+        ],
+        "id": 20,
+        "text": "***"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "empty",
+    "answers": [
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/1XhQ2f4/1023-b.jpg"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": " ",
+        "var_no_more": [
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/pb0rHZk/i-63.jpg"
+        ],
+        "lua_if": "function lua_if()\n  if step > 0 or fireP == 1 then\n    return true\n  end\nend",
+        "id": 9,
+        "text": " ",
+        "comment": true,
+        "var_no_more": [
+          "pictureD",
+          0,
+          "pictureP",
+          0,
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/9cp7z7D/6-vn-Duel-Pushkina.jpg"
+        ],
+        "comment": true,
+        "id": 9,
+        "var_need": [
+          "pictureD",
+          1
+        ],
+        "text": " ",
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/5nXTTB0/Lumii-20250104-042804157.jpg"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": " ",
+        "var_need": [
+          "pictureP",
+          1
+        ],
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/Tt5YXfH/Lumii-20250103-044428270.png"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": " ",
+        "var_need": [
+          "step",
+          19
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\n  if fireD == 1 and fireP == 0 or fireD == 1 and fireP == 1 and fireAirAfter == 0 then\n    local tex = math.random(1, 3)\n    if tex == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nПуля просвистела над кудрявой головой, не причинив вреда. Дантес выругался сквозь зубы и опустил пистолет.]]\n    elseif tex == 2 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nПуля ушла куда-то вбок. Пушкин усмехнулся, сбросив охватившее его на миг оцепенение.]]\n    elseif tex == 3 and round == 0 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nПоэт перевëл дыхание. Посланница смерти не нашла дорогу к его сердцу.]]\n    elseif tex == 3 and round == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, кружились в небе.\n\nНевредим, снова. Поэт отвëл взгляд от поникшего противника и посмотрел на небо. Стучащая в висках кровь и рвущаяся из груди юношеская весëлость сами собой рождали строки:\n\n<$2>Мне бой знаком — люблю я звук мечей.\nОт первых лет поклонник бранной славы,\nЛюблю войны кровавые забавы,\nИ смерти мысль мила душе моей.]]\n    end\n  elseif fireP == 1 and fireAir == 0 then\n    local tex = math.random(1, 2)\n    if tex == 1 and fireD == 0 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nРука судьбы отвела пулю от француза. Что-ж, судьбе народы все покорны. Пушкин приосанился, готовясь встретить смерть с достоинством.]]\n    elseif tex == 1 and fireD == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nДантес вздрогнул. Пуля едва не задела волосы. Пистолеты противников пусты. Неужели ещë один раунд?]]\n    elseif tex == 2 and fireD == 0 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, .\n\nНет, не убил. Поэта охватило странное чувство — смесь досады и облегчения. Он прикрыл глаза, готовясь к своей судьбе.]]\n    elseif tex == 2 and fireD == 1 then\n      return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, .\n\nПромах. Подвëл ли пистолет, или же рука, боясь убить, дрогнула в последний момент? Провидение не желает смерти сегодня. Но что человеку до этого, когда на кону честь?]]\n    end\n  elseif fireP == 1 and fireAir == 1 and fireAirAfter == 1 then\n    return [[Вот он. Завистник и обидчик. Подлый клеветник. На мушке, на расстоянии курка от смерти, за секунду до гибели. Не достойный еë? Не заслуживший еë?\n\nВыстрел разорвал морозный воздух. Позади охнули секунданты. Пистолет разряжен в небо — дуэлянт умывает руки.]]\n  end\nend",
+        "comment": true,
+        "id": 2,
+        "var_need": [
+          "stepAfter",
+          1
+        ],
+        "text": " ",
+        "lua_if": "function lua_if()\n  if fireD == 1 or fireP == 1 then\n    return true\n  end\nend"
+      },
+      {
+        "comment": true,
+        "id": 2,
+        "text": "Чëрные птицы, покружив немного, вновь рассаживаются по ветвям, словно зрители на трибуны. \n\nСнег валит всë гуще.\nМорозный воздух холодит пальцы. \nТишина наполнена угрожающим предчувствием. ",
+        "lua_text": "function lua_text()\n if step == 0 and hit == 0 and barrier == 1 and fireD == 0 and fireP == 0 then\n    return [[Чëрные птицы, покружив немного, вновь рассаживаются по ветвям, словно зрители на трибуны. Люди, степенно раскланявшись под взглядами любопытных глаз, разошлись на позиции.\n\nСнег скрипит под ногами.\nТишина наполнена угрожающим предчувствием.]]\n  elseif step == 0 and hit > 0 and fireD == 0 and fireP == 0 then\n    return [[Чëрные птицы, покружив немного, вновь рассаживаются по ветвям, словно зрители на трибуны. Люди, разгорячëнные перепалкой, стремительно расходятся, держа наготове новые пистолеты. \n\nСнег скрипит под ногами.\nТишина наполнена угрожающим предчувствием.]]\n  elseif step > 0 and fireD == 0 and fireP == 0 then\n    return [[Противники сходятся, вытянув навстречу пистолеты. \n\nСнег скрипит под ногами. Редкие порывы ветра ерошат волосы, посыпая их белым пеплом.]]\n  elseif fireD == 0 and fireP == 1 then\n    return [[Пороховой дым развеял морозный ветер. Невредимый Дантес, показавшийся из-за белой завесы, хладнокровно продолжает шагать навстречу.\n\nСкованная морозом природа застыла, словно в ожидании роковой развязки.]]\n  elseif fireD == 1 and fireP == 0 then\n    return [[Громовое эхо прокатилось по подлеску и затихло. И вновь судьба дарит поэту шанс.\n\nДуэль продолжается.]]\n  elseif fireD == 1 and fireP == 1 then\n  return [[Стая ворон, распуганная выстрелами, кружит в небе. \n\nПротивники разрядили пистолеты. Оба вхолостую. Снова. ]]\n  end\nend",
+        "var_no_more": [
+          "stepAfter",
+          0
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\n  if hit == 1 then\n    return [[—<$2> Второй раунд завершился по-прежнему безрезультатно. Господа всë ещë желают продолжать?\n\n<$1>Дантес:\n—<$2> О, теперь желаю, желаю страстно. Этот подлец ответит за свою дерзость!]]\n  end\nend",
+        "id": 9,
+        "text": "—<$2> Второй раунд завершился по-прежнему безрезультатно. Господа всë ещë желают продолжать?\n\n<$1>Дантес:\n—<$2> Я не отказываюсь от своих слов. Однако ж оскорбление не исчерпано, по-сему дуэль необходимо продолжать.",
+        "comment": true,
+        "var_need": [
+          "fireD",
+          1,
+          "fireP",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n  if fireAir == 1 then\n    return \"Секунданты растеряно наблюдают за происходящим. Эта дуэль запомнится им надолго.\"\n  end\nend",
+        "id": 2,
+        "text": "— <$2>Александр Сергеевич, остановитесь! Вы нарушаете правила, вернитесь к барьеру, или остановите поединок! ",
+        "var_need": [
+          "step",
+          11
+        ],
+        "var_no_more": [
+          "fireP",
+          0
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\n  if fireD == 1 and fireP == 1 then\n    return false\n  else\n    return true\n  end\nend",
+        "lua_text": "function lua_text()\n  if step == 0 and hit == 0 and fireD == 0 and fireP == 0 and barrier == 1 then\n    return [[— <$2>«Можете сходиться!»]]\n  elseif step == 0 and hit == 0 and fireD == 0 and fireP == 0 and barrier == 0 then\n    return [[—<$2> «Господа, напоминаю — барьер десять шагов, стреляете с любого расстояния. Можете продолжать.»]]\n  elseif step > 0 and step < 10 and fireD == 0 and fireP == 0 then\n    return [[— <$2>«Барьер десять шагов, стрелять можете с любого расстояния!»]]\n  elseif step == 0 and hit > 0 and fireD == 0 and fireP == 0 then\n    return [[— <$2>«Господа, прошу, сохраняйте спокойствие! Напоминаю, барьер десять шагов, стрелять можете с любого расстояния!»]]\n  elseif step < 10 and fireD == 1 and fireP == 0 then\n    return [[— <$2>«Господин Дантес, продолжайте движение к барьеру. Господин Пушкин, выстрел за вами.»\n\n<$1>Противники сходятся.]]\n  elseif step < 10 and fireD == 0 and fireP == 1 then\n    return [[— <$2>«Господин Пушкин, продолжайте движение к барьеру. Господин Дантес, выстрел за вами.»\n\n<$1>Противники сходятся.]]\n  elseif step == 10 and fireD == 1 and fireP == 0 then\n    return [[— <$2>«Барьер! Господин Пушкин, выстрел за вами.»]]\n  elseif step == 10 and fireD == 0 and fireP == 1 then\n    return [[— <$2>«Барьер! Господин Дантес, выстрел за вами.»]]\n  elseif step == 10 and fireD == 0 and fireP == 0 then\n    return [[— <$2>«Барьер! Господа, вы отказываетесь от выстрелов?»]]\n  end\nend",
+        "id": 2,
+        "text": "Секунданты подали пистолеты. \n\n— <$2>«Становитесь на расстоянии двадцати шагов. Барьер десять шагов, стрелять можете с любого расстояния. Прошу разойтись!»\n",
+        "comment": true,
+        "var_no_more": [
+          "stepAfter",
+          0,
+          "step",
+          10,
+          "talk",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "text": "—<$2> Зачем тебе это, Жорж? Ужель тебе и твоим дружкам столь сильно затмила глаза зависть, что вы опустились до публичных инсинуаций?\n\n— Я не собираюсь оправдываться перед тобой. Раз ты поверил, что я способен на это, значит мнение твоë не изменить. Но стрелять первым в тебя — ниже моего достоинства. Так что давай, жми на курок.",
+        "comment": true,
+        "var_need": [
+          "talk",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 9,
+        "text": "Дантес взглянул в глаза Пушкина.\n\n—<$2> И что теперь? Застрелишь меня, как бешенного пса?",
+        "var_need": [
+          "dantePont",
+          1
+        ],
+        "var_no_more": [
+          "fireP",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "_______________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\n  if distance > 9 then\n    return \"Расстояние \" .. distance .. \" шагов.\"\n  elseif distance < 10 and distance > 4 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шагов. <s>\nСлишком близко!\"\n  elseif distance < 10 and distance > 4 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шагов.\"\n  elseif distance < 5 and distance > 1 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шага. <s>\nСлишком близко!\"\n  elseif distance < 5 and distance > 1 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шага.\"\n  elseif distance == 1 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шаг. <s>\nСлишком близко!\"\n  elseif distance == 1 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шаг.\"\n  end\nend",
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "middle_answer": true,
+        "text": "Расстояние",
+        "id": 2,
+        "comment": true
+      },
+      {
+        "var_set": [
+          "barrier",
+          1
+        ],
+        "id": 9,
+        "instant": true,
+        "text": "—<$2> «К барьеру!»",
+        "var_no_more": [
+          "hit",
+          0,
+          "barrier",
+          0
+        ]
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "instant": true,
+        "var_no_more": [
+          "step",
+          18,
+          "immortal",
+          0
+        ],
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "no_transition": true,
+        "lua_do": "function lua_do()\n  if step < 10 and fireP == 0 and fireD == 0 or step < 10 and fireP == 1 and fireD == 0 or step < 10 and fireP == 0 and fireD == 1 then\n    step = step <plus> 2\n    distance = distance - 2\n  elseif step >= 10 or step < 10 and fireP == 1 and fireD == 1 then\n    step = step <plus> 1\n    distance = distance - 1\n  end\n  if step > 10 then\n    aim = 10\n  end\n  if step > 1 and step < 10 then\n    aim = aim <plus> 2\n  end\n  if fireD == 0 and distance < 12 and distance > 1 and talk1 == 0 then\n    local danteChance = math.random(0, 1)\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      dantes = dantes\n      showPage{id = 3}\n    elseif danteChance == 1 then\n      showPage{id = 9, transition = \"instant\"}\n    end\n  elseif fireD == 0 and distance < 12 and distance > 1 and talk1 == 1 then\n    local danteChance = math.random(0, 2)\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      dantes = dantes\n      showPage{id = 3}\n    elseif danteChance > 0 then\n      showPage{id = 9, transition = \"instant\"}\n    end\n  elseif fireD == 0 and distance == 1 and talk1 == 0 then\n    fireD = 1\n    stepAfter = 2\n    pictureD = 2\n    dantes = dantes\n    showPage{id = 3}\n  elseif fireP == 0 and fireD == 1 and distance == 1 and talk1 == 1 or fireP == 0 and distance == 1 and talk1 == 0 then\n    dantePont = 1\n    showPage{id = 9, transition = \"instant\"}\n  elseif fireD == 0 and distance > 11 then\n    local danteChance = math.random(0, (10 - aim))\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      local chanceD = math.random(1, 10)\n      if chanceD <= aim then\n        dantes = dantes\n        showPage{id = 3}\n      else\n        message(\"Дантес выстрелил и промахнулся!\")\n        fireD = 1\n        showPage{id = 9, transition = \"instant\"}\n      end\n    elseif danteChance > 0 then\n      showPage{id = 9, transition = \"instant\"}\n      local res = math.random(1, 6)\n      if res == 1 then\n        message(\"Враги друг другу в тишине готовят гибель хладнокровно... \")\n      elseif res == 2 then\n        message(\"Умру, иль буду жить — всë благо...\")\n      elseif res == 3 then\n        message(\"Что миг грядущий мне готовит...\")\n      elseif res == 4 then\n        message(\"Перед собой кто смерти не видал, тот полного веселья не вкушал...\")\n      elseif res == 5 then\n        message(\"Паду ли я, стрелой пронзëнный...\")\n      elseif res == 6 then\n        message(\"Ты прострелен на дуеле, ты разрублен на войне, хоть герой ты в самом деле, но повеса ты вполне...\")\n      end\n    end\n  elseif fireD == 1 then\n    showPage{id = 9, transition = \"instant\"}\n  end\n  if pictureD > 0 then\n    pictureD = 0\n  end\n  if pictureP > 0 then\n    pictureP = 0\n  end\nend",
+        "text": "Шаг",
+        "id": 9,
+        "var_set": [
+          "talk",
+          0
+        ]
+      },
+      {
+        "no_transition": true,
+        "id": 9,
+        "text": "Шаг",
+        "lua_do": "function lua_do()\n  if step < 10 and fireP == 0 and fireD == 0 or step < 10 and fireP == 1 and fireD == 0 or step < 10 and fireP == 0 and fireD == 1 then\n    step = step <plus> 2\n    distance = distance - 2\n  elseif step >= 10 or step < 10 and fireP == 1 and fireD == 1 then\n    step = step <plus> 1\n    distance = distance - 1\n  end\n  if step > 10 then\n    aim = 10\n  end\n  if step > 1 and step < 10 then\n    aim = aim <plus> 2\n  end\n  if fireD == 0 and distance < 12 and distance > 1 and talk1 == 0 then\n    local danteChance = math.random(0, 1)\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      showPage{id = 9, transition = \"instant\"}\n      message(\"Дантес выстрелил и промахнулся!\")\n      showPage{id = 9, transition = \"instant\"}\n    elseif danteChance > 0 then\n      showPage{id = 9, transition = \"instant\"}\n    end\n  elseif fireD == 0 and distance < 12 and distance > 1 and talk1 == 1 then\n    local danteChance = math.random(0, 2)\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      showPage{id = 9, transition = \"instant\"}\n      message(\"Дантес выстрелил и промахнулся!\")\n    elseif danteChance > 0 then\n      showPage{id = 9, transition = \"instant\"}\n    end\n  elseif fireD == 0 and distance == 1 and talk1 == 0 then\n    fireD = 1\n    stepAfter = 2\n    pictureD = 2\n    showPage{id = 9}\n    message(\"Дантес выстрелил и промахнулся!\")\n  elseif fireP == 0 and fireD == 1 and distance == 1 and talk1 == 1 or fireP == 0 and distance == 1 and talk1 == 0 then\n    dantePont = 1\n    showPage{id = 9, transition = \"instant\"}\n  elseif fireD == 0 and distance > 11 then\n    local danteChance = math.random(0, (10 - aim))\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      local chanceD = math.random(1, 10)\n      message(\"Дантес выстрелил и промахнулся!\")\n      fireD = 1\n      showPage{id = 9, transition = \"instant\"}\n    elseif danteChance > 0 then\n      showPage{id = 9, transition = \"instant\"}\n      local res = math.random(1, 6)\n      if res == 1 then\n        message(\"Враги друг другу в тишине готовят гибель хладнокровно... \")\n      elseif res == 2 then\n        message(\"Умру, иль буду жить — всë благо...\")\n      elseif res == 3 then\n        message(\"Что миг грядущий мне готовит...\")\n      elseif res == 4 then\n        message(\"Перед собой кто смерти не видал, тот полного веселья не вкушал...\")\n      elseif res == 5 then\n        message(\"Паду ли я, стрелой пронзëнный...\")\n      elseif res == 6 then\n        message(\"Ты прострелен на дуеле, ты разрублен на войне, хоть герой ты в самом деле, но повеса ты вполне...\")\n      end\n    end\n  elseif fireD == 1 then\n    showPage{id = 9, transition = \"instant\"}\n  end\n  if pictureD > 0 then\n    pictureD = 0\n  end\n  if pictureP > 0 then\n    pictureP = 0\n  end\nend",
+        "middle_answer": true,
+        "var_need": [
+          "immortal",
+          1,
+          "barrier",
+          1
+        ],
+        "var_set": [
+          "talk",
+          0
+        ],
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\n  if fireP == 0 and step < 19 then\n    fireP = 1\n    message(\"Выстрел!\")\n    stepAfter = 2\n    pictureP = 2\n    chanceP = math.random(1, 10)\n    if chanceP <= aim then\n      if distance > 9 then\n        pushkin = pushkin\n        showPage{id = 4}\n      elseif distance < 10 then\n        pushkin = pushkin\n        showPage{id = 8}\n      end\n    elseif chanceP > aim then\n      showPage{id = 9}\n    end\n  elseif fireP == 0 and step > 10 then\n    fireP = 1\n    message(\"Выстрел!\")\n    showPage{id = 8}\n  elseif fireP == 1 then\n    message(\"Пистолет уже разряжен.\")\n  end\nend",
+        "instant": true,
+        "var_no_more": [
+          "fireP",
+          0
+        ],
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "no_transition": true,
+        "lua_text": "function lua_text()\n  if step == 0 then\n    return [[Выстрелить!\nШанс: 10%]]\n  elseif step == 1 then\n    return [[Выстрелить!\nШанс: 10%]]\n  elseif step == 2 then\n    return [[Выстрелить!\nШанс: 20%]]\n  elseif step == 3 then\n    return [[Выстрелить!\nШанс: 30%]]\n  elseif step == 4 then\n    return [[Выстрелить!\nШанс: 40%]]\n  elseif step == 5 then\n    return [[Выстрелить!\nШанс: 50%]]\n  elseif step == 6 then\n    return [[Выстрелить!\nШанс: 60%]]\n  elseif step == 7 then\n    return [[Выстрелить!\nШанс: 70%]]\n  elseif step == 8 then\n    return [[Выстрелить!\nШанс: 80%]]\n  elseif step > 8 and step < 19 then\n    return [[Выстрелить!\nШанс: 90%]]\n    elseif step == 19 and (future == 0 or nil) then\n    return [[Выстрелить в упор!\nШанс: 100%]]\n  elseif step == 19 and future > 0 then\n    return [[Выстрелить в упор!\nШанс: 100%\n<<plus>0.7>(концовка \"Бесы\")]]\n  end\nend",
+        "left_answer": true,
+        "middle_answer": false,
+        "text": "Выстрелить!",
+        "id": 9,
+        "var_set": [
+          "talk",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "air",
+          1
+        ],
+        "lua_do": "function lua_do()\n  fireP = 1\n  fireAir = 1\n  fireAirAfter = 2\n  stepAfter = 2\n  message(\"Выстрел!\") \nend",
+        "instant": true,
+        "var_no_more": [
+          "fireP",
+          0,
+          "hit",
+          0
+        ],
+        "right_answer": true,
+        "lua_text": "function lua_text()\n  if future > 0 and hit == 0 then\n    return [[Выстрелить в воздух!\n<<plus>0.7>(открывает возможность концовки \"Покой и воля\")]]\n  end\nend",
+        "text": "Выстрелить в воздух",
+        "var_need": [
+          "barrier",
+          1
+        ],
+        "id": 9,
+        "var_set": [
+          "talk",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 9,
+        "var_need": [
+          "hit",
+          1
+        ],
+        "text": "[Сейчас не до благородства!]",
+        "var_no_more": [
+          "step",
+          18,
+          "fireP",
+          0
+        ]
+      },
+      {
+        "id": 9,
+        "var_need": [
+          "step",
+          19
+        ],
+        "left_answer": false,
+        "right_answer": true,
+        "lua_text": "function lua_text()\n  if future > 0 and hit == 0 then\n    return [[Дать пощëчину!\n<<plus>0.7>(закрывает возможность концовки \"Покой и воля\" и открывает концовку \"Война\")]]\n  end\nend",
+        "no_transition": true,
+        "middle_answer": false,
+        "text": "Дать пощëчину",
+        "lua_do": "function lua_do()\n  if hit == 1 then\n    dialog{\n      header = \"Удар!\",\n      text = [[— Это тебе за подлеца, мерзавец!\n\nДантес охнул и зарычал от злости. \n\n— В этот раз я точно тебя убью!]], \n      answers = {\n        {\n          text = \"Подайте пистолеты!\",\n          pressListener = function()\n            hit = hit <plus> 1\n            showPage{id = 10}\n            message(\"Третий раунд!\")\n            hideDialog()\n          end\n        }\n      }\n    }\n  elseif hit == 0 then\n    dialog{\n      header = \"Удар!\",\n      text = [[— Ты получишь сегодня пулю, клеветник, это я тебе обещаю!\n\nДантес схватился за лицо. В его глазах плещется ненависть.]], \n      answers = {\n        {\n          text = \"Подайте пистолеты!\",\n          pressListener = function()\n            hit = hit <plus> 1\n            showPage{id = 10}\n            message(\"Третий раунд!\")\n            hideDialog()\n          end\n        }\n      }\n    }\n  end\nend",
+        "var_set": [
+          "distance",
+          20,
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "chanceP",
+          0,
+          "aim",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "step",
+          11
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "lua_do": "function lua_do()\n  step = step - 1\n  distance = distance <plus> 1\nend",
+        "text": "Отступить",
+        "id": 9,
+        "var_no_more": [
+          "fireP",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "right_answer": false,
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Подайте пистолеты!\n<<plus>0.7>(третий раунд)]]\n  end\nend",
+        "lua_do": "function lua_do()\n  message(\"Третий раунд!\")\nend",
+        "id": 10,
+        "var_need": [
+          "fireD",
+          1,
+          "fireP",
+          1
+        ],
+        "text": "Подайте пистолеты!",
+        "var_set": [
+          "distance",
+          20,
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "chanceP",
+          0,
+          "aim",
+          0,
+          "pictureP",
+          0,
+          "pictureD",
+          0,
+          "talk",
+          0
+        ]
+      },
+      {
+        "var_no_more": [
+          "fireP",
+          0,
+          "fireD",
+          0,
+          "talk",
+          0
+        ],
+        "var_add": [
+          "talk",
+          1
+        ],
+        "var_equal": [
+          "step",
+          10
+        ],
+        "id": 9,
+        "text": "Поговорить",
+        "instant": true,
+        "var_set": [
+          "talk1",
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "text": " ",
+        "run": [
+          16
+        ],
+        "comment": true
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  if pictureD > 0 then\n    pictureD = pictureD - 1\n  end\n  if pictureP > 0 then\n    pictureP = pictureP - 1\n  end\n  if stepAfter > 0 then\n    stepAfter = stepAfter - 1\n  end\n  if fireAirAfter > 0 then\n    fireAirAfter = fireAirAfter - 1\n  end\nend",
+        "text": " ",
+        "calculate": false,
+        "id": 9
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "\n\n\n\n\n_______________",
+        "id": 9
+      },
+      {
+        "lua_text": "function lua_text()\n  if immortal > 0 then\n    return \"[Пушкин бессмертен]\"\n  end\nend",
+        "id": 9,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Пушкин смертен]",
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return \"[Пушкин видит будущее]\"\n  end\nend",
+        "id": 9,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Пушкин не видит будущее]",
+        "comment": true
+      },
+      {
+        "var_set": [
+          "immortal",
+          1,
+          "global imm",
+          1
+        ],
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Обессмертить Пушкина]",
+        "id": 9,
+        "instant": true,
+        "lua_do": "function lua_do()\n  message(\"Бессмертие души, бессмертие творений...\")\nend",
+        "var_no_more": [
+          "immortal",
+          0
+        ]
+      },
+      {
+        "instant": true,
+        "id": 9,
+        "text": "[Сделать смертным]",
+        "var_need": [
+          "immortal",
+          1
+        ],
+        "var_set": [
+          "immortal",
+          0,
+          "global dead",
+          1
+        ]
+      },
+      {
+        "var_set": [
+          "future",
+          1,
+          "global fut",
+          1
+        ],
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Увидеть будущее]",
+        "id": 9,
+        "instant": true,
+        "lua_do": "function lua_do()\n  message(\"Сердце в будущем живëт, настоящее уныло...\")\nend",
+        "var_no_more": [
+          "future",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "future",
+          1
+        ],
+        "id": 9,
+        "text": "[Не видеть будущее]",
+        "instant": true,
+        "var_set": [
+          "future",
+          0,
+          "global blind",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "[Заново первый раунд]",
+        "var_need": [
+          "global god",
+          1
+        ],
+        "var_set": [
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "global pushkin",
+          0,
+          "global dantes",
+          0,
+          "hit",
+          0,
+          "round",
+          0,
+          "stepAfter",
+          0,
+          "distance",
+          20,
+          "aim",
+          0,
+          "pictureD",
+          0,
+          "pictureP",
+          0,
+          "first",
+          0,
+          "bolnitsa",
+          0,
+          "talk",
+          0,
+          "talk1",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "empty",
+    "answers": [
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/1XhQ2f4/1023-b.jpg"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": " ",
+        "var_no_more": [
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/pb0rHZk/i-63.jpg"
+        ],
+        "lua_if": "function lua_if()\n  if step > 0 or fireP == 1 then\n    return true\n  end\nend",
+        "id": 9,
+        "text": " ",
+        "comment": true,
+        "var_no_more": [
+          "pictureD",
+          0,
+          "pictureP",
+          0,
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/9cp7z7D/6-vn-Duel-Pushkina.jpg"
+        ],
+        "comment": true,
+        "id": 9,
+        "var_need": [
+          "pictureD",
+          1
+        ],
+        "text": " ",
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/5nXTTB0/Lumii-20250104-042804157.jpg"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": " ",
+        "var_need": [
+          "pictureP",
+          1
+        ],
+        "var_no_more": [
+          "step",
+          18
+        ]
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/Tt5YXfH/Lumii-20250103-044428270.png"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": " ",
+        "var_need": [
+          "step",
+          19
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\n  if fireD == 1 and fireP == 0 or fireD == 1 and fireP == 1 and fireAirAfter == 0 then\n    return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, кружились в небе.\n\n—<$2> Чëрт возьми, чтоб тебя! \n\n<$1>Дантес отбросил пистолет далеко в снег. Пушкин взглянул на него и захохотал. Три раунда! Поистине, он избранник фортуны!]]\n  elseif fireP == 1 and fireD == 0 and fireAir == 0 and fireAirAfter == 0 then\n    return [[Выстрел разорвал морозный воздух. Вороны, оглушительно каркая, взмыли в небо.\n\nДым от выстрела рассеялся. Дантес стоял в той же позе, как изваяние.\n\nТри раунда! Три раза он спускал курок, и все три мимо. Что же это, как не злой рок? Значит, такова судьба поэта. Пушкин выпустил тяжëлый пистолет из пальцев, и прикрыл глаза.]]\n  elseif fireP == 1 and fireD == 1 and first == 0 and fireAirAfter == 0 then\n    return [[Выстрел разорвал морозный воздух. Громовое эхо прокатилось и затихло. \n\nДым от выстрела рассеялся. Дантес стоит в той же позе, как изваяние.\n\nТри раунда! Три раза они сходились со злой решимостью прикончить друг друга, и все три закончились безрезультатно. Что это если не знак?\n\nСтоит ли продолжать спорить с судьбой? ]]\n  elseif fireP == 1 and fireD == 1 and first == 1 and fireAirAfter == 0 then\n    return [[Выстрел разорвал морозный воздух. Громовое эхо прокатилось и затихло. \n\nВетер задувает снег за воротник, трещат, качаясь, промëрзшие деревья.\n\nНеужели... Да, он по-прежнему жив и невредим. Пушкин открыл глаза. \n\nДантес растерянно оглядывается на секундантов. ]]\n  elseif fireP == 1 and fireD == 1 and first == 0 and fireAir == 1 and fireAirAfter == 1 then\n    return [[Выстрел разорвал морозный воздух. Громовое эхо прокатилось и угасло в шуме метели. \n\nНет смысла в этом глупом фарсе. Богиня судьбы уже сказала своë слово. Никто не должен сегодня умирать.]]\n  elseif fireP == 1 and fireD == 0 and fireAir == 1 and fireAirAfter == 1 then\n    return [[Выстрел разорвал морозный воздух. Громовое эхо прокатилось и угасло в шуме метели. \n\nНет смысла в этом глупом фарсе. Поэт не должен убивать. ]]\n  end\nend",
+        "lua_if": "function lua_if()\n  if fireD == 1 or fireP == 1 then\n    return true\n  end\nend",
+        "id": 2,
+        "var_need": [
+          "stepAfter",
+          1
+        ],
+        "text": " ",
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\n  if hit == 1 and step == 0 and fireD == 0 and fireP == 0 then\n    return [[Потревоженные выстрелами птицы наконец улетели, и их возмущëнный гвалт затих далеко за лесом. \n\nЛюди остались одни посреди снежной пустыни, предоставленные своим страстям и шальному случаю. \n\nПоднялся ветер. Гонимый им снег забивается за воротник, лезет в глаза. Колючий мороз пробирается под сюртук, пальцы сводит от холода, но разгорячëнные злостью соперники не обращают внимание на холод.]]\n  elseif hit == 1 and step == 0 and fireD == 0 and fireP == 0 then\n    return [[Потревоженные выстрелами птицы наконец улетели, и их возмущëнный гвалт затих далеко за лесом. \n\nЛюди остались одни посреди снежной пустыни, предоставленные своим страстям и шальному случаю. \n\nПоднялся ветер. Гонимый им снег забивается за воротник, лезет в глаза, колючий мороз пробирается под сюртук. Пальцы дрожат от холода, но продолжают с ожесточением сжимать ледяную рукоять. Отсюда уйдëт живым только один из двух!]]\n  elseif step == 0 and hit == 0 and fireD == 0 and fireP == 0 then\n    return [[Потревоженные выстрелами птицы наконец улетели, и их возмущëнный гвалт затих далеко за лесом. \n\nЛюди остались одни посреди снежной пустыни, предоставленные своим страстям и шальному случаю.\n\nПоднялся ветер. Гонимый им снег забивается за воротник, лезет в глаза. Колючий мороз пробирается под сюртук, пальцы сводит от холода.]]\n  elseif step > 0 and fireD == 0 and fireP == 0 then\n    return [[Уставшие и замëрзшие противники сходятся с упорством обречëнных.\n\nСнег скрипит под ногами.\nТишина наполнена угрожающим предчувствием.]]\n  elseif fireD == 0 and fireP == 1 and stepAfter > 0 then\n    return [[Ветер смешал дым от выстрела с колючей пургой, застилая взгляд.\n\n—<$2> Словно надели повязку перед расстрелом...\n\n<$1>Пушкин закрыл глаза и покорно пошëл вперëд.]]\n  elseif fireD == 0 and fireP == 1 and stepAfter == 0 then\n    return [[Снег скрипит под ногами. Белые хлопья падают на кудрявую непокрытую голову, плавясь и стекая по щекам.\n\nПушкин, закрыв глаза, покорно идëт вперëд.]]\n  elseif fireD == 1 and fireP == 0 then\n    return [[Громовое эхо прокатилось по подлеску и затихло, затерявшись в тихом гуле начинающейся метели. \n\nСудьба дарит поэту последний шанс. Сейчас, или дуэли конец.]]\n  elseif fireD == 1 and fireP == 1 then\n  return [[Снег валит всë гуще, заметая следы несостоявшегося преступления.\n\nПротивники разрядили пистолеты. Оба вхолостую. Снова. ]]\n  end\nend",
+        "id": 2,
+        "text": "Потревоженные выстрелами птицы наконец улетели, и их возмущëнный гвалт затих далеко за лесом. \n\nЛюди остались одни посреди замершей снежной пустыни, предоставленные своим страстям и шальному случаю. \n\nСнег валит всë гуще. Пальцы сводит от холода.",
+        "comment": true,
+        "var_no_more": [
+          "stepAfter",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "var_need": [
+          "fireD",
+          1,
+          "fireP",
+          1
+        ],
+        "comment": true,
+        "text": "Оливье д'Аршиак:\n—<$2> Господа, три раунда вничью! Именем Бога заклинаю вас, остановитесь! Эту дуэль нельзя продолжать! \n\n<$1>Константин Данзас:\n—<$2> Согласен с виконтом. Господа, прошу, заканчивайте это невероятное представление. "
+      },
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n  if fireAir == 1 then\n    return \"Секунданты растеряно наблюдают за происходящим. Эта дуэль запомнится им надолго.\"\n  end\nend",
+        "id": 2,
+        "text": "— <$2>Александр Сергеевич, остановитесь! Вы нарушаете правила, вернитесь к барьеру, или остановите поединок! ",
+        "var_need": [
+          "step",
+          11
+        ],
+        "var_no_more": [
+          "fireP",
+          0
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\n  if fireD == 1 and fireP == 1 then\n    return false\n  else\n    return true\n  end\nend",
+        "lua_text": "function lua_text()\n  if step < 10 and fireD == 1 and fireP == 0 then\n    return [[Противники сближаются.]]\n  elseif step < 10 and fireD == 0 and fireP == 1 then\n    return [[Противники сходятся.]]\n  elseif step == 10 and fireD == 1 and fireP == 0 then\n    return [[— <$2>«Барьер!»]]\n  elseif step == 10 and fireD == 0 and fireP == 1 then\n    return [[— <$2>«Барьер!»]]\n  end\nend",
+        "id": 2,
+        "text": "— <$2>«Вы знаете. Барьер десять шагов, начинаете с двадцати.»\n\n<$1>Секунданты передали оружие, и соперники разошлись. \n\n— <$2>К барьеру!",
+        "comment": true,
+        "var_no_more": [
+          "stepAfter",
+          0,
+          "step",
+          10
+        ]
+      },
+      {
+        "id": 2,
+        "text": "_______________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Расстояние",
+        "lua_text": "function lua_text()\n  if distance > 9 then\n    return \"Расстояние \" .. distance .. \" шагов.\"\n  elseif distance < 10 and distance > 4 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шагов. <s>\nСлишком близко!\"\n  elseif distance < 10 and distance > 4 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шагов.\"\n  elseif distance < 5 and distance > 1 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шага. <s>\nСлишком близко!\"\n  elseif distance < 5 and distance > 1 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шага.\"\n  elseif distance == 1 and fireP == 0 then\n    return \"Расстояние \" .. distance .. \" шаг. <s>\nСлишком близко!\"\n  elseif distance == 1 and fireP > 0 then\n    return \"Расстояние \" .. distance .. \" шаг.\"\n  end\nend",
+        "id": 2
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\n  if step < 10 and fireP == 0 and fireD == 0 or step < 10 and fireP == 1 and fireD == 0 or step < 10 and fireP == 0 and fireD == 1 then\n    step = step <plus> 2\n    distance = distance - 2\n  elseif step >= 10 or step < 10 and fireP == 1 and fireD == 1 then\n    step = step <plus> 1\n    distance = distance - 1\n  end\n  if step > 10 and step < 13 then\n    aim = 6\n  elseif step > 12 and step < 15 then\n    aim = 7\n  elseif step > 14 and step < 18 then\n    aim = 8\n  elseif step > 17 and step < 19 then\n    aim = 9\n  elseif step == 19 then\n    aim = 10\n  end\n  if step < 10 then\n    aim = aim <plus> 1\n  end\n  if fireD == 0 and distance < 12 then\n    fireD = 1\n    stepAfter = 2\n    pictureD = 2\n    local chanceD = math.random(1, 10)\n    if chanceD <= aim then\n      dantes = dantes\n      showPage{id = 3}\n    elseif chanceD > aim then\n      message(\"Дантес выстрелил и промахнулся!\")\n      showPage{id = 10}\n    end\n  elseif fireD == 0 and distance > 11 then\n    local danteChance = math.random(0, (10 - aim))\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      local chanceD = math.random(1, 10)\n      if chanceD <= aim then\n        dantes = dantes\n        showPage{id = 3}\n      else\n        message(\"Дантес выстрелил и промахнулся!\")\n        fireD = 1\n        showPage{id = 10, transition = \"instant\"}\n      end\n    elseif danteChance > 0 then\n      showPage{id = 10, transition = \"instant\"}\n      local res = math.random(1, 6)\n      if res == 1 then\n        message(\"Вьюга мне слипает очи... \")\n      elseif res == 2 then\n        message(\"Умру, иль буду жить — всë благо...\")\n      elseif res == 3 then\n        message(\"Что миг грядущий мне готовит...\")\n      elseif res == 4 then\n        message(\"Перед собой кто смерти не видал, тот полного веселья не вкушал...\")\n      elseif res == 5 then\n        message(\"Паду ли я, стрелой пронзëнный...\")\n      elseif res == 6 then\n        message(\"Ты прострелен на дуеле, ты разрублен на войне, хоть герой ты в самом деле, но повеса ты вполне...\")\n      end\n    end\n  elseif fireD == 1 then\n    showPage{id = 10, transition = \"instant\"}\n  end\n  if pictureD > 0 then\n    pictureD = 0\n  end\n  if pictureP > 0 then\n    pictureP = 0\n  end\nend",
+        "text": "Шаг",
+        "no_transition": true,
+        "lua_if": "function lua_if()\n  if fireD == 1 and fireP == 1 then\n    return false\n  else\n    return true\n  end\nend",
+        "var_no_more": [
+          "step",
+          18,
+          "immortal",
+          0
+        ],
+        "id": 9,
+        "instant": true,
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "text": "Шаг",
+        "no_transition": true,
+        "lua_if": "function lua_if()\n  if fireD == 1 and fireP == 1 then\n    return false\n  else\n    return true\n  end\nend",
+        "lua_do": "function lua_do()\n  if step < 10 and fireP == 0 and fireD == 0 or step < 10 and fireP == 1 and fireD == 0 or step < 10 and fireP == 0 and fireD == 1 then\n    step = step <plus> 2\n    distance = distance - 2\n  elseif step >= 10 or step < 10 and fireP == 1 and fireD == 1 then\n    step = step <plus> 1\n    distance = distance - 1\n  end\n  if step > 10 and step < 13 then\n    aim = 6\n  elseif step > 12 and step < 15 then\n    aim = 7\n  elseif step > 14 and step < 18 then\n    aim = 8\n  elseif step > 17 and step < 19 then\n    aim = 9\n  elseif step == 19 then\n    aim = 10\n  end\n  if step < 10 then\n    aim = aim <plus> 1\n  end\n  if fireD == 0 and distance < 12 then\n    fireD = 1\n    stepAfter = 2\n    pictureD = 2\n    local chanceD = math.random(1, 10)\n    if chanceD <= aim then\n      message(\"Дантес выстрелил и промахнулся!\")\n      showPage{id = 10}\n    elseif chanceD > aim then\n      message(\"Дантес выстрелил и промахнулся!\")\n      showPage{id = 10}\n    end\n  elseif fireD == 0 and distance > 11 then\n    local danteChance = math.random(0, (10 - aim))\n    if danteChance == 0 then\n      fireD = 1\n      stepAfter = 2\n      pictureD = 2\n      message(\"Дантес выстрелил и промахнулся!\")\n      fireD = 1\n      showPage{id = 10, transition = \"instant\"}\n    elseif danteChance > 0 then\n      showPage{id = 10, transition = \"instant\"}\n      local res = math.random(1, 6)\n      if res == 1 then\n        message(\"Вьюга мне слипает очи... \")\n      elseif res == 2 then\n        message(\"Умру, иль буду жить — всë благо...\")\n      elseif res == 3 then\n        message(\"Что миг грядущий мне готовит...\")\n      elseif res == 4 then\n        message(\"Перед собой кто смерти не видал, тот полного веселья не вкушал...\")\n      elseif res == 5 then\n        message(\"Паду ли я, стрелой пронзëнный...\")\n      elseif res == 6 then\n        message(\"Ты прострелен на дуеле, ты разрублен на войне, хоть герой ты в самом деле, но повеса ты вполне...\")\n      end\n    end\n  elseif fireD == 1 then\n    showPage{id = 10, transition = \"instant\"}\n  end\n  if pictureD > 0 then\n    pictureD = 0\n  end\n  if pictureP > 0 then\n    pictureP = 0\n  end\nend",
+        "instant": true,
+        "id": 2,
+        "var_no_more": [
+          "step",
+          18
+        ],
+        "var_need": [
+          "immortal",
+          1
+        ]
+      },
+      {
+        "var_set": [
+          "step",
+          19,
+          "distance",
+          1
+        ],
+        "middle_answer": true,
+        "text": "[Подойти]",
+        "id": 10,
+        "var_need": [
+          "fireD",
+          1,
+          "fireP",
+          1
+        ],
+        "instant": true,
+        "var_no_more": [
+          "step",
+          18,
+          "hit",
+          0
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\n  if fireP == 0 and step < 19 then\n    fireP = 1\n    message(\"Выстрел!\")\n    stepAfter = 2\n    pictureP = 1\n    chanceP = math.random(1, 10)\n    if chanceP <= aim then\n      if distance > 9 then\n        pushkin = pushkin\n        showPage{id = 4}\n      elseif distance < 10 then\n        pushkin = pushkin\n        showPage{id = 8}\n      end\n    elseif chanceP > aim then\n      showPage{id = 10}\n      if fireD == 0 then\n        first = 1\n      end\n    end\n  elseif fireP == 0 and step > 10 then\n    fireP = 1\n    message(\"Выстрел!\")\n    showPage{id = 8}\n  elseif fireP == 1 then\n    message(\"Пистолет уже разряжен.\")\n  end\nend",
+        "instant": true,
+        "var_no_more": [
+          "fireP",
+          0
+        ],
+        "lua_text": "function lua_text()\n  if step == 0 then\n    return [[Выстрелить!\nШанс: 10%]]\n  elseif step == 2 then\n    return [[Выстрелить!\nШанс: 20%]]\n  elseif step == 4 then\n    return [[Выстрелить!\nШанс: 30%]]\n  elseif step == 6 then\n    return [[Выстрелить!\nШанс: 40%]]\n  elseif step == 8 then\n    return [[Выстрелить!\nШанс: 50%]]\n  elseif step == 10 then\n    return [[Выстрелить!\nШанс: 60%]]\n  elseif step > 10 and step < 13 and (future == 0 or nil) then\n    return [[Выстрелить!\nШанс: 60%]]\n  elseif step > 10 and step < 13 and future > 0 then\n    return [[Выстрелить!\nШанс: 60%\n<<plus>0.7>(концовка \"Бесы\")]]\n  elseif step > 12 and step < 15 and (future == 0 or nil) then\n    return [[Выстрелить!\nШанс: 70%]]\n  elseif step > 12 and step < 15 and future > 0 then\n    return [[Выстрелить!\nШанс: 70%\n<<plus>0.7>(концовка \"Бесы\")]]\n  elseif step > 15 and step < 18 and (future == 0 or nil) then\n    return [[Выстрелить!\nШанс: 80%]]\n  elseif step > 15 and step < 18 and future > 0 then\n    return [[Выстрелить!\nШанс: 80%\n<<plus>0.7>(концовка \"Бесы\")]]\n  elseif step == 18 and (future == 0 or nil) then\n    return [[Выстрелить!\nШанс: 90%]]\n  elseif step == 18 and future > 0 then\n    return [[Выстрелить!\nШанс: 90%\n<<plus>0.7>(концовка \"Бесы\")]]\n  elseif step == 19 and (future == 0 or nil) then\n    return [[Выстрелить в упор!\nШанс: 100%]]\n  elseif step == 19 and future > 0 then\n    return [[Выстрелить в упор!\nШанс: 100%\n<<plus>0.7>(концовка \"Бесы\")]]\n  end\nend",
+        "no_transition": true,
+        "left_answer": true,
+        "middle_answer": false,
+        "text": "Выстрелить!",
+        "id": 9
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "air",
+          1
+        ],
+        "instant": true,
+        "id": 10,
+        "text": "Выстрелить в воздух",
+        "lua_do": "function lua_do()\n  fireP = 1\n  fireAir = 1\n  stepAfter = 2\n  fireAirAfter = 2\n  message(\"Выстрел!\")\n  if fireD == 1 then\n    first = 1\n  end\nend",
+        "var_no_more": [
+          "fireP",
+          0,
+          "hit",
+          0
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 10,
+        "text": "[Сейчас не до благородства!]",
+        "var_need": [
+          "hit",
+          1
+        ],
+        "var_no_more": [
+          "fireP",
+          0
+        ]
+      },
+      {
+        "no_transition": false,
+        "middle_answer": true,
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Продолжить дуэль\n<<plus>0.7>(концовка \"Война\")]]\n  end\nend",
+        "var_need": [
+          "hit",
+          1,
+          "fireD",
+          1,
+          "fireP",
+          1
+        ],
+        "id": 13,
+        "text": "Продолжить дуэль",
+        "var_set": [
+          "distance",
+          20,
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "chanceP",
+          0,
+          "aim",
+          0
+        ],
+        "left_answer": false
+      },
+      {
+        "var_no_more": [
+          "hit",
+          0
+        ],
+        "right_answer": false,
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return [[Протянуть руку\n<<plus>0.7>(концовка \"Покой и воля\")]]\n  end\nend",
+        "middle_answer": true,
+        "id": 11,
+        "text": "Протянуть руку",
+        "var_need": [
+          "step",
+          19
+        ],
+        "left_answer": false
+      },
+      {
+        "id": 9,
+        "text": " ",
+        "run": [
+          16
+        ],
+        "comment": true
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  if pictureD > 0 then\n    pictureD = pictureD - 1\n  end\n  if pictureP > 0 then\n    pictureP = pictureP - 1\n  end\n  if stepAfter > 0 then\n    stepAfter = stepAfter - 1\n  end\n  if fireAirAfter > 0 then\n    fireAirAfter = fireAirAfter - 1\n  end\nend",
+        "calculate": false,
+        "id": 9,
+        "text": " "
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "\n\n\n\n\n_______________",
+        "id": 2
+      },
+      {
+        "lua_text": "function lua_text()\n  if immortal > 0 then\n    return \"[Пушкин бессмертен]\"\n  end\nend",
+        "id": 2,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Пушкин смертен]",
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\n  if future > 0 then\n    return \"[Пушкин видит будущее]\"\n  end\nend",
+        "id": 2,
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Пушкин не видит будущее]",
+        "comment": true
+      },
+      {
+        "var_set": [
+          "immortal",
+          1,
+          "global imm",
+          1
+        ],
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Обессмертить Пушкина]",
+        "id": 10,
+        "instant": true,
+        "lua_do": "function lua_do()\n  message(\"Бессмертие души, бессмертие творений...\")\nend",
+        "var_no_more": [
+          "immortal",
+          0
+        ]
+      },
+      {
+        "instant": true,
+        "id": 10,
+        "var_need": [
+          "immortal",
+          1
+        ],
+        "text": "[Сделать смертным]",
+        "var_set": [
+          "immortal",
+          0,
+          "global dead",
+          1
+        ]
+      },
+      {
+        "var_set": [
+          "future",
+          1,
+          "global fut",
+          1
+        ],
+        "var_need": [
+          "global god",
+          1
+        ],
+        "text": "[Увидеть будущее]",
+        "id": 10,
+        "instant": true,
+        "lua_do": "function lua_do()\n  message(\"Сердце в будущем живëт, настоящее уныло...\")\nend",
+        "var_no_more": [
+          "future",
+          0
+        ]
+      },
+      {
+        "text": "[Не видеть будущее]",
+        "id": 10,
+        "var_need": [
+          "future",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "future",
+          0,
+          "global blind",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "[Начать заново первый раунд]",
+        "var_need": [
+          "global god",
+          1
+        ],
+        "var_set": [
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "global pushkin",
+          0,
+          "global dantes",
+          0,
+          "hit",
+          0,
+          "round",
+          0,
+          "stepAfter",
+          0,
+          "distance",
+          20,
+          "aim",
+          0,
+          "pictureD",
+          0,
+          "pictureP",
+          0,
+          "first",
+          0,
+          "bolnitsa",
+          0,
+          "talk",
+          0,
+          "talk1",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 12,
+        "newAnswerImage": [
+          "https://i.ibb.co/dp7x8BF/IMG-20250104-014859.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 12,
+        "text": "Пушкин был охвачен бурей чувств.\n\nОпозоренный анонимными пасквилями, обвиняющими его супругу в неверности, он яростно жаждал сатисфакции. Яковлев, старый знакомый, уверял, что узнаëт почерк Дантеса, и Александр Сергеевич, не колеблясь, пошëл на смертельный поединок. Но взглянув смерти в лицо столько раз, и не получив от неë взаимности, он растерял всю решимость.\n\nЧто это, если не знак провидения? Что, если Яковлев ошибся? Что, если этот человек, на чьей свадьбе недавно он гулял, не желает ему зла, но, так же оклеветанный, с честью принял вызов? \n\n—<$2> Я ни капли не сомневался, что это были вы. Раз за разом спускал курок пистолета, желая, чтобы вам воздалось по заслугам... \n\n<$1>В порыве чувств, он протянул руку к своему противнику.\n\n— <$2>Быть может, я не прав? Сгоряча я написал вам ту отповедь. Быть может, ещë не поздно нам понять друг друга и помиловать? Прошу вас, Жорж, если вы не творили для меня зла, если я ошибся в вас, пожмите мою руку!",
+        "comment": true,
+        "lua_text": "function lua_text()\n  if air > 1 then\nreturn [[Пушкин был охвачен бурей чувств.\n\nОпозоренный анонимными пасквилями, обвиняющими его супругу в неверности, он яростно жаждал сатисфакции. Яковлев, старый знакомый, уверял, что узнаëт почерк Дантеса, и Александр Сергеевич, не колеблясь, пошëл на смертельный поединок. Но взглянув смерти в лицо столько раз, и не получив от неë взаимности, он растерял всю решимость.\n\nЧто это, если не знак провидения? Что, если Яковлев ошибся? Что, если этот человек, на чьей свадьбе недавно он гулял, не желает ему зла, но, так же оклеветанный, с честью принял вызов? \n\n<$1>В порыве чувств, он протянул руку к своему противнику.\n\n— <$2>Быть может, я был не прав? Сгоряча я написал вам ту отповедь. Быть может, ещë не поздно нам понять друг друга и помиловать? Прошу вас, Жорж, если вы не творили для меня зла, если я ошибся в вас, пожмите мою руку!]]\n  end\nend"
+      },
+      {
+        "var_set": [
+          "t12",
+          1
+        ],
+        "id": 11,
+        "text": "Взглянуть в глаза",
+        "instant": true,
+        "var_no_more": [
+          "t12",
+          0
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Дантес смотрел долго, прищурившись, будто пытаясь прочитать собеседника, понять, не играет ли тот с ним. \n\nЗатем медленно стянул перчатку. \n\nИ молча крепко пожал протянутую руку.",
+        "comment": true,
+        "var_need": [
+          "t12",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 12,
+        "text": "_______________",
+        "middle_answer": true,
+        "var_need": [
+          "t12",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 12,
+        "var_need": [
+          "t12",
+          1
+        ],
+        "text": "<$2>Пора, мой друг, пора! Покоя сердце просит —\nЛетят за днями дни, и каждый час уносит\nЧастичку бытия, а мы с тобой вдвоём\nПредполагаем жить, и глядь — как раз — умрем. \n\nНа свете счастья нет, но есть покой и воля.\nДавно завидная мечтается мне доля — \nДавно, усталый раб, замыслил я побег\nВ обитель дальную трудов и чистых нег.",
+        "middle_answer": true
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/1743q6v/IMG-20250103-023022.png"
+        ],
+        "comment": true,
+        "id": 12,
+        "text": " ",
+        "var_need": [
+          "t12",
+          1
+        ]
+      },
+      {
+        "var_need": [
+          "t12",
+          1
+        ],
+        "middle_answer": true,
+        "text": "<$2>Покой и воля",
+        "id": 21,
+        "var_set": [
+          "global peace",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "var_need": [
+          "t12",
+          1
+        ],
+        "id": 12,
+        "text": "\n__________"
+      },
+      {
+        "id": 12,
+        "text": "\n\n\n*/ 4 ноября 1836 года Пушкину был доставлен анонимный пасквиль на французском языке, в котором поэту присваивался «патент на звание рогоносца». Пушкин, опираясь на мнение нескольких друзей и слухи, гуляющие в высшем обществе, обвинил в авторстве знакомого своей жены Жоржа Дантеса. \nБолее поздние исследования показывают, что Жорж Дантес вероятнее всего не был автором этого письма.",
+        "comment": true,
+        "var_need": [
+          "t12",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 12,
+        "newAnswerImage": [
+          "https://i.ibb.co/dp7x8BF/IMG-20250104-014859.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 12,
+        "text": "Пушкин был охвачен бурей чувств.\n\nОпозоренный анонимными пасквилями, обвиняющими его супругу в неверности, он яростно жаждал сатисфакции. Яковлев, старый знакомый, уверял, что узнаëт почерк Дантеса, и Александр Сергеевич, не колеблясь, пошëл на смертельный поединок. Отдавшись на милость судьбы, вместе со своим противником он взглянул в лицо смерти, но не получил ответа. И вот уже другие мысли возобладали над ним.\nЧто, если это знак провидения? Что, если Яковлев ошибся? Что, если этот человек, на чьей свадьбе недавно он гулял, не желает ему зла, но, так же оклеветанный, с честью принял вызов? \n\nВ порыве чувств, он протянул руку к своему противнику.\n\n— <$2>Быть может, я не прав? Сгоряча я написал вам ту отповедь. Быть может, ещë не поздно нам понять друг друга и помиловать? Прошу вас, Жорж, если вы не творили для меня зла, пожмите мою руку!",
+        "comment": true
+      },
+      {
+        "var_no_more": [
+          "t12",
+          0
+        ],
+        "id": 12,
+        "instant": true,
+        "text": "Взглянуть в глаза",
+        "var_set": [
+          "t12",
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Дантес смотрел долго, прищурившись, будто пытаясь прочитать собеседника, понять, не играет ли тот с ним. \n\nЗатем медленно стянул перчатку. \n\nИ молча крепко пожал протянутую руку.",
+        "comment": true,
+        "var_need": [
+          "t12",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 12,
+        "var_need": [
+          "t12",
+          1
+        ],
+        "text": "_______________",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "var_need": [
+          "t12",
+          1
+        ],
+        "id": 12,
+        "text": "<$2>Пора, мой друг, пора! Покоя сердце просит —\nЛетят за днями дни, и каждый час уносит\nЧастичку бытия, а мы с тобой вдвоём\nПредполагаем жить, и глядь — как раз — умрем. \n\nНа свете счастья нет, но есть покой и воля.\nДавно завидная мечтается мне доля — \nДавно, усталый раб, замыслил я побег\nВ обитель дальную трудов и чистых нег."
+      },
+      {
+        "newAnswerImage": [
+          "https://i.ibb.co/1743q6v/IMG-20250103-023022.png"
+        ],
+        "comment": true,
+        "id": 12,
+        "text": " ",
+        "var_need": [
+          "t12",
+          1
+        ]
+      },
+      {
+        "var_need": [
+          "t12",
+          1
+        ],
+        "middle_answer": true,
+        "text": "<$2>Покой и воля",
+        "id": 21,
+        "var_set": [
+          "global peace",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "\n__________",
+        "var_need": [
+          "t12",
+          1
+        ],
+        "id": 12
+      },
+      {
+        "id": 12,
+        "text": "\n\n\n*/ 4 ноября 1836 года Пушкину был доставлен анонимный пасквиль на французском языке, в котором поэту присваивался «патент на звание рогоносца». Пушкин, опираясь на мнение нескольких друзей и слухи, гуляющие в высшем обществе, обвинил в авторстве знакомого своей жены Жоржа Дантеса. \nБолее поздние исследования показывают, что Дантес вероятнее всего не был автором этого письма.",
+        "comment": true,
+        "var_need": [
+          "t12",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 13,
+        "newAnswerImage": [
+          "https://i.ibb.co/x80HKgn/acetone-202515-9337-881.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 13,
+        "text": "—<$2> Пули нас не берут, но, полагаю, отказ от сатисфакции не удовлетворит ни вас, ни меня. Завтра, в то же время. Шпаги, или любая другая чертовщина, которая вас устроит. Что скажете? \n\n<$1>Дантес:\n—<$2> Вы одержимы. Но, справедливости ради, вы правы <$1>—<$2> я всë ещë желаю прикончить вас. Быть по сему.",
+        "comment": true
+      },
+      {
+        "id": 13,
+        "text": "***",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 13,
+        "text": "<$2>Я таю, жертва злой отравы:\nПокой бежит меня, нет власти над собой,\nШумят знамены бранной чести!\nУвижу кровь, увижу праздник мести!\nЧто ж медлит ужас боевой?",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 13,
+        "newAnswerImage": [
+          "https://i.ibb.co/1743q6v/IMG-20250103-023022.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 21,
+        "text": "<$2>Война",
+        "middle_answer": true,
+        "var_set": [
+          "global war",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 3,
+        "newAnswerImage": [
+          "https://i.ibb.co/cYsqmvd/press-r-4-A8-EB3-E0-E044-49-F4-A391-C13-B33-A8-B30-F-f.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 3,
+        "text": "Роковая пуля попала в цель. Поэт, согнувшись, упал в снег.\n\nСекунданты бросились на помощь. Пушкин слабо охнул, приподнял голову и усмехнулся. Природная весëлость не покидала его даже перед лицом смерти. \n\n—<$2> Александр Сергеевич... Вы желаете продолжать?",
+        "comment": true,
+        "lua_text": "function lua_text()\n  if step > 10 and fireP == 0 and talk1 == 0 then\n    return [[Роковая пуля попала в цель. Поэт, согнувшись, упал в снег.\n\nСекунданты бросились на помощь. Пушкин слабо охнул, приподнял голову и усмехнулся. Природная весëлость не покидала его даже перед лицом смерти. \n\n—<$2> Александр Сергеевич... Вы желаете выстрелить? Жорж Дантес бесчестно нарушил правила, вы имеете полное право на сатисфакцию!]]\n  elseif step > 10 and fireP == 0 and talk1 == 1 then\n    return [[Роковая пуля попала в цель. Поэт, согнувшись, упал в снег.\n\nСекунданты бросились на помощь. Пушкин слабо охнул, приподнял голову и усмехнулся.<$2> «Всë-таки выстрелил. Кишка тонка взглянуть в глаза...»\n\n— Александр Сергеевич... Вы желаете выстрелить? Жорж Дантес бесчестно нарушил правила, вы имеете полное право на сатисфакцию!]]\n  end\nend"
+      },
+      {
+        "var_add": [
+          "t3",
+          1
+        ],
+        "id": 3,
+        "instant": true,
+        "text": "Взять грех на душу",
+        "var_no_more": [
+          "t3",
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Ехать домой",
+        "var_no_more": [
+          "t3",
+          0
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\n  if fireP == 1 then\n    return [[—<$2> Я в силах стрелять! Подайте мне новый!\n\n<$1>Секундант передал запасной пистолет. Дрожащая рука с трудом подняла тяжëлое оружие. \n\nФигура Дантеса неподвижно застыла, застилаемая саваном снега.]]\n  end\nend",
+        "id": 3,
+        "text": "—<$2> Я в силах стрелять!\n\n<$1>Секундант подал выпавший в снег пистолет. Дрожащая рука с трудом подняла тяжëлое оружие. \n\nФигура Дантеса неподвижно застыла, застилаемая саваном снега.",
+        "comment": true,
+        "var_need": [
+          "t3",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Спустить курок",
+        "lua_do": "function lua_do()\n  local rect = display.newRect(display.contentCenterX, display.contentCenterY, display.contentCenterX*2, display.contentCenterY*2) canvas.parent.parent.parent.parent.parent.parent.parent:insert(rect)\n  rect:setFillColor(252,252,238)\n  transition.from(rect, {time = 400, alpha = 0, transition = easing.outExpo, onComplete = function() \n  timer.performWithDelay(400, function() \n  if rect and rect.removeSelf then\n  transition.to(rect, {\n  time = 400, \n  alpha = 0, \n  transition = easing.inExpo, \n  onComplete = function() \n  if rect and rect.removeSelf then \n  rect:removeSelf() \n  rect = nill\n  end\n  end\n  }) \n  end\n  end) \n  end\n  })\nend",
+        "var_need": [
+          "t3",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "empty",
+    "answers": [
+      {
+        "calculate": false,
+        "super_calculate": true,
+        "id": 15,
+        "text": " ",
+        "lua_do": "function lua_do()\n  local rect = display.newRect(display.contentCenterX, display.contentCenterY, display.contentCenterX*2, display.contentCenterY*2) canvas.parent.parent.parent.parent.parent.parent.parent:insert(rect)\n  rect:setFillColor(252,252,238)\n  transition.from(rect, {time = 200, alpha = 0, transition = easing.outExpo, onComplete = function() \n  timer.performWithDelay(200, function() \n  if rect and rect.removeSelf then\n  transition.to(rect, {\n  time = 200, \n  alpha = 0, \n  transition = easing.inExpo, \n  onComplete = function() \n  if rect and rect.removeSelf then \n  rect:removeSelf() \n  rect = nill\n  end\n  end\n  }) \n  end\n  end) \n  end\n  })\nend",
+        "var_no_more": [
+          "bolnitsa",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "empty",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  if stepAfter == 2 then\n    local rect = display.newRect(display.contentCenterX, display.contentCenterY, display.contentCenterX*2, display.contentCenterY*2) canvas.parent.parent.parent.parent.parent.parent.parent:insert(rect)\n    rect:setFillColor(252,252,238)\n    transition.from(rect, {time = 200, alpha = 0, transition = easing.outExpo, onComplete = function() \n    timer.performWithDelay(200, function() \n    if rect and rect.removeSelf then\n    transition.to(rect, {\n    time = 200, \n    alpha = 0, \n    transition = easing.inExpo, \n    onComplete = function() \n    if rect and rect.removeSelf then \n    rect:removeSelf() \n    rect = nill\n    end\n    end\n    }) \n    end\n    end) \n    end\n    })\n  end\nend",
+        "calculate": false,
+        "text": " ",
+        "id": 16
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 4,
+        "newAnswerImage": [
+          "https://i.ibb.co/Bzr6Yqk/IMG-20250104-065955.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 4,
+        "text": "Вот он. Завистник и обидчик. Подлый клеветник. На мушке, на расстоянии курка от смерти, за секунду до гибели. \n\nПороховой дым заволок ненавистную фигуру, слившись с белым снежным туманом. ",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "t4",
+          1
+        ],
+        "id": 17,
+        "instant": true,
+        "text": "Присмотреться",
+        "var_no_more": [
+          "t4",
+          0
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Он повержен. Лежит на снегу, стремительно краснеющем вокруг.\n<$2>О, мщенье, бурная мечта\nОжесточенного страданья!\n<$1>Подлец ответил за свои грязные наветы сполна! \n\nПочему же... Почему же нет радости в груди, почему нет той весëлой злобы, что наполняла сердце ещë минуты назад, когда они стояли лицом к лицу?\n",
+        "comment": true,
+        "var_need": [
+          "t4",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "var_need": [
+          "t4",
+          1
+        ],
+        "id": 18,
+        "text": "***"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 18,
+        "newAnswerImage": [
+          "https://i.ibb.co/qrPxr7F/Attachment.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 18,
+        "text": "Александр Сергеевич множество раз вызывал и бывал вызван на дуэль. Не раз дело доходило до барьера. Но убийство... В его жизни оно произошло впервые. \n\nВ смятении чувств Пушкин умчался в Петербург, не подойдя к побеждëнному, и не дождавшись даже освидетельствования результатов секундантами, о чëм в последствии сожалел. Дантес на тот момент ещë был жив и в сознании, и кто знает, как повлиял бы на поэта несостоявшийся разговор. \n\nВесть о дуэли быстро разнеслась по столице. Император Николай I, видя в Пушкине вождя вольнодумцев, и зная о его сочувствии друзьям-декабристам, быстро воспользовался ситуацией. За участие в дуэли опального поэта ждала долгая, и крайне суровая ссылка в Сибирь. \n\nТак начался новый, наполненный жестоким пафосом и бунтом, период в творчестве Александра Сергеевича Пушкина. ",
+        "comment": true
+      },
+      {
+        "id": 18,
+        "text": "_______________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 18,
+        "text": "<$2>Любви, надежды, тихой славы\nНедолго нежил нас обман,\nИсчезли юные забавы,\nКак сон, как утренний туман.\n\nНо в нас горит еще желанье!\nПод гнетом власти роковой\nНетерпеливою душой\nОтчизны внемлем призыванье.",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 18,
+        "newAnswerImage": [
+          "https://i.ibb.co/1743q6v/IMG-20250103-023022.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "var_add": [
+          "global pushkin",
+          1
+        ],
+        "middle_answer": true,
+        "text": "<$2>К Чаадаеву",
+        "id": 21,
+        "var_set": [
+          "global chad",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 4,
+        "newAnswerImage": [
+          "https://i.ibb.co/Bzr6Yqk/IMG-20250104-065955.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 4,
+        "text": "Вот он. Завистник и обидчик. Подлый клеветник. Его наглые глаза смотрят прямо, не стесняясь. Как смеет он! За опороченую честь жены, за униженное имя потомка Ганнибала мерзавец ответит, и прямо сейчас! \n\nПороховой дым заволок ненавистное лицо, слившись с вьюгой. ",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "t8",
+          1
+        ],
+        "id": 19,
+        "text": "Присмотреться",
+        "instant": true,
+        "var_no_more": [
+          "t8",
+          0
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Он повержен. Лежит на снегу, стремительно краснеющем вокруг того, что только что было омерзительным лицом. \n<$2>О, мщенье, бурная мечта\nОжесточенного страданья! \n<$1>\nПочему же... Почему же нет радости в груди, почему нет даже той праведной ярости, что наполняла сердце ещë минуты назад, когда они столкнулись в дуэли взглядов?\n",
+        "comment": true,
+        "var_need": [
+          "t8",
+          1
+        ]
+      },
+      {
+        "middle_answer": true,
+        "var_need": [
+          "t8",
+          1
+        ],
+        "text": "***",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 18,
+        "newAnswerImage": [
+          "https://i.ibb.co/mq4x5qL/IMG-20250104-075531.jpg"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 18,
+        "text": "Александр Сергеевич множество раз вызывал и бывал вызван на дуэль. Не раз дело доходило до барьера. Но убийство... В его жизни оно произошло впервые. \n\nВ смятении чувств Пушкин умчался в Петербург — освидетельствование результатов секундантами не потребовалось, и даже было невозможно из-за грубейшего нарушения дуэльных правил. \n\nВесть о жестокой дуэли быстро разнеслась по столице. Ранее уважаемый в высшем свете несмотря на многочисленные кривотолки завистников, Пушкин приобрëл дурную славу бесчестного и буйнопомешанного. Император Николай I,  зная о его связях с бывшими друзьями-декабристам, действовал жëстко. Опального поэта ждала крайне суровая ссылка в Сибирь.\n\nНачался последний, наполненный нигилизмом и мистическими образами период в творчестве Александра Сергеевича Пушкина. Страдая от бессонницы и кошмаров, отвергнутый обществом и даже ближайшими друзьями, великий поэт доживал свои дни в таëжной глуши, погружаясь в пучины своего омрачëнного тяжким преступлением разума. ",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_______________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 18,
+        "text": "<$2>Мчатся тучи, вьются тучи... \nНевидимкою луна\nОсвещает снег летучий.\nМутно небо, ночь мутна.\n\nМчатся бесы рой за роем\nВ беспредельной вышине,\nВизгом жалобным и воем\nНадрывая сердце мне...",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 18,
+        "newAnswerImage": [
+          "https://i.ibb.co/1743q6v/IMG-20250103-023022.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "var_add": [
+          "global pushkin",
+          1
+        ],
+        "middle_answer": true,
+        "text": "<$2>Бесы",
+        "id": 21,
+        "var_set": [
+          "global imp",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 21,
+        "newAnswerImage": [
+          "https://i.ibb.co/392M77r8/1000016555.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "lua_text": "function lua_text()\n  return [[Стихи \n]] .. ((g.monument or 0) <plus> (g.promise or 0) <plus> (g.peace or 0) <plus> (g.chad or 0) <plus> (g.imp or 0) <plus> (g.war or 0) <plus> (g.honor or 0)) .. [[/7\n\n__________]]\nend",
+        "middle_answer": true,
+        "text": "Оглавление:\n\n__________\n",
+        "id": 21,
+        "comment": true
+      },
+      {
+        "instant": true,
+        "id": 21,
+        "var_need": [
+          "global monument",
+          1
+        ],
+        "text": "<$2>EXEGI MONUMENTUM",
+        "var_set": [
+          "monument",
+          1,
+          "promice",
+          0,
+          "peace",
+          0,
+          "chad",
+          0,
+          "imp",
+          0,
+          "war",
+          0,
+          "honor",
+          0
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Я памятник себе воздвиг нерукотворный,\nК нему не зарастёт народная тропа,\nВознёсся выше он главою непокорной\nАлександрийского столпа.\n\nНет, весь я не умру — душа в заветной лире\nМой прах переживёт и тлeнья убежит —\nИ славен буду я, доколь в подлунном мире\nЖив будет хоть один пиит.\n\nСлух обо мне пройдёт по всей Руси великой,\nИ назовёт меня всяк сущий в ней язык,\nИ гордый внук славян, и финн, и ныне дикий\nТунгус, и друг степей калмык.\n\nИ долго буду тем любезен я народу,\nЧто чувства добрые я лирой пробуждал,\nЧто в мой жестокий век восславил я свободу\nИ милость к падшим призывал.\n\nВеленью бoжию, о муза, будь послушна,\nОбиды не страшась, не требуя венца,\nХвалу и клевету приeмли равнодушно\nИ не оспоривай глупца.",
+        "comment": true,
+        "var_need": [
+          "monument",
+          1
+        ]
+      },
+      {
+        "text": "<$2>ЗАВЕЩАНИЕ",
+        "id": 21,
+        "var_need": [
+          "global promise",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "monument",
+          0,
+          "promice",
+          1,
+          "peace",
+          0,
+          "chad",
+          0,
+          "imp",
+          0,
+          "war",
+          0,
+          "honor",
+          0
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Хочу я завтра умереть\nИ в мир волшебный наслажденья,\nНа тихой берег вод забвенья,\nВеселой тенью отлететь…\nПрости навек, очарованье,\nОтрада жизни и любви!\nПриближьтесь, о друзья мои,\nБлагоговенье и вниманье! —\nПевец решился умереть.\n\nИтак, с вечернею луною,\nВ саду нельзя ли дерн одеть\nУзорной белой пеленою?\nНа темный берег сонных вод,\nГде мы вели беседы наши,\nНельзя ль, устроя длинный ход,\nНести наполненные чаши?\nЗовите на последний пир\nСпесивой Семелеи сына,\nЭрота, друга наших лир,\nБогов и смертных властелина,\nПускай веселье прибежит,\nМахая резвою гремушкой,\nИ нас от сердца рассмешит\nЗа полной пенистою кружкой.\nПускай игривою толпой\nСлетят родные наши музы.\nИм первый кубок круговой,\nДрузья! священны нам их узы.\nДо ранней утренней звезды,\nДо тихого лучей рассвета\nНе выйдут из руки поэта\nФиалы братской череды.\nВ последний раз мою цевницу,\nМечтаний сладостных певицу,\nПрижму к восторженной груди.\nВ последний раз, томимый нежно,\nНе вспомню вечность и друзей.\nВ последний раз на груди снежной\nУпьюсь отрадой юных дней!\n\nНа тихой праздник погребенья\nЯ вас обязан пригласить.\nВеселость, друг уединенья,\nБилеты будет разносить…\nСтекитесь резвою толпою,\nГлавы в венках, рука с рукою,\nИ пусть на гробе, где певец\nИсчезнет в рощах Геликона,\nНапишет беглый ваш резец:\n«Здесь дремлет Юноша-Мудрец,\nПитомец Нег и Аполлона».\n",
+        "comment": true,
+        "var_need": [
+          "promice",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "id": 21,
+        "var_need": [
+          "global peace",
+          1
+        ],
+        "text": "<$2>ПОКОЙ И ВОЛЯ",
+        "var_set": [
+          "monument",
+          0,
+          "promice",
+          0,
+          "peace",
+          1,
+          "chad",
+          0,
+          "imp",
+          0,
+          "war",
+          0,
+          "honor",
+          0
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Пора, мой друг, пора! покоя сердца просит —\nЛетят за днями дни, и каждый час уносит\nЧастичку бытия, а мы с тобой вдвоём\nПредполагаем жить, и глядь — как раз — умрем.\n\nНа свете счастья нет, но есть покой и воля.\nДавно завидная мечтается мне доля —\nДавно, усталый раб, замыслил я побег\nВ обитель дальную трудов и чистых нег.",
+        "comment": true,
+        "var_need": [
+          "peace",
+          1
+        ]
+      },
+      {
+        "text": "<$2>К ЧААДАЕВУ",
+        "id": 21,
+        "var_need": [
+          "global chad",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "monument",
+          0,
+          "promice",
+          0,
+          "peace",
+          0,
+          "chad",
+          1,
+          "imp",
+          0,
+          "war",
+          0,
+          "honor",
+          0
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Любви, надежды, тихой славы\nНедолго нежил нас обман,\nИсчезли юные забавы,\nКак сон, как утренний туман.\n\nНо в нас горит еще желанье:\nПод гнетом власти роковой\nНетерпеливою душой\nОтчизны внемлем призыванье.\n\nМы ждем с томленьем упованья\nМинуты вольности святой,\nКак ждет любовник молодой\nМинуты верного свиданья.\n\nПока свободою горим,\nПока сердца для чести живы,\nМой друг, отчизне посвятим\nДуши прекрасные порывы!\n\nТоварищ, верь: взойдет она,\nЗвезда пленительного счастья,\nРоссия вспрянет ото сна,\nИ на обломках самовластья\nНапишут наши имена!",
+        "comment": true,
+        "var_need": [
+          "chad",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "id": 21,
+        "var_need": [
+          "global imp",
+          1
+        ],
+        "text": "<$2>БЕСЫ",
+        "var_set": [
+          "monument",
+          0,
+          "promice",
+          0,
+          "peace",
+          0,
+          "chad",
+          0,
+          "imp",
+          1,
+          "war",
+          0,
+          "honor",
+          0
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Мчатся тучи, вьются тучи,\nНевидимкою луна\nОсвещает снег летучий... \nМутно небо, ночь мутна.\nЕду, еду в чистом поле.\nКолокольчик дин-дин-дин...\nСтрашно, страшно поневоле\nСредь неведомых равнин!\n\n«Эй, пошел, ямщик!» — «Нет мочи:\nКоням, барин, тяжело,\nВьюга мне слипает очи,\nВсе дороги занесло.\nХоть убей, следа не видно!\nСбились мы. Что делать нам!\nВ поле бес нас водит, видно,\nДа кружит по сторонам.\n\nВьюга злится, вьюга плачет,\nКони чуткие храпят,\nВот уж он далече скачет, \nЛишь глаза во мгле горят\nКони снова понеслися —\nКолокольчик дин-дин-дин…\nВижу: духи собралися\nСредь белеющих равнин.\n\nБесконечны, безобразны,\nВ мутной месяца игре\nЗакружились бесы разны,\nБудто листья в ноябре…\nСколько их? куда их гонят?\nЧто так жалобно поют?\nДомового ли хоронят,\nВедьму ль замуж выдают?\n\nМчатся тучи, вьются тучи,\nНевидимкою луна\nОсвещает снег летучий... \nМутно небо, ночь мутна.\nМчатся бесы рой за роем\nВ беспредельной вышине,\nВизгом жалобным и воем\nНадрывая сердце мне…",
+        "comment": true,
+        "var_need": [
+          "imp",
+          1
+        ]
+      },
+      {
+        "text": "<$2>ВОЙНА",
+        "id": 21,
+        "var_need": [
+          "global war",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "monument",
+          0,
+          "promice",
+          0,
+          "peace",
+          0,
+          "chad",
+          0,
+          "imp",
+          0,
+          "war",
+          1,
+          "honor",
+          0
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Война! Подъяты наконец,\nШумят знамены бранной чести!\nУвижу кровь, увижу праздник мести,\nЗасвищет вкруг меня губительный свинец.\nИ сколько сильных впечатлений\nДля жаждущей души моей!\nСтремленье бурных ополчений,\nТревоги стана, звук мечей,\nИ в роковом огне сражений\nПаденье ратных и вождей!\nПредметы гордых песнопений\nРазбудят мой уснувший гений! —\n\nВсё ново будет мне: простая сень шатра,\nОгни врагов, их чуждое взыванье,\nВечерний барабан, гром пушки, визг ядра\nИ смерти грозной ожиданье.\nРодишься ль ты во мне, слепая славы страсть,\nТы, жажда гибели, свирепый жар героев?\nВенок ли мне двойной достанется на часть,\nКончину ль темную судил мне жребий боев?\n\nИ всё умрет со мной: надежды юных дней,\nСвященный сердца жар, к высокому стремленье,\nВоспоминание и брата и друзей,\nИ мыслей творческих напрасное волненье, И ты, и ты, любовь!.. Ужель ни бранный шум,\nНи ратные труды, ни ропот гордой Славы,\nНичто не заглушит моих привычных дум?\n\nЯ таю, жертва злой отравы:\nПокой бежит меня, нет власти над собой,\nИ тягостная лень душою овладела…\nЧто ж медлит ужас боевой?\nЧто ж битва первая еще не закипела?\n",
+        "comment": true,
+        "var_need": [
+          "war",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "var_need": [
+          "global honor",
+          1
+        ],
+        "id": 21,
+        "text": "__________"
+      },
+      {
+        "text": "<$2>СМЕРТЬ ПОЭТА",
+        "id": 21,
+        "var_need": [
+          "global honor",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "monument",
+          0,
+          "promice",
+          0,
+          "peace",
+          0,
+          "chad",
+          0,
+          "imp",
+          0,
+          "war",
+          0,
+          "honor",
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Погиб поэт! — невольник чести —\nПал, оклеветанный молвой,\nС свинцом в груди и жаждой мести,\nПоникнув гордой головой!..\nНе вынесла душа поэта\nПозора мелочных обид,\nВосстал он против мнений света\nОдин, как прежде… и убит!\nУбит!.. К чему теперь рыданья,\nПустых похвал ненужный хор\nИ жалкий лепет оправданья?\nСудьбы свершился приговор!\nНе вы ль сперва так злобно гнали\nЕго свободный, смелый дар\nИ для потехи раздували\nЧуть затаившийся пожар?\nЧто ж? веселитесь… Он мучений\nПоследних вынести не мог:\nУгас, как светоч, дивный гений,\nУвял торжественный венок.",
+        "comment": true,
+        "var_need": [
+          "honor",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 21,
+        "text": "М.Ю.Лермонтов",
+        "var_need": [
+          "honor",
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": " ",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 1,
+        "text": "[Закрыть]",
+        "middle_answer": true
+      },
+      {
+        "id": 21,
+        "text": " ",
+        "comment": true
+      },
+      {
+        "id": 21,
+        "newAnswerImage": [
+          "https://i.ibb.co/fY6p0Vyq/1000016549.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 21,
+        "text": "Счëт:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "global pushkin"
+        ],
+        "comment": true,
+        "id": 21,
+        "text": "П:",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 21,
+        "text": "Д:",
+        "var_show": [
+          "global dantes"
+        ]
+      },
+      {
+        "id": 21,
+        "text": " ",
+        "comment": true
+      },
+      {
+        "id": 21,
+        "text": "<$2>Бессмертие души, бессмертие творений... ",
+        "comment": true,
+        "var_need": [
+          "global imm",
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "<$2>Сердце в будущем живëт, настоящее уныло... ",
+        "comment": true,
+        "var_need": [
+          "global fut",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "empty",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\n  if password == \"Николай\" or g.god == 1 then\n    return [[<$2>«Чело, увенчанное славой»\n\n<$1>Авторизация успешна]]\n  elseif g.god == 0 and g.troll == 1 then\n    return [[<$2>«Безумных лет угасшее веселье»\n\n]]\n  end\nend",
+        "middle_answer": true,
+        "text": "Власть необходимо заслужить. \n",
+        "id": 22,
+        "comment": true
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": " ",
+        "lua_if": "function lua_if()\nreturn password ~= \"Николай\"\nend",
+        "id": 22
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Введите имя правителя, упоминаемого в квесте:\n",
+        "lua_if": "function lua_if()\nreturn password ~= \"Николай\"\nend",
+        "id": 22
+      },
+      {
+        "lua_if": "function lua_if()\nreturn password ~= \"Николай\"\nend",
+        "input_var": "password",
+        "id": 22,
+        "text": "Пишите в именительном падеже",
+        "middle_answer": true,
+        "var_no_more": [
+          "global troll",
+          0
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nreturn password ~= \"Николай\"\nend",
+        "id": 22,
+        "middle_answer": true,
+        "instant": true,
+        "text": "Сохранить",
+        "var_no_more": [
+          "global troll",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 22,
+        "text": "_______________",
+        "middle_answer": true,
+        "var_no_more": [
+          "global troll",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "global god",
+          1
+        ],
+        "id": 22,
+        "middle_answer": true,
+        "instant": true,
+        "text": "Отключить режим бога",
+        "var_set": [
+          "global god",
+          0
+        ]
+      },
+      {
+        "var_no_more": [
+          "global god",
+          0
+        ],
+        "text": "Включить режим бога",
+        "instant": true,
+        "id": 22,
+        "var_need": [
+          "global troll",
+          1
+        ],
+        "middle_answer": true,
+        "var_set": [
+          "global god",
+          1
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\npassword = password or \"\"\nreturn password == \"Николай\"\nend",
+        "var_add": [
+          "global pushkin",
+          0,
+          "global dantes",
+          0,
+          "air",
+          0
+        ],
+        "middle_answer": true,
+        "text": "Начать дуэль",
+        "id": 2,
+        "var_set": [
+          "global god",
+          1,
+          "global troll",
+          1,
+          "step",
+          0,
+          "fireD",
+          0,
+          "fireP",
+          0,
+          "fireAir",
+          0,
+          "hit",
+          0,
+          "round",
+          0,
+          "stepAfter",
+          0,
+          "distance",
+          20,
+          "aim",
+          0,
+          "pictureD",
+          0,
+          "pictureP",
+          0,
+          "first",
+          0,
+          "bolnitsa",
+          0,
+          "talk",
+          0,
+          "talk1",
+          0,
+          "future",
+          0,
+          "immortal",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "text": "Назад",
+        "lua_if": "function lua_if()\n  if password ==  \"Николай\" then\n    return false\n  else\n    return true\n  end\nend",
+        "id": 1
+      },
+      {
+        "lua_if": "function lua_if()\n  if password ==  \"Николай\" then\n    return true\n  end\nend",
+        "middle_answer": true,
+        "text": "Назад",
+        "id": 1,
+        "var_set": [
+          "global god",
+          1,
+          "global troll",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "\n\n\n\n\nХотите стать лучшей версией себя? Бессмертнее? Предусмотрительнее?",
+        "comment": true,
+        "lua_text": "function lua_text()\n  if g.troll == 1 and g.god == 1 or g.troll == 1 and password == \"Николай\" then\n    return [[\n\n\n\n\nНаслаждайтесь!]]\n  elseif g.troll == 1 and g.god == 0 then\n    return [[\n\n\n\n\nБольше не хотите стать лучшей версией себя? Бессмертнее? Предусмотрительнее?]]\n  end\nend"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 23,
+        "newAnswerImage": [
+          "https://i.ibb.co/7nLxRsB/Lumii-20250105-110225519.png"
+        ],
+        "comment": true,
+        "text": " "
+      },
+      {
+        "id": 23,
+        "text": "________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_no_more": [
+          "see",
+          0
+        ],
+        "id": 23,
+        "instant": true,
+        "text": "Присмотреться",
+        "var_set": [
+          "see",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 23,
+        "var_need": [
+          "see",
+          1
+        ],
+        "text": "\n<$2>Патент на звание рогоносца",
+        "middle_answer": true
+      },
+      {
+        "id": 23,
+        "text": "<$2>Кавалеры первой степени, командоры и кавалеры светлейшего ордена рогоносцев, собравшись в Великом Капитуле под председательством достопочтенного великого магистра ордена, его превосходительства Д. Л. Нарышкина, единогласно избрали г-на Александра Пушкина коадъютером великого магистра ордена рогоносцев и историографом ордена.",
+        "comment": true,
+        "var_need": [
+          "see",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 23,
+        "text": "<$2>Непременный секретарь \nграф И. Борх",
+        "var_need": [
+          "see",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Смять и выбросить",
+        "middle_answer": true
+      },
+      {
+        "id": 24,
+        "text": "костыль",
+        "var_need": [
+          "dopisat",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 25,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 26,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 29,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 30,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 31,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 33,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 34,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 35,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 36,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": []
+  }
+]

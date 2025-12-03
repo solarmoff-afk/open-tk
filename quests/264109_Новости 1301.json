@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 111598 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор VaveStrike написал еще 101343 слов в квесте \"Метро 2033: Время Забытых\"."
+      },
+      {
+        "targetbookid": "260781",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Метро 2033: Время Забытых\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Фантом написал еще 89236 слов в квесте \"War of Heaven Volume 1\"."
+      },
+      {
+        "targetbookid": "245599",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"War of Heaven Volume 1\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 80716 слов в квесте \"Снежная Соната\"."
+      },
+      {
+        "targetbookid": "252827",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Снежная Соната\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор BEER'ka написал еще 79440 слов в квесте \"Metro beta\"."
+      },
+      {
+        "targetbookid": "233453",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Metro beta\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

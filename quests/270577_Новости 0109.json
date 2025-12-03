@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Артём Тихий написал еще 48617.8 слов в квесте \"Ледяной ветер\"."
+      },
+      {
+        "targetbookid": "140587",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ледяной ветер\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Котики - Кролики написал еще 38885.2 слов в квесте \"Закат королевств\"."
+      },
+      {
+        "targetbookid": "269983",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Закат королевств\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор for написал еще 34144.8 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "269965",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор masha katsuba написал еще 32308.6 слов в квесте \"Солнце и Луна: Ритуал\n\n\"."
+      },
+      {
+        "targetbookid": "267683",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Солнце и Луна: Ритуал\n\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Froga написал еще 24290.2 слов в квесте \"Ночь в лесу\"."
+      },
+      {
+        "targetbookid": "267171",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ночь в лесу\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

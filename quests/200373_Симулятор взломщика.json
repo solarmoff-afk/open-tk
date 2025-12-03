@@ -1,0 +1,892 @@
+[
+  {
+    "id": 1,
+    "text": " Это простой симулятор вора-взломщика. Правила:<s>r\n* У вас есть сундуки трех уровней сложности и отмычки\n* Чтобы его взломать нужно попасть в определенный диапазон, зависящий от типа сундука и прочкачки навыка\n* Если отмычка сломалась, выведется сообщение, в котором сказано близко она к диапазону открытия или далеко. \n* Если вы попали, вы получите золото и драгоценности которые можно продать",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Начать",
+        "lua_do": "function lua_do()\ng.autorun = 13\ng.myCollect = { }\ng.lostCollect = \n{\n   \"diamond\", --Алмаз Санси\n   \"dagger\", --Ритуальный кинжал Куо-Тоа\n   \"crown\", --Корона \n   \"chicken\", -- Серебряная статуэтка курицы\n   \"mask\", -- Золотая маска\n}\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Выбери тип замка",
+    "answers": [
+      {
+        "var_show": [
+          "easyChest",
+          "штук)"
+        ],
+        "lua_if": "function lua_if()\nreturn (easyChest > 0 and item > 0)\nend",
+        "middle_answer": true,
+        "text": "Легкий (осталось",
+        "id": 3,
+        "lua_do": "function lua_do()\nrange = math.round((3<plus>3/100*skill)*10)\nminGrad = (math.random (0, 18 - range/10))*10\nmaxGrad = minGrad <plus> range\nminLoot = 15\nmaxLoot = 30\nchanceIron = 10\nchanceSilver = 0\nchanceGold = 0\nhelp = 31\nchestType = \"easy\"\nend"
+      },
+      {
+        "var_show": [
+          "middChest",
+          "штук)"
+        ],
+        "lua_if": "function lua_if()\nreturn (middChest > 0 and item > 0)\nend",
+        "middle_answer": true,
+        "text": "Средний (осталось",
+        "lua_do": "function lua_do()\nrange = math.round((2<plus>2/100*skill)*10)\nminGrad = (math.random (0, 18 - range/10))*10\nmaxGrad = minGrad <plus> range\nminLoot = 30\nmaxLoot = 60\nchanceIron = 30\nchanceSilver = 15\nchanceGold = 0\nhelp = 21\nchestType = \"midd\"\nend",
+        "id": 3
+      },
+      {
+        "var_show": [
+          "hardChest",
+          "штук)"
+        ],
+        "lua_if": "function lua_if()\nreturn (hardChest > 0 and item > 0)\nend",
+        "middle_answer": true,
+        "text": "Сложный (осталось",
+        "lua_do": "function lua_do()\nrange = math.round((1<plus>1/100*skill)*10)\nminGrad = (math.random (0, 18 - range/10))*10\nmaxGrad = minGrad <plus> range\nminLoot = 60\nmaxLoot = 70\nchanceIron = 50\nchanceSilver = 25\nchanceGold = 10\nhelp = 11\nchestType = \"hard\"\nend",
+        "id": 3
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\ngrade = 0\nhard = maxItem\nend",
+        "calculate": true
+      },
+      {
+        "id": 6,
+        "text": "Назад",
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Укажите команды для картинки",
+        "url": "https://sun9-43.userapi.com/n-q2aXj2y6oV9ClG4YB-LhrnQketFDfqGpBDRA/e-pBjrVWCE8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "   ",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nlocal x = canvas.width * 0.522\nlocal y = canvas.height * 0.475\nlocal size = canvas.height * 0.5\noPicklock = display.newImageRect(canvasGroup, nameForImages(\"http://a.radikal.ru/a31/2007/93/828ee45133d2.png\"), system.TemporaryDirectory, size, size) \noPicklock.x, oPicklock.y = x, y \noPicklock.anchorX, oPicklock.anchorY = 1, 1 \noPicklock.rotation = grade - 45\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 3,
+        "calculate": false
+      },
+      {
+        "var_show": [
+          "grade",
+          "градусов"
+        ],
+        "comment": true,
+        "id": 3,
+        "text": "Положение отмычки:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "hard",
+          "единицы"
+        ],
+        "comment": true,
+        "id": 3,
+        "text": "Прочность отмычки: ",
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "item",
+          "отмычек"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": "У вас есть",
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade - 60\ngrade = grade >= 0 and grade or 0 \nend",
+        "text": "Повернуть на 60 градусов",
+        "id": 3,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 3,
+        "text": "Повернуть на 60 градусов",
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade <plus> 60\ngrade = grade <= 180 and grade or 180\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade - 30\ngrade = grade >= 0 and grade or 0 \nend",
+        "text": "Повернуть на 30 градусов",
+        "id": 3,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 3,
+        "text": "Повернуть на 30 градусов",
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade <plus> 30\ngrade = grade <= 180 and grade or 180\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade - 10\ngrade = grade >= 0 and grade or 0 \nend",
+        "text": "Повернуть на 10 градусов",
+        "id": 3,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 3,
+        "text": "Повернуть на 10 градусов",
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade <plus> 10\ngrade = grade <= 180 and grade or 180\nend"
+      },
+      {
+        "instant": true,
+        "id": 3,
+        "middle_answer": true,
+        "text": "Попробовать открыть замок",
+        "lua_do": "function lua_do()\nif (grade >= minGrad and grade <= maxGrad) then\n    golden = golden <plus> 1\n    showPage { id = 4 }\n    return true\nelseif (grade <= (minGrad - help) or grade >= (maxGrad <plus> help)) then\n    message (\"Отмычка далеко от нужного положения\")\nelse \n    message (\"Отмычка близко к нужному положению\")\nend\n\nhard = hard - 1\nif (hard < 1) then\n    message (\"Отмычка сломана\")\n    item = item - 1\n    hard = maxItem\n    breackItems = breackItems <plus> 1\n    golden = 0\n    if (item < 1) then\n    showPage { id = 2 }\n    return true\n    end\nend\n     showPage { id = 3, transition = instant }\nend",
+        "no_transition": true
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://d.radikal.ru/d20/2008/15/5667bf7ffed6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": " Вы успешно взломали замок! В нем оказалось:",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nlootGold = math.random (minLoot, maxLoot)\ngold = gold <plus> lootGold\ng.statPlusGold = g.statPlusGold <plus> lootGold\nif ( math.random(100) <= chanceIron ) then\n   lootItemIron = 1 \n   itemIron = itemIron <plus> 1\n   g.statLootIron = g.statLootIron <plus> 1\nend\nif ( math.random(100) <= chanceSilver ) then\n    itemSilver = itemSilver <plus> 1\n    lootItemSilver = 1\n    g.statLootSilver = g.statLootSilver <plus> 1\nend\nif ( math.random(100) <= chanceGold ) then\n    itemGold = itemGold <plus> 1\n    lootItemGold = 1\n    g.statLootGold = g.statLootGold <plus> 1\nend\nif (chestType == \"easy\") then\n    g.openEasy = g.openEasy <plus> 1\n    easyChest = easyChest - 1\nelseif (chestType == \"midd\") then\n    g.openMidd = g.openMidd<plus>1\n    middChest = middChest - 1\nelseif (chestType == \"hard\") then\n    g.openHard = g.openHard <plus>1\n    hardChest = hardChest - 1\nend\nskill = skill <plus> 1\nskill = skill <= 200 and skill or 200\nend",
+        "text": "ранд",
+        "id": 4,
+        "calculate": true
+      },
+      {
+        "var_show": [
+          "lootGold",
+          ""
+        ],
+        "comment": true,
+        "id": 4,
+        "text": "Монеты:",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "lootItemIron",
+          1
+        ],
+        "id": 4,
+        "text": "Железный кинжал",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "lootItemSilver",
+          1
+        ],
+        "id": 4,
+        "text": "Серебряная ложка",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "lootItemGold",
+          1
+        ],
+        "id": 4,
+        "text": "Золотой подсвечник",
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Продолжить",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nlootGold = 0   lootItemGold = 0   lootItemSilver = 0   lootItemIron = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   ",
+    "answers": [
+      {
+        "var_show": [
+          "grade",
+          "градусов"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": "Положение отмычки:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "hard",
+          "единицы"
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "Прочность отмычки: ",
+        "right_answer": true
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "id": 5,
+        "text": "Повернуть на 60 градусов",
+        "lua_do": "function lua_do()\ngrade = grade - 60\ngrade = grade >= 0 and grade or 0 \nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 5,
+        "text": "Повернуть на 60 градусов",
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade <plus> 60\ngrade = grade <= 300 and grade or 300\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "id": 5,
+        "text": "Повернуть на 30 градусов",
+        "lua_do": "function lua_do()\ngrade = grade - 30\ngrade = grade >= 0 and grade or 0 \nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 5,
+        "text": "Повернуть на 30 градусов",
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade <plus> 30\ngrade = grade <= 300 and grade or 300\nend"
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "id": 5,
+        "text": "Повернуть на 10 градусов",
+        "lua_do": "function lua_do()\ngrade = grade - 10\ngrade = grade >= 0 and grade or 0 \nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 5,
+        "text": "Повернуть на 10 градусов",
+        "instant": true,
+        "lua_do": "function lua_do()\ngrade = grade <plus> 10\ngrade = grade <= 300 and grade or 300\nend"
+      },
+      {
+        "middle_answer": true,
+        "comment": false,
+        "id": 5,
+        "lua_do": "function lua_do()\nif (grade >= minGrad and grade <= maxGrad) then\n    showPage { id = 9 }\n    return true\nelseif (grade <= (minGrad - help) or grade >= (maxGrad <plus> help)) then\n    message (\"Отмычка далеко от нужного положения\")\nelse \n    message (\"Отмычка близко к нужному положению\")\nend\nhard = hard - 1\nif (hard < 1) then\n    message (\"Отмычка сломана\")\n    item = item - 1\n    hard = 3\n    breackItems = breackItems <plus> 1\n    showPage { id = 10 }\nend\nend",
+        "instant": true,
+        "text": "Попробовать открыть замок",
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": " Выбери куда ты отправишься:     ",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Магазин",
+        "middle_answer": true
+      },
+      {
+        "id": 8,
+        "text": "Сокровища",
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "text": "Сундуки",
+        "middle_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Статистика",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "Достижения",
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "instant": true,
+        "lua_do": "function lua_do()\ngold = gold <plus>1\nmessage(\"<plus>1 монетка!\")\nend",
+        "text": "Попрошайничать",
+        "middle_answer": true,
+        "id": 6
+      },
+      {
+        "comment": false,
+        "id": 6,
+        "url": "https://vk.com/arsintk",
+        "middle_answer": true,
+        "text": "Перейти в группу автора в ВК"
+      },
+      {
+        "id": 9,
+        "text": "Благодарности",
+        "middle_answer": true
+      },
+      {
+        "id": 6,
+        "lua_do": "function lua_do()\ndialog ({header = \"!!!ОСТОРОЖНО!!!\",\ntext = \"Вы уверены в том что хотите сбросить прогресс и вернутся на первую страницу?\",\nanswers = {{text = \"Уверен.\",\npressListener = function ()\nshowPage {id = 1, transition = \"instant\"}\nhideDialog () end},\n{text = \"Отмена, отмена, отмена!\",\npressListener = function ()\nhideDialog ()\nend}}})\nend",
+        "text": "Сброс прогресса (ОСТОРОЖНО!)",
+        "middle_answer": true,
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "   Ты находишься в воровской лавке, где можно сбыть краденое и купить отмычки.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Укажите команды для картинки",
+        "url": "https://sun9-5.userapi.com/TiieqSBAWD-Dk9yeq-ONlEvNNOSZZyp-Oe4eTw/-rL5cMlHJ8s.jpg"
+      },
+      {
+        "id": 14,
+        "text": "Показать скупщику знак",
+        "lua_if": "function lua_if()\nreturn (quests[guildEnter] == 1)\nend"
+      },
+      {
+        "var_show": [
+          "gold",
+          "монет"
+        ],
+        "comment": true,
+        "id": 7,
+        "text": "У тебя",
+        "middle_answer": true,
+        "answerImage": [
+          "https://c.radikal.ru/c07/2010/85/47ac370893a5.png"
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Купить: ",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "answerIcon": [
+          "https://c.radikal.ru/c21/2010/12/d74384862793.png"
+        ],
+        "lua_if": "function lua_if()\nif (gold >= 15) then\nreturn true\nend\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\ngold = gold - 15\nitem = item <plus>1\ng.statMinusGold = g.statMinusGold <plus> 15\nmessage (\"Теперь у тебя \" .. item .. \" отмычек\")\nend",
+        "id": 7,
+        "text": "Отмычка (за 15 монет)",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\ngold = gold - 5\neasyChest = easyChest <plus> 1\nmessage(\"Теперь у вас \"..easyChest..\" легких сундуков\")\ng.statMinusGold = g.statMinusGold <plus> 5\nend",
+        "comment": false,
+        "var_need": [
+          "gold",
+          5
+        ],
+        "id": 7,
+        "text": "Легкий сундук (за 5 монет)",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\ngold = gold - 20\nmiddChest = middChest <plus> 1\nmessage(\"Теперь у вас \"..middChest..\" средних сундуков\")\ng.statMinusGold = g.statMinusGold <plus> 20\nend",
+        "comment": false,
+        "var_need": [
+          "gold",
+          20
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Средний сундук (за 20 монет)",
+        "left_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\ngold = gold - 80\nhardChest = hardChest <plus> 1\nmessage(\"Теперь у вас \"..hardChest..\" сложных сундуков\")\ng.statMinusGold = g.statMinusGold <plus> 80\nend",
+        "comment": false,
+        "var_need": [
+          "gold",
+          80
+        ],
+        "id": 7,
+        "text": "Сложный сундук (за 80 монет)",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "id": 7,
+        "text": "Продать: ",
+        "comment": true,
+        "right_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif ( itemIron > 0) then\nreturn true\nend\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nif(itemIron > 0) then\ngold = gold <plus> 40\nitemIron = itemIron - 1\ng.statPlusGold = g.statPlusGold <plus> 40\nmessage (\"У тебя осталось \" .. itemIron .. \" кинжал(ов)\")\nelse \nmessage(\"ERROR\")\nend\nend",
+        "text": "Железный кинжал (за 40 монет)",
+        "id": 7,
+        "comment": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif ( itemSilver > 0) then\nreturn true\nend\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nif itemSilver > 0 then\ngold = gold <plus> 100\nitemSilver = itemSilver - 1\ng.statPlusGold = g.statPlusGold <plus> 100\nmessage (\"У тебя осталось \" .. itemSilver .. \" ложка(ек)\")\nelse\nmessage(\"ERROR\")\nend\nend",
+        "text": "Серебряную ложку (за 100 монет)",
+        "id": 7,
+        "comment": false
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif ( itemGold > 0) then\nreturn true\nend\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nif itemGold > 0 then\ngold = gold <plus> 200\nitemGold = itemGold -1\ng.statPlusGold = g.statPlusGold <plus> 200\nmessage (\"У тебя осталось \" .. itemGold .. \" подсвечник(ов)\")\nelse\nmessage(\"ERROR\")\nend\nend",
+        "text": "Золотой подсвечник (за 200 монет)",
+        "id": 7,
+        "comment": false
+      },
+      {
+        "id": 6,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "У тебя есть:   ",
+    "answers": [
+      {
+        "var_show": [
+          "gold"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Монеты:",
+        "middle_answer": true,
+        "answerImage": [
+          "https://c.radikal.ru/c07/2010/85/47ac370893a5.png"
+        ]
+      },
+      {
+        "var_show": [
+          "itemIron"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Железные кинжалы:",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "itemSilver"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Серебряные ложки:",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "itemGold"
+        ],
+        "comment": true,
+        "id": 8,
+        "text": "Золотые подсвечники: ",
+        "middle_answer": true
+      },
+      {
+        "id": 6,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": " Итак давайте поблагодарим следующих людей за помощь в создании квеста:",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Олега Шаброва, создателя этого прекрасного приложения",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Создателей игры Skyrim, за вдохновение и интересную систему взлома",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Кирилла Полякова, как помощника в написании кода и самого активного игрока  ",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Сурена Пыжова, как еще одного активного игрока и кодера",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Веронику Султанову, как лучшего тестировщика",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Ирину Шило, за помощь с картинками и обложкой",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "Матвея Силиванова, Александру Выдру и многих других людей за идеи, найденные баги и время проведннное в квесте",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 6,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": " Вы стоите перед заброшенным зданием. Судя по всему, в нем никто не жил уже очень давно. Практически все окна разбиты, пустые проёмы заколочены. Поблизости никого нет, сейчас лучшее время для скрытного проникновения внутрь!",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Зайти внутрь",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog ({header = \"Дверь\",\ntext = \"Входная дверь оказалась запертой на довольно сложный замок. Отмычка поворачивается на 300 градусов.\",\nanswers = {\n{text = \"Поробовать его взломать\",\npressListener = function ()\nrange = math.round(1<plus>1/100*skill)*10\nminGrad = (math.random (0, 30 - range/10))*10\nmaxGrad = minGrad <plus> range\nhelp = 11\nshowPage {id = 5, transition = \"instant\"}\nhideDialog () end},\n{text = \"Уйти\",\npressListener = function ()\nhideDialog ()\nend}}})\nend"
+      },
+      {
+        "id": 4,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "   Ваша статистика:",
+    "answers": [
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Деньги",
+        "lua_text": "function lua_text()\nreturn \"Всего заработано/потрачено монет: \".. g.statPlusGold.. \"/\".. g.statMinusGold\nend",
+        "id": 11
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Сундуки",
+        "lua_text": "function lua_text()\nreturn \"Всего открыто легких/средних/сложных сундуков: \".. g.openEasy..\"/\".. g.openMidd..\"/\"..g.openHard\nend",
+        "id": 11
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Лут",
+        "lua_text": "function lua_text()\nreturn \"Всего добыто кинжалов/ложек/подсвечников: \".. g.statLootIron..\"/\"..g.statLootSilver..\"/\"..g.statLootGold\nend",
+        "id": 11
+      },
+      {
+        "var_show": [
+          "skill",
+          "из 200"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "text": "Навык взлома:",
+        "id": 11
+      },
+      {
+        "var_show": [
+          "breackItems"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "Сломанные отмычки:",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Время проведённое в квесте: \".. math.round(Qtime/60).. \" минут\"\nend",
+        "middle_answer": true,
+        "text": " ",
+        "id": 11,
+        "comment": true
+      },
+      {
+        "middle_answer": true,
+        "text": "Назад",
+        "comment": false,
+        "id": 6
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": " Тут собраны ваши достижения:",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"saveGold\"] > 0)\nend",
+        "id": 12,
+        "text": "Богач I",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Богач I\", \n   text = \"Заработано 1000 монет\", \n   answers = {{text = \"Продолжить\"}}\n} \nend"
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Богач II\", \n   text = \"Заработано 5000 монет\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Богач II",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"saveGold\"] > 1)\nend",
+        "id": 12
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"saveGold\"] > 2)\nend",
+        "id": 12,
+        "text": "Богач III",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Богач III\", \n   text = \"Заработано 10000 монет\", \n   answers = {{text = \"Продолжить\"}}\n} \nend"
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Мастер I\", \n   text = \"Навык взлома достиг 50 единиц\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Мастер I",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"skill\"] > 0)\nend",
+        "id": 12
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Мастер II\", \n   text = \"Навык взлома достиг 100 единиц\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Мастер II",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"skill\"] > 1)\nend",
+        "id": 12
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Мастер III\", \n   text = \"Навык взлома достиг 200 единиц\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Мастер III",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"skill\"] > 2)\nend",
+        "id": 12
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"golden\"] > 0)\nend",
+        "id": 12,
+        "text": "Золотые руки I",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Золотые руки I\", \n   text = \"Открыто 10 сундуков подряд без сломанных отмычек\", \n   answers = {{text = \"Продолжить\"}}\n} \nend"
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Золотые руки II\", \n   text = \"Открыто 15 сундуков подряд без сломанных отмычек\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Золотые руки II",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"golden\"] > 1)\nend",
+        "id": 12
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Золотые руки III\", \n   text = \"Открыто 20 сундуков подряд без сломанных отмычек\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Золотые руки III",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"golden\"] > 2)\nend",
+        "id": 12
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Оружейник I\", \n   text = \"Добыто 10 кинжалов\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Оружейник I",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"weaponer\"] > 0)\nend",
+        "id": 12
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"weaponer\"] > 1)\nend",
+        "id": 12,
+        "text": "Оружейник II",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Оружейник II\", \n   text = \"Добыто 50 кинжалов\", \n   answers = {{text = \"Продолжить\"}}\n} \nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"weaponer\"] > 2)\nend",
+        "id": 12,
+        "text": "Оружейник III",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Оружейник III\", \n   text = \"Добыто 100 кинжалов\", \n   answers = {{text = \"Продолжить\"}}\n} \nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"eater\"] > 0)\nend",
+        "id": 12,
+        "text": "Любитель покушать I",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Любитель покушать I\", \n   text = \"Добыто 10 ложек\", \n   answers = {{text = \"Продолжить\"}}\n} \nend"
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Любитель покушать II\", \n   text = \"Добыто 15 ложек\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Любитель покушать II",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"eater\"] > 1)\nend",
+        "id": 12
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog \n{\n   header = \"Любитель покушать III\", \n   text = \"Добыто 30 ложек\", \n   answers = {{text = \"Продолжить\"}}\n} \nend",
+        "text": "Любитель покушать III",
+        "lua_if": "function lua_if()\nreturn (g.achieve[\"eater\"] > 2)\nend",
+        "id": 12
+      },
+      {
+        "id": 6,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "     ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\neasyChest = easyChest or 5\nmiddChest = middChest or 3\nhardChest = hardChest or 1\ng.achGet = g.AchGet or { }\nmaxAchieve = 15\ngolden = golden or 0\nQtime = Qtime or 0\nbreackItems = breackItems or 0\nguildRank = guildRank or \"\"\nquests = quests or { [\"guildEnter\"] = 0 }\nskill = skill or 1   \ngold = gold or 100\nitem = item or 10   itemGold = itemGold or 0   itemSilver = itemSilver or 0   itemIron = itemIron or 0\nlootGold = lootGold or 0   \nlootItemGold = lootItemGold or 0   lootItemSilver = lootItemSilver or 0   lootItemIron = lootItemIron or 0\nhard = hard or 1   maxItem= maxItem or 1 \nif (hardCost == 60 ) then\nhardCost = 20\nend\nhardCost = hardCost or 20\ngrade = grade or 0   minGrad = minGrad or 0   maxGrad = maxGrad or 0   range = range or 0 help = help or 0\nchanceIron = chanceIron or 0\nchanceSilver = chanceSilver or 0\nchanceGold = chanceGold or 0\nchestType = chestType or \"\"\ng.achieve = g.achieve or {  }\ng.achieve[\"saveGold\"] = g.achieve[\"saveGold\"] or 0\ng.achieve[\"weaponer\"] = g.achieve[\"weaponer\"] or 0\ng.achieve[\"eater\"] = g.achieve[\"eater\"] or 0\ng.achieve[\"skill\"] = g.achieve[\"skill\"] or 0\ng.achieve[\"golden\"] = g.achieve[\"golden\"] or 0\n   g.statPlusGold = g.statPlusGold or 0 \n   g.statMinusGold = g.statMinusGold or 0\n   g.openEasy = g.openEasy or 0\n   g.openMidd = g.openMidd or 0\n   g.openHard = g.openHard or 0\n   g.statLootIron = g.statLootIron or 0\n   g.statLootSilver = g.statLootSilver or 0\n   g.statLootGold = g.statLootGold or 0\nend",
+        "calculate": true
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "text": " ",
+        "update": [
+          1
+        ],
+        "lua_do": "function lua_do()\nQtime = Qtime <plus> 1\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Ачивки",
+        "calculate": true,
+        "lua_do": "function lua_do()\nif (gold >= 10000) then\n   g.achieve[\"saveGold\"] = 3\n   g.achGet[\"saveGold3\"] = 1\nelseif (gold >= 5000 and g.achieve[\"saveGold\"] < 2) then\n   g.achieve[\"saveGold\"] = 2\n   g.achGet[\"saveGold2\"] = 1\nelseif (gold >= 1000 and g.achieve[\"saveGold\"] < 1) then\n   g.achieve[\"saveGold\"] = 1\n   g.achGet[\"saveGold1\"] = 1\nend\nif (skill >= 200) then\n   g.achieve[\"skill\"] = 3\n   g.achGet[\"skill3\"] = 1\nelseif (skill >= 100 and g.achieve[\"skill\"] < 2) then\n   g.achieve[\"skill\"] = 2\n   g.achGet[\"skill2\"] = 1\nelseif (skill >= 50 and g.achieve[\"skill\"] < 1) then\n   g.achieve[\"skill\"] = 1\n   g.achGet[\"skill1\"] = 1\nend\nif (g.statLootIron >= 100) then\n   g.achieve[\"weaponer\"] = 3\nelseif (g.statLootIron >= 50 and g.achieve[\"weaponer\"] < 2) then\n   g.achieve[\"weaponer\"] = 2\nelseif (g.statLootIron >= 10 and g.achieve[\"weaponer\"] < 1) then\n   g.achieve[\"weaponer\"] = 1\nend\nif (g.statLootSilver >= 30) then\n   g.achieve[\"eater\"] = 3\nelseif (g.statLootSilver >= 15 and g.achieve[\"eater\"] < 2) then\n   g.achieve[\"eater\"] = 2\nelseif (g.statLootSilver >= 10 and g.achieve[\"eater\"] < 1) then\n   g.achieve[\"eater\"] = 1\nend\nif (golden >= 20) then\n   g.achieve[\"golden\"] = 3\n   golden = 0\nelseif (golden >= 15 and g.achieve[\"golden\"] < 2) then\n   g.achieve[\"golden\"] = 2\n   golden = 0\nelseif (golden >= 10 and g.achieve[\"golden\"] < 1) then\n   g.achieve[\"golden\"] = 1\n   golden = 0\nend\nend"
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Почётный Кирилл",
+        "lua_if": "function lua_if()\nreturn g.kirill == 1\nend",
+        "id": 13
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": " Несколько минут он разглядывал знак со всех сторон, просвечивал его и даже пробовал на вкус. Наконец он оглянулся и произнес: <s>r\n",
+    "answers": [
+      {
+        "id": 14,
+        "text": "- Видимо кто-то в гильдии заинтересовался тобой... Я могу провести тебя, но за определенную плату. С тебя две тысячи золотых. - \"На этих словах он протянул руку и выжидательно уставился на вас\"",
+        "comment": true
+      },
+      {
+        "id": 15,
+        "text": "- Веди. - \"Протянуть ему монеты\"",
+        "var_need": [
+          "gold",
+          2000
+        ],
+        "lua_do": "function lua_do()\ngold = gold - 2000\nquests[\"guildEnter\"] = 2\nend"
+      },
+      {
+        "id": 7,
+        "text": "- Я пока не готов",
+        "lua_do": "function lua_do()\nmessage (\"Скупщик разочарованно вернул вам метку и отвернулся, показывая что разговор окончен\")\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 15,
+        "text": " Скупщик сгреб все монеты в мешочек, спрятал их и повел вас по многочисленным улочкам и переулкам города. Спустя некоторое время скупщик остановился перед ничем не примечательным заброшенным зданием.",
+        "merge": true
+      },
+      {
+        "middle_answer": false,
+        "text": "- Дальше иди сам. - \"Он развернулся и быстро скрылся из виду\"",
+        "comment": true,
+        "id": 5
+      },
+      {
+        "id": 15,
+        "text": "Зайти внутрь",
+        "comment": false,
+        "lua_do": "function lua_do()\ndialog ({header = \"Дверь\",\ntext = \"Входная дверь оказалась запертой на очень сложный замок, поворачивающийся на 300 градусов.\",\nanswers = {\n{text = \"Поробовать его взломать\",\npressListener = function ()\nrange = math.round(1<plus>1/100*skill)*10\nminGrad = (math.random (0, 30 - range/10))*10\nmaxGrad = minGrad <plus> range\nhelp = 11\nshowPage {id = 5, transition = \"instant\"}\nhideDialog () end},\n{text = \"Уйти\",\npressListener = function ()\nhideDialog ()\nend}}})\nend"
+      },
+      {
+        "id": 6,
+        "text": "Уйти"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 17,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "http://a.radikal.ru/a31/2007/93/828ee45133d2.png"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 1,
+    "text": "Джейн — ветеринар. Она только что закончила университет, и готова посвятить свою жизнь спасению животных. Её ждёт множество нелёгких испытаний, тайн, романтики.<s>r\n<s>r\nСегодня её первый день работы в клинике.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать",
+        "lua_do": "function lua_do()\ng.fullscreen = 0\nend"
+      },
+      {
+        "id": 12,
+        "text": "Тестовые уровни"
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "global allowCopy",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Джейн проснулась за пару минут до звонка будильника. Сегодня её первый день на работе! Надо поторопиться.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Заправить постель.\n<plus> сосредоточенность\n- время"
+      },
+      {
+        "id": 3,
+        "text": "Оставить постель незаправленной\n<plus> время\n- сосредоточенность"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Джейн вышла из спальни. Теперь нужно привести себя в порядок.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Почистить зубы, умыться, нанести макияж.\n- время\n<plus> сосредоточенность\n<plus> харизма"
+      },
+      {
+        "id": 4,
+        "text": "Это всё лишнее. Просто ополоснуть лицо.\n<plus> время\n- сосредоточенность\n- харизма"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Освежившись, Джейн вышла из ванной комнаты и прошла на кухню.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Приготовить и съесть завтрак.\n- Время\n<plus> Выносливость"
+      },
+      {
+        "id": 5,
+        "text": "Перекусить шоколадным батончиком\n<plus> Время\n- Выносливость"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Джейн вышла из своей маленькой квартирки, спустилась по лестнице и оказалась на улице.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Доехать до работы на такси\n- 10 долларов\n<plus> время"
+      },
+      {
+        "id": 6,
+        "text": "Доехать до работы на автобусе\n- 50 центов\n- время"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "— Вы опоздали, Джейн! — вместо приветствия прикрикнула на неё пожилая медсестра. — Бегом к операционному столу!<s>r\n— Что? Операция?! Но я...<s>r\n— Больше никого нет, наш хирург заболел! Вперёд!<s>r\nДжейн сглотнула.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Приготовиться к операции"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Операция.<s>r\nПациент: Вислоухий британский кот. Самец.<s>r\nДиагноз: Воспаление чего-нибудь.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Начать этап 1",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nmoves = 12\nhard = 0.10\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Страница уровня. Данный текст не отображается. Необходимо копировать данную страницу целиком с помощью команды \"copy all\", чтобы создать новый уровень.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "(чит для ГД) Добавить 5 ходов",
+        "need": 9999,
+        "lua_do": "function lua_do()\nmoves = moves <plus> 5\nend"
+      },
+      {
+        "id": 9,
+        "text": "Перейти на страницу рана с движком (только для программистов или при обновлении движка по инструкции)",
+        "need": 9999
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Направьте следующие ответы на страницы поражения и победы. Не меняйте их текст! Не удаляйте невыполнимое условие!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 10,
+        "text": "Victory_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 11,
+        "text": "Lose_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Измените ссылки на картинки для следующих ответов, чтобы настроить внешний вид уровня. Не меняйте текст ответов!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "bg stretch",
+        "url": "http://188.120.236.127/memories/veterinar/bg1.jpg"
+      },
+      {
+        "id": 8,
+        "text": "table",
+        "url": "http://188.120.236.127/memories/veterinar/table.jpg"
+      },
+      {
+        "id": 8,
+        "text": "rubashka",
+        "url": "http://188.120.236.127/memories/veterinar/rubashka.png"
+      },
+      {
+        "id": 8,
+        "text": "c1",
+        "url": "http://188.120.236.127/memories/veterinar/c1.png"
+      },
+      {
+        "id": 8,
+        "text": "c2",
+        "url": "http://188.120.236.127/memories/veterinar/c2.png"
+      },
+      {
+        "id": 8,
+        "text": "c3",
+        "url": "http://188.120.236.127/memories/veterinar/c3.png"
+      },
+      {
+        "id": 8,
+        "text": "c4",
+        "url": "http://188.120.236.127/memories/veterinar/c4.png"
+      },
+      {
+        "id": 8,
+        "text": "win",
+        "url": "http://188.120.236.127/memories/veterinar/win.png"
+      },
+      {
+        "id": 8,
+        "text": "full_move",
+        "url": "http://188.120.236.127/memories/veterinar/full_move.png"
+      },
+      {
+        "id": 8,
+        "text": "empty_move",
+        "url": "http://188.120.236.127/memories/veterinar/empty_move.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "run": [
+          9
+        ],
+        "text": "Ран с движком"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Чтобы обновить движок (только по согласованию с программистами), нужно нажать \"редактировать\" на ответ, и тут же сохранить без изменений.",
+    "answers": [
+      {
+        "module": true,
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n<s>r\nlocal cards = {}<s>r\nlocal map = {}<s>r\nlocal cardSize = display.contentWidth/4<s>r\nlocal selected_card_1<s>r\nlocal selected_card_2<s>r\nlocal cards_number = 0<s>r\nlocal moves_row = {}<s>r\n--update_moves_img<s>r\nlocal hard_cheat<s>r\nlocal switch_cards_secretly<s>r\nlocal is_chains_contain<s>r\nlocal break_one_chain<s>r\nlocal shadow_deadly_variant<s>r\nlocal ushadow_deadly_variants<s>r\nlocal fingerprint_url<s>r\nlocal rubashka_url<s>r\nlocal fade_fingerprints<s>r\nlocal check_chains_block_game<s>r\n<s>r\nif not max_moves then<s>r\n<s>tmax_moves = moves<s>r\nend<s>r\n<s>r\nfor i=1,4 do<s>r\n<s>tlocal card = images[\"c\"..i]<s>r\n<s>tcard.xScale =  (cardSize) / card.width<s>r\n<s>tcard.yScale =  card.xScale<s>r\n<s>tcard.alpha = 1<s>r\n<s>tcard.id = i<s>r\n<s>tcard.place = #map<plus>1<s>r\n<s>tcard.uid = math.random(1000000)<s>r\n<s>ttable.insert(map,card)<s>t<s>r\n<s>tcards[i*2-1] = card<s>r\n<s>tcards_number = cards_number <plus> 1<s>r\n<s>t<s>r\n<s>tlocal card2 = display.newImage(card.url)<s>r\n<s>tcard2.xScale = card.xScale<s>r\n<s>tcard2.yScale = card.yScale<s>r\n<s>tcard2.place = #map<plus>1<s>r\n<s>tcard2.id = i<s>r\n<s>tcard2.uid = math.random(1000000)<s>r\n<s>tcards[i*2] = card2<s>r\n<s>ttable.insert(map,card2)<s>r\n<s>tcards_number = cards_number <plus> 1<s>r\n<s>t<s>r\n<s>r\n<s>r\nend<s>r\n<s>r\nlocal winCard = images[\"win\"]<s>r\nwinCard.xScale = (cardSize) / winCard.width<s>r\nwinCard.yScale = winCard.xScale<s>r\nwinCard.place = #map<plus>1<s>r\nwinCard.uid = math.random(1000000)<s>r\nwinCard.id = 0<s>r\ncards[9] = winCard<s>r\ntable.insert(map,winCard)<s>r\ncards_number = cards_number <plus> 1<s>r\n<s>t<s>r\nif images.fingerprint then<s>r\n<s>tfingerprint_url = images.fingerprint.url<s>r\n<s>timages.fingerprint:removeSelf()<s>r\nend<s>r\n<s>r\nfade_fingerprints = function()<s>r\n<s>tif bonus_fingerprint then<s>r\n<s>t<s>tfor i=1,9 do<s>r\n<s>t<s>t<s>tif map[i] then<s>r\n<s>t<s>t<s>t<s>tif map[i].rubashka.fingerprint.alpha>0 then<s>r\n<s>t<s>t<s>t<s>t<s>ttransition.to(map[i].rubashka.fingerprint,{<s>r\n<s>t<s>t<s>t<s>t<s>t<s>talpha = map[i].rubashka.fingerprint.alpha-0.2, -- исчезновение отпечатка<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttime = 300,<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t--delay = 200,<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttransition = easing.inOutQuad<s>r\n<s>t<s>t<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>r\nend<s>r\n<s>r\nshadow_deadly_variant = function(card)<s>r\n<s>tlocal random_array = {2,6,4,9,8,1,3,7,5,2,6,4,9,8,1,3,7,5}<s>r\n<s>tlocal plus = math.random(8)<s>r\n<s>tfor ii = 1,2 do<s>r\n<s>t<s>tlocal ever_opened_variant<s>r\n<s>t<s>tlocal never_opened_variant<s>r\n<s>t<s>tfor i=1,9 do<s>r\n<s>t<s>t<s>tlocal i = random_array[i<plus>plus]<s>r\n<s>t<s>t<s>tif <s>r\n<s>t<s>t<s>t<s>tmap[i]<s>r\n<s>t<s>t<s>tand<s>r\n<s>t<s>t<s>t<s>tmap[i].id ~= card.id <s>r\n<s>t<s>t<s>tand<s>r\n<s>t<s>t<s>t<s>t(not map[i].rubashka.chain)<s>r\n<s>t<s>t<s>tand <s>r\n<s>t<s>t<s>t<s>t(not map[i].shadowed_deadly_variant)<s>r\n<s>t<s>t<s>tthen<s>r\n<s>t<s>t<s>t<s>tif map[i].ever_opened then<s>r\n<s>t<s>t<s>t<s>t<s>tever_opened_variant = map[i]<s>r\n<s>t<s>t<s>t<s>telse<s>r\n<s>t<s>t<s>t<s>t<s>tnever_opened_variant = map[i]<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>tend<s>r\n<s>t<s>tlocal card2 = never_opened_variant or ever_opened_variant<s>r\n<s>t<s>tif card2 then<s>r\n<s>t<s>t<s>tcard2.shadowed_deadly_variant = true<s>r\n<s>t<s>t<s>tcard2.ever_opened = true<s>r\n<s>t<s>t<s>ttimer.performWithDelay(15,function(event)<s>r\n<s>t<s>t<s>t<s>tif card2 then<s>r\n<s>t<s>t<s>t<s>t<s>tcard2.rubashka.base_img:setFillColor((255-event.count*3)/255,(255-event.count*3)/255,(255-event.count*3)/255)<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tend,30)<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\nend<s>r\n<s>r\nunshadow_deadly_variants = function()<s>r\n<s>tfor i=1,9 do<s>r\n<s>t<s>tif map[i] and map[i].shadowed_deadly_variant then<s>r\n<s>t<s>t<s>ttimer.performWithDelay(15,function(event)<s>r\n<s>t<s>t<s>t<s>tif map[i] then<s>r\n<s>t<s>t<s>t<s>t<s>tmap[i].rubashka.base_img:setFillColor((255-60<plus>event.count*3)/255,(255-60<plus>event.count*3)/255,(255-60<plus>event.count*3)/255)<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>tmap[i].shadowed_deadly_variant = false<s>r\n<s>t<s>t<s>tend,30)<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\nend<s>r\n<s>r\nis_chains_contain = function(i)<s>r\n<s>tfor k,v in pairs(chains) do<s>r\n<s>t<s>tif v == i then<s>r\n<s>t<s>t<s>treturn true<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\nend<s>r\n<s>r\nbreak_one_chain = function()<s>r\n<s>tif chains then<s>r\n<s>t<s>tif #chains > 0 then<s>r\n<s>t<s>t<s>tlocal chain_place = chains[1]<s>r\n<s>t<s>t<s>tlocal card = map[chain_place]<s>r\n<s>t<s>t<s>ttimer.performWithDelay(1000,function()<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tfor k,v in pairs({card.rubashka.chain,card.rubashka,card}) do<s>r\n<s>t<s>t<s>t<s>t<s>tlocal x = v.x<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x <plus> cardSize*0.08,time = 100,delay=0,rotation=-3})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x - cardSize*0.05,time = 100,delay=100,rotation=4, xScale = v.xScale*0.75, yScale = v.yScale*0.75*1.25})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x <plus> cardSize*0.03,time = 100,delay=200,rotation=-5, xScale = v.xScale*0.6*1.25, yScale = v.yScale*0.6})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x - cardSize*0.01,time = 100,delay=300,rotation=10, xScale = v.xScale*0.5, yScale = v.yScale*0.5*1.25, onComplete = function() card.rubashka.chain.alpha = 0 end})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x <plus> cardSize*0.03,time = 100,delay=400,rotation=-5, xScale = v.xScale*1.25*1.25, yScale = v.yScale*1.25})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x<s>t<s>t<s>t<s>t,time = 100,delay=500,rotation=0, xScale = v.xScale*1.0, yScale = v.yScale*1.0,<s>r\n<s>t<s>t<s>t<s>t<s>tonComplete = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tif v.uid == card.uid then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tcard.rubashka.chain.imshaking = false <s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tcard.rubashka.chain:removeSelf()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tcard.rubashka.chain = nil<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>ttable.remove(chains,1)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>tend})<s>t<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tend)<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\nend<s>r\n<s>r\nif images and images[\"rubashka\"] then<s>r\n<s>trubashka_url = images[\"rubashka\"].url<s>r\n<s>t<s>r\n<s>tfor i=1,9 do<s>t<s>t<s>r\n<s>t<s>tlocal rubashka = display.newGroup()<s>r\n<s>t<s>tcards[i].rubashka = rubashka<s>r\n<s>t<s>trubashka.base_img = display.newImage(rubashka_url)<s>r\n<s>t<s>trubashka:insert(rubashka.base_img)<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>trubashka:toFront()<s>r\n<s>t<s>trubashka.card = cards[i]<s>r\n<s>t<s>trubashka.x = images.table.x<s>r\n<s>t<s>trubashka.y = images.table.x<s>r\n<s>t<s>trubashka.xScale =  (cardSize) / rubashka.width<s>r\n<s>t<s>trubashka.yScale =  rubashka.xScale<s>r\n<s>t<s>trubashka.alpha = 1<s>r\n<s>t<s>trubashka.id = i<s>t<s>r\n<s>t<s>trubashka.ever_opened = false<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>tif fingerprint_url then<s>r\n<s>t<s>t<s>trubashka.fingerprint = display.newImage(fingerprint_url)<s>r\n<s>t<s>t<s>trubashka:insert(rubashka.fingerprint)<s>t<s>r\n<s>t<s>t<s>trubashka.fingerprint.alpha = 0<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>timages[\"rubashka\"]:removeSelf()<s>r\n<s>t<s>r\nend<s>r\n<s>r\nif images and images[\"table\"] then<s>r\n<s>t-- images[\"table\"].alpha = 0<s>r\n<s>t-- transition.to(images[\"table\"],{<s>r\n<s>t<s>t-- alpha = 1,<s>r\n<s>t<s>t-- time = 300,<s>r\n<s>t<s>t-- delay = 0<plus>1000,<s>r\n<s>t<s>t-- xScale = images[\"table\"].xScale*0.9,<s>r\n<s>t<s>t-- yScale = images[\"table\"].yScale*0.9<s>r\n<s>t-- })<s>r\n<s>timages.table.xScale = images[\"table\"].xScale*0.9<s>r\n<s>timages.table.yScale = images[\"table\"].xScale*0.9<s>r\nend<s>r\n--сортировка по * (шаффлинг)<s>r\ntable.sort(map,function(a,b) <s>r\nreturn a.uid > b.uid<s>r\nend)<s>r\n<s>r\nfor i=1,9 do<s>r\nmap[i].place = i<s>r\nend<s>r\n<s>r\n-- расстановка карт<s>r\n<s>r\nfor i,card in pairs(map) do<s>r\n<s>tlocal i = i-1<s>r\n<s>tlocal x = images.table.x  <plus> card.width * card.xScale * (i%3 - 1) * 1.1<s>r\n<s>tlocal y = images.table.y  <plus> card.width * card.xScale * (math.floor(i/3) - 1) * 1.1<s>r\n<s>r\n<s>tcard.x = x<s>r\n<s>tcard.y = y<s>r\n<s>tif card.rubashka then<s>r\n<s>t<s>tcard.rubashka.x = x<s>r\n<s>t<s>tcard.rubashka.y = y<s>r\n<s>t<s>tcard.rubashka:toFront()<s>r\n<s>tend<s>r\n<s>r\nend<s>r\n<s>r\n<s>r\nif images.chain then<s>r\n<s>tfor i=1,9 do<s>r\n<s>t<s>tlocal card = map[i]<s>r\n<s>t<s>tif chains and is_chains_contain(i) then<s>r\n<s>t<s>t<s>tcard.rubashka.chain = display.newImage(images.chain.url)<s>r\n<s>t<s>t<s>tcard.rubashka.chain.x = card.rubashka.x<s>r\n<s>t<s>t<s>tcard.rubashka.chain.y = card.rubashka.y<s>r\n<s>t<s>t<s>tcard.rubashka.chain.xScale = card.rubashka.width*card.rubashka.xScale / card.rubashka.chain.width<s>r\n<s>t<s>t<s>tcard.rubashka.chain.yScale = card.rubashka.chain.xScale<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tcard.rubashka.chain:addEventListener(\"tap\", function() <s>r\n<s>t<s>t<s>t<s>tif not card.rubashka.chain.imshaking then<s>r\n<s>t<s>t<s>t<s>t<s>tcard.rubashka.chain.imshaking = true<s>r\n<s>t<s>t<s>t<s>t<s>tfor k,v in pairs({card.rubashka.chain,card.rubashka,card}) do<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tlocal x = v.x<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x <plus> cardSize*0.05,time = 100,delay=0})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x - cardSize*0.07,time = 100,delay=100})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x <plus> cardSize*0.05,time = 100,delay=200})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x - cardSize*0.03,time = 100,delay=300})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x <plus> cardSize*0.01,time = 100,delay=400})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttransition.to(v,{x = x<s>t<s>t<s>t<s>t,time = 100,delay=500,onComplete = function() if card and card.rubashka and card.rubashka.chain then card.rubashka.chain.imshaking = false end end})<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>treturn true <s>t<s>t<s>r\n<s>t<s>t<s>tend)<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>timages.chain:removeSelf()<s>r\nend<s>r\n<s>r\n<s>r\n<s>r\nfunction open_card(card)<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tcard.xScale = 0.01<s>r\n<s>t<s>t<s>tcard.rotation = -10<s>r\n<s>t<s>t<s>ttransition.to(card.rubashka,{<s>r\n<s>t<s>t<s>t<s>txScale = 0.01, -- сворачивание рубашки<s>r\n<s>t<s>t<s>t<s>ttime = 200,<s>t<s>r\n<s>t<s>t<s>t<s>trotation = -10,<s>r\n<s>t<s>t<s>t<s>ttransition = easing.inOutQuad,<s>r\n<s>t<s>t<s>t<s>tonComplete = function()<s>r\n<s>t<s>t<s>t<s>t<s>tcard.rubashka.alpha = 0<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>ttransition.to(card,{ -- разворачивание лицевой стороны карточки<s>r\n<s>t<s>t<s>t<s>txScale = cardSize / card.width,<s>r\n<s>t<s>t<s>t<s>ttime = 200,<s>r\n<s>t<s>t<s>t<s>tdelay = 200,<s>r\n<s>t<s>t<s>t<s>trotation = 0,<s>r\n<s>t<s>t<s>t<s>ttransition = easing.inOutQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>tif bonus_fingerprint then<s>r\n<s>t<s>t<s>t<s>ttransition.to(card.rubashka.fingerprint,{<s>r\n<s>t<s>t<s>t<s>t<s>talpha = 1, -- появление отпечатка<s>r\n<s>t<s>t<s>t<s>t<s>ttime = 200,<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tdelay = 200,<s>r\n<s>t<s>t<s>t<s>t<s>ttransition = easing.inOutQuad<s>r\n<s>t<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>tend<s>r\nend<s>r\n<s>r\ncheck_duplicates = function()<s>r\n<s>ttimer.performWithDelay(1000,function()<s>r\n<s>t<s>tif not (selected_card_1 and selected_card_1.removeSelf) then<s>r\n<s>t<s>t<s>treturn<s>r\n<s>t<s>tend<s>r\n<s>t<s>tif selected_card_1.id == selected_card_2.id then<s>r\n<s>t<s>t<s>tlocal card1_is_on_left = selected_card_1.x < selected_card_2.x<s>r\n<s>t<s>t<s>tselected_card_1:toFront()<s>r\n<s>t<s>t<s>tselected_card_2:toFront()<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>ttransition.to(selected_card_1,{ -- подлёт карточки в ссорону<s>r\n<s>t<s>t<s>t<s>tx = selected_card_1.x <plus> cardSize*(card1_is_on_left and -1 or 1)*2,<s>r\n<s>t<s>t<s>t<s>ttime = 500,<s>r\n<s>t<s>t<s>t<s>trotation = 50,<s>r\n<s>t<s>t<s>t<s>t--transition = easing.outExpo,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>ttransition.to(selected_card_2,{ -- подлёт карточки вверх<s>r\n<s>t<s>t<s>t<s>tx = selected_card_2.x <plus> cardSize*(card1_is_on_left and 1 or -1)*2,<s>r\n<s>t<s>t<s>t<s>ttime = 500,<s>r\n<s>t<s>t<s>t<s>trotation = 50,<s>r\n<s>t<s>t<s>t<s>t--transition = easing.outExpo,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>ttransition.to(selected_card_1,{ -- подлёт карточки вверх<s>r\n<s>t<s>t<s>t<s>ty = selected_card_1.y - cardSize,<s>r\n<s>t<s>t<s>t<s>ttime = 200,<s>r\n<s>t<s>t<s>t<s>ttransition = easing.outQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>ttransition.to(selected_card_2,{ -- подлёт карточки вверх<s>r\n<s>t<s>t<s>t<s>ty = selected_card_2.y - cardSize,<s>r\n<s>t<s>t<s>t<s>ttime = 200,<s>r\n<s>t<s>t<s>t<s>ttransition = easing.outQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>ttransition.to(selected_card_1,{ -- падение карточки<s>r\n<s>t<s>t<s>t<s>ty = selected_card_1.y <plus> cardSize*2,<s>r\n<s>t<s>t<s>t<s>talpha = 0,<s>r\n<s>t<s>t<s>t<s>ttime = 300,<s>r\n<s>t<s>t<s>t<s>tdelay = 200,<s>r\n<s>t<s>t<s>t<s>ttransition = easing.inQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>ttransition.to(selected_card_2,{ -- падение карточки<s>r\n<s>t<s>t<s>t<s>ty = selected_card_2.y <plus> cardSize*2,<s>r\n<s>t<s>t<s>t<s>talpha = 0,<s>r\n<s>t<s>t<s>t<s>ttime = 300,<s>r\n<s>t<s>t<s>t<s>tdelay = 200,<s>r\n<s>t<s>t<s>t<s>ttransition = easing.inQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>tmap[selected_card_1.place] = nil<s>r\n<s>t<s>t<s>tmap[selected_card_2.place] = nil<s>r\n<s>t<s>t<s>tcards_number = cards_number - 2<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--moves = moves <plus> 1<s>r\n<s>t<s>t<s>t--update_moves_img()<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>telse<s>r\n<s>t<s>t<s>tfor k,card in pairs({selected_card_1,selected_card_2}) do<s>r\n<s>t<s>t<s>t<s>ttransition.to(card.rubashka,{<s>r\n<s>t<s>t<s>t<s>t<s>txScale = cardSize / card.width, -- разворачивание рубашки<s>r\n<s>t<s>t<s>t<s>t<s>ttime = 200,<s>t<s>r\n<s>t<s>t<s>t<s>t<s>trotation = 0,<s>r\n<s>t<s>t<s>t<s>t<s>tdelay = 200,<s>r\n<s>t<s>t<s>t<s>t<s>ttransition = easing.inOutQuad<s>r\n<s>t<s>t<s>t<s>t})<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>ttransition.to(card,{ -- cворачивание лицевой стороны карточки<s>r\n<s>t<s>t<s>t<s>t<s>txScale = 0.01,<s>r\n<s>t<s>t<s>t<s>t<s>ttime = 200,<s>r\n<s>t<s>t<s>t<s>t<s>trotation = -10,<s>r\n<s>t<s>t<s>t<s>t<s>ttransition = easing.inOutQuad,<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tonComplete = function()<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tcard.rubashka.alpha = 1<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tmoves = moves - 1<s>r\n<s>t<s>t<s>tupdate_moves_img()<s>r\n<s>t<s>t<s>tcheck_lose()<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>t<s>t<s>r\n<s>t<s>tselected_card_1 = nil<s>r\n<s>t<s>tselected_card_2 = nil<s>r\n<s>tend)<s>r\nend<s>r\n<s>r\ncheck_chains_block_game = function()<s>r\n<s>tlocal playable_cards = 0<s>r\n<s>tlocal is_any_chains<s>r\n<s>tfor i =1,9 do<s>r\n<s>t<s>tif map[i] then<s>r\n<s>t<s>t<s>tif not map[i].rubashka.chain then<s>r\n<s>t<s>t<s>t<s>tplayable_cards = playable_cards <plus> 1<s>r\n<s>t<s>t<s>telse<s>r\n<s>t<s>t<s>t<s>tis_any_chains = true<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>tend<s>t<s>t<s>r\n<s>tend<s>r\n<s>tprint(\"PC: \"..playable_cards)<s>r\n<s>tif playable_cards < 2 and is_any_chains then<s>r\n<s>t<s>tbreak_one_chain()<s>r\n<s>tend<s>r\nend<s>r\n<s>r\ngetAnswerByText = function(text)<s>r\n<s>tlocal answers = pages[g.current_id].answers<s>r\n<s>tfor k,v in pairs(answers) do<s>r\n<s>t<s>tif v.text == text then<s>r\n<s>t<s>t<s>tprint(\"find answer \"..k..\" with text \"..v.text)<s>r\n<s>t<s>t<s>treturn answers[k]<s>r\n<s>t<s>tend<s>t<s>t<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>treturn {id=1}<s>r\nend<s>r\n<s>r\n<s>r\ncheck_lose = function()<s>r\n<s>tif moves < 1 then<s>r\n<s>t<s>tfor i=1,9 do<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tif map[i] and map[i].removeSelf then<s>r\n<s>t<s>t<s>t<s>ttransition.to(map[i].rubashka,{ -- падение карточки<s>r\n<s>t<s>t<s>t<s>ty = selected_card_1.y <plus> display.contentHeight,<s>r\n<s>t<s>t<s>t<s>t--alpha = 0,<s>r\n<s>t<s>t<s>t<s>ttime = 1000,<s>r\n<s>t<s>t<s>t<s>tdelay = 500 <plus> i*120,<s>r\n<s>t<s>t<s>t<s>trotation = math.random(100)-50,<s>r\n<s>t<s>t<s>t<s>ttransition = easing.inQuad,<s>r\n<s>t<s>t<s>t<s>tonComplete = function()<s>r\n<s>t<s>t<s>t<s>t<s>tif map[i].rubashka and map[i].rubashka.removeSelf then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tmap[i].rubashka:removeSelf()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tmap[i]:removeSelf()<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t})<s>t<s>r\n<s>t<s>t<s>t<s>tmap[i].alpha = 0<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>tend<s>r\n<s>t<s>tlocal x = images.table.x<s>r\n<s>t<s>ttimer.performWithDelay(200,function(event) <s>r\n<s>t<s>t<s>tlocal count = event.count<s>r\n<s>t<s>t<s>tif count == 10 then<s>r\n<s>t<s>t<s>t<s>tcount = 0<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>ttransition.to(images.table,{<s>r\n<s>t<s>t<s>t<s>tx = x <plus> cardSize*0.02*count,<s>r\n<s>t<s>t<s>t<s>ttime = 100<s>r\n<s>t<s>t<s>t})<s>t<s>t<s>t<s>r\n<s>t<s>t<s>ttransition.to(images.table,{<s>r\n<s>t<s>t<s>t<s>tx = x - cardSize*0.02*count,<s>t<s>t<s>r\n<s>t<s>t<s>t<s>ttime = 100,<s>r\n<s>t<s>t<s>t<s>tdelay = 100,<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t})<s>t<s>t<s>t<s>r\n<s>t<s>tend,10)<s>t<s>r\n<s>t<s>ttransition.to(images.table,{<s>r\n<s>t<s>t<s>ty = images.table.y <plus> display.contentHeight,<s>t<s>t<s>r\n<s>t<s>t<s>ttime = 1000,<s>r\n<s>t<s>t<s>tdelay = 2000,<s>r\n<s>t<s>t<s>ttransition = easing.inQuad,<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t})<s>t<s>r\n<s>t<s>ttimer.performWithDelay(3300,function(event) <s>r\n<s>t<s>t<s>tg.fullscreen = 0<s>r\n<s>t<s>t<s>tmax_moves = nil<s>r\n<s>t<s>t<s>tchains = nil<s>r\n<s>t<s>t<s>tshowPage({id = getAnswerByText(\"Lose_page\").id})<s>t<s>t<s>t<s>t<s>r\n<s>t<s>tend)<s>r\n<s>tend<s>t<s>r\nend<s>t<s>r\n<s>r\n<s>r\nvictory = function(card)<s>r\n<s>r\n<s>ttimer.performWithDelay(500, function()<s>r\n<s>t<s>ttransition.to(card,{<s>r\n<s>t<s>t<s>tx = images.table.x,<s>r\n<s>t<s>t<s>ty = images.table.y,<s>r\n<s>t<s>t<s>txScale = cardSize/card.width*2,<s>r\n<s>t<s>t<s>tyScale = cardSize/card.width*2,<s>r\n<s>t<s>t<s>ttransition = easing.inOutQuad,<s>t<s>r\n<s>t<s>t<s>ttime = 2000,<s>r\n<s>t<s>t<s>tonComplete = function()<s>r\n<s>t<s>t<s>t<s>tg.fullscreen = 0<s>r\n<s>t<s>t<s>t<s>tshowPage({id = getAnswerByText(\"Victory_page\").id})<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t})<s>t<s>t<s>r\n<s>t<s>ttransition.to(images.table,{<s>r\n<s>t<s>t<s>talpha = 0,<s>r\n<s>t<s>t<s>ttime = 1000,<s>r\n<s>t<s>t})<s>t<s>t<s>t<s>t<s>r\n<s>tend)<s>r\n<s>t<s>r\n<s>t<s>r\n<s>r\n<s>r\nend<s>r\n<s>r\n<s>r\nfor i=1,9 do<s>r\n<s>tmap[i].rubashka:addEventListener(\"tap\",function(event)<s>r\n<s>t<s>tlocal card = map[i]<s>r\n<s>t<s>t<s>r\n<s>t<s>tif not card then<s>r\n<s>t<s>t<s>tprint(\"карта отсутствует!\")<s>r\n<s>t<s>t<s>treturn<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>r\n<s>t<s>tfade_fingerprints()<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>tprint(\"cards_number\",cards_number)<s>r\n<s>t<s>tif moves < 1 then<s>r\n<s>t<s>t<s>treturn<s>r\n<s>t<s>tend<s>r\n<s>t<s>tif not selected_card_1 then<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>tcard  = hard_cheat(card)<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>topen_card(card)<s>r\n<s>t<s>t<s>tselected_card_1 = card<s>r\n<s>t<s>t<s>tcard.ever_opened = true<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tif cards_number ==  1 then<s>r\n<s>t<s>t<s>t<s>tvictory(card)<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tif bonus_shadow then<s>r\n<s>t<s>t<s>t<s>tshadow_deadly_variant(card)<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tcheck_chains_block_game()<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>telseif not selected_card_2 then<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>tcard = hard_cheat(card)<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>topen_card(card)<s>t<s>t<s>r\n<s>t<s>t<s>tselected_card_2 = card<s>r\n<s>t<s>t<s>tcheck_duplicates()<s>r\n<s>t<s>t<s>tbreak_one_chain()<s>r\n<s>t<s>t<s>tcard.ever_opened = true<s>r\n<s>t<s>t<s>tunshadow_deadly_variants()<s>r\n<s>t<s>telse<s>r\n<s>t<s>t<s>tprint(\"total logic error\")<s>r\n<s>t<s>tend<s>t<s>t<s>t<s>t<s>r\n<s>tend)<s>r\nend<s>r\n<s>r\n<s>r\nfor i=1,max_moves do<s>r\n<s>t<s>r\n<s>tlocal empty = display.newImage(images.empty_move.url)<s>r\n<s>tlocal full = display.newImage(images.full_move.url)<s>r\n<s>t<s>r\n<s>t<s>r\n<s>ttable.insert(moves_row,empty)<s>r\n<s>t<s>r\n<s>tempty.xScale = (images.table.width*images.table.xScale/(max_moves))/ empty.width<s>r\n<s>tempty.yScale = empty.xScale<s>r\n<s>tfull.xScale = empty.xScale<s>r\n<s>tfull.yScale = empty.xScale<s>r\n<s>t<s>r\n<s>tempty.y = images.table.y - images.table.height*images.table.yScale/2 - empty.height*empty.yScale/2<s>r\n<s>tfull.y = empty.y<s>r\n<s>t<s>r\n<s>tempty.x = images.table.x <plus> images.table.width*images.table.xScale*(1/(max_moves<plus>1)*(i) - 0.5)<s>r\n<s>tfull.x = empty.x<s>r\n<s>t<s>r\n<s>tempty.full = full<s>r\n<s>tfull.empty = empty<s>r\n<s>t<s>r\nend<s>r\n<s>r\nupdate_moves_img = function()<s>r\n<s>r\n<s>tfor i=1,max_moves do<s>r\n<s>t<s>tif moves >= i then<s>r\n<s>t<s>t<s>tmoves_row[i].full.alpha = 1<s>r\n<s>t<s>telse<s>r\n<s>t<s>t<s>tmoves_row[i].full.alpha = 0<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\nend<s>r\n<s>r\nhard_cheat = function(card)<s>r\n<s>tif card.ever_opened<s>tthen<s>r\n<s>t<s>treturn card<s>r\n<s>tend<s>r\n<s>thard = hard or 0.5<s>r\n<s>tlocal evil_cheat<s>r\n<s>tlocal good_cheat<s>r\n<s>t<s>r\n<s>tif hard< 0.5 then<s>r\n<s>t<s>tgood_cheat = 1-hard*2<s>r\n<s>telseif hard> 0.5 then<s>r\n<s>t<s>tevil_cheat = (hard-0.5)*2<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>tif not (evil_cheat or good_cheat) then<s>r\n<s>t<s>treturn card<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>tif math.random(100) > (evil_cheat or good_cheat)*100 then -- проверка шанса на помощь/вред. Весь дальнейший код работает при условии, что проверка прошла и вред/помощь нужны на этом ходу<s>r\n<s>t<s>treturn card<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>tif good_cheat and selected_card_1 and selected_card_1.id == card.id then<s>r\n<s>t<s>treturn card -- игрока и так везунчик, помогать нечем<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>tif cards_number == 9 and (not selected_card_1) and  moves == max_moves then<s>r\n<s>t<s>treturn card -- самый первый ход, рановато помогать<s>t<s>t<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>t<s>r\n<s>tlocal opened_types = {<s>t}<s>r\n<s>t<s>r\n<s>tfor i=1,9 do -- сбор данных о найденных типах<s>r\n<s>t<s>tif map[i] and map[i].ever_opened then<s>r\n<s>t<s>t<s>topened_types[map[i].id] = true<s>r\n<s>t<s>t<s>t--p-rint(\"type \",i,\" opened\")<s>r\n<s>t<s>tend<s>t<s>t<s>r\n<s>tend<s>t<s>r\n<s>t<s>r\n<s>t--p-rint(\"card with type \",card.id,\" selected\")<s>r\n<s>t<s>r\n<s>tlocal random_array = {2,6,4,9,8,1,3,7,5}<s>r\n<s>t<s>r\n<s>t<s>r\n<s>tfor i=1,9 do<s>r\n<s>t<s>tlocal i = random_array[i] -- псевдорандомизация перебора иконок, не думаю, что кто-то когда-то сможет уловить закономерность здесь<s>r\n<s>t<s>tlocal card2 = map[i]<s>r\n<s>t<s>tif card2 and (not card2.ever_opened) and (card.place ~= i) then<s>r\n<s>t<s>t<s>tif good_cheat then<s>r\n<s>t<s>t<s>t<s>t-- отключаем жёсткую подтасовку такой же карты, как и ранее открытая<s>r\n<s>t<s>t<s>t<s>t--if selected_card_1 and selected_card_1.id == card2.id then -- нашлась карта в пару предыдущей<s>r\n<s>t<s>t<s>t<s>t--<s>tswitch_cards_secretly(card2,card)<s>r\n<s>t<s>t<s>t<s>t--<s>treturn card2<s>r\n<s>t<s>t<s>t<s>t--end<s>r\n<s>t<s>t<s>t<s>tif <s>r\n<s>t<s>t<s>t<s>t<s>t(not selected_card_1)  -- если это первая из пары карточек, то подходящий момент подбросить игроку знакомую карту, чтобы он этим же ходом смог выиграть<s>r\n<s>t<s>t<s>t<s>tand<s>r\n<s>t<s>t<s>t<s>t<s>t(not opened_types[card.id])  -- если игрок и так выбрал знакомую карту, то ничего не делать<s>r\n<s>t<s>t<s>t<s>tand<s>r\n<s>t<s>t<s>t<s>t<s>topened_types[card2.id] -- если найдена другая карта с известным игроку типом и местом<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tthen<s>r\n<s>t<s>t<s>t<s>t<s>tswitch_cards_secretly(card2,card)<s>r\n<s>t<s>t<s>t<s>t<s>treturn card2<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>telseif evil_cheat then<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tif <s>r\n<s>t<s>t<s>t<s>t<s>t-- (not selected_card_1)  -- <s>r\n<s>t<s>t<s>t<s>t-- and<s>r\n<s>t<s>t<s>t<s>t<s>topened_types[card.id]  -- добавить проверку на то, елси игрок и так открыл незнакомую карту<s>r\n<s>t<s>t<s>t<s>tand<s>r\n<s>t<s>t<s>t<s>t<s>t(not opened_types[card2.id]) -- <s>r\n<s>t<s>t<s>t<s>tthen<s>r\n<s>t<s>t<s>t<s>t<s>tswitch_cards_secretly(card2,card)<s>r\n<s>t<s>t<s>t<s>t<s>treturn card2<s>r\n<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>treturn card<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>r\nend<s>r\n<s>r\nswitch_cards_secretly = function(card1, card2)<s>r\n<s>r\n<s>tlocal card1place  = card1.place<s>r\n<s>tlocal card1rubashka  = card1.rubashka<s>r\n<s>tlocal card1rubashkachain  = card1.rubashka.chain<s>r\n<s>tlocal card1x  = card1.x<s>r\n<s>tlocal card1y  = card1.y<s>r\n<s>r\n<s>r\n<s>tmap[card1.place] = card2<s>r\n<s>tmap[card2.place] = card1<s>r\n<s>tcard1.place = card2.place<s>r\n<s>tcard2.place = card1place<s>r\n<s>tcard1.rubashka = card2.rubashka<s>r\n<s>tcard2.rubashka = card1rubashka<s>r\n<s>r\n<s>tcard1.rubashka.card = card1<s>r\n<s>tcard2.rubashka.card = card2<s>r\n<s>r\n<s>r\n<s>tcard1.x = card2.x<s>r\n<s>tcard2.x = card1x<s>r\n<s>tcard1.y = card2.y<s>r\n<s>tcard2.y = card1y<s>r\n<s>tcard1.rubashka.chain = card2.rubashka.chain<s>r\n<s>tcard2.rubashka.chain = card1rubashkachain<s>r\n<s>tcard1.rubashka:toFront()<s>r\n<s>tcard2.rubashka:toFront()<s>r\n<s>tif card1.rubashka.chain then<s>r\n<s>t<s>tcard1.rubashka.chain:toFront()<s>r\n<s>tend<s>r\n<s>tif card2.rubashka.chain then<s>r\n<s>t<s>tcard2.rubashka.chain:toFront()<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>r\n<s>r\n<s>r\n<s>r\nend<s>r\n<s>r\n<s>r\n<s>r\nupdate_moves_img()<s>r\n<s>r\nimages.empty_move:removeSelf()<s>r\nimages.full_move:removeSelf()<s>r\nimages.empty_move = nil<s>r\nimages.full_move = nil<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n\nend",
+        "text": "luaModuleUpdate http://188.120.236.127/memories/memory.lua",
+        "calculate": false,
+        "id": 9
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Кот перестал вырываться, и Джейн наконец смогла ослабить хватку.<s>r\n— Отличная работа, — раздался позади неё мужской голос. Джейн дёрнулась от испуга и обернулась: за ней стоял мужчина, явно хирург.<s>r\n— Вы хирург?<s>r\n— Да, прошу прощения за задержку. Теперь мы можем продолжить вместе.<s>r\n<s>r\nАнестезия проведена успешно.<s>r\nЭтап 2: разрез ",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Осталось \".. moves .. \" ходов.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 13,
+        "text": "Начать этап 2",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nhard = 0.25\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Джейн не сразу поняла, что протяжный писк это не звон в ушах, а сигнал кардиографа.<s>r\n\"Всё кончено...\"<s>r\nНе успела Джейн переварить этот факт, как что-то перевернулось, она словно бы полетела куда-то, и обнаружила себя одетой в верхнюю одежду на пороге клиники.<s>r\n<s>r\n— Вы опоздали, Джейн! — прикрикнула на неё пожилая медсестра. — Бегом к операционному столу!<s>r\n— Но я же только что...<s>r\n— Больше никого нет, наш хирург заболел! Вперёд!",
+    "answers": [
+      {
+        "id": 7,
+        "text": "\"Что происходит? Я во сне?\""
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Список уровней",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Уровень \"цепи 1\""
+      },
+      {
+        "id": 12,
+        "text": "Активировать бонус \"Предчувствие\":\nзатемняет две карточки, которые точно не являются дубликатами выбранной карточки.",
+        "lua_if": "function lua_if()\nreturn not bonus_shadow\nend",
+        "lua_do": "function lua_do()\nbonus_shadow = true\nend"
+      },
+      {
+        "id": 12,
+        "text": "Активировать бонус \"Тепловой след\":\nпоказывает последние карточки, к которым Вы притронулись",
+        "lua_if": "function lua_if()\nreturn not bonus_fingerprint\nend",
+        "lua_do": "function lua_do()\nbonus_fingerprint = true\nend"
+      },
+      {
+        "id": 12,
+        "text": "Деактивировать бонус \"Предчувствие\"",
+        "lua_if": "function lua_if()\nreturn bonus_shadow\nend",
+        "lua_do": "function lua_do()\nbonus_shadow = false\nend"
+      },
+      {
+        "id": 12,
+        "text": "Деактивировать бонус \"Тепловой след\"",
+        "lua_if": "function lua_if()\nreturn bonus_fingerprint\nend",
+        "lua_do": "function lua_do()\nbonus_fingerprint = false\nend"
+      },
+      {
+        "id": 1,
+        "text": "На первую"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Страница уровня. Данный текст не отображается. Необходимо копировать данную страницу целиком с помощью команды \"copy all\", чтобы создать новый уровень.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Перейти на страницу рана с движком (только для программистов или при обновлении движка по инструкции)",
+        "need": 9999
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Направьте следующие ответы на страницы поражения и победы. Не меняйте их текст! Не удаляйте невыполнимое условие!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 14,
+        "text": "Victory_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 11,
+        "text": "Lose_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Измените ссылки на картинки для следующих ответов, чтобы настроить внешний вид уровня. Не меняйте текст ответов!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "bg stretch",
+        "url": "http://188.120.236.127/memories/veterinar/bg1.jpg"
+      },
+      {
+        "id": 8,
+        "text": "table",
+        "url": "http://188.120.236.127/memories/veterinar/table.jpg"
+      },
+      {
+        "id": 8,
+        "text": "rubashka",
+        "url": "http://188.120.236.127/memories/veterinar/rubashka.png"
+      },
+      {
+        "id": 8,
+        "text": "c1",
+        "url": "http://188.120.236.127/memories/veterinar/c1.png"
+      },
+      {
+        "id": 8,
+        "text": "c2",
+        "url": "http://188.120.236.127/memories/veterinar/c2.png"
+      },
+      {
+        "id": 8,
+        "text": "c3",
+        "url": "http://188.120.236.127/memories/veterinar/c3.png"
+      },
+      {
+        "id": 8,
+        "text": "c4",
+        "url": "http://188.120.236.127/memories/veterinar/c4.png"
+      },
+      {
+        "id": 8,
+        "text": "win",
+        "url": "http://188.120.236.127/memories/veterinar/win.png"
+      },
+      {
+        "id": 8,
+        "text": "full_move",
+        "url": "http://188.120.236.127/memories/veterinar/full_move.png"
+      },
+      {
+        "id": 8,
+        "text": "empty_move",
+        "url": "http://188.120.236.127/memories/veterinar/empty_move.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "run": [
+          9
+        ],
+        "text": "Ран с движком"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Джейн побрила место разреза, дезинфицировала его, потом подсвечивала зеркальцем работу Гарольда, а после помогала ему зафиксировать края разреза.<s>r\n<s>r\n— Ну как ты? — весело спросил хирург.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "- Кажется, меня сейчас вырвет."
+      },
+      {
+        "id": 16,
+        "text": "- Бывало и похуже."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "— Только не на пациента! — сердито сказал Гарольд, но в его глазах плясали озорные огоньки. — Ну что, продолжаем?",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Далее."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "— А ты молодец! — похвалил хирург Джейн, и она заметила, что ей очень приятна эта похвала. — Продолжаем?",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Разрез проведён успешн.<s>r\nЭтап 3: операция",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"<s>\nОсталось \".. moves .. \" ходов.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 18,
+        "text": "Начать этап 3",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nhard = 0.6\nend"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "сцена 3Страница уровня. Данный текст не отображается. Необходимо копировать данную страницу целиком с помощью команды \"copy all\", чтобы создать новый уровень.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Перейти на страницу рана с движком (только для программистов или при обновлении движка по инструкции)",
+        "need": 9999
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Направьте следующие ответы на страницы поражения и победы. Не меняйте их текст! Не удаляйте невыполнимое условие!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 19,
+        "text": "Victory_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 11,
+        "calculate": false,
+        "need": [
+          9999
+        ],
+        "text": "Lose_page"
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Измените ссылки на картинки для следующих ответов, чтобы настроить внешний вид уровня. Не меняйте текст ответов!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "bg stretch",
+        "url": "http://188.120.236.127/memories/veterinar/bg1.jpg"
+      },
+      {
+        "id": 8,
+        "text": "table",
+        "url": "http://188.120.236.127/memories/veterinar/table.jpg"
+      },
+      {
+        "id": 8,
+        "text": "rubashka",
+        "url": "http://188.120.236.127/memories/veterinar/rubashka.png"
+      },
+      {
+        "id": 8,
+        "text": "c1",
+        "url": "http://188.120.236.127/memories/veterinar/c1.png"
+      },
+      {
+        "id": 8,
+        "text": "c2",
+        "url": "http://188.120.236.127/memories/veterinar/c2.png"
+      },
+      {
+        "id": 8,
+        "text": "c3",
+        "url": "http://188.120.236.127/memories/veterinar/c3.png"
+      },
+      {
+        "id": 8,
+        "text": "c4",
+        "url": "http://188.120.236.127/memories/veterinar/c4.png"
+      },
+      {
+        "id": 8,
+        "text": "win",
+        "url": "http://188.120.236.127/memories/veterinar/win.png"
+      },
+      {
+        "id": 8,
+        "text": "full_move",
+        "url": "http://188.120.236.127/memories/veterinar/full_move.png"
+      },
+      {
+        "id": 8,
+        "text": "empty_move",
+        "url": "http://188.120.236.127/memories/veterinar/empty_move.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "run": [
+          9
+        ],
+        "text": "Ран с движком"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "— Кровотечение остановлено, давай зашивать. Справишся без меня? — спросил Гарольд. Джейн мысленно выругалась: за время операции у ней уже естали руки и спина. Но Гарольду, наверняка, было ещё хуже?",
+    "answers": [
+      {
+        "id": 20,
+        "text": "- Конечно..."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Этап 4, зашивание.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Осталось \".. moves .. \" ходов.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 21,
+        "text": "Начать финальный этап",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nhard = 1.0\nend"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Страница уровня. Данный текст не отображается. Необходимо копировать данную страницу целиком с помощью команды \"copy all\", чтобы создать новый уровень.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Перейти на страницу рана с движком (только для программистов или при обновлении движка по инструкции)",
+        "need": 9999
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Направьте следующие ответы на страницы поражения и победы. Не меняйте их текст! Не удаляйте невыполнимое условие!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 22,
+        "text": "Victory_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 11,
+        "calculate": false,
+        "need": [
+          9999
+        ],
+        "text": "Lose_page"
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Измените ссылки на картинки для следующих ответов, чтобы настроить внешний вид уровня. Не меняйте текст ответов!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "bg stretch",
+        "url": "http://188.120.236.127/memories/veterinar/bg1.jpg"
+      },
+      {
+        "id": 8,
+        "text": "table",
+        "url": "http://188.120.236.127/memories/veterinar/table.jpg"
+      },
+      {
+        "id": 8,
+        "text": "rubashka",
+        "url": "http://188.120.236.127/memories/veterinar/rubashka.png"
+      },
+      {
+        "id": 8,
+        "text": "c1",
+        "url": "http://188.120.236.127/memories/veterinar/c1.png"
+      },
+      {
+        "id": 8,
+        "text": "c2",
+        "url": "http://188.120.236.127/memories/veterinar/c2.png"
+      },
+      {
+        "id": 8,
+        "text": "c3",
+        "url": "http://188.120.236.127/memories/veterinar/c3.png"
+      },
+      {
+        "id": 8,
+        "text": "c4",
+        "url": "http://188.120.236.127/memories/veterinar/c4.png"
+      },
+      {
+        "id": 8,
+        "text": "win",
+        "url": "http://188.120.236.127/memories/veterinar/win.png"
+      },
+      {
+        "id": 8,
+        "text": "full_move",
+        "url": "http://188.120.236.127/memories/veterinar/full_move.png"
+      },
+      {
+        "id": 8,
+        "text": "empty_move",
+        "url": "http://188.120.236.127/memories/veterinar/empty_move.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "run": [
+          9
+        ],
+        "text": "Ран с движком"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Джейн сделала всё идеально, и спокойно отошла от стола. Санитарка осторожно перенесла кота.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Проснуться."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Вы отыграли тестовый фрагмент квеста, основанного на меморис. Спасибо за внимание.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "сначала"
+      },
+      {
+        "id": 12,
+        "text": "Играть в тестовые уровни"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Страница уровня. Данный текст не отображается. Необходимо копировать данную страницу целиком с помощью команды \"copy all\", чтобы создать новый уровень.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nmoves = moves <plus> 2\nlocal gr = canvas.parent\n\n\nif not bonus_shadow then\nbonus_shadow = true\ngr[gr.numChildren].text = \"  Получить ещё 2 хода и способность <s><s>\"Тепловой След<s><s>\"\"\nelseif not bonus_fingerprint then\nbonus_fingerprint = true\ngr[gr.numChildren].text = \"  Получить ещё 3 хода\"\nelse\nmoves = moves <plus> 1\nend\n\nif update_moves_img then update_moves_img() \nend\nend",
+        "bg_color": [
+          0.75,
+          0.9,
+          1
+        ],
+        "paid_answer": [
+          "Бонус",
+          5
+        ],
+        "super_calculate": false,
+        "id": 24,
+        "text": "Добавить 2 хода и активировать способность \"Предчувствие\"",
+        "calculate": false,
+        "no_transition": true
+      },
+      {
+        "id": 9,
+        "text": "Перейти на страницу рана с движком (только для программистов или при обновлении движка по инструкции)",
+        "need": [
+          9999
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Направьте следующие ответы на страницы поражения и победы. Не меняйте их текст! Не удаляйте невыполнимое условие!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 26,
+        "text": "Victory_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 25,
+        "text": "Lose_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Измените ссылки на картинки для следующих ответов, чтобы настроить внешний вид уровня. Не меняйте текст ответов!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "bg stretch",
+        "url": "http://188.120.236.127/memories/veterinar/bg1.jpg"
+      },
+      {
+        "id": 8,
+        "text": "table",
+        "url": "http://188.120.236.127/memories/veterinar/table.jpg"
+      },
+      {
+        "id": 8,
+        "text": "rubashka",
+        "url": "http://188.120.236.127/memories/veterinar/rubashka.png"
+      },
+      {
+        "id": 8,
+        "text": "c1",
+        "url": "http://188.120.236.127/memories/veterinar/c1.png"
+      },
+      {
+        "id": 8,
+        "text": "c2",
+        "url": "http://188.120.236.127/memories/veterinar/c2.png"
+      },
+      {
+        "id": 8,
+        "text": "c3",
+        "url": "http://188.120.236.127/memories/veterinar/c3.png"
+      },
+      {
+        "id": 8,
+        "text": "c4",
+        "url": "http://188.120.236.127/memories/veterinar/c4.png"
+      },
+      {
+        "id": 8,
+        "text": "win",
+        "url": "http://188.120.236.127/memories/veterinar/win.png"
+      },
+      {
+        "id": 8,
+        "text": "full_move",
+        "url": "http://188.120.236.127/memories/veterinar/full_move.png"
+      },
+      {
+        "id": 8,
+        "text": "empty_move",
+        "url": "http://188.120.236.127/memories/veterinar/empty_move.png"
+      },
+      {
+        "id": 24,
+        "text": "chain",
+        "url": "http://188.120.236.127/memories/veterinar/chain.png"
+      },
+      {
+        "id": 24,
+        "text": "fingerprint",
+        "url": "http://188.120.236.127/memories/veterinar/fingerprint2.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "run": [
+          9
+        ],
+        "text": "Ран с движком"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Коробки-коробочки",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Этап 1",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nhard = 0.1\nchains = {7,8,9}\nmoves = 12\nmax_moves = 12\nend"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Этап 2",
+    "answers": [
+      {
+        "id": 27,
+        "text": "Этап 2",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nhard = 0.5\nchains = {4,5,6,7,8,9}\nend"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Страница уровня. Данный текст не отображается. Необходимо копировать данную страницу целиком с помощью команды \"copy all\", чтобы создать новый уровень.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "(чит для ГД) Добавить 5 ходов",
+        "need": 9999,
+        "lua_do": "function lua_do()\nmoves = moves <plus> 5\nend"
+      },
+      {
+        "id": 9,
+        "text": "Перейти на страницу рана с движком (только для программистов или при обновлении движка по инструкции)",
+        "need": 9999
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Направьте следующие ответы на страницы поражения и победы. Не меняйте их текст! Не удаляйте невыполнимое условие!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 28,
+        "text": "Victory_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 25,
+        "text": "Lose_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Измените ссылки на картинки для следующих ответов, чтобы настроить внешний вид уровня. Не меняйте текст ответов!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "bg stretch",
+        "url": "http://188.120.236.127/memories/veterinar/bg1.jpg"
+      },
+      {
+        "id": 8,
+        "text": "table",
+        "url": "http://188.120.236.127/memories/veterinar/table.jpg"
+      },
+      {
+        "id": 8,
+        "text": "rubashka",
+        "url": "http://188.120.236.127/memories/veterinar/rubashka.png"
+      },
+      {
+        "id": 8,
+        "text": "c1",
+        "url": "http://188.120.236.127/memories/veterinar/c1.png"
+      },
+      {
+        "id": 8,
+        "text": "c2",
+        "url": "http://188.120.236.127/memories/veterinar/c2.png"
+      },
+      {
+        "id": 8,
+        "text": "c3",
+        "url": "http://188.120.236.127/memories/veterinar/c3.png"
+      },
+      {
+        "id": 8,
+        "text": "c4",
+        "url": "http://188.120.236.127/memories/veterinar/c4.png"
+      },
+      {
+        "id": 8,
+        "text": "win",
+        "url": "http://188.120.236.127/memories/veterinar/win.png"
+      },
+      {
+        "id": 8,
+        "text": "full_move",
+        "url": "http://188.120.236.127/memories/veterinar/full_move.png"
+      },
+      {
+        "id": 8,
+        "text": "empty_move",
+        "url": "http://188.120.236.127/memories/veterinar/empty_move.png"
+      },
+      {
+        "id": 24,
+        "text": "chain",
+        "url": "http://188.120.236.127/memories/veterinar/chain.png"
+      },
+      {
+        "id": 24,
+        "text": "fingerprint",
+        "url": "http://188.120.236.127/memories/veterinar/fingerprint2.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "run": [
+          9
+        ],
+        "text": "Ран с движком"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Этап 3",
+    "answers": [
+      {
+        "id": 29,
+        "text": "Начать",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nhard = 0.9\nchains = {1,3,4,5,6,7,8,9}\nend"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Страница уровня. Данный текст не отображается. Необходимо копировать данную страницу целиком с помощью команды \"copy all\", чтобы создать новый уровень.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "(чит для ГД) Добавить 5 ходов",
+        "need": 9999,
+        "lua_do": "function lua_do()\nmoves = moves <plus> 5\nend"
+      },
+      {
+        "id": 9,
+        "text": "Перейти на страницу рана с движком (только для программистов или при обновлении движка по инструкции)",
+        "need": 9999
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Направьте следующие ответы на страницы поражения и победы. Не меняйте их текст! Не удаляйте невыполнимое условие!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 30,
+        "text": "Victory_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 25,
+        "text": "Lose_page",
+        "need": [
+          9999
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Измените ссылки на картинки для следующих ответов, чтобы настроить внешний вид уровня. Не меняйте текст ответов!",
+        "need": [
+          9999
+        ],
+        "calculate": true
+      },
+      {
+        "id": 8,
+        "text": "bg stretch",
+        "url": "http://188.120.236.127/memories/veterinar/bg1.jpg"
+      },
+      {
+        "id": 8,
+        "text": "table",
+        "url": "http://188.120.236.127/memories/veterinar/table.jpg"
+      },
+      {
+        "id": 8,
+        "text": "rubashka",
+        "url": "http://188.120.236.127/memories/veterinar/rubashka.png"
+      },
+      {
+        "id": 8,
+        "text": "c1",
+        "url": "http://188.120.236.127/memories/veterinar/c1.png"
+      },
+      {
+        "id": 8,
+        "text": "c2",
+        "url": "http://188.120.236.127/memories/veterinar/c2.png"
+      },
+      {
+        "id": 8,
+        "text": "c3",
+        "url": "http://188.120.236.127/memories/veterinar/c3.png"
+      },
+      {
+        "id": 8,
+        "text": "c4",
+        "url": "http://188.120.236.127/memories/veterinar/c4.png"
+      },
+      {
+        "id": 8,
+        "text": "win",
+        "url": "http://188.120.236.127/memories/veterinar/win.png"
+      },
+      {
+        "id": 8,
+        "text": "full_move",
+        "url": "http://188.120.236.127/memories/veterinar/full_move.png"
+      },
+      {
+        "id": 8,
+        "text": "empty_move",
+        "url": "http://188.120.236.127/memories/veterinar/empty_move.png"
+      },
+      {
+        "id": 24,
+        "text": "chain",
+        "url": "http://188.120.236.127/memories/veterinar/chain.png"
+      },
+      {
+        "id": 24,
+        "text": "fingerprint",
+        "url": "http://188.120.236.127/memories/veterinar/fingerprint2.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "run": [
+          9
+        ],
+        "text": "Ран с движком"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Поздравляем!",
+    "answers": [
+      {
+        "id": 12,
+        "text": "В меню"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "",
+    "answers": []
+  }
+]

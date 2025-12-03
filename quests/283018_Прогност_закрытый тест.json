@@ -1,0 +1,2787 @@
+[
+  {
+    "id": 1,
+    "text": "Жанры: фантастика, детектив, боевик\nАвтор: elChem (Артём Стрельников)<s>r\n<s>r\nГоворят, прогносты видят будущее и никогда не ошибаются. Ты и сам так когда-то думал, но десятилетия практики показали, как непроста эта участь. Проживая тысячи жизней, видя тысячи трагедий и катастроф, душа черствеет, а тело хочет только одного – покоя. Но проклятье прогноста – видеть, что покой – это смерть, и поэтому ты раз за разом соглашаешься на самые опасные задания.<s>r\n<s>r\nНовое дело ничем не лучше и не хуже прочих: оплачиваемое суммой с фантастическим количеством нулей и в меру невыполнимое. Поэтому ты натягиваешь старый плащ и самое неравнодушное выражение лица, закидываешься парой стимуляторов и отправишься делать свою работу – ошибаться и умирать за других.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\ng.reloadFunctions = 11\nvars[\"autorun after\"] = 52\nblockAutorun = 1\nend",
+        "text": "Начать",
+        "lua_if": "function lua_if()\nreturn \nend",
+        "id": 13
+      },
+      {
+        "id": 52,
+        "text": "Новый ответ. введите текст",
+        "need": [
+          1000
+        ]
+      },
+      {
+        "id": 96,
+        "text": "[Авторизация]"
+      },
+      {
+        "id": 97,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 98,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 99,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 100,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 101,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 102,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ты никогда не любил умирать, но в этот раз вышло особенно скверно.\n\nВпрочем, если бы дело было простым, едва ли кто-то решился привлекать тебя – дешевле купить весь отдел планетарного спецназа или оплатить несколько залпов орбитальных орудий, чем заполучить приличного прогноста. А ты – лучший.\n\nУмереть на базовой линии – дурной знак. Базовая линия – это естественное развитие событий без вмешательства прогноста. А значит, ты неудачно выбрал точку входа: слишком близко от источника опасности или слишком поздно. Или ещё хуже – попал в засаду...",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Вернуться к точке входа"
+      },
+      {
+        "id": 30,
+        "text": "Сразу в бой (тестирование)",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nwater = 1\ncurrent = 1\nrestartSim ()\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Едва вынырнув из симуляции в нулевой точке, ты поворачиваешься к заказчику. Статный и элегантно одетый владелец чего-то планетарного и сверхприбыльного находится здесь лично, значит дело для него и правда важное. Усталость во взгляде выдаёт в этом молодом на вид человеке глубокого старика, родившегося, наверное, ещё в позапрошлом веке. Он разглядывает стакан с чем-то крепким в своей руке и хмурится.\n\n– Вы рассказали мне не всё, – спокойно говоришь ты. – Постарайтесь не утаивать важные детали, которые я всё равно узнаю.\n\nДля собеседника ваш разговор прервался всего на несколько секунд, но ты уже успел выяснять, что просто переждать события здесь под охраной людей этого властного человека небезопасно. По крайней мере для тебя.\n\nОн смеряет тебя долгим испытующим взглядом.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "К механикам",
+        "need": 1000
+      },
+      {
+        "id": 17,
+        "text": "Дождаться ответа"
+      },
+      {
+        "need_ever": true,
+        "comment": true,
+        "id": 3,
+        "text": "Ты не готов встать из-за стола и выйти. Сейчас тебе нужны ответы",
+        "need": [
+          -17
+        ],
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n"
+      },
+      {
+        "id": 20,
+        "need_ever": true,
+        "need": 17,
+        "text": "Встать из-за стола и выйти"
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/VUjgqxABPW4waCiSzJX66JonNAdQ736cTricLNvJ.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Точка старта",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\nwater = 1\ncurrent = 1\n\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 4
+      },
+      {
+        "id": 5,
+        "text": "5",
+        "lua_do": "function lua_do()\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\naddExclusive(conseq, \"water\")\n\nremoveVal(unrevealedConseq,\"water\")\n\nend"
+      },
+      {
+        "id": 6,
+        "text": "6",
+        "lua_do": "function lua_do()\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\naddExclusive(conseq, \"current\")\nremoveVal(unrevealedConseq,\"current\")\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "empty переключение воды",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Готово",
+        "lua_text": "function lua_text()\nblockAutorun = 1\nwater = water or 0\nreturn water == 0 and \"Ты наваливаешься всем весом на огромный вентиль и медленно закручиваешь его. По крайней мере здесь вода больше не течёт.\" or \"Ты наваливаешься всем весом на огромный вентиль и медленно откручиваешь его. Вода из трещины вновь потекла на пол.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 37,
+        "text": "Ещё раз осмотреться",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "ток",
+    "answers": [
+      {
+        "comment": false,
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ncurrent = current or 0\nreturn current == 1 and \"Отключить ток\" or \"Включить ток\"\nend",
+        "lua_do": "function lua_do()\ncurrent = current == 0 and 1 or 0\nend"
+      },
+      {
+        "id": 7,
+        "text": "7"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Просторный коридор выглядит почти так же, как и тот, наверху. Только одна из стен раскурочена взрывом, и почерневшие панели дорогой обшивки ощерились рваными краями. ",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nlocal text =\n(current == 1 and gravitation == 1 and\n\n\"<s>\n <s>\nВ сплетении трубок и проводов внутри что-то едва заметно шипит, и несколько оборванных кабелей свисает до самого пола. Нет причин полагать, что они обесточены. \")\n\nor (current == 0 and gravitation == 1 and\n\n\"<s>\n <s>\nНесколько оборванных кабелей свисает из сплетения трубок и проводов внутри до самого пола. Ты уверен, что они обесточены. \")\n\nor (current == 1 and gravitation == 0 and\n\n\"<s>\n <s>\nВ сплетении трубок и проводов внутри что-то едва заметно шипит, и несколько оборванных кабелей болтаются в воздухе, словно змеи. Нет причин полагать, что они обесточены. \")\n\nor (current == 0 and gravitation == 0 and\n\n\"<s>\n <s>\nНесколько оборванных кабелей выбиваются из сплетения трубок и проводов внутри и извиваются в воздухе. Ты уверен, что они обесточены. \")\n\nreturn text\nend",
+        "super_calculate": false,
+        "id": 7,
+        "calculate": false,
+        "text": "новый ответ.введите текст",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal text =\n(water == 1 and gravitation == 1 and\n\n\"<s>\n <s>\nОткуда-то с верхней палубы течёт вода, лужа на полу уже во всю ширину коридора. \")\n\nor (water == 0 and gravitation == 1 and\n\n\"<s>\n <s>\nНа стене и полу грязные разводы, а с противоположной стороны ещё блестит влажная решётка, через которую уходила вода.\")\n\nor (water == 1 and gravitation == 0 and\n\n\"<s>\n <s>\nОткуда-то с верхней палубы просачивается вода. Мелкие капельки парят в невесомости плотным облаком и уносятся невидимым потоком воздуха куда-то за угол. \")\n\nor (water == 0 and gravitation == 0 and\n\n\"<s>\n <s>\nНа стене и полу грязные разводы, а с противоположной стороны ещё блестит влажная решётка, через которую уходила вода.\")\n\nreturn text\nend",
+        "super_calculate": false,
+        "id": 7,
+        "calculate": false,
+        "text": "новый ответ.введите текст",
+        "merge": true
+      },
+      {
+        "id": 7,
+        "text": "\n\nОтсюда можно попасть в поварской блок, продуктовый склад, второй уровень машинного зала и техническое помещение. В самом конце коридора есть переход на нижнюю палубу и отсек, через который можно попасть на мостик. Ну и люк в потолке, чтобы вернуться назад. Но прогносты не возвращаются назад просто так, а времени у тебя в обрез.",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\n\ncrossCheck (conseq, unrevealedConseq, \"water\")\ncrossCheck (conseq, unrevealedConseq, \"current\")\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 7,
+        "calculate": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn water == 0 or current == 0\nend",
+        "lua_do": "function lua_do()\n\nbasePoint1Tab = basePoint1Tab or {}\nlocal c = 0\nlocal a = {water, current}\nfor k,v in pairs (basePoint1Tab) do\n   if tabCheck(v, a) then\n      c = 1\n   end\nend\n\nif c == 0 then\n   table.insert(basePoint1Tab, a)\nend\n\nblockedConseq = blockedConseq or {}\n\naddExclusive(blockedConseq, \"water\")\naddExclusive(blockedConseq, \"current\")\nbasePoint1 = true\n\n\nend",
+        "text": "Пройти вперёд",
+        "comment": false,
+        "id": 8
+      },
+      {
+        "comment": true,
+        "id": 7,
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n",
+        "lua_if": "function lua_if()\nreturn water == 1 and current == 1\nend",
+        "text": "Ты не пойдёшь в дальний конец коридора сейчас: логика подсказывает, что воды и электричества в одном месте лучше избегать"
+      },
+      {
+        "id": 62,
+        "text": "В поварской блок",
+        "lua_do": "function lua_do()\ncurrentPlace = \"kitchen 62\"\nend"
+      },
+      {
+        "id": 66,
+        "text": "На склад",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"warehouse 66\", 0)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"warehouse 66\"\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"warehouse 66\"\nblockAutorun = 1\nend",
+        "text": "На склад",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"warehouse 66\", 1)\nend",
+        "id": 88
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"warehouse 66\"\nblockAutorun = 1\nend",
+        "text": "На склад",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"warehouse 66\", 2)\nend",
+        "id": 89
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"warehouse 66\"\nblockAutorun = 1\nend",
+        "text": "На склад",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"warehouse 66\", 3)\nend",
+        "id": 90
+      },
+      {
+        "id": 67,
+        "text": "В машинный зал",
+        "lua_do": "function lua_do()\ncurrentPlace = \"machine room 67\"\nend"
+      },
+      {
+        "id": 68,
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 68\", 0)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"tech room 68\"\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"tech room 68\"\nblockAutorun = 1\nend",
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 68\", 1)\nend",
+        "id": 69
+      },
+      {
+        "id": 70,
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 68\", 2)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"tech room 68\"\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"tech room 68\"\nend",
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 68\", 3)\nend",
+        "id": 71
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "После преодоления базовой точки",
+    "answers": [
+      {
+        "id": 10,
+        "text": "[Обстоятельства]",
+        "lua_do": "function lua_do()\ng.pageReturn = g.current_id\nend"
+      },
+      {
+        "id": 4,
+        "text": "К началу",
+        "lua_do": "function lua_do()\nblockedConseq = {}\nend"
+      },
+      {
+        "id": 13,
+        "text": "К бою"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "empty\nСтраница описания боя",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\n\nreturn  fightText\nend",
+        "merge": true
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ],
+        "lua_if": "function lua_if()\nlocal a = currentPlace or\"place name 1\"\nreturn enemies[currentEnemy(a)].defeated ~= 1 and mainHP ~= 0\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal a = currentPlace or\"place name 1\"\nreturn enemies[currentEnemy(a)].defeated == 1\nend",
+        "lua_do": "function lua_do()\nround = nil\nlocal a = 0\n\n   for k,v in pairs (enemies) do\n      if currentPlace == v.location then\n         a = v.p\n      end\n   end\n\nshowPage {id = a}\nend",
+        "text": "Осмотреть тело",
+        "id": 9,
+        "no_transition": true
+      },
+      {
+        "lua_do": "function lua_do()\n--сделать нулевую точку с выбором, куда идти\nround = nil\nrestartSim()\nconjugation = conjugation <plus> 3\nblockAutorun = 0\nend",
+        "text": "Перезапуск симуляции",
+        "lua_if": "function lua_if()\nreturn mainHP == 0\n\nend",
+        "id": 15
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "empty",
+    "answers": [
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "ту ду:\nпереписать сцену смены, добавить и собственно изменение гравитации\n\n\nдобавить подменю \"Расследование\" и отображать в нём найденные зацепки переход виджетом со страницы обстоятельств?\n\nпиктограмма замочка наи заблокированные к переключению \n\nсделать для инжктива [=[альтернативный луа_текст: \"нужно найти источник, с которым можно взаимодействовать\"]=] готово\nвозможно, добавить в функцию инэктивИф второй параметр, и ",
+        "lua_if": "function lua_if()\nreturn \nend",
+        "id": 10
+      },
+      {
+        "middle_answer": true,
+        "text": "Расследование",
+        "comment": false,
+        "id": 58
+      },
+      {
+        "id": 80,
+        "text": "Вещи",
+        "comment": false,
+        "middle_answer": true
+      },
+      {
+        "id": 10,
+        "text": "Обстоятельства",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "middle_answer": true,
+        "text": "для теста \nСброс таблиц после внесения изменений",
+        "lua_do": "function lua_do()\nammunition = {}\nenemies = {}\nend",
+        "lua_if": "function lua_if()\nreturn \nend"
+      },
+      {
+        "id": 10,
+        "text": "__________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn (water == 1 and \"Вода: не перекрыта\" or \"Вода: перекрыта\") .. \"<s>\n[Изменить]\"\nend",
+        "id": 39,
+        "lua_do": "function lua_do()\nwater = water == 0 and 1 or 0\nblockAutorun = 1\ndefeatEnemy (\"tech room 31\")\nend",
+        "text": "активный",
+        "comment": false,
+        "lua_if": "function lua_if()\n\nblockedConseq = blockedConseq or {}\nconseq = conseq or {}\n\nreturn activeIf(\"water\")\nend"
+      },
+      {
+        "lua_text": "function lua_text()\n\nif inactiveIf(\"water\",1) then\n   return \"Вода: не перекрыта. Нужно найти источник.\"\nelse\n   return water == 1 and \"Вода: не перекрыта\" or \"Вода: перекрыта\"\nend\nend",
+        "comment": true,
+        "lua_do": "function lua_do()\nwater = water == 0 and 1 or 0\nend",
+        "text": "неактивный",
+        "id": 10,
+        "lua_if": "function lua_if()\nunrevealedConseq = unrevealedConseq or {}\nblockedConseq = blockedConseq or {}\nconseq = conseq or {}\n\nreturn inactiveIf(\"water\")\nend"
+      },
+      {
+        "id": 10,
+        "text": "Вода затекла в складское помещение",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn penalty_water51 == 1\nend"
+      },
+      {
+        "comment": false,
+        "id": 75,
+        "lua_do": "function lua_do()\ncurrent = current == 0 and 1 or 0\nblockAutorun = 1\ndefeatEnemy (\"tech room 68\")\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ncurrent = current or 0\nreturn (current == 1 and \"Ток: не отключён\" or \"Ток: отключён\") .. \"<s>\n[Изменить]\"\nend",
+        "lua_if": "function lua_if()\n\nreturn activeIf(\"current\")\nend"
+      },
+      {
+        "lua_text": "function lua_text()\ncurrent = current or 0\nif inactiveIf(\"current\",1) then\n   return \"Ток: не отключён. Нужно найти источник.\"\nelse\nreturn current == 1 and \"Ток: не отключён\" or \"Ток: отключён\"\nend\n\nend",
+        "lua_if": "function lua_if()\n\nreturn inactiveIf(\"current\")\nend",
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\ncurrent = current == 0 and 1 or 0\nend",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\n\nreturn activeIf(\"coolingSystem\") and water == 1\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\nblockAutorun = 1\ncoolingSystem = (coolingSystem == 0 and 1) or (coolingSystem == 1 and 2) or 0\ndefeatEnemy (\"machine room 34\")\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ncoolingSystem = coolingSystem or 0\nreturn ((coolingSystem == 1 and \"Система охлаждения: работает штатно\") or (coolingSystem == 2 and \"Система охлаждения: работает усиленно\") or \"Система охлаждения: отключена\") .. \"<s>\n[Изменить]\"\nend",
+        "id": 50
+      },
+      {
+        "lua_if": "function lua_if()\n\nreturn (inactiveIf(\"coolingSystem\")) or (activeIf(\"coolingSystem\") and water == 0)\nend",
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ncoolingSystem = coolingSystem or 0\n\nif inactiveIf(\"coolingSystem\",1) then\n   return coolingSystem == 1 and \"Система охлаждения: работает штатно. Нужно найти источник.\" or \"Система охлаждения: отключена. Нужно найти источник\"\nelseif water == 0 then\n   return \"Система охлаждения: отключена. Похоже, она не может работать без воды.\"\n\nelse\nreturn (coolingSystem == 1 and \"Система охлаждения: работает штатно\") or (coolingSystem == 2 and \"Система охлаждения: работает усиленно\") or \"Система охлаждения: отключена\"\nend\n\nend",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n\ngravitation = gravitation or 0\n\nreturn (gravitation == 1 and \"Система гравитации: работает штатно\" or \"Система гравитации: отключена\") .. \"<s>\n[Изменить]\"\n\nend",
+        "lua_do": "function lua_do()\nblockAutorun = 1\n\ngravitation, gravityDisabled = (gravitation == 0 and 1) or 0, (gravitation == 0 and 0) or 1\n\ndefeatEnemy (\"corridor 59\")\n\nend",
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nlocal str = \"gravitation\"\n\nreturn activeIf(str) and current == 1\nend",
+        "id": 79
+      },
+      {
+        "lua_text": "function lua_text()\ngravitation = gravitation or 0\n\nif inactiveIf(\"gravitation\",1) then\n   return gravitation == 1 and \"Система гравитации: работает штатно. Нужно найти центр управления.\" or \"Система гравитации: отключена. Нужно найти центр управления\"\n\nelseif current == 0 then\n   return \"Система гравитации: работает штатно. Её невозможно отключить без электричества.\"\n\nelse\nreturn (gravitation == 1 and \"Система гравитации: работает штатно\") or \"Система гравитации: отключена\"\n\nend\n\nend",
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "lua_if": "function lua_if()\nlocal str = \"gravitation\"\n\nreturn (inactiveIf(str)) or (activeIf(str) and current == 0)\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nbasePoint1Tab = basePoint1Tab or {}\nreturn basePoint1 and #basePoint1Tab > 1\nend",
+        "middle_answer": true,
+        "text": "__________",
+        "id": 10,
+        "comment": true
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Связанные обстоятельства",
+        "lua_if": "function lua_if()\nbasePoint1Tab = basePoint1Tab or {}\nreturn basePoint1 and #basePoint1Tab > 1\nend",
+        "id": 10
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "__________",
+        "lua_if": "function lua_if()\nbasePoint1Tab = basePoint1Tab or {}\nreturn basePoint1 and #basePoint1Tab > 1\nend",
+        "id": 10
+      },
+      {
+        "id": 10,
+        "text": "Опорные точки: запоминает все использующиеся в проверке обстоятельства\n\nПо мере разблокирования других вариантов прохождения точки, нужно добавлять возможность переключаться между ними. например, был набор {0,1}, открылся {1,0}, тогда нажатие должно переключать их и сами обстоятельства",
+        "comment": true,
+        "lua_if": "function lua_if()\n\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nbasePoint1Tab = basePoint1Tab or {}\nreturn basePoint1 and #basePoint1Tab > 1\nend",
+        "lua_do": "function lua_do()\n\nlocal a = {water, current}\nlocal b = 0\nfor k, v in pairs (basePoint1Tab) do\n   if tabCheck(a, v) then\n      b = k\n   end\nend\n\nlocal ni = cyclicSwitch(basePoint1Tab, b)\nwater = basePoint1Tab [ni][1]\ncurrent = basePoint1Tab [ni][2]\n\nend",
+        "text": "Проход 1: ",
+        "id": 10,
+        "lua_text": "function lua_text()\n\nlocal text = (water == 1 and \"вода не перекрыта\" or \"вода перекрыта\") .. (current == 1 and \", ток не отключён\" or \", ток отключён\")\n\n\nreturn \"Проход 1: \" .. text\nend"
+      },
+      {
+        "comment": true,
+        "id": 10,
+        "text": "Проход 1: ",
+        "lua_text": "function lua_text()\n\nlocal text = (water == 1 and \"вода не перекрыта\" or \"вода перекрыта\") .. (current == 1 and \", ток не отключён\" or \", ток отключён\")\n\n\nreturn \"Проход 1: \" .. text\nend",
+        "lua_if": "function lua_if()\nbasePoint1Tab = basePoint1Tab or {}\nreturn basePoint1 and #basePoint1Tab < 2\nend"
+      },
+      {
+        "id": 10,
+        "text": "__________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 10,
+        "text": "[Назад]",
+        "lua_do": "function lua_do()\nlocal p = g.pageReturn or 1\nblockAutorun = 0\nshowPage{id = p}\nend",
+        "no_transition": true
+      },
+      {
+        "id": 10,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 53,
+        "text": "[Вернуться в нулевую точку]",
+        "lua_do": "function lua_do()\n--сделать нулевую точку с выбором, куда идти\nround = nil\nrestartSim()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Страница релоадФанкшнс",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nenemies = enemies or {}\n\nenemies[1] = enemies[1] or {hpSet = 1, hp = 1, sp = 6, ac = 6, seen = 0, defeated = 0, location = \"tech room 31\", title = \"БОЕЦ С БЛАСТЕРОМ\", p = 14, dmg = 1}\n\nenemies[2] = enemies[2] or {hpSet = 1, hp = 1, sp = 7, ac = 7, seen = 0, defeated = 0, location = \"med room 33\", title = \"БОЕЦ С БЛАСТЕРОМ\", p = 40, dmg = 1}\n\nenemies[3] = enemies[3] or {hpSet = 1, hp = 1, sp = 8, ac = 6, seen = 0, defeated = 0, location = \"machine room 34\", title = \"БОЕЦ С ПИСТОЛЕТОМ\", p = 46, dmg = 1}\n\nenemies[4] = enemies[4] or {hpSet = 2, hp = 2, sp = 7, ac = 9, seen = 0, defeated = 0, location = \"corridor 59\", title = \"ПАТРУЛЬНЫЙ С БЛАСТЕРОМ\", p = 60, dmg = 1}\n\nenemies[5] = enemies[5] or {hpSet = 3, hp = 3, sp = 4, ac = 9, seen = 0, defeated = 0, location = \"tech room 68\", title = \"<s>\nБОЕЦ В БРОНЕ\", p = 72, dmg = 1}\n\nenemies[6] = enemies[6] or {hpSet = 1, hp = 1, sp = 20, ac = 6, seen = 0, defeated = 0, location = \"kitchen 62\", title = \"<s>\nАНДРОИД\", p = 85, dmg = 3}\n\nenemies[7] = enemies[7] or {hpSet = 3, hp = 3, sp = 10, ac = 10, seen = 0, defeated = 0, location = \"warehouse 66\", title = \"<s>\nБОЕЦ В ШУБЕ\", p = 91, dmg = 1}\n\n\n\nammunition =  ammunition or {}\nammunition[1] = ammunition[1] or {name = \"БЛАСТЕР\", sp = 0, ac = 0, dmg = 1, found = 0}\n\nammunition[2] = ammunition[2] or {name = \"БЛАСТЕРНАЯ ВИНТОВКА\", sp = -1, ac = 3, dmg = 1, found = 0}\n\nammunition[3] = ammunition[3] or {name = \"МОДИФИЦИРОВАННЫЙ БЛАСТЕР\", sp = 2, ac = 2, dmg = 1, found = 0}\n\nammunition[4] = ammunition[4] or {name = \"МОЩНЫЙ БЛАСТЕР\", sp = 0, ac = 2 , dmg = 2, found = 0}\n\nammunition[5] = ammunition[5] or {name = \"СКОРОСТРЕЛЬНЫЙ БЛАСТЕР\", sp = 5, ac = -2, dmg = 1, found = 0}\n\nammunition[6] = ammunition[6] or {name = \"БЛАСТЕР НЕИЗВЕСТНОЙ МОДЕЛИ\", sp = 3, ac = 4, dmg = 2, found = 0}\n\nammunition[7] = ammunition[7] or {name = \"ТЯЖЕЛЫЙ АРМЕЙСКИЙ БЛАСТЕР\", sp = -4, ac = 8, dmg = 2, found = 0}\n\nammunition[8] = ammunition[8] or {name = \"АРМЕЙСКИЙ БЛАСТЕР\", sp = 0, ac = 5, dmg = 1, found = 0}\n\nammunition[9] = ammunition[9] or {name = \"ЛЁГКИЙ АРМЕЙСКИЙ БЛАСТЕР\", sp = 4, ac = 2, dmg = 1, found = 0}\n\nammunition[10] = ammunition[10] or {name = \"АННИГИЛЯТОР\", sp = 3, ac = -5, dmg = 3, found = 0}\n\nammunition[11] = ammunition[11] or {name = \"САМОНАВОДЯЩИЙСЯ БЛАСТЕР\", sp = -3, ac = 10, dmg = 1, found = 0}\n\nammunition[12] = ammunition[12] or {name = \"СДВОЕННЫЙ КОРОТКОИМПУЛЬСНЫЙ БЛАСТЕР\", sp = 10, ac = -3, dmg = 1, found = 0}\n\nammunition[13] = ammunition[13] or {name = \"ПРОТОТИП БЛАСТЕРА НОВОГО ПОКОЛЕНИЯ\", sp = 7, ac = 7, dmg = 2, found = 0}\n\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 11
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n\nfunction addExclusive(t, str)\n--проверяет наличие в таблице и добавляет значение, если его не было\n\n   local c = 0\n      for k,v in pairs (t) do\n         if v == str then\n            c = 1\n         end\n      end\n\n   if c == 0 then\n      table.insert(t, str)\n      conjugation = (t == conseq and conjugation <plus> 3) or conjugation\n   end\nend\n\n\nfunction tabCheck(a, b)\n--сравнивает содержание таблиц\nlocal c = 0\n   for i = 1, #a do\n      if a[i] ~= b[i] then\n         c = 1\n      end\n   end\n   return c == 0\nend\n\nfunction crossCheck(t1, t2, str)\n--проверяет наличие в таблице1 и, если его там не было, добавляет в т2, \n\n   local c = 0\n      for k,v in pairs (t1) do\n         if v == str then\n            c = 1\n         end\n      end\n      for k,v in pairs (t2) do\n         if v == str then\n            c = 1\n         end\n      end\n\n\n   if c == 0 then\n      table.insert(t2, str)\n   end\nend\n\n\nfunction inactiveIf(str, d)\n-- условие видимости неактивных обстоятельств\n\nlocal b = false\nfor k,v in pairs (conseq) do\n   if v == str then\n      b = true\n   end\nend\n\nlocal a = true\nfor k,v in pairs (blockedConseq) do\n   if v == str then\n      a = false\n   end\nend\n\nlocal c = false\nfor k,v in pairs (unrevealedConseq) do\n   if v == str then\n      c = true\n   end\nend\n\nif d then return c and not b\nelse return c or (not a and b)\nend\nend\n\n\nfunction activeIf(str)\n-- условие видимости активных обстоятельств\nlocal b = false\nfor k,v in pairs (conseq) do\n   if v == str then\n      b = true\n   end\nend\n\nlocal a = true\nfor k,v in pairs (blockedConseq) do\n   if v == str then\n      a = false\n   end\nend\n\nreturn a and b\nend\n\nfunction cyclicSwitch(t, a)\n   if a < #t then\n     return a <plus> 1\n   else return 1\n   end\nend\n\n\nfunction removeVal(t,str)\n--удаляет из таблицы нужное значение\n\n   for k,v in pairs (t) do\n      if v == str then\n         table.remove(t,k)\n      end\n   end\nend\n\nfunction armIf(a)\n   return ammunition[a].found == 1 and armedItem ~= a\nend\n\nfunction showRules ()\ndialog({header = \"Правила перестрелки\", text = \n[=[• Первым стреляет персонаж с бо́льшим показателем скорости. Если скорости одинаковые, первым стреляешь ТЫ; \n• Если точность атакующего выше, чем скорость защищающегося, то выстрел успешен и уменьшает выносливость цели, иначе – промах; \n• Если выносливость персонажа падает до нуля, то он погибает; \n• Некоторые виды оружия наносят увеличенный урон; \n• Если после первого выстрела оба персонажа ещё живы, то стреляет второй; \n• Если после второго выстрела оба персонажа ещё живы, то начинается новый раунд по тем же правилам; \n• Перед началом каждого раунда ты можешь потратить единицу СОПРЯЖЕНИЯ, чтобы принять стимуляторы. Брось два кубика. На этот ход прибавь выпавшее значение одного кубика к любой своей характеристике и вычти значение второго из другой; \n• Если шансов на победу нет – вернись в нулевую точку через меню обстоятельств.]=]\n, answers = {{text = \"Ок\", pressListener = function () hideDialog() end}}})\nend\n\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 11
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n\nfunction currentEnemy(str)\n   for k, v in pairs (enemies) do\n      if v.location == str then\n         return k -- храним индекс текущего противника и можем обращаться к нему напрямую\n      end\n   end\nend\n\nfunction minLim1(a)\n  return a < 1 and 0 or a\nend\n\nfunction titleGen(str)\n   local gr = gravitation == 1 and 0 or 5\n   local e = enemies[currentEnemy(str)]\n   local text = (e.title .. \"<s>\nСкорость: \" .. minLim1((e.sp - gr)) .. \"<s>\nТочность: \" .. e.ac .. \"<s>\nУрон атаки: \" .. e.dmg .. \"<s>\nВыносливость: \" .. e.hp)\n   enemies[currentEnemy(str)].seen = 1\nreturn text\nend\n\n\nfunction saveLoadStat(a)\n   if not a then\n      stat = {mainSpeed, mainAccuracy}\n   elseif stat then\n      mainSpeed, mainAccuracy = stat[1], stat[2]\n      stat =  nil\n   end\nend\n\nfunction minLim()\n   mainSpeed = mainSpeed < 0 and 0 or mainSpeed\n   mainAccuracy = mainAccuracy < 0 and 0 or mainAccuracy\n   mainHP = mainHP < 0 and 0 or mainHP\nend\n\n\nfunction diceSelection()\n\nlocal a = prepare1\nlocal b = prepare2 \nprepare1, prepare2 = 0, 0\nlocal c = 12\n\nlocal answ = a ~= b and {\n\n{text = \"<plus>\" .. a .. \" к скорости<s>\n-\" .. b .. \" от точности\",  pressListener = function ()\nmainSpeed = mainSpeed <plus> a\nmainAccuracy = mainAccuracy - b\nminLim()\nshowPage {id = c, transition = \"instant\"}\nhideDialog() end},\n\n{text = \"-\" .. a .. \" от скорости<s>\n<plus>\" .. b .. \" к точности\", pressListener = function ()\nmainSpeed = mainSpeed - a\nmainAccuracy = mainAccuracy <plus> b\nminLim()\nshowPage {id = c, transition = \"instant\"}hideDialog() end},\n\n{text = \"<plus>\" .. b .. \" к скорости<s>\n-\" .. a .. \" от точности\", \npressListener = function ()\nmainAccuracy = mainAccuracy - a\nmainSpeed = mainSpeed <plus> b\nminLim()\nshowPage {id = c, transition = \"instant\"}\nhideDialog() end},\n\n{text = \"-\" .. b .. \" от скорости<s>\n\" .. \"<plus>\" .. a .. \" к точности\", pressListener = function ()\nmainAccuracy = mainAccuracy <plus> a\nmainSpeed = mainSpeed - b\nminLim()\nshowPage {id = c, transition = \"instant\"}\nhideDialog() end}\n\n} or\n\n{\n\n{text = \"<plus>\" .. a .. \" к скорости<s>\n-\" .. b .. \" от точности\",  pressListener = function ()\nmainSpeed = mainSpeed <plus> a\nmainAccuracy = mainAccuracy - b\nminLim()\nshowPage {id = c, transition = \"instant\"}\nhideDialog() end},\n\n{text = \"-\" .. a .. \" от скорости<s>\n<plus>\" .. b .. \" к точности\", pressListener = function ()\nmainSpeed = mainSpeed - a\nmainAccuracy = mainAccuracy <plus> b\nminLim()\nshowPage {id = c, transition = \"instant\"}hideDialog() end}\n\n}\n\ndialog({header = \"Подготовка\", text = \"Используя стимуляторы, ты можешь временно увеличить скорость реакции или точность движений. Из-за побочного эффекта вторая характеристика временно уменьшится.\", answers = answ })\n\nend\n\n\n--[=[]=]\n\nfunction fightCalculation (str)\nenemies [currentEnemy (str)].seen = 1\ne = enemies [currentEnemy (str)]\nlocal text = \"\"\nlocal at = 0\nlocal atS = 0\nlocal atA = 0\nlocal defS = 0\nlocal defA = 0\nlocal atHP = 0\nlocal defHP = 0\nlocal endFight = 0\nlocal winner = 0\nlocal toBeCont = ({\"<s>\n<s>\n«Ну что, ещё по одной?»\", \"<s>\n<s>\n«Твоя песня хороша, начинай сначала...»\", \"<s>\n<s>\n«Ах, чёрт, вот мы и снова здесь...»\", \"<s>\n<s>\n«Раунд!»\", \"<s>\n<s>\n«Семь раз отмерь, один раз пристрели...»\", \"<s>\n<s>\n«Эх, раз да ещё раз...»\"})[math.random(6)]\n\nlocal gr = gravitation == 1 and 0 or 5\nlocal mainDMG = ammunition[armedItem].dmg\n\n--Начало хода\n  -- сравнить скорость игрока и скорость противника, чтобы определить первый выстрел, сформировать текст\n   if mainSpeed >= e.sp then\n      at = 1 -- - первый выстрел за игроком\n      atS = minLim1(mainSpeed - gr)\n      atA = mainAccuracy\n      atDMG = mainDMG\n      atHP = mainHP\n      defS = minLim1(e.sp - gr)\n      defA = e.ac\n      defDMG = e.dmg\n      defHP = e.hp\n      text = \"Одновременно с противником наводите оружие друг на друга. Ты оказываешься быстрее. \"\n   else\n      at = 2 -- первый выстрел за противником\n      atS = minLim1(e.sp - gr)\n      atA = e.ac\n      atDMG = e.dmg\n      atHP = e.hp\n      defS = minLim1(mainSpeed - gr)\n      defA = mainAccuracy\n      defDMG = mainDMG\n      defHP = mainHP\n      text = \"Одновременно с противником наводите оружие друг на друга. Но он оказывается быстрее. \"\n   end\n\n   if atA > defS then\n--попал 40\n\n      defHP = defHP - atDMG\n      if defHP < 1 then\n         endFight = 1\n         winner = at\n         local t1 = ({\"Противник безвольно зависает в невесомости, его оружие парит рядом.\", \"Противник падает, выронив оружие.\"})[gravitation <plus> 1]\n         text = text .. \"Выстрел. Прямо в грудь, возле самого сердца. \" .. ({t1, \"Почти не больно, только всё тяжелее стоять. Не беда, это всего лишь ещё один вариант будущего в бесконечной паутине возможностей. На секунду сознание отрывается от упавшего тела, и ты смотришь в свои остекленевшие глаза, затем возвращаешься в нулевую точку.\"})[at]\n      elseif defHP == 1 then\n         text = text .. \"Выстрел цепляет плечо. \" .. ({\"Наверное это больно, но не смертельно. \", \"Не смертельно, но чертовски больно.\"})[at]\n      else\n         text = text .. \"Выстрел попадает в пластину брони, которая с треском перегорает. Для этого она и нужна.\"\n      end\n   else\n     text = text .. \"Мимо. \"\n   end\n   -- сравнить точность атакующего и скорость защищающегося, определить успешность выстрела, сформировать текст\n --проверить, все ли живы. Если нет, сформировать и финализировать текст, завершить расчёт. Если да, сформировать текст\n\n   if endFight ~= 1 then\n      text = text .. ( at == 1 and \"<s>\n<s>\nПочти сразу после стреляет противник. \" or \"<s>\n<s>\nПочти сразу стреляешь в ответ. \")\n      if defA > atS then\n         --попал\n         atHP = atHP - defDMG\n         if atHP < 1 then\n            endFight = 1\n            winner = at == 1 and 2 or 1\n            local t1 = ({\"Противник безвольно зависает в невесомости, его оружие парит рядом.\", \"Противник падает, выронив оружие.\"})[gravitation <plus> 1]\n            text = text .. \"Прямо в грудь, возле самого сердца. \" .. ({\"Почти не больно, только всё тяжелее стоять.<s>\n<s>\nНе беда, это всего лишь ещё один вариант будущего в бесконечной паутине возможностей. На секунду сознание отрывается от упавшего тела, и ты смотришь в свои остекленевшие глаза, затем возвращаешься в нулевую точку.\", t1})[at]\n         elseif atHP == 1 then\n            text = text .. \"Выстрел цепляет плечо. \" .. ({\"Не смертельно, но чертовски больно.\", \"Наверное это больно, но не смертельно. \"})[at]\n         else\n            text = text .. \"Выстрел попадает прямо в элемент брони, и тот сгорает с яркой вспышкой. Отработал своё.\"\n         end\n      else\n         text = text .. \"Промазал. \"\n      \n      end\n   end\n\n      mainHP = at == 1 and atHP or defHP\n      e.hp = at == 2 and atHP or defHP\n      \n         if winner == 1 then\n            enemies[currentEnemy (str)].defeated = 1\n            e = nil\n         elseif winner == 2 then\n            e = nil -- оба случая, когда боё закончен\n         else\n            text = text .. toBeCont\n         end\n      if prepare1 then\n         saveLoadStat(1)\n         prepare1 = nil\n      end\n\nfightText = text\n\n   --сравнить точность второго выстрела со скоростью первого, определить успешность выстрела, сформировать текст\n   --проверить, все ли живы. Если нет, сформировать и финализировать текст, завершить расчёт. Если да, сформировать текст, завершить ход, \nend\n\nend\n",
+        "text": "Новый ответ. введите текст",
+        "id": 11,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\n\nfunction takeOff()\n   local sp = ammunition[armedItem].sp \n   local ac = ammunition[armedItem].ac \n   mainSpeed = mainSpeed - sp\n   mainAccuracy = mainAccuracy - ac\n   takeArm(1)\nend\n\nfunction armText(n, s)\n   local a = ammunition[n] or ammunition[1]\n   local text = (s == 1 and \"Оружие в руках: \" or \"\") ..\n\na.name .. \" (\" ..\n\n((a.sp < 0 and (a.sp .. \" от скорости\" )) or (a.sp > 0 and (\"<plus>\" .. a.sp .. \" к скорости\")) or \"\" ) ..\n\n(a.sp ~= 0 and a.ac ~= 0 and \", \" or \"\") ..\n\n((a.ac < 0 and (a.ac .. \" от точности\" )) or (a.ac > 0 and (\"<plus>\" .. a.ac .. \" к точности\"))\nor \"\") ..\n\n((a.sp ~= 0 or a.ac ~= 0) and a.dmg ~= 1 and \", \" or \"\") ..\n\n(a.dmg > 1 and ((\"<plus>\" .. a.dmg - 1) .. \" к урону\") or \"\" )\n\n .. \")\"\n\n.. (s == 1 and \"<s>\n[Убрать]\" or \"<s>\n[Использовать]\")\n   return text\nend\n\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n\nfunction roomWthEnemyVis (str, a)\n--воидимость входа в комнату в зависимости от статуса врага\n\nlocal e = \"\"\nfor k,v in pairs (enemies) do\n   if v.location == str then\n      e = enemies[k]\n   end\nend\n\nif a == 0 and e.seen == 0 then\n-- впервые увидел\n   return true\nelseif a == 1 and e.seen == 1 and e.defeated == 0 then\n-- уже видел, но не победил\n   return true\nelseif a == 2 and e.defeated == 2 then\n--уже побеждал раньше\n    return true\nelseif a == 3 and e.defeated == 1 then\n--уже победил сейчас\n    return true\nelse return false\nend\n\nend\n\nfunction enemiesTabRenew()\n   for k,v in pairs (enemies) do\n      if v.defeated == 1 then\n         v.defeated = 2\n      end\n   end\nend\n\nfunction defeatEnemy(str)\nif not str then\n   for k,v in pairs (enemies) do\n      if v.location == currentPlace then\n         v.defeated = 1\n      end\n   end\nelse\n   for k,v in pairs (enemies) do\n      if v.location == str then\n         v.defeated = 1\n      end\n   end\nend\n\nend\n\nfunction takeArm(n)\n   local a = n or 1\n   armedItem = a\n   local sp = ammunition[a].sp\n   local ac = ammunition[a].ac\n   mainSpeed = mainSpeed <plus> sp\n   mainAccuracy = mainAccuracy <plus> ac\nend\n\n\nfunction restartSim()\n   mainHP = 3\n   mainSpeed = baseSpeed\n   mainAccuracy =\nbaseAccuracy\n   water = 1\n   current = 1\n   coolingSystem = 0\n   gravitation = 1\n   armedItem = 1\n   gravityDisabled = 0\n\n   for i = 1, 1000 do\n      if vars[\"bonus\" .. i] then\n         vars[\"bonus\" .. i] = 0\n      end\n      for _, v in pairs (conseq) do\n         if vars[\"penalty_\" .. v .. i] then\n            vars[\"penalty_\" .. v .. i] = 0\n         end\n      end\n      for _, v in pairs (unrevealedConseq ) do\n         if vars[\"penalty_\" .. v .. i] then\n            vars[\"penalty_\" .. v .. i] = 0\n         end\n      end\n   end\n\n   for i = 1,#enemies do\n      if enemies[i].defeated ~= 1 then\n         enemies[i].hp = enemies[i].hpSet\n      end\n   end\n\nend\n\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 11,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "empty \nБоёвка<s>r\n",
+    "answers": [
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.current_id == 12 and not prepare1\nend",
+        "id": 12,
+        "text": "Описание встречи с противником:\nМожно рандомно",
+        "lua_text": "function lua_text()\nlocal text = \"Из-за поворота появляется фигура в камуфляже с бластером в руках. Ещё мгновенье, и боец заметит тебя.\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn g.current_id == 12 and prepare1\nend",
+        "id": 12,
+        "text": "Описание приёма стимулятора",
+        "lua_text": "function lua_text()\nlocal text = \"Ты особым образом сжимаешь зубы, и микродоза стимулятора впрыскивается в кровь. Эффект спадёт через секунду, но этого времени хватит, чтобы сделать выстрел.\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "merge": false,
+        "lua_text": "function lua_text()\nlocal str = currentPlace or \"tech room 31\"\nreturn titleGen(str)\nend",
+        "id": 9,
+        "middle_answer": false,
+        "text": "статы противника",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "left_answer": false,
+        "right_answer": true,
+        "comment": true,
+        "lua_text": "function lua_text()\n\nlocal str = \"player\"\nlocal a = {hp = mainHP, sp = mainSpeed, ac = mainAccuracy, seen = 0, defeated = 0, location = str, title = \"<s>\nТЫ\", dmg = ammunition[armedItem].dmg}\ntable.insert(enemies, a)\n\nlocal text = titleGen(str)\n\ntable.remove(enemies,#enemies)\n\nreturn text\nend",
+        "id": 9,
+        "text": "Статы игрока",
+        "middle_answer": false,
+        "merge": false
+      },
+      {
+        "merge": false,
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "id": 9,
+        "middle_answer": true,
+        "text": "Невесомость! В сражении без гравитации скорость всех персонажей снижена на 5.",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 12,
+        "text": "Принять стимулятор",
+        "lua_do": "function lua_do()\nconjugation = conjugation - 1\nprepare1 = math.random(6)\nprepare2 = math.random(6)\nsaveLoadStat()\ndiceSelection()\nend",
+        "lua_if": "function lua_if()\nreturn not prepare1 and conjugation > 0-- <plus> нужно 1 сопряжение\nend"
+      },
+      {
+        "comment": false,
+        "id": 9,
+        "lua_do": "function lua_do()\nround = round <plus> 1\nlocal a = currentPlace or \"place name 1\"\nfightCalculation (a)\nmainHP = mainHP or 3\nend",
+        "text": "Начать",
+        "lua_text": "function lua_text()\nround = round or 1\n\nreturn \"Начать<s>\n \" .. round .. \" раунд\"\nend",
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nshowRules ()\nend",
+        "id": 13,
+        "text": "[Правила боя]",
+        "middle_answer": true,
+        "no_transition": true
+      },
+      {
+        "comment": true,
+        "id": 52,
+        "text": "Сопряжение",
+        "lua_text": "function lua_text()\nreturn \"Сопряжение: \" .. conjugation\nend",
+        "lua_if": "function lua_if()\nreturn conjugation\nend"
+      },
+      {
+        "id": 53,
+        "text": "[Вернуться в нулевую точку]",
+        "lua_do": "function lua_do()\n--сделать нулевую точку с выбором, куда идти\nround = nil\nrestartSim()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Перед началом игры выбери характеристик своего персонажа – они влияют на ход боёв со встреченными противниками.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Первая загрузка функций",
+        "run": [
+          11
+        ]
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nlocal r = math.random(6)\nmainSpeed = r <plus> 4\nconjugation = 5\nmainAccuracy = 10 - r\nmainHP = 3\nshowPage { id = g.current_id, transition = \"instant\"}\nend",
+        "text": "Случайным образом",
+        "no_transition": true,
+        "lua_if": "function lua_if()\nreturn not mainSpeed\nend",
+        "super_calculate": false,
+        "calculate": false,
+        "middle_answer": true,
+        "id": 13
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"ТЫ:<s>\nСкорость: \" .. mainSpeed .. \"<s>\nТочность: \" .. mainAccuracy\nend",
+        "comment": true,
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nreturn mainSpeed\nend",
+        "middle_answer": true
+      },
+      {
+        "left_answer": true,
+        "lua_if": "function lua_if()\nreturn mainSpeed and mainSpeed > 4\nend",
+        "lua_do": "function lua_do()\nmainSpeed = mainSpeed - 1\nmainAccuracy =\nmainAccuracy <plus> 1\nshowPage {id = g.current_id, transition = \"instant\"}\nend",
+        "id": 13,
+        "text": "<<",
+        "comment": false,
+        "no_transition": true
+      },
+      {
+        "no_transition": true,
+        "right_answer": true,
+        "comment": false,
+        "id": 13,
+        "lua_do": "function lua_do()\nmainSpeed = mainSpeed <plus> 1\nmainAccuracy =\nmainAccuracy - 1\nshowPage {id = g.current_id, transition = \"instant\"}\nend",
+        "text": ">>",
+        "lua_if": "function lua_if()\nreturn mainSpeed and mainSpeed < 10\nend",
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nshowRules()\nend",
+        "id": 13,
+        "text": "[Правила боя]",
+        "middle_answer": true,
+        "no_transition": true
+      },
+      {
+        "id": 13,
+        "text": "   ",
+        "lua_if": "function lua_if()\nreturn mainSpeed\nend",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "Готово",
+        "lua_if": "function lua_if()\nreturn mainSpeed\nend",
+        "lua_do": "function lua_do()\nbaseSpeed = mainSpeed\nbaseAccuracy = mainAccuracy\nrestartSim()\nblockAutorun = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Бегло осматриваешь убитого. Ничего примечательного: древний бластер эпохи первого расселения, дешёвый камуфляж под реголит, никакой брони. Нужно быть законченным фанатиком, чтобы идти на дело с таким преступно неэффективным снаряжением.\n\n",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Тем временем вокруг него уже собралась небольшая лужа. Нет, бластеры не оставляют открытых ран, крови после них не бывает. Окидываешь взглядом помещение и замечаешь, что одна из труб сильно повреждена, из трещины в ней и хлещет вода, заливая весь пол.\n\nЭта находка занимает своё место в большом паззле, и ты чуть лучше понимаешь общую картину – твоё СОПРЯЖЕНИЕ увеличивается.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 14,
+        "text": "Окидываешь взглядом помещение и замечаешь, что одна из труб сильно повреждена, из трещины в ней хлещет вода и заполняет пузырьками весь отсек.\n\nЭта находка занимает своё место в большом паззле, и ты чуть лучше понимаешь общую картину – твоё СОПРЯЖЕНИЕ увеличивается.",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 37,
+        "text": "Готово",
+        "lua_do": "function lua_do()\n--conjugation = conjugation <plus> 3\n-- добавлено в автоматическом режиме в функцию addExclusive для добавления новых значений в conseq\n\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\naddExclusive(conseq, \"water\")\n\nremoveVal(unrevealedConseq,\"water\")\n\nblockAutorun = 0\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Симуляция перезапускается в нулевой точке, но вкус крови ещё какое-то время щекочет язык. Стимуляторы не дают мозгу погрузиться в состояние полужизни, и сознание наконец накрывает тебя.\n\nТы сидишь в баре на лунной станции. Напротив тебя замер, разглядывая стакан, заказчик – мистер Николас Фэлкон. Он только что перевёл тебе сумму задатка и обрисовал в общих чертах задание – спасти его дочь с космолёта, захваченного неизвестными террористами.",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Поговорить с заказчиком"
+      },
+      {
+        "id": 20,
+        "text": "Встать из-за стола и выйти"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nenemiesTabRenew()\nmainHP = 3\nblockAutorun = 1\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 15,
+        "calculate": true
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/VUjgqxABPW4waCiSzJX66JonNAdQ736cTricLNvJ.jpg"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Ты выходишь в коридор и видишь человека в чёрном плаще и старомодной шляпе. Он касается её рукой в приветственном жесте и скрывается за ближайшим углом.\n\nТы бросаешься следом за незнакомцем и чуть не сбиваешь его с ног – он остановился сразу за поворотом и не пытался никуда сбегать.\n\n– Значит, это наша первая встреча, мистер прогност, – улыбается человек, поправляя сбившуюся шляпу. – В таком случае позвольте представиться. Детектив Шейбер к вашим услугам.\n\nТы молча осматриваешь собеседника. Немолодое помятое лицо с запущенной бородкой, один глаз закрыт чёрной повязкой, другой испытующе глядит прямо тебе в душу.\n\n– Что тебе от меня нужно, детектив?\n\n– Говорят, прогносты наполовину умирают, впервые встретив собственную смерть в симуляции. Душу ведь не обманешь – смерть она смерть и есть. Ходят потом как киборги или зомби, не зная ни страха, ни любви...\n\n[– Ближе к делу.]\n\n– Я вижу, в тебе ещё есть что-то живое, человеческое. Помоги мне сделать этот мир чуточку лучше, а? Там на корабле должно быть полно компромата на этого, – он кивнул в сторону бара. – Мне заказали вывести его на чистую воду. И чем больше я копал, тем больше хотелось просто пристрелить или взорвать. Но он мне не по зубам. Поэтому я хочу собрать всё, что поможет утопить его и весь его бизнес, и передать тем, у кого есть нужные рычаги...\n\n– Ты хочешь, чтобы я копался в его грязном белье вместо тебя? Чтобы помочь его точно таким же конкурентам? Ты хоть представляешь, сколько мне платят за работу?\n\n– Не говори мне \"да\" или \"нет\" прямо сейчас, мистер прогност, – детектив Шейбер панибратски хлопает тебя по плечу и разворачивается. – Просто приглядись, за хорошего ли человека ты разрываешь на куски свою душу.\n\nОн уходит, не оборачиваясь, и ты остаёшься наедине с его последней фразой.\n\n   *   *   *\n",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Улики для Шейбера\n\n• записи с видеокамер из комнаты охраны\n• маршрутные листы из кабины капитана\n• запрещёнка из рефрижератора в поварском отделе\n• тайная комната: человеческие головы пытаются использовать для вычислительной мощности\n\nследы, смытые водой, могут привести в тайный отсек\nили вода не утекла, значит вместо отведенного под неё пространства тайник\n\n<plus> ложные улики?\n",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Дочь заказчика\n\nДевочка лет 14 на вид, прячется в комнате с кроватью и бдсм-стафом, держит в заложниках похищенную с какого-то спутника девушку. Похитила за попытку воровства? Вместе с доверенными отца пытала и мучила пленницу для развлечения.\nЗахватившие корабль прибыли за пленницей. \nЕсли ничего не предпринять, заложницу грохнет спецназ при штурме",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Лидер захватчиков\n\nБрат похищенной, собрал знакомых для спасения сестры. Узнал, что на многих спутниках, где побывал корабль, пропадали люди. Хотят освободить всех заложников, спецназ для них – охрана богачей.\nхотят взорвать корабль со всей станцией в случае провала\n\nПозвали телепата, чтобы иметь шансы против правительства, он согласился помочь бесплатно.",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Телепат\n\n личный враг гг. Часто оказывался по разные с гг стороны во время заданий, но когда-то работали вместе. Телепат помешался на альтруизме, в то время как гг стал мизантропом. Пытается объяснить, что гг и спецназ на неправильной стороне",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Начальник спецназа\n\nКрепкий умный мужик, заботится о своей команде. Просит гг позаботится о том, чтобы как можно меньше его ребят погибло при штурме. Если ничего не делать, то погибнут все, кроме него (чтобы он мог страдать над трупами).\nМожно предупреждать о позициях врагов (тогда точка будет пройдена без потерь кроме боссфайтов), и обозначать очерёдность действий (по палубам), чтобы штурм не мешал/расчищал дорогу гг",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Препятствия:\nвода <plus> электричество = непроходимая лужа\nвода <plus> заморозка = перейти по воде\nвода <plus> перегрев = непроходимая баня\nвода <plus> гравитация = ?\n\nвода <plus> огонь = тушение пожара\n\nэлектричество <plus> перегрев = пожар\n\nэлектричество = темнота\nэлектричество = лифты не работают\nэлектричество = не работают какие-то приборы\n\nгравитация = перелететь препятствие\nгравитация = замедление в перестрелке\nгравитация = передвинуть тяжесть\nгравитация = невозможно потушить пожар\n\nотключить охлаждение, чтобы исследовать рефрижератор  -> вызовет пожар\n\nотключение света -> уменьшение точности в перестрелке\nсломать трубу, чтобы пролезть – нет воды/нарушен теплообмен",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "– Я уже всё рассказал вам, мистер прогност, – говорит он, не отрывая взгляда от твоих глаз. – Мою личную яхту захватили террористы. Прямо здесь, она пристыкована к этой станции. Я не знаю, чего они хотят, но на борту моя дочь, и я готов на всё, чтобы спасти её.\n\n– Мистер Фэлкон...\n\n– Для вас посто Николас.\n\n– Николас, жизнь вашей дочери зависит от того, что вы мне сейчас расскажете, а что утаите.\n\nТы смотришь прямо ему в глаза, на секунду оставив маску заинтересованности. Только искренние безразличие и скука. Довольно просто показать смерть, если ты был мёртвым ещё минуту назад. От этого взгляда обывателям всегда не по себе. Но Николас только улыбается. Там, где ты учился уловкам и хитрости, такие как он преподавали.\n\n– Капитан Анкилос считает, что террористы планируют взорвать бомбу, – наконец говорит мистер Фэлкон и вновь возвращается к созерцанию стакана в своей руке.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Встать из-за стола и выйти",
+        "need": -18
+      },
+      {
+        "id": 20,
+        "text": "Встать из-за стола и выйти",
+        "need": 18
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Ты бросаешься следом за незнакомцем и чуть не сбиваешь его с ног – он остановился сразу за поворотом и не пытается никуда сбегать.\n\n– Полагаю, это наша первая встреча, мистер прогност, – улыбается человек, поправляя сбившуюся шляпу. – В таком случае позвольте представиться. Детектив Шейбер к вашим услугам.\n\nТы молча осматриваешь собеседника. Немолодое помятое лицо покрыто морщинами, один глаз закрыт повязкой, другой испытующе глядит прямо тебе в душу.\n\n– Что тебе от меня нужно, детектив?\n\n– Говорят, прогносты наполовину умирают, впервые встретив собственную смерть в симуляции. Душу ведь не обманешь – смерть она смерть и есть. Ходят потом, как киборги или зомби, не зная ни страха, ни любви...",
+    "answers": [
+      {
+        "id": 19,
+        "text": "– Ближе к делу."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "– Я вижу, в тебе ещё есть что-то живое, человеческое. Помоги мне сделать этот мир чуточку лучше, а? Там на корабле должно быть полно компромата на этого, – он кивнул в сторону бара. – Мне заказали вывести его на чистую воду. И чем больше я копал, тем больше хотелось просто пристрелить или взорвать ко всем чертям. Но он мне не по зубам. Поэтому я хочу собрать всё, что поможет утопить его и весь его бизнес, и передать тем, у кого есть нужные рычаги...\n\n– Ты хочешь, чтобы я копался в его грязном белье вместо тебя? Чтобы помочь его точно таким же конкурентам? Ты хоть представляешь, сколько мне платят за работу?\n\n– Не говори мне \"да\" или \"нет\" прямо сейчас, мистер прогност, – детектив Шейбер панибратски хлопает тебя по плечу и разворачивается. – Просто приглядись, за хорошего ли человека ты разрываешь на куски свою душу.\n\nОн уходит, не оборачиваясь, и ты остаёшься наедине с его последней фразой.",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Отправиться к яхте"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Ты выходишь в коридор и видишь человека в плаще и старомодной шляпе. Он касается её рукой в приветственном жесте и скрывается за ближайшим углом.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Отправиться за ним",
+        "need": [
+          -18
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Отправиться за ним",
+        "need": [
+          18
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Отправиться к яхте"
+      },
+      {
+        "id": 18,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/NcgK3WtqSgFzMpyxgrZ2Z42U8Q4rDZ1hoiTjf1DE.jpg"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Ты направляешься следом за мистером Шейбером и быстро настигаешь его. Он, как и в прошлый раз, стоит сразу за поворотом.\n\n– Видимо, это не первая наша встреча, мистер прогност, – хмурится детектив, пристально глядя в глаза. – Рад, что смог вас заинтересовать. Узнали что-нибудь?",
+    "answers": []
+  },
+  {
+    "id": 22,
+    "text": "Ты по неоновым указателям идёшь через коридоры окололунной станции к отсеку для самых важных клиентов – где-то там должна быть пристыкована яхта Николаса Фэлкона. Доходишь до заблокированного службой охраны перехода, но начальник поста без лишних вопросов пропускает тебя дальше.\n\n– Капитан Анкилос ожидает вас, господин прогност. Они сейчас прямо за этой переборкой, готовятся к штурму.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Пройти через заслон"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Взорвать бомбу на космической яхте, пристыкованной к орбитальной базе? Наверное, это чертовски красиво: огромное кольцо секция за секцией вспыхивает и исчезает в пучине космоса...\n\nИ это почти объясняет, почему из своей гибели в первой симуляция на базовой линии ты не вынес никакой информации и даже не понял, что тебя убило. Почти...",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Вернуться к делам насущным"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Ты едва переступаешь порог переборки, как дуло бластера упирается тебе в шею. Молодой боец штурмового отряда внешнего кольца в новенькой силовой броне ухмыляется, но встречая твой уставший равнодушный взгляд быстро убирает оружие.\n\n– А вот и наш туз в рукаве! – отпихивая в сторону первого подходит к тебе ещё один штурмовик.\n\nПотёртый бронекомплект и шрамы на татуированном лице говорят о его опыте больше, чем почти незаметные знаки отличия. Три кружочка-планеты на наплечнике – значит перед тобой капитан. \n\n– Есть особые указания для отряда? – продолжает капитан и подмигивает. С такого расстояния заметно, что непонятная татуировка на его лице дополняет линии шрамов в рисунок динозавра с булавой на хвосте.\n",
+    "answers": [
+      {
+        "comment": true,
+        "id": 24,
+        "text": "Пока нет идей, какие указания можно дать отряду",
+        "need": [
+          -26
+        ],
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n"
+      },
+      {
+        "id": 26,
+        "text": "Спросить про план"
+      },
+      {
+        "id": 27,
+        "text": "Дать указания",
+        "need": [
+          26
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/th_CNGdxjitUiSzdTQqE7Jw9i98XK9KcexqwKEXH1Pf.jpg"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "– Вы рассказали мне не всё, – спокойно говоришь ты. – Постарайтесь не утаивать важные детали, которые я всё равно узнаю.\n\nМистер Фэлкон смеряет тебя долгим испытующим взглядом.\n\n– Вижу, вы уже побывали там, – наконец говорит он. – Что именно вы хотите узнать?",
+    "answers": []
+  },
+  {
+    "id": 26,
+    "text": "– Да какой там план? Вломиться внутрь и стрелять во всё, что движется – гогочет капитан Анкилос, но сразу же становится серьёзным и добавляет: – В отряде десять лучших бойцов внешнего кольца, мы проникнем внутрь через главный шлюз и будем зачищать все отсеки на пути к жилым блокам на нижней палубе. Там или найдём девчонку, или сможем получить доступ к системам охраны, чтобы найти её.\n\n– Обычно я работаю один. Надеюсь, мы не помешаем друг другу...\n\nКапитан вдруг приближается к самому твоему уху и шепчет так, чтобы другие бойцы не услышали:\n\n– Я знаю, если позвали тебя, значит наше дело дрянь. Если ты правда можешь выбирать то будущее, какое тебе больше по вкусу, то пожалуйста, защити ребят. Они все мне как братья. И они лучшие из лучших...\n\nОн крепко хлопает тебя по плечу и отходит в сторону.",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Пока нет других вопросов",
+        "comment": true,
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n"
+      },
+      {
+        "id": 28,
+        "text": "Спросить о бомбе"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "– Ах, это... – мнётся капитан Анкилос. – Фэлкон спрашивал, могут ли террористы превратить в бомбу ядерный двигатель его яхты. Умники сказали, что это возможно, причём довольно просто. Так что мы рассчитываем, что у нас в запасе около часа, а потом... Большой бадабум!\n\nОн едва сдерживает улыбку, а некоторые штурмовики смеются в голос.\n\n– Дайте мне полчаса осмотреться, – равнодушно говоришь ты. – А то затопчете все следы.\n\n– Принято, – сдержанно кивает капитан и делает какой-то жест рукой. Все бойцы тут же рассаживаются прямо на полу и заметно расслабляются. – Можешь начинать, шлюз уже разблокирован.",
+    "answers": [
+      {
+        "id": 29,
+        "text": "Внутрь"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Ты проходишь через прорезанную в переборке дыру в шлюз звездолёта. Похоже, все системы корабля контролируют захватчики.\n\nМельком осматриваешься. На роскошной космической яхте даже шлюз выглядит как парадная во дворце: неприлично просторный, со смотровым иллюминатором во всю стену и полупрозрачными колоннами, внутри которых угадываются очертания скафандров.\n\nКапсулы быстрого перемещения по кораблю взорваны – двигаться придётся на своих двоих. Ты быстро проходишь к неприметной двери у дальней стены и читаешь надпись на ней.",
+    "answers": [
+      {
+        "id": 38,
+        "text": "В технический коридор второй палубы",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nwater = 1\ncurrent = 1\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Створки расползаются при твоём приближении, приглашая внутрь, затем смыкаются за твоей спиной.\n\nУзкий коридор уходит вправо и влево. Ты сверяешься со схемой корабля, полученной от Фэлкона.\n\nК шлюзу примыкает техническое помещение, ты замечаешь неприметную дверь туда слева. По полу в этой части коридора бежит вода, утекая в решётки с одной стороны и скапливаясь с другой.\n\nДвери в стене напротив ведут в складское помещение и медотсек.\n\nЛевый рукав коридора заворачивает к переходу на верхнюю палубу, а правый – к машинному залу и спуску на нижние уровни.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 7,
+        "calculate": true,
+        "lua_do": "function lua_do()\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\n\ncrossCheck (conseq, unrevealedConseq, \"water\")\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          11
+        ]
+      },
+      {
+        "id": 31,
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 31\", 0)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"tech room 31\"\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"tech room 31\"\nblockAutorun = 1\nend",
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 31\", 1)\nend",
+        "id": 35
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"tech room 31\"\nblockAutorun = 1\nend",
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 31\", 2)\nend",
+        "id": 36
+      },
+      {
+        "id": 37,
+        "text": "В техническое помещение",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"tech room 31\", 3)\nend",
+        "lua_do": "function lua_do()\nblockAutorun = 1\ncurrentPlace = \"tech room 31\"\nend"
+      },
+      {
+        "id": 32,
+        "text": "В складское помещение",
+        "lua_if": "function lua_if()\nreturn water == 0 and gravitation == 1\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"warehouse 32\"\nend\n"
+      },
+      {
+        "id": 51,
+        "text": "В складское помещение",
+        "lua_if": "function lua_if()\nreturn water == 1 or gravitation == 0\nend",
+        "lua_do": "function lua_do()\npenalty_water51 = 1\ncurrentPlace = \"warehouse 32\"\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 33,
+        "text": "В медотсек",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"med room 33\", 0)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"med room 33\"\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 41,
+        "text": "В медотсек",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"med room 33\", 1)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"med room 33\"\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 42,
+        "text": "В медотсек",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"med room 33\", 2)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"med room 33\"\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 43,
+        "text": "В медотсек",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"med room 33\", 3)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"med room 33\"\nend"
+      },
+      {
+        "id": 34,
+        "text": "В машинный зал",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"machine room 34\", 0)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"machine room 34\"\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"machine room 34\"\nblockAutorun = 1\nend",
+        "text": "В машинный зал",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"machine room 34\", 1)\nend",
+        "id": 47
+      },
+      {
+        "id": 48,
+        "text": "В машинный зал",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"machine room 34\", 2)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"machine room 34\"\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ncurrentPlace = \"machine room 34\"\nend",
+        "text": "В машинный зал",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"machine room 34\", 3)\nend",
+        "id": 49
+      },
+      {
+        "id": 57,
+        "text": "К проходу наверх",
+        "lua_do": "function lua_do()\ninvestigation57 = 1\nend"
+      },
+      {
+        "id": 59,
+        "text": "К проходу вниз",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"corridor 59\", 0)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"corridor 59\"\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 63,
+        "text": "К проходу вниз",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"corridor 59\", 1)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"corridor 59\"\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 64,
+        "text": "К проходу вниз",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"corridor 59\", 2)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"corridor 59\"\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 7,
+        "text": "К проходу вниз",
+        "lua_if": "function lua_if()\nreturn roomWthEnemyVis (\"corridor 59\", 3)\nend",
+        "lua_do": "function lua_do()\ncurrentPlace = \"corridor 59\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Ты осторожно толкаешь дверь, но она предательски скрипит. В полутьме этого царства трубок, трубочек и огромных труб возникает фигура человека с бластером в руках. Раз – он поворачивает голову. Два – начинает разворачиваться корпусом. Три – поднимает бластер.\n\nНо и ты времени не теряешь: оружие уже в твоих руках.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Отсек заставлен ровным рядами полок от пола до потолка, а те плотно забиты закрытыми контейнерами из космопластика. Сбоку от входа притаился терминал управления механическим манипулятором. Если не знаешь, что хочешь найти, то перебирать ящики можно бесконечно.",
+    "answers": [
+      {
+        "id": 32,
+        "text": "\n\nЧасть пузырьков воды из коридора теперь парит здесь.",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "\n\nВесь пол залит водой из коридора.",
+        "lua_if": "function lua_if()\nreturn penalty_water51 == 1 and coolingSystem ~= 2 and gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "\n\nВесь пол залит водой из коридора. В отсеке так холодно, что лужи начинают замерзать.",
+        "lua_if": "function lua_if()\nreturn penalty_water51 == 1 and coolingSystem == 2 and gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": " Кажется, что можно обморозить пальцы, если прикоснуться к чему-то хоть на секунду.",
+        "lua_if": "function lua_if()\nreturn penalty_water51 == 1 and coolingSystem == 2 and investigation55 == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "\n\nТы замечаешь мокрые следы на полу. Похоже, кто-то побывал здесь уже после того, как начала протекать вода. А значит, почти наверняка, – после захвата корабля.",
+        "lua_if": "function lua_if()\nreturn penalty_water51 == 0 and investigation54 ~= 1 and gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "\n\nТы на секунду задерживаешь взгляд на проходе, в который вели мокрые следы. Внешне точно такой же, как и остальные.",
+        "lua_if": "function lua_if()\nreturn  investigation54 == 1 and coolingSystem ~= 2\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "\n\nТы на секунду задерживаешь взгляд на проходе, в который вели мокрые следы. Внешне точно такой же, как и остальные. На стенках контейнеров начинает конденсироваться вода, и тебе в голову приходит одна догадка, которую стоит проверить.",
+        "lua_if": "function lua_if()\nreturn  investigation54 == 1 and coolingSystem == 2 and investigation55 ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "\n\nТам, в проходе, тебя ждёт контейнер «118910».",
+        "lua_if": "function lua_if()\nreturn  investigation54 == 1 and coolingSystem ~= 2 and investigation55 == 1\nend",
+        "merge": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nblockAutorun = 1\ninvestigation54 = 1\nend",
+        "text": "Исследовать следы",
+        "lua_if": "function lua_if()\nreturn investigation54 ~= 1 and penalty_water51 ~= 1 and gravitation == 1\nend",
+        "id": 54
+      },
+      {
+        "lua_if": "function lua_if()\nreturn investigation54 == 1 and coolingSystem == 2 and investigation55 ~= 1\nend",
+        "lua_do": "function lua_do()\nblockAutorun = 1\ninvestigation55 = 1\nend",
+        "text": "Исследовать ящики в нужном проходе",
+        "id": 55,
+        "comment": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn investigation54 == 1 and coolingSystem ~= 2 and investigation55 == 1 and investigation56 ~= 1\nend",
+        "id": 56,
+        "text": "Достать нужный контейнер",
+        "comment": false,
+        "lua_do": "function lua_do()\nblockAutorun = 1\ninvestigation56 = 1\nend"
+      },
+      {
+        "id": 38,
+        "text": "Выйти в коридор"
+      },
+      {
+        "id": 32,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/w9L6NiebIj87cjK57qoq3njyMpBeJ7pcfibOI0Jp.jpg"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Должно быть, это не главный вход в медотсек, потому что пространство сразу за дверью заставлено громоздким оборудованием и каким-то хламом. Ты делаешь несколько шагов внутрь и замечаешь человека с оружием в руках. Он тоже тебя замечает.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Машинный зал гудит и вибрирует. Сам реактор раскинулся сразу на двух уровнях корабля, по периметру вокруг него идёт узкая платформа. Если подойти к её краю и свеситься через перила, то можно разглядеть часть механизмов на нижней палубе.\n\nПлатформа вплотную подходит к реактору только в одном месте – там расположился какой-то терминал. Возле него замер человек с бластерным пистолетом. Кажется, он смотрит в твою сторону.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Ты ещё более осторожно толкаешь дверь, но она всё равно предательски скрипит. Ты уже знаешь, что из полутьмы этого царства трубок, трубочек и огромных труб сейчас возникнет человек с бластером в руках. Всё как и в прошлый раз.\n\nНо и ты времени не теряешь: оружие уже в твоих руках, ствол направлен на противника.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Ты осторожно толкаешь дверь, и она предательски скрипит. Ты уже знаешь, что из полутьмы этого царства трубок, трубочек и огромных труб сейчас возникнет человек с бластером в руках. Всё как и в прошлый раз.\n\nНо у тебя нет времени и настроения для унылой перестрелки. Доза нужного стимулятора в крови – и ты возносишься сознанием над текущей ветвью событий и погружаешься в ту, где фигура побеждённого противника уже лежит без дыхания на полу.",
+    "answers": [
+      {
+        "id": 37,
+        "text": "Зафиксироваться в этом варианте событий",
+        "lua_do": "function lua_do()\ndefeatEnemy()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Техническое помещение освещено слабо, а бесконечные переплетения всевозможных труб отбрасывают на открытое пространство причудливые тени.",
+    "answers": [
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn gravitation == 1\nend",
+        "id": 37,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nwater = water or 0\nreturn water == 1 and \"Тело убитого террориста лежит в луже на полу, вода стекает в неё из трещины в сильно смятой трубе и вытекает через щели куда-то дальше.\" or \"Тело убитого террориста лежит на полу. Его одежда ещё мокрая, но большая часть воды уже утекла через щели куда-то дальше.\"\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "id": 37,
+        "text": "Тело убитого террориста безвольно висит в невесомости среди пузырьков воды.",
+        "comment": false,
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nwater = water or 0\nreturn water == 1 and \"Перекрыть воду\" or \"Включить воду\"\nend",
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nwater = water == 0 and 1 or 0\nend",
+        "comment": false
+      },
+      {
+        "id": 38,
+        "text": "Выйти в коридор"
+      },
+      {
+        "id": 37,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/fG7ldDaZYGnvt0hy4xxe362unrMbF2FnuW6vADSi.jpg"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Узкий коридор уходит вправо и влево. Ты сверяешься со схемой корабля, полученной от Фэлкона.\n\nС каждой стороны коридора по два отсека. Возвращаться к шлюзу смысла нет, пока не выполнишь задание. Рядом с ним – техническое помещение.\n\nДвери в стене напротив ведут на склад и в медотсек.\n\nЛевый рукав коридора заворачивает к переходу на верхнюю палубу, а правый – к машинному залу и спуску на нижние уровни.\n\n",
+    "answers": [
+      {
+        "id": 38,
+        "text": "По полу в этой части коридора бежит вода, утекая в решётки с одной стороны, и скапливаясь с другой.\n",
+        "lua_if": "function lua_if()\nreturn water == 1 and gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 38,
+        "text": "Над полом в этой части коридора парят в невесомости капли воды.\n",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 30,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Скользишь сознанием по нитям взаимосвязей к тому узлу симуляции, в котором ",
+    "answers": [
+      {
+        "id": 39,
+        "text": "ты не перекрывал воду. Она течёт там, где текла. Так было всегда и остаётся сейчас.",
+        "lua_if": "function lua_if()\nreturn water == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 39,
+        "text": "ты перекрыл воду. Она не течёт там, где текла. Ты остановил её однажды, и с тех пор это ни разу не менялось.",
+        "lua_if": "function lua_if()\nreturn water == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Зафиксироваться в этом варианте",
+        "lua_do": "function lua_do()\npenalty_water51 = (water == 0 and gravitation == 1 and 0) or (currentPlace  == \"warehouse 32\" and 1 or penalty_water51)\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Ты подходишь ближе к бездыханному телу. Совсем мальчишка, в какой-то пыльной спецовке. Чего ради он полез в такую авантюру? ",
+    "answers": [
+      {
+        "id": 40,
+        "text": "Рядом валяется старый охотничий бластер. Похоже, парень был редким снайпером, раз умудрялся хоть как-то стрелять из такого оружия.\n\nТы хмуришься: с таким сбродом справится не то что спецназ, но даже служба охраны станции. Зачем тогда нанимать прогноста? Что-то здесь не так...",
+        "lua_if": "function lua_if()\nreturn gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 40,
+        "text": "Рядом висит в невесомости старый охотничий бластер. Похоже, парень был редким снайпером, раз умудрялся хоть как-то стрелять из такого оружия.\n\nТы хмуришься: с таким сбродом справится не то что спецназ, но даже служба охраны станции. Зачем тогда нанимать прогноста? Что-то здесь не так...",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 43,
+        "text": "Осмотреть отсек",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\n\ncrossCheck (conseq, unrevealedConseq, \"coolingSystem\")\nend"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Ты снова заходишь в медотсек и через загромождённое пространство двигаешься внутрь. Человек с оружием в руках будто ждёт тебя в том же месте.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Ты заходишь в медицинский отсек. За завалами барахла ещё живой паренёк со своими допотопным бластером. Всё как и в прошлый раз.\n\nЧтобы не делать одно и то же дважды, просто ускользаешь сознанием с этого узла симуляции на ту ветвь событий, где фигура побеждённого противника уже лежит без дыхания на полу и не мешает.",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Зафиксироваться в этом варианте событий",
+        "lua_do": "function lua_do()\ndefeatEnemy()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Основная часть медотсека ярко освещена. Узкий проход между самым фантастическим оборудованием ведёт к транспортной капсуле. Но она не реагирует на твоё приближение – похоже, вся сеть быстрого перемещения по кораблю заблокирована.\n\nНа одном из столиков видишь знакомые устройства: пластыри с импульсной нейронной стимуляцией. То, что помогает поддерживать товарный вид животов и ляжек богатеев, может немного подтянуть твои физические данные.",
+    "answers": [
+      {
+        "id": 43,
+        "text": "\n\nРеактиватор, на котором хранятся пластыри, мигает красным. Наклоняешься ближе и читаешь сообщение об ошибке: \"Критический перегрев\". Похоже, тонкие контакты испортятся, если попытаться использовать пластырь, а корабельная система охлаждения сейчас отключена.",
+        "lua_if": "function lua_if()\nreturn bonus44 ~= 1 and coolingSystem == 0\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus44 == 1\nend",
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n",
+        "id": 43,
+        "text": "Ты уже пользуешься пластырем",
+        "comment": true,
+        "merge": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus44 ~= 1 and coolingSystem == 0\nend",
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n",
+        "id": 43,
+        "text": "Нельзя использовать пластырь, пока реактиватор перегрет",
+        "comment": true,
+        "merge": false
+      },
+      {
+        "id": 44,
+        "text": "Активизирующий пластырь\n[<plus>1 к скорости]",
+        "lua_if": "function lua_if()\nreturn bonus44 ~= 1 and coolingSystem ~= 0\nend",
+        "lua_do": "function lua_do()\nmainSpeed = mainSpeed <plus> 1\nblockAutorun = 1\nbonus44 = 1\nbonus44type = 1 -- speed\n\ninvestigation44 = 1\nend"
+      },
+      {
+        "id": 44,
+        "text": "Стабилизирующий пластырь\n[<plus>1 к точности]",
+        "lua_if": "function lua_if()\nreturn bonus44 ~= 1 and coolingSystem ~= 0\nend",
+        "lua_do": "function lua_do()\nmainAccuracy = mainAccuracy <plus> 1\nblockAutorun = 1\nbonus44 = 1\nbonus44type = 2 -- accuracy\ninvestigation44 = 1\nend"
+      },
+      {
+        "id": 38,
+        "text": "Выйти в коридор"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Ты снимаешь пластырь с реактиватора и обматываешь вокруг запястья правой руки. Холодок пробегает по коже до кончиков пальцев. Работает.",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Ещё раз осмотреться",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Ты склоняешься над терминалом и вводишь команды для управления системы охлаждения корабля. Экран покорно моргнул уведомлением о смене состояния. Слишком просто. ",
+    "answers": [
+      {
+        "id": 49,
+        "text": "Осмотреться ещё раз",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Мужик в серой спецовке с густыми усами. Наверняка был завидным женихом где-то в шахтёрских колониях.\n\nТы как можешь разглядываешь всё вокруг: что-то не похоже на охрану места, в котором террористы переделывают ядерный реактор в бомбу. Даже если что-то происходит на втором уровне отсека, с этого терминала можно управлять охлаждением установки. Это ведь остановит реакцию, если дело дойдёт до взрыва?\n\nЭта находка занимает своё место в большом паззле, и ты чуть лучше понимаешь общую картину – твоё СОПРЯЖЕНИЕ увеличивается.",
+    "answers": [
+      {
+        "id": 49,
+        "text": "Осмотреться ещё раз",
+        "lua_do": "function lua_do()\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\naddExclusive(conseq, \"coolingSystem\")\n\nremoveVal(unrevealedConseq,\"coolingSystem\")\nblockAutorun = 0\ninvestigation46 = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Машинный зал гудит и вибрирует. Ты быстро проходишь по платформе вокруг реактора к тому месту, где они соединяются через терминал. Человек с пистолетом всё ещё там и уже смотрит на тебя.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Машинный зал гудит и вибрирует. Ты быстро проходишь по платформе вокруг реактора к тому месту, где они соединяются через терминал. Человек с пистолетом там. Он уже смотрит на тебя.\n\nНо ты помнишь, что его там не будет. Нет смысла задерживаться в этом ответвлении событий, и ты уносишься сознанием в тот узел, где противник больше не опасен.",
+    "answers": [
+      {
+        "id": 49,
+        "text": "Зафиксироваться в этом варианте событий",
+        "lua_do": "function lua_do()\ndefeatEnemy()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Машинный зал гудит и вибрирует. Сам реактор раскинулся сразу на двух уровнях корабля, вокруг него обходит узкая платформа. Если подойти к её краю и свеситься через перила, то можно разглядеть часть механизмов на нижней палубе.\n\nПлатформа вплотную подходит к реактору только в одном месте – там расположился терминал. Ты не инженер-ядерщик, но вполне можешь разобраться с управлением системой охлаждения.",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn coolingSystem > 0 or (coolingSystem == 0 and water == 1)\nend",
+        "id": 45,
+        "text": "Вкл/выкл ",
+        "lua_text": "function lua_text()\nreturn coolingSystem == 0 and \"Запустить систему охлаждения\" or \"Остановить систему охлаждения\"\nend",
+        "lua_do": "function lua_do()\ncoolingSystem = coolingSystem == 0 and 1 or 0\nblockAutorun = 1\nend"
+      },
+      {
+        "comment": true,
+        "id": 49,
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n",
+        "text": "Невозможно запустить охлаждение: поступление воды нарушено",
+        "lua_if": "function lua_if()\nreturn coolingSystem == 0 and water == 0\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn coolingSystem == 1 and \"Вывести охлаждение на усиленный режим\" or \"Вывести охлаждение на обычный режим\"\nend",
+        "lua_do": "function lua_do()\ncoolingSystem = coolingSystem == 1 and 2 or 1\nblockAutorun = 1\nend",
+        "text": "Вкл/выкл ",
+        "id": 45,
+        "lua_if": "function lua_if()\nreturn coolingSystem > 0\nend"
+      },
+      {
+        "id": 38,
+        "text": "Выйти в коридор"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Скользишь сознанием по нитям взаимосвязей к тому узлу симуляции, в котором ",
+    "answers": [
+      {
+        "id": 39,
+        "text": "система охлаждения не работает. Она не работала, когда ты поднялся на борт, а ты ни разу не пытался её включить.",
+        "lua_if": "function lua_if()\nreturn coolingSystem == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 39,
+        "text": "система охлаждения работает штатно. Ты настроил её, когда появилась такая возможность, и больше не пытался менять её параметры.",
+        "lua_if": "function lua_if()\nreturn coolingSystem == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 39,
+        "text": "система охлаждения работает в усиленном режиме. Ты настроил её таким образом, как только получил доступ, и с тех пор это остаётся неизменным.",
+        "lua_if": "function lua_if()\nreturn coolingSystem == 2\nend",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Зафиксироваться в этом варианте"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "Ты открываешь дверь на склад, ",
+    "answers": [
+      {
+        "id": 51,
+        "text": "и вода, скопившаяся у этого края коридора, затекает внутрь. Хорошо, что твоя обувь не промокает.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 51,
+        "text": "и часть водяных пузырьков влетает внутрь вслед за потоком воздуха. Хорошо, что твой плащ не промокает.",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "Осмотреться",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "Страница авторан афтер",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 52,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nif water == 0 then\n   coolingSystem = 0\nend\n\nif current == 0 then\n   gravitation = 1\nend\n\nend"
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "______",
+        "id": 52,
+        "lua_if": "function lua_if()\nunrevealedConseq = unrevealedConseq or {}\nconseq = conseq or {}\nlocal p = g.current_id\nblockAutorun = blockAutorun or 0\n\nreturn (#unrevealedConseq <plus> #conseq) > 0 and p ~= 10 and p ~= 39 and p ~= 9 and p ~= 12 and blockAutorun == 0\nend"
+      },
+      {
+        "id": 10,
+        "text": "[Обстоятельства]",
+        "lua_if": "function lua_if()\nunrevealedConseq = unrevealedConseq or {}\nconseq = conseq or {}\nlocal p = g.current_id\n\nreturn (#unrevealedConseq <plus> #conseq) > 0 and p ~= 10 and p ~= 39 and p ~= 9 and p ~= 12 and blockAutorun == 0\nend",
+        "lua_do": "function lua_do()\ng.pageReturn = g.current_id\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Сопряжение: \" .. conjugation\nend",
+        "id": 52,
+        "text": "Сопряжение",
+        "lua_if": "function lua_if()\nreturn conjugation and g.current_id ~= 58 and blockAutorun ~= 1\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Ты отпускаешь текущую ситуацию – она не важна. Сознание стремится к началу пути, к нулевой точке, оставляя иллюзию реальности позади. В глазах темнеет, но затем резкая вспышка света бьёт по глазам.\n\nТы сидишь в баре на лунной станции. Напротив тебя замер, разглядывая стакан, заказчик – мистер Николас Фэлкон. Он только что перевёл тебе сумму задатка и обрисовал в общих чертах задание – спасти его дочь с космолёта, захваченного неизвестными террористами.",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Поговорить с заказчиком"
+      },
+      {
+        "id": 20,
+        "text": "Встать из-за стола и выйти"
+      },
+      {
+        "super_calculate": false,
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nenemiesTabRenew()\nrestartSim()\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/VUjgqxABPW4waCiSzJX66JonNAdQ736cTricLNvJ.jpg"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "Ты идёшь по почти незаметным мокрым разводам в один из проходов между стеллажами. Здесь очень узко: для работы с грузами обычно используется автоматический манипулятор. Зачем кому-то понадобилось лезть сюда самому?\n\nМокрые следы доходят почти до дальней стены и обрываются. Ни души вокруг, только ряды одинаковых на вид контейнеров, различающихся только номерами. В таких условиях невозможно разобраться, что здесь произошло.",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Вернуться ко входу",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "Ты проходишь туда, где обрывались мокрые следы, и осматриваешь ровные стены контейнеров по обе стороны. Всё выглядит точно так же: белый пластик с чёрной маркировкой, только покрытый моросью конденсата. Не то, не то, не то... Есть!\n\nНаконец замечаешь то, что искал: подтёки воды на одном из ящиков. Неразличимые количества кожного жира оставил тот, кто доставал ящик руками, а не с помощью манипулятора.\n\nПробуешь так же достать контейнер сам, но он слишком скользкий и холодный. Запоминаешь его номер – «118910».",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Вернуться ко входу",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "Ты идёшь в нужное место и вновь пробуешь подцепить интересующий тебя ящик, но вновь безуспешно. Похоже, автоматика блокирует ручное извлечение контейнеров.\n\nВозвращаешься ко входу и пытаешься использовать терминал, но у тебя нет пароля для получения доступа. На секунду тебя охватывает желание врезать по дурацкому аппарату, но почти сразу же возвращается безразличное спокойствие. Нужно просто вернуться сюда, когда узнаешь пароль.",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Осмотреться ещё раз",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "Сразу за поворотом левой части коридора,  там, где должен быть переход на верхний уровень, – только завал. Тяжёлые глыбы из литопены уже совсем отвердели, и пробиться через них не выйдет. Только где-то на самом верху остаётся небольшой лаз, но тебе не долезть до него по гладкой кромке препятствия.\n\nНужно придумать, как попасть наверх, минуя завал.",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Вернуться в коридор"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 58,
+        "text": "Николас Фэлкон",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 58,
+        "text": "Мистер Фэлкон нанял тебя, чтобы ты освободил его дочь с захваченного звездолёта",
+        "comment": true,
+        "middle_answer": false
+      },
+      {
+        "id": 58,
+        "text": "Ты знаешь, как раздобыть защищённый коммуникатор одного из захватчиков. Код доступа в комплект не входит",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation72 == 1\nend"
+      },
+      {
+        "id": 58,
+        "text": "Капитан Анкилос",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 58,
+        "text": "Капитан Анкилос попросил помочь сохранить жизни бойцов своего отряда при штурме звездолёта",
+        "comment": true,
+        "middle_answer": false
+      },
+      {
+        "id": 58,
+        "text": "Капитан Анкилос считает, что захватчики могут взорвать ядерный реактор звездолёта",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nlocal a =  \"machine room 34\"\nlocal b = \"med room 33\"\nlocal c = \"tech room 31\"\n\nlocal s = (enemies [currentEnemy (a)].defeated  > 0 and 1 or 0 ) <plus> (enemies [currentEnemy (b)].defeated > 0 and 1 or 0 ) <plus> (enemies [currentEnemy (c)].defeated > 0 and 1 or 0 )\n\nreturn s > 1\nend",
+        "id": 58,
+        "text": "Среди захватчиков на второй технической палубе простые люди с плохой экипировкой, непонятно зачем взявшиеся за оружие",
+        "comment": true,
+        "middle_answer": false
+      },
+      {
+        "id": 58,
+        "text": "В машинном зале ничего необычного. Не похоже, что захватчики собираются переделать ядерный реактор в бомбу",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation46 == 1\nend"
+      },
+      {
+        "comment": true,
+        "id": 58,
+        "text": "Детектив Шейбер",
+        "lua_text": "function lua_text()\nreturn isHistoryContain(18) and \"Детектив Шейбер\" or \"Информация\"\nend",
+        "middle_answer": true
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "text": "Детектив Шейбер попросил раздобыть на звездолёте компромат на мистера Фэлкона",
+        "need": [
+          18
+        ],
+        "id": 58
+      },
+      {
+        "id": 58,
+        "text": "Ты знаешь, как раздобыть ключ-карту без опознавательных знаков. Она наверняка откроет тебе доступ к чему-то закрытому.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation92 == 1\nend"
+      },
+      {
+        "id": 58,
+        "text": "Один из поваров-андроидов ведёт себя необычно: он вооружён и опасен",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation83 == 1\nend"
+      },
+      {
+        "id": 58,
+        "text": "Похоже, все повара-андроиды настроены на предупреждающее нападение в случае прямой угрозы",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation87 == 1\nend"
+      },
+      {
+        "id": 58,
+        "text": "Повара-андроиды на кухне неотличимы от обычных людей. От этого даже немного не по себе.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation85 == 1\nend"
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Информация",
+        "need": [
+          18
+        ],
+        "id": 58
+      },
+      {
+        "id": 58,
+        "text": "Кто-то заблокировал переход между верхней и технической палубами литопеной. Она уже полностью отвердела, остался только небольшой лаз далеко наверху",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation57 == 1\nend"
+      },
+      {
+        "id": 58,
+        "text": "Кто-то побывал на складе уже после захвата звездолёта",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation54 == 1\nend"
+      },
+      {
+        "id": 58,
+        "text": "Тот, кто побывал на складе после захвата звездолёта, вручную доставал контейнер «118910»",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation55 == 1\nend"
+      },
+      {
+        "id": 58,
+        "text": "Невозможно достать контейнер «118910» без пароля от терминала на складе",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn investigation56 == 1\nend"
+      },
+      {
+        "id": 10,
+        "text": "[Назад]"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "Ты проходишь до самого конца коридора к люку в полу и спускаешься на уровень ниже. Ещё одна тёмная техническая палуба, и выглядит она примерно так же, как и первая.\n\nВнезапно из-за угла выходит человек и удивлённо таращится на тебя. Перестрелки не избежать.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 59,
+        "text": "Укажите команды для картинки",
+        "url": "https://iimg.su/s/13/Ns6t8dkPkrr1713FcPCmPmj0CzwDG64g6JuNjNG9.jpg"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "Серый астероидный камуфляж, нормальный боевой бластер – похоже, этот боец оказался здесь не случайно. Ты замечаешь на его груди даже пластину энергоброни. Целая, но разряженная.\n\nИз подсумка выглядывает красный аэрозольный баллончик с нанитами – универсальное средство первой помощи. Судя по снятой крышке его недавно использовали, и теперь он тоже разряжен.\n\nТвоего поясного аккумулятора вполне хватит, чтобы зарядить что-то одно и подлатать тебя перед новыми препятствиями.",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn mainHP < 3\nend",
+        "id": 61,
+        "text": "Восстановить выносливость",
+        "lua_text": "function lua_text()\nreturn mainHP == 1 and \"Использовать наниты\" or \"Взять броню\"\nend",
+        "lua_do": "function lua_do()\nmainHP = mainHP <plus> 1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn mainHP > 2\nend",
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n",
+        "id": 60,
+        "text": "Ты не ранен, и твоя броня не повреждена. Нет смысла таскать с собой что-то лишнее, если знаешь, где это можно взять",
+        "comment": true,
+        "lua_do": "function lua_do()\nbonus60 = 1\nend"
+      },
+      {
+        "id": 7,
+        "text": "Пройти дальше",
+        "lua_if": "function lua_if()\nreturn mainHP > 2\nend",
+        "lua_do": "function lua_do()\nbonus60 = 1\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 61,
+        "text": "Ты цепляешь баллончик к разъёму питания на поясе. Говорят, что наниты – не высокотехнологичный состав с невидимыми нанороботами, а мистический эликсир, исцеляющий магическим образом. Впрочем, для тебя никакой разницы.\n\nКогда аэрозоль заряжается полностью, обрабатываешь с его помощью рану на плече. Сколько раз доставалась именно ему – а теперь как новенькое.\n\nБаллончик пуст, и ты кладёшь его обратно в подсумок убитого.",
+        "lua_if": "function lua_if()\nreturn mainHP == 2\nend",
+        "merge": true
+      },
+      {
+        "id": 61,
+        "text": "Ты цепляешь пластину брони к разъёму питания на поясе. Пока она заряжается, отстёгиваешь и выбрасываешь свой старый сгоревший блок. Жаль, нельзя использовать сразу несколько: говорят, что их поля резонируют и перестают притягивать в себя бластерные импульсы.\n\nНаконец, когда броня заряжается полностью, крепишь её к специальному разъёму на плаще около груди.",
+        "lua_if": "function lua_if()\nreturn mainHP == 3\nend",
+        "merge": true
+      },
+      {
+        "id": 7,
+        "text": "Осмотреться",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "Похоже, люди уровня мистера Фэлкона и его окружения даже в дальних перелётах не готовы отказаться от такой роскоши, как приготовленная еда. Даже если нужно разместить вместо одного пищевого принтера целый отсек со специфическими приборами и утварью для готовки. И ещё один – для склада продуктов.\n\n",
+    "answers": [
+      {
+        "id": 62,
+        "text": "Но сейчас помещение окутано дымом, а из отверстий в потолке брызжет вода. Пожар?! Но огня не видно, похоже, автоматическая система отработала как надо.\n\nВода течёт через по полу через весь отсек к решётке у самой двери.",
+        "lua_if": "function lua_if()\nreturn water == 1 and gravitation == 1 and coolingSystem < 2\nend",
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "Но сейчас помещение окутано дымом, а из отверстий в потолке брызжет вода. Пожар?! Но огня не видно, похоже, автоматическая система отработала как надо.\n\nВ отсеке так холодно, что вода быстро замерзает, сковывая раскиданные по полу и столам предметы ледяной коркой.",
+        "lua_if": "function lua_if()\nreturn water == 1 and gravitation == 1 and coolingSystem == 2\nend",
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "Но сейчас помещение окутано дымом, а из отверстий в потолке брызжет вода. Пожар?! Но огня не видно, похоже, автоматическая система отработала как надо.\n\nВ отсеке так холодно, что вода быстро замерзает, сковывая раскиданные по полу и столам вещи ледяной коркой. Только несколько парящих предметов среди пузырей ещё незамерзшей воды привлекают твоё внимание.",
+        "lua_if": "function lua_if()\nreturn water == 1 and gravitation ~= 1 and coolingSystem == 2\nend",
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "Но сейчас помещение окутано дымом, а из отверстий в потолке брызжет вода. Пожар?! Но огня не видно, похоже, автоматическая система отработала как надо.\n\nВода крупными пузырями парит в невесомости по всему отсеку вперемешку с тучами разного мелкого хлама. Искать что-то в этом хаосе совершенно невозможно.",
+        "lua_if": "function lua_if()\nreturn water == 1 and coolingSystem ~= 2 and gravitation ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "Но сейчас помещение окутано дымом и слышится треск огня. Пожар?!  Похоже, автоматическая система тушения не запустилась без воды. В таком состоянии здесь делать нечего.",
+        "lua_if": "function lua_if()\nreturn water ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "\n\nУ стены, свободной от полок со всякой всячиной, стоит отключённый андроид-повар. Похоже, ему пока не до готовки. ",
+        "lua_if": "function lua_if()\nreturn investigation83 ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "\n\nУ стены, свободной от полок со всякой всячиной, стоит отключённый андроид-повар. Ты знаешь, что он вооружён и опасен.",
+        "lua_if": "function lua_if()\nreturn investigation83 == 1 and investigation85 ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "\n\nУ стены, свободной от полок со всякой всячиной, стоит отключённый андроид-повар. Он слишком похож на настоящего человека, тебе от этого немного не по себе.",
+        "lua_if": "function lua_if()\nreturn investigation85 == 1\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus82 == 1\nend",
+        "lua_render": "function lua_render()\nlocal frame = display.newRect(\n  answerText.parent, \n  answerText.x, \n  answerText.y <plus> answerText.height/2,\n  answerText.width*1.05,\n  answerText.height <plus> answerText.width*0.05,\n  answerText.width/50\n)\nframe.strokeWidth = answerText.width/300\nframe.fill = {0.5, 0.2, 0.2, 0.2}\nframe.stroke = {0.8, 0., 0}\nanswerText:toFront()\nend\n",
+        "id": 62,
+        "text": "Ты уже осмотрел чемоданчик с инструментами",
+        "comment": true,
+        "merge": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn water == 1 and gravitation ~= 1 and coolingSystem == 2 and bonus82 ~= 1\nend",
+        "lua_do": "function lua_do()\nblockAutorun = 1\nend",
+        "text": "Осмотреть предметы",
+        "id": 82,
+        "merge": false
+      },
+      {
+        "id": 83,
+        "text": "Перепрограммировать андроида",
+        "lua_if": "function lua_if()\nreturn water == 1 and roomWthEnemyVis (\"kitchen 62\", 0)\nend",
+        "lua_do": "function lua_do()\ninvestigation83 = 1\nblockAutorun = 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nblockAutorun = 1\nend",
+        "text": "Протянуть руку к андроиду",
+        "lua_if": "function lua_if()\nreturn water == 1 and roomWthEnemyVis (\"kitchen 62\", 1)\nend",
+        "id": 86
+      },
+      {
+        "id": 87,
+        "text": "Застрелить андроида",
+        "lua_if": "function lua_if()\nreturn water == 1 and roomWthEnemyVis (\"kitchen 62\", 1)\nend",
+        "lua_do": "function lua_do()\ninvestigation87 = 1\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 7,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\ncurrentPlace = \"corridor 59\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "Ты проходишь до самого конца коридора к люку в полу и спускаешься на уровень ниже. Ещё одна тёмная техническая палуба, и выглядит она примерно так же, как и первая.\n\nПатрульный тотчас появляется из-за угла и достаёт оружие. Одно и то же, до чего же утомительно...",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "Ты проходишь до самого конца коридора к люку в полу и спускаешься на уровень ниже. Ещё одна тёмная техническая палуба, и выглядит примерно так же, как и первая.\n\nПатрульный тотчас появляется из-за угла и достаёт оружие. Одно и то же, слишком утомительно... Ты отпускаешь эту ветвь развития событий и переносишься мыслями к той, где уже нет нужды стрелять. Фиксируешься в этом варианте. \n\nНет нужды осматривать лежащее перед тобой тело, ты и так знаешь, что тут.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ndefeatEnemy()\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 64,
+        "calculate": true
+      },
+      {
+        "id": 60,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          60
+        ]
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "Прогносты всегда берут с собой только то, что обязательно пригодится. Вот и сейчас ты возвращаешься сознанием в точку, где мог подобрать средство, чтобы подлатать себя после боя.\n\nРазумеется, ты забрал тогда именно то, что нужно. Фиксируешься в этом варианте развития событий и сразу применяешь взятое. Так-то лучше.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "[Назад]"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "Продовольственный склад оказывается большим отсеком, заставленным контейнерами разных форм и размеров. Дальняя от входа часть отделена полупрозрачными полосами изолирующего полотна. По ногам тянет холодом.\n\nВдруг из-за полотна появляется человек в нелепо накинутой прямо на бронекостюм женской шубе. Его оружие уже нацелено в твою сторону.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "В машинном зале никого. Почти все его пространство занимает нижняя часть реактора, который можно обойти по узкому проходу вдоль стен. Через просвет наверху видно поручни, огораживающие площадку палубой выше. Отсюда не разглядеть, есть там кто-нибудь или нет.\n\nВ корпус реактора вмонтирован терминал управления. Ты мало что понимаешь в сложных схемах и переключателях, но опыт помогает найти то, что тебя интересует – значок управления корабельной гравитацией.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\n\naddExclusive(conseq, \"gravitation\")\n\nremoveVal(unrevealedConseq,\"gravitation\")\n\nsupCount67 = ((supCount67 or 0) <plus> 1)\nsupCount67 = supCount67 > 2 and 2 or supCount67\n\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 7,
+        "calculate": true
+      },
+      {
+        "id": 67,
+        "text": "\n\nТерминал обесточен. Без новых команд все системы корабля продолжают работать в прежнем режиме.",
+        "lua_if": "function lua_if()\nreturn current == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 67,
+        "text": "\n\nЭта находка занимает своё место в большом паззле, и ты чуть лучше понимаешь общую картину – твоё СОПРЯЖЕНИЕ увеличивается.",
+        "lua_if": "function lua_if()\nreturn supCount67 == 1\nend",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn gravitation == 1 and \"Отключить искусственную гравитацию\" or \"Включить искусственную гравитацию\"\nend",
+        "lua_do": "function lua_do()\nblockAutorun = 1\ngravityDisabled = gravityDisabled or 0\n\ngravitation, gravityDisabled = (gravitation == 0 and 1) or 0, (gravitation == 0 and gravityDisabled) or 1\nend",
+        "text": "Отключить искусственную гравитацию",
+        "id": 78,
+        "lua_if": "function lua_if()\nreturn current ~= 0\nend"
+      },
+      {
+        "id": 7,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\ncurrentPlace = \"corridor 59\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "В отсеке что-то мерно гудит. Провода и кабели в толстой оплётке идут по стенам, полу и потолку, собираются в короба и разводятся к терминалам. Иногда раздаётся треск и что-то искрит.\n\nУ одного из терминалов замер грузный человек в энергоброне. Завидев тебя, он спешно отсоединяет от разъёма какой-то прибор и с ухмылкой разбивает панель управления прикладом бластера.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "В отсеке что-то мерно гудит. Провода и кабели в толстой оплётке идут по стенам, полу и потолку, собираются в короба и разводятся к терминалам. Иногда раздаётся треск и что-то искрит.\n\nГрузный человек в энергоброне всё так же возится у панели управления. Он вздрагивает от звука твоих шагов, затем разбивает терминал прикладом бластера.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "Грузный человек в энергоброне всё так же возится у панели управления. Он вздрагивает от звука твоих шагов, затем разбивает терминал прикладом бластера.\n\nТебе нет дела до него, ты уже видел его смерть. Немного ослабляешь свою связь с этой ветвью событий и легко оказываешься в другой, там, где судьба уже настигла этого обречённого.",
+    "answers": [
+      {
+        "id": 71,
+        "text": "Зафиксироваться в этом варианте событий",
+        "lua_do": "function lua_do()\ndefeatEnemy()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "В отсеке что-то мерно гудит. Провода и кабели в толстой оплётке идут по стенам, полу и потолку, собираются в короба и разводятся к терминалам. Иногда раздаётся треск и что-то искрит.\n\nПользовательский терминал разбит, и подзарядить поясной аккумулятор тут не выйдет. ",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn current == 1\nend",
+        "id": 71,
+        "text": "Но ещё можно воспользоваться грубой силой, чтобы обесточить часть бытовых систем корабля. Скорее всего, ничего критичного это не затронет...",
+        "comment": false,
+        "merge": true
+      },
+      {
+        "comment": false,
+        "id": 71,
+        "text": "От обгоревшего короба трансформатора ещё тянет гарью. Восстановить его не выйдет.",
+        "lua_if": "function lua_if()\nreturn current == 0\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn gravitation == 0 and armedItem ~= 2\n\nend",
+        "id": 71,
+        "text": "\n\nВозле тела побеждённого противника парит его винтовка.",
+        "comment": false,
+        "merge": true
+      },
+      {
+        "comment": false,
+        "id": 71,
+        "text": "\n\nВозле тела побеждённого противника лежит его винтовка.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1 and armedItem ~= 2\n\nend",
+        "merge": true
+      },
+      {
+        "id": 73,
+        "text": "Взять винтовку\n[<plus>3 к точности, -1 от скорости]",
+        "lua_if": "function lua_if()\nreturn armedItem ~= 2\nend",
+        "lua_do": "function lua_do()\nblockAutorun = 1\ntakeArm(2)\nend"
+      },
+      {
+        "comment": false,
+        "id": 74,
+        "text": "Вывести из строя трансформатор",
+        "lua_if": "function lua_if()\nreturn current == 1\nend",
+        "lua_do": "function lua_do()\ncurrent = 0\nblockAutorun = 1\nend"
+      },
+      {
+        "id": 7,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\ncurrentPlace = \"corridor 59\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "Похоже, здоровяк был опытным воякой. Отработавшая пластина его брони теперь бесполезна, а вот бластерная винтовка ещё может пригодится.\n\nТы вспоминаешь про прибор, который заряжал боец, и быстро находишь его. Защищённый коммуникатор. Пытаешься наугад ввести шифр, но устройство не разблокируется. По крайней мере, его не нужно заряжать, поэтому ты просто кидаешь его в карман.\n\nЭта находка занимает своё место в большом паззле, и ты чуть лучше понимаешь общую картину – твоё СОПРЯЖЕНИЕ увеличивается.",
+    "answers": [
+      {
+        "id": 71,
+        "text": "Осмотреться",
+        "lua_do": "function lua_do()\nconseq = conseq or {}\nunrevealedConseq = unrevealedConseq or {}\naddExclusive(conseq, \"current\")\n\nremoveVal(unrevealedConseq,\"current\")\nblockAutorun = 0\n\ninvestigation72 = 1\nbonus72 = 1\n\nlocal a = 2\nammunition[a].found = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "Поднимаешь с пола винтовку и осматриваешь её. Удобный прицел и длинный ствол позволяют стрелять точнее, хотя и немного медленнее, чем из твоего собственного бластера. Заряда хватит ещё надолго.",
+    "answers": [
+      {
+        "id": 71,
+        "text": "Осмотреться ещё раз",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "Не нужно быть доктором физики чтобы сломать что-то, что ещё работает. Один бластерный выстрел в распахнутое настежь нутро трансформаторной схемы – и весь короб пылает. Ты кашляешь от едкого дыма, но огонь быстро утихает – гореть там особо нечему.",
+    "answers": [
+      {
+        "id": 71,
+        "text": "Осмотреться ещё раз",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "Ты ослабляешь свою связь с текущим вариантом развития событий и соскальзываешь в тот, где ты ",
+    "answers": [
+      {
+        "id": 75,
+        "text": "уже разобрался с электричеством раз и навсегда. Больше никакого тока в бытовых сетях корабля: ни для тебя, ни для захватчиков.",
+        "lua_if": "function lua_if()\nreturn current == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 75,
+        "text": "сохранил в целости электрический трансформатор, когда появилась возможность его уничтожить. Бытовые сети корабля под напряжением, со всеми вытекающими из этого плюсами и минусами.",
+        "lua_if": "function lua_if()\nreturn current == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Зафиксироваться в этом варианте"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "Ты осознаёшь, что тащишь на себе лишнее. Прямо сейчас тебе не нужно чужое оружие, поэтому ты отменяешь себя в текущей ветви реальности, и воссоздаёшь в той, где не стал подбирать лишнее, когда такая возможность была.",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Зафиксироваться в этом варианте"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "Ты понимаешь, что именно сейчас тебе больше подойдёт то развитие событий, при котором ты не побрезговал взять чужое оружие, когда мог. Ускользаешь сознанием прямиком в него, растворяя своей волей текущую ветвь.",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Зафиксироваться в этом варианте"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "Ты склоняешься над пультом управления и по памяти меняешь несколько параметров системы. Своей памяти ты доверяешь: как никак рабочий инструмент.\n\n",
+    "answers": [
+      {
+        "id": 78,
+        "text": "В течение нескольких секунд пришло чувство лёгкости. Невесомость. Если бы не магнитные подошвы, ты бы уже взмыл в воздух, а так лишь слегка замедлился.",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 78,
+        "text": "В течение нескольких секунд ощущение собственного веса возвращается. Гравитация. Если кто-то только что парил под потолком, то сейчас, наверное, он грохается на пол.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 67,
+        "text": "Осмотреться ещё раз",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "Позволяешь своим мыслям о том, как ты ",
+    "answers": [
+      {
+        "id": 79,
+        "text": "отключил искусственную гравитацию на корабле при первой же возможности, стать более реальными, чем та истончённая паутина событий, которая была данностью всего мгновенье назад. Теперь это не просто мысли: ты чувствуешь невесомость.",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 79,
+        "text": "не отключал искусственную гравитацию на корабле при первой же возможности, стать более реальными, чем та истончённая паутина событий, которая была данностью всего мгновенье назад. Теперь это не просто мысли: ты чувствуешь, что невесомости нет.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Зафиксироваться в этом варианте",
+        "lua_do": "function lua_do()\npenalty_water51 = (water == 0 and gravitation == 1 and 0) or (currentPlace  == \"warehouse 32\" and 1 or penalty_water51)\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "empty\n\n!   !   ! ",
+    "answers": [
+      {
+        "left_answer": false,
+        "right_answer": false,
+        "comment": true,
+        "lua_text": "function lua_text()\n\nlocal str = \"player\"\nlocal a = {hp = mainHP, sp = mainSpeed, ac = mainAccuracy, seen = 0, defeated = 0, location = str, title = \"<s>\nТЫ\", dmg = ammunition[armedItem].dmg}\ntable.insert(enemies, a)\n\nlocal text = titleGen(str)\n\ntable.remove(enemies,#enemies)\n\nreturn text\nend",
+        "middle_answer": true,
+        "text": "Статы игрока",
+        "id": 9,
+        "merge": false
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\n\nlocal sp = ammunition[armedItem].sp \nlocal ac = ammunition[armedItem].ac \n\nmainSpeed = mainSpeed - sp\nmainAccuracy = mainAccuracy - ac\n\narmedItem = armedItem < 13 and (armedItem <plus> 1) or 1\ntakeArm(armedItem)\nend",
+        "id": 80,
+        "text": "[Чит на всё оружие]",
+        "lua_text": "function lua_text()\nreturn \"[Чит на оружие]<s>\n\" .. ammunition[armedItem].name\nend",
+        "instant": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus44 == 1\nend",
+        "lua_text": "function lua_text()\nreturn \"Импульсный пластырь: \" .. (bonus44type == 1 and \"активизирующий (<plus> 1 к скорости)\" or \"стабилизирующий (<plus> 1 к точности)\") .. \"<s>\n[Изменить]\"\nend",
+        "lua_do": "function lua_do()\n\nif bonus44type == 1 then-- speed\n   mainSpeed = mainSpeed - 1\n   mainAccuracy = mainAccuracy <plus> 1\n   bonus44type = 2\nelse\n   mainSpeed = mainSpeed <plus> 1\n   mainAccuracy = mainAccuracy - 1\n   bonus44type = 1\nend\n\nend",
+        "id": 81,
+        "text": "Используемый пластырь: ",
+        "middle_answer": false,
+        "comment": false
+      },
+      {
+        "comment": false,
+        "id": 84,
+        "lua_do": "function lua_do()\ndefeatEnemy (\"machine room 34\")\ndefeatEnemy (\"med room 33\")\nbonus44 = 1\n   mainSpeed = mainSpeed <plus> 1\n   bonus44type = 1\nend",
+        "text": "Ты знаешь, как воспользоваться импульсным пластырем\n[Использовать]",
+        "middle_answer": false,
+        "lua_if": "function lua_if()\nreturn bonus44 ~= 1 and investigation44 == 1\nend"
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn bonus82 == 1\nend",
+        "middle_answer": false,
+        "id": 81,
+        "text": "Настройка линзы",
+        "lua_do": "function lua_do()\n\nlocal sp = bonus82type - 1\nlocal ac = 5 - bonus82type\nmainAccuracy = mainAccuracy - ac\nmainSpeed = mainSpeed - sp\n\nbonus82type = (bonus82type < 5  and (bonus82type <plus> 1)) or 1\n\nlocal sp = bonus82type - 1\nlocal ac = 5 - bonus82type\nmainAccuracy = mainAccuracy <plus> ac\nmainSpeed = mainSpeed <plus> sp\n\nend",
+        "lua_text": "function lua_text()\nreturn \"Настройки линзы: (\" .. ((bonus82type == 1 and \"<plus>4 к точности\") or (bonus82type == 2 and \"<plus>3 к точности, <plus>1 к скорости\") or (bonus82type == 3 and \"<plus>2 к точности, <plus>2 к скорости\") or (bonus82type == 4 and \"<plus>1 к точности, <plus>3 к скорости\") or \"<plus>4 к скорости\") .. \")<s>\n[Изменить]\"\nend"
+      },
+      {
+        "comment": false,
+        "id": 84,
+        "lua_do": "function lua_do()\ndefeatEnemy (\"machine room 34\")\ndefeatEnemy (\"corridor 59\")\nbonus82 = 1\nbonus82type = 1\n   mainAccuracy = mainAccuracy <plus> 4\n   \nend",
+        "text": "Ты знаешь, как получить линзу\n[Использовать]",
+        "middle_answer": false,
+        "lua_if": "function lua_if()\nreturn bonus82 ~= 1 and investigation82 == 1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus60 == 1 and mainHP > 2\nend",
+        "id": 10,
+        "text": "Ты знаешь, где раздобыть броню или медикаменты, чтобы восстановить выносливость, когда это понадобится",
+        "comment": true,
+        "middle_answer": false
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn bonus60 == 1 and mainHP < 3\nend",
+        "id": 65,
+        "text": "Ты знаешь, где раздобыть броню или медикаменты\n[Восстановить выносливость]",
+        "middle_answer": false,
+        "lua_do": "function lua_do()\nbonus60 = 0\nmainHP = mainHP <plus> 1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus92 == 1\nend",
+        "middle_answer": false,
+        "text": "В кармане: ключ-карта без подписей",
+        "comment": true,
+        "id": 80
+      },
+      {
+        "comment": false,
+        "middle_answer": false,
+        "id": 94,
+        "text": "Ты знаешь, где найти ключ-карту без подписей\n[Получить]",
+        "lua_if": "function lua_if()\nreturn investigation92 == 1 and bonus92 ~= 1\nend",
+        "lua_do": "function lua_do()\nbonus92 = 1\ndefeatEnemy(\"warehouse 66\")\nend"
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "text": "В кармане: защищённый коммуникатор",
+        "id": 80,
+        "lua_if": "function lua_if()\nreturn bonus72 == 1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus72 ~= 1 and investigation72 == 1\nend",
+        "comment": false,
+        "id": 94,
+        "text": "Ты знаешь, где найти защищённый коммуникатор\n[Получить]",
+        "middle_answer": false,
+        "lua_do": "function lua_do()\nbonus72 = 1\ndefeatEnemy(\"tech room 68\")\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus95 == 1\nend",
+        "id": 80,
+        "text": "В кармане: разделочный нож",
+        "middle_answer": false,
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus95 ~= 1 and investigation95 == 1\nend",
+        "comment": false,
+        "id": 94,
+        "text": "Ты знаешь, где найти разделочный нож\n[Получить]",
+        "middle_answer": false,
+        "lua_do": "function lua_do()\nbonus95 = 1\ndefeatEnemy(\"warehouse 66\")\nend"
+      },
+      {
+        "comment": true,
+        "middle_answer": false,
+        "text": "Оружие в руках: БЛАСТЕР",
+        "id": 80,
+        "lua_if": "function lua_if()\nreturn not armedItem or armedItem == 1\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn armedItem and armedItem > 1\nend",
+        "comment": false,
+        "id": 76,
+        "middle_answer": false,
+        "text": "Используемое оружие",
+        "lua_do": "function lua_do()\ndefeatEnemy(\"tech room 68\")\ntakeOff()\nend",
+        "lua_text": "function lua_text()\nreturn armText(armedItem, 1)\nend"
+      },
+      {
+        "id": 10,
+        "text": "__________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn armText(2)\nend",
+        "comment": false,
+        "id": 77,
+        "lua_do": "function lua_do()\nblockAutorun = 1\ntakeOff()\ntakeArm(2)\nend",
+        "text": "Использовать винтовку\n(-1 от скорости, <plus>3 к точности)",
+        "middle_answer": false,
+        "lua_if": "function lua_if()\nlocal a = 2\nreturn armIf(a)\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nlocal a = 3\nreturn armIf(a)\nend",
+        "lua_text": "function lua_text()\nreturn armText(3)\nend",
+        "middle_answer": false,
+        "lua_do": "function lua_do()\nblockAutorun = 1\ntakeOff()\ntakeArm(3)\nend",
+        "text": "Использовать оружие",
+        "id": 77,
+        "comment": false
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nlocal a = 4\nreturn armIf(a)\nend",
+        "id": 77,
+        "lua_do": "function lua_do()\nlocal a = 4\n\nblockAutorun = 1\ntakeOff()\ntakeArm(4)\nend",
+        "text": "Использовать оружие",
+        "middle_answer": false,
+        "lua_text": "function lua_text()\nlocal a = 4\nreturn armText(a)\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nlocal p = 10\nshowPage{id = p}\nend",
+        "text": "[Назад]",
+        "id": 10,
+        "no_transition": true
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "Прогност не ограничен уже сделанным выбором. Ты легко соскальзываешь в то развитие событий, где выбрал другой вариант усиления.",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Зафиксироваться в этом варианте"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "Странные предметы не похожи на кухонную утварь. Скальпель, несколько зажимов – похоже, кто-то оставил на столе чемоданчик с медицинскими инструментами. Весьма необычное место для них.\n\nТы заглядываешь внутрь и находишь хирургическую линзу. Одно лёгкое движение – и она приклеивается к твоей сетчатке. Осталось только настроить её: увеличенная чёткость позволит действовать точнее, а расширенный угол обзора – быстрее реагировать на угрозы.",
+    "answers": [
+      {
+        "left_answer": false,
+        "right_answer": false,
+        "comment": true,
+        "lua_text": "function lua_text()\n\nlocal str = \"player\"\nlocal a = {hp = mainHP, sp = mainSpeed, ac = mainAccuracy, seen = 0, defeated = 0, location = str, title = \"ТЫ\", dmg = ammunition[armedItem].dmg}\ntable.insert(enemies, a)\n\nlocal text = titleGen(str)\n\ntable.remove(enemies,#enemies)\n\nreturn text\nend",
+        "id": 9,
+        "text": "Статы игрока",
+        "middle_answer": true,
+        "merge": false
+      },
+      {
+        "lua_text": "function lua_text()\n\nreturn \"[\" .. ((bonus82type == 1 and \"<plus>4 к точности\") or (bonus82type == 2 and \"<plus>3 к точности, <plus>1 к скорости\") or (bonus82type == 3 and \"<plus>2 к точности, <plus>2 к скорости\") or (bonus82type == 4 and \"<plus>1 к точности, <plus>3 к скорости\") or \"<plus>4 к скорости\") .. \"]\"\nend",
+        "comment": true,
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "id": 82,
+        "lua_if": "function lua_if()\nreturn bonus82type\nend"
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nbonus82type = bonus82type or 0\nreturn bonus82type > 1\nend",
+        "instant": true,
+        "id": 82,
+        "text": "<",
+        "lua_do": "function lua_do()\nlocal sp = bonus82type - 1\nlocal ac = 5 - bonus82type\nmainAccuracy = mainAccuracy - ac\nmainSpeed = mainSpeed - sp\n\nbonus82type = bonus82type - 1\nlocal sp = bonus82type - 1\nlocal ac = 5 - bonus82type\nmainAccuracy = mainAccuracy <plus> ac\nmainSpeed = mainSpeed <plus> sp\n\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "instant": true,
+        "id": 82,
+        "text": ">",
+        "lua_if": "function lua_if()\nreturn bonus82type < 5\nend",
+        "lua_do": "function lua_do()\nlocal sp = bonus82type - 1\nlocal ac = 5 - bonus82type\nif bonus82type ~= 0 then\nmainAccuracy = mainAccuracy - ac\nmainSpeed = mainSpeed - sp\nend\n\nbonus82type = bonus82type <plus> 1\nlocal sp = bonus82type - 1\nlocal ac = 5 - bonus82type\nmainAccuracy = mainAccuracy <plus> ac\nmainSpeed = mainSpeed <plus> sp\n\nend"
+      },
+      {
+        "id": 62,
+        "text": "Зафиксировать настройку",
+        "lua_if": "function lua_if()\nreturn bonus82type ~= 0\nend",
+        "lua_do": "function lua_do()\nblockAutorun = 0\nbonus82 = 1\ninvestigation82 = 1\n\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "Ты подходишь к повару, который равнодушно замер у стены. Совсем как настоящий человек: даже кажется, что на его глазах от едкого дыма выступили слёзы.\n\nПротягиваешь руку, чтобы поискать какие-нибудь переключатели под волосами на его затылке, но андроид молниеносно перехватывает её и бросает тебя на пол. Секунда – и ты снова на ногах, а в руках противника появляется бластер.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "Не теряя времени, ты переходишь в тот вариант развития событий, где уже проделал все необходимые манипуляции и заполучил небольшое усиление.",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Зафиксироваться в этом варианте"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "Другие андроиды не обращают на тебя внимания, и ты осторожно проходишь ближе к телу. \n\n«Анди», – вышито на нагрудном кармане поварской формы. Ты невольно улыбаешься, но почти сразу снова становишься серьёзным.\n\nБегло осматриваешь Анди, но не находишь ничего, что можно было бы принять за элементы управления. Совсем как обычный человек...\n\nТы с опаской оглядываешь оставшихся поваров. Они всё так же стоят с отсутствующими взглядами без малейшего движения. Зачем делать андроидов неотличимыми от людей? Некоторые причуды богатеев тебе не понять...",
+    "answers": [
+      {
+        "id": 62,
+        "text": "Осмотреться ещё раз",
+        "lua_do": "function lua_do()\ninvestigation85 = 1\nblockAutorun = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "Ты протягиваешь руку, будто собираешься прикоснуться к волосам на затылке андроида, и лишь чудом избегаешь его быстрого захвата. На мгновение теряешь равновесие, а тем временем в руках противника появляется бластер.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "Ты отходишь подальше, достаёшь оружие и прицеливаешься в ближайшего андроида. Когда он успел доставить бластер?!",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Перезапуск симуляции",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "Продовольственный склад заставлен контейнерами разных форм и размеров. Из-за полупрозрачных полос изолирующего полотна, отделяющих дальнюю от входа часть отсека, появляется человек в женской шубе поверх брони. Он целится в тебя.",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "run": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "Продовольственный склад. Контейнеры. Полупрозрачные полосы, отделяющие дальнюю часть отсека. И человек в женской шубе, как по расписанию.\n\nНичего интересного, ради чего стоило бы возиться здесь снова. Ты уже знаешь результат и ускользаешь сознанием на ту нить событий, где шуба не мешает тебе делать свою работу.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\ndefeatEnemy()\nblockAutorun = 0\nend",
+        "text": "Зафиксироваться в этом варианте событий",
+        "id": 90
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "Продовольственный склад заставлен контейнерами разных форм и размеров. ",
+    "answers": [
+      {
+        "id": 90,
+        "text": "Дальняя часть отсека отделена завесой из полупрозрачных полос, через которую пробивается белёсым туманом холодный воздух.",
+        "lua_if": "function lua_if()\nreturn coolingSystem ~= 0\nend",
+        "merge": true
+      },
+      {
+        "id": 90,
+        "text": "Дальняя часть отсека отделена завесой из полупрозрачных полос, через которую совершенно невозможно разобрать, что происходит по ту сторону.",
+        "lua_if": "function lua_if()\nreturn coolingSystem == 0\nend",
+        "merge": true
+      },
+      {
+        "id": 90,
+        "text": "\n\nОдин из ящиков парит в невесомости с распахнутой крышкой в облаке какой-то крупы. Похоже, его не зафиксировали магнитным креплением на своём месте.",
+        "lua_if": "function lua_if()\nreturn gravitation == 0\nend",
+        "merge": true
+      },
+      {
+        "lua_do": "function lua_do()\ninvestigation92 = 1\nend",
+        "lua_if": "function lua_if()\nreturn gravitation == 1 and gravityDisabled == 1 and investigation92 ~= 1 and bonus92 ~= 1\nend",
+        "super_calculate": false,
+        "id": 90,
+        "text": "calc",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "id": 90,
+        "text": "\n\nОдин из ящиков лежит на боку с распахнутой крышкой. В россыпи крупы вокруг что-то блестит.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1 and gravityDisabled == 1 and investigation92 ~= 1 and bonus92 ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 90,
+        "text": "\n\nОдин из ящиков лежит на боку с распахнутой крышкой. Вокруг него рассыпана какая-то крупа.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1 and gravityDisabled == 1 and bonus92 == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 90,
+        "text": "\n\nОдин из ящиков лежит на боку с распахнутой крышкой. В россыпи крупы вокруг блестит магнитная ключ-карта.",
+        "lua_if": "function lua_if()\nreturn gravitation == 1 and gravityDisabled == 1 and investigation92 == 1 and bonus92 ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 93,
+        "text": "Осмотреть блестящий предмет\n\n!  !   ! Добавить подбор ключа в раздел вещей по условию",
+        "lua_if": "function lua_if()\nreturn gravitation == 1 and gravityDisabled == 1 and investigation92 ~= 1 and bonus92 ~= 1\nend",
+        "lua_do": "function lua_do()\nbonus92 = 1\nend"
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nbonus92 = 1\nend",
+        "text": "Взять ключ-карту",
+        "lua_if": "function lua_if()\nreturn gravitation == 1 and gravityDisabled == 1 and investigation92 == 1 and bonus92 ~= 1\nend",
+        "id": 90
+      },
+      {
+        "id": 95,
+        "text": "Пройти в дальнюю часть отсека"
+      },
+      {
+        "id": 7,
+        "text": "Выйти в коридор"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "Под шубой крепкий мужик в форме службы охраны какого-то добывающего предприятия. Похоже, утеплился он уже где-то на корабле, чтобы не околеть в рефрижераторной части склада. Но что он там может охранять?",
+    "answers": [
+      {
+        "id": 90,
+        "text": "Ещё раз осмотреть помещение"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "Посвящается всем читателям интерактивной литературы.\n\nКаждый из вас немного прогност.\n\nКто-то – супергерой, идущий к поставленной цели, преодолевая любые препятствия.\n\nКто-то – въедливый сыщик, распутывающий самые сложные клубки взаимосвязей для понимания истинной сути событий.\n\nКто-то – кропотливый коллекционер, привыкший брать всё, что можно собрать.\n\nКто-то – игрок, проживающий тысячи жизней, добивающийся тысячи разных целей тысячью путями.\n\nКто-то – скучающий зритель хитросплетений человеческих судеб.\n\nКто-то – человек, давно потерявший азарт, но привыкший делать то, что когда-то распаляло сердце.\n\n«Прогност» – это вы.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Назад]"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "Ты подходишь ближе и поднимаешь находку. Магнитная ключ-карта. С пол-ладони размером, без надписей или опознавательных знаков. Откуда она здесь?\n\nКладёшь карту в карман – наверняка ещё пригодится.",
+    "answers": [
+      {
+        "id": 90,
+        "text": "Осмотреться ещё раз"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "Прогносту нет нужды идти туда, где он уже был однажды: достаточно об этом помнить. Ты просто переносишься и сознанием в ту действительность, где нужный предмет уже у тебя в кармане.",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Зафиксироваться в этом варианте"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "Ну и жуть...\n\nОгромные туши мёртвых животных рядами висят на мощных крюках в потолке. Свиньи, коровы, птицы – ты видел их когда-то в музее, но не в таком виде. Люди, сознательно поедающие это вместо нормальных напечатанных на пищевом принтере блюд, должно быть по-настоящему сумасшедшие.\n\nТуш так много, что за ними не видно стен. По центру стоит большой разделочный стол.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\ninvestigation95 = 1\nend",
+        "super_calculate": false,
+        "id": 95,
+        "text": "calc\nДобавить нож в вещи и описание странности в раздел Шейбера",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "id": 95,
+        "text": " Кроме большого ножа на столе ничего интересного тут не видно.",
+        "lua_if": "function lua_if()\nreturn bonus95 ~= 1\nend",
+        "merge": true
+      },
+      {
+        "id": 95,
+        "text": " Ничего стоящего внимания тут не видно.",
+        "lua_if": "function lua_if()\nreturn bonus95 == 1\nend",
+        "merge": true
+      },
+      {
+        "id": 95,
+        "text": "\n\nХолодно... Хоть за шубой возвращайся. ",
+        "lua_if": "function lua_if()\nreturn coolingSystem ~= 0\nend",
+        "merge": true
+      },
+      {
+        "id": 95,
+        "text": "\n\nЗдесь не так холодно, как могло бы быть. Но от запаха отогревающихся туш начинает мутить... Лучше уйти поскорее...",
+        "lua_if": "function lua_if()\nreturn coolingSystem == 0\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn bonus95 ~= 1 and coolingSystem ~= 0\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nbonus95 = 1\nend",
+        "text": "Взять нож",
+        "id": 95,
+        "merge": false
+      },
+      {
+        "id": 90,
+        "text": "Вернуться в начало отсека"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "Авторизация",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Пароль]",
+        "input_var": "pass"
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 96,
+        "text": "Подтвердить ввод",
+        "calculate": false,
+        "lua_do": "function lua_do()\nif pass == \"čłøśēdTèšt\" then\n   g.password = 1\nmessage(\"Авторизация прошла успешно!\")\nelse\nmessage(\"Авторизация не пройдена!\")\nend\nend"
+      },
+      {
+        "lua_do": "function lua_do()\ng.reloadFunctions = 11\nvars[\"autorun after\"] = 52\nblockAutorun = 1\nend",
+        "text": "Начать",
+        "lua_if": "function lua_if()\nreturn g.password == 1\nend",
+        "id": 13
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 98,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 99,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 100,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 101,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 102,
+    "text": "",
+    "answers": []
+  }
+]

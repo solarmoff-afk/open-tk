@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 37280.4 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Hero of the написал еще 32855.8 слов в квесте \"Легенды Армирана\"."
+      },
+      {
+        "targetbookid": "252083",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Легенды Армирана\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор masha katsuba написал еще 21392.6 слов в квесте \"Границы тьмы\"."
+      },
+      {
+        "targetbookid": "230986",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Границы тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор lykkelig написал еще 15611.8 слов в квесте \"Perigrinatio est vita\n\n                       Жизнь - это странствие\n\n\"."
+      },
+      {
+        "targetbookid": "231397",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Perigrinatio est vita\n\n                       Жизнь - это странствие\n\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор IXOR  написал еще 15566.6 слов в квесте \"Бункер\"."
+      },
+      {
+        "targetbookid": "249669",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Бункер\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

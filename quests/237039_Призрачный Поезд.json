@@ -1,0 +1,1239 @@
+[
+  {
+    "id": 1,
+    "text": "\nАвтор: AntiHero",
+    "answers": [
+      {
+        "need_ever": true,
+        "comment": false,
+        "middle_answer": true,
+        "id": 1,
+        "text": "     ",
+        "url": "https://vk.com/club158953704",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Blood_Raven/shop/button_vk.png"
+        ]
+      },
+      {
+        "id": 1,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "var_str_set": [
+          "global theme",
+          "http://188.120.236.127/Souls_Train/map/map.jpg"
+        ],
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "lua_if": "function lua_if()\nreturn g.och0==1\nend",
+        "lua_do": "function lua_do()\ng.fullscreen = 0\nend",
+        "middle_answer": true,
+        "text": "Достижения",
+        "id": 21,
+        "var_set": [
+          "global autorun",
+          3,
+          "global blockSaves",
+          1,
+          "global blockNightMode",
+          1
+        ]
+      },
+      {
+        "var_str_set": [
+          "global theme",
+          "http://188.120.236.127/Souls_Train/map/map.jpg"
+        ],
+        "bgAnswerImage": [
+          "http://188.120.236.127/Blood_Raven/button.png"
+        ],
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nend",
+        "id": 9,
+        "text": "Начать историю",
+        "middle_answer": true,
+        "var_set": [
+          "global autorun",
+          3,
+          "global blockSaves",
+          1,
+          "global blockNightMode",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Страница автора",
+        "need": [
+          10000
+        ]
+      },
+      {
+        "contentList": [
+          "http://188.120.236.127/Souls_Train/main.jpg http://188.120.236.127/Souls_Train/dialogue/button0.jpg http://188.120.236.127/Souls_Train/dialogue/dialogue.jpg http://188.120.236.127/Souls_Train/resources/gas3.png http://188.120.236.127/Souls_Train/map/bonus1.png http://188.120.236.127/Souls_Train/map/bonus2.png http://188.120.236.127/Souls_Train/map/bonus3.png http://188.120.236.127/Souls_Train/train/fon3.jpg http://188.120.236.127/Souls_Train/train/fon2.jpg http://188.120.236.127/Souls_Train/train/fon.jpg http://188.120.236.127/Souls_Train/train/spir5.png http://188.120.236.127/Souls_Train/train/spir6.png http://188.120.236.127/Souls_Train/train/spir4.png http://188.120.236.127/Souls_Train/train/spir2.png http://188.120.236.127/Souls_Train/train/spir3.png http://188.120.236.127/Souls_Train/train/spir1.png http://188.120.236.127/Souls_Train/spirits/spir0.png http://188.120.236.127/Souls_Train/train/train3.jpg http://188.120.236.127/Souls_Train/train/train2.jpg http://188.120.236.127/Souls_Train/button_empty.png http://188.120.236.127/Souls_Train/button.png http://188.120.236.127/Souls_Train/train/train1.jpg http://188.120.236.127/Souls_Train/train/back.png http://188.120.236.127/Souls_Train/map/face3.png http://188.120.236.127/Souls_Train/map/face4.png http://188.120.236.127/Souls_Train/map/face1.png http://188.120.236.127/Souls_Train/map/face2.png http://188.120.236.127/Souls_Train/map/face5.png http://188.120.236.127/Souls_Train/map/face6.png http://188.120.236.127/Souls_Train/map/map.jpg http://188.120.236.127/Souls_Train/map/loc6.png http://188.120.236.127/Souls_Train/map/loc4.png http://188.120.236.127/Souls_Train/map/loc5.png http://188.120.236.127/Souls_Train/map/loc3.png http://188.120.236.127/Souls_Train/map/loc2.png http://188.120.236.127/Souls_Train/map/loc1.png http://188.120.236.127/Souls_Train/music.mp3",
+          "лист"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "global autorun",
+          103,
+          "global blockSaves",
+          1,
+          "global blockNightMode",
+          1,
+          "global noDownload",
+          1,
+          "global fullscreen_on_first_page",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "stretch",
+        "url": "http://188.120.236.127/Souls_Train/main.jpg"
+      },
+      {
+        "var_str_set": [
+          "global bg_music",
+          "m1"
+        ],
+        "initSounds": [
+          "m1",
+          "http://188.120.236.127/Souls_Train/music.mp3"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "\nСтраница автора",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Авторан"
+      },
+      {
+        "id": 4,
+        "text": "Карта",
+        "lua_do": "function lua_do() g.fullscreen = 1 end"
+      },
+      {
+        "id": 5,
+        "text": "Поезд",
+        "lua_do": "function lua_do() g.fullscreen = 0 end"
+      },
+      {
+        "id": 11,
+        "text": "Виджеты"
+      },
+      {
+        "id": 12,
+        "text": "События"
+      },
+      {
+        "id": 2,
+        "text": "Убрать кнопку автора",
+        "comment": false,
+        "lua_do": "function lua_do() g.disableAuthorButton = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "\nАвторан",
+    "answers": [
+      {
+        "module": true,
+        "moduleUrl": "http://188.120.236.127/Souls_Train/souls_train.lua",
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n<s>r\n<s>r\nbase_of_data = function()<s>r\n<s>t<s>r\n<s>tclick_protection = 0<s>r\n<s>tclick_protection_time = 1000<s>r\n<s>t<s>r\n<s>tif not g.och0 then<s>r\n<s>t<s>tg.och0 = 0<s>r\n<s>t<s>tg.och1 = 0<s>r\n<s>t<s>tg.och2 = 0<s>r\n<s>t<s>tg.och3 = 0<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>tif not train_position then<s>r\n<s>t<s>t<s>r\n<s>r\n<s>t<s>t<s>r\n<s>t<s>tad_on1 = 0<s>r\n<s>t<s>tad_on2 = 0<s>r\n<s>t<s>t<s>r\n<s>t<s>tmap_loc={<s>r\n<s>t<s>t<s>t{num=i, im, go={2,3}, bonus = 3},<s>r\n<s>t<s>t<s>t{num=i, im, go={1,3}, bonus = 2},<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>t{num=i, im, go={1,2,4}, bonus = 1},<s>r\n<s>t<s>t<s>t{num=i, im, go={5,6,3}, bonus = 2},<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>t{num=i, im, go={6,4}, bonus = 1},<s>r\n<s>t<s>t<s>t{num=i, im, go={5,4}, bonus = 3},<s>r\n<s>t<s>t<s>r\n<s>t<s>t}<s>r\n<s>t<s>t<s>r\n<s>t<s>tspirit_base = {<s>r\n<s>t<s>t<s>t{name = \"Машенька\",<s>r\n<s>t<s>t<s>t<s>tdialog={\"Перевозчик сказал, что Вы позаботитесь о наших душах, потому что при жизни были с нами связаны...\", \"Я вспомнила, как иногда помогала дедушке, когда он чинил Ваш поезд.\", \"Скорее всего, мой дедушка погиб, но я все еще не помню, что случилось со мной...\"},<s>r\n<s>t<s>t<s>t<s>tevent = {\"\",\"В возникшем воспоминании Вы увидели Машеньку, которая бежала по старому депо, таща за собой небольшую тележку с инструментами.\",\"Вы увидели Машеньку, которую в толпе людей вели к аварийному выходу из ремонтного блока, но она всячески упиралась и звала дедушку.\"}<s>r\n<s>t<s>t<s>t},<s>r\n<s>r\n<s>t<s>t<s>t{name = \"Баба Клава\",<s>r\n<s>t<s>t<s>t<s>tdialog = {\"Мне кажется, что я чуть ли не всю жизнь проработала на кухне столовой депо.\", \"Петр сказал, что надо эвакуироваться и пошел помогать людям.\", \"Я решила остаться на своей кухне. Я еле ходила и была бы лишь обузой. Я прожила слишком длинную жизнь и, когда прогремел взрыв, я не испугалась...\"},<s>r\n<s>t<s>t<s>t<s>tevent = {\"Вы увидели бодрую старушку, активно хлопочущую на кухне столовой депо. Вам показалось, что Вы были знакомы с ней целую вечность.\",\"В столовую ворвался кричащий человек. Редкие люди, дежурившие в столовой, бросились следом за ней. Все, кроме Бабы Клавы.\",\"Вы увидели, как Баба Клава не спеша подходит к окну на слабых ногах. В следующий миг земля сотрясается и все тонет в ослепительной вспышке.\"}<s>r\n<s>t<s>t<s>t},<s>r\n<s>r\n<s>t<s>t<s>t{name = \"Дарья\",<s>r\n<s>t<s>t<s>t<s>tdialog={\"Управлять топливным складом непросто, но у меня отлично получалось.\", \"Когда прибежал Алексей, я ему не поверила. Обычно такие байки он придумывал, чтобы прогуливать работу.\", \"Но в этот раз он поднял панику во всем депо. Когда я выбежала из здания, чтобы пресечь этот беспредел, в депо уже почти никого не было. Последнее, что я помню, как в ворота влетел локомотив...\"},<s>r\n<s>t<s>t<s>t<s>tevent = {\"Возникшее воспоминание перенесло Вас в кабинет начальницы топливного склада. За столом, заваленным бумагами, сидела женщина в очках и что-то быстро писала.\",\"В кабинет начальницы ворвался призрачный силуэт, крича об эвакуации. В ответ Дарья лишь накричала на него, обвиняя в постоянном пьянстве.\",\"Из окна кабинета начальницы были слышны громкие крики людей. В гневе Дарья вскочила из-за стола, сбросив стопку листов на пол, и выбежала во двор, который теперь был совершенно пуст. Внезапно раздался оглушительный лязг рельс, и все погасло...\"}<s>r\n<s>t<s>t<s>t},<s>r\n<s>r\n<s>t<s>t<s>t{name = \"Петр\",<s>r\n<s>t<s>t<s>t<s>tdialog={\"Я устроился в столовую на лето, чтобы помочь старенькой тетушке на кухне.\", \"В тот день мало кто был в депо. Мы с тетушкой дежурили на кухне, когда прибежал Алексей, призывая срочно эвакуироваться.\", \"Я помог большинству сотрудников покинуть депо, но когда я вернулся, чтобы убедить свою упертую тетушку присоединиться к остальным, прогремел взрыв...\"},<s>r\n<s>t<s>t<s>t<s>tevent = {\"Вы увидели молодого человека, работающего на кухне возле призрачной фигуры, в которой отдаленно можно было узнать пожилую женщину.\",\"В этом воспоминании Вы почувствовали страх множества людей. В потоке спешащих призрачных фигур Петр вел к выходу упирающуюся Машеньку.\", \"Петр бежал по пустым коридорам в сторону кухни, его упертая тетушка все еще была там. Внезапно послышался оглушительный лязг рельс и грохот, после чего Вас ослепила вспышка света.\"}<s>r\n<s>t<s>t<s>t},<s>r\n<s>r\n<s>t<s>t<s>t{name = \"Алексей\",<s>r\n<s>t<s>t<s>t<s>tdialog={\"Последние годы я только и делал, что таскал уголь и пил... Помню, в тот день помогал пустой поезд перегонять на станцию в город.\", \"Я мирно спал в углу поезда, когда старик-механик меня растолкал. Сказали, диверсия... Почти ничего не объяснив, меня чуть ли не силой скинули с поезда и велели бежать в депо, объявлять эвакуацию... До депо ехать по дуге, так что я спрыгнул с этой машины смерти и побежал по прямой...\", \"Добежав до депо, я рванул к начальнице, но она мне не поверила, не дала тревогу включить... Пришлось самому всех оббегать, да вот только сам же выбраться и не успел... Знаете, что бывает, когда поезд на полном ходу сходит с рельс и врезается в топливный склад?\"},<s>r\n<s>t<s>t<s>t<s>tevent = {\"Воспоминания перенесли Вас на перрон, где мужчина со светлыми волосами, покачиваясь, грузил уголь. Он явно был пьян.\",\"Алексей о чем-то громко спорил с призрачной фигурой старика внутри несущегося на полном ходу поезда. До Вас доносились лишь обрывки фраз. Диверсия? Выгадав удачный момент, Алексей спрыгнул с поезда прямо на ходу.\",\"Алексей влетел в кабинет своей начальницы, у нее был доступ к системе громкой связи, но, судя по ее крикам, она не поверила заядлому пьянчуге. Не став терять времени, Алексей пробежал по всему депо, крича о неуправляемом поезде. Большинство людей успело спастись, когда многотонная машина влетела в ворота, слетев с рельс, и протаранила топливный склад. Алексей в оцепенении наблюдал, как все вокруг пожирает пламя...\"}<s>r\n<s>t<s>t<s>t},<s>r\n<s>r\n<s>t<s>t<s>t{name = \"Дед Тихон\",<s>r\n<s>t<s>t<s>t<s>tdialog={\"Я еще по молодости на техника выучился, с тех пор локомотивы и чинил. Помню, как пустой поезд перегоняли в город на конечную станцию...\", \"Прямо в дороге я обнаружил диверсию! Тормоза были неисправны... Времени на взвешенное решение уже не было. Все знали, что нельзя допустить, чтобы поезд разбился на станции.\", \"Было решено повернуть в поезд в депо. В тот день там не должно было быть много людей... Мне удалось на ходу переключить стрелку железной дороги, но, кажется, я сам угодил под поезд...\"},<s>r\n<s>t<s>t<s>t<s>tevent = {\"Вы увидели седого старика, неспешно ковыряющегося в запчастях, разбросанных вокруг него. Рядом суетился призрачный силуэт маленькой девочки.\",\"Тихон взволнованно бежал в кабину машиниста, размахивая руками. Речь шла о неисправности и необходимости изменить маршрут поезда, пока он не достиг города.\",\"Вы увидели несущийся на полном ходу поезд и лезущего по нему снаружи Тихона. В одной руке старик держал стальной лом...\"}<s>r\n<s>t<s>t<s>t},<s>r\n<s>r\n<s>t<s>t}<s>r\n<s>t<s>r\n<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>tmap_loc[1].spirit = {1, 1}<s>r\n<s>t<s>tfor i =2,6 do<s>r\n<s>t<s>t<s>tmap_loc[i].spirit = {i, 0}<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>r\n<s>t<s>tfor i =1,6 do<s>r\n<s>t<s>t<s>tspirit_base[i].hp = 50<s>r\n<s>t<s>t<s>tspirit_base[i].death = 0<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>r\n<s>t<s>ttrain_position = 1<s>r\n<s>t<s>t<s>r\n<s>t<s>tres_hp = 100<s>r\n<s>t<s>t<s>r\n<s>t<s>tres_gas = 3<s>r\n<s>t<s>tres_food = 0<s>r\n<s>t<s>tres_metal = 0<s>r\n<s>t<s>t<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>t<s>r\n<s>tg.standartDialogOptions={<s>r\n<s>t<s>tbackground = \"http://188.120.236.127/Souls_Train/dialogue/dialogue.jpg\",<s>r\n<s>t<s>tanswers ={background = \"http://188.120.236.127/Souls_Train/dialogue/button0.jpg\", }<s>r\n<s>t}<s>r\n<s>t<s>r\n<s>tevent_start = {<s>r\n<s>t<s>t{name = \"Топливные склады\", p_text = \"Призрачный локомотив на полном ходу влетел прямо в сияющее скопление звезд. Пространство исказилось, кабина машиниста исчезла, вокруг начали вырисовываться знакомые образы топливного склада с торопливо снующими вокруг призрачными фигурами грузчиков. Воспоминания начали возвращаться...<s>\n<s>\nПолучено: 2 топлива.\", event = function() res_gas = res_gas <plus> 2 end,},<s>r\n<s>t<s>t{name = \"Столовая в депо\", p_text = \"Когда призрачный локомотив влетел в сияющее скопление звезд, Вам в нос ударил приятный запах свежей выпечки. Через мгновение кабина машиниста исчезла, а вокруг Вас прямо из холодной пустоты начали появляться очертания столовой. Воспоминания начали возвращаться...<s>\n<s>\nПолучено: 5 духовной энергии.\", event = function() res_food = res_food <plus> 5 end,},<s>r\n<s>t<s>t{name = \"Ремонтный цех\", p_text = \"Уже на подлете призрачного локомотива к сияющей аномалии Вы услышали знакомые удары молота о металл. Кабина машиниста вокруг Вас начала меркнуть, а ей на смену пришел размытый образ ремонтного цеха, заваленного металлоломом. Воспоминания начали возвращаться...<s>\n<s>\nПолучено: 3 материала.\", event = function() res_metal = res_metal <plus> 3 end,},<s>r\n<s>t}<s>r\n<s>t<s>r\n<s>tevent_base = {<s>r\n<s>t<s>t<s>r\n<s>t<s>t--Топливный склад<s>r\n<s>t<s>t{<s>r\n<s>t<s>t<s>t--1<s>r\n<s>t<s>t<s>t{name = \"Повреждения\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Внезапно видения померкли, и Вы вновь увидели кабину локомотива. В следующий момент раздался грохот и скрежет металла. Локомотив пролетал сквозь висящие в пустоте скопление обломков рельс, шпал и бетонных фрагментов смутно знакомых зданий. Панель управления сияла красными лампочками: корпус явно нуждается в ремонте.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Корпус выдержит\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Поезд несколько раз сильно тряхнуло.<s>\n<s>\nПотеряно: 10 прочности.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(0, res_hp - 10) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Подлатать корпус за 2 материала\", text=\"Вы решили не рисковать и исправили неполадки прежде, чем локомотив получил заметный урон.<s>\n<s>\nПотеряно: 2 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 2 end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--2<s>r\n<s>t<s>t<s>t{name= \"Топливо для столовой\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Вихрь воспоминаний перенес Вас на перрон. Размытые фигуры грузили на поезд уголь, только что доставленный со склада. К Вам подошла призрачная фигура, чьи смутные очертания Вы никак не могли вспомнить, и попросила выделить немного угля для кухни местной столовой.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Топлива и так мало\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не разбрасываться топливом. Стоило Вам отвернуться от просящего, как воспоминание погасло.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 1 топливо\", text=\"Вы решили выделить немного топлива. В благодарность Вы получили свежеприготовленную еду. Но какую? Из призрачного локомотива пропала часть топлива, но в пассажирском вагоне прибавилось духовной энергии.<s>\n<s>\nПотеряно: 1 топливо.<s>\nПолучено: 3 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 1 res_food = res_food <plus> 3 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 3 топлива\", text=\"Вы решили выделить немного топлива. В благодарность Вы получили свежеприготовленную еду. Но какую? Из призрачного локомотива пропала часть топлива, но в пассажирском вагоне прибавилось духовной энергии.<s>\n<s>\nПотеряно: 3 топлива.<s>\nПолучено: 10 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 3 res_food = res_food <plus> 10 end},<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--3<s>r\n<s>t<s>t<s>t{name= \"Бюрократия\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Череда сменяющих друг друга образов забросила Вас в длинный коридор, где в бесконечной очереди стояло множество призрачных фигур. В руках у Вас появилась кипа мятых бумаг. Очередь за разрешеним на вывоз топлива...\",<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Пройти без очереди\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не ждать своей очереди, а пройти сразу. Призрачным фигурам это явно не понравилось. Вы и моргнуть не успели, как кто-то ударил Вас в челюсть. Воспоминание померкло, и Вы услышали скрежет локомотива. Похоже, это происшествие напрямую на нем отразилось.<s>\n<s>\nПотеряно: 5 прочности.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(res_hp - 5, 0) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Дождаться своей очереди\", text=\"Вам показалось, что Вы прождали целую вечность. Это изрядно Вас измотало, но в конечном итоге Вы смогли получить разрешение на топливо. Видение тут же померкло.<s>\n<s>\nПотеряно: 1 духовная энергия.<s>\nПолучено: 1 топливо.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1 == 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas <plus> 1 res_food = math.max(0, res_food - 1) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Не ждать и уйти\", text=\"Вы решили не тратить здесь свое время. Виденье тут же померкло.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end}, <s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--4<s>r\n<s>t<s>t<s>t{name= \"Ремонт крыши\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Вихрь воспоминаний отправил Вас в старое угольное хранилище... Призрачная фигура в рабочей робе жаловалась Вам, что крыша начала течь, нанося вред топливу, а материалы для ремонта не выделяют.\",<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Проигнорировать\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы отмахнулись от воспоминания, и оно тут же погасло. Однако Вы почувствовали, что в призрачном поезде не досчитаетесь топлива...<s>\n<s>\nПотеряно: 1 топливо.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = math.max(res_gas - 1, 0) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 1 материал\", text=\"Когда Вы передали свои метериалы, Вам в награду разрешили взять немного топлива со спасенного склада.<s>\n<s>\nПотеряно: 1 материал.<s>\nПолучено: 2 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas <plus> 2 res_metal = res_metal - 1 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 1 материал и помочь с ремонтом\", text=\"Выделив материал, Вы самостоятельно полезли чинить крышу. Это стоила Вам неимоверных трудов, сквозь пелену воспоминаний Вы услышали скрежет локомотива - похоже, Ваше состояние напрямую на нем отражается. В награду Вам разрешили взять немного топлива со спасенного склада.<s>\n<s>\nПотеряно: 5 прочности, 1 материал.<s>\nПолучено: 3 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tres_metal = res_metal - 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tres_hp = math.max(0, res_hp - 5)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tres_gas = res_gas <plus> 3<s>r\n<s>t<s>t<s>t<s>t<s>tend},<s>r\n<s>r\n<s>t<s>t<s>t}, <s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--5<s>r\n<s>t<s>t<s>t{name= \"Мусор\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Поток воспоминаний отправил Вас на перрон, где призрачный кочегар, размахивая руками, жаловался, что в привезенном угле набросана куча разного мусора, от которого печь локомотива точно пострадает.\",<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Использовать топливо\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы посчитали, что не стоит разбрасываться топливом, и решили рискнуть целостностью локомотива...<s>\n<s>\nПотеряно: 5 прочности.<s>\nПолучено: 2 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas =res_gas <plus> 2 res_hp = math.max(res_hp - 5, 0) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выбросить топливо\", text=\"Вы решили не рисковать целостностью локомотива и избавиться от испорченного топлива.<s>\n<s>\nПотеряно: 2 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1== 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = math.max(res_gas - 2, 0) end},<s>r\n<s>r\n<s>t<s>t<s>t}, <s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--6<s>r\n<s>t<s>t<s>t{name= \"Грузчик\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Видение перенесло Вас к складу, где у сломанной тележки с углем громко ругался грузчик.\",<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Помочь дотащить уголь\", text=\"Вы помогли грузчику дотащить уголь до поезда. Это стоило Вам неимоверных трудов, сквозь пелену воспоминаний Вы услышали скрежет локомотива - похоже, Ваше состояние напрямую на нем отражается.<s>\n<s>\nПотеряно: 5 прочности.<s>\nПолучено: 2 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1== 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tres_hp = math.max(0, res_hp - 5)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tres_gas = res_gas <plus> 2<s>r\n<s>t<s>t<s>t<s>t<s>tend},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Оставить грузчика\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы отмахнулись от воспоминания, и оно тут же погасло. Однако Вы почувствовали, что призрачном поезде не досчитаетесь топлива...<s>\n<s>\nПотеряно: 1 топливо.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = math.max(res_gas - 1, 0) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 1 материал на ремонт\", text=\"С помощью Ваших материалов грузчику удалось починить тележку и доставить топливо к поезду.<s>\n<s>\nПотеряно: 1 материал.<s>\nПолучено: 2 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas <plus> 2 res_metal = res_metal - 1 end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--7<s>r\n<s>t<s>t<s>t{name = \"Обломки воспоминаний\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Внезапно видения померкли, и Вы вновь увидели кабину локомотива. Вокруг локомотива в пустоте висели обломки топливного склада: бетонные фрагменты зданий, цистерны и грузовики... Чтобы ни во что не врезаться, придется маневрировать, но для этого придется потратить дополнительное топливо.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Потратить 1 топливо на маневры\", text=\"Вы сумели аккуратно пройти через обломки, не повредив локомотив.<s>\n<s>\nПотеряно: 1 топливо.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 1 end},<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Корпус выдержит\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Поезд несколько раз сильно тряхнуло.<s>\n<s>\nПотеряно: 5 прочности.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(0, res_hp - 5) end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--8<s>r\n<s>t<s>t<s>t{name = \"Перекупщик\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Видения пересли Вас перрон, где подозрительная призрачная фигура предложила Вам обменять топливо на материалы или наоборот.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Продать 2 материала\", text=\"Вы передали перекупщику материалы в обмен на топливо.<s>\n<s>\nПотеряно: 2 материала.<s>\nПолучено: 3 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 2 res_gas = res_gas <plus> 3 end},<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Продать 2 топлива\", text=\"Вы передали перекупщику материалы в обмен на топливо.<s>\n<s>\nПотеряно: 2 топлива.<s>\nПолучено: 3 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal <plus> 3 res_gas = res_gas - 2 end},<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не торговать с сомнительными личностями.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>t},<s>r\n<s>t<s>t<s>r\n<s>t<s>t--Столовая<s>r\n<s>t<s>t{<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>t--1<s>r\n<s>t<s>t<s>t{name = \"Повреждения\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Внезапно видения померкли, и Вы вновь увидели кабину локомотива. В следующий момент раздался грохот и скрежет металла. Локомотив пролетал сквозь висящие в пустоте скопления обломков рельс, шпал и бетонных фрагментов смутно знакомых зданий. Панель управления сияла красными лампочками, корпус явно нуждается в ремонте.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Корпус выдержит\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Поезд несколько раз сильно тряхнуло.<s>\n<s>\nПотеряно: 10 прочности.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(0, res_hp - 10) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Подлатать корпус за 2 материала\", text=\"Вы решили не рисковать и исправили неполадки прежде, чем локомотив получил заметный урон.<s>\n<s>\nПотеряно: 2 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 2 end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--2<s>r\n<s>t<s>t<s>t{name= \"Топливо для столовой\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Вихрь воспоминаний перенес Вас на перрон. Размытые фигуры грузили на поезд уголь, только что доставленный со склада. К Вам подошла призрачная фигура, чьи смутные очертания Вы никак не могли вспомнить, и попросила выделить немного угля для кухни местной столовой.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Топлива и так мало\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не разбрасываться топливом. Стоило Вам отвернуться от просящего, как воспоминание погасло.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 1 топливо\", text=\"Вы решили выделить немного топлива. В благодарность Вы получили свежеприготовленную еду. Но какую? Из призрачного локомотива пропала часть топлива, но в пассажирском вагоне прибавилось духовной энергии.<s>\n<s>\nПотеряно: 1 топливо.<s>\nПолучено: 3 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 1 res_food = res_food <plus> 3 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 3 топлива\", text=\"Вы решили выделить немного топлива. В благодарность Вы получили свежеприготовленную еду. Но какую? Из призрачного локомотива пропала часть топлива, но в пассажирском вагоне прибавилось духовной энергии.<s>\n<s>\nПотеряно: 3 топлива.<s>\nПолучено: 10 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 3 res_food = res_food <plus> 10 end},<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--3<s>r\n<s>t<s>t<s>t{name= \"Помощь на кухне\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Поток воспоминаний перенес Вас на кухню, где старательно работали несколько призрачных фигур. Одна из них, сгорбленная старостью, обратилась к Вам с просьбой помочь с работой по столовой, если у Вас есть время.\",<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Поработать на кухне\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы и представить не могли, насколько тяжела может быть работа на кухне, Вы страшно вымотались. Сквозь пелену воспоминаний Вы услышали скрежет локомотива - похоже, Ваше состояние напрямую на нем отражается... Зато Вы смогли забрать из столовой немного еды.<s>\n<s>\nПотеряно: 5 прочности.<s>\nПолучено: 3 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_food =res_food <plus> 3 res_hp = math.max(res_hp - 5, 0) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Не тратить силы на кухне\", text=\"Вы решили не тратить свои силы здесь. Однако Вы почувствовали сквозь тень забвения, что после этого отказа Вам здесь выдадут куда меньше еды, чем могли бы...<s>\n<s>\nПотеряно: 2 энергии духа.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1== 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_food = math.max(res_food - 2, 0) end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--4<s>r\n<s>t<s>t<s>t{name= \"Свежий груз\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Воспоминания перенесли Вас в столовую депо, где призрачная фигура убеждала Вас перевезти до города крупную партию продуктов, часть которой Вы сможете забрать себе. Проблема в том, что придется выгрузить часть обычного груза локомотива.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не связываться с сомнительными предложениями. Стоило Вам отвернуться от просящего, как воспоминание погасло.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выгрузить 1 материал\", text=\"Вы решили выгрузить часть материалов, чтобы помочь в перевозке пищи.<s>\n<s>\nПотеряно: 1 материал.<s>\nПолучено: 3 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 1 res_food = res_food <plus> 3 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выгрузить 1 топливо\", text=\"Вы решили выгрузить часть топлива, чтобы помочь в перевозке пищи.<s>\n<s>\nПотеряно: 1 топливо.<s>\nПолучено: 3 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 1 res_food = res_food <plus> 3 end},<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--5<s>r\n<s>t<s>t<s>t{name= \"Корпоратив\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Видения отправили Вас на кухню, где группа призрачных фигур обсуждала грядущий корпоратив. Празднование объявили неожиданно, поэтому работники кухни не были к такому готовы. Вас спросили, нет ли у Вас запаса продуктов?\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы лишь развели руками, и воспоминание тотчас погасло.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 3 духовной энергии\", text=\"Вы выделили кухне немного продуктов. В благодарность работники притащили Вам разных полезных вещей.<s>\n<s>\nПотеряно: 3 духовной энергии.<s>\nПолучено: 1 материал, 1 топливо.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_food >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_food = res_food - 3 res_metal = res_metal <plus> 1 res_gas = res_gas <plus> 1 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 5 духовной энергии\", text=\"Вы выделили кухне немного продуктов. В благодарность работники притащили Вам разных полезных вещей.<s>\n<s>\nПотеряно: 5 духовной энергии.<s>\nПолучено: 2 материала, 2 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_food >= 5 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_food = res_food - 5 res_metal = res_metal <plus> 2 res_gas = res_gas <plus> 2 end},<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--6<s>r\n<s>t<s>t<s>t{name= \"Заклинившая дверь\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Череда сменяющих друг друга образов забросила Вас к дверям промышленного холодильника. Вокруг него хлопотало множество призрачных фигур. Похоже, засов заклинил...\",<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Потратить на ремонт 2 материала\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Пришлось попотеть, но дверь удалось открыть. В награду Вам выдали немного еды из этого же холодильника.<s>\n<s>\nПотеряно: 2 материала.<s>\nПолучено: 5 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 2 res_food = res_food <plus> 5 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Не обращать внимание\", text=\"Вы решили, что ничем не можете здесь помочь, воспоминание тут же померкло.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1== 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--7<s>r\n<s>t<s>t<s>t{name = \"Грабеж\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Воспоминания перенесли Вас в ночное депо, где в потемках призрачная фигура пыталась взломать запертые двери столовой. Заметив Вас, он предложил помочь ему в обмен на часть добычи.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Остановить грабителя\", text=\"После небольшой драки Вам удалось отобрать у грабителя оборудование и скрутить его. Воспоминание померкло, и Вы услышали скрежет локомотива. Похоже, драка напрямую на нем отразилась.<s>\n<s>\nПотеряно: 5 прочности.<s>\nПолучено: 1 материал.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(0, res_hp - 5) res_metal = res_metal <plus> 1 end},<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Взломать замок с помощью 1 материала\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы помогли грабителю взломать дверь и получили немного краденной провизии.<s>\n<s>\nПотеряно: 1 материал.<s>\nПолучено: 2 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 1 res_food = res_food <plus> 2 end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--8<s>r\n<s>t<s>t<s>t{name = \"Обломки воспоминаний\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Внезапно видения померкли, и Вы вновь увидели кабину локомотива. Вдалеке виднелись висящие в пустоте обломки столовой: бетонные фрагменты зданий, столы и кухонная утварь... Среди всего этого Вам удалось раглядеть ящики с провизией, но до них будет очень непросто добраться - придется потратить дополнительное топливо на маневры.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Не рисковать\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не тратить топливо на рискованный маневр.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Использовать 3 топлива и подобраться к провизии\", text=\"Несмотря на все Ваши старания, обломки все равно зацепили локомотив. Однако Вам удалось достать желаемое в виде крупного груза провизии.<s>\n<s>\nПотеряно: 5 прочности, 3 топлива.<s>\nПолучено: 12 духовной энергии.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 3 res_hp = math.max(0, res_hp - 5) res_food = res_food <plus> 12 end},<s>r\n<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>r\n<s>t<s>t},<s>r\n<s>t<s>t<s>r\n<s>t<s>t--Ремонтный цех<s>r\n<s>t<s>t{<s>t<s>r\n<s>t<s>t<s>t--1<s>r\n<s>t<s>t<s>t{name = \"Повреждения\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Внезапно видения померкли, и Вы вновь увидели кабину локомотива. В следующий момент раздался грохот и скрежет металла. Локомотив пролетал сквозь висящие в пустоте скопления обломков рельс, шпал и бетонных фрагментов смутно знакомых зданий. Панель управления сияла красными лампочками, корпус явно нуждается в ремонте.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Корпус выдержит\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Поезд несколько раз сильно тряхнуло.<s>\n<s>\nПотеряно: 10 прочности.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(0, res_hp - 10) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Подлатать корпус за 2 материала\", text=\"Вы решили не рисковать и исправили неполадки прежде, чем локомотив получил заметный урон.<s>\n<s>\nПотеряно: 2 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 2 end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--2<s>r\n<s>t<s>t<s>t{name= \"Перераспределение\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Видения отправили Вас в ремонтный цех, где Вы осматривали выделенные Вам материалы. Тут Вам поступило предложение от сотрудников других цехов - всем были нужны материалы, и они были готовы обменяться на топливо и продовольствие.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили отказаться от этого предложения. Стоило Вам отвернуться от просящих, как воспоминание погасло.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 2 материала\", text=\"Вы обменяли немного материалов на топливо и провизию.<s>\n<s>\nПотеряно: 2 материала.<s>\nПолучено: 2 духовной энергии, 2 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 2 res_food = res_food <plus> 2 res_gas = res_gas <plus> 2 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 5 материалов\", text=\"Вы обменяли немного материалов на топливо и провизию.<s>\n<s>\nПотеряно: 5 материалов.<s>\nПолучено: 5 духовной энергии, 5 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 5 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 5 res_food = res_food <plus> 5 res_gas = res_gas <plus> 5 end},<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--3<s>r\n<s>t<s>t<s>t{name= \"Еда для мастеров\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Поток воспоминаний перенес Вас в мастерскую, где мастера жаловались, что в столовой им выдают слишком маленькие порции для такой тяжелой работы. Вам предложили делиться частью провизии в обмен на лучшие детали.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили отказаться от этого предложения, но после того, как видение погасло, Вы поняли, что не досчитаетесь материалов, имевшихся в локомотиве.<s>\n<s>\nПотеряно: 1 материал.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = math.max(0, res_metal - 1) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 3 духовной энергии\", text=\"Вы обменяли провизию на материалы.<s>\n<s>\nПотеряно: 3 духовной энергии.<s>\nПолучено: 1 материал.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_food >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal <plus> 1 res_food = res_food - 3 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 7 духовной энергии\", text=\"Вы обменяли провизию на материалы.<s>\n<s>\nПотеряно: 7 духовной энергии.<s>\nПолучено: 3 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_food >= 7 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal <plus> 3 res_food = res_food - 7 end},<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--4<s>r\n<s>t<s>t<s>t{name = \"На собственном горбу\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Вихрь видений перенес Вас в кабинет начальника цеха. Призрачная фигура объяснила Вам, что сегодня сразу несколько грузчиков не вышло на работу. Поэтому с материалами может возникнуть проблема, если только Вы сами не перетащите нужные материалы.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили отказаться от этого предложения, но после того, как видение погасло, Вы поняли, что не досчитаетесь материалов, имевшихся в локомотиве.<s>\n<s>\nПотеряно: 1 материал.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_metal = math.max(0, res_metal - 1) end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Перетащить немного материалов\", text=\"Вы и не представляли, насколько трудна работа грузчиков - Вы страшно вымотались. Сквозь пелену воспоминаний Вы услышали скрежет локомотива - похоже, Ваше состояние напрямую на нем отражается...<s>\n<s>\nПотеряно: 5 прочности.<s>\nПолучено: 1 материал.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(0, res_hp - 5) res_metal = res_metal <plus> 1 end},<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Перетащить много материалов\", text=\"Вы и не представляли, насколько трудна работа грузчиков - Вы страшно вымотались. Сквозь пелену воспоминаний Вы услышали скрежет локомотива - похоже, Ваше состояние напрямую на нем отражается...<s>\n<s>\nПотеряно: 10 прочности.<s>\nПолучено: 3 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_hp = math.max(0, res_hp - 10) res_metal = res_metal <plus> 3 end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--5<s>r\n<s>t<s>t<s>t{name = \"Старый мастер\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Потоки воспоминаний перенесли Вас в ремонтный цех после закрытия, когда большинство рабочих уже отправилось по домам. Здесь осталась лишь призрачная фигура старого мастера, которая предложила Вам немного подлатать поезд.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Выделить 3 материала\", text=\"Вы выделили немного материалов, и мастер тут же приступил к ремонту...<s>\n<s>\nПотеряно: 3 материала.<s>\nПолучено: 10 прочности.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>tevent = function() res_hp = res_hp <plus> 10 res_metal = res_metal - 3 end},<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили пока что не тратить материалы на ремонт.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--6<s>r\n<s>t<s>t<s>t{name = \"Перекупщик\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Видения пересли Вас на перрон, где подозрительная призрачная фигура предложила Вам обменять топливо на материалы или наоборот.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Продать 2 материала\", text=\"Вы передали перекупщику материалы в обмен на топливо.<s>\n<s>\nПотеряно: 2 материала.<s>\nПолучено: 3 топлива.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_metal >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal - 2 res_gas = res_gas <plus> 3 end},<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Продать 2 топлива\", text=\"Вы передали перекупщику материалы в обмен на топливо.<s>\n<s>\nПотеряно: 2 топлива.<s>\nПолучено: 3 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 2 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>tevent = function() res_metal = res_metal <plus> 3 res_gas = res_gas - 2 end},<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Отказаться\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не торговать с сомнительными личностями.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t--7 в космосе<s>r\n<s>t<s>t<s>t{name = \"Обломки воспоминаний\",<s>r\n<s>t<s>t<s>t<s>ttext = \"Внезапно видения померкли, и Вы вновь увидели кабину локомотива. Прямо по курсу виднелись висящие в пустоте обломки ремонтного цеха: бетонные фрагменты зданий, станки и груды металлолома... Можно попробовать потратить дополнительное топливо на маневры, чтобы собрать немного материалов.\",<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer1={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Не рисковать\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext=\"Вы решили не тратить топливо на рискованный маневр.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if 1==1 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() end},<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tanswer2={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Использовать 3 топлива и пролететь по краю поля обломков\", text=\"Пролетев по краю, Вам удалось достать немного материалов.<s>\n<s>\nПотеряно: 3 топлива.<s>\nПолучено: 2 материала.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 3 res_metal = res_metal <plus> 3 end},<s>r\n<s>r\n<s>t<s>t<s>t<s>tanswer3={<s>r\n<s>t<s>t<s>t<s>t<s>tanswer_text=\"Использовать 3 топлива и пролететь через гущу обломков\", text=\"Несмотря на все Ваши старания, обломки все равно зацепили локомотив. Однако Вам удалось достать желаемое в виде крупного груза материалов.<s>\n<s>\nПотеряно: 5 прочности, 3 топлива.<s>\nПолучено: 5 материалов.\",<s>r\n<s>t<s>t<s>t<s>t<s>tevent_if = function() if res_gas >= 3 then return true else return false end end,<s>r\n<s>t<s>t<s>t<s>t<s>tevent = function() res_gas = res_gas - 3 res_hp = math.max(0, res_hp - 10) res_metal = res_metal <plus> 5 end},<s>r\n<s>r\n<s>r\n<s>t<s>t<s>t},<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t},<s>r\n<s>t}<s>r\n<s>r\n <s>r\nend<s>r\n<s>r\n--Вращение локаций<s>r\nvacillation = function(picture_arrow)<s>r\n<s>t<s>r\n<s>tlocal arrow_move<s>r\n<s>tpicture_arrow.id = math.random(1000000)<s>r\n<s>tlocal this_arrow_id = picture_arrow.id<s>r\n<s>tlocal one_time = 6000<s>r\n<s>t<s>r\n<s>tarrow_move = function()<s>r\n<s>t<s>tif picture_arrow and picture_arrow.removeSelf and this_arrow_id == picture_arrow.id then<s>t<s>r\n<s>r\n<s>t<s>t<s>ttransition.to (picture_arrow,<s>r\n<s>t<s>t<s>t<s>t{<s>r\n<s>t<s>t<s>t<s>t<s>trotation = 360,<s>r\n<s>t<s>t<s>t<s>t<s>ttime = one_time,<s>r\n<s>t<s>t<s>t<s>t<s>tonComplete = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tpicture_arrow.rotation = 0<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tarrow_move()<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t}<s>r\n<s>t<s>t<s>t)<s>r\n<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>tarrow_move()<s>r\nend<s>r\n<s>r\n--Движение духов (туда-сюда)<s>r\nvacillation_spirit = function(picture_arrow,side)<s>r\n<s>tside = side or 1<s>r\n<s>tlocal source_y = picture_arrow.y<s>r\n<s>tlocal arrow_move -- ярлык функции, чтобы она могла сама себя вызвать<s>r\n<s>tlocal goBack = false -- флаг, определяющий, направо или налево идёт стрелка<s>r\n<s>tpicture_arrow.id = math.random(1000000)<s>r\n<s>tlocal this_arrow_id = picture_arrow.id<s>r\n<s>tlocal one_time<s>r\n<s>r\n<s>tarrow_move = function()<s>r\n<s>t<s>tone_time = math.random(2000,3000)<s>r\n<s>t<s>tif picture_arrow and picture_arrow.removeSelf and this_arrow_id == picture_arrow.id then<s>r\n<s>t<s>t<s>ttransition.to(picture_arrow,<s>r\n<s>t<s>t<s>t{<s>r\n<s>t<s>t<s>t<s>ty = source_y <plus> (goBack and 0 or side*(picture_arrow.contentHeight/4)), -- если стрелка идёт в одну сторону, то кусок вычитается, а если в другую, то нет<s>r\n<s>t<s>t<s>t<s>ttime = one_time,<s>r\n<s>t<s>t<s>t<s>ttransition=easing.inOutQuad,<s>r\n<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>tgoBack = not goBack<s>r\n<s>t<s>t<s>ttimer.performWithDelay(one_time,arrow_move)<s>r\n<s>t<s>tend<s>r\n<s>tend<s>r\n<s>tarrow_move()<s>r\nend<s>r\n<s>r\n--Призраки в вагоне<s>r\nspirit_in_train = function()<s>r\n<s>t<s>r\n<s>tlocal xy_table = {<s>r\n<s>t<s>t{1/7, 0.6},<s>r\n<s>t<s>t{2/7, 0.65},<s>r\n<s>t<s>t{3/7, 0.6},<s>r\n<s>t<s>t{4/7, 0.65},<s>r\n<s>t<s>t{5/7, 0.6},<s>r\n<s>t<s>t{6/7, 0.65},<s>r\n<s>t}<s>r\n<s>t<s>r\n<s>tfor i = 1,6 do<s>r\n<s>t<s>r\n<s>t<s>tlocal spirit_art<s>r\n<s>t<s>tif map_loc[i].spirit[2] > 0 and spirit_base[i].death == 0 then<s>r\n<s>t<s>t<s>tspirit_art = display.newImage(\"http://188.120.236.127/Souls_Train/train/spir\"..i..\".png\")<s>r\n<s>t<s>t<s>tspirit_art.x = canvas.width*xy_table[i][1]<s>r\n<s>t<s>t<s>tspirit_art.y = canvas.height*xy_table[i][2]<s>r\n<s>t<s>t<s>tspirit_art.xScale = 1/9*canvas.contentWidth/spirit_art.width<s>r\n<s>t<s>t<s>tspirit_art.yScale = spirit_art.xScale<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tvacillation_spirit(spirit_art)<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>t<s>r\n<s>tend<s>r\n<s>t<s>r\nend<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n--Карта региона<s>r\nshow_map = function()<s>r\n<s>t<s>r\n<s>tmap_background = display.newImage(\"http://188.120.236.127/Souls_Train/map/map.jpg\")<s>r\n<s>tmap_background.x = canvas.width/2<s>r\n<s>tmap_background.y = canvas.height/2<s>r\n<s>tmap_background.xScale = canvas.width/map_background.width<s>r\n<s>tmap_background.yScale = canvas.height/map_background.height<s>r\n<s>t<s>r\n<s>tlocal xy_table = {<s>r\n<s>t{0.25, 0.2},<s>r\n<s>t{0.75, 0.2},<s>r\n<s>t{0.5, 0.4},<s>r\n<s>t{0.5, 0.6},<s>r\n<s>t{0.25, 0.8},<s>r\n<s>t{0.75, 0.8},<s>r\n<s>t}<s>r\n<s>t<s>r\n<s>tfor i=1,6 do<s>r\n<s>t<s>t<s>r\n<s>t<s>tlocal spirit_art<s>r\n<s>t<s>tif map_loc[i].spirit[2] < 3 and spirit_base[i].death == 0 then<s>r\n<s>t<s>t<s>tspirit_art = display.newImage(\"http://188.120.236.127/Souls_Train/map/face\"..i..\".png\")<s>r\n<s>t<s>t<s>tspirit_art.x = canvas.width*xy_table[i][1]<s>r\n<s>t<s>t<s>tspirit_art.y = canvas.height*xy_table[i][2]<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>t<s>r\n<s>t<s>tmap_loc[i].im = display.newImage(\"http://188.120.236.127/Souls_Train/map/loc\"..i..\".png\")<s>r\n<s>t<s>tmap_loc[i].im.x = canvas.width*xy_table[i][1]<s>r\n<s>t<s>tmap_loc[i].im.y = canvas.height*xy_table[i][2]<s>r\n<s>t<s>tmap_loc[i].im.xScale = 0.3*canvas.width/map_loc[i].im.width<s>r\n<s>t<s>tif train_position == i then<s>r\n<s>t<s>t<s>tmap_loc[i].im.xScale = 0.4*canvas.width/map_loc[i].im.width<s>r\n<s>t<s>tend<s>r\n<s>t<s>tmap_loc[i].im.yScale = map_loc[i].im.xScale<s>r\n<s>t<s>t<s>r\n<s>t<s>tif map_loc[i].spirit[2] < 3 and spirit_base[i].death == 0 then<s>r\n<s>t<s>t<s>tspirit_art.xScale = 0.5*map_loc[i].im.contentHeight/spirit_art.width<s>r\n<s>t<s>t<s>tspirit_art.yScale = spirit_art.xScale<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>r\n<s>t<s>tlocal bonus_art<s>r\n<s>t<s>tfor j=1,#map_loc[train_position].go do<s>r\n<s>t<s>t<s>tif map_loc[train_position].go[j] == i then<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tbonus_art = display.newImage(\"http://188.120.236.127/Souls_Train/map/bonus\"..map_loc[i].bonus..\".png\")<s>r\n<s>t<s>t<s>t<s>tbonus_art.x = canvas.width*xy_table[i][1] --<plus> map_loc[i].im.contentWidth/2<s>r\n<s>t<s>t<s>t<s>tbonus_art.y = canvas.height*xy_table[i][2] <plus> map_loc[i].im.contentHeight/2<s>r\n<s>t<s>t<s>t<s>tbonus_art.xScale = 0.7*map_loc[i].im.contentWidth/bonus_art.width<s>r\n<s>t<s>t<s>t<s>tbonus_art.yScale = bonus_art.xScale<s>r\n<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tvacillation(map_loc[i].im)<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>r\n<s>t<s>tlocal ok = 0<s>r\n<s>t<s>tfor j=1,#map_loc[train_position].go do<s>r\n<s>t<s>t<s>tif map_loc[train_position].go[j] == i then<s>r\n<s>t<s>t<s>t<s>tok=1<s>r\n<s>t<s>t<s>t<s>tmap_loc[i].im:addEventListener(\"tap\", function() local delta = system.getTimer() - click_protection if delta > 0 or delta < - click_protection_time then<s>r\n<s>t<s>t<s>t<s>t<s>tclick_protection = system.getTimer() <plus> click_protection_time<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tif res_gas < 1 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tdialog({<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>theader = \"Карта\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>ttext = \"У вас нет топлива! Вы все равно можете добраться до аномалии на резервных источниках питания, но это отнимет от 5% до 20% прочности локомотива.\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tanswers = {<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t{text = \"Переместиться\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tpressListener = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tfor s = 1,6 do<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tif map_loc[s].spirit[2] > 0 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tspirit_base[s].hp = math.max(spirit_base[s].hp - 10, 0)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tif spirit_base[s].hp <= 0 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tspirit_base[s].death = 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tlocal hp = math.random(1,4)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tres_hp = math.max(0, res_hp - hp*5)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>ttrain_position = i<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tshowPage({id =13, transition=\"instant\"})<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tif ad_on1 > 0 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tad_on1 = ad_on1 <plus> 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tif ad_on1 == 3 then ad_on1 = 0 end<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tad_on2 = ad_on2 <plus> 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tif ad_on2 == 4 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tad_on2 = 0<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tshowAd(\"interstitial\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tfunction() end,<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tfunction() end)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>thideDialog()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tend},<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t{text = \"Назад\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tpressListener = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tg.fullscreen = 0<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tshowPage({id =7, transition=\"instant\"})<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>thideDialog()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tend},<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t}<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>telse<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tfor s = 1,6 do<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tif map_loc[s].spirit[2] > 0 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>tspirit_base[s].hp = math.max(spirit_base[s].hp - 10, 0)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tif spirit_base[s].hp <= 0 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>t<s>t spirit_base[s].death = 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tres_gas = res_gas - 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>ttrain_position = i<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tshowPage({id =13, transition=\"instant\"})<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tif ad_on1 > 0 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tad_on1 = ad_on1 <plus> 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tif ad_on1 == 3 then ad_on1 = 0 end<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tad_on2 = ad_on2 <plus> 1<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tif ad_on2 == 4 then<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tad_on2 = 0<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tshowAd(\"interstitial\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tfunction() end,<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tfunction() end)<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>treturn true<s>r\n<s>t<s>t<s>t<s>tend end)<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>r\n<s>r\n<s>t<s>tif train_position == i then<s>r\n<s>t<s>t<s>tmap_loc[i].im:addEventListener(\"tap\", function() local delta = system.getTimer() - click_protection if delta > 0 or delta < - click_protection_time then<s>r\n<s>t<s>t<s>t<s>tclick_protection = system.getTimer() <plus> click_protection_time<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tdialog({<s>r\n<s>t<s>t<s>t<s>t<s>theader = \"Карта\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext = \"Локомотив уже находится здесь!\",<s>r\n<s>t<s>t<s>t<s>t<s>tanswers = {<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t{text = \"Назад\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tpressListener = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>thideDialog()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tend},<s>r\n<s>t<s>t<s>t<s>t<s>t}<s>r\n<s>t<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>treturn true<s>r\n<s>t<s>t<s>tend end)<s>r\n<s>r\n<s>t<s>telseif ok == 0 then<s>r\n<s>t<s>t<s>r\n<s>t<s>t<s>tmap_loc[i].im:addEventListener(\"tap\", function() local delta = system.getTimer() - click_protection if delta > 0 or delta < - click_protection_time then<s>r\n<s>t<s>t<s>t<s>tclick_protection = system.getTimer() <plus> click_protection_time<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>tdialog({<s>r\n<s>t<s>t<s>t<s>t<s>theader = \"Карта\",<s>r\n<s>t<s>t<s>t<s>t<s>ttext = \"Локомотив не может перемещаться так далеко!\",<s>r\n<s>t<s>t<s>t<s>t<s>tanswers = {<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t{text = \"Назад\",<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>tpressListener = function()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>t<s>thideDialog()<s>r\n<s>t<s>t<s>t<s>t<s>t<s>tend},<s>r\n<s>t<s>t<s>t<s>t<s>t}<s>r\n<s>t<s>t<s>t<s>t})<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>t<s>t<s>treturn true<s>r\n<s>t<s>t<s>tend end)<s>r\n<s>t<s>t<s>t<s>t<s>r\n<s>t<s>tend<s>r\n<s>t<s>t<s>t<s>r\n<s>r\n<s>t<s>t<s>t--showPage({id =16, transition=\"instant\"})<s>r\n<s>r\n<s>tend<s>r\n<s>t<s>r\n<s>r\n<s>t<s>r\n<s>t<s>r\n<s>r\nend<s>r\n<s>r\n<s>r\n--Кнопка \"Назад\"<s>r\nshow_back_button = function(outgoing_page, fullscreen_ok)<s>r\n<s>tlocal picture_back = display.newImage(\"http://188.120.236.127/Souls_Train/train/back.png\")<s>r\n<s>tpicture_back.xScale = (canvas.width*(8/48))/picture_back.width<s>r\n<s>tpicture_back.yScale = picture_back.xScale<s>r\n<s>tpicture_back.x = canvas.width*(43/48)<s>r\n<s>tpicture_back.y = 0.54*picture_back.height*picture_back.yScale<s>r\n<s>r\n<s>tpicture_back:addEventListener(\"tap\",<s>r\n<s>t<s>tfunction() local delta = system.getTimer() - click_protection if delta > 0 or delta < - click_protection_time then<s>r\n<s>t<s>t<s>tclick_protection = system.getTimer() <plus> click_protection_time<s>r\n<s>t<s>t<s>tif fullscreen_ok == 0 then<s>r\n<s>t<s>t<s>t<s>tg.fullscreen = 0<s>r\n<s>t<s>t<s>telseif fullscreen_ok == 1 then<s>r\n<s>t<s>t<s>t<s>tg.fullscreen = 1<s>t<s>t<s>t<s>r\n<s>t<s>t<s>tend<s>r\n<s>t<s>t<s>tshowPage({id = outgoing_page})<s>r\n<s>t<s>t<s>treturn true<s>r\n<s>t<s>tend end)<s>r\nend<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n<s>r\n\nend",
+        "text": "luaModuleUpdate http://188.120.236.127/Souls_Train/souls_train.lua",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nbase_of_data()\nend",
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "id": 3
+      },
+      {
+        "contentList": [
+          "http://188.120.236.127/Souls_Train/main.jpg http://188.120.236.127/Souls_Train/dialogue/button0.jpg http://188.120.236.127/Souls_Train/dialogue/dialogue.jpg http://188.120.236.127/Souls_Train/resources/gas3.png http://188.120.236.127/Souls_Train/map/bonus1.png http://188.120.236.127/Souls_Train/map/bonus2.png http://188.120.236.127/Souls_Train/map/bonus3.png http://188.120.236.127/Souls_Train/train/fon3.jpg http://188.120.236.127/Souls_Train/train/fon2.jpg http://188.120.236.127/Souls_Train/train/fon.jpg http://188.120.236.127/Souls_Train/train/spir5.png http://188.120.236.127/Souls_Train/train/spir6.png http://188.120.236.127/Souls_Train/train/spir4.png http://188.120.236.127/Souls_Train/train/spir2.png http://188.120.236.127/Souls_Train/train/spir3.png http://188.120.236.127/Souls_Train/train/spir1.png http://188.120.236.127/Souls_Train/spirits/spir0.png http://188.120.236.127/Souls_Train/train/train3.jpg http://188.120.236.127/Souls_Train/train/train2.jpg http://188.120.236.127/Souls_Train/button_empty.png http://188.120.236.127/Souls_Train/button.png http://188.120.236.127/Souls_Train/train/train1.jpg http://188.120.236.127/Souls_Train/train/back.png http://188.120.236.127/Souls_Train/map/face3.png http://188.120.236.127/Souls_Train/map/face4.png http://188.120.236.127/Souls_Train/map/face1.png http://188.120.236.127/Souls_Train/map/face2.png http://188.120.236.127/Souls_Train/map/face5.png http://188.120.236.127/Souls_Train/map/face6.png http://188.120.236.127/Souls_Train/map/map.jpg http://188.120.236.127/Souls_Train/map/loc6.png http://188.120.236.127/Souls_Train/map/loc4.png http://188.120.236.127/Souls_Train/map/loc5.png http://188.120.236.127/Souls_Train/map/loc3.png http://188.120.236.127/Souls_Train/map/loc2.png http://188.120.236.127/Souls_Train/map/loc1.png http://188.120.236.127/Souls_Train/music.mp3",
+          "лист"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfinal_kol_spirit = 0\nfinal_kol_memor = 0\nfinal_kol_ok = 0\n\nfor i= 1,6 do\nfinal_kol_memor = final_kol_memor <plus> math.min(3, map_loc[i].spirit[2]) \nend\n\nfor i= 1,6 do\nif map_loc[i].spirit[2] > 0 and spirit_base[i].death == 0 then\nfinal_kol_spirit = final_kol_spirit <plus> 1\nend\nend\n\nfor i= 1,6 do\nif map_loc[i].spirit[2] >=3 or spirit_base[i].death == 1 then\nfinal_kol_ok = final_kol_ok <plus> 1\nend\nend\n\nend",
+        "calculate": true,
+        "text": "Подсчет",
+        "id": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "\nКарта",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nshow_map() \nshow_back_button (6,0)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 4,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Поезд",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Голова"
+      },
+      {
+        "id": 7,
+        "text": "Угольный вагон"
+      },
+      {
+        "id": 8,
+        "text": "Пассажирский вагон 1"
+      },
+      {
+        "id": 17,
+        "text": "Пассажиры"
+      },
+      {
+        "id": 5,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Вступление 1"
+      },
+      {
+        "id": 10,
+        "text": "Вступление 2"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "\nЛокомотив\n\nПризрачный локомотив может перемещаться в чистилище между аномалиями, где сконцентрированы воспоминания заблудших душ. Ваша задача — трижды посетить каждую аномалию, собрав все осколки воспоминаний Ваших пассажиров. Каждый перелет будет стоить Вам единицу топлива.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "<",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 8,
+        "text": "> |",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ]
+      },
+      {
+        "lua_if": "function lua_if() return final_kol_ok == 6 and final_kol_spirit < 6 end",
+        "id": 18,
+        "text": "В аномалиях не осталось воспоминаний!",
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 19,
+        "text": "Все воспоминания собраны!",
+        "lua_if": "function lua_if() return final_kol_ok == 6 and final_kol_spirit == 6 end",
+        "middle_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "middle_answer": true,
+        "lua_do": "function lua_do() g.fullscreen = 1 end",
+        "text": "В путь!",
+        "id": 4,
+        "lua_if": "function lua_if()\nreturn final_kol_ok < 6\nend"
+      },
+      {
+        "middle_answer": true,
+        "text": "Ремонт:",
+        "comment": true,
+        "id": 6
+      },
+      {
+        "lua_do": "function lua_do()\nif res_metal > 0 and res_hp < 100 then\nres_metal = res_metal - 1\nres_hp = res_hp <plus> 3\nelse\ndialog({ \n         header = \"Ремонт\", \n         text = \"У Вас нет материалов!\", \n         answers = { \n          {text = \"Назад\", \n          pressListener = function() \n          hideDialog() \n          end}, \n         } \n        })\nend\nend",
+        "comment": false,
+        "middle_answer": true,
+        "id": 6,
+        "instant": true,
+        "text": "     ",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/resources/gas3.png"
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/train1.jpg"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "\nТопливный вагон\n\nВ этом вагоне располагалась странная машина, беспрерывно издающая булькающие звуки. Судя по инструкции, любезно оставленной кем-то на панели, здесь можно перевести часть материалов или духовной энергии в топливо для перемещения локомотива.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "<",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 6,
+        "text": ">",
+        "left_answer": false
+      },
+      {
+        "id": 7,
+        "text": "Создать топливо:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "right_answer": false,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/resources/gas1.png"
+        ],
+        "id": 7,
+        "lua_do": "function lua_do()\nif res_metal > 0 then\nres_metal = res_metal - 1\nres_gas = res_gas <plus> 1\nelse\ndialog({ \n         header = \"Производство топлива\", \n         text = \"У Вас нет материалов!\", \n         answers = { \n          {text = \"Назад\", \n          pressListener = function() \n          hideDialog() \n          end}, \n         } \n        })\nend\nend",
+        "instant": true,
+        "text": "     ",
+        "left_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/resources/gas2.png"
+        ],
+        "right_answer": true,
+        "comment": false,
+        "id": 7,
+        "lua_do": "function lua_do()\nif res_food > 2 then\nres_food = res_food - 3\nres_gas = res_gas <plus> 1\nelse\ndialog({ \n         header = \"Производство топлива\", \n         text = \"У Вас нет духовной энергии!\", \n         answers = { \n          {text = \"Назад\", \n          pressListener = function() \n          hideDialog() \n          end}, \n         } \n        })\nend\nend",
+        "instant": true,
+        "text": "     ",
+        "left_answer": false
+      },
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/train2.jpg"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do() \n\nshowAd(\"rewardedVideo\",\nfunction() res_gas = res_gas <plus> 1\nad_on1 = 1\nshowPage({id = 7}) end,\nfunction()\nshowPage({id = 7}) end)\n\nend",
+        "text": "Реклама",
+        "no_transition": true,
+        "lua_text": "function lua_text()\nreturn \"Медитировать<s>\n(<plus>1 топливо)\"\nend",
+        "id": 7,
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Blood_Raven/shop/ad.png"
+        ],
+        "lua_if": "function lua_if()\nreturn ad_on1 == 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "\nПассажирский вагон\n\nЭтот вагон напоминал пассажирский лишь отдаленно, но Вы чуствовали, что духам будет здесь комфортно. Однако духи все равно со временем теряют свою энергию — каждый перелет между аномалиями с воспоминаниями отнимает у духов по 10% энергии. Не забывайте восполнять ее, иначе дух исчезнет!",
+    "answers": [
+      {
+        "comment": false,
+        "id": 6,
+        "text": "| <",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 7,
+        "text": ">",
+        "left_answer": false
+      },
+      {
+        "id": 7,
+        "text": "Пассажиры:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "lua_if": "function lua_if() local n = 1\nreturn map_loc[n].spirit[2] > 0 and spirit_base[n].death == 0 end",
+        "lua_text": "function lua_text() local n = 1\nreturn spirit_base[n].name..\" \"..spirit_base[n].hp..\"%<s>\nВоспоминания: \"..math.min(3,map_loc[n].spirit[2])..\" / 3\"\nend",
+        "lua_do": "function lua_do() num_spir = 1 end",
+        "text": "Дух",
+        "id": 17,
+        "middle_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "lua_if": "function lua_if() local n = 2\nreturn map_loc[n].spirit[2] > 0 and spirit_base[n].death == 0 end",
+        "lua_text": "function lua_text() local n = 2\nreturn spirit_base[n].name..\" \"..spirit_base[n].hp..\"%<s>\nВоспоминания: \"..math.min(3,map_loc[n].spirit[2])..\" / 3\"\nend",
+        "lua_do": "function lua_do() num_spir = 2 end",
+        "text": "Дух",
+        "id": 17,
+        "middle_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "lua_if": "function lua_if() local n = 3\nreturn map_loc[n].spirit[2] > 0 and spirit_base[n].death == 0 end",
+        "lua_text": "function lua_text() local n = 3\nreturn spirit_base[n].name..\" \"..spirit_base[n].hp..\"%<s>\nВоспоминания: \"..math.min(3,map_loc[n].spirit[2])..\" / 3\"\nend",
+        "lua_do": "function lua_do() num_spir = 3 end",
+        "text": "Дух",
+        "id": 17,
+        "middle_answer": true
+      },
+      {
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 17,
+        "lua_do": "function lua_do() num_spir = 4 end",
+        "text": "Дух",
+        "lua_text": "function lua_text() local n = 4\nreturn spirit_base[n].name..\" \"..spirit_base[n].hp..\"%<s>\nВоспоминания: \"..math.min(3,map_loc[n].spirit[2])..\" / 3\"\nend",
+        "lua_if": "function lua_if() local n = 4\nreturn map_loc[n].spirit[2] > 0 and spirit_base[n].death == 0 end"
+      },
+      {
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 17,
+        "lua_do": "function lua_do() num_spir = 5 end",
+        "text": "Дух",
+        "lua_text": "function lua_text() local n = 5\nreturn spirit_base[n].name..\" \"..spirit_base[n].hp..\"%<s>\nВоспоминания: \"..math.min(3,map_loc[n].spirit[2])..\" / 3\"\nend",
+        "lua_if": "function lua_if() local n = 5\nreturn map_loc[n].spirit[2] > 0 and spirit_base[n].death == 0 end"
+      },
+      {
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 17,
+        "lua_do": "function lua_do() num_spir = 6 end",
+        "text": "Дух",
+        "lua_text": "function lua_text() local n = 6\nreturn spirit_base[n].name..\" \"..spirit_base[n].hp..\"%<s>\nВоспоминания: \"..math.min(3,map_loc[n].spirit[2])..\" / 3\"\nend",
+        "lua_if": "function lua_if() local n = 6\nreturn map_loc[n].spirit[2] > 0 and spirit_base[n].death == 0 end"
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/train3.jpg"
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nspirit_in_train()\n\nkol_eat = 0\n\nfor i=1,6 do\n if map_loc[i].spirit[2] > 0 and spirit_base[i].death == 0 and spirit_base[i].hp < 100 then\nkol_eat = kol_eat <plus> 1\nend\n\nend\nend"
+      },
+      {
+        "id": 8,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "middle_answer": true,
+        "id": 8,
+        "lua_if": "function lua_if() return res_food >= kol_eat end",
+        "text": "Накормить всех",
+        "lua_do": "function lua_do()\nfor i=1,6 do\n if map_loc[i].spirit[2] > 0 and spirit_base[i].death == 0 and spirit_base[i].hp < 100 then\nres_food = res_food - 1\nspirit_base[i].hp = spirit_base[i].hp <plus> 10\nend \nend\nend",
+        "instant": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "comment": false
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if() return res_food < kol_eat end",
+        "id": 8,
+        "text": "Накормить всех\n(Не хватает энергии)",
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "\nВступление",
+    "answers": [
+      {
+        "id": 9,
+        "text": "      ",
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 10,
+        "text": "Оглядеться",
+        "lua_do": "function lua_do()\ng.fullscreen = 0\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 9,
+        "text": "stretch",
+        "url": "http://188.120.236.127/Souls_Train/train/fon2.jpg"
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 1,
+        "text": "Все, что Вы помнили - это Ваш поезд и больше ничего. Вы были машинистом? А кто Вы сейчас? Вы чувствовали лишь холод, а видели только далекие звезды, что окружали Вас роем светлячков со всех сторон. Сколько Вы уже плывете в этой пустоте? Так больше не может продолжаться. Вы попытались сосредоточиться на единственном воспоминании, что у Вас осталось. Внезапно звезды начали светиться все ярче, на их фоне начали проступать отдаленно знакомые образы...",
+        "middle_answer": false,
+        "left_answer": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "\nМашенька\n\n\"Ох, Вы наконец-то появились!\" — перед Вами появился призрачный силуэт девочки, которая казалась Вам смутно знакомой: \"Перевозчик сказал, что это чистилище, и некоторые души, такие как я, застряли здесь и никак не могут найти покой... Он сказал, что Вы связаны со всеми нами... Вы и поезд. И только Вы можете собрать всех духов и их воспоминания. Больше я ничего не знаю... С тех пор, как я попала сюда и поговорила с Перевозчиком, я просто ждала Вас в этом поезде...\" — вокруг Вас из пустоты начали проступать очертания странного вагона.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Осмотреть локомотив",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "middle_answer": true
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon.jpg"
+      },
+      {
+        "id": 10,
+        "text": "few small bottom",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir1.png"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "\nВиджеты",
+    "answers": [
+      {
+        "comment": true,
+        "calculate": true,
+        "id": 8,
+        "text": "Здоровье",
+        "widget": [
+          "z",
+          "http://188.120.236.127/Souls_Train/resources/1.png",
+          "%"
+        ],
+        "widget_show": [
+          "z",
+          "res_hp"
+        ]
+      },
+      {
+        "comment": true,
+        "widget_show": [
+          "t",
+          "res_gas"
+        ],
+        "id": 8,
+        "text": "Топливо",
+        "widget": [
+          "t",
+          "http://188.120.236.127/Souls_Train/resources/2.png",
+          ""
+        ],
+        "calculate": true
+      },
+      {
+        "comment": true,
+        "calculate": true,
+        "id": 8,
+        "text": "Материалы",
+        "widget": [
+          "m",
+          "http://188.120.236.127/Souls_Train/resources/3.png",
+          ""
+        ],
+        "widget_show": [
+          "m",
+          "res_metal"
+        ]
+      },
+      {
+        "comment": true,
+        "widget_show": [
+          "f",
+          "res_food"
+        ],
+        "id": 8,
+        "text": "Пища",
+        "widget": [
+          "f",
+          "http://188.120.236.127/Souls_Train/resources/4.png",
+          ""
+        ],
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "События",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Первое событие"
+      },
+      {
+        "id": 14,
+        "text": "Дека событий"
+      },
+      {
+        "id": 15,
+        "text": "Встреча с духами"
+      },
+      {
+        "id": 16,
+        "text": "Смерть"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "  \n",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\nevent_start[map_loc[train_position].bonus].event() \n\nbase_of_num = {}\nlocal kol = 3\nlocal t = {} \nfor i = 1, #event_base[map_loc[train_position].bonus] do\n t[#t<plus>1] = i\nend\n\nfor i = 1,kol do\n local a = math.random (1,#t)\n base_of_num[#base_of_num<plus>1] = t[a]\n table.remove(t, a)\nend\n\nevent_num = 1\nnum = base_of_num[event_num]\n\n\nmap_background = display.newImage(\"http://188.120.236.127/Souls_Train/train/fon2.jpg\") \n map_background.x = canvas.width/2 \n map_background.y = canvas.height/2 \n map_background.xScale = canvas.width/map_background.width \n map_background.yScale = canvas.height/map_background.height\n\nlocal icon = display.newImage(\"http://188.120.236.127/Souls_Train/map/bonus\"..map_loc[train_position].bonus..\".png\") \n icon.x = canvas.width/2 \n icon.y = canvas.height/6\n icon.xScale = canvas.width/2/icon.width \n icon.yScale = icon.xScale\n\n\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 13,
+        "calculate": true
+      },
+      {
+        "id": 13,
+        "text": "     ",
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 14,
+        "text": "Погрузиться в воспоминания",
+        "lua_do": "function lua_do() g.fullscreen = 0 end",
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn event_start[map_loc[train_position].bonus].name..\"<s>\n<s>\n\"..event_start[map_loc[train_position].bonus].p_text\nend",
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 1,
+        "text": "Текст",
+        "middle_answer": false,
+        "left_answer": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "    \n",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      },
+      {
+        "comment": true,
+        "id": 14,
+        "text": "Текст события",
+        "lua_text": "function lua_text()\nreturn event_base[map_loc[train_position].bonus][num].name..\"<s>\n<s>\n\"..event_base[map_loc[train_position].bonus][num].text\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn event_base[map_loc[train_position].bonus][num].answer1 and (event_base[map_loc[train_position].bonus][num].answer1.event_if() == true)\n\nend",
+        "id": 14,
+        "lua_text": "function lua_text() return event_base[map_loc[train_position].bonus][num].answer1.answer_text\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nevent_base[map_loc[train_position].bonus][num].answer1.event()\n\ndialog({ \n   header = event_base[map_loc[train_position].bonus][num].name, \n   text = event_base[map_loc[train_position].bonus][num].answer1.text, \n   answers = { \n    {text = \"Продолжить\", \n    pressListener = function() \n\nevent_num = event_num <plus> 1\n\nif res_hp <= 0 then\nshowPage({id=18})\nelseif event_num < 4  then\nnum = base_of_num[event_num]\nshowPage({id=14})\nelse\n\nif map_loc[train_position].spirit[2] < 4 then\nmap_loc[train_position].spirit[2] = map_loc[train_position].spirit[2] <plus> 1\nend\nshowPage({id=15})\n\nend\n\n     hideDialog() \n     end},} \n  })\n\nend",
+        "text": "1",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "no_transition": true
+      },
+      {
+        "lua_text": "function lua_text() return event_base[map_loc[train_position].bonus][num].answer1.answer_text\nend",
+        "lua_if": "function lua_if()\nreturn event_base[map_loc[train_position].bonus][num].answer1 and (event_base[map_loc[train_position].bonus][num].answer1.event_if() == false)\nend",
+        "middle_answer": true,
+        "id": 14,
+        "text": "1",
+        "comment": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 14,
+        "lua_if": "function lua_if() return event_base[map_loc[train_position].bonus][num].answer2 and (event_base[map_loc[train_position].bonus][num].answer2.event_if() == true)\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nevent_base[map_loc[train_position].bonus][num].answer2.event()\n\ndialog({ \n   header = event_base[map_loc[train_position].bonus][num].name, \n   text = event_base[map_loc[train_position].bonus][num].answer2.text, \n   answers = { \n    {text = \"Продолжить\", \n    pressListener = function() \n\nevent_num = event_num <plus> 1\n\nif res_hp <= 0 then\nshowPage({id=18})\nelseif event_num < 4  then\nnum = base_of_num[event_num]\nshowPage({id=14})\nelse\n\nif map_loc[train_position].spirit[2] < 4 then\nmap_loc[train_position].spirit[2] = map_loc[train_position].spirit[2] <plus> 1\nend\nshowPage({id=15})\n\nend\n\n     hideDialog() \n     end},} \n  })\n\nend",
+        "text": "2",
+        "lua_text": "function lua_text() return event_base[map_loc[train_position].bonus][num].answer2.answer_text\nend",
+        "no_transition": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ],
+        "lua_text": "function lua_text() return event_base[map_loc[train_position].bonus][num].answer2.answer_text\nend",
+        "comment": true,
+        "id": 14,
+        "text": "2",
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nreturn event_base[map_loc[train_position].bonus][num].answer2 and (event_base[map_loc[train_position].bonus][num].answer2.event_if() == false)\nend"
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "id": 14,
+        "lua_if": "function lua_if()\nreturn event_base[map_loc[train_position].bonus][num].answer3 and (event_base[map_loc[train_position].bonus][num].answer3.event_if() == true)\n\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nevent_base[map_loc[train_position].bonus][num].answer3.event()\n\ndialog({ \n   header = event_base[map_loc[train_position].bonus][num].name, \n   text = event_base[map_loc[train_position].bonus][num].answer3.text, \n   answers = { \n    {text = \"Продолжить\", \n    pressListener = function() \n\nevent_num = event_num <plus> 1\n\nif res_hp <= 0 then\nshowPage({id=18})\nelseif event_num < 4  then\nnum = base_of_num[event_num]\nshowPage({id=14})\nelse\n\nif map_loc[train_position].spirit[2] < 4 then\nmap_loc[train_position].spirit[2] = map_loc[train_position].spirit[2] <plus> 1\nend\nshowPage({id=15})\n\nend\n\n     hideDialog() \n     end},} \n  })\n\nend",
+        "text": "3",
+        "lua_text": "function lua_text() return event_base[map_loc[train_position].bonus][num].answer3.answer_text\nend",
+        "no_transition": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ],
+        "lua_text": "function lua_text() return event_base[map_loc[train_position].bonus][num].answer3.answer_text\nend",
+        "comment": true,
+        "id": 14,
+        "text": "3",
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nreturn event_base[map_loc[train_position].bonus][num].answer3 and (event_base[map_loc[train_position].bonus][num].answer3.event_if() == false)\nend"
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon.jpg"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "    \n",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nif map_loc[train_position].spirit[2] < 4 and spirit_base[train_position].death == 0 then\nreturn spirit_base[train_position].name..\"<s>\n<s>\n\"..spirit_base[train_position].event[map_loc[train_position].spirit[2]]..\"<s>\n<s>\nК этому духу вернулась часть воспоминаний.\"\nelseif spirit_base[train_position].death == 0 then\nreturn \"Пустота<s>\n<s>\nЗдесь не осталось воспоминаний о Ваших призрачных пассажирах.\" \nelse\nreturn \"Вы не усмотрели за этим духом, и он растворился в пустоте вместе с воспоминаниями о себе.\"\nend\nend",
+        "super_calculate": false,
+        "id": 15,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "middle_answer": true,
+        "text": "Покинуть воспоминание",
+        "id": 8,
+        "lua_do": "function lua_do() g.fullscreen = 0 end"
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon.jpg"
+      },
+      {
+        "id": 10,
+        "text": "few small bottom",
+        "lua_if": "function lua_if() return train_position == 1 and map_loc[train_position].spirit[2] < 4 and spirit_base[train_position].death == 0 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir1.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return train_position == 2 and map_loc[train_position].spirit[2] < 4 and spirit_base[train_position].death == 0 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir2.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return train_position == 3 and map_loc[train_position].spirit[2] < 4 and spirit_base[train_position].death == 0 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir3.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return train_position == 4 and map_loc[train_position].spirit[2] < 4 and spirit_base[train_position].death == 0 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir4.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return train_position == 5 and map_loc[train_position].spirit[2] < 4 and spirit_base[train_position].death == 0 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir5.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return train_position == 6 and map_loc[train_position].spirit[2] < 4 and spirit_base[train_position].death == 0 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir6.png"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "\nСмерть в посмертии",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Не идеально"
+      },
+      {
+        "id": 19,
+        "text": "Идеально"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "    \n",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "lua_do": "function lua_do()\nshow_back_button (8,0)\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      },
+      {
+        "lua_text": "function lua_text() local text = spirit_base[num_spir].name..\"<s>\n<s>\n<s><s>\"\"..spirit_base[num_spir].dialog[1]..\"<s><s>\"\"\n\nif map_loc[num_spir].spirit[2] > 1 then\n text = text..\"<s>\n<s>\n<s><s>\"\"..spirit_base[num_spir].dialog[2]..\"<s><s>\"\"\nend\nif map_loc[num_spir].spirit[2] > 2 then\n text = text..\"<s>\n<s>\n<s><s>\"\"..spirit_base[num_spir].dialog[3]..\"<s><s>\"\"\nend\n\nreturn text..\"<s>\n<s>\nЭнергия призрака: \"..spirit_base[num_spir].hp..\"%\" end",
+        "super_calculate": false,
+        "id": 17,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nres_food = res_food - 1\nspirit_base[num_spir].hp = math.min(100, spirit_base[num_spir].hp <plus> 10)\nend",
+        "lua_if": "function lua_if() return res_food > 0 and spirit_base[num_spir].hp < 100 end",
+        "instant": true,
+        "id": 17,
+        "text": "Передать духовную энергию",
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ]
+      },
+      {
+        "lua_if": "function lua_if() return res_food == 0 and spirit_base[num_spir].hp < 100 end",
+        "id": 17,
+        "middle_answer": true,
+        "text": "Передать духовную энергию\n(Нет духовной энергии) ",
+        "comment": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ]
+      },
+      {
+        "lua_if": "function lua_if() return spirit_base[num_spir].hp >= 100 end",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ],
+        "middle_answer": true,
+        "text": "Передать духовную энергию\n(Призрак в полном порядке) ",
+        "comment": true,
+        "id": 17
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon.jpg"
+      },
+      {
+        "id": 10,
+        "text": "few small bottom",
+        "lua_if": "function lua_if() return num_spir == 1 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir1.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return num_spir == 2 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir2.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return num_spir == 3 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir3.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return num_spir == 4 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir4.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return num_spir == 5 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir5.png"
+      },
+      {
+        "id": 15,
+        "text": "bottom",
+        "lua_if": "function lua_if() return num_spir == 6 end",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir6.png"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "\nПеревозчик\n\nКажется, это конец твоего пути, машинист... Сколько воспоминаний и потерянных душ тебе удалось собрать... Неплохо, но недостаточно. Ты не спрашивал себя, почему это дело было поручено именно тебе? Да, разумеется, все эти люди были связаны с тобой при жизни... Но ведь я занимаюсь перевозкой душ так давно, с чего бы вдруг мне поручать кому-то гоняться за воспоминаниями умерших? Дело в том, что один из твоих спутников все еще жив! Так что сделай одолжение, возвращайся на исходную и собери мозаику целиком!",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nreturn \"Духи: \"..final_kol_spirit..\" / 6<s>\nВоспоминания: \"..final_kol_memor..\" / 18\"\nend",
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "id": 18,
+        "comment": true
+      },
+      {
+        "super_calculate": false,
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.och0=1\n\nif final_kol_memor >= 9 then\ng.och1=1\nend\n\nif final_kol_memor >= 18 then\ng.och2=1\nend\n\nend"
+      },
+      {
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "instant": false,
+        "id": 1,
+        "text": "Растаять в небытии",
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nend",
+        "comment": false
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon.jpg"
+      },
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir0.png"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "\nПеревозчик\n\nКажется, это конец твоего пути, машинист... Тебе удалось собрать все воспоминания и потерянные души! Ты не спрашивал себя, почему это дело было поручено именно тебе? Да, разумеется, все эти люди были связаны с тобой при жизни... Но ведь я занимаюсь перевозкой душ так давно, с чего бы вдруг мне поручать кому-то гоняться за воспоминаниями умерших? Дело в том, что один из твоих спутников все еще жив! Собрав мозаику целиком, ты напомнил ей о том, что с ней произошло, и теперь она сможет покинуть это место, вернувшись обратно. А твое время наконец пришло... Спасибо за помощь. Пойдем, нам пора.",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nreturn \"Духи: \"..final_kol_spirit..\" / 6<s>\nВоспоминания: \"..final_kol_memor..\" / 18\"\nend",
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ng.och0=1\ng.och3 = 1\n\nif final_kol_memor >= 9 then\ng.och1=1\nend\n\nif final_kol_memor >= 18 then\ng.och2=1\nend\n\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 18
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "middle_answer": true,
+        "id": 20,
+        "instant": false,
+        "text": "Отправиться за перевозчиком",
+        "comment": false
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon.jpg"
+      },
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir0.png"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "\nМашенька\n\nВ то же время в больнице неподалеку от разрушенного депо Машенька вышла из комы...\n\nПоздравляем! Вам удалось пройти Souls_Train наилучшим образом! Спасибо за игру!",
+    "answers": [
+      {
+        "comment": false,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "lua_do": "function lua_do()\ng.fullscreen = 1\nend",
+        "id": 1,
+        "instant": false,
+        "text": "Продолжить",
+        "middle_answer": true
+      },
+      {
+        "id": 20,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon3.jpg"
+      },
+      {
+        "id": 10,
+        "text": "few small bottom",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir1.png"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "\nДостижения",
+    "answers": [
+      {
+        "id": 21,
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nshow_back_button(1,1)\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": false
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if() return g.och1 == 1 end",
+        "instant": false,
+        "id": 21,
+        "text": "Начинающий перевозчик\n(Открыть половину воспоминаний) \n\nПОЛУЧЕНО",
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "id": 21,
+        "instant": false,
+        "text": "Начинающий перевозчик\n(Открыть половину воспоминаний) \n\nНЕ ПОЛУЧЕНО",
+        "lua_if": "function lua_if() return g.och1 == 0 end"
+      },
+      {
+        "lua_if": "function lua_if() return g.och2 == 1 end",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "text": "Хранитель воспоминаний\n(Открыть все воспоминания) \n\nПОЛУЧЕНО",
+        "id": 21,
+        "instant": false,
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "comment": true,
+        "lua_if": "function lua_if() return g.och2 == 0 end",
+        "middle_answer": true,
+        "id": 21,
+        "text": "Хранитель воспоминаний\n(Открыть все воспоминания) \n\nНЕ ПОЛУЧЕНО",
+        "instant": false,
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ]
+      },
+      {
+        "lua_if": "function lua_if() return g.och3 == 1 end",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button.png"
+        ],
+        "text": "Вершитель судеб\n(Узнать судьбу Машеньки)\n\nПОЛУЧЕНО",
+        "id": 21,
+        "instant": false,
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if() return g.och3 == 0 end",
+        "bgAnswerImage": [
+          "http://188.120.236.127/Souls_Train/button_empty.png"
+        ],
+        "text": "Вершитель судеб\n(Узнать судьбу Машеньки)\n\nНЕ ПОЛУЧЕНО",
+        "id": 21,
+        "instant": false,
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/train/fon.jpg"
+      },
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "url": "http://188.120.236.127/Souls_Train/spirits/spir0.png"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "run": [
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "",
+    "answers": []
+  }
+]

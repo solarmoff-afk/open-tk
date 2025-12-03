@@ -1,0 +1,1045 @@
+[
+  {
+    "id": 1,
+    "text": "\n\n   *   *   *\n\nУважаемые авторы! По ряду причин ваши вопросы в комментариях к учебникам могут долгое время оставаться без внимания. Для оперативной помощи рекомендуем задавать их в нашей группе ВК, в беседе авторов или в дискорде ",
+    "answers": [
+      {
+        "id": 2,
+        "calculate": false,
+        "text": "Начать",
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "calculate": false,
+        "text": "Посмотреть новинки!",
+        "lua_do": "function lua_do()\nresults = {{text = \"Назад\", fontSize = 0.9}}\nlocal word = \"доступно с версии\"\n      local findPages = 0\n      for i = 1, #pages do\n        local successFind\n        if g.findInText(pages[i].text, word, i) then\n          successFind = true\n        end \n        for j = 1, #pages[i].answers do\n          local answer = pages[i].answers[j]\n          if answer.comment and not (answer.calculate or answer.super_calculate) then\n            if g.findInText(answer.text, word, i) then\n              successFind = true\n            end\n          end\n        end\n        if successFind then\n          findPages = findPages <plus> 1\n        end\n        if #results >= 50 then\n          break\n        end\n      end\n      if #results <=1 then\n        message(\"Ничего не нашлось\")\n      else\n        dialog{header = 'Результаты поиска \"' .. word .. '\"',\n        text = \"Вхождений: \".. (#results - 1) .. \", страниц: \" .. findPages,\n        fontSizeForBody = 0.9,\n        answers = results}\n      end\n \nend"
+      },
+      {
+        "id": 23,
+        "text": "Поиск по квесту",
+        "run": [
+          23
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Сервер ТК в Discord",
+        "comment": false,
+        "url": "https://discord.com/invite/8DaZ3YHKk8"
+      },
+      {
+        "id": 1,
+        "text": "Чат ответов на вопросы в Телеграме",
+        "comment": false,
+        "url": "https://t.me/luartirs"
+      },
+      {
+        "lua_text": "function lua_text()\n--[[В учебнике есть автоматические подсказки, как применять переменные.\n  copy answers 4 - изменяемые переменные,\n  copy answers 13 - переменные для чтения]]\nend",
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\ng[\"autorun after\"] = 23\nend",
+        "text": "Поиск по всему квесту"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "   ",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nsection = (section == \"image\") and \"\" or \"image\"\nend",
+        "middle_answer": true,
+        "text": "Картинки",
+        "id": 2,
+        "instant": true
+      },
+      {
+        "id": 3,
+        "text": "Фоны квеста",
+        "lua_if": "function lua_if()\nreturn section == \"image\"\nend"
+      },
+      {
+        "id": 19,
+        "text": "Фон ответа по умолчанию (на все ответы)",
+        "lua_if": "function lua_if()\nreturn section == \"image\"\nend"
+      },
+      {
+        "id": 10,
+        "text": "Закачка картинок",
+        "lua_if": "function lua_if()\nreturn section == \"image\"\nend"
+      },
+      {
+        "id": 11,
+        "text": "Место под картинки и полноэкранный режим",
+        "lua_if": "function lua_if()\nreturn section == \"image\"\nend"
+      },
+      {
+        "id": 24,
+        "text": "Блокировка скролла",
+        "lua_if": "function lua_if()\nreturn section == \"image\"\nend"
+      },
+      {
+        "id": 15,
+        "text": "Позиция картинки и свой текст (инструменты для новелл)",
+        "lua_if": "function lua_if()\nreturn section == \"image\"\nend"
+      },
+      {
+        "id": 2,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "instant": true,
+        "middle_answer": true,
+        "text": "Настройки оформления и звук",
+        "id": 2,
+        "lua_do": "function lua_do()\nsection = (section == \"decor\") and \"\" or \"decor\"\nend"
+      },
+      {
+        "id": 7,
+        "text": "Цветовые режимы",
+        "lua_if": "function lua_if()\nreturn section == \"decor\"\nend",
+        "middle_answer": false
+      },
+      {
+        "id": 12,
+        "text": "Шрифты",
+        "lua_if": "function lua_if()\nreturn section == \"decor\"\nend",
+        "middle_answer": false
+      },
+      {
+        "middle_answer": false,
+        "text": "Форматирование текста тэгами",
+        "lua_if": "function lua_if()\nreturn section == \"decor\"\nend",
+        "id": 27
+      },
+      {
+        "id": 5,
+        "text": "Музыка",
+        "lua_if": "function lua_if()\nreturn section == \"decor\"\nend",
+        "middle_answer": false
+      },
+      {
+        "id": 2,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "text": "Добавочные элементы дизайна",
+        "lua_do": "function lua_do()\nsection = (section == \"addDesign\") and \"\" or \"addDesign\"\nend",
+        "instant": true,
+        "id": 2,
+        "middle_answer": true
+      },
+      {
+        "id": 16,
+        "text": "Всплывающие уведомления и диалоги",
+        "lua_if": "function lua_if()\nreturn section == \"addDesign\"\nend"
+      },
+      {
+        "id": 14,
+        "text": "Виджеты: нажатие и свой текст",
+        "lua_if": "function lua_if()\nreturn section == \"addDesign\"\nend"
+      },
+      {
+        "id": 25,
+        "text": "Правое меню",
+        "lua_if": "function lua_if()\nreturn section == \"addDesign\"\nend"
+      },
+      {
+        "id": 20,
+        "text": "Убрать большую круглую кнопку (для удобства автора)",
+        "lua_if": "function lua_if()\nreturn section == \"addDesign\"\nend"
+      },
+      {
+        "id": 2,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "text": "Страницы, закладки",
+        "lua_do": "function lua_do()\nsection = (section == \"page\") and \"\" or \"page\"\nend",
+        "instant": true,
+        "id": 2,
+        "middle_answer": true
+      },
+      {
+        "id": 6,
+        "text": "Специальные страницы",
+        "lua_if": "function lua_if()\nreturn section == \"page\"\nend"
+      },
+      {
+        "id": 8,
+        "text": "Страницы и переходы",
+        "lua_if": "function lua_if()\nreturn section == \"page\"\nend"
+      },
+      {
+        "id": 21,
+        "text": "Вкладки",
+        "lua_if": "function lua_if()\nreturn section == \"page\"\nend"
+      },
+      {
+        "id": 9,
+        "text": "Закладки и история посещений",
+        "lua_if": "function lua_if()\nreturn section == \"page\"\nend"
+      },
+      {
+        "id": 2,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "text": "Для луа-программистов",
+        "lua_do": "function lua_do()\nsection = (section == \"lua\") and \"\" or \"lua\"\nend",
+        "instant": true,
+        "id": 2,
+        "middle_answer": true
+      },
+      {
+        "id": 22,
+        "text": "Переменные",
+        "lua_if": "function lua_if()\nreturn section == \"lua\"\nend"
+      },
+      {
+        "id": 26,
+        "text": "Библиотеки table и string",
+        "lua_if": "function lua_if()\nreturn section == \"lua\"\nend"
+      },
+      {
+        "id": 13,
+        "text": "Информация о читателе",
+        "lua_if": "function lua_if()\nreturn section == \"lua\"\nend"
+      },
+      {
+        "id": 17,
+        "text": "Системные графические объекты",
+        "lua_if": "function lua_if()\nreturn section == \"lua\"\nend"
+      },
+      {
+        "id": 18,
+        "text": "Свои графические объекты",
+        "lua_if": "function lua_if()\nreturn section == \"lua\"\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nopen = nil\nopen2 = nil\ng.disableAuthorButton = 1\nend",
+        "calculate": true,
+        "text": "    ",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 3,
+        "text": "global background — фон страницы вместо бумаги.\n\nglobal theme — задний фон вместо досок.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nopen = \"background\"\nopen_global = true\nopen_type = \"url\"\nshowPage{id = g.current_id}\nend",
+        "text": "Как ввести?",
+        "id": 10,
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"url\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend"
+      },
+      {
+        "id": 3,
+        "text": "global base_layer_alpha — прозрачность подложки (от 0 до 1).",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"base_layer_alpha\"\nopen_global = true\nopen_type = \"float\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"float\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend"
+      },
+      {
+        "id": 3,
+        "text": "global base_layer_color — цвет подложки в формате RGB.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"base_layer_color\"\nopen_global = true\nopen_type = \"rgb\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"rgb\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal v = \"{0, 0, 0}\"\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nopen = \"background\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "text": "Как ввести?",
+        "id": 10,
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 5,
+        "text": "global bg_music — фоновая музыка.\n\nglobal switch_page_sound — звук смены страниц.\n\nglobal play_sound_once — единичное воспроизведение музыки.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"bg_music\"\nopen_global = true\nopen_type = \"mp3\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"mp3\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"mp3\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "Обратите внимание, что сначала надо загрузить музыку оператором init sound [\"mySound\", \"https://my_quest.ucoz.site/load/0-7\"]",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 6,
+        "text": "global autorun — номер страницы, ответы которой будут \"приклеиваться\" в начало каждой страницы в режиме читателя.\n\nglobal autorun after — то же самое, но ответы будут приклеиваться в конец каждой страницы.\n\nglobal safePage — номер страницы, на которую попадёт читатель, если вдруг произойдёт коллапс.\n\nglobal reloadFunctions — номер страницы, калькулейты с которой будут срабатывать каждый перезаход (для перезагрузки функций луа).",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"autorun\"\nopen_global = true\nopen_type = \"page\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"page\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nelseif open_type == \"page\" then\n  v = \"5\"\n  op = \"var set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 7,
+        "text": "global invert text color — ночной режим для всех читателей.\n\nglobal blockNightMode — дневной режим для всех читателей.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"invert text color\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g[\"' or '') .. open.. '\"] = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 8,
+        "text": "global current_id — номер текущей страницы.\n\nglobal previos_id — номер предыдущей страницы.",
+        "comment": true
+      },
+      {
+        "id": 8,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "id": 8,
+        "text": "global transition — переход между страницами. Если назначить \"instant\", переход по умолчанию будет мгновенный.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"transition\"\nopen_global = true\nopen_type = \"instant\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"instant\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 9,
+        "text": "global blockSaves — запретить использование закладок.\n\n>доступно с версии 451:\n\nglobal rememberChoices — подсвечивать тёмным варианты ответов, которые игрок уже выбирал раньше.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"blockSaves\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      },
+      {
+        "id": 8,
+        "text": "history — история посещений.\n\nglobalHistory — глобальная история посещений.\n\nisHistoryContain(x) — функция возвращает true, если игрок посещал страницу x в данной игре.\n\nisGlobalHistoryContain(x) — функция возвращает true, если игрок когда-либо посещал страницу x.",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "global noDownload — отключить закачку всех картинок на первой странице, чтобы они загружались по мере надобности или через contentList.\n\nglobal instantDownload — закачка картинок контент-листом автоматически, без дополнительной кнопки.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"noDownload\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 11,
+        "text": "global fullscreen — включить полноэкранный режим, при котором картинка занимает всю страницу, текст страницы скрыт, а кнопки идут в обратной последовательности.\n\nglobal fullscreen_on_first_page — полноэкранный режим на первой странице.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nopen = \"fullscreen\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "text": "Как ввести?",
+        "id": 10,
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend"
+      },
+      {
+        "id": 11,
+        "text": "global image_part_of_screen — пропорции места под картинки (полотна). Равна отношению высоты полотна к длине. По умолчанию 0.6",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nopen = \"image_part_of_screen\"\nopen_global = true\nopen_type = \"float\"\nshowPage{id = g.current_id}\nend",
+        "text": "Как ввести?",
+        "id": 10,
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"float\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 12,
+        "text": "global font — назначить свой шрифт в квесте (список доступных шрифтов в левом меню).\n\nglobal fontSize — получить размер шрифта, выбранный читателем.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"font\"\nopen_global = true\nopen_type = \"font\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"font\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op = '\"Roboto-Light\"', \"var str set\"\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 13,
+        "text": "global isAuthor — показывает, квест читает автор или игрок.\n\nglobal isWindows — читают с компьютера или нет.\n\nglobal userInQuest — читатель в квесте или уже выходит.\n\nglobal menuOpened — меню открыто или нет.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как использовать?",
+        "lua_do": "function lua_do()\nopen = \"isAuthor\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op, sign\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var equal\"\n  sign = \"==\"\nelseif open_type == \"number\" then\n  v = \"449\"\n  op = \"var need\"\n  sign = \">=\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var need\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_if()<s>\nreturn ' .. (open_global and 'g.' or '') .. open .. ' ' .. sign .. ' ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      },
+      {
+        "id": 13,
+        "text": "global version — номер версии у читателя.\n\nglobal time — время в секундах, прошедшее с 1 января 1970 года.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как использовать?",
+        "lua_do": "function lua_do()\nopen = \"version\"\nopen_global = true\nopen_type = \"number\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"number\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op, sign\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var equal\"\n  sign = \"==\"\nelseif open_type == \"number\" then\n  v = \"449\"\n  op = \"var need\"\n  sign = \">=\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var need\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_if()<s>\nreturn ' .. (open_global and 'g.' or '') .. open .. ' ' .. sign .. ' ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Свой текст на виджете myWidget:\n\nfunctiоn lua_do()\n   g[\"lua_text_widget\".. \"myWidget\"] = [[lua_text_widget = \n   function() \n      return \"Текст\"\n   end]] \nend",
+        "comment": true
+      },
+      {
+        "id": 14,
+        "text": "Скопировать",
+        "comment": false,
+        "lua_do": "function lua_do()\npasteboard.copy(\"string\", [=[functiоn lua_do()\n   g[\"lua_text_widget\".. \"myWidget\"] = [[lua_text_widget = \n   function() \n      return \"Текст\"\n   end]] \nend]=])\nmessage(\"Скопировано в буфер обмена\")\nend"
+      },
+      {
+        "id": 14,
+        "text": "Исполнение кода по нажатию на виджет:\n\nfunctiоn lua_do()\n   g[\"lua_tap\" .. \"myWidget\"] = [[lua_tap = \n   function() \n      gold = gold <plus> 5 \n      showPage {id = g.current_id, transition = \"instant\"}\n   end]]\nend",
+        "comment": true
+      },
+      {
+        "id": 14,
+        "text": "Скопировать",
+        "comment": false,
+        "lua_do": "function lua_do()\npasteboard.copy(\"string\", [=[functiоn lua_do()\n   g[\"lua_tap\" .. \"myWidget\"] = [[lua_tap = \n   function() \n      gold = gold <plus> 5 \n      showPage {id = g.current_id, transition = \"instant\"}\n   end]]\nend]=])\nmessage(\"Скопировано в буфер обмена\")\nend"
+      },
+      {
+        "id": 1,
+        "targetbookid": 49000,
+        "text": "Учебник луа"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 15,
+        "text": "canvasImage(\"имя картинки\", x, y, ширина, высота) — позиционирование и масштабирование картинки в канвасе.\n\ntextWindow(\"Текст\", \"имя картинки-окна\", размер шрифта, ширина, x, y) — текст относительно картинки окна.\n\niconWindow(\"имя иконки\", \"имя картинки-окна\", x, y, ширина, высота) — иконка относительно картинки окна.\n\npaintText(\"имя картинки-окна\", r, g, b) — покрасить текст.",
+        "comment": true
+      },
+      {
+        "id": 15,
+        "text": "Подробнее с примерами",
+        "comment": false,
+        "url": "https://vk.com/@-198357080-polotno-bez-programmirovaniya"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 16,
+        "text": "message(\"текст\") — уведомление в виде чёрной полоски с текстом. \n\ndialog(options) — диалоговое окно с текстом и ответами.\n\nhideDialog() — убрать диалоговое окно.\n\ng.standartDialogOptions — таблица со стандартными параметрами диалогового окна.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = 'message(\"текст\")'\nopen_type = \"code\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"code\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nreturn 'Оболочка, внутри которой можно писать любой код:<s>\n<s>\nfunction lua_do()<s>\nend<s>\n<s>\nНапример, вставьте в ответ и сохраните<s>\n<s>\nfunction lua_do()<s>\n' .. open .. '<s>\nend'\nend",
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"code\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "dialog — более объёмная вещь, поэтому предлагаем ознакомиться с учебником луа (пролистайте до пункта \"сообщения, уведомления, диалоги\")",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "targetbookid": 49000,
+        "lua_if": "function lua_if()\nreturn open and open_type == \"code\"\nend",
+        "text": "Учебник луа"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"code\"\nend",
+        "comment": false,
+        "lua_do": "function lua_do()\nopen2 = [[dialog {header = \"Заголовок\", \n   text = \"Основной текст\",\n   fontSizeForHeader = 1.5,\n   fontSizeForBody = 0.7,\n   visibility = 0.7,\n   background = { 0.3, 0.4, 0.3 } or \"https://i.ibb.co/fv6Q8z8.jpg\",\n   textColorForHeader = { 1, 1, 1 },\n   textColorForBody = { 1, 0.7, 0.5 },\n   answers = {\n     {text = \"Текст первого ответа\",\n     fontSize = 1.6,\n     textColor = { 0.4, 0.9, 0.3 },\n     background = { 1, 0.3, 0.1 } or \"https://i.ibb.co/fv6Q8z8.jpg\",\n     pressEffect = { 0.2, 0.3, 1 },\n     disablePressEffect = true,\n     pressListener = \n     function() \n       hideDialog() \n     end}\n   }\n}]]\nopen_type2 = \"code\"\nend",
+        "text": "Пример диалога без пояснений",
+        "id": 16,
+        "instant": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open2 and open_type2 == \"code\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nreturn 'Все параметры диалога опциональны<s>\n<s>\nfunction lua_do()<s>\n' .. open2 .. '<s>\nend<s>\n<s>\nЕсли хотите установить какие-то параметры для всех диалогов по умолчанию, то присвойте переменной g.standartDialogOptions таблицу с такими же параметрами'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 17,
+        "text": "canvas — полотно (container).\n\ncanvasGroup — группа полотна (group).\n\nimages — таблица видимых картинок.",
+        "comment": true
+      },
+      {
+        "id": 17,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 17,
+        "text": "woodBackground — задний фон.\n\nbaseLayer — подложка.\n\nanswers_objects — таблица видимых ответов.\n\npages — таблица с информацией, по которой рисуются страницы.\n(осторожно, чёрная магия).",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "nameForImages(\"https://i.ibb.co/fv6Q8z8.jpg\") — функция, возвращающая имя картинки, по которому она хранится в директории.\n\ndisplay.newImage(\"https://i.ibb.co/fv6Q8z8.jpg\") — создаёт картинку в canvasGroup на нулевых координатах.\n\ndisplay.newGroup() — создаёт группу внутри canvasGroup.\n\nnative.newTextBox — создаётся сразу с кнопками копирования/вставки. Для их отключения добавьте последним аргументом значением true.",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "global defaultBgAnswerImage — фон картинки по умолчанию.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"defaultBgAnswerImage\"\nopen_global = true\nopen_type = \"url\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"url\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 20,
+        "text": "global disableAuthorButton — убрать большую круглую кнопку смены режима читатель/автор.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"disableAuthorButton\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 21,
+        "text": "global tab — номер вкладки\n(осторожно, чёрная магия).",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как использовать?",
+        "lua_do": "function lua_do()\nopen_type = \"black\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open_type == \"black\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "(Андрей Холявка)\n\nОсновная цель вкладок — сделать так, чтобы игрок мог находиться на нескольких страницах квеста одновременно. У каждой такой вкладки своя история посещений, своя музыка, свои автораны, (но переменные одинаковые). Для подобного распараллеливания используется переменная \"global tab\", принимающая значения от нуля(стандартный режим, который мы имеем сейчас) до бесконечности. Значения устанавливаются через var set или посредством lua.\n\nДля оперирования функционалом вкладок теперь есть старенькие, но модифицированные операторы: ?, #, #<plus>, !!. Первые используются чтобы провернуть что-нибудь с историей посещений вкладки. Для этого вместо номера страницы, как раньше, нужна следующая форма записи\n[x, y] где х — это номер вкладки, а у — номер страницы.\n#[ [1, 3] ] — удалить из истории посещений первой вкладки (не забываем, что наша начальная вкладка — нулевая. Чтобы удалить что-то из обычной истории посещений, используем старую форму записи)\n#<plus>[ [2,5], 6 ] — добавить в обычную историю посещений страницу 6, а в историю посещений 2-ой вкладки страницу 5.\n?[ [1,4], 2 ] — проверка, содержится ли в текущей истории страница 4, посещенная во вкладке 1 и страница 2, посещенная во вкладке 0(посещенная как обычно). ?or работает так же, ?? не работает с вкладками, а проверяет, посещена ли страница в принципе хоть где-то.\n!! — шаг назад по истории текущей вкладки. Обратите внимание, что если история вкладки вдруг закончится, игрок вылетит на первую страницу, что приведет к сбросу истории и вкладки.\n\nКак использовать вкладки:\nДелаем ответ, на котором с помощью var set устанавливаем в переменную \"global tab\" нужный нам номер. Теперь этот ответ приведет игрока на указанную страницу, но это будет уже другая вкладка. Для возврата на то место в другой вкладке, с которого игрок ушел, нужна аналогичная кнопка, устанавливающая \"global tab\" на нужное значение и с оператором !!. \n\nКонечно, было бы удобно как-то собрать вместе кнопки, способные перемещать игрока по вкладкам, чтобы не пихать их на каждую страницу. Эту задачу способно выполнить правое меню (сайд-меню).",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 22,
+        "text": "vars — таблица переменных, сбрасывающихся на первой странице.\n\nglobal_vars — таблица глобальных переменных.\n\ng — сокращённое название global_vars.",
+        "comment": true
+      },
+      {
+        "id": 22,
+        "text": "vars.a == a\nglobal_vars.b == g.b",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "    ",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  function g.findInText(text, word, page)\n    word = utf8.gsub(word, \"([%(%)%.%%%<plus>%-%*%?%[%]%^%$])\", \"%%%0\")\n    local start, finish = utf8.find(text, word)\n    if start then\n      local result\n      result = \n  utf8.match(text, \"^[^<s>\n]-\".. word.. \"[^<s>\n]-$\") or\n  utf8.match(text, \"^[^<s>\n]-\".. word.. \"[^<s>\n]-<s>\n\") or\n  utf8.match(text, \"<s>\n[^<s>\n]-\".. word.. \"[^<s>\n]-$\") or\n  utf8.match(text, \"<s>\n[^<s>\n]-\".. word.. \"[^<s>\n]-<s>\n\")\n      result = utf8.gsub(result, \"[%s<s>\n]<plus>\", \" \")\n      if #result > 100 then\n        result = utf8.sub(result, 1, 100)\n        if utf8.sub(result, 100, 100) == \" \" then\n          result = utf8.sub(result, 1, -2)\n        else\n          result = utf8.sub(result, 1, -2) .. \"...\"\n        end\n      end\n      table.insert(results, {text = result, \n      fontSize = 0.9, pressListener = \n      function() \n        showPage{id = page} \n        hideDialog() \n      end})\n      return true\n    end\n    return false\n  end\nend",
+        "text": "Поиск в тексте",
+        "id": 23,
+        "calculate": false
+      },
+      {
+        "comment": false,
+        "super_calculate": true,
+        "id": 23,
+        "text": "Поиск",
+        "lua_do": "function lua_do()\ntimer.performWithDelay(1, function()\nlocal cw, ch = display.contentWidth, display.contentHeight\nlocal w = cw*0.1\nlocal find = display.newImage(canvas.parent.parent.parent.parent.parent, \"detective-md.png\", 0, 0)\nfind.xScale = w/find.width\nfind.yScale = find.xScale\nfind.x = cw - find.contentWidth/2 - 0.04*cw\nfind.y = find.contentHeight/2 <plus> 0.03*cw\nfind:setFillColor(0)\n\nfind:addEventListener(\"tap\",   \n  function(event)\n    if not event.target.input then\n      local cw, ch = display.contentWidth, display.contentHeight\n      local input = native.newTextField(cw*0.5, cw*0.07, cw*0.6, cw*0.075)\ncanvas.parent.parent.parent.parent.parent:insert(input)\n      event.target.input = input\n    else\n      local word = event.target.input.text or \"  \"\n      if utf8.match(word, \"^%s*$\") then\n        if event.target.input and event.target.input.removeSelf then\n          event.target.input: removeSelf()\n        end\n        event.target.input = nil\n        return true\n      end\n\n      results = {{text = \"Назад\", fontSize = 0.9}}\n      local findPages = 0\n      for i = 1, #pages do\n        local successFind\n        if g.findInText(pages[i].text, word, i) then\n          successFind = true\n        end \n        for j = 1, #pages[i].answers do\n          local answer = pages[i].answers[j]\n          if answer.comment and not (answer.calculate or answer.super_calculate) then\n            if g.findInText(answer.text, word, i) then\n              successFind = true\n            end\n          end\n        end\n        if successFind then\n          findPages = findPages <plus> 1\n        end\n        if #results >= 50 then\n          break\n        end\n      end\n      if event.target.input and event.target.input.removeSelf then\n        event.target.input:removeSelf()\n      end\n      event.target.input = nil\n      if #results <=1 then\n        message(\"Ничего не нашлось\")\n      else\n        dialog{header = 'Результаты поиска \"' .. word .. '\"',\n        text = \"Вхождений: \".. (#results - 1) .. \", страниц: \" .. findPages,\n        fontSizeForBody = 0.9,\n        answers = results}\n      end\n    end\n  return true\n  end)\nend)\nend",
+        "calculate": false
+      },
+      {
+        "id": 2,
+        "text": "Назад",
+        "lua_if": "function lua_if()\nreturn g.current_id > 2\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 23,
+        "text": "Ответы",
+        "calculate": false,
+        "lua_do": "function lua_do()\ng[\"countAnswers\".. g.current_id] = 0\ntimer.performWithDelay(50,\nfunction(event)\nif answers_objects and #answers_objects > 0 then\n  local oldCount = g[\"countAnswers\".. g.current_id] or 0\n  g[\"countAnswers\".. g.current_id] =  #answers_objects\n  if #answers_objects > oldCount then\n    for i = oldCount <plus> 1, #answers_objects do\n      local answer = answers_objects[i].text\n      local text = answer.text\n      local rect = answers_objects[i].rect\n      if (utf8.find(text, \" — \") or utf8.find(text, \"global \")) and not (utf8.find(text, \"function\") or utf8.find(text, \"^%s*$\") or utf8.sub(text, 1, 1) == \"(\" ) then\n        local frame = display.newRoundedRect (answer.parent, answer.x, answer.y <plus> answer.height/2, answer.width*1.05, answer.height <plus> answer.width*0.05, answer.width/50)\n        frame.strokeWidth = answer.width/75\n        if utf8.find(text, \"чёрная магия\") then\n          frame:setFillColor (0.3, 0.3, 0.5, 0.3)\n          frame:setStrokeColor (0.3, 0.3, 0.5)\n        else\n          frame:setFillColor (0.5, 0.7, 1, 0.3)\n          frame:setStrokeColor (0.5, 0.7, 1)\n        end\n        answer:toFront()\n\n      elseif text == \"Как ввести?\" or text == \"Как использовать?\" or text == \"Скопировать\" then\n        local myText = display.newText\n        {parent = answer.parent,\n         text = text,\n         fontSize = answer.size,\n         x = answer.x,\n         y = answer.y,\n         align = \"right\"}\n       \n        rect.x = rect.x <plus> rect.width/2\n        rect.width = myText.width*1.2\n        myText:removeSelf()\n        rect.x = rect.x - rect.width/2\n        --answer.width = rect.width\n        answer.x = rect.x <plus> answer.width/2 - rect.width*0.4\n        \n        rect.shadow.x = rect.x\n        rect.shadow.width = rect.width\n      end\n    end\n  else\n    timer.cancel(event.source)\n  end\nend\nend, -1)\nend"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 11,
+        "text": "global blockSwipeLeftMenu — блокировать открытие меню свайпом (будет открываться только по шестерёнке)\n\nglobal noScroll — запретить скролл страницы",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"noScroll\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 25,
+        "text": "global side_menu — номер страницы, которая образует правое меню. При значении 0 меню не работает.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"side_menu\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"3\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      },
+      {
+        "id": 25,
+        "text": "global right_icon — url иконки правого меню.\n\nglobal menu_background — url фона правого меню (не обязательно).",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "text": "Как ввести?",
+        "lua_do": "function lua_do()\nopen = \"right_icon\"\nopen_global = true\nopen_type = \"url\"\nshowPage{id = g.current_id}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"url\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nelse\n  v = '\"'.. open_type .. '\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 26,
+        "text": "table.count(t) — количество значений в таблице t (не считая nil).\n\ntable.copy2(t) — отличается от table.copy(t) тем, что копирует рекурсивно все уровни, а не только первый.\n\ntable.up(t, i) — перемещает элемент с позиции i на первую позицию.\n\ntable.compare(t1, t2) — сравнивает две таблицы и выдаёт результат, одинаковы они или нет.",
+        "comment": true
+      },
+      {
+        "id": 26,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "id": 26,
+        "text": "string.split(str, sep) — разбивает строку str по разделителю sep и возвращает таблицу подстрок.",
+        "comment": true
+      },
+      {
+        "id": 26,
+        "text": "t = string.split('I like Quests', ' ')\n   приведёт к\nt == {\"I\", \"like\", \"Quests\"}",
+        "comment": true
+      },
+      {
+        "id": 26,
+        "text": "Все стандартные функции библиотек тоже работают.",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "        ",
+    "answers": [
+      {
+        "id": 7,
+        "text": ">доступно с версии 451:\n\nglobal formatText — включить форматирование текста тэгами (осторожно, чёрная магия).",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nopen = \"formatText\"\nopen_global = true\nopen_type = \"bool\"\nshowPage{id = g.current_id}\nend",
+        "text": "Как ввести?",
+        "id": 10,
+        "no_transition": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn open and open_type == \"bool\"\nend",
+        "text_color": [],
+        "id": 3,
+        "text": "    ",
+        "lua_text": "function lua_text()\nlocal v, op\nif open_type == \"bool\" then\n  v = \"1\"\n  op = \"var set\"\nelseif open_type == \"float\" then\n  v = \"0.3\"\n  op = \"var set\"\nelseif open_type == \"url\" then\n  v = '\"https://i.ibb.co/fv6Q8z8.jpg\"'\n  op = \"var str set\"\nelseif open_type == \"mp3\" then\n  v = '\"mySound\"'\n  op = \"var str set\"\nend\n\nreturn 'Вставьте в ответ и сохраните<s>\n<s>\nОператор:<s>\n' .. op .. ' [\"' .. (open_global and 'global ' or '') .. open.. '\", ' .. v .. ']<s>\n<s>\nИЛИ<s>\n<s>\nЛуа-код:<s>\nfunction lua_do()<s>\n' .. (open_global and 'g.' or '') .. open.. ' = ' .. v .. '<s>\nend'\nend",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "targetbookid": 251484,
+        "text": "Учебник по форматированию текста тэгами"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  }
+]

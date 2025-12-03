@@ -1,0 +1,445 @@
+[
+  {
+    "id": 1,
+    "text": "автор: helivert\n\nПогрузитесь в экшен-реальность, где экономика и управление государством сливаются в безумный вихрь калибровки НДС\n\nv0.1.0",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Калибровать"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "reloadFunctions",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction updatePrice(goodType)\n    local g = goods[goodType]\n    local f = facilities[goodType]\n    local s = f.salary / f.gPerW\n    local c = calculateCost(g, s)\n    local m = g.markup\n    local r = g.demand[1] / g.supply[1]\n    local n = 1 <plus> v / 100\n    local wn = calculatePriceWithoutNDS(c, m, r)\n    local profit = wn - c\n    local result = math.round(wn * n * 100) / 100\n    g.profit = math.round(profit * 100) / 100\n    g.price = {result, g.price[1]}\nend\n\nfunction calculatePriceWithoutNDS(c, m, r)\n    return c * (1 <plus> m) * r\nend\n\nfunction calculateCost(g, s)\n    local r = calculateRaw(g)\n    local c = g.base <plus> r <plus> s\n    return c\nend\n\nfunction calculateRaw(g)\n    local total = 0\n    for key, value in pairs(g.raw) do\n        total = total <plus> value * goods[key].price[1]\n    end\n    return total\nend\n\nfunction math.round(num)\n    return math.floor(num <plus> 0.5)\nend\nend",
+        "calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n function getNeeds()\n    local needs2 = {}\n    for good, _ in pairs(goods) do\n        for need, _ in pairs(goods) do\n            if goods[need].raw[good] then\n                if not needs2[good] then\n                    needs2[good] = {}\n                end\n                needs2[good][need] = goods[need].raw[good]\n            end\n        end\n    end\n    return needs2\nend\nend",
+        "calculate": false,
+        "id": 2,
+        "text": "getNeeds"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction delta(x, y)\n    return (x - y) / x\nend\n\nfunction calculateTotalDemand(goodType)\n    local total = 0\n    if population.need[goodType] then\n        total = total <plus> population.need[goodType] * population.qty\n    end\n    if needs[goodType] then\n        for key, value in pairs(needs[goodType]) do\n            if facilities[key] then\n                local demand = value * facilities[key].qty\n                total = total <plus> demand\n         \n            end\n        end\n    end\n    return total\nend\n\n\nfunction calculateTotalSupply(goodType, prod)\n    local g = goods[goodType]\n    local d0 = g.demand[1]\n    local imp = 0\n    if d0 - prod > 0 then\n        imp = d0 - prod\n    end\n    local s = prod <plus> imp\n    return s\nend\n\nfunction updateDS(goodType)\n    local g = goods[goodType]\n    local p0, p1 = g.price[2], g.price[1]\n    local d0, d1 = g.demand[2], g.demand[1]\n    local s0, s1 = g.supply[2], g.supply[1]\n\n    if p1 == p0 then p1 = p1 * 1.01 end\n    if d1 == d0 then d1 = d1 * 1.01 end\n    if s1 == s0 then s1 = s1 * 1.01 end\n\n    local deltaPrice = delta(p1, p0)\n    local deltaDemand = delta(d1, d0)\n    local deltaSupply = delta(s1, s0)\n    local b = deltaDemand / deltaPrice\n    local d = deltaSupply / deltaPrice\n    local prod = facilities[goodType].qty\n    local px = math.log(p0)\n    local a = calculateTotalDemand(goodType)\n\n    local newDemand = math.floor(math.max(a - b * px, a / 2) <plus> 0.5)\n    g.demand = { newDemand, d0 }\n    local c = calculateTotalSupply(goodType, prod)\n    local newSupply = math.floor(math.max(c <plus> d * px, c / 2) <plus> 0.5)\n    g.supply = { newSupply, s0 }\nend\n\nend",
+        "calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction calculateProduction(f)\n    return f.workers * f.gPerW * f.efficiency\nend\n\nfunction updateProduction(goodType)\n    local f = facilities[goodType]\n    local production = calculateProduction(f)\n    f.qty = production\nend\nend",
+        "calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction calculateNDSIncome(qty, price)\n    return qty * price * (1 <plus> v / 100)\nend\n\nfunction updateBudget()\n    for good, _ in pairs(goods) do\n        calculateNDSIncome(facilities[good].qty, goods[good].price[2])\n    end\nend\nend",
+        "calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction updateGoods()\n  for good, _ in pairs(goods) do\n        updateProduction(good)\n    end\n    for good, _ in pairs(goods) do\n        updateDS(good)\n    end\n\n    for good, _ in pairs(goods) do\n        updatePrice(good)\n    end\n\n    updateBudget()\nend\nend",
+        "calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction formatNumber(value)\n    if value >= 1e9 then\n        return string.format(\"%.2f млрд.\", value / 1e9)\n    elseif value >= 1e6 then\n        return string.format(\"%.2f млн.\", value / 1e6)\n    elseif value >= 1e3 then\n        return string.format(\"%.2f тыс.\", value / 1e3)\n    else\n        return string.format(\"%.2f\", value)\n    end\nend\nend",
+        "calculate": false,
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Техническая страница 1",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Главная"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Интерфейс рынка",
+    "answers": []
+  },
+  {
+    "id": 5,
+    "text": "Стартовые данные",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\ngoods = {\n    fuel = {\n        price = {630, 600},\n        demand = {3994289, 3994289},\n        supply = {3994289, 3994289},\n        markup = 0.28,\n        base = 0.2,\n        -- 390\n        raw = {\n            engineering = 0.02,\n            chemical = 0.02,\n            construction = 0.09,\n            transport = 0.2\n        }\n    },\n    metallurgy = {\n        price = {600, 600},\n        demand = {859194, 859194},\n        supply = {859194, 859194},\n        markup = 0.3,\n        base = 0.2,\n        -- 380\n        raw = {\n            miningChemical = 0.07,\n            engineering = 0.07,\n            construction = 0.05,\n            transport = 0.2\n        }\n    },\n    miningChemical = {\n        price = {1500, 1500},\n        demand = {831500, 831500},\n        supply = {831500, 831500},\n        markup = 0.3,\n        base = 0.15,\n        -- 960\n        raw = {\n            engineering = 0.1,\n            chemical = 0.1,\n            construction = 0.2,\n            transport = 0.2\n        }\n    },\n    agriculture = {\n        price = {250, 250},\n        demand = {330796, 330796},\n        supply = {330796, 330796},\n        markup = 0.3,\n        base = 0.1,\n        -- 160\n        raw = {\n            engineering = 0.02,\n            chemical = 0.02,\n            construction = 0.01,\n            transport = 0.2\n        }\n    },\n    powerGeneration = {\n        price = {200, 200},\n        demand = {3339384, 3339384},\n        supply = {3339384, 3339384},\n        markup = 0.3,\n        base = 0.1,\n        -- 120\n        raw = {\n            fuel = 0.04,\n            engineering = 0.015,\n            construction = 0.01,\n            transport = 0.2\n        }\n    },\n    engineering = {\n        price = {2500, 2500},\n        demand = {562901, 562901},\n        supply = {562901, 562901},\n        markup = 0.3,\n        base = 0.75,\n        -- 1600\n        raw = {\n            metallurgy = 0.4,\n            miningChemical = 0.4,\n            utilities = 0.2,\n            transport = 0.2\n        }\n    },\n    food = {\n        price = {850, 850},\n        demand = {1499993, 1499993},\n        supply = {1499993, 1499993},\n        markup = 0.3,\n        base = 0.1,\n        -- 60\n        raw = {\n            agriculture = 1.2,\n            engineering = 0.08,\n            construction = 0.03,\n            transport = 0.2\n        }\n    },\n    chemical = {\n        price = {2000, 2000},\n        demand = {221931, 221931},\n        supply = {221931, 221931},\n        markup = 0.3,\n        base = 0.3,\n        -- 1280\n        raw = {\n            fuel = 0.8,\n            miningChemical = 0.6,\n            construction = 0.05,\n            transport = 0.2\n        }\n    },\n    lightIndustry = {\n        price = {250, 250},\n        demand = {2999994, 2999994},\n        supply = {2999994, 2999994},\n        markup = 0.3,\n        base = 0.1,\n        -- 160\n        raw = {\n            agriculture = 0.08,\n            engineering = 0.02,\n            construction = 0.015,\n            transport = 0.2\n        }\n    },\n    construction = {\n        price = {1500, 1500},\n        demand = {2101178, 2101178},\n        supply = {2101178, 2101178},\n        markup = 0.3,\n        base = 0.1,\n        -- 960\n        raw = {\n            metallurgy = 0.5,\n            miningChemical = 0.2,\n            engineering = 0.1,\n            transport = 0.2\n        }\n    },\n    utilities = {\n        price = {600, 600},\n        demand = {3921574, 3921574},\n        supply = {3921574, 3921574},\n        markup = 0.3,\n        base = 0.1,\n        -- 380\n        raw = {\n            powerGeneration = 0.1,\n            construction = 0.1,\n            transport = 0.1\n        }\n    },\n    transport = {\n        price = {200, 200},\n        demand = {15988792, 15988792},\n        supply = {15988792, 15988792},\n        markup = 0.3,\n        base = 0.1,\n        -- 130\n        raw = {\n            fuel = 0.08,\n            engineering = 0.01,\n            construction = 0.01,\n            powerGeneration = 0.1\n        }\n    },\n    medical = {\n        price = {200, 200},\n        demand = {7499995, 7499995},\n        supply = {7499995, 7499995},\n        markup = 0.3,\n        base = 0.1,\n        -- 130\n        raw = {\n            chemical = 0.02,\n            construction = 0.01,\n            utilities = 0.02,\n            transport = 0.2\n        }\n    },\n    educational = {\n        price = {200, 200},\n        demand = {7499995, 7499995},\n        supply = {7499995, 7499995},\n        markup = 0.3,\n        base = 0.1,\n        -- 130\n        raw = {\n            construction = 0.01,\n            utilities = 0.03,\n            transport = 0.2\n        }\n    },\n    financial = {\n        price = {180, 180},\n        demand = {7499995, 7499995},\n        supply = {7499995, 7499995},\n        markup = 0.3,\n        base = 0.1,\n        -- 115\n        raw = {\n            construction = 0.01,\n            utilities = 0.07,\n            transport = 0.2\n        }\n    },\n    IT = {\n        price = {500, 500},\n        demand = {2000000, 2000000},\n        supply = {2000000, 2000000},\n        markup = 0.3,\n        base = 0.1,\n        -- 320\n        raw = {\n            engineering = 0.05,\n            construction = 0.01,\n            utilities = 0.05,\n            transport = 0.2\n        }\n    },\n    legal = {\n        price = {360, 360},\n        demand = {2499994, 2499994},\n        supply = {2499994, 2499994},\n        markup = 0.3,\n        base = 0.1,\n        -- 230\n        raw = {\n            construction = 0.02,\n            utilities = 0.1,\n            transport = 0.2\n        }\n    },\n    tourist = {\n        price = {600, 600},\n        demand = {1249994, 1249994},\n        supply = {1249994, 1249994},\n        markup = 0.3,\n        base = 0.1,\n        -- 380\n        raw = {\n            construction = 0.05,\n            utilities = 0.1,\n            transport = 0.8\n        }\n    }\n}\n\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nfacilities = {\n    fuel = {\n        workers = 81000,\n        gPerW = 48,\n        salary = 8333,\n        efficiency = 1,\n        qty = 0\n    },\n    metallurgy = {\n        workers = 9500,\n        gPerW = 92,\n        salary = 7000,\n        efficiency = 1,\n        qty = 0\n    },\n    miningChemical = {\n        workers = 18000,\n        gPerW = 53,\n        salary = 7700,\n        efficiency = 1,\n        qty = 0\n    },\n    agriculture = {\n        workers = 1800,\n        gPerW = 187,\n        salary = 4500,\n        efficiency = 1,\n        qty = 0\n    },\n    powerGeneration = {\n        workers = 14000,\n        gPerW = 295,\n        salary = 8900,\n        efficiency = 1,\n        qty = 0\n    },\n    engineering = {\n        workers = 19700,\n        gPerW = 40,\n        salary = 8667,\n        efficiency = 1,\n        qty = 0\n    },\n    chemical = {\n        workers = 9330,\n        gPerW = 39,\n        salary = 7500,\n        efficiency = 1,\n        qty = 0\n    },\n    food = {\n        workers = 250,\n        gPerW = 300,\n        salary = 4583,\n        efficiency = 1,\n        qty = 0\n    },\n    lightIndustry = {\n        workers = 35000,\n        gPerW = 86,\n        salary = 4167,\n        efficiency = 1,\n        qty = 0\n    },\n    construction = {\n        workers = 32000,\n        gPerW = 32,\n        salary = 6250,\n        efficiency = 1,\n        qty = 0\n    },\n    utilities = {\n        workers = 58000,\n        gPerW = 43,\n        salary = 5000,\n        efficiency = 1,\n        qty = 0\n    },\n    transport = {\n        workers = 92000,\n        gPerW = 175,\n        salary = 5625,\n        efficiency = 1,\n        qty = 0\n    },\n    medical = {\n        workers = 34000,\n        gPerW = 220,\n        salary = 10000,\n        efficiency = 1,\n        qty = 0\n    },\n    educational = {\n        workers = 100000,\n        gPerW = 73,\n        salary = 5200,\n        efficiency = 1,\n        qty = 0\n    },\n    financial = {\n        workers = 30000,\n        gPerW = 250,\n        salary = 10417,\n        efficiency = 1,\n        qty = 0\n    },\n    IT = {\n        workers = 26000,\n        gPerW = 75,\n        salary = 8958,\n        efficiency = 1,\n        qty = 0\n    },\n    legal = {\n        workers = 25000,\n        gPerW = 100,\n        salary = 10833,\n        efficiency = 1,\n        qty = 0\n    },\n    tourist = {\n        workers = 26000,\n        gPerW = 48,\n        salary = 4583,\n        efficiency = 1,\n        qty = 0\n    }\n}\n\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\npopulation = {\n    qty = 25e5,\n    need = {\n        food = 0.03,\n        utilities = 1,\n        powerGeneration = 0.9,\n        fuel = 0.9,\n        lightIndustry = 1.2,\n        construction = 0.4,\n        transport = 3,\n        medical = 3,\n        educational = 3,\n        financial = 3,\n        IT = 0.8,\n        legal = 1,\n        tourist = 0.5,\n    }\n}\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nv = 20\nbudget = {\n    total = 0,\n    NDS = {},\n    expenses = 0\n}\nneeds = getNeeds()\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nsectorsName = {\n  fuel = \"Топливный\",\n  metallurgy = \"Металлургический\",\n  miningChemical = \"Горнохимический\",\n  agriculture = \"Сельскохозяйственный\",\n  powerGeneration = \"Энергетический\",\n  engineering = \"Машиностроительный\",\n  food = \"Пищевой\",\n  chemical = \"Химический\",\n  lightIndustry = \"Лёгкопромышленный\",\n  construction = \"Строительный\",\n  utilities = \"Коммунальный\",\n  transport = \"Транспортный\",\n  medical = \"Медицинский\",\n  educational = \"Образовательный\",\n  financial = \"Финансовый\",\n  IT = \"IT\",\n  legal = \"Юридический\",\n  tourist = \"Туристический\",\n}\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Сувенирная копия партбилета с особым смущением забилась в нагрудный карман бывшего заместителя ассистента при офисе президента.<s>r\n<s>r\n– Значит так, – начал он, – перед тобой стоит ответственная миссия... Да где же он... Ага. Да. Перед тобой стоит ответственная миссия! Наша страна нуждается в таком рукастом и незаменимом специалисте, на твоих плечах ответственность за судьбы десятков...ээ, двух с половиной миллионов человек! <s>r\n<s>r\nБывший заместитель сгрёб остатки вещей и улик в по-депутатский типичный портфель. <s>r\n<s>r\n– Здесь всё не так сложно. Если приходит мелкий бизнес – даёшь обещания мелкому бизнесу, если приходит физлицо – ему обещаешь. А крупные к тебе и не придут. <s>r\n<s>r\nОн засеменил к выходной двери и уж было вынырнул, но краешком рта вернулся. <s>r\n<s>r\n– Только если за тобой... Кабинет в твоём распоряжении.<s>r\n<s>r\n",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "run": [
+          2
+        ],
+        "text": "Инициализация данных"
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "run": [
+          5
+        ],
+        "text": "Инициализация данных"
+      },
+      {
+        "id": 7,
+        "text": "[Управлять страной]"
+      },
+      {
+        "id": 14,
+        "text": "[Подойти к окну]"
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\ng.reloadFunctions = 2\nisTroubleReport = true\nfirstMonth = true\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "В углу монитора тревожно висит экселевский ярлык и с недоверием поглядывает на лежащие выше отчеты. ",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Статистика"
+      },
+      {
+        "id": 7,
+        "text": "[ Провести месяц в должности ]",
+        "lua_do": "function lua_do()\nupdateGoods()\nfirstMonth = false\nend"
+      },
+      {
+        "id": 7,
+        "text": "\n\nКогда вы проходили под окнами офиса, могло показаться, что ситуация в стране ужасающая. Безработные, бездомные, потерявшие рассудок... Но отчёты говорят об обратном. Всем всего хватает и даже ещё остаётся. <s>ufeff\n<s>ufeff\nПервым делом нужно проверить финансирование в разделе статистики, чтобы убедиться, есть ли у отчётного отдела реальные отчёты.",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Экономика",
+    "answers": [
+      {
+        "id": 8,
+        "text": "        Первичный сектор",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Топливный сектор",
+        "lua_do": "function lua_do()\nselectedSector = 'fuel'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Металлургия",
+        "lua_do": "function lua_do()\nselectedSector = 'metallurgy'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Горнохимическая промышленность",
+        "lua_do": "function lua_do()\nselectedSector = 'miningChemical'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Сельское хозяйство",
+        "lua_do": "function lua_do()\nselectedSector = 'agriculture'\nend"
+      },
+      {
+        "id": 8,
+        "text": "        Вторичный сектор",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Энергетика",
+        "lua_do": "function lua_do()\nselectedSector = 'powerGeneration'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Машиностроение",
+        "lua_do": "function lua_do()\nselectedSector = 'engineering'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Химическая промышленность",
+        "lua_do": "function lua_do()\nselectedSector = 'chemical'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Пищевой сектор",
+        "lua_do": "function lua_do()\nselectedSector = 'food'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Лёгкая промышленность",
+        "lua_do": "function lua_do()\nselectedSector = 'lightIndustry'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Строительство",
+        "lua_do": "function lua_do()\nselectedSector = 'construction'\nend"
+      },
+      {
+        "id": 8,
+        "text": "        Третичный сектор",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Коммунальные услуги",
+        "lua_do": "function lua_do()\nselectedSector = 'utilities'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Транспортные услуги",
+        "lua_do": "function lua_do()\nselectedSector = 'transport'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Медицина",
+        "lua_do": "function lua_do()\nselectedSector = 'medical'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Образование",
+        "lua_do": "function lua_do()\nselectedSector = 'educational'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Финансовый сектор",
+        "lua_do": "function lua_do()\nselectedSector = 'financial'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Информационные технологии",
+        "lua_do": "function lua_do()\nselectedSector = 'IT'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Юридические услуги",
+        "lua_do": "function lua_do()\nselectedSector = 'legal'\nend"
+      },
+      {
+        "id": 9,
+        "text": "Туризм",
+        "lua_do": "function lua_do()\nselectedSector = 'tourist'\nend"
+      },
+      {
+        "id": 10,
+        "text": "К статистике",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "   ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 9,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\ncg = goods[selectedSector]\ncf = facilities[selectedSector]\nend"
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal prices = cg.price\nlocal cp = formatNumber(prices[1])\nlocal lp = formatNumber(prices[2])\nreturn \"Средняя цена в этом месяце: \"..cp..\"<s>\nСредняя цена в прошлом месяце: \"..lp\nend",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal demand = cg.demand\nlocal supply = cg.supply\nlocal cd = formatNumber(demand[1])\nlocal ld = formatNumber(demand[2])\nlocal cs = formatNumber(supply[1])\nlocal ls = formatNumber(supply[2])\n\nreturn \"Средний спрос в этом месяце: \"..cd..\"<s>\nСреднее предложение в этом месяце: \"..cs..\"<s>\n<s>\n\"..\"Средний спрос в прошлом месяце: \"..ld..\"<s>\nСреднее предложение в прошлом месяце: \"..ls\nend",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal qty = formatNumber(cf.qty)\nlocal slr = formatNumber(cf.salary)\nlocal gpw = formatNumber(cf.gPerW)\nreturn \"Населением произведено: \"..qty..\"<s>\nСредняя зарплата в секторе: \"..slr..\"<s>\nПроизводительность труда: \"..gpw\nend",
+        "comment": true
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal ef = cf.efficiency*100 \nlocal fin = 'заглушка с:'\nreturn \"Финансированность: \"..ef..\"%\"..\"<s>\nПотрачено бюджета на финансирование: \"..fin\nend",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 9,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Статистика",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Экономика"
+      },
+      {
+        "id": 11,
+        "text": "Население"
+      },
+      {
+        "id": 12,
+        "text": "Бюджет"
+      },
+      {
+        "id": 7,
+        "text": "На главную",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal qty = formatNumber(population.qty)\nlocal wor = 0\nfor key, value in pairs(facilities) do\nwor = wor <plus> facilities[key].workers\nend\nwor = formatNumber(wor)\nreturn \"В стране проживает \"..qty..\"человек, среди которых \"..wor..\" – рабочие\"\nend",
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": "Назад",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Ставка налога на добавленную стоимость: \"..v..\"%\"\nend",
+        "comment": true
+      },
+      {
+        "instant": true,
+        "id": 12,
+        "text": "Опустить",
+        "lua_do": "function lua_do()\nif v > 0 then \nv = v - 1\nelse message('НДС не может быть ниже')\nend\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_do": "function lua_do()\nif v < 100 then\nv = v <plus> 1\nelse message('НДС не может быть выше')\nend\nend",
+        "text": "Поднять",
+        "id": 12,
+        "instant": true
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal result = \"Доход НДС по секторам:<s>\n\"\nlocal work = \"\"\nif isTroubleReport then\nwork = \"<s>\n– Отчёт? Какой отчёт? А, зайдите в следующем месяце.\"\nend\nif not isTroubleReport and firstMonth then \nwork = \"<s>\n– С вами приятно иметь дело! Мы подготовим отчет к следующему месяцу\"\nend\nif not isTroubleReport and not firstMonth then\nfor sector, _ in pairs(goods) do\n  local calc = goods[sector].price[1]* v/100 * facilities[sector].qty\n  local formattedValue = formatNumber(calc)\n  result = result .. sectorsName[sector] .. \": \" .. formattedValue .. \"$<s>\n\"\nwork = \"\"\nend\nend\nreturn result..work\nend",
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": "Назад",
+        "middle_answer": true
+      },
+      {
+        "id": 12,
+        "text": "[ Дать взятку ]",
+        "lua_if": "function lua_if()\nreturn isTroubleReport\nend",
+        "lua_do": "function lua_do()\nisTroubleReport = false\nend"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 14,
+    "text": "В зените дневного солнца, ослепляющего и давящего, как жгучее око первобытного божества, перед фасадом здания правительства, олицетворяющего бюрократическое могущество и запечатлевшего на себе самые отвратительные черты человеческих амбиций, развернулась картина, вызвавшая у меня чувство глубочайшего недоумения и беспокойства. Там, в разгаре пылающего июля, сгрудилось множество людей, словно призраки древних веков, восставшие из небытия, чтобы напомнить о безжалостной судьбе и неизменной несправедливости.<s>r\n<s>r\nТолпа, снедаемая палящим солнцем и гнетущим буржуазным строем, казалась существом, обречённым на мучительное бесконечное существование. Они держали в руках плакаты, покрытые грубым искажённым текстом, который, возможно, когда-то имел значение, но теперь казался подобием бессмысленных искажённых заклинаний. Надписи «Справедливость для всех!» и «Больше обещаний!» выглядели как привязанные к древним рунам, пересекающими черные облака невидимого зла, надвигающегося на эту несчастную землю.<s>r\n<s>r\nНа площади, где эти потусторонние образы выкрикивали свои горькие лозунги, царил хаос. Голоса их звучали как скрежет шестерёнок в головах безумцев, вызванный неясными и непостижимыми силами, которые захватили их души. Группа протестующих размахивала пузырями с цветной краской... И они разбивались о землю и стены ампира, о хтонь и небесный свод.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "[Пора работать]"
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "text": "Ведьма",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "                           ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "background",
+        "url": "https://d.radikal.ru/d12/2007/0e/da8488b07c11.jpg<s>r\n"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n--https://c.radikal.ru/c23/2007/79/971973938f6f.png ведьма\n--https://d.radikal.ru/d12/2007/0e/da8488b07c11.jpg\n<s>timages.witch.isVisible = false\n<s>timages.background.isVisible = false\n<s>ttown = {}\n<s>tsize = canvas.width * 2\n<s>ttown[1] = display.newImageRect(canvasGroup, nameForImages(\"https://d.radikal.ru/d12/2007/0e/da8488b07c11.jpg\"), system.TemporaryDirectory, size, canvas.height)\n<s>ttown[2] = display.newImageRect(canvasGroup, nameForImages(\"https://d.radikal.ru/d12/2007/0e/da8488b07c11.jpg\"), system.TemporaryDirectory, size, canvas.height)\n<s>ttown[1].anchorX, town[1].anchorY = 0, 0\n<s>ttown[2].anchorX, town[2].anchorY = 0, 0\n<s>ttown[2].x = size\n<s>tfunction move(self, event)\n<s>t<s>tif self.x then\n<s>t<s>t<s>tif self.x < -size then\n<s>t<s>t<s>t<s>tself.x = size * 0.99\n<s>t<s>t<s>telse\n<s>t<s>t<s>t<s>tself.x = self.x - 5\n<s>t<s>t<s>tend\n<s>t<s>tend\n<s>tend\n<s>ttown[1].enterFrame = move\n<s>ttown[2].enterFrame = move\n<s>tRuntime:addEventListener(\"enterFrame\", town[1])\n<s>tRuntime:addEventListener(\"enterFrame\", town[2])\n<s>twitch = display.newImageRect(canvasGroup, nameForImages(\"https://c.radikal.ru/c23/2007/79/971973938f6f.png\"), system.TemporaryDirectory, canvas.height / 2, canvas.height / 2)\n<s>twitch.x, witch.y = canvas.width / 2, canvas.height / 2\n<s>tfunction moveWitch(direction)\n<s>t<s>ttransition.moveBy(witch, {y = direction * canvas.height / 10, time = 1000, transition = easing.inOutSine, onComplete = function() if canvas.height and witch.removeSelf then moveWitch(-direction) end end})\n<s>tend\n<s>tmoveWitch(-1)\nend",
+        "text": "calc",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "id": 2,
+        "text": "witch",
+        "url": "https://c.radikal.ru/c23/2007/79/971973938f6f.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": []
+  }
+]

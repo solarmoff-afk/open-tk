@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 21511 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Dimasik2626 написал еще 21383 слов в квесте \"Книга для испытаний\"."
+      },
+      {
+        "targetbookid": "206666",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Книга для испытаний\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Tvoya Ledy написал еще 20992 слов в квесте \"Слепая\"."
+      },
+      {
+        "targetbookid": "207261",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Слепая\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Miriam Mills написал еще 20788 слов в квесте \"Другая\"."
+      },
+      {
+        "targetbookid": "191457",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Другая\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор *В£дЬмОчК@* написал еще 19738 слов в квесте \"Пиратская сага.\nПарус смерти.\"."
+      },
+      {
+        "targetbookid": "201317",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Пиратская сага.\nПарус смерти.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

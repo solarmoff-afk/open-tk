@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 17747 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Верилия Эшой написал еще 14956 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "149823",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор JSG написал еще 13932 слов в квесте \"Наследница\"."
+      },
+      {
+        "targetbookid": "144307",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наследница\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Romanovna^ написал еще 13526 слов в квесте \"Любовь в майонезе\"."
+      },
+      {
+        "targetbookid": "148534",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Любовь в майонезе\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Loud написал еще 11932 слов в квесте \"ПерехОдник\"."
+      },
+      {
+        "targetbookid": "137367",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"ПерехОдник\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

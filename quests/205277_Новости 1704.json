@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mr.Gold написал еще 37740 слов в квесте \"Мой старый город\"."
+      },
+      {
+        "targetbookid": "204761",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Мой старый город\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор _KessiKeyd_❤ написал еще 30246 слов в квесте \"      Тайна города\"."
+      },
+      {
+        "targetbookid": "186415",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"      Тайна города\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор theuRay написал еще 25556 слов в квесте \"\"Приключение героя\" auto-RPG\"."
+      },
+      {
+        "targetbookid": "149500",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"\"Приключение героя\" auto-RPG\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sofa17 написал еще 18136 слов в квесте \"Наедине с дьяволом \"."
+      },
+      {
+        "targetbookid": "147184",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наедине с дьяволом \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Gekata Silverhant написал еще 17268 слов в квесте \"Кровь и пламя, эльфийские хроники\"."
+      },
+      {
+        "targetbookid": "164444",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Кровь и пламя, эльфийские хроники\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

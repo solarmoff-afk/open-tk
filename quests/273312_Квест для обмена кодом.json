@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "text": "",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "global allowCopy",
+          1,
+          "global fullscreen",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Код для дыма"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Вы стоите перед дымящимися руинами былого величия!",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "id": 345,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    local emitterParams = {\n        textureFileName = nameForImages(\"https://shaba-games.ru/zavr/sasha/images/smoke.png\"),\n        maxParticles = 1000,\n        angle = 270,\n        angleVariance = 30,\n        emitterType = 0,\n        absolutePosition = true,\n        duration = -1,\n        speed = 300,\n        speedVariance = 30,\n        sourcePositionVariancex = display.contentWidth * 0.25,\n        sourcePositionVariancey = display.contentHeight * 0.1,\n        startColorAlpha = 0.1,\n        finishColorAlpha = 0,\n        startParticleSizeVariance = 10,\n        startColorGreen = 0.5,\n        yCoordFlipped = -1,\n        blendFuncSource = 770,\n        rotatePerSecondVariance = 0,\n        particleLifespan = 7,\n        tangentialAcceleration = 0,\n        startColorBlue = 0.5,\n        finishColorBlue = 0.1,\n        finishColorGreen = 0.1,\n        blendFuncDestination = 771,\n        startParticleSize = 200,\n        startColorRed = 0.5,\n        startColorVarianceAlpha = 0,\n        finishParticleSize = 200,\n        finishColorRed = 0.1,\n        finishParticleSizeVariance = 64,\n        gravityy = 0,\n        tangentialAccelVariance = 30\n    }\n    \n    -- Create the emitter\n    local emitter = display.newEmitter(emitterParams, system.TemporaryDirectory)\n    local frame = canvas.parent.parent.parent.parent.parent\n    \n    frame:insert(emitter)\n    emitter.x, emitter.y = frame.width / 2, frame.height\n    emitter:toBack()\n    frame[3]:toBack()\n    frame[3]:toBack()\n    images.smoke.isVisible = false\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 345,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n     g.background = \"http://188.120.236.127/osheinik/2беня/фонадиш2.jpg\"\nend",
+        "calculate": true
+      },
+      {
+        "id": 2,
+        "text": "smoke",
+        "url": "https://shaba-games.ru/zavr/sasha/images/smoke.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Вы стоите перед дымящимися руинами былого величия!",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 345,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    local smokeParams = {\n        textureFileName = nameForImages(\"https://shaba-games.ru/zavr/sasha/images/smoke.png\"),\n        maxParticles = 1000,\n        angle = 270,\n        angleVariance = 30,\n        emitterType = 0,\n        absolutePosition = true,\n        duration = -1,\n        speed = 300,\n        speedVariance = 30,\n        sourcePositionVariancex = display.contentWidth * 0.25,\n        sourcePositionVariancey = display.contentHeight * 0.1,\n        startColorRed = 0.5,\n        startColorGreen = 0.4,\n        startColorBlue = 0.2,\n        startColorAlpha = 0.1,\n        finishColorRed = 0.1,\n        finishColorGreen = 0.1,\n        finishColorBlue = 0.1,\n        finishColorAlpha = 0,\n        startParticleSizeVariance = 10,\n        yCoordFlipped = -1,\n        blendFuncSource = 770,\n        rotatePerSecondVariance = 0,\n        particleLifespan = 7,\n        tangentialAcceleration = 0,\n        blendFuncDestination = 771,\n        startParticleSize = 200,\n        startColorVarianceAlpha = 0,\n        finishParticleSize = 200,\n        finishParticleSizeVariance = 64,\n        gravityy = 0,\n        tangentialAccelVariance = 30\n    }\n\n    local sparkParams = {\n        textureFileName = nameForImages(\"https://shaba-games.ru/zavr/sasha/images/spark.png\"),\n        maxParticles = 50,\n        angle = 270,\n        angleVariance = 100,\n        emitterType = 0,\n        absolutePosition = true,\n        duration = -1,\n        speed = 200,\n        speedVariance = 100,\n        sourcePositionVariancex = display.contentWidth * 0.2,\n        sourcePositionVariancey = display.contentHeight * 0.02,\n        startColorRed = 1,\n        startColorGreen = 0.8,\n        startColorBlue = 0.3,\n        startColorAlpha = 1,\n        finishColorRed = 0.1,\n        finishColorGreen = 0.08,\n        finishColorBlue = 0.03,\n        finishColorAlpha = 0,\n        startParticleSizeVariance = 50,\n        yCoordFlipped = -1,\n        blendFuncSource = 770,\n        particleLifespan = 6,\n        tangentialAcceleration = 0,\n        blendFuncDestination = 1,\n        startParticleSize = 150,\n        startColorVarianceAlpha = 0,\n        finishParticleSize = 20,\n        finishParticleSizeVariance = 64,\n        gravityy = -50,\n        tangentialAccelVariance = 0,\n        radialAcceleration = -100,\n        radialAccelVariance = 50,\n        rotationStartVariance = 1600,\n        rotationEndVariance = 1600\n    }\n    \n    \n    -- Create the smoke\n    local smoke = display.newEmitter(smokeParams, system.TemporaryDirectory)\n    local spark = display.newEmitter(sparkParams, system.TemporaryDirectory)\n    local frame = canvas.parent.parent.parent.parent.parent\n    \n    frame:insert(smoke)\n    frame:insert(spark)\n    smoke.x, smoke.y = frame.width / 2, frame.height\n    spark.x, spark.y = frame.width / 2, frame.height * 0.97\n    smoke:toBack()\n    frame[3]:toBack()\n    frame[3]:toBack()\n    -- images.smoke.isVisible = false\n    -- images.spark.isVisible = false\nend",
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    \n    local function createEmitter(params, directory)\n        return display.newEmitter(params, directory)\n    end\n    \n    local function checkFileAndCreateEmmiter(params)\n        local lfs = require \"lfs\"\n        \n        if lfs.attributes(system.pathForFile(nameForImages(params.textureFileName), system.TemporaryDirectory)) then\n            return createEmitter(params, system.TemporaryDirectory)\n        elseif lfs.attributes(system.pathForFile(nameForImages(params.textureFileName),system.DocumentsDirectory)) then\n            return createEmitter(params, system.TemporaryDirectory)\n        end\n    end\n    \n    local smokeParams = {\n        textureFileName = nameForImages(\"https://shaba-games.ru/zavr/sasha/images/smoke.png\"),\n        maxParticles = 1000,\n        angle = 270,\n        angleVariance = 30,\n        emitterType = 0,\n        absolutePosition = true,\n        duration = -1,\n        speed = 300,\n        speedVariance = 30,\n        sourcePositionVariancex = display.contentWidth * 0.25,\n        sourcePositionVariancey = display.contentHeight * 0.1,\n        startColorRed = 0.5,\n        startColorGreen = 0.4,\n        startColorBlue = 0.2,\n        startColorAlpha = 0.1,\n        finishColorRed = 0.1,\n        finishColorGreen = 0.1,\n        finishColorBlue = 0.1,\n        finishColorAlpha = 0,\n        startParticleSizeVariance = 10,\n        yCoordFlipped = -1,\n        blendFuncSource = 770,\n        rotatePerSecondVariance = 0,\n        particleLifespan = 7,\n        tangentialAcceleration = 0,\n        blendFuncDestination = 771,\n        startParticleSize = 200,\n        startColorVarianceAlpha = 0,\n        finishParticleSize = 200,\n        finishParticleSizeVariance = 64,\n        gravityy = 0,\n        tangentialAccelVariance = 30\n    }\n\n    local sparkParams = {\n        textureFileName = nameForImages(\"https://shaba-games.ru/zavr/sasha/images/spark.png\"),\n        maxParticles = 50,\n        angle = 270,\n        angleVariance = 100,\n        emitterType = 0,\n        absolutePosition = true,\n        duration = -1,\n        speed = 200,\n        speedVariance = 100,\n        sourcePositionVariancex = display.contentWidth * 0.2,\n        sourcePositionVariancey = display.contentHeight * 0.02,\n        startColorRed = 1,\n        startColorGreen = 0.8,\n        startColorBlue = 0.3,\n        startColorAlpha = 1,\n        finishColorRed = 0.1,\n        finishColorGreen = 0.08,\n        finishColorBlue = 0.03,\n        finishColorAlpha = 0,\n        startParticleSizeVariance = 50,\n        yCoordFlipped = -1,\n        blendFuncSource = 770,\n        particleLifespan = 6,\n        tangentialAcceleration = 0,\n        blendFuncDestination = 1,\n        startParticleSize = 150,\n        startColorVarianceAlpha = 0,\n        finishParticleSize = 20,\n        finishParticleSizeVariance = 64,\n        gravityy = -50,\n        tangentialAccelVariance = 0,\n        radialAcceleration = -100,\n        radialAccelVariance = 50,\n        rotationStartVariance = 1600,\n        rotationEndVariance = 1600\n    }\n    \n    \n    -- Create the smoke\n    local smoke = checkFileAndCreateEmmiter(smokeParams)\n    local spark = checkFileAndCreateEmmiter(sparkParams)\n    local frame = canvas.parent.parent.parent.parent.parent\n    \n    if smoke and spark then\n        frame:insert(smoke)\n        frame:insert(spark)\n        smoke.x, smoke.y = frame.width / 2, frame.height\n        spark.x, spark.y = frame.width / 2, frame.height * 0.97\n        smoke:toBack()\n        frame[3]:toBack()\n        frame[3]:toBack()\n    end\n    \nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 344
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    a = 10\n    b = 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          1,
+          3
+        ],
+        "lua_text": "function lua_text()\na = a - 1\nreturn a\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n    -- Data (string) to write\n    local saveData = \"Здравствуй, мир!\"\n     \n    -- Path for the file to write\n    local path = system.pathForFile( \"myfile.txt\", system.DocumentsDirectory )\n     \n    -- Open the file handle\n    local file, errorString = io.open( path, \"w\" )\n     \n    if not file then\n        -- Error occurred; output the cause\n        message( \"File error: \" .. errorString )\n    else\n        -- Write data to file\n        file:write( saveData )\n        -- Close the file handle\n        io.close( file )\n        message(\"ОК\")\n    end\n     \n    file = nil\nend"
+      },
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\n        -- Path for the file to read\n    local path = system.pathForFile( \"myfile.txt\", system.DocumentsDirectory )\n     \n    -- Open the file handle\n    local file, errorString = io.open( path, \"r\" )\n     \n    if not file then\n        -- Error occurred; output the cause\n        message( \"File error: \" .. errorString )\n    else\n        -- Read data from file\n        local contents = file:read( \"*a\" )\n        -- Output the file contents\n        message( contents )\n        -- Close the file handle\n        io.close( file )\n    end\n     \n    file = nil\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  }
+]

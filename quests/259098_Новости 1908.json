@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 200152 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Master Cho написал еще 121379 слов в квесте \"Перевалочный пункт\"."
+      },
+      {
+        "targetbookid": "212711",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Перевалочный пункт\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Hamster44 написал еще 113101 слов в квесте \"Свет небес\"."
+      },
+      {
+        "targetbookid": "253089",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Свет небес\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор HeSLHoG написал еще 111415 слов в квесте \"Монета Слепого\"."
+      },
+      {
+        "targetbookid": "258014",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Монета Слепого\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mr. Tiger написал еще 111361 слов в квесте \"Эвейдер\"."
+      },
+      {
+        "targetbookid": "242033",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Эвейдер\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

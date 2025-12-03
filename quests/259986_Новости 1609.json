@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 139292 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор HeSLHoG написал еще 119229 слов в квесте \"Длань Хранителей. Грозовые тучи\"."
+      },
+      {
+        "targetbookid": "259270",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Длань Хранителей. Грозовые тучи\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 102566 слов в квесте \"Снежная Соната\"."
+      },
+      {
+        "targetbookid": "252827",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Снежная Соната\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Фантом написал еще 100445 слов в квесте \"War of Heaven Volume 1\"."
+      },
+      {
+        "targetbookid": "245599",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"War of Heaven Volume 1\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Postnik написал еще 97985 слов в квесте \"Ох уж этот враждебный мир\"."
+      },
+      {
+        "targetbookid": "259725",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ох уж этот враждебный мир\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Waffle написал еще 360948 слов в квесте \"Тёмные дни\"."
+      },
+      {
+        "targetbookid": "239163",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тёмные дни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор D.Karter написал еще 92853 слов в квесте \"Это не игра! \"."
+      },
+      {
+        "targetbookid": "261200",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Это не игра! \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор HeSLHoG написал еще 83431 слов в квесте \"Деревенские сказки. Монета лжеца.\"."
+      },
+      {
+        "targetbookid": "256043",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Деревенские сказки. Монета лжеца.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sofa17 написал еще 83343 слов в квесте \"К звездам в бездну \"."
+      },
+      {
+        "targetbookid": "248640",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"К звездам в бездну \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Январь написал еще 82938 слов в квесте \"Клиника\"."
+      },
+      {
+        "targetbookid": "243465",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Клиника\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

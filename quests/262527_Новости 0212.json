@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор VaveStrike написал еще 85208 слов в квесте \"Метро 2033\"."
+      },
+      {
+        "targetbookid": "260781",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Метро 2033\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор elChem написал еще 84815 слов в квесте \"Испытание. Зов тьмы\"."
+      },
+      {
+        "targetbookid": "30500",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Испытание. Зов тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор MakarOv написал еще 84639 слов в квесте \"Локдаун\"."
+      },
+      {
+        "targetbookid": "262316",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Локдаун\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 83629 слов в квесте \"Снежная Соната\"."
+      },
+      {
+        "targetbookid": "252827",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Снежная Соната\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 82077 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

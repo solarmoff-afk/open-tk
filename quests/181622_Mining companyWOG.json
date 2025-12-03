@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: SirVladPro\nЖанр: кликер\nДополнительный жанр: обменник валюты.\n\nВозможность заработать монеты в других квестах при помощи Mining company WOG.\n\nДоступный обмен с квестами↓\n181649",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать",
+        "instant": true,
+        "lua_do": "function lua_do()\ng.k=1000\nif g.money==null then\ng.money=100000\ng.moneya=100\ng.moneyp=1\ng.pay={}\nend\nend"
+      },
+      {
+        "id": 1,
+        "url": "https://vk.com/sirvladpro",
+        "instant": true,
+        "text": "Отправить заявку об объединении майнинга с вашим квестом в ВК."
+      },
+      {
+        "id": 1,
+        "text": "Укажите команды для картинки",
+        "url": "http://mysingingmonsters.ru/images/zdanya/Mini-Mine.png",
+        "var_equal": [
+          "global picture",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Укажите команды для картинки",
+        "url": "https://d.radikal.ru/d39/1908/68/eeb5f4f32a8b.png",
+        "var_equal": [
+          "global picture",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Смена картинки шахты",
+        "lua_do": "function lua_do()\nif g.picture == null then\ng.picture=0\nend\nif g.picture == 0 then\ng.picture=1\nelse\ng.picture=0\nend\nend",
+        "instant": true
+      },
+      {
+        "id": 6,
+        "instant": true,
+        "text": "Условия пользования"
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d21/1908/68/3fb9603460f9.png"
+        ],
+        "need_ever": true,
+        "comment": true,
+        "middle_answer": true,
+        "text": "Монеты",
+        "update": [
+          0.5
+        ],
+        "lua_text": "function lua_text()\nreturn \"Квесткоины \" .. g.money/g.k\nend",
+        "need": [
+          2
+        ],
+        "id": 2,
+        "lua_do": "function lua_do()\ng.money=g.money<plus>g.moneyp\nend",
+        "merge": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Кликай!!!\n",
+    "answers": [
+      {
+        "middle_answer": false,
+        "id": 2,
+        "text": "Нажать",
+        "lua_do": "function lua_do()\ng.money=g.moneya<plus>g.money\nend",
+        "instant": true
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d21/1908/68/3fb9603460f9.png"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "text": "Монеты",
+        "update": [
+          0.5
+        ],
+        "lua_text": "function lua_text()\nreturn \"Квесткоины \" .. g.money/g.k\nend",
+        "lua_do": "function lua_do()\ng.money=g.money<plus>g.moneyp\nend",
+        "id": 2,
+        "merge": false
+      },
+      {
+        "left_answer": true,
+        "lua_text": "function lua_text()\nreturn \"Пасивный доход \" .. (g.moneyp/g.k)*2\nend",
+        "comment": true,
+        "middle_answer": false,
+        "text": "Пассивный доход",
+        "id": 2,
+        "merge": false
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"Доход за клик \" .. g.moneya/g.k\nend",
+        "middle_answer": false,
+        "text": "Доход за клик",
+        "id": 2,
+        "merge": false
+      },
+      {
+        "id": 2,
+        "text": "<plus>-<plus>-<plus>",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\nif g.money/g.k>=100 then\ng.money=g.money-100*g.k\ng.moneya=g.moneya<plus>10\nend\nend",
+        "text": "Клик <plus>0.01\n\nЦена 100 монет"
+      },
+      {
+        "text": "Пасивный доход <plus>0.002/с\nЦена 1000 монет",
+        "lua_do": "function lua_do()\nif g.money/g.k>=1000 then\ng.money=g.money-1000*g.k\ng.moneyp=g.moneyp<plus>1\nend\nend",
+        "instant": true,
+        "id": 2,
+        "left_answer": true
+      },
+      {
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nd=math.floor(g.time/82800)\nh=math.floor((g.time-82800*d)/3600)\nm=math.floor((g.time-82800*d-3600*h)/60)\nif m<10 then\nx=\":0\"\nelse\nx=\":\"\nend\nreturn h .. x .. m\nend",
+        "instant": true,
+        "id": 2,
+        "text": "Время глобальное ",
+        "update": [
+          5
+        ],
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Добыча пока вас нет.",
+        "lua_do": "function lua_do()\nc1=g.time\nend",
+        "instant": true
+      },
+      {
+        "id": 4,
+        "text": "Обмен валюты",
+        "instant": true
+      },
+      {
+        "id": 2,
+        "text": "Чит",
+        "need": [
+          -2
+        ],
+        "lua_do": "function lua_do()\ng.money=g.money*1000\nend"
+      },
+      {
+        "id": 2,
+        "url": "http://mysingingmonsters.ru/images/zdanya/Mini-Mine.png",
+        "text": "Укажите команды для картинки",
+        "var_equal": [
+          "global picture",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "url": "https://d.radikal.ru/d39/1908/68/eeb5f4f32a8b.png",
+        "text": "Укажите команды для картинки",
+        "var_equal": [
+          "global picture",
+          1
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Главное меню",
+        "instant": true,
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Вы перешли на страницу авто добычи, пока вас нет в квесте ваша пассивная добыча будет давать вам монеты.",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nreturn \"Собрать\"\nend",
+        "id": 2,
+        "instant": true,
+        "text": "Собрать",
+        "lua_do": "function lua_do()\nc1=(g.time-c1)*g.moneyp\ng.money=g.money<plus>c1*2\nend"
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d21/1908/68/3fb9603460f9.png"
+        ],
+        "lua_text": "function lua_text()\nreturn (((g.time-c1)*g.moneyp)*2)/1000 .. \" квесткоины\"\nend",
+        "comment": true,
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          1
+        ],
+        "id": 3
+      },
+      {
+        "id": 3,
+        "url": "http://mysingingmonsters.ru/images/zdanya/Mini-Mine.png",
+        "text": "Укажите команды для картинки",
+        "var_equal": [
+          "global picture",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "Укажите команды для картинки",
+        "url": "https://d.radikal.ru/d39/1908/68/eeb5f4f32a8b.png",
+        "var_equal": [
+          "global picture",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "Новый ответ. введите текст",
+        "id": 3,
+        "lua_text": "function lua_text()\nreturn \"Время начала добычи \" .. h .. x .. m\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Обмен валюты, здесь вы можете увидеть квесты с которыми можно произвести обмен, а также их курс.\n[На этой странице доход остановлен.]",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "id": 5,
+        "text": "Квест 181649\n2 Квесткоинов",
+        "instant": true,
+        "lua_do": "function lua_do()\nquest=181649\npg5=2\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nquest=195873\npg5=1\nend",
+        "instant": true,
+        "text": "Квест 195873\n1 Квесткоин=2500 монет",
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Здесь производиться обмен валюты в квест ",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn quest\nend",
+        "merge": true
+      },
+      {
+        "id": 4,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "id": 5,
+        "text": "<plus>10 Монет\n- 20 Квесткоинов",
+        "instant": true,
+        "lua_do": "function lua_do()\nif g.pay == nil then\ng.pay = {}\nend\nif g.money>=10*g.k*pg5 then\ntable.insert (g.pay, 10)\ng.money = g.money - 10*g.k*pg5\nend\nend"
+      },
+      {
+        "id": 5,
+        "text": "<plus>100 Монет\n- 200 Квесткоинов",
+        "lua_do": "function lua_do()\nif g.pay == nil then\ng.pay = {}\nend\nif g.money>=100*g.k*pg5 then\ntable.insert (g.pay, 100)\ng.money = g.money - 100*g.k*pg5\nend\nend",
+        "instant": true
+      },
+      {
+        "id": 5,
+        "text": "<plus>1000 Монет\n- 2000 Квесткоинов",
+        "instant": true,
+        "lua_do": "function lua_do()\nif g.pay == nil then\ng.pay = {}\nend\nif g.money>=1000*g.k*pg5 then\ntable.insert (g.pay, 1000)\ng.money = g.money - 1000*g.k*pg5\nend\nend"
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d21/1908/68/3fb9603460f9.png"
+        ],
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"Квесткоины \" .. g.money/g.k\nend",
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          0.5
+        ],
+        "lua_do": "function lua_do()\ng.money=g.money<plus>g.moneyp\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Прежде чем играть в кликер стоит ознакомиться с условием пользования.\n\nДля читателей\n1) Квест нужен для добавления не достающих монет. Слишком большие суммы вывести не выйдет, из за стоимости КвК. Это все что я хотел вам сказать, пользуйтесь на здоровье.\n\nДля писателей.\n1) Подключение обсолютно бесплатно единственное, что вам нужно это связаться с автором квеста на первой странице.\n2) Вам пересылаются переменные в том количестве которые вы решили указать в договоре. Как только переменная попала в ваш квест она становится вашей собственностью, а это значит, что мы не несем ответственности если из-за манипуляций с ней, квест перестал работать. Следуйте четким инструкциям автора при добавлении майнера в ваш квест и тогда все получится.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Хорошо",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Здесь производиться обмен валюты в квест ",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn quest\nend",
+        "merge": true
+      },
+      {
+        "id": 4,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "lua_do": "function lua_do()\nif g.pay1 == nil then\ng.pay1 = {}\nend\nif g.money>=1*g.k*pg5 then\ntable.insert (g.pay1, 2500)\ng.money = g.money - 1*g.k*pg5\nend\nend",
+        "instant": true,
+        "id": 7,
+        "text": "<plus>2500 Монет\n-1 Квесткоинов"
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d21/1908/68/3fb9603460f9.png"
+        ],
+        "lua_text": "function lua_text()\nreturn \"Квесткоины \" .. g.money/g.k\nend",
+        "lua_do": "function lua_do()\ng.money=g.money<plus>g.moneyp\nend",
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "update": [
+          0.5
+        ],
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  }
+]

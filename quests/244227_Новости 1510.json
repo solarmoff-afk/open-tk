@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Аноним написал еще 118577 слов в квесте \"Африка\"."
+      },
+      {
+        "targetbookid": "243427",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Африка\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ArFa написал еще 110279 слов в квесте \"Вирус Анмада\"."
+      },
+      {
+        "targetbookid": "241502",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Вирус Анмада\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор 32 Pixel Studio написал еще 105331 слов в квесте \"Академия Магии\"."
+      },
+      {
+        "targetbookid": "239487",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Академия Магии\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Tereza написал еще 104875 слов в квесте \"AFK Arena \"."
+      },
+      {
+        "targetbookid": "222125",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"AFK Arena \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Лилия Драгон написал еще 104582 слов в квесте \"КРАСНЫЙ ОГОНЁК\"."
+      },
+      {
+        "targetbookid": "224824",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"КРАСНЫЙ ОГОНЁК\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

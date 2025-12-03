@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Привет! Я робот, делающий путешествие по квестам интереснее. Нажмите на кнопку ниже, и я приступлю к работе.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\ng.off()\nimages.robot.isVisible = false\ntimer.performWithDelay (100, function()\n  g.cw = display.contentWidth\n  g.ch = display.contentHeight\n  g.width = g.cw*0.25\n  circle = display.newCircle (g.cw*0.99 - g.width/2, g.ch*0.325, g.width/2)\n  circle.fill = {56/255, 136/255, 248/255}\n  circleShadow = display.newImage (\"circleShadow.png\", circle.x, circle.y)\n  circleShadow.xScale = circle.width*1.17/circleShadow.width\n  circleShadow.yScale = circleShadow.xScale\n  display.getCurrentStage(): insert(circleShadow)\n  circle:toFront()\n  robot = display.newImage (nameForImages(\"https://images.vfl.ru/ii/1646574638/4ec73292/38350516.png\"), system.TemporaryDirectory, circle.x, circle.y)\n  robot.yScale = g.width*0.8/robot.height\n  robot.xScale = robot.yScale\n  display.getCurrentStage(): insert(robot)\n  g.setColors()\n\n  circle:addEventListener (\"tap\", \n    function()\n      if buttons then\n        g.buttonsOff()\n      elseif circle and circle.height then\n        g.allButtons()\n      else\n        message (\"Пожалуйста, перезапустите приложение\")\n      end\n      return true\n    end)\nend)\nend",
+        "text": "Включить",
+        "id": 1,
+        "no_transition": true
+      },
+      {
+        "id": 1,
+        "text": "robot",
+        "url": "https://images.vfl.ru/ii/1646574638/4ec73292/38350516.png"
+      },
+      {
+        "id": 2,
+        "text": "Функции",
+        "run": [
+          2
+        ],
+        "lua_if": "function lua_if()\nreturn type (g.off) ~= \"function\" or true\nend"
+      },
+      {
+        "id": 1,
+        "text": "Потом нажмите на мою иконку, чтобы посмотреть команды. Не стесняйтесь нажимать на одни и те же кнопки несколько раз, ведь результат может быть разным! Для скрытия команд повторно нажмите на мою иконку.",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "P.S. Кнопка \"что мне почитать?\" работает только в читальне квестов.",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Функции",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.off()\n  g.remove(circle)\n  g.remove(circleShadow)\n  g.remove(robot)\n  g.buttonsOff()\n  g.remove(bg)\n  g.remove(areaTap)\n  g.remove(choice)\n  g.remove(anim)\n  timer.cancel(\"auto\")\n  if images and images.robot then\n    images.robot.isVisible = true\n  end\nend\nend",
+        "text": "Функция удаления всей графики",
+        "id": 1,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "text": "Функция удаления кнопок",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.buttonsOff()\n  g.remove(buttonsGroup)\n  buttons = nil\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.buttonOff(i)\n  if buttons and buttons[i] then\n    g.remove(buttons[i].text)\n    g.remove(buttons[i].rect)\n    g.remove(buttons[i].shadow)\n  end\nend\nend",
+        "text": "Функция удаления одной кнопки"
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "text": "Функция удаления с проверкой",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.remove(obj)\n  if obj and obj.removeSelf then\n    obj:removeSelf()\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.newButton(text, f)\n  buttons = buttons or {}\n  local i = #buttons <plus> 1\n  buttons[i] = {}\n  buttons[i].text = display.newText ({\n    parent = buttonsGroup,\n    text = text,\n    fontSize = 0.045*g.cw,\n    align = \"center\"\n  })\n  local text = buttons[i].text\n\n  local interval = 0.05*g.cw\n  local old = buttons[i-1] and buttons[i-1].rect and buttons[i-1].rect.isVisible and buttons[i-1].rect\n  text.y = old and (old.y <plus> old.height/2 <plus> interval <plus> text.height/2) or (circle.y <plus> circle.height/2 <plus> interval <plus> text.height/2)\n  text.x = g.cw*0.98 - text.width/2\n  text.fill = {0, 0, 0}\n\n  buttons[i].rect = display.newRoundedRect (text.x, text.y, text.width*1.1, text.height*1.35, g.cw/100)\n  local rect = buttons[i].rect\n  rect.strokeWidth = g.cw/200\n  rect.stroke = {56/255, 136/255, 248/255}\n  buttons[i].shadow = display.newImage (display.getCurrentStage(), \"rectShadow.png\", rect.x, rect.y)\n  local shadow = buttons[i].shadow\n  shadow.alpha = 0.294\n  shadow.xScale = (rect.width <plus> 0.5*rect.height)/shadow.width\n  shadow.yScale = rect.height*1.45/shadow.height\n  shadow:setFillColor(0, 0, 0)\n  \n  rect:addEventListener(\"tap\", \n  function(event)\n    event.target.fill = {56/255, 136/255, 248/255}\n    local pressedButton = event.target\n    timer.performWithDelay (70, function() pressedButton.fill = {1, 1, 1} end)\n    f()\n    return true\n  end)\n\n  buttonsGroup:insert(shadow)\n  buttonsGroup:insert(rect)\n  buttonsGroup:insert(text)\nend\nend",
+        "text": "Создание новой кнопки"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.allButtons()\n  g.buttonsOff()\n  buttonsGroup = display.newGroup ()\n  display.getCurrentStage():insert (buttonsGroup)\n  g.newButton (\"Покрасить фон\", g.paintBg)\n  g.newButton (\"Включить вечеринку\", g.animBg)\n  g.newButton (\"Фейерверк из пальца\", g.firework)\n  g.newButton (\"Что мне почитать?\", g.readBook)\n  g.newButton (\"Что мне написать?\", g.writeBook)\n  g.newButton (\"Убрать эффекты\", g.effectsOff)\n  g.newButton (\"Закрыть всё\", g.off)\nend\nend",
+        "text": "Все кнопки",
+        "id": 1,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "text": "Все цвета",
+        "calculate": false,
+        "lua_do": "function lua_do()\n  function g.setColors ()\n    g.colors = {\n      {0.8156862745098, 0.25098039215686, 0.87843137254902},\n      {0.97254901960784, 0.72156862745098, 0},\n      {1,0,0}, \n      {0, 0.52549019607843, 0.87058823529412},\n      {0.76862745098039, 0.4156862745098, 0.14901960784314},\n      {0.2, 0.8, 0.4},\n      {0, 1, 0},\n      {0, 0, 1},\n      {1, 69/255, 0},\n      {64/255, 224/255, 208/255},\n      {1, 0, 1}\n    }\n  end\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  function g.paintBg ()\n    g.remove(bg)\n    bg = display.newRect (g.cw/2, g.ch/2, g.cw, g.ch)\n    bg.fill = {\n      type = \"gradient\",\n      color1 = g.colors[math.random (#g.colors) ],\n      color2 = g.colors[math.random (#g.colors) ],\n      direction = \"down\"\n    }\n    bg:toBack()\n  end\nend",
+        "text": "Покрасить фон"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.readBook()\n  g.remove(choice)\n  timer.cancel (\"choice\")\n  local book = {}\n  book.width = 0.4*g.cw\n  book.height = 1.256*book.width\n  book.left = 0.04*g.cw\n  book.right = 0.1*g.cw\n  book.up = 0.16*g.cw\n  book.down = 0.23*g.cw\n  local max_y\n  if g.ch/g.cw > 2 then\n    max_y = 3\n  else\n    max_y = 2\n  end\n  local x, y = math.random(2), math.random(max_y)\n\n  choice = display.newImage (\n    nameForImages (\"https://i.ibb.co/G40p5KxG/tzotqaolvxgw.png\"), system.TemporaryDirectory,\n    book.left <plus> (x-1)*(book.width <plus> book.right) <plus> book.width/2,\n    book.up <plus> (y-1)*(book.height <plus> book.down)\n  )\n  choice.xScale = book.width*0.45/choice.width\n  choice.yScale = choice.xScale\n  buttonsGroup:toFront()\n  circle:toFront()\n  robot:toFront()\n  choice:addEventListener(\"tap\", function(event) event.target:removeSelf() timer.cancel (\"choice\") end)\n  timer.performWithDelay(5000, function() g.remove(choice) end, \"choice\")\nend\nend",
+        "text": "Что почитать?",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.writeBook()\n  local list = {}\n  list[1] = {\"\", \"Квест\", \"Сказку\", \"Детектив\", \"Симулятор\", \"Трагедию\", \"Ужастик\", \"Мини-квест\", \"Боевик\", \"Роман\", \"Поэму\", \"Комедию\", \"Статью\"}\n  list[2] = {\" про \", \"принцессу\", \"волшебника\", \"пылесос\", \"инженера\", \"повара\", \"миллионера\", \"баклажан\", \"клоуна\", \"пирата\", \"маньяка\", \"войну\", \"преступление\", \"клинки\"}\n  list[3] = {\" и \", \"дракона\", \"солдата\", \"фен\", \"робота\", \"грязную посуду\", \"ящик помидоров\", \"слона\", \"блондинку\", \"вантуз\", \"огнетушитель\", \"мир\", \"наказание\", \"кинжалы\"}\n  list[4] = {\" в \", \"избушке\", \"общежитии\", \"Париже\", \"шкафу\", \"кустах\", \"кладовке\", \"самолёте\", \"бане\"}\n  local text = \"\"\n  for numWord = 1, math.random(#list) do\n    text = text .. list[numWord][1] .. list[numWord][math.random (2, #list[numWord])]\n  end\n\n  message (text)\nend\nend",
+        "calculate": false,
+        "text": "Что мне написать?",
+        "id": 2
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.animBg()\nif math.random(2) == 1 then\n  color1 = g.colors[math.random (#g.colors)]\n  color2 = g.colors[math.random (#g.colors)]\n  animData = {\n    absolutePosition = true,\n    angle = 90,\n    angleVariance = 24,\n    blendFuncDestination = 771,\n    blendFuncSource = 774 ,\n    configName = \"fire\",\n    duration = -1,\n    emitterType = 0,\n    finishColorAlpha = 0,\n    finishColorBlue = color2[3],\n    finishColorGreen = color2[2],\n    finishColorRed = color2[1],\n    finishColorVarianceAlpha = 0,\n    finishColorVarianceBlue = color2[3],\n    finishColorVarianceGreen = color2[2],\n    finishColorVarianceRed = color2[1],\n    finishParticleSize = 16,\n    finishParticleSizeVariance = 0,\n    gravityx = 0,\n    gravityy = -40,\n    maxParticles = 420,\n    maxRadius = 0,\n    maxRadiusVariance = 0,\n    minRadius = 0,\n    minRadiusVariance = 0,\n    particleLifespan = 2.1,\n    particleLifespanVariance = 0,\n    radialAccelVariance = 0,\n    radialAcceleration = 0,\n    rotatePerSecond = 0,\n    rotatePerSecondVariance = 0,\n    rotationEnd = 0,\n    rotationEndVariance = 0,\n    rotationStart = 0,\n    rotationStartVariance = 0,\n    sourcePositionVariancex = display.contentWidth / 2,\n    sourcePositionVariancey = display.contentHeight / 2,\n    speed = 90,\n    speedVariance = 39,\n    startColorAlpha = 1,\n    startColorBlue = color1[3],\n    startColorGreen = color1[2],\n    startColorRed = color1[1],\n    startColorVarianceAlpha = 0,\n    startColorVarianceBlue = color1[3],\n    startColorVarianceGreen = color1[2],\n    startColorVarianceRed = color1[1],\n    startParticleSize = 12,\n    startParticleSizeVariance = 2,\n    tangentialAccelVariance = 0,\n    tangentialAcceleration = 0,\n    textureFileName = nameForImages(\"https://images.vfl.ru/ii/1646572893/713b6129/38349893.png\"),\n    textureImageData = \"\",\n    yCoordFlipped = -1,\n}\n    g.remove(anim)\n    timer.cancel(\"auto\")\n    anim = display.newEmitter(animData, system.TemporaryDirectory)\n    anim.x = g.cw/ 2\n    anim.y = g.ch / 2\nelse\n  g.remove(anim)\n  timer.cancel(\"auto\")\n  g.autoFirework(0, 300)\nend\nend\nend",
+        "text": "Анимация на фоне",
+        "id": 2,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.effectsOff()\n  g.remove(anim)\n  timer.cancel(\"auto\")\n  g.remove(bg)\n  g.remove(areaTap)\n  g.remove(choice)\nend\nend",
+        "text": "Убрать эффекты"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.firework()\n  g.remove(areaTap)\n  areaTap = display.newRect (g.cw/2, g.ch/2, g.cw, g.ch)\n  areaTap.isVisible = false\n  areaTap.isHitTestable = true\n  areaTap:addEventListener(\"tap\", \n  function(event)\n    if math.random(4) == 1 then\n      g.oval (event.x, event.y)\n    elseif math.random(3) == 1 then\n      g.circle (event.x, event.y)\n    elseif math.random(2) == 1 then\n      g.torch (event.x, event.y)\n    else\n      g.sphere (event.x, event.y)\n    end\n  end)\nend\nend",
+        "calculate": false,
+        "text": "Фейерверк по тапу",
+        "id": 2
+      },
+      {
+        "text_color": [
+          1,
+          0.5,
+          0.3
+        ],
+        "id": 2,
+        "calculate": false,
+        "text": "Всё для фейерверков:",
+        "super_calculate": true
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.defaultAnim(x, y, params, color)\n  local animData = {\n    absolutePosition = false,\n    angle = -90,\n    angleVariance = 180,\n    blendFuncDestination = 1,\n    blendFuncSource = 1,\n    duration = 0.3,\n    emitterType = 0,\n    finishColorAlpha = 1,\n    finishColorBlue = 0,\n    finishColorGreen = 0.9,\n    finishColorRed = 1,\n    finishColorVarianceAlpha = 0,\n    finishColorVarianceBlue = 0,\n    finishColorVarianceGreen = 0,\n    finishColorVarianceRed = 0,      \n    finishParticleSize = 26,\n    finishParticleSizeVariance = 0,\n    gravityx = 0,\n    gravityy = 0,\n    maxParticles = 250,\n    maxRadius = 0,\n    maxRadiusVariance = 0,\n    minRadius = 0,\n    minRadiusVariance = 0,\n    particleLifespan = 1.4,\n    particleLifespanVariance = 0,\n    radialAccelVariance = 0,\n    radialAcceleration = 0,\n    rotatePerSecond = 0,\n    rotatePerSecondVariance = 0,\n    rotationEnd = 0,\n    rotationEndVariance = 0,\n    rotationStart = 0,\n    rotationStartVariance = 0,\n    sourcePositionVariancex = 0,\n    sourcePositionVariancey = 0,\n    speed = 160,\n    speedVariance = 0,\n    startColorAlpha = 1,\n    startColorBlue = 0,\n    startColorGreen = 0.85,\n    startColorRed = 1,\n    startColorVarianceAlpha = 0,\n    startColorVarianceBlue = 0,\n    startColorVarianceGreen = 0,\n    startColorVarianceRed = 0,\n    startParticleSize = 12,\n    startParticleSizeVariance = 0,\n    tangentialAccelVariance = 0,\n    tangentialAcceleration = 0,\n    textureImageData = \"\",\n    yCoordFlipped = -1,\n    textureFileName = nameForImages(\"https://images.vfl.ru/ii/1646572893/713b6129/38349893.png\"),\n}\n  for k, v in pairs (params or {}) do\n    animData[k] = v\n  end\n  for k, v in pairs (g.colors2[math.random(#g.colors2)]) do\n    animData[k] = v\n  end\n  local anim = display.newEmitter(animData, system.TemporaryDirectory)\n  --message(x.. \"  \".. y)\n  anim.x = x\n  anim.y = y\n  --message(anim.x.. \"  \".. anim.y)\nend\nend",
+        "text": "По умолчанию",
+        "id": 6,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.sphere(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = size or 1,\n    speedVariance = 140,\n    maxParticles = 700,\n  })\nend\nend",
+        "text": "Сфера",
+        "id": 6,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.oval(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = size or 1,\n    speedVariance = 140,\n    maxParticles = 400,\n    angleVariance = 90,\n    angle = -1*math.random(45, 135),\n    gravityy = 200\n  })\nend\nend",
+        "text": "Овал"
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.circle(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = (size or 1)*1.5,\n    speedVariance = 150,\n    maxParticles = 200,\n    sourcePositionVariancex = 75,\n    sourcePositionVariancey = 20,\n    emitterType = 1,\n    maxRadius = 25,\n    maxRadiusVariance = 25,\n    minRadius = 200,\n    minRadiusVariance = 25,\n    radialAccelVariance = 150,\n    radialAcceleration = 150,\n    rotatePerSecond = 25,\n    rotatePerSecondVariance = 10,\n    rotationEnd = 90,\n    rotationEndVariance = 30,\n    rotationStart = 0,\n    rotationStartVariance = 30,\n  })\nend\nend",
+        "text": "Кольцо"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.torch(x, y, size)\n  g.defaultAnim(x, y, {\n    particleLifespan = (size or 1)*1.5,\n    speedVariance = 150,\n    maxParticles = 200,\n    angleVariance = 30,\n    sourcePositionVariancex = 10,\n    sourcePositionVariancey = 75,\n  })\nend\nend",
+        "calculate": false,
+        "text": "Факел",
+        "id": 6
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.autoFirework(repit, density)\n  timer.performWithDelay(density,   \n  function(event)\n    if math.random(4) == 1 then\n      g.oval (math.random (g.cw or 720), math.random (g.ch or 1000))\n    elseif math.random(3) == 1 then\n      g.circle (math.random (g.cw or 720), math.random (g.ch or 1000))\n    elseif math.random(2) == 1 then\n      g.torch (math.random (g.cw or 720), math.random (g.ch or 1000))\n    else\n      g.sphere (math.random (g.cw or 720), math.random (g.ch or 1000))\n    end\n  end, repit, \"auto\")\nend\nend",
+        "calculate": false,
+        "text": "Рандомный фейерверк",
+        "id": 6
+      },
+      {
+        "super_calculate": true,
+        "id": 6,
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.colors2 = {\n  {startColorRed = 1,\n   startColorGreen = 0.85,\n   startColorBlue = 0,\n\n   finishColorRed = 1,\n   finishColorGreen = 0.9,\n   finishColorBlue = 0},\n  {startColorRed = 1,\n   startColorGreen = 0.2,\n   startColorBlue = 0,\n\n   finishColorRed = 0.8,\n   finishColorGreen = 0.2,\n   finishColorBlue = 0.3},\n  {startColorRed = 0.1,\n   startColorGreen = 0.8,\n   startColorBlue = 0.2,\n\n   finishColorRed = 0.2,\n   finishColorGreen = 0.6,\n   finishColorBlue = 0.2},\n  {startColorRed = 1,\n   startColorGreen = 0.4,\n   startColorBlue = 0,\n\n   finishColorRed = 0.8,\n   finishColorGreen = 0.25,\n   finishColorBlue = 0},\n  {startColorRed = 1,\n   startColorGreen = 1,\n   startColorBlue = 0,\n\n   finishColorRed = 0.1,\n   finishColorGreen = 0.85,\n   finishColorBlue = 0},\n   {startColorRed = 1,\n   startColorGreen = 0,\n   startColorBlue = 0,\n\n   finishColorRed = 1,\n   finishColorGreen = 1,\n   finishColorBlue = 0},\n}\nend",
+        "text": "Все цвета"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "картинки ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://i.ibb.co/G40p5KxG/tzotqaolvxgw.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://sites.google.com/site/myluahosting/particle_snow.png"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "url": "https://images.vfl.ru/ii/1646572893/713b6129/38349893.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": []
+  }
+]

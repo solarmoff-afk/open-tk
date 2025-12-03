@@ -1,0 +1,1677 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Ярослав Зверев.\n\nНа красной планете замечен неизвестный объект, и вы, двое исследователей, отправляете дронов на его изучение.\n\nСотрудничайте, чтобы выжить; обманывайте, чтобы победить!\n\nИгра рассчитана на двух человек.\n\nИдёт открытое тестирование. В игре могут быть ошибки.",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn not canvas or canvas.width > canvas.height\nend",
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "text": "Переотрисовка",
+        "lua_do": "function lua_do()\nshowPage {id = 1, transition = \"instant\"}\nend"
+      },
+      {
+        "comment": false,
+        "url": "https://vk.com/id288654175",
+        "middle_answer": true,
+        "text": "Связь с автором",
+        "id": 1,
+        "left_answer": false
+      },
+      {
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nreturn g.study\nend",
+        "text_color": [],
+        "lua_do": "function lua_do()\ng.start()\ng.noScroll = 1\ng.fullscreen = 1\nend",
+        "instant": false,
+        "id": 30,
+        "text": "Начать"
+      },
+      {
+        "instant": false,
+        "lua_if": "function lua_if()\nreturn not g.study\nend",
+        "text_color": [],
+        "middle_answer": true,
+        "text": "Обучение",
+        "lua_do": "function lua_do()\ng.start()\ng.noScroll = 1\ng.fullscreen = 1\ng.currentPageOfManual = 1\ng.study = true\nend",
+        "id": 35
+      },
+      {
+        "id": 49,
+        "text": "Объявление переменных",
+        "run": [
+          49
+        ]
+      },
+      {
+        "id": 40,
+        "text": "Все функции",
+        "run": [
+          40
+        ],
+        "lua_if": "function lua_if()\nreturn not g.draw or type(g.draw.bg) ~= \"function\" or true\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn canvas and canvas.width < canvas.height\nend",
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.draw.bgAndBase()\ntimer.performWithDelay(25, function(event)\nif g.current_id == 1 then\n  if answers_objects and #answers_objects > 1 then\n    g.gAnswers = display.newGroup()\n    answers_objects[1].text.parent: insert(g.gAnswers)\n    g.replaceAnswers = {}\n    for i = 1, 2 do\n      local txt = utf8.sub (answers_objects[i].text.text, 1, 1)\n      if  txt == \" \" or txt == \"Ч\" then\n        answers_objects[i].text.fill = {1, 1, 1}\n      elseif txt == \"З\" then\n        g.activeAnswer(i)\n      else\n        g.activeAnswer(i, true)\n      end\n    end\n\n    g.draw.headerAndAnnotation()\n    if g.downloadImages then\n      g.drawRoverAndCopter()\n    end\n    timer.cancel(event.source)\n  end\n\nelse\n  timer.cancel(event.source)\nend\nend, -1)\nend",
+        "text": "   ",
+        "id": 1,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Сама игра",
+    "answers": [
+      {
+        "id": 40,
+        "text": "Все функции",
+        "run": [
+          40
+        ],
+        "lua_if": "function lua_if()\nreturn type(g.draw.bg) ~= \"function\" or true\nend"
+      },
+      {
+        "comment": true,
+        "super_calculate": true,
+        "id": 2,
+        "calculate": false,
+        "lua_do": "function lua_do()\n  g.static.run ()\nend",
+        "text": "Главная функция (начальник)"
+      },
+      {
+        "id": 54,
+        "text": "Тест",
+        "lua_if": "function lua_if()\nreturn false\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "static",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 3,
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.static = {}\nfunction g.static.run ()\n  if not field then\n    g.baseMap()\n    local i = 1\n    for x = 1, 4 do\n      realField[x] = {}\n      for y = 1, 7 do\n        realField[x][y] = tonumber(g.baseMaps[seed]:sub(i, i))\n        if realField[x][y] == 4 then\n          crystal = {x = x}\n        end\n        i = i <plus> 1\n      end\n    end\n  end\n  field[copter.x][copter.y] = realField[copter.x][copter.y]\n  --видимая марсоходом клетка\n  local nearX = g.player == 1 and 2 or 3\n  field[nearX][7] = realField[nearX][7]\n  known[nearX][7] = true\n\n  g.draw.bg (\"https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg\")\n  g.draw.base ()\n  g.draw.field (field)\n  g.draw.rover ()\n  g.draw.copter ()\n  g.draw.ruler (\"x\", {\"а\", \"б\", \"в\", \"г\"})\n  g.draw.ruler (\"y\", {\"7\", \"6\", \"5\", \"4\", \"3\", \"2\", \"1\"})\n  g.draw.stripRover ()\n  g.draw.stripCopter ()\nend\nend",
+        "text": "Запуск сцены"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "rover",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.modeRover (x, y)\n  if ((x == g.rover.x - 1 or x == g.rover.x <plus> 1) and y == g.rover.y) or\n  ((y == g.rover.y - 1 or y == g.rover.y <plus> 1) and x == g.rover.x) then\n    local n = field[x][y]\n    if n == 0 or n > 3 or (n == 2 and g.rover.points > 1) then\n      g.moveRover (x, y, n)\n    elseif n == 3 then\n      g.replica (g.texts.dangerMove[math.random (#g.texts.dangerMove)])\n    elseif x == copter.x and y == copter.y then\n      g.rover.active = false\n      rOnline:removeSelf ()\n      g.modeFree(x, y)\n    end\n  else\n    g.rover.active = false\n    rOnline:removeSelf ()\n    if not (x == g.rover.x and y == g.rover.y) then\n      g.modeFree(x, y)\n    end\n  end\nend\nend",
+        "text": "Режим марсохода",
+        "id": 18,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 18,
+        "text": "Движение марсохода",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.moveRover (x, y, n)\n  g.anim.move (gRover, g.getXcell(x), g.getYcell(y) )\n\n  if bonus[x][y] then\n    bonus[x][y] = false\n    copter.points = math.min (3, copter.points <plus> 1)\n    g.draw.stripCopter()\n  end\n\n  known[x][y] = true\n  g.removeImg (rField.shadow[x][y])\n\n  if x == copter.x and y == copter.y then\n    g.anim.move (gCopter, g.getXcell (g.rover.x), g.getYcell (g.rover.y) )\n    copter.x, copter.y = g.rover.x, g.rover.y\n  end\n\n  if realField[g.rover.x][g.rover.y] > 0 then\n    g.draw.fieldObj(realField, g.rover.x, g.rover.y)\n  end\n\n  g.rover.x, g.rover.y = x, y\n\n  if rField.obj[x][y] and rField.obj[x][y].removeSelf then\n    rField.obj[x][y]:removeSelf()\n  end\n\n  local nearX\n  if g.player == 1 and x < 4 then\n    nearX = x <plus> 1\n  elseif g.player == 2 and x > 1 then\n    nearX = x - 1\n  end\n  if nearX then\n    g.removeImg(rField.obj[nearX][y])\n    field[nearX][y] = realField[nearX][y]\n    if field[nearX][y] > 0 then\n      g.draw.fieldObj(realField, nearX, y)\n    end\n    known[nearX][y] = true\n    g.removeImg (rField.shadow[nearX][y])\n  end\n\n  local realN = realField[x][y]\n  field[x][y] = realN\n  if realN == 2 then\n    g.rover.points = g.rover.points - 1\n    g.draw.stripRover ()\n    g.removeImg(rOpenCell)\n    g.anim.openCell(realN)\n    if g.rover.points < 1 then\n      blockTap = true\n      timer.performWithDelay(1000, \n    function()\n      blockTap = false\n      showPage {id = 21, transition = \"instant\"}\n      end)\n    end\n  elseif realN == 1 then\n    g.rover.points = 0\n    g.draw.stripRover ()\n    g.anim.openCell(realN)\n    win = false\n    blockTap = true \n    timer.performWithDelay(1000, \n    function()\n      blockTap = false\n      showPage {id = 21, transition = \"instant\"}\n    end)\n  elseif x == crystal.x and y == 1 then\n    win = true\n    g.wins = g.wins <plus> 1\n    showPage {id = 21, transition = \"instant\"}\n  end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "copter",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 18,
+        "text": "Режим коптера",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.modeCopter(x, y)\n  copter.active = false\n  rOnline:removeSelf()\n  if x == g.rover.x and y == g.rover.y or\n     x == crystal.x and y == 1 \n  then\n    g.modeFree(x, y)\n  elseif not (x == copter.x and y == copter.y) then\n    g.moveCopter (x, y, field[x][y])\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.moveCopter(x, y, n)\n  g.anim.move (gCopter, g.getXcell(x), g.getYcell(y) )\n  local lastN = field[copter.x][copter.y]\n  if lastN > 0 then\n    rField.obj[copter.x][copter.y]:removeSelf()\n    g.draw.icon(namesIcon[lastN], copter.x, copter.y)\n  end\n  copter.x, copter.y = x, y\n  if rField.obj[x][y] and rField.obj[x][y].removeSelf then\n    rField.obj[x][y]:removeSelf()\n  end\n  local realN = realField[x][y]\n  field[x][y] = realN\n  copter.points = 0\n  g.draw.stripCopter()\n  if realN > 0 then\n    g.draw.small(namesIcon[realN], x, y)\n  end\n  known[x][y] = true\n  g.removeImg (rField.shadow[x][y])\nend\nend",
+        "text": "Движение коптера",
+        "id": 18,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "edit",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.modeEdit (x, y)\n  g.removePanel ()\n  if x == edit.x and y == edit.y or \n     x == crystal.x and y == 1 or\n     x == g.rover.x and y == g.rover.y or\n     x == copter.x and y == copter.y\n  then\n    edit.active = false\n    if not (x == edit.x and y == edit.y) then\n      g.modeFree(x, y)\n    end\n  else\n    edit.x, edit.y = x, y\n    g.draw.basePanel (x, y)\n    g.draw.buttonsPanel ()\n  end\nend\nend",
+        "calculate": false,
+        "text": "Режим редактирования",
+        "id": 18
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Анимация нажатия",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 7,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.anim.online (tag)\n  local x, y, offsetX, offsetY, url, group\n  if tag == \"g.rover\" then\n    offsetX, offsetY= -0.25, -0.175\n    x, y = g.rover.x, g.rover.y\n    url = g.imgUrl.yellowOnline\n    group = gRover\n  elseif tag == \"copter\" then\n    offsetX, offsetY = 0.288, 0.046\n    x, y = copter.x, copter.y\n    url = g.imgUrl.blueOnline\n    group = gCopter\n  end\n  rOnline = g.draw.image (url, offsetX*cell, offsetY*cell)\n  rOnline.xScale = 0.3*cell/rOnline.width\n  rOnline.yScale = rOnline.xScale\n  group:insert(rOnline)\n  if g.player == 2 and tag == \"g.rover\" then\n    rOnline.xScale = -rOnline.xScale\n    rOnline.x = rOnline.x <plus> cell/2\n  end\nend\nend",
+        "text": "Анимация нажатия"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Картинки",
+    "answers": [
+      {
+        "id": 8,
+        "text": "коптер",
+        "url": "https://images.vfl.ru/ii/1646574970/d453a0c6/38350561.png"
+      },
+      {
+        "id": 8,
+        "text": "Марсоход",
+        "url": "https://images.vfl.ru/ii/1625753378/8e0d42a9/35093603.png"
+      },
+      {
+        "id": 8,
+        "text": "Марсовый грунт",
+        "url": "https://images.vfl.ru/ii/1625754400/ea619f43/35093830.jpg"
+      },
+      {
+        "id": 8,
+        "text": "Жёлтый",
+        "url": "https://images.vfl.ru/ii/1625754426/efe72264/35093835.png"
+      },
+      {
+        "id": 8,
+        "text": "Красный",
+        "url": "https://images.vfl.ru/ii/1625754449/f44b5f3a/35093836.png\n"
+      },
+      {
+        "id": 8,
+        "text": "Облако",
+        "url": "https://images.vfl.ru/ii/1625754467/fc0e3a2f/35093843.png\n"
+      },
+      {
+        "id": 8,
+        "text": "фон",
+        "url": "https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg"
+      },
+      {
+        "id": 8,
+        "text": "Онлайн жёлтый ",
+        "url": "https://images.vfl.ru/ii/1646575069/da9e0cf8/38350577.png"
+      },
+      {
+        "id": 8,
+        "text": "Онлайн синий ",
+        "url": "https://images.vfl.ru/ii/1646575130/424f35d2/38350584.png"
+      },
+      {
+        "id": 8,
+        "text": "Затемнение",
+        "url": "https://images.vfl.ru/ii/1646575186/329e6a6a/38350591.png"
+      },
+      {
+        "id": 8,
+        "text": "Кристалл",
+        "url": "https://images.vfl.ru/ii/1646575244/8ab6e9ec/38350597.png"
+      },
+      {
+        "id": 8,
+        "text": "Крестик",
+        "url": "https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png"
+      },
+      {
+        "id": 8,
+        "text": "Стрелочка",
+        "url": "https://i.ibb.co/NjtHVng/sketch-1627394294478-copy-100x168.png"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Иконки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Большая иконка",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.icon (name, x, y)\n  rField.obj[x][y] = g.draw.image (g.imgUrl[name])\n  g.set.coord (rField.obj[x][y], x, y)\n  g.set.size (rField.obj[x][y], 0.75)\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.centerIcon(i)\n  rCenter = g.draw.image (g.imgUrl[g.manual[i].nameUrl], canvas.width/2, canvas.height/2)\n  rCenter.xScale = g.manual[i].xScale*canvas.width/rCenter.width\n  rCenter.yScale = math.abs (rCenter.xScale)\nend\nend",
+        "calculate": false,
+        "text": "Центральная иконка в мануале",
+        "id": 35
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.cloud (x, y)\n  rField.obj[x][y] = g.draw.image (g.imgUrl.cloud)\n  g.set.coord (rField.obj[x][y], x, y)\n  g.set.size (rField.obj[x][y], 0.7)\nend\nend",
+        "text": "Облако"
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.small (name, x, y)\n  rField.obj[x][y] = g.draw.image (g.imgUrl[name])\n  g.set.coord (rField.obj[x][y], x, y, 0.28)\n  g.set.size (rField.obj[x][y], 0.45)\nend\nend",
+        "text": "Маленькая иконка"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.copter ()\n  rCopter = display.newImage (g.imgUrl.copter)\n  g.set.size (rCopter, 0.4)\n  gCopter = display.newGroup ()\n  gCopter:insert (rCopter)\n  g.set.coord (gCopter, copter.x, copter.y)\n  rCopter.y = -0.13*cell\n  copter.active = false\nend\nend",
+        "calculate": false,
+        "text": "Коптер",
+        "id": 7
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.rover ()\n  rRover = display.newImage (g.imgUrl.rover)\n  g.set.size (rRover, 0.8)\n  gRover = display.newGroup ()\n  gRover:insert (rRover)\n  g.set.coord (gRover, g.rover.x, g.rover.y)\n  rRover.y = 0.11*cell\n  if g.player == 2 then\n    rRover.xScale = -1*rRover.xScale\n  end\n  g.rover.active = false\nend\nend",
+        "text": "Марсоход",
+        "id": 7,
+        "calculate": false
+      },
+      {
+        "comment": false,
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.bigRover()\nrRover = display.newImage (g.imgUrl.rover)\nrRover.x, rRover.y = canvas.width/2, canvas.height/2.05\nrRover.xScale = 0.65*canvas.width/rRover.width\nrRover.yScale = rRover.xScale\nend\nend",
+        "calculate": false,
+        "id": 9,
+        "text": "Марсоход на финальном экране"
+      },
+      {
+        "super_calculate": true,
+        "id": 9,
+        "text": "Подсветка непроверенной клетки",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.suspicious(x, y)\n  rField.shadow[x][y] = display.newRect (canvasGroup, g.getXcell(x), g.getYcell(y), cell, cell)\n  rField.shadow[x][y].fill = {0.6, 0.6, 0.6, 0.3}\n  rField.shadow[x][y].fill.blendMode = \"add\"\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Полоски",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Полоска",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.strip (main, rMain, gMain, value, paint)\n  rStrip = rStrip or {}\n  rStrip[main] = {}\n  for i = 1, 3 do\n    rStrip[main][i] = display.newRect (canvasGroup, \n      rMain.x <plus> (i-2)*cell/3,\n      rMain.y - rMain.height*rMain.yScale/2 - 0.1*cell, \n      cell/3.2, cell*0.1)\n    gMain:insert(rStrip[main][i])\n    if value < i then\n      rStrip[main][i]:setFillColor (0.8, 0.8, 0.8)\n    else\n      rStrip[main][i].fill = paint\n    end\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.stripRover ()\n  g.draw.strip (\"g.rover\", rRover, gRover, g.rover.points, g.rover.paint)\nend\nend",
+        "text": "Полоска марсохода"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.stripCopter ()\n  g.draw.strip (\"copter\", rCopter, gCopter, copter.points, copter.paint)\nend\nend",
+        "calculate": false,
+        "text": "Полоска коптера",
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Линейка",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.ruler (axic, text)\n  local start, axic2, ind\n  if axic == \"x\" then\n    start = startX    axic2 = \"y\"\n    ind = indent.down\n  else\n    start = startY    axic2 = \"x\"\n    ind = indent.left\n  end\n  rRuler = rRuler or {}\n  rRuler[axic] = {}\n  for i = 1, #text do\n    local options = {\n      parent = canvasGroup,\n      text = text[i],\n      font = \"RobotoRegular\",\n      fontSize = 0.0625*canvas.width\n    }\n    options[axic] = start <plus> (i - 0.5)*cell\n    options[axic2] = (axic2 == \"y\" and canvas.height - startY or startX) - ind/2\n    rRuler[axic][i] = display.newText (options)\n    rRuler[axic][i]:setFillColor (1, 1, 1)\n  end\nend\nend",
+        "text": "Линейка",
+        "id": 7,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Поле",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.field (t)\n  rField = {ground = {}, obj = {}, shadow = {} }\n  g.set.sizeField ()\n  for x = 1, #t do\n    rField.ground[x] = {}\n    rField.obj[x] = {}\n    rField.shadow[x] = {}\n    for y = 1, #t[x] do\n      rField.ground[x][y] = display.newImage (g.imgUrl.ground)\n      local c = rField.ground[x][y]\n      g.set.coord (c, x, y)\n      g.set.size (c)\n      c:addEventListener (\"tap\", g.tap.onCell)\n      g.draw.fieldObj (t, x, y)\n      if t[x][y] < 3 and not known[x][y] then\n        g.draw.suspicious(x, y)\n      end\n    end\n  end\nend\nend",
+        "text": "Поле",
+        "id": 7,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Объекты на поле",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.fieldObj (t, x, y) \n  local n = t[x][y]\n  if n > 0 then\n    if n == 3 then\n      g.draw.cloud (x, y)\n    elseif copter.x == x and copter.y == y then\n      g.draw.small (namesIcon[n], x, y)\n    else\n      g.draw.icon (namesIcon[n], x, y)\n    end\n  end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Фон",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.bg (url)\n  rBg = display.newImage (url)\n  rBg.x = canvas.width/2\n  rBg.y = canvas.height/2\n  local xs = canvas.width/rBg.width\n  local ys = canvas.height/rBg.height\n  rBg.xScale = math.max (xs, ys)\n  rBg.yScale = rBg.xScale\nend\nend",
+        "text": "Фон",
+        "id": 7,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Белый круг под шестерёнку",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Белый круг под шестерёнку",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.base ()\n  rBase = display.newCircle (canvasGroup, 0.0835*canvas.width, 0.073*canvas.width, 0.05*canvas.width)\n  rBase.alpha = 0.2\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Установить картинке координаты",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Установить картинке координаты",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.set.coord (img, x, y, offset)\n  img.x = startX <plus> (x - 0.5)*cell\n  img.y = startY <plus> (y - 0.5 <plus> (offset or 0) )*cell\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Установить картинке размеры",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.set.size (img, scale)\n  img.yScale = (scale or 1)*cell/img.height\n  img.xScale = img.yScale\nend\nend",
+        "calculate": false,
+        "text": "Установить картинке размеры",
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Вычислить размеры поля",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 7,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.set.sizeField ()\n  if canvas.height/canvas.width > 1.72792 then\n    cell = canvas.width/4.2\n    indent = {left = 0.19*cell, down = 0.24*cell}\n    startX = indent.left\n    startY = canvas.height/2 - (3.5*cell <plus> indent.down/2)\n  else\n    cell = canvas.height/7.25\n    indent = {left = 0.19*cell, down = 0.24*cell}\n    startX = canvas.width/2 - (2*cell - indent.left/2)\n    startY = 0\n  end\nend\nend",
+        "text": "Вычислить размеры поля"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Клик по клетке",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 18,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.tap.onCell (event)\n  g.removeImg(rReplica)\n  local x = math.round ((event.target.x - startX)/cell <plus> 0.5)\n  local y = math.round ((event.target.y - startY)/cell <plus> 0.5)\n  if blockTap then\n  elseif g.rover.active then\n    g.modeRover (x, y)\n  elseif copter.active then\n    g.modeCopter (x, y)\n  elseif edit.active then\n    g.modeEdit (x, y)\n  else\n    g.modeFree (x, y)\n  end\nend\nend",
+        "text": "Клик по клетке"
+      },
+      {
+        "super_calculate": true,
+        "id": 18,
+        "text": "Свободный режим",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.modeFree (x, y)\n  if x == g.rover.x and y == g.rover.y then\n    g.anim.online (\"g.rover\")\n    g.rover.active = true\n  elseif x == copter.x and y == copter.y then\n    if copter.points == 3 then\n      g.anim.online (\"copter\")\n      copter.active = true\n    end\n  elseif not (x == crystal.x and y == 1) and not known[x][y] then\n    edit.active = true\n    edit.x, edit.y = x, y\n    g.draw.basePanel (x, y)\n    g.draw.buttonsPanel ()\n  end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Панель выбора",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 19,
+        "calculate": false,
+        "text": "Подложка для панели",
+        "lua_do": "function lua_do()\nfunction g.draw.basePanel (x, y)\n  rBasePanel = display.newRoundedRect (canvasGroup, 0, 0, cell*2.5, 0, canvas.width*0.006)\n  rBasePanel.height = rBasePanel.width*0.34\n  rBasePanel.alpha = 0.9\n  rBasePanel:setFillColor (0.7, 0.5, 0.95)\n  if y == 1 then\n    g.set.coord (rBasePanel, x, y, 0.75) \n  else\n    g.set.coord (rBasePanel, x, y, -0.75) \n  end\n  if x == 1 then\n    rBasePanel.x = startX <plus> rBasePanel.width/2 - indent.left\n  elseif x == 4 then\n    rBasePanel.x = rBasePanel.x - (rBasePanel.width - cell)/2\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.buttonsPanel ()\n  rButtonsPanel = {ground = {}, obj = {} }\n  for i = 1, 3 do\n    rButtonsPanel.ground[i] = g.draw.image (g.imgUrl.ground)\n    local c = rButtonsPanel.ground[i]\n    c.width = rBasePanel.width*0.32\n    c.height = c.width\n    c.x = rBasePanel.x <plus> (i-2)*rBasePanel.width*0.33\n    c.y = rBasePanel.y\n    if g.current_id == 2 then\n      c:addEventListener (\"tap\", g.tap.onButton)\n    end\n    if i > 1 then\n      rButtonsPanel.obj[i-1] = g.draw.image (g.imgUrl[ namesIcon[i - 1] ], c.x, c.y)\n      local q = rButtonsPanel.obj[i-1]\n      q.width, q.height = 0.75*c.width, 0.75*c.height\n    end\n  end\nend\nend",
+        "text": "Кнопки панели",
+        "id": 19,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 19,
+        "text": "Нажатие на кнопку панели",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.tap.onButton (event)\n  local n = math.round ((event.target.x - rBasePanel.x)/event.target.width <plus> 2)\n  local obj = rField.obj[edit.x][edit.y]\n  if obj and obj.removeSelf then\n    obj:removeSelf ()\n  end\n  if n > 1 then\n    if copter.x == edit.x and copter.y == edit.y then\n      g.draw.small (namesIcon[n-1], edit.x, edit.y)\n    else\n      g.draw.icon (namesIcon[n-1], edit.x, edit.y)\n    end\n  end\n  field[edit.x][edit.y] = n - 1\n  g.removeImg (rField.shadow[edit.x][edit.y])\n  g.draw.suspicious(edit.x, edit.y)\n  g.removePanel ()\n  edit.active = false\n  blockTap = true\n  timer.performWithDelay (150, function () blockTap = false end)\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 19,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.removePanel ()\n  rBasePanel:removeSelf()\n  for i = 1, 3 do\n    rButtonsPanel.ground[i]: removeSelf ()\n    if i > 1 then\n      rButtonsPanel.obj[i-1]: removeSelf ()\n    end\n  end\nend\nend",
+        "text": "Удаление панели"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Анимация движения",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 18,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.anim.move (obj, x, y)\n  local a = 0.0000069*canvas.width\n  transition.to (obj, {\n    time = (2*( ((x - obj.x)^2 <plus> (y - obj.y)^2)^0.5 )/a)^0.5,\n    x = x,\n    y = y,\n  })\nend\nend",
+        "text": "Анимация движения"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Финальный экран",
+    "answers": [
+      {
+        "id": 40,
+        "text": "Все функции",
+        "run": [
+          40
+        ],
+        "lua_if": "function lua_if()\nreturn not g.draw or type(g.draw.bg) ~= \"function\"\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.draw.bg(\"https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg\")\ng.draw.bg(\"https://images.vfl.ru/ii/1646575186/329e6a6a/38350591.png\")\ng.draw.baseAndCross(function()\n  showPage{id = 30}\nend)\ng.draw.bigRover()\ng.draw.finalText()\ng.anim.appear(rText)\n\nif not win then\ntimer.performWithDelay (25, function(event)\n  if g.userInQuest and g.current_id == 21 then\n    if #answers_objects > 0 then\n      g.gAnswers = display.newGroup()\n      answers_objects[1].text.parent: insert(g.gAnswers)\n      g.replaceAnswers = {}\n      g.activeAnswer(1)\n      timer.cancel(event.source)\n    end\n  else\n    timer.cancel(event.source)\n  end\nend, -1)\nend\nend",
+        "text": "Главная функция",
+        "id": 21,
+        "calculate": false
+      },
+      {
+        "id": 38,
+        "right_answer": false,
+        "lua_if": "function lua_if()\nreturn not win\nend",
+        "text": "Непроходимая карта? Жми сюда",
+        "middle_answer": false,
+        "instant": false,
+        "lua_do": "function lua_do()\ndialog ({\n  header = \"Спасибо за внимательность!\",\n  text = 'Пожалуйста, сделайте скриншот карты и отправьте автору через кнопку \"связь с автором\" на первой странице'\n})\nend",
+        "left_answer": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Получить х и у на поле",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.getXcell (x, offset)\n  return (startX <plus> (x - 0.5 <plus> (offset or 0))*cell)\nend\nfunction g.getYcell (y, offset)\n  return (startY <plus> (y - 0.5 <plus> (offset or 0) )*cell)\nend\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 22
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Анимация открытия иконки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.anim.openCell(n)\n  rOpenCell = g.draw.image (g.imgUrl[ namesIcon[n] ])\n  g.set.coord(rOpenCell, 2.5, 4)\n  rOpenCell.yScale = cell/rOpenCell.height/2\n  rOpenCell.xScale = rOpenCell.yScale\n  rOpenCell.alpha = 0\n  transition.to (rOpenCell, {\n    time = 500,\n    alpha = 1, \n    yScale = rOpenCell.yScale*4,\n    xScale = rOpenCell.xScale*4\n  })\n  timer.performWithDelay(1000,\n  function()\n    g.removeImg(rOpenCell)\n  end)\nend\nend",
+        "text": "Анимация открытия иконки",
+        "id": 23,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Укорачиватель оригинальной display.newImage",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 24,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.image(url, x, y)\n  return display.newImage (canvasGroup, nameForImages (url), system.TemporaryDirectory, x or 0, y or 0)\nend\nend",
+        "text": "Укорачиватель оригинальной display.newImage"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Удаление изображения с проверкой",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 25,
+        "text": "Удаление изображения с проверкой",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.removeImg(img)\n  if img and img.removeSelf then\n    img:removeSelf()\n  end\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Стрелочки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 26,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.arrow()\n  rArrow = {}\n  for i = 1, 4 do\n    rArrow[i] = display.newImage(\"https://i.ibb.co/NjtHVng/sketch-1627394294478-copy-100x168.png\")\n    rArrow[i].xScale = 0.1*canvas.width/rArrow[i].width\n    rArrow[i].yScale = rArrow[i].xScale\n    rArrow[i].y = canvas.height/2 <plus> radius\n    rArrow[i].alpha = 0.6\n  end\n  for i = 1, 2 do\n    rArrow[i].x = 0.08*i*canvas.width\n    rArrow[i<plus>2].x = (1-0.08*i)* canvas.width\n    rArrow[i<plus>2].xScale = -rArrow[i<plus>2].xScale\n  end\n  local numArrow = false\n  if g.currentPageOfManual == 1 then\n   numArrow = 1\n  elseif g.currentPageOfManual == #g.manual then\n    numArrow = 3\n  end\n  if numArrow then\n    rArrow[numArrow].isVisible = false\n    rArrow[numArrow<plus>1].isVisible = false\n  end\nend\nend",
+        "text": "Нарисовать стрелочки"
+      },
+      {
+        "super_calculate": true,
+        "id": 26,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.areaTap()\n  rArea = {}\n  local height = canvas.height - 0.13*canvas.width\n  for i = 1, 2 do\n    rArea[i] = display.newCircle (canvasGroup, (0.5 <plus> (i == 2 and 1 or -1)*0.38)*canvas.width, rArrow[1].y, rArrow[1].contentWidth)\n    rArea[i].isVisible = false\n    rArea[i].isHitTestable = true\n  end\n  rArea[1]:addEventListener(\"tap\", function() g.tap.onArrow(\"max\", -1, 1, 1) end)\n  rArea[2]:addEventListener(\"tap\", function() g.tap.onArrow(\"min\", 1, #g.manual, 3) end)\nend\nend",
+        "text": "Область нажатия"
+      },
+      {
+        "super_calculate": true,
+        "id": 35,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.tap.onArrow(side, add, limit, numArrow)\n  g.anim.arrow(numArrow)\n  g.currentPageOfManual = math[side](g.currentPageOfManual <plus> add, limit)\n  if g.currentPageOfManual == limit then\n    rArrow[numArrow].isVisible = false\n    rArrow[numArrow<plus>1].isVisible = false\n  end\n  numArrow = numArrow == 1 and 3 or 1\n  rArrow[numArrow].isVisible = true\n  rArrow[numArrow<plus>1].isVisible = true\n  \n  g.draw.manual()\nend\nend",
+        "text": "Нажатие на стрелку"
+      },
+      {
+        "super_calculate": true,
+        "id": 26,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.anim.arrow(i)\n  rArrow[i]:setFillColor(0, 0, 0)\n  rArrow[i<plus>1]:setFillColor(0, 0, 0)\n  timer.performWithDelay (110, function()\n  rArrow[i]:setFillColor(1, 1, 1)\n  rArrow[i<plus>1]:setFillColor(1, 1, 1)\nend)\nend\nend",
+        "text": "Анимация стрелочки"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Сцена инструкции",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.manual()\n  timer.performWithDelay(100, \n  function()\n    if rCenterObjects and rCenterObjects[1] then\n      g.removeImg(rCenterObjects[1])\n      g.removeImg(rCenterObjects[2])\n    end\n    if rBasePanel and rBasePanel.removeSelf then\n      g.removePanel()\n    end\n    local i = g.currentPageOfManual\n    g.removeImg(rCenter)\n    if g.manual[i].nameUrl then\n      g.draw.centerIcon (i)\n    end\n    local tag = g.manual[i].tag\n    rCenterObjects = {}\n    cell = g.manual[i].xScale and g.manual[i].xScale*canvas.width\n\n    if tag == \"roverAndCopter\" then\n      local rover = g.draw.image (g.imgUrl.rover, canvas.width*0.4, canvas.height*0.5 <plus> canvas.width*0.15)\n      rover.xScale = canvas.width*0.4/rover.width\n      rover.yScale = rover.xScale\n      local copter = g.draw.image (g.imgUrl.copter, canvas.width*0.6, canvas.height*0.5 - canvas.width*0.2)\n      copter.xScale = canvas.width*0.5/copter.width\n      copter.yScale = copter.xScale\n      rCenterObjects[1] = rover\n      rCenterObjects[2] = copter\n\n    elseif tag == \"panel\" then\n      local cloud = g.draw.image (g.imgUrl.cloud, canvas.width/2, canvas.height/2)\n      cloud.yScale = 0.7*cell/cloud.height\n      cloud.xScale = cloud.yScale\n      rBasePanel = display.newRoundedRect (canvasGroup, canvas.width/2, canvas.height/2 - cell*0.75, 2.5*cell, 0.85*cell, canvas.width*0.006)\n      rBasePanel:setFillColor (0.7, 0.5, 0.95, 0.9)\n      g.draw.buttonsPanel ()\n      rCenterObjects[1] = cloud\n\n    elseif tag == \"shadow\" then\n      local shadow = display.newRect (canvasGroup, canvas.width/2, canvas.height/2, cell, cell)\n      shadow.fill = {0.6, 0.6, 0.6, 0.3}\n      shadow.fill.blendMode = \"add\"\n      rCenterObjects[1] = shadow\n    end\n  end)\n  g.draw.text(g.currentPageOfManual)\nend\nend",
+        "calculate": false,
+        "text": "Сцена инструкции",
+        "id": 27
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Текст",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 28,
+        "text": "Текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.finalText()\n  local paint, text\n  if win then\n    paint = g.rover.paint\n    text = \"Победа!\"\n  else\n    paint = {176/255, 0, 16/255}\n    text = \"Поражение\"\n  end\n  rText = display.newText ({\n    parent = canvasGroup,\n    text = text,\n    font = \"Roboto-Regular\",\n    fontSize = 0.125*canvas.width,\n    x = canvas.width/2,\n    y = (canvas.height/2 - 0.434*canvas.width)/2\n  })\n  rText.fill = paint\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Анимация текста",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.anim.appear(obj)\n  obj.alpha = 0\n  timer.performWithDelay(200,   \n  function()\n    transition.to (obj, {\n      time = 500,\n      alpha = 1\n    })\n  end)\nend\nend",
+        "calculate": false,
+        "text": "Анимация текста",
+        "id": 29
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Меню",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "text_color": [],
+        "lua_do": "function lua_do()\n  seed = tonumber(utf8.match (textField.text, \"%d<plus>\"))\n  if type (seed) ~= \"number\" or seed < 1 or seed > #g.baseMaps then\n    dialog{header = \"Ошибка\", text = \"Введите корректный номер комнаты\"}\n    seed = 1\n    timer.performWithDelay(500, \n    function()\n      showPage{id = 30, transition = \"instant\"}\n    end)\n  end\n  g.games = g.games <plus> 1\n  g.rover = {y = 7, points = 3, paint = {248/255, 184/255, 0} }\n  copter = {y = 6, points = 0, paint = {0, 192/255, 248/255} }\n  g.rover.x = g.player == 1 and 1 or 4\n  copter.x = g.rover.x\nend",
+        "text": "Далее",
+        "id": 2,
+        "no_transition": false
+      },
+      {
+        "id": 30,
+        "text": "Карта №",
+        "comment": false,
+        "no_transition": true
+      },
+      {
+        "id": 40,
+        "text": "Все функции",
+        "run": [
+          40
+        ],
+        "lua_if": "function lua_if()\nreturn type(g.draw.bg) ~= \"function\"\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n  randomRoom = math.random(999)\n  field = nil\n  g.draw.bg(g.imgUrl.bg)\n  g.draw.blackRect()\n  g.draw.baseAndManual()\n  timer.performWithDelay(25, function(event)\nif g.userInQuest == 1 and g.current_id == 30 then\n\nif #answers_objects > 1 then\n  local text = answers_objects[2].text\n  g.gAnswers = display.newGroup()\n  text.parent: insert(g.gAnswers)\n  g.replaceAnswers = {}\n  g.activeAnswer(1)\n  g.activeAnswer(2)\n  textField = native.newTextField(text.x, text.y <plus> text.height/2, text.width, text.height)\n  text.parent: insert(textField)\n  textField.text = text.text\n  textField:setTextColor (1, 1, 1)\n  textField.hasBackground = false\n  textField: addEventListener(\"userInput\", function(event)\n  if event.phase == \"began\" then\n    g.replaceAnswers[2].y = g.replaceAnswers[2].y - canvas.height/2\n    textField.y = textField.y - canvas.height/2\n  elseif event.phase == \"ended\" or event.phase == \"submitted\" then\n    g.replaceAnswers[2].y = g.replaceAnswers[2].y <plus> canvas.height/2\n    textField.y = textField.y <plus> canvas.height/2\n  end\nend)\n  text.isVisible = false\n  rAnswerText = {}\n  rAnswerText[1] = g.drawAnswerText(\"2. Выберите с другом одну карту (номер от 1 до \" .. #g.baseMaps .. \").\", g.replaceAnswers[2].y - g.replaceAnswers[2].height/2)\n  g.draw.leftAndRightAnswers()\n  rAnswerText[2] = g.drawAnswerText(\"1. Выберите с другом разные стороны:\", rAnswerSide[1].y - rAnswerSide[1].contentHeight/2)\n\n  local downBorder = g.replaceAnswers[1].y <plus> g.replaceAnswers[1].height/2\n  local height = downBorder - rAnswerText[2].y\n  local downField = canvas.height - downBorder\n  g.gAnswers.y = downField - canvas.height/2 <plus> height/2 <plus> 0.1*canvas.width\n  if g.games > 0 then\n    rAnswerText[3] = g.drawAnswerText(\"Побед: \".. g.wins.. \"/\".. g.games, 0.13*canvas.width - g.gAnswers.y, true)\n    rAnswerText[3].x = 0.48*canvas.width\n  end\n  timer.cancel(event.source)\n  end\n\nelse\n  timer.cancel(event.source)\nend\nend, -1)\nend",
+        "text": "   ",
+        "id": 30,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Генерация карты",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.generationMap()\n  obstacles = 0\n  painter = {x = 1, y = 7}\n  road, road2 = 0, 5\n  numStep = 1\n  while true do\n    if not g.everyStep(painter.x, painter.y) then break end\n    numStep = numStep <plus> 1\n  end\n\n  stopGeneration = false\n  road, road2 = 5, 0\n  painter.x = 4\n  painter.y = 7\n  numStep = 1\n  while true do\n    if not g.everyStep(painter.x, painter.y) then break end\n    numStep = numStep <plus> 1\n  end\n  second = nil     main = nil\n\n  g.changeFiveOnZero()\n  realField[crystal.x][1] = 4\n  g.extra()\n\n  field[copter.x][copter.y] = realField[copter.x][copter.y]\n--видимая марсоходом клетка\n  local nearX = g.player == 1 and 2 or 3\n  field[nearX][7] = realField[nearX][7]\n  known[nearX][7] = true\nend\nend",
+        "calculate": false,
+        "text": "Генерация карты",
+        "id": 31
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.everyStep(x, y)\n  if y == 1 then\n    local step = x > crystal.x and -1 or 1\n    realField[x<plus>step][1] = road\n    return false\n  end\n  g.findPath(x, y)\n  local cellMain\n  if #main > 0 then\n    cellMain = main[math.random(#main)]\n    if obstacles > 1 or math.random(4) > 1 then\n      realField[cellMain.x][cellMain.y] = road\n    else\n      realField[cellMain.x][cellMain.y] = 2\n      obstacles = obstacles <plus> 1\n    end\n    painter.x, painter.y = cellMain.x, cellMain.y\n    \n    if stopGeneration then\n      return false\n    end\n  else\n    return false\n  end\n  return true\nend\nend",
+        "text": "Каждый шаг",
+        "id": 31,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 31,
+        "text": "Заменить 5 на 0",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.changeFiveOnZero()\n  for x = 1, 4 do\n    for y = 1, 7 do\n      if realField[x][y] == 5 then\n        realField[x][y] = 0\n      end\n    end\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.extra()\n  local extraYellow = 0\n  local extraPath = 0\n  for x = 1, 4 do\n    for y = 1, 7 do\n      if realField[x][y] == 1 then\n        if math.random(3) == 1 and extraYellow < 15 then\n          realField[x][y] = 2\n          extraYellow = extraYellow <plus> 1\n        elseif math.random(4) == 1 and extraPath < 6 then\n          realField[x][y] = 0\n          extraPath = extraPath <plus> 1\n        end\n      end\n    end\n  end\nend\nend",
+        "calculate": false,
+        "text": "Добавочные жёлтые и земляные иконки",
+        "id": 31
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Поиск пути",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.findPath(x, y)\n  g.set.nearCells(x, y)\n  for i, cell in pairs(main) do\n\n    if g.existence(cell.x, cell.y) then \n      if realField[cell.x][cell.y] == road then\n        g.deleteCells(g.indexCell(main, cell.n), cell, true)\n      end\n    else\n      g.deleteCells(g.indexCell(main, cell.n), cell, true)\n    end\n  end\n\n  local n\n  for i, cell in pairs(second) do\n    if g.existence(cell.x, cell.y) then\n      numIcon = realField[cell.x][cell.y]\n      if numIcon == road then\n        g.adjOrSimple(g.indexCell(second, cell.n), cell, true)\n      elseif numIcon == 4 or numIcon == road2 then\n        main = g.adjacent( g.indexCell(second, cell.n) ) and { main[ g.indexCell(main, cell.main[ math.random (#cell.main) ]) ]} or {main[g.indexCell (main, cell.main)]}\n        second = {}\n        stopGeneration = true\n        break\n      end\n    else\n      table.remove(second, g.indexCell(second, cell.n) or 8 )\n    end\n  end\nend\nend",
+        "calculate": false,
+        "text": "Поиск пути",
+        "id": 31
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.adjOrSimple(iSecond, cell, tag)\n  local iMain\n  if g.adjacent(iSecond) then\n    for i = 1, 2 do\n       iMain = g.indexCell(main, cell.main[i])\n      g.deleteCells(iMain, main[iMain], tag)\n    end\n  else\n    iMain = g.indexCell(main, cell.main)\n    g.deleteCells(iMain, main[iMain], tag)\n  end\nend\nend",
+        "calculate": false,
+        "text": "Настройка удаления клеток в зависимости от типа клетки",
+        "id": 32
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.existence(x, y)\n  if x >= 1 and x <= 4 and y >= 1 and y <= 7 then\n    return true\n  end\n  return false\nend\nend",
+        "text": "Проверка на существование клетки",
+        "id": 32,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 32,
+        "calculate": false,
+        "lua_do": "function lua_do()\n--всегда принимает главную клетку\nfunction g.deleteCells(iMain, cell, tag)\n  local iSecond\n  for _, nSecond in pairs (cell.second) do\n    iSecond = g.indexCell(second, nSecond)\n    if iSecond then\n      if not tag or not g.adjacent(iSecond) then\n        table.remove(second, iSecond)\n      end\n    end\n  end\n    table.remove(main, iMain)\nend\nend",
+        "text": "Удалить связанные клетки"
+      },
+      {
+        "super_calculate": true,
+        "id": 32,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.adjacent(i)\n  if second[i] and type (second[i].main) == \"table\" then\n    return true\n  end\n  return false\nend\nend",
+        "text": "Клетка смежная?"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.indexCell(parent, n)\n  for i = 1, #parent do\n    if parent[i].n == n then\n      return i\n    end\n  end\n  return false\nend\nend",
+        "text": "Найти клетку по номеру",
+        "id": 32,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.set.nearCells(x, y)\n  main = {\n    {n = 1, x = x - 1, y = y, second = {1, 2, 3} },\n    {n = 2, x = x, y = y - 1, second = {3, 4, 5} },\n    {n = 3, x = x <plus> 1, y = y, second = {5, 6, 7} }\n  }\n  second = {\n    {n = 1, x = x - 1, y = y <plus> 1, main = 1 },\n    {n = 2, x = x - 2, y = y, main = 1},\n    {n = 3, x = x - 1, y = y - 1, main = {1, 2} },\n    {n = 4, x = x, y = y - 2, main = 2},\n    {n = 5, x = x <plus> 1, y = y - 1, main = {2, 3} },\n    {n = 6, x = x <plus> 2, y = y, main = 3},\n    {n = 7, x = x <plus> 1, y = y <plus> 1, main = 3},\n  }\nend\nend",
+        "text": "Создание таблиц с клетками",
+        "id": 32,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Начальная стандартная карта",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.baseMap()\n  field = {}  realField = {}  \n  bonus = {}  known = {}\n  for x = 1, 4 do\n    field[x] = {}  realField[x] = {}\n    bonus[x] = {} known[x] = {}\n    for y = 1, 7 do\n      field[x][y] = 3   realField[x][y] = 1\n      bonus[x][y] = true\n      known[x][y] = false\n    end\n  end\n\n  field[g.rover.x][7] = 0\n  bonus[g.rover.x][7] = false\n  known[g.rover.x][7] = true\n  known[copter.x][copter.y] = true\n--левый старт\n  realField[1][7] = 0\n--правый старт\n  realField[4][7] = 0\n--кристалл\n  crystal = { x = math.random(2, 3) }\n  field[crystal.x][1] = 4  \n  realField[crystal.x][1] = 4\nend\nend",
+        "text": "Начальная стандартная карта",
+        "id": 33,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Текст",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.oneText(text, kSize, y, kWidth)\n  return display.newText ({\n    parent = canvasGroup,\n    text = text,\n    font = \"Roboto-Regular\",\n    fontSize = kSize*0.055*canvas.width,\n    x = canvas.width/2,\n    y = y,\n    width = kWidth*canvas.width,\n    align = \"center\"\n    })\nend\nend",
+        "calculate": false,
+        "text": "Одна единица текста",
+        "id": 34
+      },
+      {
+        "super_calculate": true,
+        "id": 35,
+        "text": "Текст",
+        "lua_do": "function lua_do()\nfunction g.draw.text(i)\n  if rHeader and rHeader.removeSelf then\n    rHeader.fill = g.manual[i].paint\n    rHeader.text = g.manual[i].header\n    rShadow.text = g.manual[i].text\n    rText.text = g.manual[i].text\n  else\n    rHeader = g.draw.oneText (g.manual[i].header, 1.5, canvas.height/4 - radius/2 <plus> 0.065*canvas.width, 0.85)\n    rShadow = g.draw.oneText (g.manual[i].text, 1, canvas.height*0.75 <plus> radius/2 <plus> rArrow[1].yScale*rArrow[1].height/4, 0.95)\n    rShadow.x, rShadow.y = rShadow.x <plus> canvas.width/220, rShadow.y <plus> canvas.width/220\n    rText = g.draw.oneText (g.manual[i].text, 1, canvas.height*0.75 <plus> radius/2 <plus> rArrow[1].yScale*rArrow[1].height/4, 0.95)\n    rShadow.fill = {0, 0, 0}\n    rHeader.fill = g.manual[i].paint\n  end\nend\nend",
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Инструкция",
+    "answers": [
+      {
+        "id": 40,
+        "text": "Все функции",
+        "run": [
+          40
+        ],
+        "lua_if": "function lua_if()\nreturn type(g.draw.bg) ~= \"function\"\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.draw.bg(\"https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg\")\ng.draw.bg(\"https://images.vfl.ru/ii/1646575186/329e6a6a/38350591.png\")\n  radius = 0.434*canvas.width\n  g.draw.baseAndCross(function()\n    showPage{id = 30, transition = \"instant\"}\n  end)\n  g.draw.arrow()\n  g.draw.areaTap()\n  g.draw.manual()\nend",
+        "calculate": false,
+        "text": "Местный static",
+        "id": 35
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Подложка и крестик",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 36,
+        "text": "Подложка и крестик",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.baseAndCross(f)\n  g.draw.base2(f)\n  rCross = display.newImage (\"https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png\")\n  rCross.x, rCross.y = rBase[2].x, rBase[2].y\n  rCross.xScale = 0.07*canvas.width/rCross.width\n  rCross.yScale = rCross.xScale\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.base2(f)\n  rBase = {}\n  for i = 1, 2 do\n    rBase[i] = display.newCircle (canvasGroup, 0.0835*canvas.width, 0.073*canvas.width, 0.05*canvas.width)\n    rBase[i].alpha = 0.2\n  end\n  rBase[2].x = 0.9165*canvas.width\n  rBase[2]:addEventListener(\"tap\", \n  f)\nend\nend",
+        "calculate": false,
+        "text": "Двойная подложка",
+        "id": 36
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Сценарий инструкции",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 37,
+        "text": "Сценарий инструкции",
+        "calculate": false,
+        "lua_do": "function lua_do()\n  g.manual = {\n\n    {header = \"Неизвестный объект\", \n     paint = {208/255, 64/255, 224/255}, \n     text = \"Исследователь, добравшийся до него первым, побеждает в игре!\", \n     nameUrl = \"crystal\", \n     xScale = 0.4},\n\n    {header = \"Робот\", \n     paint = g.rover.paint,\n     text = \"Именно он должен изучить объект. Робот может ходить на одну клетку в любую из четырёх сторон.\", \n     nameUrl = \"rover\", \n     xScale = 0.65},\n\n    {header = \"Как использовать?\", \n     paint = g.rover.paint,\n     text = \"Нажмите на робота, а потом на соседнюю клетку, чтобы походить им.\", \n     nameUrl = \"rover\", \n     xScale = 0.65},\n\n     {header = \"Непроверенная территория\", \n     paint = {192/255, 208/255, 224/255},\n     text = \"Будьте осторожны! На этой клетке может быть всё что угодно.\", \n     nameUrl = \"cloud\", \n     xScale = 0.6},\n\n    {header = \"Опасность!\", \n     paint = {248/255, 216/255, 0},\n     text = \"Проход по такой клетке снимает роботу единицу прочности (шкала над ним).\", \n     nameUrl = \"yellow\", \n     xScale = 0.53},\n\n    {header = \"Смертельная опасность!\", \n     paint = {0.95, 0.1, 0.1},\n     text = \"Берегите робота от этих клеток.\", \n     nameUrl = \"red\", \n     xScale = 0.49},\n\n    {header = \"Информация о местности\", \n     paint = g.rover.paint,\n     text = \"К несчастью, камеры робота сломались, и он видит клетки только в одном направлении.\", \n     nameUrl = \"rover\", \n     xScale = 0.65},\n\n    {header = \"А что видит другой игрок?\",\n     paint = g.rover.paint,\n     text = \"Всё то же самое, только его робот начинает с другого угла и смотрит в противоположную сторону.\",\n     nameUrl = \"rover\",\n     xScale = -0.65},\n\n    {header = \"Коптер\", \n     paint = {0, 154/255, 242/255},\n     text = \"Для разведки местности. Восстанавливается за три хода робота (шкала над коптером).\", \n     nameUrl = \"copter\",\n     xScale = 0.7},\n\n    {header = \"Как использовать?\", \n     paint = {0, 154/255, 242/255},\n     text = \"Нажмите на коптер, а потом на любую клетку, чтобы походить им.\", \n     nameUrl = \"copter\", \n     xScale = 0.7},\n\n    {header = \"Помощь друга\",\n     paint = {0, 154/255, 242/255},\n     text = \"Пройти игру одному почти не реально, и в этом вся суть.\",\n     tag = \"roverAndCopter\"},\n\n    {header = \"Переговоры\",\n     paint = {0, 154/255, 242/255},\n     text = \"Чтобы выиграть, надо обмениваться информацией, но в то же время не дать сопернику Вас обогнать.\",\n     tag = \"roverAndCopter\"},\n\n    {header = \"Любая клетка\",\n     paint = {196/255, 106/255, 38/255},\n     text = \"Данные, полученные от другого игрока, можно отметить, нажав на клетку и выбрав нужный знак.\",\n     nameUrl = \"ground\", \n     xScale = 0.37,\n     tag = \"panel\"},\n\n    {header = \"Ваш выбор\",\n     paint = {196/255, 106/255, 38/255},\n     text = \"Будет подсвечен, чтобы не спутать с достоверной информацией.\",\n     nameUrl = \"ground\",\n     xScale = 0.5,\n     tag = \"shadow\"}\n\n  }\nend"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Страница для скриншота карты",
+    "answers": [
+      {
+        "id": 40,
+        "text": "Все функции",
+        "run": [
+          40
+        ],
+        "lua_if": "function lua_if()\nreturn not g.draw or type(g.draw.bg) ~= \"function\"\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.draw.bg(\"https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg\")\ng.draw.baseAndCross(function()\n  showPage{id = 1}\nend)\ncopter.x, copter.y = 1, 7\nfor x = 1, 4 do\n  for y = 1, 7 do\n    known[x][y] = true\n  end\nend\ng.draw.field (realField)\nend",
+        "text": "   ",
+        "id": 38,
+        "calculate": false
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"№\".. seed\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 38,
+        "text": "Новый ответ. введите текст",
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Тёмный прямоугольник",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.draw.blackRect()\n  rBlack = display.newRect (canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\n  rBlack.fill = {0, 0, 0}\n  rBlack.alpha = 0.4\nend\nend",
+        "calculate": false,
+        "text": "Тёмный прямоугольник",
+        "id": 39
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Все функции.\n\n(Синие ответы — функции инструкции и финального экрана.\nЖёлтые — функции первой страницы.\nЗелёные — меню,\nОстальные — самой игры)",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Сцены (менеджеры):"
+      },
+      {
+        "id": 3,
+        "text": "static (старший)",
+        "run": [
+          3
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Сцена инструкции",
+        "run": [
+          27
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Отрисовка (маляры):\n/display.new...\n\nЗадний фон:"
+      },
+      {
+        "id": 14,
+        "text": "Белый круг под шестерёнку",
+        "run": [
+          14
+        ]
+      },
+      {
+        "id": 39,
+        "text": "Тёмный прямоугольник",
+        "run": [
+          39
+        ],
+        "bg_color": [
+          1,
+          0.8,
+          0.5
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Фон",
+        "run": [
+          13
+        ]
+      },
+      {
+        "id": 47,
+        "text": "Фон и подложка",
+        "run": [
+          47
+        ],
+        "bg_color": [
+          1,
+          0.8,
+          0.5
+        ]
+      },
+      {
+        "id": 36,
+        "text": "Подложка и крестик",
+        "run": [
+          36
+        ],
+        "bg_color": [
+          0.7,
+          0.85,
+          1
+        ]
+      },
+      {
+        "id": 52,
+        "text": "Подложка и мануал",
+        "run": [
+          52
+        ],
+        "bg_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Поле",
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Линейка",
+        "run": [
+          11
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Текст:"
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 54,
+        "calculate": false,
+        "run": [
+          54
+        ],
+        "text": "Реплика робота"
+      },
+      {
+        "id": 34,
+        "text": "Большой текст",
+        "run": [
+          34
+        ],
+        "bg_color": [
+          0.7,
+          0.85,
+          1
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Финальный текст",
+        "run": [
+          28
+        ],
+        "bg_color": [
+          0.7,
+          0.85,
+          1
+        ]
+      },
+      {
+        "id": 44,
+        "text": "Текст, как на ответе",
+        "run": [
+          44
+        ],
+        "bg_color": [
+          0.6,
+          0.9,
+          0.6
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Стрелочки",
+        "run": [
+          26
+        ],
+        "bg_color": [
+          0.7,
+          0.85,
+          1
+        ]
+      },
+      {
+        "id": 48,
+        "text": "Заголовок и аннотация",
+        "run": [
+          48
+        ],
+        "bg_color": [
+          1,
+          0.8,
+          0.5
+        ]
+      },
+      {
+        "id": 43,
+        "text": "Левая и правая кнопки",
+        "run": [
+          43
+        ],
+        "bg_color": [
+          0.6,
+          0.9,
+          0.6
+        ]
+      },
+      {
+        "id": 42,
+        "text": "Управление ответами",
+        "run": [
+          42
+        ]
+      },
+      {
+        "id": 45,
+        "text": "Пробелы между ответами",
+        "run": [
+          45
+        ],
+        "bg_color": [
+          0.6,
+          0.9,
+          0.6
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Изображения:"
+      },
+      {
+        "id": 24,
+        "text": "Укорачиватель оригинальной display.newImage",
+        "run": [
+          24
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Удаление изображения с проверкой",
+        "run": [
+          25
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Иконки",
+        "run": [
+          9
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Полоски",
+        "run": [
+          10
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Панель выбора",
+        "run": [
+          19
+        ]
+      },
+      {
+        "id": 50,
+        "text": "Нарисовать g.rover и коптер",
+        "run": [
+          50
+        ],
+        "bg_color": [
+          1,
+          0.8,
+          0.5
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Помощники:\n/arithmetic"
+      },
+      {
+        "id": 15,
+        "text": "Установить картинке координаты",
+        "run": [
+          15
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Установить картинке размеры",
+        "run": [
+          16
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Вычислить размеры поля",
+        "run": [
+          17
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Получить х и y на поле",
+        "run": [
+          22
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Обработчики (диспетчеры):\n/listener"
+      },
+      {
+        "id": 18,
+        "text": "Клик по клетке",
+        "run": [
+          18
+        ]
+      },
+      {
+        "id": 4,
+        "text": "rover",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 5,
+        "text": "copter",
+        "run": [
+          5
+        ]
+      },
+      {
+        "id": 6,
+        "text": "edit",
+        "run": [
+          6
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Переходы (грузчики):\n/transition"
+      },
+      {
+        "id": 7,
+        "text": "Анимация нажатия",
+        "run": [
+          7
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Анимация движения",
+        "run": [
+          20
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Анимация открытия иконки",
+        "run": [
+          23
+        ]
+      },
+      {
+        "id": 46,
+        "text": "Анимация коптера",
+        "run": [
+          46
+        ],
+        "bg_color": [
+          1,
+          0.8,
+          0.5
+        ]
+      },
+      {
+        "id": 29,
+        "text": "Анимация текста",
+        "run": [
+          29
+        ],
+        "bg_color": [
+          0.7,
+          0.85,
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Создание карты:",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 33,
+        "text": "Начальная стандартная карта",
+        "run": [
+          33
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 31,
+        "calculate": false,
+        "run": [
+          31
+        ],
+        "text": "Генерация карты"
+      },
+      {
+        "id": 32,
+        "text": "Поиск пути",
+        "run": [
+          32
+        ]
+      },
+      {
+        "id": 41,
+        "text": "База карт",
+        "run": [
+          41
+        ]
+      },
+      {
+        "id": 40,
+        "text": "Объявление переменных",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "id": 51,
+        "text": "Локальные переменные",
+        "run": [
+          51
+        ],
+        "bg_color": [
+          1,
+          0.8,
+          0.5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "База карт",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.baseMaps = {\n\"2021110412002002200000000110\",\n\"2112120401020000000222200020\",\n\"0111100412120200022001121120\",\n\"1012020210001040101200000010\",\n\"2220200200121040221100111110\",\n\"1021020400021111101002210000\",\n\"1121210110101241221000000000\",\n\"2102200201102040000001221000\",\n\"2121000400001122101202120200\",\n\"2020000412110111110001102210\",\n\"0111220112221040111000002000\",\n\"2102020201012140210011000000\",\n\"1012000220120040012221200200\",\n\"2121220421101001200010000000\",\n\"0021200410112002100002000120\",\n\"1200120201000040120021020000\",\n\"2211100201111040200102000020\",\n\"0120200402012011010111100200\",\n\"1000200100011240200211210000\",\n\"1111200222000141200000200100\",\n\"0111100422022202000012000000\",\n\"2200200402100021102101111210\",\n\"0022220010021041100201122020\",\n\"1112100401220000010202000200\",\n\"1111110021112040102200000000\",\n\"2111200401120120210101020020\",\n\"2020020401002110110000221000\",\n\"1222000220102040020100200010\",\n\"2000120400011022002121110200\",\n\"1110000401022002201200001210\",\n\"1011020402102020200012200000\",\n\"0120100211110240000221212110\",\n\"1212110402112210001001000020\",\n\"1120220202211240000202111110\",\n\"0121200222121040000101011000\",\n\"1012220101211040120200200000\",\n\"0212010220020240021021000000\",\n\"0212220202101140000212221000\",\n\"1120020421011000200010000020\",\n\"0000100400002121120002012120\",\n\"2110000100012041100110202000\",\n\"2000020000222141110111212000\",\n\"2000100401002011112002202100\",\n\"2212120400111011001202220220\",\n\"1120020111002240112020000000\",\n\"2121100111220040022212200000\",\n\"0200220400020012120112002000\",\n\"1012200412200001201020000100\",\n\"2021100100012240200210011000\",\n\"1101100402020121111020202200\",\n\"1022120400002201101111210020\",\n\"1211100401100012000011021100\",\n\"2101000120112240021101000000\",\n\"0200020120000040001001121210\",\n\"2120210210100040011012120100\",\n\"2120200200010140101210122200\",\n\"1111100420020200100012112100\",\n\"1101220121001240000201122000\",\n\"1200010110202240020110011020\",\n\"0202020000101040200121102000\",\n\"1100000400200210222201121110\",\n\"1120000011101040212101000020\",\n\"1221010122210042001011110000\",\n\"1110120120001040210202111200\",\n\"2012200221210042120002000110\",\n\"0221220112121040001221110000\",\n\"0121120401220202100110000020\",\n\"1112200400200212010222100000\",\n\"0212120101121240001100120200\",\n\"1102110400212022020202220000\",\n\"1111200012122140000212102000\",\n\"0001200112110040221121100000\",\n\"2111000400021111000102121020\",\n\"0221200111020042122200000000\",\n\"1021210221010040021201110000\",\n\"1000100002002141112002221020\",\n\"1221120400111200000121121000\",\n\"1211120401121000100202000000\",\n\"1101020400110022002021211100\",\n\"1000000101102240110100001000\",\n\"1122000401021010021101102220\",\n\"1110010400002010110211221000\",\n\"1021000421202010020222112000\",\n\"0000000011112042110002102220\",\n\"2102000402102111100111202000\",\n\"1220000411201001002200000010\",\n\"2102220422020002000020020120\",\n\"2000210401221000211001100020\",\n\"1012120111211240000020000000\",\n\"1100000121100040010202200000\",\n\"2122200122021040000110011000\",\n\"2102210010011042000122000000\",\n\"2212100420010020101011212000\",\n\"1011220402020012101220120020\",\n\"2110110121121042100120000200\",\n\"2112020401121210000000212020\",\n\"0001100020010041200101111020\",\n\"2110110401112010100021000000\",\n\"0001110000012241200202211000\",\n\"0210220400020210102211120000\",\n\"2121200001112242000010000000\",\n\"1211110400101001002101020220\",\n\"2220120420002011100110101020\",\n\"1221000101110142200021111100\",\n\"2112220400001022210121221200\",\n\"2000000100212240012201201010\",\n\"1100200110000240020001121010\",\n\"0211120400020011122101100010\",\n\"2120000411211000200201002100\",\n\"0000100400011022200120212200\",\n\"1111000402001202100021101200\",\n\"0000110011021040210001120020\",\n\"1212110200010041102000000020\",\n\"2111220402112001002000001200\",\n\"0002110411010012020012110200\",\n\"0021010211021040001221112000\",\n\"1211200412122200010221200000\",\n\"2000200002020042100120222000\",\n\"1200010402100022211101222110\",\n\"2000200001000140102020010000\",\n\"0111220411202000022012100000\",\n\"2202020100101140210111011000\",\n\"1222210421112002012201100000\",\n\"2022000402220120001012200020\",\n\"1102020400202011012221100000\",\n\"1222220012202241100110000020\",\n\"0121010212120040022002110120\",\n\"1111100400021201201200110200\",\n\"1112200410121001201100000220\",\n\"0022110402100020002022110000\",\n\"0001200020020141120101221020\",\n\"0201000000021142100221111000\",\n\"0121200111120040111001000000\",\n\"1211010110000240010002121100\",\n\"2112100200120040221101200000\",\n\"1211210400001222210020120110\",\n\"1200020400011000210102212100\",\n\"1200000122200040120102000200\",\n\"2110000212010041201100000110\",\n\"0002000201012040220100202000\",\n\"1111120100000240200201021000\",\n\"1220100421100101110110002000\",\n\"1200020400120020120002112120\",\n\"1222020221100040000102210000\",\n\"1100000422202001202200000110\",\n\"1000020212200240000002210120\",\n\"2200020100202140120210111100\",\n\"2212000121201240112122200000\",\n\"0112110422011202010020000000\",\n\"0000000010110041122100221210\",\n\"1000210400222010100100110020\",\n\"1020000200021042111100020110\",\n\"2011100020000141100002211110\",\n\"1100110102211042120200000200\",\n\"1222020400202012100101000000\",\n\"0020000411201002110100112000\",\n\"2021020421202200101201002000\",\n\"2101020111022040210101000010\",\n\"0000000401121022202201221110\",\n\"2112220400022112100001110000\",\n\"1221000212202040001201101020\",\n\"1202110400111201000101000000\",\n\"2100010010200040022201112200\",\n\"2000220402000001200121210020\",\n\"1222210010212040202100100000\",\n\"2112210400100200011201102000\",\n\"0200020021002041120021010000\",\n\"0111200100200041102000000120\",\n\"1210000400012122101110122200\",\n\"1210120212112042022100202000\",\n\"1101010210111242220000000000\",\n\"0112220401212210122202000000\",\n\"1220010122112040220212000000\",\n\"2200020000101141110001110110\",\n\"2201100412010201100000000010\",\n\"1210100011021040211001220000\",\n\"2220000402000102210212100000\",\n\"0122220400002211220022112000\",\n\"0000010411001011120220111200\",\n\"1111120112120240000001002010\",\n\"1111210001120240210022100000\",\n\"0121200400002012000100201100\",\n\"2211110121122240100201000020\",\n\"1022110111200242200020200000\",\n\"1121220122120040002012210000\",\n\"1020120220111242100200000000\",\n\"2102020011201040102201000110\",\n\"2110020222200140110011000000\",\n\"1000200422012100001011110020\",\n\"2201000421101000110100002010\",\n\"1210000402210021001002121000\",\n\"2200000002000042011201201210\",\n\"2012100212000242010001122100\",\n\"1221200401201110000222112220\",\n\"1212100400121010020221112000\",\n\"0000210402010202002011120000\",\n\"2100220401111220210002200010\",\n\"2200000201001140001120120000\",\n\"1111110111112240022011100000\",\n\"1000000101002040110101022000\",\n\"2112010400211021000102210000\",\n\"2111100211020140201011202100\",\n\"0210210400112001010222200000\",\n\"1000020402002220110122000000\",\n\"0000220021202240120112112000\",\n\"1102000410202101001020020000\",\n\"0211120400000012012012111100\",\n\"2000020102100040001200012210\",\n\"1202100401111201001100000020\",\n\"1100020210112240011002000000\"\n}\nend",
+        "text": "База карт",
+        "calculate": false,
+        "id": 41
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Управление ответами",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.paintAnswer(rect)\n  rect.fill = g.gradient\n  rect.fill.blendMode = \"add\"\n  rect.alpha = 0.8\n  rect.strokeWidth = rect.width/95\n  rect.stroke = g.gradient\nend\nend",
+        "text": "Покраска ответа",
+        "calculate": false,
+        "id": 42
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.activeAnswer(i, align)\n  local rect = answers_objects[i].rect\n  local text = answers_objects[i].text\n  rect.isVisible = false\n  rect.isHitTestable = true\n  rect.shadow.isVisible = false\n  text.fill = {1, 1, 1}\n  g.replaceAnswers[i] = display.newRoundedRect (text.parent, text.x, text.y <plus> text.height/2, rect.width, rect.height*0.8, text.width/40)\n  g.allAnswer(i, text, rect, align)\n  g.paintAnswer (g.replaceAnswers[i])\nend\nend",
+        "calculate": false,
+        "text": "Активный ответ",
+        "id": 42
+      },
+      {
+        "super_calculate": true,
+        "id": 42,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.inactiveAnswer(i, align)\n  local rect = answers_objects[i].rect\n  local text = answers_objects[i].text\n  text.fill = {1, 1, 1}\n  g.replaceAnswers[i] = {}\n  g.replaceAnswers[i] = display.newRoundedRect (text.parent, text.x, text.y <plus> text.height/2, text.width*1.05, rect.height*1.3, text.width/40)\n  g.allAnswer(i, text, rect, align)\n  g.replaceAnswers[i].fill.a = 0\n  g.replaceAnswers[i].strokeWidth = rect.width/95\n  g.replaceAnswers[i].stroke = g.gradient\nend\nend",
+        "text": "Неактивный ответ"
+      },
+      {
+        "super_calculate": true,
+        "id": 42,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.allAnswer(i, text, rect, align)\n  \n  g.gAnswers:insert (g.replaceAnswers[i])\n\n  g.gAnswers:insert(text)\n  g.gAnswers:insert(rect)\nend\nend",
+        "text": "Общие действия (добавить всё в группу)"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Левая и правая кнопки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 43,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.leftAndRightAnswers()\n  local text = rAnswerText[1]\n  rAnswerSide = {}\n  local i = 1\n  for j = -1, 1, 2 do\n    rAnswerSide[i] = display.newImage (g.gAnswers, nameForImages (g.imgUrl.rover), system.TemporaryDirectory, canvas.width*(0.48<plus>j*0.265), text.y - text.height*1.2)\n    rAnswerSide[i].yScale = math.max (math.min (text.height*2.5, canvas.height/3), canvas.width*0.2)/rAnswerSide[i].height\n    rAnswerSide[i].xScale = -rAnswerSide[i].yScale*j\n   rAnswerSide[i].y = rAnswerSide[i].y - rAnswerSide[i].contentHeight/2\n   g.gAnswers:insert(rAnswerSide[i])\n    i = i <plus> 1\n  end\n  rAnswerSide[1]:addEventListener (\"tap\", function() g.tap.onAnswerSide (1, 1) end)\n  rAnswerSide[2]:addEventListener (\"tap\", function() g.tap.onAnswerSide (2, -1) end)\n  g.tap.onAnswerSide (g.player, g.player == 1 and 1 or -1, true)\nend\nend",
+        "text": "Левая и правая кнопки"
+      },
+      {
+        "super_calculate": true,
+        "id": 43,
+        "text": "При нажатии на иконку",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.tap.onAnswerSide(i, side, first)\n  i2 = i == 1 and 2 or 1\n  if first then\n    rOnline = display.newImage (canvasGroup, nameForImages (g.imgUrl.yellowOnline), system.TemporaryDirectory, rAnswerSide[i].x -1*side*0.25*rAnswerSide[i].contentWidth, rAnswerSide[i].y - 0.325*rAnswerSide[i].contentHeight)\n    rOnline.xScale = 0.3*rAnswerSide[i].contentWidth*side/rOnline.width\n    rOnline.yScale = math.abs (rOnline.xScale)\n    g.gAnswers:insert(rOnline)\n\n  elseif g.player ~= i then\n    rOnline.x = rAnswerSide[i].x -1*side*0.25*rAnswerSide[i].contentWidth\n    rOnline.xScale = math.abs (rOnline.xScale)*side\n  else\n    return false\n  end\n\n  rAnswerSide[i2].alpha = 0.5\n  rAnswerSide[i2].fill.blendMode = \"multiply\"\n  rAnswerSide[i].alpha = 1\n  rAnswerSide[i].fill.blendMode = \"normal\"\n  g.player = i\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Текст меню",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.drawAnswerText(txt, y, align)\n  local text = answers_objects[1].text\n  local myText = display.newText({\n    parent = g.gAnswers,\n    text = txt,\n    font = native.systemFont,\n    fontSize = text.size,\n    x = canvas.width*0.5,\n    y = y,\n    width = text.width,\n    align = align and \"center\" or \"left\"\n  })\n  myText.y = myText.y - myText.height*1.2\n  return myText\nend\nend",
+        "text": "   ",
+        "id": 44,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Пробелы между ответами",
+    "answers": [
+      {
+        "id": 45,
+        "calculate": false,
+        "text": "Пробелы между ответами",
+        "super_calculate": true
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Анимация коптера",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 46,
+        "text": "Анимация коптера",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.copterUpAndDown (side)\n  transition.to (g.rCopter, {\n    time = 2000,\n    y = g.rCopter.y <plus> side*g.rCopter.contentHeight*0.5,\n    delay = 25,\n    onComplete = \n      function()\n        if g.rCopter and g.rCopter.removeSelf and g.current_id == 1 then         \n          g.copterUpAndDown(-side)\n        end\n      end\n  })\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Фон и подложка",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.bgAndBase()\nif g.downloadImages then\n  g.draw.bg (\"https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg\")\n  g.draw.blackRect()\nelse\n  rBg = display.newRect (canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\n  rBg.fill = {\n  type = \"gradient\",\n  color1 = {2/255, 3/255, 60/255},\n  color2 = {197/255, 89/255, 11/255},\n  direction = \"down\"}\n  g.noScroll = 1\nend\ng.draw.base()\nend\nend",
+        "text": "Фон и подложка"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Заголовок и аннотация",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.headerAndAnnotation()\ng.rQuestHeader = g.draw.oneText(\"Конкуренты\", 2, 0.2*canvas.width, 1)\ng.rQuestHeader.fill = {type = \"gradient\", color1 = {0.9, 0.9, 1}, color2 = {0, 0.53, 0.87}}\ng.annotation = \n  display.newText ({\n    parent = canvasGroup,\n    text = [[Номер квеста: 239067\nАвтор: Ярослав Зверев.\n\nНа красной планете замечен неизвестный объект, и вы, двое исследователей, отправляете дронов на его изучение.\n\nСотрудничайте, чтобы выжить; обманывайте, чтобы победить!\n\nИгра рассчитана на двух человек.\n\nИдёт открытое тестирование. В игре могут быть ошибки.]],\n    font = native.systemFont,\n    fontSize = answers_objects[2].text.size* (utf8.sub (answers_objects[2].text.text, 1, 1) == \"З\" and 1 or 0.886),\n    x = canvas.width/2,\n    y = answers_objects[2].text.y - 0.04*canvas.width,\n    width = 0.83*canvas.width,\n    align = \"left\"\n  })\nif answers_objects[2].text.text == \" \" then \n  g.annotation.y = answers_objects[1].text.y - 0.04*canvas.width\nend\ng.annotation.y = g.annotation.y - g.annotation.height/2\nend\nend",
+        "text": "Заголовок и аннотация"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Объявление переменных",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.fullscreen = 1\ng.blockSaves = 1\ng.player = g.player or 1\ng.games = g.games or 0\ng.wins = g.wins or 0\ng.fullscreen_on_first_page = 1\ng.noScroll = 0\ng.downloadImages, _ = io.open(system.pathForFile(nameForImages(\"https://images.vfl.ru/ii/1625753378/8e0d42a9/35093603.png\"), system.TemporaryDirectory))\ng.gradient = {\n      type = \"gradient\", \n      color1 = {0.090196078431373, 0.058823529411765,0.72941176470588}, \n      color2 = {0.74509803921569, 0.47058823529412,0.14901960784314}, \n      direction = \"right\"\n     }\ng.rover = {\n  y = 7, \n  points = 3, \n  paint = {248/255, 184/255, 0} \n}\ng.rover.x = g.player == 1 and 1 or 4\nend",
+        "text": "Глобальные переменные",
+        "id": 1,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.imgUrl = {\n  rover = \"https://images.vfl.ru/ii/1625753378/8e0d42a9/35093603.png\",\n  ground = \"https://images.vfl.ru/ii/1625754400/ea619f43/35093830.jpg\",\n  yellow = \"https://images.vfl.ru/ii/1625754426/efe72264/35093835.png\",\n  red = \"https://images.vfl.ru/ii/1625754449/f44b5f3a/35093836.png\",\n  cloud = \"https://images.vfl.ru/ii/1625754467/fc0e3a2f/35093843.png\",\n  copter = \"https://images.vfl.ru/ii/1646574970/d453a0c6/38350561.png\",\n  yellowOnline = \"https://images.vfl.ru/ii/1646575069/da9e0cf8/38350577.png\", \n  blueOnline = \"https://images.vfl.ru/ii/1646575130/424f35d2/38350584.png\",\n  crystal = \"https://images.vfl.ru/ii/1646575244/8ab6e9ec/38350597.png\",\n  bg = \"https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg\"\n}\nend",
+        "text": "url картинок",
+        "id": 49,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 49,
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.set = {}   g.draw = {}\ng.tap = {}   g.anim = {}\nend",
+        "text": "Функции"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ng.texts = {}\ng.texts.dangerMove = {\n\"После таких ходов умирает 70% роботов :(\",\n\"За что Вы меня так не любите?\",\n\"Идти на неизученную территорию — недальновидно\",\n\"У меня шарниры дрожат. Можно я тут останусь?\",\n\"Звёзды говорят, что не надо туда идти\",\n\"Может, Вам переговорить с конкурентом?\",\n\"У нас, роботов, принято помогать друг другу. А у вас?\",\n}\ng.texts.opponent = {\n\"Может, Вам переговорить с конкурентом?\",\n\"У нас, роботов, принято помогать друг другу. А у вас?\",\n\"\",\n\"\",\n}\nend",
+        "calculate": false,
+        "text": "Реплики робота",
+        "id": 49
+      },
+      {
+        "id": 37,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "run": [
+          37
+        ],
+        "text": "Сценарий инструкции"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Нарисовать g.rover и коптер",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.drawRoverAndCopter()\nlocal height = g.annotation.y - g.annotation.height/2 - g.rQuestHeader.y - g.rQuestHeader.height/2\n  if height > 0.37*canvas.width then\n    g.rRover = g.draw.image (\"https://images.vfl.ru/ii/1625753378/8e0d42a9/35093603.png\", canvas.width*0.23, g.rQuestHeader.y <plus> g.rQuestHeader.height/2 <plus> height/2 )\n      g.rRover.xScale = 0.29*canvas.width/g.rRover.height\n      g.rRover.yScale = g.rRover.xScale\n    g.rCopter = g.draw.image (\"https://images.vfl.ru/ii/1646574970/d453a0c6/38350561.png\", canvas.width*0.72, g.rRover.y - g.rRover.contentHeight*0.45)\n      g.rCopter.xScale, g.rCopter.yScale = 0.9*g.rRover.xScale, 0.9*g.rRover.yScale\n      g.copterUpAndDown(1)\n  end\nend\nend",
+        "calculate": false,
+        "text": "Нарисовать g.rover и коптер",
+        "id": 50
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "Локальные переменные",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.start ()\n\ncopter = {y = 6, points = 0, paint = {0, 192/255, 248/255} }\n\ncopter.x = g.rover.x\n\nnamesIcon = {\"red\", \"yellow\", \"cloud\", \"crystal\"}\n\nedit = {}\nend\nend",
+        "calculate": false,
+        "text": "Локальные переменные",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "Подложка и мануал",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 36,
+        "text": "Подложка и знак вопроса",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.draw.baseAndManual()\n  g.draw.base2(function()\n    g.currentPageOfManual = g.currentPageOfManual == #g.manual and 1 or g.currentPageOfManual\n    showPage{id = 35, transition = \"instant\"}\n  end)\n  rManual = display.newText{\n    parent = canvasGroup,\n    text = \"?\",\n    font = \"Roboto-Regular\",\n    fontSize = 0.104*canvas.width,\n    x = rBase[2].x,\n    y = rBase[2].y*0.95\n  }\n  rManual.fill = {0, 0, 0}\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Собираем базу карт (для автора)",
+    "answers": [
+      {
+        "id": 41,
+        "text": "    ",
+        "run": [
+          41
+        ]
+      },
+      {
+        "id": 40,
+        "text": "Все функции",
+        "run": [
+          40
+        ],
+        "lua_if": "function lua_if()\nreturn not g.draw or type(g.draw.bg) ~= \"function\"\nend"
+      },
+      {
+        "super_calculate": true,
+        "id": 38,
+        "text": "   ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nn = math.random(-100000, 100000)\nmath.randomseed(n)\ng.baseMap()\ng.generationMap()\ng.draw.bg(\"https://images.vfl.ru/ii/1625831235/31d77797/35102370.jpg\")\ng.draw.baseAndCross(function()\n  showPage{id = 1}\nend)\ncopter.x, copter.y = 1, 7\nfor x = 1, 4 do\n  for y = 1, 7 do\n    known[x][y] = true\n  end\nend\nrealField[1][7] = 0\nrealField[4][7] = 0\ng.draw.field (realField)\nend"
+      },
+      {
+        "lua_text": "function lua_text()\ncount = count or 0\nreturn \"№\".. n.. \", в сумме \".. #g.baseMaps\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 38,
+        "text": "Новый ответ. введите текст",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 53,
+        "text": "—",
+        "lua_do": "function lua_do()\nn = n <plus> 1\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": false,
+        "comment": false,
+        "id": 53,
+        "text": "<plus>",
+        "lua_do": "function lua_do()\nn = n <plus> 1\ncount = count <plus> 1\ntext = \"\"\nfor x = 1, #realField do\n  for y = 1, #realField[x] do\n    text = text .. realField[x][y]\n  end\nend\npages[41].answers[1].lua_do = pages[41].answers[1].lua_do: match('^.<plus><s><s>\"') .. ',<s>\n\"' .. text .. '\"<s>\n}<s>\nend'\nend",
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n--Ищет ошибку по сообщению об ошибке\nfunction findError(numString, word)\n  local function luaAnswer(answer)\n    return answer.lua_do or answer.lua_text or answer.lua_if\n  end\n\n  local function oneAnswer (text, errorLine, word)\n    local curLine = 1\n    for str in utf8.gmatch (text, \"<s>\n[^<s>\n]*\") do\n      curLine = curLine <plus> 1\n      if curLine == errorLine and utf8.find (str .. \" \", \"[^%a%d_]\" .. word .. \"[^%a%d_]\") then\n        return true\n      end\n    end\n    return false\n  end\n\n  local log = \"\"\n  for curPage = 1, #pages do\n    local answers = pages[curPage].answers\n    for curAnswer = 1, #answers do\n      local code = luaAnswer (answers[curAnswer]) \n      if code and oneAnswer (code, numString, word) then\n        log = log .. \"<s>\nСтраница \".. curPage .. \", ответ \" .. curAnswer\n      end\n    end\n  end\n  dialog {header = \"Результаты поиска\", text = #log > 0 and log:sub(2, -1) or \"Ошибки не найдено\"}\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 53,
+        "calculate": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nfindError(16, \"removeSelf\")\nend",
+        "text": "Новый ответ. введите текст",
+        "need": [
+          999
+        ],
+        "id": 53
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "Реплика робота",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 54,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction g.replica(text)\n  g.removeImg(rReplica)\n  rReplica = display.newGroup()\n  canvasGroup:insert(rReplica)\n  local txt = display.newText{\n    parent = canvasGroup,\n    text = text,\n    fontSize = (fontSize or g.fontSize or 40)*1\n  }\n  if txt.width > cell*3 then\n    txt:removeSelf()\n    txt = display.newText{\n      parent = canvasGroup,\n      text = text,\n      fontSize = (fontSize or g.fontSize or 31)*1,\n      width = cell*2.5\n    }\n  end\n  txt.fill = {1, 0.6, 0} and {0} and {1}\n\n  local x, y = g.rover.x, g.rover.y\n   if txt.height > (startY <plus> (y - 0.5)*cell) then\n    g.set.coord (txt, x, y, 0.55)\n    txt.y = txt.y <plus> txt.height/2\n  else\n    g.set.coord (txt, x, y, -0.38)\n    txt.y = txt.y - txt.height/2\n  end\n  if x == 1 then\n    txt.x = startX <plus> txt.width/2 - indent.left/2\n  elseif x == 4 then\n    txt.x = txt.x - (txt.width - cell)/2\n  end\n  rReplica:insert(txt)\n\n  local indent = 0.02*canvas.width\n  local rect = display.newRoundedRect(canvasGroup, txt.x, txt.y, txt.width <plus> indent, txt.height <plus> indent, canvas.width*0.012)\n  rect.fill = {1, 0.8} and {0.6, 0.4, 0.75, 0.9}\n  rect.strokeWidth = canvas.width/200\n  rect.stroke = {1} and {1, 0.6, 0} and {0.7, 0.5, 0.95, 0.9}\n  rReplica:insert(rect)\n  \n  txt:toFront()\n  rReplica:addEventListener(\"tap\", \n  function(event)\n    g.removeImg(rReplica)\n    return true\n  end)\n\nend\nend",
+        "text": "Реплика робота"
+      },
+      {
+        "lua_text": "function lua_text()\nlocal count = 0\nfor i = 1, #pages do\n  local page = pages[i]\n  for j = 1, #page.answers do\n    local answ = page.answers[j]\n    if answ.lua_do then\n      count = count <plus> 1\n      for s in answ.lua_do:gfind(\"<s>\n\") do\n        count = count <plus> 1\n      end\n    end \n  end\nend\nreturn \"Количество строк кода в игре: \".. count\nend",
+        "comment": true,
+        "super_calculate": false,
+        "id": 1,
+        "text": "Количество строк кода в игре",
+        "need": [
+          999
+        ],
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "",
+    "answers": []
+  }
+]

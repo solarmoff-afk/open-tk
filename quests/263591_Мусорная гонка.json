@@ -1,0 +1,481 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Michy\nЖанры: боевик, мини-квест, симулятор, юмор\nВремя прохождения: до 1 мин\n\nВыбери, что хочешь добавить своему транспорту для преодоления трудностей. У вас два соперника: №2 и №3. Гонка заканчивается, когда все доедут с вершины до подножья горы из мусора. Цель — доехать быстрее всех.\nВаш выбор напрямую зависит от повреждений транспорта и изменения скорости. То, что вы выбрали, не смогут выбрать ваши соперники.\n\nИ вот, гонка началась. Вы сели в...",
+    "answers": [
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 2,
+        "text": "...ванну\n[прочность 35, скорость 2]",
+        "var_min": [
+          "health",
+          0,
+          "health2",
+          0,
+          "health3",
+          0
+        ],
+        "var_set": [
+          "car",
+          1,
+          "car2",
+          2,
+          "car3",
+          3,
+          "health",
+          35,
+          "time",
+          4,
+          "speed",
+          2,
+          "health2",
+          20,
+          "time2",
+          3,
+          "speed2",
+          3,
+          "health3",
+          5,
+          "time3",
+          2,
+          "speed3",
+          4,
+          "path",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          1,
+          1,
+          0
+        ],
+        "id": 2,
+        "text": "...бревно\n[прочность 20, скорость 3]",
+        "var_min": [
+          "health",
+          0,
+          "health2",
+          0,
+          "health3",
+          0
+        ],
+        "var_set": [
+          "car",
+          2,
+          "car2",
+          1,
+          "car3",
+          3,
+          "health",
+          20,
+          "time",
+          3,
+          "speed",
+          3,
+          "health2",
+          35,
+          "time2",
+          4,
+          "speed2",
+          2,
+          "health3",
+          5,
+          "time3",
+          2,
+          "speed3",
+          4,
+          "path",
+          0
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 2,
+        "text": "...дно с колёсами от машины\n[прочность 5, скорость 4]",
+        "var_min": [
+          "health",
+          0,
+          "health2",
+          0,
+          "health3",
+          0
+        ],
+        "var_set": [
+          "car",
+          3,
+          "car2",
+          1,
+          "car3",
+          2,
+          "health",
+          5,
+          "time",
+          2,
+          "speed",
+          4,
+          "health2",
+          35,
+          "time2",
+          4,
+          "speed2",
+          2,
+          "health3",
+          20,
+          "time3",
+          3,
+          "speed3",
+          3,
+          "path",
+          0
+        ]
+      },
+      {
+        "var_str_set": [
+          "global font",
+          "SourceSansPro-BoldItalic"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "widget": [
+          "Whealth",
+          "https://i.ibb.co/3MtpsgQ/image.png",
+          "eд",
+          "Wtime",
+          "https://i.ibb.co/S0YzPZ7/image.png",
+          "мин",
+          "Wpath",
+          "https://i.ibb.co/T8jJP9W/image.png",
+          "%",
+          "Wspeed",
+          "https://i.ibb.co/0t6ft9d/image.png",
+          "ед"
+        ],
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Событие: 1",
+    "answers": [
+      {
+        "id": 2,
+        "text": "текст",
+        "lua_text": "function lua_text()\nalltime = 0\nalltime2 = 0\nalltime3 = 0\nlocal t1=\"\"\nlocal t2=\"\"\nlocal t3=\"\"\nif car==1 then t1=\"в ванну. Выглядит довольно защищённо и удобно, но холодная и неповоротливая.\" end\nif car==2 then t1=\"на бревно. Массивное и легко поворачивать, хоть и долго, и сделано из не самого прочного материала.\" end\nif car==3 then t1=\"в дно от машины с колёсами. Колёса - лучший вариант перемещения, но далеко ли вы уедите?\" end\nif car2==1 then t2=\"№2 выбрал ванну.\" end\nif car2==2 then t2=\"№2 выбрал бревно.\" end\nif car2==3 then t2=\"№2 выбрал дно от машины.\" end\nif car3==1 then t3=\"А №3 выбрал ванну.\" end\nif car3==2 then t3=\"А №3 выбрал бревно.\" end\nif car3==3 then t3=\"А №3 выбрал дно от машины.\" end\n\nreturn \"<s>\n<s>\nВы сели \"..t1..\"<s>\n<s>\n\"..t2..\"<s>\nПрочность: \"..health2..\", Время: \"..alltime2..\", Скорость: \"..speed2..\"<s>\n<s>\n\"..t3..\"<s>\nПрочность: \"..health3..\", Время: \"..alltime3..\", Скорость: \"..speed3..\"<s>\n<s>\n\"..\"Только отъехав, вы заметили первую трудность. Прямо у вас на пути резкий обрыв! К счастью, вы уже ухватили из мусара...\"\nend",
+        "merge": true
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nup11=2 alltime=alltime<plus>time-1 health=health-5\nif health2>= health3 then\nup21=3 alltime2=alltime2<plus>time2-2 health2=health2-10\nup31=1 alltime3=alltime3<plus>time3 health3=health3-0\nelse\nup21=1 alltime2=alltime2<plus>time2 health2=health2-0\nup31=3 alltime3=alltime3<plus>time3-2 health3=health3-10\nend end",
+        "text": "...парашют",
+        "id": 3,
+        "var_set": [
+          "path",
+          33
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nup11=1 alltime=alltime<plus>time health=health-0\nif health2>= health3 then\nup21=3 alltime2=alltime2<plus>time2-2 health2=health2-10\nup31=2 alltime3=alltime3<plus>time3-1 health3=health3-5\nelse\nup21=2 alltime2=alltime2<plus>time2-1 health2=health2-5\nup31=3 alltime3=alltime3<plus>time3-2 health3=health3-10\nend end",
+        "text": "...верёвку",
+        "id": 3,
+        "var_set": [
+          "path",
+          33
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nup11=3 alltime=alltime<plus>time-2 health=health-10\nif health2>= health3 then\nup21=2 alltime2=alltime2<plus>time2-1 health2=health2-5\nup31=1 alltime3=alltime3<plus>time3-0 health3=health3-0\nelse\nup21=1 alltime2=alltime2<plus>time2-0 health2=health2-0\nup31=2 alltime3=alltime3<plus>time3-1 health3=health3-5\nend end",
+        "text": "...мусор",
+        "id": 3,
+        "var_set": [
+          "path",
+          33
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "виджеты",
+        "calculate": true,
+        "widget_show": [
+          "Whealth",
+          "health",
+          "Wtime",
+          "alltime",
+          "Wpath",
+          "path",
+          "Wspeed",
+          "speed"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/YLXZH9Z/removebg-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Событие: 2",
+    "answers": [
+      {
+        "id": 3,
+        "text": "текст",
+        "lua_text": "function lua_text()\nlocal t1=\"\"\nlocal t2=\"\"\nlocal t3=\"\"\nif up11==1 then t1=\"Вы аккуратно медленно спустились по верёвке, перекинув её через торчащую арматуру. Безопасность превыше.\" end\nif up11==2 then t1=\"Парашут немного снизил повреждения, но замедлил вас. Удар был довольно заметный, а на установку понадобилось немного времени.\" end\nif up11==3 then t1=\"Ничего не придумав, вы упали с максимальными повреждениями. И так сойдёт. Это был самый быстрый и бюджетный спуск.\" end\nif up21==1 then t2=\"№2 аккуратно медленно спустился по верёвке.\" end\nif up21==2 then t2=\"№2 спустился на парашуте с средними повреждениями.\" end\nif up21==3 then t2=\"№2 ничего не придумав, упал с максимальными повреждениями.\" end\nif up31==1 then t3=\"А №3 аккуратно медленно спустился по верёвке.\" end\nif up31==2 then t3=\"А №3 спустился на парашуте со средними повреждениями.\" end\nif up31==3 then t3=\"А №3 ничего не придумав, упал с максимальнымм повреждениями.\" end\n\nreturn \"<s>\n<s>\n\"..t1..\"<s>\n<s>\n\"..t2..\"<s>\nПрочность: \"..health2..\", Время: \"..alltime2..\", Скорость: \"..speed2..\"<s>\n<s>\n\"..t3..\"<s>\nПрочность: \"..health3..\", Время: \"..alltime3..\", Скорость: \"..speed3..\"<s>\n<s>\nПроехав немного, перед вами ровный склон. Как кстати, ведь из кучи мусора на этот раз вы выудили...\"\nend",
+        "merge": true
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 4,
+        "text": "...взболтанную газировку",
+        "lua_do": "function lua_do()\nup12=3 alltime=alltime<plus>time-2 health=health-10\nif health2>= health3 then\nup22=2 alltime2=alltime2<plus>time2-1 health2=health2-5\nup32=1 alltime3=alltime3<plus>time3-0 health3=health3-0\nelse\nup22=1 alltime2=alltime2<plus>time2-0 health2=health2-0\nup32=2 alltime3=alltime3<plus>time3-1 health3=health3-5\nend end",
+        "var_set": [
+          "path",
+          66
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 4,
+        "text": "...масло",
+        "lua_do": "function lua_do()\nup12=2 alltime=alltime<plus>time-1 health=health-5\nif health2>= health3 then\nup22=3 alltime2=alltime2<plus>time2-2 health2=health2-10\nup32=1 alltime3=alltime3<plus>time3 health3=health3-0\nelse\nup22=1 alltime2=alltime2<plus>time2 health2=health2-0\nup32=3 alltime3=alltime3<plus>time3-2 health3=health3-10\nend end",
+        "var_set": [
+          "path",
+          66
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 4,
+        "text": "...интересный квест",
+        "lua_do": "function lua_do()\nup12=1 alltime=alltime<plus>time health=health-0\nif health2>= health3 then\nup22=3 alltime2=alltime2<plus>time2-2 health2=health2-10\nup32=2 alltime3=alltime3<plus>time3-1 health3=health3-5\nelse\nup22=2 alltime2=alltime2<plus>time2-1 health2=health2-5\nup32=3 alltime3=alltime3<plus>time3-2 health3=health3-10\nend end",
+        "var_set": [
+          "path",
+          66
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "widget_show": [
+          "Whealth",
+          "health",
+          "Wtime",
+          "alltime",
+          "Wpath",
+          "path",
+          "Wspeed",
+          "speed"
+        ],
+        "text": "виджеты"
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/r315fwy/1-removebg-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Событие: 3",
+    "answers": [
+      {
+        "id": 3,
+        "text": "текст",
+        "lua_text": "function lua_text()\nlocal t1=\"\"\nlocal t2=\"\"\nlocal t3=\"\"\nif up12==1 then t1=\"Вы зачитались и отдохнули, съехав без повреждений. Квест был действительно интересный, вы чувствуете себя мотивированнее.\" end\nif up12==2 then t1=\"Вы съехали, как по маслу, с небольшими повреждениями. Это свалка пищевых отходов? Будем надеяться не натунуться на банановую кожуру.\" end\nif up12==3 then t1=\"Вы установили бутылки на копус и сильно ускорились с большими повреждениями об торчащий мусор в полёте. Кто бы мог подумать, что эта газировка имеет такую отдачу.\" end\nif up22==1 then t2=\"№2 зачитался и отдохнул, съехав без повреждений.\" end\nif up22==2 then t2=\"№2 съехал, как по маслу, с небольшими повреждениями.\" end\nif up22==3 then t2=\"№2 сильно ускорился с большими повреждениями, прикрепив бутылки к корпусу.\" end\nif up32==1 then t3=\"А №3 зачитался и отдохнул, съехав без повреждений.\" end\nif up32==2 then t3=\"А №3 съехал, как по маслу, с небольшими повреждениями.\" end\nif up32==3 then t3=\"А №3 сильно ускорился с большими повреждениями, прикрепив бутылки к корпусу.\" end\n\nreturn \"<s>\n<s>\n\"..t1..\"<s>\n<s>\n\"..t2..\"<s>\nПрочность: \"..health2..\", Время: \"..alltime2..\", Скорость: \"..speed2..\"<s>\n<s>\n\"..t3..\"<s>\nПрочность: \"..health3..\", Время: \"..alltime3..\", Скорость: \"..speed3..\"<s>\n<s>\nРовный склон закончился и началась напряжённая борьба между 3 машинами. Вы решили в этой ситуации...\"\nend",
+        "merge": true
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nup13=1 alltime=alltime<plus>time health=health-0\nif health2>= health3 then\nup23=3 alltime2=alltime2<plus>time2-2 health2=health2-10\nup33=2 alltime3=alltime3<plus>time3-1 health3=health3-5\nelse\nup23=2 alltime2=alltime2<plus>time2-1 health2=health2-5\nup33=3 alltime3=alltime3<plus>time3-2 health3=health3-10\nend end",
+        "text": "...отъехать в сторону",
+        "id": 5,
+        "var_set": [
+          "path",
+          100
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nup13=3 alltime=alltime<plus>time-2 health=health-10\nif health2>= health3 then\nup23=2 alltime2=alltime2<plus>time2-1 health2=health2-5\nup33=1 alltime3=alltime3<plus>time3-0 health3=health3-0\nelse\nup23=1 alltime2=alltime2<plus>time2-0 health2=health2-0\nup33=2 alltime3=alltime3<plus>time3-1 health3=health3-5\nend end",
+        "text": "...ускориться",
+        "id": 5,
+        "var_set": [
+          "path",
+          100
+        ]
+      },
+      {
+        "middle_answer": true,
+        "shadow_color": [
+          0,
+          1,
+          1
+        ],
+        "lua_do": "function lua_do()\nup13=2 alltime=alltime<plus>time-1 health=health-5\nif health2>= health3 then\nup23=3 alltime2=alltime2<plus>time2-2 health2=health2-10\nup33=1 alltime3=alltime3<plus>time3 health3=health3-0\nelse\nup23=1 alltime2=alltime2<plus>time2 health2=health2-0\nup33=3 alltime3=alltime3<plus>time3-2 health3=health3-10\nend end",
+        "text": "...продолжать атаковать",
+        "id": 5,
+        "var_set": [
+          "path",
+          100
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "widget_show": [
+          "Whealth",
+          "health",
+          "Wtime",
+          "alltime",
+          "Wpath",
+          "path",
+          "Wspeed",
+          "speed"
+        ],
+        "text": "виджеты",
+        "calculate": true
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/tBkwPBz/4-remove-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Финиш",
+    "answers": [
+      {
+        "id": 3,
+        "text": "текст",
+        "lua_text": "function lua_text()\nlocal t1=\"\"\nlocal t2=\"\"\nlocal t3=\"\"\nif up13==1 then t1=\"Вы вовремя отъехали, не получив повреждений. И в чём была проблема?\" end\nif up13==2 then t1=\"Вы продолжили агрессивно атвковать, устремившись к финишу, но тоже получили немного урона в ответ. Это того стоило, вы заставили соперника замедлиться.\" end\nif up13==3 then t1=\"Вы ускорились и проехали быстрее, но получили большие повреждения от неровностей, да и соперник смог вас задеть.\" end\nif up23==1 then t2=\"№2 вовремя отъехал, не получив повреждений.\" end\nif up23==2 then t2=\"№2 продолжил агрессивную атаку, но получил небольшие повреждения.\" end\nif up23==3 then t2=\"№2 ускорился с большими повреждениями.\" end\nif up33==1 then t3=\"А №3 вовремя отъехал, не получив повреждений.\" end\nif up33==2 then t3=\"А №3 продолжил агрессивную атаку, но получил небольшие повреждения.\" end\nif up33==3 then t3=\"А №3 ускорился с большими повреждениями.\" end\n\nlocal t4= \"Вы хорошо доехали.\"\nlocal t5= \"№2 хорошо доехал.\"\nlocal t6= \"№3 хорошо доехал.\"\nlocal losetime1=0\nlocal losetime2=0\nlocal losetime3=0\nif health<=0 then alltime=alltime<plus>6 t4=\"Вы доталкивали сломанный транспорт ещё 6 минут.\" losetime1=6 end\nif health2<=0 then alltime2=alltime2<plus>6 t5=\"№2 доталкивал сломанный транспорт ещё 6 минут.\" losetime2=6 end\nif health3<=0 then alltime3=alltime3<plus>6 t6=\"№3 доталкивал сломанный транспорт ещё 6 минут.\" losetime3=6 end\n\nlocal t7=\"Вы: \"\nif car==1 then t7=t7..\"35\" end\nif car==2 then t7=t7..\"20\" end\nif car==3 then t7=t7..\"05\" end\nif up11==1 then t7=t7..\"-00\" end\nif up11==2 then t7=t7..\"-05\" end\nif up11==3 then t7=t7..\"-10\" end\nif up12==1 then t7=t7..\"-00\" end\nif up12==2 then t7=t7..\"-05\" end\nif up12==3 then t7=t7..\"-10\" end\nif up13==1 then t7=t7..\"-00\" end\nif up13==2 then t7=t7..\"-05\" end\nif up13==3 then t7=t7..\"-10\" end\nt7=t7..\" ед   0\"\nif up11==1 then t7=t7..\"<plus>\"..time end\nif up11==2 then t7=t7..\"<plus>\"..tostring(time-1) end\nif up11==3 then t7=t7..\"<plus>\"..tostring(time-2) end\nif up12==1 then t7=t7..\"<plus>\"..time end\nif up12==2 then t7=t7..\"<plus>\"..tostring(time-1) end\nif up12==3 then t7=t7..\"<plus>\"..tostring(time-2) end\nif up13==1 then t7=t7..\"<plus>\"..time end\nif up13==2 then t7=t7..\"<plus>\"..tostring(time-1) end\nif up13==3 then t7=t7..\"<plus>\"..tostring(time-2) end\nt7=t7..\"<plus>\"..losetime1..\"=\"..alltime\nt7=t7..\" мин<s>\n№2: \"\nif car2==1 then t7=t7..\"35\" end\nif car2==2 then t7=t7..\"20\" end\nif car2==3 then t7=t7..\"05\" end\nif up21==1 then t7=t7..\"-00\" end\nif up21==2 then t7=t7..\"-05\" end\nif up21==3 then t7=t7..\"-10\" end\nif up22==1 then t7=t7..\"-00\" end\nif up22==2 then t7=t7..\"-05\" end\nif up22==3 then t7=t7..\"-10\" end\nif up23==1 then t7=t7..\"-00\" end\nif up23==2 then t7=t7..\"-05\" end\nif up23==3 then t7=t7..\"-10\" end\nt7=t7..\" ед   0\"\nif up21==1 then t7=t7..\"<plus>\"..time2 end\nif up21==2 then t7=t7..\"<plus>\"..tostring(time2-1) end\nif up21==3 then t7=t7..\"<plus>\"..tostring(time2-2) end\nif up22==1 then t7=t7..\"<plus>\"..time2 end\nif up22==2 then t7=t7..\"<plus>\"..tostring(time2-1) end\nif up22==3 then t7=t7..\"<plus>\"..tostring(time2-2) end\nif up23==1 then t7=t7..\"<plus>\"..time2 end\nif up23==2 then t7=t7..\"<plus>\"..tostring(time2-1) end\nif up23==3 then t7=t7..\"<plus>\"..tostring(time2-2) end\nt7=t7..\"<plus>\"..losetime2..\"=\"..alltime2\nt7=t7..\" мин<s>\n№3: \"\nif car3==1 then t7=t7..\"35\" end\nif car3==2 then t7=t7..\"20\" end\nif car3==3 then t7=t7..\"05\" end\nif up31==1 then t7=t7..\"-00\" end\nif up31==2 then t7=t7..\"-05\" end\nif up31==3 then t7=t7..\"-10\" end\nif up32==1 then t7=t7..\"-00\" end\nif up32==2 then t7=t7..\"-05\" end\nif up32==3 then t7=t7..\"-10\" end\nif up33==1 then t7=t7..\"-00\" end\nif up33==2 then t7=t7..\"-05\" end\nif up33==3 then t7=t7..\"-10\" end\nt7=t7..\" ед   0\"\nif up31==1 then t7=t7..\"<plus>\"..time3 end\nif up31==2 then t7=t7..\"<plus>\"..tostring(time3-1) end\nif up31==3 then t7=t7..\"<plus>\"..tostring(time3-2) end\nif up32==1 then t7=t7..\"<plus>\"..time3 end\nif up32==2 then t7=t7..\"<plus>\"..tostring(time3-1) end\nif up32==3 then t7=t7..\"<plus>\"..tostring(time3-2) end\nif up33==1 then t7=t7..\"<plus>\"..time3 end\nif up33==2 then t7=t7..\"<plus>\"..tostring(time3-1) end\nif up33==3 then t7=t7..\"<plus>\"..tostring(time3-2) end\nt7=t7..\"<plus>\"..losetime3..\"=\"..alltime3\nt7=t7..\" мин\"\n\nlocal t8=\"\"\nlocal t9=\"\"\nif (alltime==alltime2 and alltime<alltime3) or (alltime==alltime3 and alltime<alltime2) or (alltime==alltime2 and alltime==alltime3) then\nt8= \"Ничья!<s>\nХороший результат. Попробуй мешать соперникам для победы.\"\nelseif alltime<alltime2 and alltime<alltime3 then\nt8=\"Вы победили!<s>\nПоздравляю, это чистая победа с большим отрывом.\"\nif car==1 then g.ending1=true end\nif car==2 then g.ending2=true end\nif car==3 then g.ending3=true end\nif health<=0 then t9=\"<s>\n<s>\nВы открыли секретную концовку!\" end\nelseif alltime<=alltime2 then\nt8=\"Вы на втором месте после №3\"\nelseif alltime<=alltime3 then\nt8=\"Вы на втором месте после №2\"\nelse t8=\"Накосячено!<s>\nВы заняли последнее место.\" end\n\nreturn \"<s>\n<s>\n\"..t1..\"<s>\n<s>\n\"..t2..\"<s>\nПрочность: \"..health2..\", Время: \"..alltime2..\", Скорость: \"..speed2..\"<s>\n<s>\n\"..t3..\"<s>\nПрочность: \"..health3..\", Время: \"..alltime3..\", Скорость: \"..speed3..\"<s>\n<s>\n\"..t4..\"<s>\n\"..t5..\"<s>\n\"..t6..\"<s>\n<s>\n<s>\nКОНЦОВКА №\"..tostring(27*car<plus>9*up11<plus>3*up12<plus>up13-39)..\"/81<s>\n<s>\n\"..t7..\"<s>\n<s>\n\"..t8..t9\nend",
+        "merge": true
+      },
+      {
+        "lua_do": "function lua_do()\nif g.ending1==nil then g.ending1=false end\nend",
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "widget_show": [
+          "Whealth",
+          "health",
+          "Wtime",
+          "alltime",
+          "Wpath",
+          "path",
+          "Wspeed",
+          "speed"
+        ],
+        "text": "виджеты"
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"[победа]\"\nif alltime>=alltime2 or alltime>=alltime3 then\nt=\"[к началу]\" end\nreturn t\nend",
+        "shadow_color": [
+          1,
+          1,
+          0
+        ],
+        "text": "[победа]",
+        "id": 1,
+        "middle_answer": true
+      },
+      {
+        "id": 5,
+        "text": "Победы:",
+        "comment": true,
+        "middle_answer": false
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-<s>\nв ванне\"\nif g.ending1 then t=\"[открыто]<s>\nв ванне\" end\nreturn t\nend",
+        "id": 5,
+        "text": "1",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-<s>\nна бревне\"\nif g.ending2 then t=\"[открыто]<s>\nна бревне\" end\nreturn t\nend",
+        "id": 5,
+        "text": "2",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal t=\"-<s>\nв дне машины\"\nif g.ending3 then t=\"[открыто]<s>\nв дне машины\" end\nreturn t\nend",
+        "id": 5,
+        "text": "3",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "id": 5,
+        "text": "Укажите команды для картинки",
+        "url": "https://i.ibb.co/4Fkv7Wv/3-remove-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": []
+  }
+]

@@ -1,0 +1,894 @@
+[
+  {
+    "id": 1,
+    "text": "Этот учебник содержит шаблоны страниц для загрузки и выгрузки квеста.<s>r\nШаблон нужно скопировать в свой квест.<s>r\n<s>r\nЗагрузке / выгрузке подлежат:<s>r\n     — тексты страниц, <s>r\n     — тексты кнопок,<s>r\n     — переходы на страницы по кнопкам (опционально).<s>r\n<s>r\nЗагрузке / выгрузке НЕ подлежат:<s>r\n     — код lua;<s>r\n     — переменные и операторы;<s>r\n     — оформление.<s>r\nВы можете доработать шаблон в своём квесте, если захотите загружать / выгружать ещё и их.<s>r\n<s>r\nДля Windows-версии редактора доступны загрузка из файла и выгрузка в файл.<s>r\n<s>r\nАвтор: Nimeria",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 1,
+        "text": "   ",
+        "calculate": true,
+        "var_set": [
+          "global allowCopy",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Инструкция",
+        "comment": false
+      },
+      {
+        "id": 1,
+        "text": "   ",
+        "comment": true,
+        "instant": false
+      },
+      {
+        "id": 3,
+        "text": "Шаблон загрузки в пользовательском формате",
+        "lua_do": "function lua_do()\nsuccess = false\nend"
+      },
+      {
+        "id": 2,
+        "text": "Шаблон загрузки в формате Twee",
+        "lua_do": "function lua_do()\nsuccess = false\nend"
+      },
+      {
+        "id": 4,
+        "text": "Результат загрузки шаблона в пользовательском формате"
+      },
+      {
+        "id": 14,
+        "text": "Результат загрузки шаблона в формате Twee"
+      },
+      {
+        "id": 1,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "id": 10,
+        "text": "Шаблон выгрузки в пользовательском формате"
+      },
+      {
+        "id": 9,
+        "text": "Шаблон выгрузки в формате Twee"
+      },
+      {
+        "id": 19,
+        "text": "Шаблон выгрузки в формате Twee2"
+      },
+      {
+        "id": 1,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "Группа автора ВК",
+        "url": "https://vk.com/nimeria_quest"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Для загрузки из текста страницы вставьте сюда текст квеста в формате Twee. <s>r\nНапример:<s>r\n:: Заголовок 1<s>r\nТекст страницы 1<s>r\nНовый параграф страницы 1<s>r\n[[кнопка_1_на_2|Заголовок 2]]<s>r\n[[кнопка_2_на_3|Заголовок 3]]<s>r\n<s>r\n:: Заголовок 2<s>r\nТекст страницы 2<s>r\n[[кнопка_1_на_3|Заголовок 3]]<s>r\n<s>r\n:: Заголовок 3<s>r\nТекст страницы 3<s>r\n[[кнопка_1_на_1|Заголовок 1]]<s>r\n[[кнопка_2_на_4|Заголовок 4]]<s>r\n[[кнопка_3_на_5|Заголовок 5]]<s>r\n[[кнопка_4_на_6]]<s>r\n<s>r\n:: Заголовок 4<s>r\nТекст страницы 4<s>r\n<s>r\n<s>r\n—<s>r\nДля загрузки из файла вставьте сюда полный путь до файла.<s>r\nНапример:<s>r\nC:<s><s>Мои квесты<s><s>Новый квест<s><s>part1.txt",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Символы разбиения текста",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\nnewTitleSeparator = \":: \"\nnewTitleSeparatorReg = \":: \"\nendTitleSeparator = \"<s>\n\"\nendTitleSeparatorReg = \"%c%c\"\nendPageSeparator = \"<s>\n<s>\n\"\nendPageSeparatorReg = \"%c%c%c%c\"\nnewParagraphSeparator = \"<s>\n\"\nnewParagraphSeparatorReg = \"%c%c\"\nnewButtonSeparator = \"[[\"\nnewButtonSeparatorReg = \"%[%[\"\nendButtonSeparator = \"]]\"\nendButtonSeparatorReg = \"%]%]\"\nnewLinkSeparator = \"|\"\nnewLinkSeparatorReg = \"|\"\ntab = \"     \" -- в ТК не работает табуляция, заменяем её пробелами\n\nfunction getMask(separator)\n   return string.gsub(separator, \"<s>\n\", \"<s><s><s>\n\")\nend\n\nfunction trim(textWithSpaces)\n   return utf8.match((textWithSpaces or \"\"), \"^[%s%c]*(.-)[%s%c]*$\")\nend\nend",
+        "comment": true,
+        "super_calculate": false,
+        "middle_answer": false,
+        "text": "Символы разбиения текста",
+        "calculate": true,
+        "id": 2
+      },
+      {
+        "id": 2,
+        "text": "Вывод разделителей",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal text = \"Начало заголовка: \" .. getMask(newTitleSeparator) .. \n                   \"<s>\nКонец заголовка: \" .. getMask(endTitleSeparator) .. \n                   \"<s>\nКонец страницы: \" .. getMask(endPageSeparator) .. \n                   \"<s>\nНовый абзац: \" .. getMask(newParagraphSeparator) .. \n                   \"<s>\n<s>\nНовая кнопка: \" .. getMask(newButtonSeparator) .. \n                   \"<s>\nНачало ссылки: \" .. getMask(newLinkSeparator) .. \n                    \"<s>\nКонец кнопки: \" .. getMask(endButtonSeparator)\nif tabulation then\n   text = text .. \"<s>\nДобавлять табуляцию для абзацев.\"\nelse\n   text = text .. \"<s>\nНе добавлять табуляцию для абзацев.\"\nend\n\nif creatingLinks then\n   text = text .. \"<s>\nВключено автоматическое создание связей между страницами. \" \nelse\n   text = text .. \"<s>\nАвтоматическое создание связей между страницами отключено.\"\nend\n\nif isWindows then\n   text = text .. \"<s>\n<s>\nСпособ загрузки: \"\n   if needLoadFromFile then text = text .. \"из файла\"\n   else text = text .. \"из текста страницы\"\n   end\nend\n\nreturn text\nend"
+      },
+      {
+        "text": "Включить / выключить табуляцию",
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\ntabulation = not tabulation\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "text": "Включить / выключить автоматическое создание связей между страницами",
+        "id": 2,
+        "instant": true,
+        "lua_do": "function lua_do()\ncreatingLinks = not creatingLinks\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   isWindows = false\n   if system.getInfo(\"platform\") == \"win32\" then\n      isWindows = true\n   end\nend",
+        "text": "  "
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn isWindows\nend",
+        "text": "Изменить способ загрузки",
+        "id": 3,
+        "instant": true,
+        "lua_do": "function lua_do()\n   needLoadFromFile = not needLoadFromFile\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/load_unload_quest/fantasy.png"
+        ],
+        "comment": true,
+        "text": "Загрузить квест",
+        "lua_do": "function lua_do()\n   questContent = getContent()\n   if questContent then\n      createNewPages()   --подготовка\n      prepareMerge()   --подготовка\n      merge()    -- непосредственно загрузка\n      success = true\n      newPages = nil   preparePages = nil   questContent = nil\n   end\nend",
+        "instant": true,
+        "id": 3,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Загрузка успешно завершена.\nПожалуйста, перейдите в режим редактирования, сохраните квест и переоткройте его.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn success\nend"
+      },
+      {
+        "text": "Получение текста квеста из страницы / из файла",
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction getContent()\n   local content\n   if needLoadFromFile then\n      content = getContentFromFile()\n   else\n      content = pages[g.current_id].text\n   end\n   return content\nend\nend",
+        "instant": false
+      },
+      {
+        "text": "Получение текста квеста из файла",
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction getContentFromFile()\n   local content, path, fileName, ext\n   local fullFileName = pages[g.current_id].text .. \"\"\n   path,fileName = fullFileName:match(\"^%s*(.-)([^<s><s><s><s>/]*)$\")\n   if fileName then\n      ext = fileName:match(\"[^%.]*%.?(.*)$\")\n   end\n\n   local exception\n   if ext == \"txt\" then\n      local file, errorString = io.open(fullFileName, \"r\" )\n      if not file then\n         exception = native.showAlert(\"Ошибка\", \"Файл не существует. <s>\n File error: \" .. errorString, {\"ОК\"})\n      else\n         content = file:read( \"*a\" )\n         io.close( file )\n         content = utf8.gsub (content, \"<s>\n\", \"<s><s>r<s>\n\")\n      end\n   else\n      exception = native.showAlert(\"Ошибка\", \"Некорректное расширение файла. Загружаемый файл должен иметь расширение .txt\", {\"ОК\"})\n   end\n   return content\nend\nend",
+        "instant": false
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction createNewPages()\n   -- разрезаем исходный текст на страницы\n   local preparePages = {}\n   for newPage in utf8.gmatch(questContent, \"(.-\" .. endPageSeparatorReg .. \")\") do\n      table.insert(preparePages, newPage)\n   end\n\n   -- выделяем из текста страницы Заголовок, собственно Текст и Кнопки\n   newPages = {}\n   local pageText, pageTitle, link = \"\"\n   local pageButtons = {}\n   for i, v in ipairs(preparePages) do\n      pageText = \"\" .. v\n\n      -- выделяем Заголовки,\n      -- они будут использоваться в качестве ссылок, если нужно\n      pageTitle, pageText = utf8.match(v, newTitleSeparatorReg .. \"(.-)\" .. endTitleSeparatorReg .. \"(.*)\")\n      pageTitle = trim(pageTitle)\n      \n      -- создание кнопок\n      pageButtons = createButtons(pageText)\n      \n      -- отрезаем ненужный мусор про кнопки и добавляем табуляцию\n      if utf8.find(pageText, \"(.-)\" .. newButtonSeparatorReg) then\n         pageText = utf8.match(pageText, \"(.-)\" .. newButtonSeparatorReg)\n      end\n      pageText = trim(pageText)\n      if tabulation then\n         pageText = utf8.gsub (tab .. pageText, newParagraphSeparator, (newParagraphSeparator .. tab))\n      end\n      table.insert(newPages , {title = pageTitle, text = pageText, buttons = pageButtons})\n   end\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Обработка исходного текста: разбиение на страницы; выделение заголовков (если нужно сосдание переходов по кнопкам); создание кнопок; добавление табуляции.\n"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction createLinks(buttonsTable, linksTable)\n   -- перебираем кнопки и указываем, на какую страницу они будут ссылаться\n   for kb, curButton in ipairs(buttonsTable) do\n      if (curButton.linkText) and (utf8.len(curButton.linkText) > 0) then\n         -- определяем номер страницы\n         notFound = true\n         for kl, curLink in ipairs(linksTable) do\n            if (curLink.title == curButton.linkText) then \n               curButton.id = 0 <plus> curLink.pageId\n               notFound = false\n               break -- нашли\n            end\n         end\n         \n         -- Если не нашли целевую страницу, ссылаемся на НЕСУЩЕСТВУЮЩУЮ страницу\n         if notFound then \n               curButton.id = table.count(pages) <plus> table.count(newPages) <plus>1\n         end\n\n         -- подчищаем хвост\n         curButton.linkText = nil \n      end\n   end\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Создание переходов с кнопки на страницу.\nАргументы: 1 - таблица кнопок; 2 - таблица сопоставления заголовков и номеров страниц"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction prepareMerge()\n   -- определяем номера будущих страниц\n   local curPagesCount = table.count(pages)\n   local links = {}\n   for i, curPage in ipairs(newPages) do\n      curPage.id = curPagesCount <plus> i\n      -- сопоставляем номера страниц с их заголовками для создания ссылок\n      if creatingLinks then\n         table.insert(links , {title = \"\" .. curPage.title, pageId = curPage.id})\n      end\n   end\n\n   -- перебираем все кнопки\n   if creatingLinks then\n      for i, curPage in ipairs(newPages) do\n         if curPage.buttons then\n             createLinks(curPage.buttons, links) -- создание ссылок\n         end\n      end\n   end\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Подготовка к мерджу в массив существующих страниц: определение номеров новых страниц; создание связей между ними, если это нужно.\n"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction merge()\n   for i, curPage in ipairs(newPages) do\n      table.insert(pages, {id = curPage.id, text = curPage.text or \"\", answers = curPage.buttons or {}})\n   end\nend\nend",
+        "calculate": true,
+        "text": "Mердж в массив существующих страниц\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction createButtons(pageText)\n   local pageButtons = {}\n   local link = \"\"\n   for newButton in utf8.gmatch(pageText, newButtonSeparatorReg .. \"(.-)\" .. endButtonSeparatorReg) do\n      newButton = trim(newButton)\n\n     -- определяем, есть ли в кнопке ссылка\n     linkSepPos = utf8.find(newButton, newLinkSeparatorReg)\n     if linkSepPos then\n        -- определяем, на что кнопки ссылаются\n        newButton, link = utf8.match(newButton, \"(.-)\" .. newLinkSeparatorReg .. \"(.*)\")\n      else\n        -- В кнопке нет разделителя ссылки, значит, её название и есть ссылка\n        linkText = newButton .. \"\"\n      end\n      if creatingLinks then\n         table.insert(pageButtons , {text = newButton, linkText = link})\n      else\n         -- если ссылки не нужны - просто отсекаем их\n         table.insert(pageButtons , {text = newButton})\n      end\n   end\n   return pageButtons\nend\nend",
+        "calculate": true,
+        "text": "Создание кнопок\nаргумент - исходный текст одной страницы",
+        "id": 2
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу",
+        "lua_if": "function lua_if()\n-- Чтобы нельзя было листать квест сразу после загрузки\nreturn not success\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Для загрузки из текста страницы вставьте сюда текст квеста в пользовательском формате. <s>r\nНапример:<s>r\nЗаголовок 1<s>r\nТекст страницы 1<s>r\nНовый параграф страницы 1<s>r\n::кнопка_1_на_2//Заголовок 2<s>r\n::кнопка_2_на_3//Заголовок 3<s>r\n<s>r\nЗаголовок 2<s>r\nТекст страницы 2<s>r\n::кнопка_1_на_3//Заголовок 3<s>r\n<s>r\nЗаголовок 3<s>r\nТекст страницы 3<s>r\n::кнопка_1_на_1//Заголовок 1<s>r\n::кнопка_2_на_4//Заголовок 4<s>r\n::кнопка_3_на_5//Заголовок 5<s>r\n<s>r\nЗаголовок 4<s>r\nТекст страницы 4<s>r\n<s>r\n<s>r\n—<s>r\nДля загрузки из файла вставьте сюда полный путь до файла.<s>r\nНапример:<s>r\nC:<s><s>Мои квесты<s><s>Новый квест<s><s>part1.txt",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Символы разбиения текста",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "comment": true,
+        "super_calculate": false,
+        "middle_answer": false,
+        "text": "Символы разбиения текста",
+        "calculate": true,
+        "lua_do": "function lua_do()\nnewPageSeparator = \"<s>\n<s>\n\"\nnewPageSeparatorReg = \"%c%c%c%c\"\nnewParagraphSeparator = \"<s>\n\"\nnewParagraphSeparatorReg = \"%c%c\"\nnewButtonSeparator = \"::\"\nnewButtonSeparatorReg = \"::\"\nendButtonSeparator = \"<s>\n\"\nendButtonSeparatorReg = \"%c%c\"\nnewLinkSeparator = \"//\"\nnewLinkSeparatorReg = \"//\"\npageTitleSeparator = \"<s>\n\"\npageTitleSeparatorReg = \"%c%c\"\ntab = \"     \" -- в ТК не работает табуляция, заменяем её пробелами\n\nfunction getMask(separator)\n   return string.gsub(separator, \"<s>\n\", \"<s><s><s>\n\")\nend\n\nfunction trim(textWithSpaces)\n   return utf8.match((textWithSpaces or \"\"), \"^[%s%c]*(.-)[%s%c]*$\")\nend\nend"
+      },
+      {
+        "id": 2,
+        "text": "Вывод разделителей",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal text = \"Новая страница: \" .. getMask(newPageSeparator) .. \"<s>\nНовый абзац: \" .. getMask(newParagraphSeparator) .. \n                   \"<s>\nНовая кнопка: \" .. getMask(newButtonSeparator) .. \"<s>\nКонец кнопки: \" .. getMask(endButtonSeparator) \n\nif tabulation then\n   text = text .. \"<s>\nДобавлять табуляцию для абзацев.\"\nelse\n   text = text .. \"<s>\nНе добавлять табуляцию для абзацев.\"\nend\n\nif creatingLinks then\n   text = text .. \"<s>\n<s>\nВключено автоматическое создание связей между страницами. <s>\nКонец заголовка страницы: \" \n             .. getMask(pageTitleSeparator) .. \"<s>\nНачало ссылки: \" .. getMask(newLinkSeparator) .. \"<s>\n\"\nelse\n   text = text .. \"<s>\n<s>\nАвтоматическое создание связей между страницами отключено.\"\nend\n\nif isWindows then\n   text = text .. \"<s>\n<s>\nСпособ загрузки: \"\n   if needLoadFromFile then text = text .. \"из файла\"\n   else text = text .. \"из текста страницы\"\n   end\nend\nreturn text\nend"
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\ntabulation = not tabulation\nend",
+        "text": "Включить / выключить табуляцию",
+        "id": 3,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\ncreatingLinks = not creatingLinks\nend",
+        "text": "Включить / выключить автоматическое создание связей между страницами",
+        "id": 3,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   isWindows = false\n   if system.getInfo(\"platform\") == \"win32\" then\n      isWindows = true\n   end\nend",
+        "text": "  "
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn isWindows\nend",
+        "instant": true,
+        "id": 3,
+        "text": "Изменить способ загрузки",
+        "lua_do": "function lua_do()\n   needLoadFromFile = not needLoadFromFile\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/load_unload_quest/fantasy.png"
+        ],
+        "comment": true,
+        "text": "Загрузить квест",
+        "lua_do": "function lua_do()\n   questContent = getContent()\n   if questContent then\n      createNewPages()   --подготовка\n      prepareMerge()   --подготовка\n      merge()    -- непосредственно загрузка\n      success = true\n      newPages = nil   preparePages = nil   questContent = nil\n   end\nend",
+        "instant": true,
+        "id": 3,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Загрузка успешно завершена.\nПожалуйста, перейдите в режим редактирования, сохраните квест и переоткройте его.",
+        "comment": true,
+        "lua_if": "function lua_if()\nreturn success\nend"
+      },
+      {
+        "instant": false,
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "text": "Получение текста квеста из страницы / из файла",
+        "lua_do": "function lua_do()\nfunction getContent()\n   local content\n   if needLoadFromFile then\n      content = getContentFromFile()\n   else\n      content = pages[g.current_id].text\n   end\n   return content\nend\nend",
+        "calculate": true
+      },
+      {
+        "instant": false,
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "text": "Получение текста квеста из файла",
+        "lua_do": "function lua_do()\nfunction getContentFromFile()\n   local content, path, fileName, ext\n   local fullFileName = pages[g.current_id].text .. \"\"\n   path,fileName = fullFileName:match(\"^%s*(.-)([^<s><s><s><s>/]*)$\")\n   if fileName then\n      ext = fileName:match(\"[^%.]*%.?(.*)$\")\n   end\n\n   local exception\n   if ext == \"txt\" then\n      local file, errorString = io.open(fullFileName, \"r\" )\n      if not file then\n         exception = native.showAlert(\"Ошибка\", \"Файл не существует. <s>\n File error: \" .. errorString, {\"ОК\"})\n      else\n         content = file:read( \"*a\" )\n         io.close( file )\n         content = utf8.gsub (content, \"<s>\n\", \"<s><s>r<s>\n\")\n      end\n   else\n      exception = native.showAlert(\"Ошибка\", \"Некорректное расширение файла. Загружаемый файл должен иметь расширение .txt\", {\"ОК\"})\n   end\n   return content\nend\nend",
+        "calculate": true
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction createNewPages()\n   -- разрезаем исходный текст на страницы\n   preparePages = {}\n   for newPage in utf8.gmatch(questContent, \"(.-\" .. newPageSeparatorReg .. \")\") do\n      table.insert(preparePages, newPage)\n   end\n\n   -- выделяем из текста страницы Заголовок, собственно Текст и Кнопки\n   newPages = {}\n   local pageText, pageTitle, link = \"\"\n   local pageButtons = {}\n   for i, v in ipairs(preparePages) do\n      pageText = \"\" .. v\n\n      -- если нужно создавать ссылки - выделяем Заголовки,\n      -- они будут использоваться в качестве ссылок\n      if creatingLinks then\n         pageTitle, pageText = utf8.match(v, \"(.-)\" .. pageTitleSeparatorReg .. \"(.*)\")\n         pageTitle = trim(pageTitle)\n      end\n      \n      -- создание кнопок\n      pageButtons = createButtons(pageText)\n      \n      -- отрезаем ненужный мусор про кнопки и добавляем табуляцию\n      if utf8.find(pageText, \"(.-)\" .. newButtonSeparatorReg) then\n         pageText = utf8.match(pageText, \"(.-)\" .. newButtonSeparatorReg)\n      end\n      pageText = trim(pageText)\n      if tabulation then\n         pageText = utf8.gsub (tab .. pageText, newParagraphSeparator, (newParagraphSeparator .. tab))\n      end\n      table.insert(newPages , {title = pageTitle, text = pageText, buttons = pageButtons})\n   end\nend\nend",
+        "calculate": true,
+        "text": "Обработка исходного текста: разбиение на страницы; выделение заголовков (если нужно создание переходов по кнопкам); создание кнопок; добавление табуляции.\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction createLinks(buttonsTable, linksTable)\n   -- перебираем кнопки и указываем, на какую страницу они будут ссылаться\n   for kb, curButton in ipairs(buttonsTable) do\n      if (curButton.linkText) and (utf8.len(curButton.linkText) > 0) then\n         -- определяем номер страницы\n         notFound = true\n         for kl, curLink in ipairs(linksTable) do\n            if (curLink.title == curButton.linkText) then \n               curButton.id = 0 <plus> curLink.pageId\n               notFound = false\n               break -- нашли\n            end\n         end\n         \n         -- Если не нашли целевую страницу, ссылаемся на НЕСУЩЕСТВУЮЩУЮ страницу\n         if notFound then \n               curButton.id = table.count(pages) <plus> table.count(newPages) <plus>1\n         end\n\n         -- подчищаем хвост\n         curButton.linkText = nil \n      end\n   end\nend\nend",
+        "calculate": true,
+        "text": "Создание переходов с кнопки на страницу.\nАргументы: 1 - таблица кнопок; 2 - таблица сопоставления заголовков и номеров страниц",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction prepareMerge()\n   -- определяем номера будущих страниц\n   local curPagesCount = table.count(pages)\n   local links = {}\n   for i, curPage in ipairs(newPages) do\n      curPage.id = curPagesCount <plus> i\n      -- сопоставляем номера страниц с их заголовками для создания ссылок\n      if creatingLinks then\n         table.insert(links , {title = \"\" .. curPage.title, pageId = curPage.id})\n      end\n   end\n\n   -- перебираем все кнопки\n   if creatingLinks then\n      for i, curPage in ipairs(newPages) do\n         if curPage.buttons then\n             createLinks(curPage.buttons, links) -- создание ссылок\n         end\n      end\n   end\nend\nend",
+        "calculate": true,
+        "text": "Подготовка к мерджу в массив существующих страниц: определение номеров новых страниц; создание связей между ними, если это нужно.\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction merge()\n   for i, curPage in ipairs(newPages) do\n      table.insert(pages, {id = curPage.id, text = curPage.text or \"\", answers = curPage.buttons or {}})\n   end\nend\nend",
+        "calculate": true,
+        "text": "Mердж в массив существующих страниц\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction createButtons(pageText)\n   local pageButtons = {}\n   local link = \"\"\n   for newButton in utf8.gmatch(pageText, newButtonSeparatorReg .. \"(.-)\" .. endButtonSeparatorReg) do\n      newButton = trim(newButton)\n\n      -- если нужно создавать ссылки - определяем, на что кнопки ссылаются\n      if creatingLinks then\n         newButton, link = utf8.match(newButton, \"(.-)\" .. newLinkSeparatorReg .. \"(.*)\")\n         table.insert(pageButtons , {text = newButton, linkText = link})\n      else\n         table.insert(pageButtons , {text = newButton})\n      end\n   end\n   if table.count(pageButtons) > 0 then \n      return pageButtons\n   end\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Создание кнопок\nаргумент - исходный текст одной страницы"
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу",
+        "lua_if": "function lua_if()\n-- Чтобы нельзя было листать квест сразу после загрузки\nreturn not success\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "     Текст страницы 1<s>r\n     Новый параграф страницы 1",
+    "answers": [
+      {
+        "id": 5,
+        "text": "кнопка_1_на_2"
+      },
+      {
+        "id": 6,
+        "text": "кнопка_2_на_3"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "     Текст страницы 2",
+    "answers": [
+      {
+        "id": 6,
+        "text": "кнопка_1_на_3"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "     Текст страницы 3",
+    "answers": [
+      {
+        "id": 4,
+        "text": "кнопка_1_на_1"
+      },
+      {
+        "id": 7,
+        "text": "кнопка_2_на_4"
+      },
+      {
+        "id": 8,
+        "text": "кнопка_3_на_5"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "     Текст страницы 4",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 9,
+    "text": "Для выгрузки в файл вставьте сюда полное имя файла.<s>r\nНапример:<s>r\nC:<s><s>Мои квесты<s><s>Новый квест<s><s>part1.txt<s>r\n<s>r\nПример выгрузки:<s>r\n:: 4<s>r\nТекст страницы 1<s>r<s>r\nНовый параграф страницы 1<s>r\n[[кнопка_1_на_2]]<s>r\n[[кнопка_2_на_3]]<s>r\n<s>r\n:: 5<s>r\nТекст страницы 2<s>r\n[[кнопка_1_на_3]]<s>r\n<s>r\n:: 6<s>r\nТекст страницы 3<s>r\n[[кнопка_1_на_1]]<s>r\n[[кнопка_2_на_4]]<s>r\n[[кнопка_3_на_5]]<s>r\n<s>r\n:: 7<s>r\nТекст страницы 4<s>r\n<s>r\n:: 8<s>r\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Символы разбиения текста",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "comment": true,
+        "super_calculate": false,
+        "middle_answer": false,
+        "text": "Символы разбиения текста",
+        "calculate": true,
+        "lua_do": "function lua_do()\nnewTitleSeparator = \":: \"\nendTitleSeparator = \"<s>\n\"\nendPageSeparator = \"<s>\n<s>\n\"\nnewParagraphSeparator = \"<s>\n\"\nnewButtonSeparator = \"[[\"\nendButtonSeparator = \"]]\"\nnewLinkSeparator = \"|\"\ntab = \"     \" -- в ТК не работает табуляция, она может быть заменена пробелами\n\nfunction getMask(separator)\n   return string.gsub(separator, \"<s>\n\", \"<s><s><s>\n\")\nend\n\nfunction ltrim(textWithSpaces)\n   return utf8.match((textWithSpaces or \"\"), \"^[%s]*(.-)$\")\nend\n\nend"
+      },
+      {
+        "id": 2,
+        "text": "Вывод разделителей",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal text = \"Начало заголовка: \" .. getMask(newTitleSeparator) .. \n                   \"<s>\nКонец заголовка: \" .. getMask(endTitleSeparator) .. \n                   \"<s>\nКонец страницы: \" .. getMask(endPageSeparator) .. \n                   \"<s>\nНовый абзац: \" .. getMask(newParagraphSeparator) .. \n                   \"<s>\n<s>\nНовая кнопка: \" .. getMask(newButtonSeparator) .. \n                   \"<s>\nНачало ссылки: \" .. getMask(newLinkSeparator) .. \n                    \"<s>\nКонец кнопки: \" .. getMask(endButtonSeparator)\n\nif unloadTabs then\n   text = text .. \"<s>\nВыгружать пробелы табуляции.\"\nelse\n   text = text .. \"<s>\nНе выгружать пробелы табуляции.\"\nend\n\nif unloadLinks then\n   text = text .. \"<s>\n<s>\nВключена выгрузка связей между страницами. <s>\n\"\nelse\n   text = text .. \"<s>\n<s>\nВыгрузка связей между страницами отключена.\"\nend\n\nif isWindows then\n   text = text .. \"<s>\n<s>\nСпособ выгрузки: \"\n   if needUnloadToFile then text = text .. \"в файл\"\n   else text = text .. \"в текст страницы\"\n   end\nend\nreturn text\nend"
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nunloadTabs = not unloadTabs\nend",
+        "text": "Включить / выключить выгрузку пробелов табуляции",
+        "id": 9,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "instant": true,
+        "lua_do": "function lua_do()\nunloadLinks = not unloadLinks\nend",
+        "text": "Включить / выключить выгрузку связей между страницами",
+        "id": 9,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   isWindows = false\n   if system.getInfo(\"platform\") == \"win32\" then\n      isWindows = true\n   end\nend",
+        "text": "  "
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn isWindows\nend",
+        "instant": true,
+        "id": 3,
+        "text": "Изменить способ выгрузки",
+        "lua_do": "function lua_do()\n   needUnloadToFile = not needUnloadToFile\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/load_unload_quest/fantasy.png"
+        ],
+        "comment": true,
+        "text": "Выгрузить квест",
+        "lua_do": "function lua_do()\n   -- укажите в переменной pages номера и/или диапазоны страниц через запятую\n   -- диапазоны указываются через \"-\"\n\n   local pageNumsStr = \"4, 5-7, 8\"   \n   \n   local filename \n   if needUnloadToFile then filename = getFilename() end\n   if (not needUnloadToFile) or filename then\n      local pageNumbers = preparePagesNums(pageNumsStr)   -- подготовка\n      local questContent = getQuestContent(pageNumbers)   -- получение содержимого страниц\n      unloadQuest(questContent, filename) -- непосредственно выгрузка\n   end\nend",
+        "instant": true,
+        "id": 9,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "text": "Непосредственно выгрузка",
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction unloadQuest(questContent, filename)\n   if filename then\n      local file, errorString = io.open(filename, \"w\" )\n      if not file then\n         local exception = native.showAlert(\"Ошибка\", \"File error: \" .. errorString, {\"ОК\"})\n      else\n         file:write(questContent)\n         io.close( file )\n         local mess = native.showAlert(\"Выгрузка завершена\", filename, {\"ОК\"})\n      end\n   else\n      pages[g.current_id].text = questContent\n   end\nend\nend",
+        "instant": false
+      },
+      {
+        "calculate": true,
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "instant": false,
+        "lua_do": "function lua_do()\nfunction getFilename()\n   local path, fileName, ext\n   local fullFileName = pages[g.current_id].text .. \"\"\n   path,fileName = fullFileName:match(\"^%s*(.-)([^<s><s><s><s>/]*)$\")\n   if fileName then\n      ext = fileName:match(\"[^%.]*%.?(.*)$\")\n   end\n\n   local exception\n   if ext == \"txt\" then\n      local file, errorString = io.open(fullFileName, \"w\" )\n      if not file then\n         exception = native.showAlert(\"Ошибка\", \"Недопустимый путь к файлу. <s>\n File error: \" .. errorString, {\"ОК\"})\n      else\n         io.close( file )\n      end\n   else\n      fullFileName = nil\n      exception = native.showAlert(\"Ошибка\", \"Некорректное расширение файла. Загружаемый файл должен иметь расширение .txt\", {\"ОК\"})\n   end\n   return fullFileName\nend\nend",
+        "text": "Проверка имени файла"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction preparePagesNums(pageNumsStr)\n   local pageNumbers = {}\n   local startPage, endPage, num = -1\n   local startPageStr, endPageStr =\"\"\n   for numStr in utf8.gmatch(\" \" .. pageNumsStr .. \",\", \"(.-),\") do\n\n      -- если указан диапазон страниц, \n      if utf8.find(numStr, \"-\") then\n         startPageStr, endPageStr = utf8.match(numStr, \"(%d<plus>)-(%d<plus>)\")\n         startPage, endPage = -1\n         if startPageStr and endPageStr then\n            startPage = tonumber(startPageStr)\n            endPage = tonumber(endPageStr)\n         end\n\n         -- если удалось определить границы диапазона, добавляем в массив каждую из них\n         if startPage and endPage and startPage > 0 and endPage > startPage then\n            for i = startPage, endPage do\n               table.insert(pageNumbers, i)\n            end\n         end\n      else\n         -- отдельная страница\n         num = tonumber(numStr)\n         if num then table.insert(pageNumbers, num) end\n      end\n   end\n   return pageNumbers\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Определяем номера страниц, которые нужно выгружать\nаргумент - строка, содержащая номера и/или диапазоны страниц через запятую\n"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction getQuestContent(pageNums)\n   local content = \"\"\n   local curPage = {}\n   for i, curNum in ipairs(pageNums) do\n      curPage = pages[curNum]\n      if curPage then\n         content = unloadPage(content, curPage)\n      end\n   end\n   return content\nend\nend",
+        "calculate": true,
+        "text": "Перебор страниц и их поочерёдная выгрузка\nаргумент pageNums - массив чисел\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction unloadPage(resultText, currentPage)\n   if not currentPage then return end\n   -- начало новой страницы\n   if resultText ~= \"\" then\n      resultText = resultText .. endPageSeparator\n   end\n\n   -- номер страницы - в качестве заголовка\n   resultText = resultText .. newTitleSeparator .. currentPage.id .. endTitleSeparator\n   \n   -- текст страницы\n   if unloadTabs then\n      resultText = resultText .. currentPage.text\n   else\n      resultText = resultText .. utf8.gsub (ltrim(currentPage.text), (newParagraphSeparator .. tab), newParagraphSeparator)\n   end\n   \n   -- кнопки\n   local buttons = currentPage.answers\n   for i, curButton in ipairs(buttons) do\n      resultText = resultText .. newParagraphSeparator .. newButtonSeparator .. curButton.text\n      -- ссылки на страницы, если надо\n      if unloadLinks then\n         resultText = resultText .. newLinkSeparator .. curButton.id\n      end\n      resultText = resultText .. endButtonSeparator\n   end\n\n   return resultText\nend\nend",
+        "calculate": true,
+        "text": "Выгрузка одной страницы\nаргумент resultText - суммарное содержимое выгружаемых страниц\nаргумент currentPage - таблица выгружаемой страницы\n",
+        "id": 2
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Для выгрузки в файл вставьте сюда полное имя файла.<s>r\nНапример:<s>r\nC:<s><s>Мои квесты<s><s>Новый квест<s><s>part1.txt<s>r\n<s>r\nПример выгрузки:<s>r\n4<s>r\nТекст страницы 1<s>r<s>r\nНовый параграф страницы 1<s>r\n::кнопка_1_на_2//5<s>r\n::кнопка_2_на_3//6<s>r\n<s>r\n5<s>r\nТекст страницы 2<s>r\n::кнопка_1_на_3//6<s>r\n<s>r\n6<s>r\nТекст страницы 3<s>r\n::кнопка_1_на_1//4<s>r\n::кнопка_2_на_4//7<s>r\n::кнопка_3_на_5//8<s>r\n<s>r\n7<s>r\nТекст страницы 4<s>r\n<s>r\n8<s>r\n<s>r\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Символы разбиения текста",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\nnewPageSeparator = \"<s>\n<s>\n\"\nnewParagraphSeparator = \"<s>\n\"\nnewButtonSeparator = \"::\"\nendButtonSeparator = \"\"\nnewLinkSeparator = \"//\"\npageTitleSeparator = \"<s>\n\"\ntab = \"     \" -- в ТК не работает табуляция, она может быть заменена пробелами\n\nfunction getMask(separator)\n   return string.gsub(separator, \"<s>\n\", \"<s><s><s>\n\")\nend\n\nfunction ltrim(textWithSpaces)\n   return utf8.match((textWithSpaces or \"\"), \"^[%s]*(.-)$\")\nend\n\nend",
+        "comment": true,
+        "super_calculate": false,
+        "middle_answer": false,
+        "text": "Символы разбиения текста",
+        "calculate": true,
+        "id": 2
+      },
+      {
+        "id": 2,
+        "text": "Вывод разделителей",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal text = \"Новая страница: \" .. getMask(newPageSeparator) .. \"<s>\nНовый абзац: \" .. getMask(newParagraphSeparator) .. \n                   \"<s>\nНовая кнопка: \" .. getMask(newButtonSeparator) .. \"<s>\nКонец кнопки: \" .. getMask(endButtonSeparator) \n\nif unloadTabs then\n   text = text .. \"<s>\nВыгружать пробелы табуляции.\"\nelse\n   text = text .. \"<s>\nНе выгружать пробелы табуляции.\"\nend\n\nif unloadLinks then\n   text = text .. \"<s>\n<s>\nВключена выгрузка связей между страницами. <s>\nКонец заголовка страницы: \" \n             .. getMask(pageTitleSeparator) .. \"<s>\nНачало ссылки: \" .. getMask(newLinkSeparator) .. \"<s>\n\"\nelse\n   text = text .. \"<s>\n<s>\nВыгрузка связей между страницами отключена.\"\nend\n\nif isWindows then\n   text = text .. \"<s>\n<s>\nСпособ выгрузки: \"\n   if needUnloadToFile then text = text .. \"в файл\"\n   else text = text .. \"в текст страницы\"\n   end\nend\nreturn text\nend"
+      },
+      {
+        "text": "Включить / выключить выгрузку пробелов табуляции",
+        "id": 10,
+        "instant": true,
+        "lua_do": "function lua_do()\nunloadTabs = not unloadTabs\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "text": "Включить / выключить выгрузку связей между страницами",
+        "id": 10,
+        "instant": true,
+        "lua_do": "function lua_do()\nunloadLinks = not unloadLinks\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   isWindows = false\n   if system.getInfo(\"platform\") == \"win32\" then\n      isWindows = true\n   end\nend",
+        "text": "  "
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn isWindows\nend",
+        "text": "Изменить способ выгрузки",
+        "id": 3,
+        "instant": true,
+        "lua_do": "function lua_do()\n   needUnloadToFile = not needUnloadToFile\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/load_unload_quest/fantasy.png"
+        ],
+        "comment": true,
+        "text": "Выгрузить квест",
+        "lua_do": "function lua_do()\n   -- укажите в переменной pages номера и/или диапазоны страниц через запятую\n   -- диапазоны указываются через \"-\"\n\n   local pageNumsStr = \"4, 5-7, 8\"   \n   \n   local filename \n   if needUnloadToFile then filename = getFilename() end\n   if (not needUnloadToFile) or filename then\n      local pageNumbers = preparePagesNums(pageNumsStr)   -- подготовка\n      local questContent = getQuestContent(pageNumbers)   -- получение содержимого страниц\n      unloadQuest(questContent, filename) -- непосредственно выгрузка\n   end\nend",
+        "instant": true,
+        "id": 10,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "calculate": true,
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "instant": false,
+        "lua_do": "function lua_do()\nfunction unloadQuest(questContent, filename)\n   if filename then\n      local file, errorString = io.open(filename, \"w\" )\n      if not file then\n         local exception = native.showAlert(\"Ошибка\", \"File error: \" .. errorString, {\"ОК\"})\n      else\n         file:write(questContent)\n         io.close( file )\n         local mess = native.showAlert(\"Выгрузка завершена\", filename, {\"ОК\"})\n      end\n   else\n      pages[g.current_id].text = questContent\n   end\nend\nend",
+        "text": "Непосредственно выгрузка"
+      },
+      {
+        "text": "Проверка имени файла",
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfunction getFilename()\n   local path, fileName, ext\n   local fullFileName = pages[g.current_id].text .. \"\"\n   path,fileName = fullFileName:match(\"^%s*(.-)([^<s><s><s><s>/]*)$\")\n   if fileName then\n      ext = fileName:match(\"[^%.]*%.?(.*)$\")\n   end\n\n   local exception\n   if ext == \"txt\" then\n      local file, errorString = io.open(fullFileName, \"w\" )\n      if not file then\n         exception = native.showAlert(\"Ошибка\", \"Недопустимый путь к файлу. <s>\n File error: \" .. errorString, {\"ОК\"})\n      else\n         io.close( file )\n      end\n   else\n      fullFileName = nil\n      exception = native.showAlert(\"Ошибка\", \"Некорректное расширение файла. Загружаемый файл должен иметь расширение .txt\", {\"ОК\"})\n   end\n   return fullFileName\nend\nend",
+        "instant": false
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction preparePagesNums(pageNumsStr)\n   local pageNumbers = {}\n   local startPage, endPage, num = -1\n   local startPageStr, endPageStr =\"\"\n   for numStr in utf8.gmatch(\" \" .. pageNumsStr .. \",\", \"(.-),\") do\n\n      -- если указан диапазон страниц, \n      if utf8.find(numStr, \"-\") then\n         startPageStr, endPageStr = utf8.match(numStr, \"(%d<plus>)-(%d<plus>)\")\n         startPage, endPage = -1\n         if startPageStr and endPageStr then\n            startPage = tonumber(startPageStr)\n            endPage = tonumber(endPageStr)\n         end\n\n         -- если удалось определить границы диапазона, добавляем в массив каждую из них\n         if startPage and endPage and startPage > 0 and endPage > startPage then\n            for i = startPage, endPage do\n               table.insert(pageNumbers, i)\n            end\n         end\n      else\n         -- отдельная страница\n         num = tonumber(numStr)\n         if num then table.insert(pageNumbers, num) end\n      end\n   end\n   return pageNumbers\nend\nend",
+        "calculate": true,
+        "text": "Определяем номера страниц, которые нужно выгружать\nаргумент - строка, содержащая номера и/или диапазоны страниц через запятую\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction getQuestContent(pageNums)\n   local content = \"\"\n   local curPage = {}\n   for i, curNum in ipairs(pageNums) do\n      curPage = pages[curNum]\n      if curPage then\n         content = unloadPage(content, curPage)\n      end\n   end\n   return content\nend\nend",
+        "calculate": true,
+        "text": "Перебор страниц и их поочерёдная выгрузка\nаргумент pageNums - массив чисел\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction unloadPage(resultText, currentPage)\n   if not currentPage then return end\n   -- начало новой страницы\n   if resultText ~= \"\" then\n      resultText = resultText .. newPageSeparator\n   end\n\n   -- если выгружаем ссылки между страницами, то номер страницы - в качестве заголовка\n   if unloadLinks then\n      resultText = resultText .. currentPage.id .. pageTitleSeparator\n   end\n   \n   -- текст страницы\n   if unloadTabs then\n      resultText = resultText .. currentPage.text\n   else\n      resultText = resultText .. utf8.gsub (ltrim(currentPage.text), (newParagraphSeparator .. tab), newParagraphSeparator)\n   end\n   \n   -- кнопки\n   local buttons = currentPage.answers\n   for i, curButton in ipairs(buttons) do\n      resultText = resultText .. newParagraphSeparator .. newButtonSeparator .. curButton.text\n      -- ссылки на страницы, если надо\n      if unloadLinks then\n         resultText = resultText .. newLinkSeparator .. curButton.id\n      end\n      resultText = resultText .. endButtonSeparator\n   end\n\n   return resultText\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Выгрузка одной страницы\nаргумент resultText - суммарное содержимое выгружаемых страниц\nаргумент currentPage - таблица выгружаемой страницы"
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "     1. Влючите продвинутый режим редактирования. <s>r\n     2. Скопируйте нужный шаблон на пустую страницу в Вашем квесте. Для этого скопируйте в кнопку одну из следующих операций и сохраните.<s>r\n     Шаблон загрузки в пользовательском формате: copy all [3, 226981]<s>r\n     Шаблон загрузки в формате Twee: copy all [2, 226981]<s>r\n     Шаблон выгрузки в пользовательском формате: copy all [10, 226981]<s>r\n     Шаблон выгрузки в формате Twee: copy all [9, 226981]<s>r\n     Шаблон выгрузки в формате Twee2: copy all [19, 226981]<s>r\n<s>r\n     3. Снимите свойство \"inactive\" с кнопки \"Загрузить квест\" / \"Выгрузить квест\".<s>r\n     Эта кнопка обозначена иконкой волшебной палочки.<s>r\n<s>r\n     Для шаблона загрузки:<s>r\n     4. а) Для загрузки текстом. В текст страницы, на которую был скопирован шаблон, вставьте текст квеста в выбранном формате. Убедитесь, что в конце текста есть сочетание символов, указывающее на начало новой страницы. По умолчанию это два перевода строки.<s>r\n     4. б) Для загрузки из файла. В текст страницы, на которую был скопирован шаблон, вставьте полный путь до файла с текстом Вашего квеста. Файл должен быть в формате TXT.<s>r\n     5. Перейдите в режим читателя и нажмите кнопку \"Загрузить квест\". Дождитесь окончания загрузки (под кнопкй появится сообщение об этом).<s>r\n     6. Не переходя на другие страницы перейдите в режим читателя, сохраните квест на сервер и закройте его.<s>r\n     7. Откройте квест. Приложение спросит хотите Вы загрузить квест с устройства или с сервера. Выберите вариант \"С сервера\".<s>r\n     8. Просмотрите свежезагруженные страницы, проставьте недостающие ссылки на кномки, логику и пр.<s>r\n     Profit!<s>r\n<s>r\n     Для шаблона выгрузки:<s>r\n     3. В блоке \"lua_do\" кнопки \"Выгрузить квест\" укажите номера страниц в переменной \"pageNumsStr\". <s>r\n     4. а) Для выгрузки в текст страницы. Перейдите в режим читателя и нажмите кнопку \"Выгрузить квест\". Указанные страницы будут выгружены в текст страницы, на которую был скопирован шаблон. Перейдите в режим редактирования и скопируйте текст страницы. <s>r\n     4. б) Для выгрузки в файл. В текст страницы, на которую был скопирован шаблон, вставьте полный путь до файла, в который нужно выгрузить квест. Файл должен быть в формате TXT. Перейдите в режим читателя и нажмите кнопку \"Выгрузить квест\". Указанные страницы будут выгружены в указанный файл. Если файл существует, он будет перезаписан. Если файл не существует, он будет создан.<s>r\n     Profit!<s>r\n<s>r\n          !!! ВАЖНО !!!<s>r\n     При загрузке в формате Twеe логика создания ссылок соответствует логике редакторов Twine и Twee.<s>r\n     Автор категорически не рекомендует вносить изменения в код, касающийся загрузки и выгрузки в формате Twee.<s>r\n     Автор не несёт ответственности за последствия Ваших модификаций кода шаблона и настоятельно рекомендует копировать квест перед запуском кода изменённого шаблона.<s>r\n",
+    "answers": [
+      {
+        "id": 1,
+        "text": "В меню"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "<s>r\n<s>r\n",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 14,
+    "text": "     Текст страницы 1<s>r\n     Новый параграф страницы 1",
+    "answers": [
+      {
+        "id": 15,
+        "text": "кнопка_1_на_2"
+      },
+      {
+        "id": 16,
+        "text": "кнопка_2_на_3"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "     Текст страницы 2",
+    "answers": [
+      {
+        "id": 16,
+        "text": "кнопка_1_на_3"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "     Текст страницы 3",
+    "answers": [
+      {
+        "id": 14,
+        "text": "кнопка_1_на_1"
+      },
+      {
+        "id": 17,
+        "text": "кнопка_2_на_4"
+      },
+      {
+        "id": 18,
+        "text": "кнопка_3_на_5"
+      },
+      {
+        "id": 18,
+        "text": "кнопка_4_на_6"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "     Текст страницы 4",
+    "answers": []
+  },
+  {
+    "id": 18,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 19,
+    "text": "Для выгрузки в файл вставьте сюда полное имя файла.<s>r\nНапример:<s>r\nC:<s><s>Мои квесты<s><s>Новый квест<s><s>part1.txt<s>r\n<s>r\nПример выгрузки:<s>r\n::4 <100,100><s>r\nТекст страницы 1<s>r<s>r\nНовый параграф страницы 1<s>r\n[[кнопка_1_на_2]]<s>r\n[[кнопка_2_на_3]]<s>r\n<s>r\n::5 <200,100><s>r\nТекст страницы 2<s>r\n[[кнопка_1_на_3]]<s>r\n<s>r\n::6 <300,100><s>r\nТекст страницы 3<s>r\n[[кнопка_1_на_1]]<s>r\n[[кнопка_2_на_4]]<s>r\n[[кнопка_3_на_5]]<s>r\n<s>r\n::7 <400,100><s>r\nТекст страницы 4<s>r\n<s>r\n::8 <500,100><s>r\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Символы разбиения текста",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_do": "function lua_do()\nnewTitleSeparator = \"::\"\nendTitleSeparator = \"<s>\n\"\nendPageSeparator = \"<s>\n<s>\n\"\nnewParagraphSeparator = \"<s>\n\"\nnewButtonSeparator = \"[[\"\nendButtonSeparator = \"]]\"\nnewLinkSeparator = \"|\"\ntab = \"     \" -- в ТК не работает табуляция, она может быть заменена пробелами\n\nfunction getMask(separator)\n   return string.gsub(separator, \"<s>\n\", \"<s><s><s>\n\")\nend\n\nfunction ltrim(textWithSpaces)\n   return utf8.match((textWithSpaces or \"\"), \"^[%s]*(.-)$\")\nend\n\nend",
+        "comment": true,
+        "super_calculate": false,
+        "middle_answer": false,
+        "text": "Символы разбиения текста",
+        "calculate": true,
+        "id": 2
+      },
+      {
+        "id": 2,
+        "text": "Вывод разделителей",
+        "comment": true,
+        "lua_text": "function lua_text()\nlocal text = \"Начало заголовка: \" .. getMask(newTitleSeparator) .. \n                   \"<s>\nКонец заголовка: \" .. getMask(endTitleSeparator) .. \n                   \"<s>\nКонец страницы: \" .. getMask(endPageSeparator) .. \n                   \"<s>\nНовый абзац: \" .. getMask(newParagraphSeparator) .. \n                   \"<s>\n<s>\nНовая кнопка: \" .. getMask(newButtonSeparator) .. \n                   \"<s>\nНачало ссылки: \" .. getMask(newLinkSeparator) .. \n                    \"<s>\nКонец кнопки: \" .. getMask(endButtonSeparator)\n\nif unloadTabs then\n   text = text .. \"<s>\nВыгружать пробелы табуляции.\"\nelse\n   text = text .. \"<s>\nНе выгружать пробелы табуляции.\"\nend\n\nif unloadLinks then\n   text = text .. \"<s>\n<s>\nВключена выгрузка связей между страницами. <s>\n\"\nelse\n   text = text .. \"<s>\n<s>\nВыгрузка связей между страницами отключена.\"\nend\n\nif isWindows then\n   text = text .. \"<s>\n<s>\nСпособ выгрузки: \"\n   if needUnloadToFile then text = text .. \"в файл\"\n   else text = text .. \"в текст страницы\"\n   end\nend\nreturn text\nend"
+      },
+      {
+        "instant": true,
+        "id": 9,
+        "text": "Включить / выключить выгрузку пробелов табуляции",
+        "lua_do": "function lua_do()\nunloadTabs = not unloadTabs\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "instant": true,
+        "id": 9,
+        "text": "Включить / выключить выгрузку связей между страницами",
+        "lua_do": "function lua_do()\nunloadLinks = not unloadLinks\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   isWindows = false\n   if system.getInfo(\"platform\") == \"win32\" then\n      isWindows = true\n   end\nend",
+        "text": "  "
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nreturn isWindows\nend",
+        "text": "Изменить способ выгрузки",
+        "id": 3,
+        "instant": true,
+        "lua_do": "function lua_do()\n   needUnloadToFile = not needUnloadToFile\nend",
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "answerIcon": [
+          "http://188.120.236.127/aleks_otter/load_unload_quest/fantasy.png"
+        ],
+        "comment": true,
+        "text": "Выгрузить квест",
+        "lua_do": "function lua_do()\n   -- укажите в переменной pages номера и/или диапазоны страниц через запятую\n   -- диапазоны указываются через \"-\"\n\n   local pageNumsStr = \"4, 5-7, 8\"   \n   \n   local filename \n   if needUnloadToFile then filename = getFilename() end\n   if (not needUnloadToFile) or filename then\n      local pageNumbers = preparePagesNums(pageNumsStr)   -- подготовка\n      local questContent = getQuestContent(pageNumbers)   -- получение содержимого страниц\n      unloadQuest(questContent, filename) -- непосредственно выгрузка\n   end\nend",
+        "instant": true,
+        "id": 19,
+        "go_to": [
+          "global current_id"
+        ]
+      },
+      {
+        "calculate": true,
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "instant": false,
+        "lua_do": "function lua_do()\nfunction unloadQuest(questContent, filename)\n   if filename then\n      local file, errorString = io.open(filename, \"w\" )\n      if not file then\n         local exception = native.showAlert(\"Ошибка\", \"File error: \" .. errorString, {\"ОК\"})\n      else\n         file:write(questContent)\n         io.close( file )\n         local mess = native.showAlert(\"Выгрузка завершена\", filename, {\"ОК\"})\n      end\n   else\n      pages[g.current_id].text = questContent\n   end\nend\nend",
+        "text": "Непосредственно выгрузка"
+      },
+      {
+        "calculate": true,
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "instant": false,
+        "lua_do": "function lua_do()\nfunction getFilename()\n   local path, fileName, ext\n   local fullFileName = pages[g.current_id].text .. \"\"\n   path,fileName = fullFileName:match(\"^%s*(.-)([^<s><s><s><s>/]*)$\")\n   if fileName then\n      ext = fileName:match(\"[^%.]*%.?(.*)$\")\n   end\n\n   local exception\n   if ext == \"txt\" then\n      local file, errorString = io.open(fullFileName, \"w\" )\n      if not file then\n         exception = native.showAlert(\"Ошибка\", \"Недопустимый путь к файлу. <s>\n File error: \" .. errorString, {\"ОК\"})\n      else\n         io.close( file )\n      end\n   else\n      fullFileName = nil\n      exception = native.showAlert(\"Ошибка\", \"Некорректное расширение файла. Загружаемый файл должен иметь расширение .txt\", {\"ОК\"})\n   end\n   return fullFileName\nend\nend",
+        "text": "Проверка имени файла"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction preparePagesNums(pageNumsStr)\n   local pageNumbers = {}\n   local startPage, endPage, num = -1\n   local startPageStr, endPageStr =\"\"\n   for numStr in utf8.gmatch(\" \" .. pageNumsStr .. \",\", \"(.-),\") do\n\n      -- если указан диапазон страниц, \n      if utf8.find(numStr, \"-\") then\n         startPageStr, endPageStr = utf8.match(numStr, \"(%d<plus>)-(%d<plus>)\")\n         startPage, endPage = -1\n         if startPageStr and endPageStr then\n            startPage = tonumber(startPageStr)\n            endPage = tonumber(endPageStr)\n         end\n\n         -- если удалось определить границы диапазона, добавляем в массив каждую из них\n         if startPage and endPage and startPage > 0 and endPage > startPage then\n            for i = startPage, endPage do\n               table.insert(pageNumbers, i)\n            end\n         end\n      else\n         -- отдельная страница\n         num = tonumber(numStr)\n         if num then table.insert(pageNumbers, num) end\n      end\n   end\n   return pageNumbers\nend\nend",
+        "calculate": true,
+        "text": "Определяем номера страниц, которые нужно выгружать\nаргумент - строка, содержащая номера и/или диапазоны страниц через запятую\n",
+        "id": 2
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction getQuestContent(pageNums)\n   local content = \"\"\n   local curPage = {}\n   local x = 1\n   local y = 1 \n   for i, curNum in ipairs(pageNums) do\n      curPage = pages[curNum]\n      if curPage then\n         content = unloadPage(content, curPage, x*100, y*100)\n         \n         if math.fmod(x, 10) == 0 then\n            y = y <plus> 1\n            x = 1\n         else\n            x = x <plus> 1\n         end\n      end\n   end\n   return content\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Перебор страниц и их поочерёдная выгрузка\nаргумент pageNums - массив чисел\n"
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nfunction unloadPage(resultText, currentPage, x, y)\n   if not currentPage then return end\n   -- начало новой страницы\n   if resultText ~= \"\" then\n      resultText = resultText .. endPageSeparator\n   end\n\n   -- номер страницы - в качестве заголовка\n   resultText = resultText .. newTitleSeparator .. currentPage.id .. \" <\" .. x .. \",\" .. y .. \">\" .. endTitleSeparator\n   \n   -- текст страницы\n   if unloadTabs then\n      resultText = resultText .. currentPage.text\n   else\n      resultText = resultText .. utf8.gsub (ltrim(currentPage.text), (newParagraphSeparator .. tab), newParagraphSeparator)\n   end\n   \n   -- кнопки\n   local buttons = currentPage.answers\n   for i, curButton in ipairs(buttons) do\n      resultText = resultText .. newParagraphSeparator .. newButtonSeparator .. curButton.text\n      -- ссылки на страницы, если надо\n      if unloadLinks then\n         resultText = resultText .. newLinkSeparator .. curButton.id\n      end\n      resultText = resultText .. endButtonSeparator\n   end\n\n   return resultText\nend\nend",
+        "calculate": true,
+        "id": 2,
+        "text": "Выгрузка одной страницы\nаргумент resultText - суммарное содержимое выгружаемых страниц\nаргумент currentPage - таблица выгружаемой страницы\nаргументы X и Y - координаты параграфа в Twine\n"
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу"
+      }
+    ]
+  }
+]

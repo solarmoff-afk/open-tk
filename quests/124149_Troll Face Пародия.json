@@ -1,0 +1,1010 @@
+[
+  {
+    "id": 1,
+    "text": " Автор: Северный Язычник.\n Жанр: Чёрный юмор.\n В основу квеста вложены насмешки над популярными темами и самой игрой.\n¤ Каждый уровень будет закрыт до тех пор, пока вы не пройдёте предыдущий.\n¤ Квест доступен только на Русском.\n¤ 10 уровней на данный момент.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Lvl 1",
+        "blackout": true
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 7,
+        "text": "Lvl 2",
+        "need": [
+          4
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 13,
+        "text": "Lvl 3",
+        "need": [
+          14
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 20,
+        "text": "Lvl 4",
+        "need": [
+          18
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 23,
+        "text": "Lvl 5",
+        "need": [
+          24
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 26,
+        "text": "Lvl 6",
+        "need": [
+          27
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 39,
+        "text": "Lvl 7",
+        "need": [
+          40
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 44,
+        "text": "Lvl 8",
+        "need": [
+          43
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 47,
+        "text": "Lvl 9",
+        "need": [
+          46
+        ]
+      },
+      {
+        "need_ever": true,
+        "blackout": true,
+        "id": 49,
+        "text": "Lvl 10",
+        "need": [
+          52
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Представте:\nПарень в машине стоит перед пешеходным переходом. На пешеходном очень медленно идёт бабушка.\n\n\n\n//////////////////////////////////////////////////////////////////////////////////////////////\n\n\n\n\n\n\n\n\n\n\n.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Коснуться машины"
+      },
+      {
+        "id": 4,
+        "text": "Провести в сторону бабушки"
+      },
+      {
+        "id": 5,
+        "text": "Ждать"
+      },
+      {
+        "id": 6,
+        "text": "Тыкнуть в бабку"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": " Парень подвёз на машине бабку и его посадили.\nУровень не пройден!\n\n\n\n\n//////////////////////////////////////////////////////////////////////////////////////////////\n\n\n\n\n\n\n\n\n\n\n.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 2,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": " Стая собак пробежала по зебре и перенесла бабушку. Парень проехал зебру, но у него кончился бензин!\nУровень пройден!\n\n\n\n\n\n\n\n//////////////////////////////////////////////////////////////////////////////////////////////\n\n\n\n\n\n\n.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": " Бабушка посмеялась, а парень превратился в ждуна.\n Уровень не пройден!\n\n\n\n\n\n\n//////////////////////////////////////////////////////////////////////////////////////////////\n\n\n\n\n\n\n\n.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 2,
+        "text": "Заново ~"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": " Бабка упала. Теперь парень никогда не переедет зебру.\nУровень не пройден!\n\n\n\n\n//////////////////////////////////////////////////////////////////////////////////////////////\n\n\n\n\n\n\n\n\n.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 2,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Представте: тролль летит на воздушном шаре и вдруг в нём образуется дыра!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Зашить"
+      },
+      {
+        "id": 9,
+        "text": "Не обращать внимания"
+      },
+      {
+        "id": 10,
+        "text": "Оторвать кусок ткани"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": " Дыра зашита, но тут появляется ещё одна!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Зашить"
+      },
+      {
+        "id": 12,
+        "text": "Выпрыгнуть"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": " Тролль грустно посмотрел на тебя.\nУровень не пройден!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 7,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": " Один кусок ткани оторван!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Порвать ещё"
+      },
+      {
+        "id": 14,
+        "text": "Взять второй кусок ткани"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": " Дыр становиться слишком много и ткань падает на тролля. Он задыхается.\nУровень не пройден!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 7,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": " Тролль разбился.\nУровень не пройден!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 7,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Представте: котёнок сидит на дереве, американец в костюме старается его достать. В одной руке чемодан. Русский тролль смотрит на него.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Помочь"
+      },
+      {
+        "id": 16,
+        "text": "Кинуть камень"
+      },
+      {
+        "id": 17,
+        "text": "Потрясти дерево"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Второй кусок ткани оторван! Тролль сделал себе крылья и улетел. Жалко, что врезался в самолёт.\nУровень пройден!\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": " Котёнок выцарапал троллю и американцу глаза, а сам убежал.\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 13,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": " Тролль выбил котёнку глаз и на него накинулась мать-кошка.\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 13,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": " Чемодан американца упал на землю.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Забрать чемодан"
+      },
+      {
+        "id": 19,
+        "text": "Трясти дальше"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": " Русский тролль забрал чемодан и деньги в нём. С ним не чего не произошло, я патриот.\nУровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": " На тролля падает кот.\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 13,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Представте: куча рыбок окружили сома.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Тронуть сома"
+      },
+      {
+        "id": 22,
+        "text": "Уменьшить экран"
+      },
+      {
+        "id": 21,
+        "text": "Тронуть рыбок"
+      },
+      {
+        "id": 21,
+        "text": "Увеличить экран"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": " Рыбы побили сома.\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 20,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": " Рыбы оказывается в аквариуме.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Дотронуться до рыб"
+      },
+      {
+        "id": 24,
+        "text": "Ещё уменьшить экран"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": " Представте: Средневековье. Ведьму хотят спалить на огне. Она привязана.",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Ждать"
+      },
+      {
+        "id": 25,
+        "text": "Нажать на ведьму"
+      },
+      {
+        "id": 25,
+        "text": "Провести вниз"
+      },
+      {
+        "id": 27,
+        "text": "Провести вверх",
+        "need": [
+          25
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": " Аквариум оказывается в телефоне у тролля.\nУровень пройден!\nУровень взят из игры Troll Face.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Ничего не вышло и ведьму сожгли.\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 23,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": " Представте: Игровой автомат. Две кнопки.\n Нужно 10 раз нажать на зелёную кнопку.",
+    "answers": [
+      {
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "id": 28,
+        "var_need": [
+          "нажатия",
+          -9
+        ],
+        "text": "Зелёная",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "нажатия",
+          0
+        ],
+        "id": 29,
+        "text": "Красная",
+        "var_need": [
+          "нажатия",
+          -9
+        ]
+      },
+      {
+        "id": 26,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": " Ведьма вырвалась и взлетела. В воздухе её подпалил дракон.\nУровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "text": "Красная",
+        "right_answer": true
+      },
+      {
+        "id": 28,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": " Вы проиграли!\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Уровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "text": "Красная",
+        "right_answer": true
+      },
+      {
+        "id": 31,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 33,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "text": "Красная",
+        "right_answer": true
+      },
+      {
+        "id": 32,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 34,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "text": "Красная",
+        "right_answer": true
+      },
+      {
+        "id": 33,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 35,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "text": "Красная",
+        "right_answer": true
+      },
+      {
+        "id": 34,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 36,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "right_answer": true,
+        "text": "Красная"
+      },
+      {
+        "id": 35,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 37,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "text": "Красная",
+        "right_answer": true
+      },
+      {
+        "id": 36,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Автомат",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Зелёная",
+        "var_add": [
+          "нажатия",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "right_answer": true,
+        "text": "Красная"
+      },
+      {
+        "id": 37,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Автомат.",
+    "answers": [
+      {
+        "id": 29,
+        "text": "Красная",
+        "left_answer": true
+      },
+      {
+        "id": 40,
+        "text": "Зелёная",
+        "right_answer": true
+      },
+      {
+        "id": 38,
+        "text": "У вас нажатий",
+        "comment": true,
+        "var_show": [
+          "нажатия"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": " Представте: Шоу \"Кто хочет стать миллионером\".\nВопрос: Тро-ло-ла-ро?\nУровень взят из игры Troll Face.",
+    "answers": [
+      {
+        "id": 41,
+        "text": "A: Ло-тро-ло",
+        "left_answer": true
+      },
+      {
+        "id": 41,
+        "right_answer": true,
+        "text": "B: Троля-ля"
+      },
+      {
+        "id": 41,
+        "text": "С: Ру-ру-тро",
+        "left_answer": true
+      },
+      {
+        "id": 41,
+        "right_answer": true,
+        "text": "D: Трулю-лю"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Уровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Вы уверены?",
+    "answers": [
+      {
+        "id": 42,
+        "text": "Да!"
+      },
+      {
+        "id": 43,
+        "text": "Покрутиться на стуле от счастья"
+      },
+      {
+        "id": 42,
+        "text": "Засунуть палец в рот зевающего тролля"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Вот это зря! Это неправильный ответ,\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 39,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "И вы правы!\nУровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": " Представте: Тролль стоит под зонтом, идёт дождь.",
+    "answers": [
+      {
+        "id": 45,
+        "text": "Нажать на асфальт"
+      },
+      {
+        "id": 45,
+        "text": "Удерживать на тролле"
+      },
+      {
+        "id": 45,
+        "text": "Уддерживать на зонте"
+      },
+      {
+        "id": 46,
+        "text": "Уддерживать вправо"
+      },
+      {
+        "id": 45,
+        "text": "Уддерживать влево"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Зонт улетел, тролль упал в лужу, асфальт свернулся,\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 44,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Ветер унёс тролля домой.\nУровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Найдите скрытое слово:\nhttps://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/20ВЕТЕРОК17/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg /uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png https://fs3.fotoload.ru/f/0818/1533893685/b6d5cb2dc3.jpg https://memepedia.ru/wp-content/uploads/2017/03/657px-Trollface_HD.png",
+    "answers": [
+      {
+        "id": 48,
+        "text": "Тролль"
+      },
+      {
+        "id": 48,
+        "text": "Сухарик"
+      },
+      {
+        "id": 48,
+        "text": "СУХАРИК"
+      },
+      {
+        "id": 48,
+        "text": "Хлеб"
+      },
+      {
+        "id": 52,
+        "text": "ВЕТЕРОК"
+      },
+      {
+        "id": 48,
+        "text": "ВетерОк"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Неверно!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 47,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Продолжите песню.\nХорошо быть пивоваром",
+    "answers": [
+      {
+        "id": 50,
+        "text": "Зарабатываешь мало"
+      },
+      {
+        "id": 51,
+        "text": "Получаешь пиво даром"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Не верно!\nУровень не пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      },
+      {
+        "id": 49,
+        "text": "Заново"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "Жизнь живёшь себе спокойно",
+    "answers": [
+      {
+        "id": 50,
+        "text": "Но не будешь с пивом стройный"
+      },
+      {
+        "id": 53,
+        "text": "Я огурчик малосольный!",
+        "need": [
+          50
+        ],
+        "need_ever": true
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "Уровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Уровень пройден!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "На главную"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "",
+    "answers": []
+  }
+]

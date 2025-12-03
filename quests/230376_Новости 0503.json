@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор AntiHero написал еще 128421 слов в квесте \"Кровавый Ворон\"."
+      },
+      {
+        "targetbookid": "206513",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Кровавый Ворон\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Плиточка написал еще 108373 слов в квесте \"Цикл\"."
+      },
+      {
+        "targetbookid": "230133",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Цикл\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Джефф написал еще 104216 слов в квесте \"Живая среди мёртвых.\"."
+      },
+      {
+        "targetbookid": "229796",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Живая среди мёртвых.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор rdj написал еще 103910 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "229862",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Alex Guch написал еще 102971 слов в квесте \"   \"."
+      },
+      {
+        "targetbookid": "205206",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"   \"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 21657 слов в квесте \"Королевство: Арена\"."
+      },
+      {
+        "targetbookid": "185967",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Королевство: Арена\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Дориан Грей написал еще 21250 слов в квесте \"Цена наших чувств\"."
+      },
+      {
+        "targetbookid": "185777",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Цена наших чувств\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Redpotato написал еще 19159 слов в квесте \"Фантик\"."
+      },
+      {
+        "targetbookid": "181628",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Фантик\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Bely71 написал еще 19051 слов в квесте \"Детройтский нуар\"."
+      },
+      {
+        "targetbookid": "185239",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Детройтский нуар\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор 19283755q написал еще 18521 слов в квесте \"S.T.A.L.K.E.R \"Апофеоз\"\"."
+      },
+      {
+        "targetbookid": "182189",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"S.T.A.L.K.E.R \"Апофеоз\"\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

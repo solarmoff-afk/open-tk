@@ -1,0 +1,2541 @@
+[
+  {
+    "id": 1,
+    "text": "Жанры: ужасы, хардкор\nАвтор: elChem (Артём Стрельников)<s>ufeff\n\n   Где вы окажетесь, когда откроете глаза?\n\n   Примите собственную слабость и тщательно обдумывайте каждый шаг. Разгадайте все тайны этого зловещего места. Выберитесь из кошмара сейчас или останетесь в нём навсегда.\n\nВерсия 1.31",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\nautorun = 26\ng.reloadFunctions = 3\nend",
+        "middle_answer": true,
+        "text": "Начать",
+        "id": 2,
+        "var_set": [
+          "autorun after",
+          3
+        ]
+      },
+      {
+        "id": 95,
+        "text": "Концовки",
+        "middle_answer": true
+      },
+      {
+        "id": 1,
+        "text": "    ",
+        "comment": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal text = g[\"invert text color\"]\n\nreturn text == 1 and \"Установить светлую тему\" or \"Установить тёмную тему\"\nend",
+        "comment": false,
+        "id": 1,
+        "text": "    ",
+        "lua_do": "function lua_do()\ng.lightMode = g.lightMode or 0\n\nif g.lightMode == 0 then\n\ng.background = nil\ng.theme = nil\ng[\"invert text color\"]  = 0\ng.lightMode = 1\nelse \ng.lightMode = 0\ng.once = 0\nend\nend\n",
+        "middle_answer": true
+      },
+      {
+        "id": 1,
+        "text": "Группа автора ВК",
+        "middle_answer": true,
+        "url": "https://vk.com/elchem_group"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn g.once ~= 1\nend",
+        "super_calculate": true,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": false,
+        "lua_do": "function lua_do()\ng.once = 1\n\ng[\"invert text color\"] = 1\ng.background = \"https://i.ibb.co/q0tbnBs/ne-Spi-night.jpg\"\ng.theme = \"https://i.ibb.co/6FbKsPx/ne-Spi-Page.jpg\"\nshowPage{id = 1, transition = instant}\n\nend"
+      },
+      {
+        "id": 103,
+        "text": "[скрыто]",
+        "lua_if": "function lua_if()\nreturn false \nend"
+      },
+      {
+        "id": 1,
+        "url": "https://vk.com/topic-188600635_49321167",
+        "text": "[Гайд и помощь в прохождении]",
+        "left_answer": true
+      },
+      {
+        "id": 1,
+        "text": "[Авторская интерпретация сюжета]",
+        "right_answer": true,
+        "url": "https://vk.com/wall-188600635_212"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "   Элли не проснулась, а словно вышла из оцепенения. В голове пульсировала единственная мысль: \"Нужно выбраться отсюда как можно скорее!\". Девушка вздрогнула и с трудом открыла глаза, хотя её сознание всё ещё было заполнено ужасающими видениями. Тело ныло и гудело, густой воздух на каждом вдохе вызывал острую боль в груди.\n   \"Главное, что этот кошмар закончился\", – фальшиво бодрым голосом сказала Элли вслух и закашлялась.\n   Она лежала в одной ночной рубашке среди разного тряпья, словно в гнезде. Со всех сторон из кромешного мрака доносились еле уловимые шаркающие звуки. Элли безуспешно отгоняла тревожную мысль, что настоящий кошмар для неё только начинается.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Каждое действие и перемещение увеличивает усталость\nНачальный уровень усталости 5/20\nНачальный уровень паники 1:3\nПри достижении макс. паники происходит отключка, после этого минимальная усталость увеличивается на 3\nВо время отключки демон совершает диверсию в комнате нахождения и выводит Элли в коридор (или остаётся в убежище, если сама легла отдыхать, тогда может увеличить панику, если заранее не устранить 2-3 возможные причины)\nКоридор, по 2 двери на участок, перемещение между участками тоже увеличивает усталость.\nЕсли усталость на макс — происходит отключка, демон совершает диверсию\n\nКоридор: при отключке может совершить диверсию в любой открытой комнате. на каждом участке нужна особенность!\n\nЛегенда о Звере: Говорят, когда-то Зверь был прекрасным юношей. Он отдал свою душу, чтобы спасти возлюбленную от смертельной болезни. Узнав об этом девушка пыталась несколько раз покончить с собой, но каждый раз безуспешно. Тогда она пошла на сделку с тёмными силами и приютила в своей душе то, что осталось от юноши. С тех пор он стал её проклятием, Зверем. И  вечность им не будет покоя, осквернивших свои души.\n\n1 участок: \n• начальная комнате, \"убежище\". Диверсии здесь не отражаются на финале\n• сбоку — заваренная листами металла дверь, со следами вмятин. не доступна. Если внимательно осмотреть, видно, что вмятины изнутри\n• напротив — комнате с газом, дверь закрыта на ключ (ключ ..). При диверсии начинается пожар, который можно потушить огнетушителем. в комнате окно с решёткой, после взрыва решётка выбита, через окно — прыжок веры, выход\n•\n",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.inFire = room.oven.inFire or 0\nroom.electro = room.electro or {}\nroom.electro.water = room.electro.water or 1\nroom.shelter = room.shelter or {}\nroom.shelter.lamp = room.shelter.lamp or 0\n\nlocal a = g.current_id\nreturn (\n(a == 7  and room.shelter.lamp ~= 1)\nor\na == 6 or a == 5 or (a == 33 and room.oven.inFire ~= 1) or a == 10 or (a == 12 and room.electro.water ~=1) or a == 13 or a == 14 or a == 15 or a == 16 or a == 17 ) and g.current_id ~= 1\nend",
+        "super_calculate": false,
+        "id": 48,
+        "text": "К рану с предметами",
+        "run": [
+          48
+        ],
+        "calculate": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn g.current_id ~= 1\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\ndrugEffect = drugEffect or {}\ndrugEffect.type = drugEffect.type or \"none\"\n\nif inHands == \"candle\" and candle.stat == 2 then\n  candle.time = (candle.time or 20) - 1\nend\n\nif inHands == \"candle\" and candle.stat == 2 and candle.time < 1 and g.current_id ~= 25 then\n  dialog({header = \"Свеча погасла!\", text = \"Пламя почти полностью оплавившейся свечи задрожало и угасло. Вряд ли удастся использовать этот огарок хоть как-то.\", answers = {{text = \"Дальше\", pressListener = function() candle.stat = 1 candle.time = 20\nshowPage {id = g.current_id, transition = \"instant\"} hideDialog() end}}\n   })\nend\n\nscreamerCD = (screamerCD or 0) < 1 and 0 or screamerCD - 1\n\n\nfunction itemTextF(item) -- function itself\nreport = \"Start: <plus>\"\n  -- table with all the data should already be  generated elsewhere\n  if itemText and type(itemText) == \"table\" and itemText.CT and type(itemText.CT) == \"table\" and itemText.MT and type(itemText.MT) == \"table\" then -- check if all necessory tables do exist\n    if itemText.CT[item] and type(itemText.CT[item]) == \"table\" and itemText.MT[item] and type(itemText.MT[item]) == \"table\" then-- check if tables do contain fields for required item\n      local a = itemText.CT[item]\n      if not a[1] then\n        itemText.CT[item] = itemText.MT[item]\n        a = itemText.CT[item]\n      end\n      local b = math.random(#a)\n      local text = a[b]\n      table.remove(itemText.CT[item], b)\n      return text\n    else\n      return \"Error: wrong item\"\n    end\n  else\n    return \"Error: no initial tables\"\n  end\nend\n\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn  g.current_id ~= 1\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\nlocal test = \"\"\nif screamerCD < 1 then\n for k,v in pairs (screamer) do\n  if v.avail == 1 then\n    local r = (v.chanceIncrease * 0.2 * math.random(10) )\n    v.chance = v.chance <plus> r \n    test = test .. \"<s>\n\" .. k .. \" chance has increased for \"..  r .. \" and now compares:\"  .. v.chance\n  end\n end\nelse test = \"CoolDown is: \" .. screamerCD\nend\na_a_test = test\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "id": 48,
+        "lua_if": "function lua_if()\nscreamerCD = (screamerCD or 0) < 1 and 0 or screamerCD\nreturn g.current_id ~= 21 and g.current_id ~= 22 and g.current_id ~= 1\nend",
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\nscreamerCD = screamerCD or 0\n\nfunction tabLenght(T)\n  local c = 0\n  for _ in pairs(T) do\n   c = c <plus> 1\n  end\n  return c\nend\n\nif g.current_id ~= 25 then\n  local c = 0\n  local d = \"\"\n  for k,v in pairs (screamer) do\n   if v.ignoreCD == 1 or (v.ignoreCD == 0 and screamerCD < 1) then\n   if v.chance > 99 then\n    if v.avail == 1 and v.chance > c then\n     c = v.chance\n     d = k\n    end\n   end\n  end\n  end\n if d ~= \"\" then\n  screamer[d].chance = 0\n  screamerCD = 13\n  dialog({header = \"Вдруг!\", text = screamer[d].text, answers = {{text = \"Дальше\", pressListener = function() panic = panic <plus> screamer[d].panic showPage {id = g.current_id, transition = \"instant\"} hideDialog() end}}\n   })\n end\nend\n\n\nend",
+        "calculate": true,
+        "text": "screamer lounch",
+        "merge": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n\nif g.current_id == 94 then\n   if g[\"invert text color\"] == 1  then\n     g.theme = \"https://i.ibb.co/s5FvRP9/ne-Spi-day.jpg\"\n     g.background = \"https://i.ibb.co/s5FvRP9/ne-Spi-day.jpg\"\n     g[\"invert text color\"] = 0\nshowPage{id = g.current_id, transition = instant}\n   end\n\nelseif g[\"invert text color\"] == 0 and g.lightMode == 0 then\ng[\"invert text color\"] = 1\ng.background = \"https://i.ibb.co/q0tbnBs/ne-Spi-night.jpg\"\ng.theme = \"https://i.ibb.co/6FbKsPx/ne-Spi-Page.jpg\"\nshowPage{id = g.current_id, transition = instant}\nend\nend",
+        "calculate": false,
+        "id": 3,
+        "text": "Оформление"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn drugEffect and g.current_id ~= 24  and g.current_id ~= 1\nend",
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "lua_do": "function lua_do()\ndrugEffect = drugEffect or {}\ndrugEffect.type = drugEffect.type or nil\ndrugEffect.time = drugEffect.time or 0\nexhausting = exhausting or 5\n\n  if drugEffect.type == \"exhausting\" then\n    exhausting = exhausting > 5 and exhausting - 1 or exhausting\n    drugEffect.time = exhausting > 5 and drugEffect.time - 1 or drugEffect.time\n  elseif drugEffect.type == \"panic\" then\n    panic = (panic or 3) - 1\n    drugEffect.time = drugEffect.time - 1\n  end\n\nexhausting = exhausting < 1 and 0 or exhausting\npanic = panic < 1 and 0 or panic\n\ndrugEffect.type = drugEffect.time > 0 and \ndrugEffect.type or \"none\"\nend",
+        "text": "Действие таблетки"
+      },
+      {
+        "lua_text": "function lua_text()\nlocal text = \"\"\ndrugEffect = drugEffect or {}\ndrugEffect.type = drugEffect.type or nil\ndrugEffect.time = drugEffect.time or 0\n\nif drugEffect.time > 0 then\n  if drugEffect.type == \"exhausting\" and drugEffect.time > 5 then\n    text = \"<s>\n   Благодаря действию таблетки Элли ощущала прилив сил. Но долго ли это продлится?\"\n  elseif drugEffect.type == \"exhausting\" and drugEffect.time < 6 then\n    text = \"<s>\n   Действие таблетки всё ещё придавало Элли силы, но эффект становился всё слабее.\"\n  elseif drugEffect.type == \"panic\" and drugEffect.time > 3 then\n    text = \"<s>\n   Действие таблетки помогало Элли сохранять спокойствие. Но долго ли это продлится?\"\n  elseif drugEffect.type == \"panic\" and drugEffect.time < 4 then\n    text = \"<s>\n   Действие таблетки всё ещё воодушевляло Элли, но эффект становился всё слабее.\"\n  end\nend\nreturn text\nend",
+        "id": 3,
+        "text": "Текст действия таблетки",
+        "lua_if": "function lua_if()\nreturn g.current_id == 24\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn g.current_id ~= 1\nend",
+        "super_calculate": false,
+        "id": 48,
+        "text": "Калкулейт с присвоением текущей локации",
+        "lua_do": "function lua_do()\ncurrentPosition = \"not defined\"\ncurrentPosition = (g.current_id == 5 and \"cor1\")\nor (g.current_id == 7 and \"shelter\")\nor (g.current_id == 33 and \"oven\")\nor (g.current_id == 6 and \"cor2\")\nor (g.current_id == 10 and \"cor3\")\nor (g.current_id == 13 and \"cor4\")\nor (g.current_id == 12 and \"electro\")\nor (g.current_id == 14 and \"water\")\nor (g.current_id == 15 and \"drug\")\nor (g.current_id == 16 and \"store\")\nor (g.current_id == 17 and \"magic\")\nor (g.current_id == 24 and \"moving\")\nor currentPosition\n\n\n\nend",
+        "calculate": true
+      },
+      {
+        "lua_if": "function lua_if()\npanic = panic or 1\nexhausting = exhausting or 5\nexhaustingMin = exhaustingMin or 5\nreturn ((panic > 4 or exhausting > 19) and g.current_id ~= 24 and g.current_id ~= 25 and exhaustingMin < 20 ) and g.current_id ~= 1\nend",
+        "super_calculate": false,
+        "id": 26,
+        "text": "Запуск диалога для отключки не во время перехода",
+        "lua_do": "function lua_do()\nlocal h = (panic > 4 and \"Паника!\") or (exhausting > 19 and \"Полное истощение!\") or \"Системное сообщение\"\nlocal targetPage = h == \"Системное сообщение\" and g.current_id or 25\n\nlocal a = (panic > 4 and \"Элли начала задыхаться от застрявшего в горле крика ужаса. С её губ не сорвалась не звука, только оглушительно отбивало бешеный ритм сердце. Всё тело девушки было скованно невидимой хваткой беспросветного отчаяния.\") or (exhausting > 19 and \"Каждое мгновение отнимало у Элли всё больше сил. Она чувствовала, что в любой момент может упасть, а вот подняться уже не сможет.\") or \"Возобновление работы квеста.\"\nlocal text = \"\"\n\nif (panic > 4 or exhausting > 19) and g.current_id ~= 24 and g.current_id ~= 25 and exhaustingMin < 20 then\ndialog({\n  header = h,\n  text = a,\n  answers = {\n     {text = \"Дальше\",\npressListener = function() showPage{id = 25} hideDialog()\n     end}\n      }\n       })\nend\nend",
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   С трудом поднявшись на ноги и стянув обмотавшуюся вокруг шеи тряпку, Элли ещё раз огляделась. Теперь она смогла заметить узкую жёлтую полоску на полу в нескольких метрах от себя – свет, пробивающийся через щель под дверью.\n   Девушка нерешительно направилась в сторону двери, с трудом, будто в воде, переставляя ноги. Она споткнулась, угодила босыми ступнями во что-то липкое, и зашлёпала по полу дальше. Наконец, добравшись до цели и нащупав холодную ручку, Элли потянула дверь на себя. Та не поддалась.\n   Стараясь сохранять спокойствие, девушка с силой толкнула дверь. Опять ничего.\n   \"Нет, нет, нет, нет, – затараторила Элли, вновь и вновь дёргая во все стороны злосчастную дверную ручку дрожащими руками, – пожалуйста, откройся!\"\n  Шорохи сзади стали громче.",
+    "answers": [
+      {
+        "id": 27,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nbag = bag or {}\ncor1 = cor1 or {}\n  if inHands == \"bag\" then\n    if goTo == 5 then\n      cor1.bagTrace = 1\n    elseif goTo == 6 then\n      cor2.bagTrace = 1\n    elseif goTo == 10 then\n      cor3.bagTrace = 1\n    elseif goTo == 13 then\n      cor4.bagTrace = 1\n    end\n  end\nend",
+        "text": "Коридор, первая секция\n",
+        "id": 5,
+        "calculate": true
+      },
+      {
+        "id": 5,
+        "text": "Динамическое описание состояния первой секции коридора (включая оставленные предметы)",
+        "lua_text": "function lua_text()\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.close = room.oven.close or 0\nlocal text = \"Эта часть коридора оканчивалась дверью, обшитой толстыми металлическими листами. По обеим сторонам от неё находились друг напротив друга две другие двери. Одна, ведущая в спальню, осталась незапертой, вторая \" .. \n((room.oven.close == 1 and \"была закрыта.\") or (room.oven.close == 0 and \"была приоткрыта.\") or \"была проломлена в том месте, где раньше находился замок.\") .. \n\"<s>\n   Обшарпанные стены в коридоре видимо когда-то были белыми, а теперь их пожелтевшая поверхность покрылась трещинами и подтёками. Грязный плиточный пол скрывался под слоем мусора.\"\n\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nif lom.location == \"cor1\" then\n--text = text .. \" Возле одной из стен валялся небольшой ломик.\"\nend\n\nif bag.location == \"cor1\" then\n-- text = text .. \" Здесь же лежал немного перекосившийся мешок, вокруг которого уже натекла небольшая лужица.\"\nend\n\nmop = mop or {}\nmop.location = mop.location or \"store\"\nif mop.location == \"cor1\" then\n--  text = text .. \" К стене возле двери была прислонена старая швабра.\"\nend\n\nkeys = keys or {}\nkeys.location = keys.location or \"magic\"\nif keys.location == \"cor1\" then\n--  text = text .. \" В центре расчищенного от мусора участка лежала связка с множеством ключей.\"\nend\n\naxe = axe or {}\naxe.location = axe.location or \"electro\"\nif axe.location == \"cor1\" then\n--  text = text .. \" Стоящий у стены топор с длинной красной ручкой сильно выделялся на общем пыльно-сером фоне.\"\nend\n\nextinguisher = extinguisher or {}\nextinguisher.location = extinguisher.location or \"electro\"\nextinguisher.wiped = extinguisher.wiped or 0\nif extinguisher.location == \"cor1\" then\n--  text = text .. (extinguisher.wiped == 0 and \" Обмотанный несколькими тряпками огнетушитель\" or \" Огнетушитель\") .. \"лежал всего в нескольких шагах от Элли.\"\nend\n\nif ladder.location == currentPosition and currentPosition ~= \"electro\" then\n--  text = text .. \" К одной из стен была прислонена невысокая лестница.\"\nend\n\ncor1.bagTrace = cor1.bagTrace or 0\n   if cor1.bagTrace == 1 then\n   --  text = text .. \" Следы вязкой красной жидкости, оставленные мешком, покрыли пол грязными разводами.\"\n   end\n \n-- Добавить описание всех предметов (для огнетушителя два состояния), скопировать в давние секции коридора (подправить косметически)\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "Идти вперёд по коридору",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\ngoTo = 6\ngoFrom = 5\nsegment = 2\nmoveDirect = 1\nweight = weight or 0\ndrugEffect = drugEffect or {}\ndrugEffect.type = drugEffect.type or nil\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    \n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\n  end\n\nend"
+      },
+      {
+        "id": 24,
+        "text": "Пройти в спальню",
+        "lua_do": "function lua_do()\ngoTo = 7\ngoFrom = 5\ninShelter = 1\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "left_answer": true
+      },
+      {
+        "id": 24,
+        "text": "Подойти ко второй двери",
+        "lua_do": "function lua_do()\ngoTo = 8\ngoFrom = 5\n\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "right_answer": true
+      },
+      {
+        "id": 18,
+        "text": "Подойди к укреплённой двери",
+        "lua_do": "function lua_do()\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 5,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nplotCount = plotCount or 0\nif plotCount == 0 then\n  plotCount = 1\ndialog({header = \"Голос!\", text = \"   <s><s>\"Есть сделки, которые не разорвать, – тихий шёпот зазвучал, казалось, прямо у Элли в голове. – И вот ты снова здесь! Но можно наконец сдаться: просто закрой глаза – и всё закончится. Зверь придёт за тобой. Пока ты спишь, он тут хозяин.<s><s>\"<s>\n   <s><s>\"Сделка? Зверь?<s><s>\", – Элли абсолютно ничего не понимала. У неё не было сил удивляться или сомневаться в услышанном, но теперь она была твёрдо уверена – нужно выбираться отсюда как можно скорее. И постараться не закрывать глаза...\", answers = {{text = \"Дальше\", pressListener = function()\npanic = panic <plus> 1\nshowPage {id = g.current_id, transition = \"instant\"} hideDialog() end}}\n   })\nelseif plotCount > 0 and plotCount < 13 then\nplotCount = plotCount <plus> 1\nelseif plotCount == 13 and exhausting < 14 then\nplotCount = 14\ndialog({header = \"Голос!\", text = \"   Таинственный голос вновь возник в сознании Элли и прошипел: <s><s>\"Ты слабеешь, а Зверь становится сильнее. И голоднее. Успеешь спрятаться? Раз, два, три – беги!<s><s>\"<s>\n   За спиной девушки раздались уже вполне реальные шаркающие звуки. Времени обернуться и как следует оценить ситуацию не было. Инстинкт подсказывал Элли единственный вариант.\", answers = {{text = \"Бежать!\", pressListener = function()\nif inHands ~= \"free\" then\nvars[inHands].location = \"cor1\"\ninHands = \"free\"\nweight = 0\nend\nshowPage {id = 90} hideDialog() end}}\n   })\nend\n\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "   В этой части коридора было всего две расположенные друг напротив друга двери: одна открытая нараспашку, другая закрытая. На второй двери виднелось небольшое окошко с решёткой на уровне чуть выше лица Элли. Возле той же стены копошились несколько крупных крыс.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Идти вперёд по коридору",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nviz11 = 0\ngoTo = 10\ngoFrom = 6\nmoveDirect = 1\nsegment = 3\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nviz11 = viz11 or 0\nreturn viz11 == 0\nend",
+        "id": 11,
+        "text": "Подойти к закрытой двери",
+        "lua_do": "function lua_do()\nviz11 = 1\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "left_answer": true
+      },
+      {
+        "id": 12,
+        "text": "Подойти к открытой двери",
+        "lua_do": "function lua_do()\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "right_answer": true
+      },
+      {
+        "id": 24,
+        "text": "Идти назад по коридору",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nviz11 = 0\ngoTo = 5\ngoFrom = 6\nmoveDirect = 0\nsegment = 1\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 5,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal text = \"\"\ncor2 = cor2 or {}\ncor2.water = cor2.water or 1\n\ntext = text .. (cor2.water == 1 and \" Часть пола вдоль стены и у открытой двери была залита водой.\" or \"\")\n\ncor2.waterMessage = cor2.waterMessage or 0\nif cor2.waterMessage == 1 then\ntext = text .. \" Воды на полу больше не было, только высохшие разводы на пыльной поверхности напоминали о затоплении.\"\ncor2.waterMessage = 0\nend\n\n\ncor2.bagTrace = (inHands == \"bag\" or bag.location == \"cor2\") and 1 or (cor2.bagTrace or 0)\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "   Элли находилась в спальне. На всякий случай дверь была заперта на засов. Поможет ли он в случае опасности? Девушка старалась не думать об этом.\n   ",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nroom.shelter.sleepAvail = room.shelter.sleepAvail or 1\nweight = weight or 0\nexhausting = exhausting or 5\nexhaustingMin = exhaustingMin or 5\npanic = panic or 1\nreturn not (exhausting > (15 <plus> exhaustingMin)/2 or exhausting > 15 ) and  room.shelter.sleepAvail == 1\nend",
+        "id": 7,
+        "text": "Нет нужды отдыхать при низком истощении",
+        "middle_answer": true,
+        "comment": true
+      },
+      {
+        "lua_if": "function lua_if()\nroom.shelter.sleepAvail = room.shelter.sleepAvail or 1\nexhausting = exhausting or 5\nexhaustingMin = exhaustingMin or 5\npanic = panic or 1\nreturn (exhausting > (15 <plus> exhaustingMin)/2 or exhausting > 15 ) and room.shelter.sleepAvail == 1 and inHands ~= \"free\"\nend",
+        "middle_answer": true,
+        "text": "Невозможно отдохнуть, пока в руках что-то есть",
+        "comment": true,
+        "id": 7
+      },
+      {
+        "comment": false,
+        "id": 97,
+        "text": "Освободить руки",
+        "lua_do": "function lua_do()\nvars[inHands].location = \"shelter\"\ninHands = \"free\"\nweight = 0\nend",
+        "lua_if": "function lua_if()\nroom.shelter.sleepAvail = room.shelter.sleepAvail or 1\nexhausting = exhausting or 5\nexhaustingMin = exhaustingMin or 5\npanic = panic or 1\n-- return (exhausting > (15 <plus> exhaustingMin)/2 or exhausting > 15 ) and room.shelter.sleepAvail == 1 and inHands ~= \"free\"\nend"
+      },
+      {
+        "id": 9,
+        "text": "Отдохнуть",
+        "lua_if": "function lua_if()\nroom.shelter.sleepAvail = room.shelter.sleepAvail or 1\nweight = weight or 0\nexhausting = exhausting or 5\nexhaustingMin = exhaustingMin or 5\npanic = panic or 1\nreturn (exhausting > (15 <plus> exhaustingMin)/2 or exhausting > 15 ) and weight == 0 and room.shelter.sleepAvail == 1 and inHands == \"free\"\nend",
+        "lua_do": "function lua_do()\nscreamerCD = 0\nend"
+      },
+      {
+        "id": 24,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\ngoTo = 5\ngoFrom = 7\ninShelter  = 0\n\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 7,
+        "text": "Вариативное описание комнаты",
+        "lua_text": "function lua_text()\nlocal text = \"\"\nbag = bag or {}\nbag.location = bag.location or \"shelter\"\nroom = room or {}\nroom.shelter = room.shelter or {}\nroom.shelter.lamp = room.shelter.lamp or 0\nroom.shelter.bag = room.shelter.bag or 0\nroom.shelter.bag = bag.location == \"shelter\" and 0 or room.shelter.bag\nroom.shelter.bugs = room.shelter.bugs or 0\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nmop = mop or {}\nmop.location = mop.location or \"store\"\n\nif room.shelter.lamp == 1 and inHands == \"candle\" and candle.stat == 2 then\nroom.shelter.lamp = 2\nelseif room.shelter.lamp == 2 and inHands == \"candle\" and candle.stat == 2 then \nroom.shelter.lamp = 2\nelseif room.shelter.lamp == 0 then\nelseif room.shelter.candleMessage ~= 0 then\nelse room.shelter.lamp = 1\nend\n\nlocal a = (exhausting > ((15 <plus> exhaustingMin)/2 or exhausting > 15) and \"Гнездо из тряпок казалось таким уютным в этом тревожном месте, что Элли вымученно улыбнулась. Возможность короткого отдыха с лихвой пересиливала все тревоги и опасения девушки.\" or \"Гнездо из тряпок уже не казалось таким уж странным. Возможно, здесь можно будет немного отдохнуть, если станет совсем тяжело. Девушка искренне надеялась, что до этого не дойдет.\")\n\nlocal b = (room.shelter.lamp == 0 and \"Тусклый свет мерцающей лампы не мог полностью развеять притаившуюся в углах и среди обломков тьму. В этом освещении \" or (room.shelter.lamp ==1 and \"Без источника света тьма почти полностью поглотила комнату. В царящем мраке \") or \"Неровный свет свечи не мог полностью развеять осевшую в углах и среди обломков тьму. В царящем полумраке \")\n\nlocal c = (room.shelter.lamp == 1 and room.shelter.bag == 0 and \"невозможно было разглядеть валяющийся где-то совсем рядом мешок, содержимое которого так привлекало насекомых.\") or (room.shelter.lamp ~= 1 and room.shelter.bag == 0 and \"валяющийся в высохшей лужице мешок не выглядел особо пугающим, даже несмотря на копошащихся вокруг насекомых.\") or (room.shelter.lamp == 1 and room.shelter.bag == 1 and \"невозможно было разглядеть высохшую лужицу, в которой раньше стоял мешок.\") or (room.shelter.lamp ~= 1 and room.shelter.bag == 1 and \"высохшая лужица, в которой раньше стоял мешок, \" .. (room.shelter.bugs == 0 and \"а теперь просто копошились оставшиеся насекомые, \" or \"\") .. \"казалась особенно тёмной и неприятной.\")\nlocal d = lom.location == \"shelter\" and \" На полу возле стены поблёскивал небольшой ломик.\" or \"\"\nlocal e = (mop.location == \"shelter\" and \" К стене прямо у двери была прислонена швабра.\") or (mop.location == \"inHands\" and\" Девушка держала в руках старую швабру.\") or \"\"\n\nlocal f = doll.location ==  \"ready\" and \" В гнезде из тряпок была спрятана самодельная кукла.\" or \"\"\n\ntext = a .. \"<s>\n   \" .. b .. c .. d .. e .. f\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 7,
+        "text": "Описание убежища (стандартное)\nКуча тряпок, на которой можно отдохнуть. Голова обезьяны, если не убрать в мешок, то после отдыха оказывается прямо перед глазами, большой плюс к панике. Мерцающая лампа выхватывает какой-то силуэт и гаснет, большой плюс к панике, после этого без свечи нельзя отдыхать",
+        "need": 1000,
+        "comment": true
+      },
+      {
+        "id": 29,
+        "text": "Вынести мешок из комнаты",
+        "lua_if": "function lua_if()\nroom = room or {}\nroom.shelter = room.shelter or {}\nroom.shelter.bag = room.shelter.bag or 0\nroom.shelter.bag = bag.location == \"shelter\" and 0 or room.shelter.bag\nreturn room.shelter.bag == 0 and room.shelter.lamp ~= 1 and inHands == \"free\"\nend",
+        "lua_do": "function lua_do()\nweight = 2\nroom.shelter.bag = 1\ninShelter = 0\n\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 30,
+        "text": "Вымести насекомых из комнаты",
+        "lua_if": "function lua_if()\nmop = mop or {}\nmop.location = mop.location or 0\nreturn room.shelter.bag == 1 and mop.location == \"inHands\" and room.shelter.bugs == 0\nend",
+        "lua_do": "function lua_do()\ninShelter = 0\nroom.shelter.bugs = 1\nend"
+      },
+      {
+        "id": 56,
+        "text": "Обмотать огнетушитель тряпками",
+        "lua_if": "function lua_if()\nextinguisher = extinguisher or {}\nextinguisher.location = extinguisher.location or \"electro\"\nextinguisher.wiped = extinguisher.wiped or 0\nreturn extinguisher.location == \"inHands\" and extinguisher.wiped == 0\nend"
+      },
+      {
+        "id": 85,
+        "text": "Сжечь куклу",
+        "lua_if": "function lua_if()\nreturn inHands == \"candle\" and doll.location == \"ready\"\nend",
+        "lua_do": "function lua_do()\nroom.shelter.sleepAvail = 0\nend"
+      },
+      {
+        "id": 86,
+        "text": "Сжечь фигурку",
+        "lua_if": "function lua_if()\nidolTrue = idolTrue or {}\nidolTrue.location = idolTrue.location or \"hiden\"\nreturn inHands == \"candle\" and idolTrue.location == \"ready\"\nend",
+        "lua_do": "function lua_do()\nroom.shelter.sleepAvail = 0\nend"
+      },
+      {
+        "id": 98,
+        "text": "Оставить свечу здесь",
+        "lua_if": "function lua_if()\nreturn inHands == \"candle\"\nend",
+        "lua_do": "function lua_do()\nroom.shelter.lamp = 2\nroom.shelter.candleMessage = 3\ninHands = \"free\"\ncandle.location = \"shelter\"\nweight = 0\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n\nroom.shelter.candleMessage = room.shelter.candleMessage or 0\n\nroom.shelter.candleMessage = room.shelter.candleMessage > 1 and room.shelter.candleMessage - 1 or room.shelter.candleMessage\n\nif room.shelter.candleMessage == 1 then\nroom.shelter.candleMessage = 0\ncandle.stat = 1\nroom.shelter.lamp = 1\n\ndialog({header = \"Свеча погасла!\", text = \"Пламя почти полностью оплавившейся свечи задрожало и угасло, а помещение вновь погрузилось во тьму. Вряд ли удастся даже найти этот огарок среди прочего мусора на полу.\", answers = {{text = \"Дальше\", pressListener = function() candle.stat = 1 candle.time = 20\nshowPage {id = g.current_id, transition = \"instant\"} hideDialog() end}}\n   })\n\nend\n\nend",
+        "super_calculate": false,
+        "id": 7,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "id": 101,
+        "text": "Положить куклу в гнездо из тряпок",
+        "lua_if": "function lua_if()\nreturn doll.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\ndoll.location = \"ready\"\ninHands = \"free\"\nweight = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "   Элли остановилась перед дверью, некоторое время не решаясь что-то предпринять. ",
+    "answers": [
+      {
+        "id": 34,
+        "text": "Открыть дверь ключом",
+        "lua_if": "function lua_if()\nkeys = keys or {}\nkeys.location = keys.location or 0\nreturn (room.oven.close == 1 or room.oven.close == 0) and keys.location == \"inHands\"\nend",
+        "lua_text": "function lua_text()\nreturn room.oven.close == 1 and  \"Открыть дверь ключом\" or room.oven.close == 0 and \"Запереть дверь ключом\"\nend"
+      },
+      {
+        "id": 35,
+        "text": "Сломать дверь топором",
+        "lua_if": "function lua_if()\naxe = axe or {}\naxe.location = axe.location or 0\nreturn room.oven.close == 1 and axe.location == \"inHands\"\nend"
+      },
+      {
+        "id": 36,
+        "text": "Выломать дверь плечом",
+        "lua_if": "function lua_if()\naxe = axe or {}\naxe.location = axe.location or 0\nreturn room.oven.close == 1 and axe.location ~= \"inHands\" and room.oven.failDoor ~= 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\nroom = room or {}\nroom.oven = room.oven or {}\ncandle = candle or { }\ncandle.location = candle.location or \"magic\"\ncandle.stat = candle.stat or 2\n\ngoTo = 33\ngoFrom = 8\n   if candle.location == \"inHands\" then\n      candle.stat = 1\n      room.oven.tryEnterWithCandle = (room.oven.tryEnterWithCandle or 0) <plus> 1\n      room.oven.candleOffMessage = 1\n   end\n\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\n\nend",
+        "text": "Войти в комнату",
+        "lua_if": "function lua_if()\nreturn room.oven.close == 0 or room.oven.close == 2\nend",
+        "id": 24
+      },
+      {
+        "id": 5,
+        "text": "Отойти от двери",
+        "lua_do": "function lua_do()\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1\n  else\n    exhausting = exhausting <plus> 1\n  end\n\nend"
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nkeys = keys or {}\nkeys.location = keys.location or 0\nlocal text = (room.oven.close == 1 and keys.location ~= \"inHands\" and ( \"Наконец, девушка легонько подёргала ручку. Заперто.<s>\n   <s><s>\"Довольно хлипкая...<s><s>\" – оценила Элли состояние двери, решив для себя, что если не удастся отыскать ключ, то можно будет попробовать просто сломать её.\" .. (room.oven.failDoor == 1 and \".. Чем-то покрепче, чем плечо.\" or \"\"))) or\n(room.oven.close == 1 and keys.location == \"inHands\" and \"Наконец, девушка легонько подёргала ручку. Заперто.<s>\n   <s><s>\"Хорошо, что есть ключи и не нужно пытаться использовать грубую силу...<s><s>\" – обрадовалась Элли.\") or\n(room.oven.close == 0 and \"Наконец, девушка потянула за ручку. Дверь открылась с неприятным скрипом и Элли замерла на пороге, сомневаясь, как кошка, действительно ли она хочет войти.\") or (room.oven.close == 2 and \"Проломленная дверь идеально дополняла общую атмосферу заброшенного коридора. Вид сдавшейся под натиском грубой силы конструкции поднял волну тревоги в душе Элли, напомнив о её полной беззащитности и ненадежности любых укрытий.\")\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.close = room.oven.close or 1\npanic = (panic or 1) <plus> (room.oven.close == 2 and 1 or 0)\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 8,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "   Неуклюже пристроившись в груде холодных старых тряпок, Элли попыталась расслабить утомлённое тело. Тревожный отдых принёс облегчение: перед закрытыми глазами девушки перестали мелькать ужасающие видения, ноги и руки освободились от постоянного напряжения.\n   Когда Элли нашла в себе силы вновь открыть глаза, ей стало намного лучше.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nrestBonus = (restBonus or 0) <plus> 1\nroom.shelter.restCounter = 0\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\n\nroom = room or {}\nroom.shelter = room.shelter or {}\nroom.shelter.lamp = room.shelter.lamp or 0\nroom.shelter.bugs = room.shelter.bugs or 0\nroom.shelter.restCounter = room.shelter.restCounter or 0\n\nbag = bag or {}\nbag.location = bag.location or \"shelter\"\nlocal ba = bag.location == \"shelter\" and 1 or 0\n\nif room.shelter.restCounter == 0 then\n\nif room.shelter.lamp == 0 then\n-- скример: мерцающая лампа выхватывает какой-то силуэт и гаснет.\n-- Запуск диалога\n  screamer.lightOffShelter.avail = 1\n  screamer.insectInEar.avail = 0\n  room.shelter.lamp = 1\n  panic = (panic or 1)\nroom.shelter.restCounter = 1\n\nelseif room.shelter.bugs == 0 then\n-- скример: насекомые расползлись по комнате, одно из них заползло в ухо\nscreamer.insectInEar.avail = bag.location ~= \"shelter\" and 1 or screamer.insectInEar.avail\nroom.shelter.restCounter = 1\nend\n\nend\n\nroom.water.dryFloor = room.water.dryFloor or 0\nif room.water.dryFloor == 1 then -- just a bit water\n  room.water.dryFloor = 2 -- no water\n  cor3.water = 0\n  cor2.water = 0\n  room.electro.water = 0\n  cor2.waterMessage = 1\n  cor3.waterMessage = 1\nend\n\nif g.previous_id ~=9 then\nexhaustingMin = (exhaustingMin or 5)\nexhaustingMin = exhaustingMin < 1 and 0 or exhaustingMin\nexhausting = exhaustingMin\npanic = ba\nend\n\nif restBonus == 2 then\nrestBonus = 0\nexhaustingMin = exhaustingMin - 1\ndialog({header = \"Отдых\", text = \"После очередного отдыха в уютном гнёздышке Элли почувствовала себя лучше.\", answers = {{text = \"Дальше\", pressListener = function() exhausting = exhaustingMin showPage {id = g.current_id, transition = \"instant\"} hideDialog() end}}\n   })\nend\n\n\nend"
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\n\nbag = bag or {}\nbag.location = bag.location or \"shelter\"\nlocal a = (bag.location == \"shelter\" and room.shelter.lamp ~= 1 and 1) or 0\n\nreturn a == 1 and \" Стоящий неподалёку мешок немного пошевелился, заставив всю Элли сжаться.\" or \"\"\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "   В этой части коридора ощущалась неприятная сырость. Дверь в одну из комнат была сорвана с петель и валялась рядом, за ней виднелся лишь грязный кафельный пол.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Динамическое описание состояния третьей секции коридора (включая оставленные предметы)",
+        "lua_text": "function lua_text()\nlocal text = \"\"\ncor3 = cor3 or {}\ncor3.water = cor3.water or 1 \nroom.drug.closed = room.drug.closed or 1 \n\ntext = text \n.. ((room.water.water == 1 or room.water.water == 0 or room.water.water == 2) and \" Часть пола вдоль одной из стен была залита водой, вытекающей из комнаты с выбитой дверью.\" or \"\")\n..\n(room.water.water == 3 and room.water.dryFloor ~= 2 and \" Часть пола вдоль одной из стен была залита водой, вытекшей из комнаты с выбитой дверью. Может быть, всё высохнет через какое-то время?\" or \"\" )\n..\n(room.drug.closed == 1 and \" Вторая дверь была закрыта.\" or \" Вторая дверь была едва приоткрыта и сквозь щели пробивался холодный белый свет.\")\n..\n(cor3.water == 1 and \" Откуда-то с потолка периодически срывались и падали прямо в воду капли.\" or \" Откуда-то с потолка периодически срывались и падали капли, собираясь на полу в вязкую тёмную лужицу.\")\n\ncor3.waterMessage = cor3.waterMessage or 0\nif cor3.waterMessage == 1 then\ntext = text .. \" Вода, заполнявшая до этого коридор, теперь исчезла.\"\ncor3.waterMessage = 0\nend\n\ncor3.bagTrace = (inHands == \"bag\" or bag.location == \"cor3\") and 1 or (cor3.bagTrace or 0)\n\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "Идти вперёд по коридору",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\ngoTo = 13\ngoFrom = 10\nmoveDirect = 1\nsegment = 4\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 14,
+        "text": "Пройти в комнату без двери",
+        "lua_do": "function lua_do()\ngoTo = 14\ngoFrom = 10\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "left_answer": true
+      },
+      {
+        "id": 24,
+        "text": "Подойти ко второй двери",
+        "lua_do": "function lua_do()\ngoTo = 64\ngoFrom =  10\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "right_answer": true
+      },
+      {
+        "id": 24,
+        "text": "Идти назад по коридору",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\ngoTo = 6\ngoFrom = 10\nmoveDirect = 0\nsegment = 2\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 5,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "id": 19,
+        "text": "Посмотреть, откуда падают капли",
+        "lua_if": "function lua_if()\ncor3.catchDrop = cor3.catchDrop or 0\nreturn cor3.catchDrop == 0\nend"
+      },
+      {
+        "id": 20,
+        "text": "Ударить шваброй туда, откуда падают капли",
+        "lua_if": "function lua_if()\nmop = mop or {}\nmop.location = mop.location or \"store\"\ncor3.catchDrop = cor3.catchDrop or 0\nreturn cor3.catchDrop == 1 and mop.location == \"inHands\"\nend"
+      },
+      {
+        "id": 21,
+        "text": "Поставить лестницу и подняться",
+        "lua_if": "function lua_if()\ncor3 = cor3 or {}\nladder.location = ladder.location or \"storeLocked\"\ncor3.catchDrop = cor3.catchDrop or 0\nreturn cor3.catchDrop == 1 and ladder.location == \"inHands\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "   Возле запертой двери с крохотным окошком царил неестественный холод. Массивный засов, несколько замочных скважин – казалось, дверь могла выдержать любой натиск. А вот покрытые пылью и паутиной прутья решётки сдавали свои позиции и были заметно выгнуты. \n",
+    "answers": [
+      {
+        "id": 96,
+        "text": "Попытаться открыть дверь ключом",
+        "lua_if": "function lua_if()\n\nreturn inHands == \"keys\"\nend"
+      },
+      {
+        "id": 6,
+        "text": "Отойти от двери",
+        "lua_do": "function lua_do()\ndanko.count = (danko.count or 1) <plus> 1\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1\n  else\n    exhausting = exhausting <plus> 1\n  end\n\nend"
+      },
+      {
+        "comment": true,
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\n--Комната прорицателя. Описание. Дверь укреплённая, много замков. Если попытаться подобрать ключ из связки — прорицатель вещает \"здесь нет твой власти\". При первом и втором посещении даёт туманные изречения, на третьем — скример, дальше — рандом.\n--выдаёт обрывки предыстории\n--выдаёт инфу по таблеткам (с упоминанием красной и синей, перепутанных местами)\n\n-- разговор с Данко, фразы из списка, если скример Данко не заряжен. Местный рандом, принудительное повышение шанса скримера.\n\ndanko = danko or {}\n\nroom.drug.wrightColour = room.drug.wrightColour or ({\"yellow\", \"white\"})[math.random(1,2)]\nlocal pills = room.drug.wrightColour == \"white\" and  -- here and elsewhere \"wrightColour\" means energitic pill colour\n\n\"   <s><s>\"Вы все говорите: <s><s>\"Нельзя есть!<s><s>\", – недовольно заворчал старик. – Но ведь зверь ест! Я бы тоже поел. Но ты всё-таки не ешь, мало ли. Хотя кто-то находил таблетки и ел их, да. Хорошие таблетки, не те жёлтые. Бодрят, как свежесть морозного утра... А ты уже пробовала крысятину?..<s><s>\"\" or \n\n\"   <s><s>\"Вы все говорите: <s><s>\"Нельзя есть!<s><s>\", – недовольно застрял старик. – Но ведь зверь ест! Я бы тоже поел. Но ты всё-таки не ешь, мало ли. Хотя кто-то находил таблетки и ел их, да. Хорошие таблетки, не те жёлтые. Успокаивают, как будто дремлешь в облаке среди ангелов... А ты уже пробовала крысятину?..<s><s>\"\"\n\ndanko.count = (danko.count or 1) \nlocal T = {\n\"   <s><s>\"Не подходи сюда! – прорычал старик. – Не пытайся разговаривать со мной! Уходи, прочь отсюда!<s><s>\".\",\n\n\"   <s><s>\"Всё-таки вернулась? – добродушно спросил старик. – Это правильно, я много полезного знаю, помогу тебе, да. Хоть вы все и говорите: <s><s>\"Данко – безумец!<s><s>\", но каждый раз возвращаетесь, разве это не безумно? Да вы даже не знаете о том, какого это – быть безумцем! Пробудешь здесь с моё – станешь такой же безумной, безумнее даже. Потому лучше выбирайся отсюда. Выбирайся, но главное – не спи. Ты спишь, а Зверь не спит. Зверь следит за всем, потому что не спит. Будь как зверь – не спи. Не спи, следи<s><s>\". Слова старика постепенно сливались в нечленораздельное бормотание, а затем и вовсе затихли.\",\n\n\"   <s><s>\"У каждого есть оберег, – серьёзно заявил старик. – Без оберега тебе крышка: он не даёт тебя Зверю учуять. Хотя коли столкнёшься с гадом, то и оберег не спасёт. Услышишь Зверя – прячься! И оберег свой спрячь понадёжнее...<s><s>\"\",\n\n\"   <s><s>\"Мы прокляты, – безэмоционально проговорил старик. – Когда заключаешь сделку с тёмными силами, нельзя остаться в выигрыше. Мы выбрали путь быстрый и лёгкий. Не смогли смириться с потерей, не смогли принять жертву,... Отсюда и страдания наши злу на потеху.<s><s>\"\",\n\n\"   <s><s>\"Говорят, раньше Зверь был прекрасным юношей, – нравоучительно протянул старик. – Но отдал и жизнь, и душу, чтобы свою возлюбленную от смерти спасти. Вот и стал демоном. А она когда узнала, так тоже с тёмными силами сделку заключила. Да напрасно. Приютить его мятежный дух приютила, так стал он проклятием её, и не сыскать им обоим покоя вовек. Хоть огнём гори, хоть вены режь – не нарушить теперь договор, кровью скреплённый.<s><s>\"\",\n\npills,\n\n\"   <s><s>\"Вот вы говорите, что нельзя свой оберег уничтожить, – философствовал старик, – а я говорю наоборот. Только свой оберег и можно, а чужой – нельзя. Он на то и оберег, чтобы кто посторонний дурного не сделал. А иначе бы Зверь и меня давно сожрал.<s><s>\"\",\n\n\"   <s><s>\"Чтобы Зверя изничтожить, оберег его найди, – очень серьёзным голосом изрёк старик. – У демона мыслей нет, разрушит всё сам и не заметит... Свободу всем принесёшь тогда... Веришь или нет, а мой оберег – крыса. Ты не голодна?<s><s>\"\",\n\n\"   <s><s>\"Ты ко мне, милая, больше не ходи, – с грустью в голосе сообщил старик  – Данко-безумец, его наслушаешься – тоже сумасшедшей станешь. Всё нужное уже есть у тебя.<s><s>\"\"\n\n} \n\nlocal text = \"\"\nif screamer.crazyDanko1.chance < 50 then\n  \n     if danko.count < 10 then -- correct this!!! 999999\n   text = T[danko.count]\n    else\ntext = \"   <s><s>\"Я всё сказал!<s><s>\" – только и изрёк старик.\"\n   end\nend\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "   Элли подошла к распахнутой двери и замерла на высоком пороге.\n   Крошечная тёмная каморка была целиком заставлена непонятными жужжащими приборами. На дальней стене, возле открытого электрического щитка, из которого свисали до самого пола провода, располагался противопожарный инвентарь: конус с песком",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Вернуться в коридор",
+        "lua_do": "function lua_do()\nweight = weight or 0\nexhausting = exhausting <plus> 1 \nend"
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nroom.electro = room.electro or {}\nroom.electro.water = room.electro.water or 1\nroom.electro.sabotage = room.electro.sabotage or 0\nladder.location = ladder.location or \"electro\"\nlocal text = \"\"\n\ntext = text\n.. ((axe.location == \"electro\" and extinguisher.location == \"electro\" and \", топор с длинной красной ручкой и огнетушитель с чёрным раструбом.\") or (axe.location == \"electro\" and extinguisher.location ~= \"electro\" and \" и топор с длинной красной ручкой.\") or (axe.location ~= \"electro\" and extinguisher.location == \"electro\" and \" и огнетушитель с длинным чёрным раструбом.\") or \".\") ..\n(room.electro.sabotage == 1 and \" Все приборы были буквально уничтожены, будто растерзанные обезумевшим зверем. Кое-где искрила повреждённая проводка.\" or \"\")\n.. (ladder.location == \"electro\" and \" В самом углу стояла присланённая к стене приставная лестница.\" or \"\")\n.. (room.electro.water == 1 and room.water.water == 1 and \"<s>\n   Вода медленно втекала в комнату из коридора через глубокую выбоину в пороге. Весь пол был залит и несколько проводов, казалось, вот-вот его коснутся. Рисковать и идти вглубь комнаты в таких условиях Элли не хотелось.\" or room.electro.water == 1 and \"<s>\n   Вода, натёкшая через порог из коридора, покрывала весь пол тонким слоем и несколько проводов, казалось, вот-вот её коснутся. Рисковать и идти вглубь комнаты, пока всё не высохло, Элли не хотелось.\"  or \"\")\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 60,
+        "text": "Взять топор",
+        "lua_if": "function lua_if()\nreturn (room.electro.water ~= 1 and axe.location == \"electro\" and inHands == \"free\") \nend",
+        "lua_do": "function lua_do()\naxe.location = \"inHands\"\ninHands = \"axe\"\nweight = 1\nend"
+      },
+      {
+        "id": 61,
+        "text": "Взять огнетушитель",
+        "lua_if": "function lua_if()\nreturn (room.electro.water ~= 1 and extinguisher.location == \"electro\" and inHands == \"free\" )\nend",
+        "lua_do": "function lua_do()\nextinguisher.location = \"inHands\"\nweight = 2\ninHands = \"extinguisher\"\nend"
+      },
+      {
+        "id": 48,
+        "text": "Текст для мержа: сообщение о диверсии",
+        "lua_text": "function lua_text()\nlocal R = \"electro\"\nlocal text = \"\"\nif room[R].sabotageMessage == 2 then\ntext = \" Девушка чувствовала, что кто-то побывал в комнате совсем недавно.\"\nroom[R].sabotageMessage = 3\nend\n\n\nif room[R].sabotageMessage == 0 then\nroom[R].sabotageMessage = 1\nend\n\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "   В этой части коридора царил неестественный холод. Морозный воздух сочился из-за большой тёмной двери и пронизывал до костей девушку, одетую лишь в лёгкую ночную рубашку.\n   Коридор оканчивался тёмным проходом, рядом с которым располагалась выкрашенная в цвет стен еле заметная дверца.",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ncor4 = cor4 or {}\ncor4.doll = (cor4.doll or 0) <plus>1\nlocal text = (cor4.doll == 1 and \"<s>\n   На полу у своих ног Элли заметила голову куклы. Девушка не удивилась бы, если бы та вдруг отрастила паучьи лапки и уползла, но ничего такого не происходило.\") or (cor4.doll == 2 and \"<s>\n   Голова куклы всё так же лежала на полу. Она не была сдвинута или повёрнута и как будто совсем не изменилась.\") or (cor4.doll == 3 and \"<s>\n   В очередной раз увидев кукольную голову без заметных изменений, Элли осторожно наклонилась и провела пальцем на пыльном полу короткую черту.\") or (cor4.doll == 4 and \"<s>\n   Кукольная голова лежала ровно там же, где и до этого, ни на миллиметр не сдвинувшись относительно оставленной Элли отметки. Окончательно потеряв самообладание, девушка пнула голову ногой, и та укатилась куда-то в угол, скрывшись из виду.\") or (cor4.doll > 4 and \"<s>\n   Элли привычно посмотрела туда, где лежала оторванная голова куклы, но на пыльном полу остался лишь едва заметный след. Девушка знала, что сама голова где-то рядом, и от этого становилось не по себе.\") or \"\"\npanic = ( cor4.doll > 4 and g.previous_id ~= 25 and g.previous_id ~= 13 and (panic <plus> 1)) or panic\n\ncor4.bagTrace = (inHands == \"bag\" or bag.location == \"cor4\") and 1 or (cor4.bagTrace or 0)\n\nreturn text\nend\n",
+        "merge": true
+      },
+      {
+        "id": 66,
+        "text": "Подойти к проходу в конце коридора",
+        "lua_do": "function lua_do()\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\n\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 74,
+        "text": "Подойти к тёмной двери",
+        "lua_do": "function lua_do()\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "left_answer": true
+      },
+      {
+        "id": 16,
+        "text": "Подойти к неприметной двери",
+        "lua_do": "function lua_do()\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend",
+        "right_answer": true
+      },
+      {
+        "id": 24,
+        "text": "Идти назад по коридору",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\ngoTo = 10\ngoFrom = 13\nmoveDirect = 0\nsegment = 3\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 5,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif inHands == \"candle\" then\n  candleTrigger = 1\nend\nend",
+        "text": "Добавление условия: Элли выходила в коридор со свечой",
+        "id": 13,
+        "calculate": true
+      },
+      {
+        "lua_if": "function lua_if()\ncor4 = cor4 or {}\ncor4.doll = cor4.doll or 0\nreturn cor4.doll > 4 and g.previous_id ~= g.current_id\nend",
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "lua_do": "function lua_do()\nshowPage{id = g.current_id, transition = \"instant\"}\nend",
+        "text": "Принудительный рефреш страницы для запуска паники"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "   В маленькой комнате, целиком облицованной грязными плитками, не было ничего, кроме переполненной ванной. На её бортике лежало ржавое двустороннее лезвие, от которого тянулись к воде высохшие бурые подтёки. ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nroom.water = room.water or {}\nroom.water.water = room.water.water or 1\nroom.water.dryFloor = room.water.dryFloor or 0\nlocal text = \"\"\ntext = text .. (room.water.water == 1 and room.water.sabotage ~= 1 and \"<s>\n   Вода из открытого крана переливалась через край прямо на пол.\" or \"\")\n.. (room.water.water == 1 and room.water.sabotage == 1 and \"<s>\n   Вода из сорванной трубы мощным потоком заливала пол.\" or \"\")\n.. ((room.water.water == 2 or room.water.water == 0) and \"<s>\n   Вода больше не прибывала, хотя и без этого весь пол был залит по самые щиколотки.\" or \"\")\n.. ( (room.water.dryFloor == 1 and \"<s>\n   Воды на полу почти не осталось, лишь несколько луж всё никак не высыхали.\") or (room.water.dryFloor == 2 and \"<s>\n   От воды на полу не осталось и следа. Элли не могла поверить, что всё высохло так быстро.\") or \"\")\n\nreturn text\nend",
+        "lua_do": "function lua_do()\n-- Описание кухни. Изначально открыта, но нет света . если ходить без света, то растёт паника. Журчание воды, открыты краны. Холодильник на амбарном замке. иКакая-то еда, но если попытаться есть — происходит отключка.\n-- После диверсии кран сломан, нельзя просто закрыть. Для починки нужен гаечный ключ. После починки можно вытереть воду здесь и в коридоре (швабра на складе, тряпки в убежище). \nend",
+        "text": "Новый ответ. введите текст",
+        "id": 14,
+        "merge": true
+      },
+      {
+        "id": 62,
+        "text": "Закрыть краны",
+        "lua_if": "function lua_if()\nreturn room.water.water == 1 and room.water.sabotage ~= 1\nend"
+      },
+      {
+        "id": 63,
+        "text": "Осмотреть трубы",
+        "lua_if": "function lua_if()\nreturn room.water.water == 1 and room.water.sabotage == 1\nend"
+      },
+      {
+        "id": 72,
+        "text": "Вытереть пол шваброй",
+        "lua_if": "function lua_if()\nmop = mop or {}\nmop.location = mop.location or \"store\"\nreturn room.water.water ~= 1 and mop.location == \"inHands\" and room.water.dryFloor == 0\nend"
+      },
+      {
+        "id": 10,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1\n  else\n    exhausting = exhausting <plus> 1\n  end\n\nend"
+      },
+      {
+        "id": 48,
+        "text": "Текст для мержа: сообщение о диверсии",
+        "lua_text": "function lua_text()\nlocal R = \"water\"\nlocal text = \"\"\nif room[R].sabotageMessage == 2 then\ntext = \" Девушка чувствовала, что кто-то побывал в комнате совсем недавно.\"\nroom[R].sabotageMessage = 3\nend\n\n\nif room[R].sabotageMessage == 0 then\nroom[R].sabotageMessage = 1\nend\n\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   Элли находилась в ярко освещённом просторном помещении со светлыми стенами. Почти всё пространство занимали опрокинутые стеллажи и разбросанные коробки",
+    "answers": [
+      {
+        "id": 65,
+        "text": "Попробовать белую таблетку",
+        "lua_if": "function lua_if()\nreturn room.drug.sabotage ~= 1 and room.drug.tried ~= 1\nend",
+        "lua_do": "function lua_do()\nroom.drug.tried = 1\nend"
+      },
+      {
+        "id": 67,
+        "text": "Попробовать жёлтую таблетку",
+        "lua_if": "function lua_if()\nreturn room.drug.sabotage ~= 1 and room.drug.tried ~= 1\nend",
+        "lua_do": "function lua_do()\nroom.drug.tried = 1\nend"
+      },
+      {
+        "id": 10,
+        "text": "Вернуться в коридор"
+      },
+      {
+        "comment": true,
+        "lua_do": "function lua_do()\n--Комната с таблетками. Описание. Изначально закрыта. Можно порубить топором или открыть ключами. Внутри темно, на полу осколки стекла. Перевернутая кушетка, обломки стеллажа, стол. Если пытаться подойти к столу без света — острая боль от стекла, паника, отключка. Можно войти со свечой. На столе два блистера таблеток: белые и жёлтые, по 10 шт. Можно оставить свечу, взять таблетки. При диверсии таблетки исчезают. Если съесть не те таблетки — отключка. Сначала попробовать, потом взять всю пачку\nend",
+        "text": "Новый ответ. введите текст",
+        "need": 1000,
+        "id": 15
+      },
+      {
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nroom.drug = room.drug or {}\nroom.drug.sabotage = room.drug.sabotage or 0\n\nroom.drug.tried = room.drug.tried or 0\n\nwhitePills = whitePills or {}\nwhitePills.location = whitePills.location or \"drugTable\"\nwhitePills.number = whitePills.number or math.random(6,8)\n\nyellowPills = yellowPills or {}\nyellowPills.location = yellowPills.location or \"drugTable\"\nyellowPills.number = yellowPills.number or math.random(6,8)\n\nroom.drug.wrightColour = room.drug.wrightColour or ({\"yellow\", \"white\"})[math.random(1,2)]\n\nlocal text = \"\" ..\n\n((room.drug.sabotage == 0 and room.drug.tried == 0) and \", только у самого входа располагался небольшой столик на колёсиках со всевозможными медицинскими инструментами, баночками и рассыпанными таблетками.<s>\n   <s><s>\"Не хватает только надписи: <s><s>\"Съешь меня!<s><s>\", – подумала Элли, разглядывая белые и жёлтые пилюли.<s>\n   \" or \"\") ..\n\n((room.drug.sabotage == 1 or room.drug.tried ~= 0 ) and \", а у самого входа лежал перевёрнутый столик, вокруг которого были разбросаны всевозможные медицинские инструменты.\" or \"\")\n\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 48,
+        "text": "Текст для мержа: сообщение о диверсии",
+        "lua_text": "function lua_text()\nlocal R = \"drug\"\nlocal text = \"\"\nif room[R].sabotageMessage == 2 then\ntext = \" Девушка чувствовала, что кто-то побывал в комнате совсем недавно.\"\nroom[R].sabotageMessage = 3\nend\n\n\nif room[R].sabotageMessage == 0 then\nroom[R].sabotageMessage = 1\nend\n\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 68,
+        "text": "Поискать таблетки среди мусора",
+        "lua_if": "function lua_if()\nreturn room.drug.sabotage == 1 or room.drug.tried == 1\nend",
+        "need": -68
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "   За неприметной дверцей Элли увидела крохотный тёмный чулан, в котором едва помещались груды барахла.",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 16,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nmop = mop or {}\nmop.location = mop.location or \"store\"\nladder.location = ladder.location or \"StoreLocked\"\nroom.store.sabotage = room.store.sabotage or 0\nlocal text = room.store.sabotage == 1 and \" Боковым зрением девушка заметила движущуюся тень на стене. По силуэту казалось, что в петле качается маленькое, совсем детское тельце. Только присмотревшись Элли поняла, что тень отбрасывает неработающая лампа со странным плафоном, но жуткие ощущения не отступили.\" or \"\"\ntext = text .. (ladder.location == \"storeLocked\" and \"<s>\n   К одной из стен была зачем-то прикована тяжёлыми цепями металлическая приставная лестница. Голыми руками с такими креплениями не справиться.<s>\n   \" or \"<s>\n   \")\npanic = room.store.sabotage == 1 and panic <plus> 1 or panic\nreturn text\nend\n",
+        "merge": true
+      },
+      {
+        "id": 23,
+        "text": "С помощью лома освободить лестницу",
+        "lua_if": "function lua_if()\nreturn lom.location == \"inHands\" and ladder.location == \"storeLocked\"\nend",
+        "lua_do": "function lua_do()\nexhausting = (exhausting or exhaustingMin) <plus> 1 \nend"
+      },
+      {
+        "id": 48,
+        "text": "Текст для мержа: сообщение о диверсии",
+        "lua_text": "function lua_text()\nlocal R = \"store\"\nlocal text = \"\"\nif room[R].sabotageMessage == 2 then\ntext = \" Девушка чувствовала, что кто-то побывал в комнате совсем недавно.\"\nroom[R].sabotageMessage = 3\nend\n\n\nif room[R].sabotageMessage == 0 then\nroom[R].sabotageMessage = 1\nend\n\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "   Большой тёмный зал освещался множеством хаотично расставленных на полу свечей. Тут и там были разбросаны книги с пожелтевшими страницами, шелестящими от неощутимых движений воздуха. У одной из стен Элли заметила связки хвойных ветвей, источающих приятный смолистый аромат. В центре помещения на полу был расчерчен мелом сложный орнамент из геометрических фигур и непонятных символов.",
+    "answers": [
+      {
+        "id": 13,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ndoll = doll or {}\ndoll.location = doll.location or \"hiden\"\nlocal text = doll.location == \"hiden\" and \" Внутри узора, будто оплетённая им, лежала самодельная тряпичная кукла.\" or \"\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 79,
+        "text": "Заглянуть в ближайшую книгу",
+        "need": [
+          -79
+        ],
+        "lua_do": "function lua_do()\npanic = panic <plus> 1\nend"
+      },
+      {
+        "id": 80,
+        "text": "Взять свечу",
+        "lua_if": "function lua_if()\nreturn inHands == \"free\" and weight == 0\nend",
+        "lua_do": "function lua_do()\ncandle = candle or {}\ncandle.location = \"inHands\"\ncandle.stat = 2\ncandle.time = 20\ninHands = \"candle\"\nweight = 0.5\nend"
+      },
+      {
+        "id": 82,
+        "text": "Взять куклу с собой",
+        "lua_if": "function lua_if()\ndoll = doll or {}\ndoll.location = doll.location or \"hiden\"\nreturn doll.location == \"hiden\" and inHands == \"free\"\nend"
+      },
+      {
+        "id": 48,
+        "text": "Текст для мержа: сообщение о диверсии",
+        "lua_text": "function lua_text()\nlocal R = \"magic\"\nlocal text = \"\"\nif room[R].sabotageMessage == 2 then\ntext = \" Девушка чувствовала, что кто-то побывал в комнате совсем недавно.\"\nroom[R].sabotageMessage = 3\nend\n\n\nif room[R].sabotageMessage == 0 then\nroom[R].sabotageMessage = 1\nend\n\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "   Элли подошла ближе к двери, чтобы получше её рассмотреть. Листы металла в палец толщиной были приварены к укреплённой раме, по периметру расположился плотный ряд заклёпок. Два огромных ржавых бруса перегораживали дверь от пола и до самого потолка, полностью блокируя её.\n   Вся поверхность металла была покрыта неровными отметинами и вмятинами, даже мощные балки кое-где были повреждены. Элли не представляла, что опасного или ценного могло быть там, снаружи, но внутри было то, что оставило эти ужасные повреждения. И от этой мысли становилось не по себе.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Отойти от двери",
+        "lua_do": "function lua_do()\ngoTo = 5\ngoFrom = 18\n\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\n\n-- если срабатывает скример, то переход на скример\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\npanic = panic <plus> 1\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 18,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "   Элли подошла поближе к неприятной лужице и запрокинула голову, пытаясь рассмотреть старый подвесной потолок. Почти сразу же из стыка двух плит выскользнула очередная тёмно-красная капля. С полминуты она висела там, покачиваясь в неощутимых воздушных потоках и медленно увеличиваясь.\n   Девушка завороженно смотрела, как в одно мгновение капля сорвалась и полетела вниз. Вниз, прямо в лицо Элли. С оглушительным шлепком капля разбилась о лоб девушки. Та поспешно вытерлась рукой, размазав густую тёплую жидкость по коже. Что бы это ни было, приятных ощущений такой опыт не вызывал.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\npanic = panic <plus> 1\ncor3 = cor3 or {}\ncor3.catchDrop = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "   Элли ухватила швабру за нижнюю часть и с силой ударила в то место, где, как казалось, должен был располагаться источник жидкости. Девушка осознала свою ошибку слишком поздно – лишь когда багровые струи дождём забарабанили по лицу и рукам.\n   Мокрая и липкая, Элли в ужасе отскочила в сторону, злясь на саму себя за неосмотрительность.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\npanic = panic <plus> 2\nend"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "   Элли поставила лестницу к стене возле красной лужицы и начала карабкаться наверх. С каждой преодолённой ступенькой тревога девушки возрастала. Она не знала, что хочет найти, но была уверена, что ничего хорошего её не ждёт.\n   На самом верху, едва не задевая потолок головой, Элли мягко коснулась тех плит, из щели между которыми сочилась кроваво-красная жидкость. Панели оказались совсем невесомыми и девушка неосторожным касанием перекосила одну из них. Что-то небольшое прокатилось к краю плиты и упало рядом с лужей.\n   Девушка напрасно потратила время, проверяя каждый участок потолка, до которого только могла дотянуться с лестницы. Не найдя ничего необычного, Элли спустилась вниз ощущая некоторое облегчение. Но ей ещё предстояло осмотреть упавший предмет.",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\ncor3.catchDrop = 3\nidolTrue = idolTrue or {}\nidolTrue.location = \"cor3\"\nexhausting = exhausting <plus> 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "   Предмет поблескивал острыми гранями в тусклом свете ламп. Маленькая фигурка из тёмного металла, изображающая голову обезьяны в устрашающей гримасе. Инкрустированные красными драгоценными камнями глаза будто светились яростью, в открытой пасти – короткие острые клыки.\n   От одного взгляда на фигурку Элли становилось не по себе. Ей даже показалось, что нижний бок предмета вымазался в красной жидкости, хотя натёкшая с потолка лужа была относительно далеко.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "   Элли долго не могла пробраться через груды мусора к креплениям цепей в стене с тяжёлым ломом в руках.\n   Оказавшись наконец у цели, девушка поддела краем инструмента металлическое кольцо и, уперев лом в стену, надавила всем своим весом. Лязгнули цепи. Крепление выскочило из стены, как пробка из бутылки, подняв в воздух облако пыли. Не веря такой лёгкости, Элли медленно размотала цепь. Лестница была свободна.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nladder.location = \"store\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nshowPage{id = goTo}\nend",
+        "no_transition": true
+      },
+      {
+        "lua_text": "function lua_text()\nroom.oven.tryEnterWithCandle = room.oven.tryEnterWithCandle or 0\nroom.oven.candleOffMessage = room.oven.candleOffMessage or 0\nlocal text = \"\"\ninShelter = goTo == 25 and panic < 5 and 0 or inShelter\n\ntext = (room.oven.candleOffMessage == 1 and \"Девушка осторожно открыла дверь пошире. Хлынувший из комнаты поток воздуха тут же затушил свечу в руке Элли.\") or\n(exhausting > 19 and \"Девушка еле переставляла ноги от истощения. Не смотря на все усилия, ей так и не удалось добраться до цели.\") or\n(panic > 4 and \"Девушка чувствовала опасность, но не могла увидеть хоть что-то подозрительное. От резких поворотов головы сводило шею. Глаза безуспешно выискивали невидимую угрозу. Напряжение нарастало, и вот уже всё тело Элли парализовало от ужаса, а в её груди застыл невыразимый неистовый крик.\") or\n(inHands == \"bag\" and \"Девушка с трудом тащила тяжёлый мешок, двигаясь спиной вперёд и не обращая никакого внимания на что-либо ещё. Достигнув цели она выпрямилась и вытерла вспотевшее лицо рукой.\") or\n(goTo == 15 and \"Девушка осторожно вошла в комнату, не закрывая за собой дверь\") or\n(goFrom == 37 and \"Девушка молниеносно выскочила из комнаты в коридор, забыв обо всех своих страхах и предосторожностях.\") or\n(goTo == 7 and \"Девушка нерешительно перешагнула порог комнаты и бегло осмотрелась. Немного поколебавшись, она задвинула засов в петли, заперев дверь.\") or\n(goTo == 33 and \"Девушка осторожно открыла дверь пошире и в лицо тут же ударил мощный поток воздуха. Элли медленно вошла внутрь.\") or\n((goTo == 8 or goTo == 64) and \"Девушка медленно подошла к двери и напряжённо оглянулась. Никого.\") or\n(goFrom == 18 and \"Девушка развернулась, борясь с внезапно охватившей её тело дрожью, и ещё раз оглядела коридор.\") or\n(goFrom == 7 and \"Девушка оттянула до упора засов и открыла дверь, после чего быстро выскользнула в коридор.\") or\n((goTo == 6 or goTo == 10 or goTo == 13 or (goTo == 5 and goFrom == 6) ) and \"Девушка медленно прошла по коридору до следующих дверей.\") or\n(goTo == 5 and \"Девушка осторожно выглянула в коридор и, не заметив ничего подозрительного, переступила порог, не закрывая за собой дверь.\")\nor\ntext\nroom.oven.candleOffMessage = 0\nreturn text\nend",
+        "id": 24,
+        "text": "Описание захода в комнаты",
+        "lua_do": "function lua_do()\n--Страница переходов (между комнатами, между отсеками коридора)\n--Динамические описания действий гг\n--Её мысли (о всей этой фигне, о тяжкой ноше)\n--Скримеры.\nend",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nbag = bag or {}\ncor1 = cor1 or {}\ncor2 = cor2 or {}\ncor3 = cor3 or {}\ncor4 = cor4 or {}\n  if inHands == \"bag\" then\n    if goTo == 5 then\n      cor1.bagTrace = 1\n    elseif goTo == 6 then\n      cor2.bagTrace = 1\n    elseif goTo == 10 then\n      cor3.bagTrace = 1\n    elseif goTo == 13 then\n      cor4.bagTrace = 1\n    end\n  end\nend",
+        "text": "Следы от мешка",
+        "id": 5,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "   ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\n-- страница отключек\ninShelter = inShelter or 0\nsegment = segment or 0\n\nexhausting = exhaustingMin\n  if inShelter == 1 then\n    goTo = 7\n  elseif segment == 1 then\n  goTo = 5\nelseif segment == 2 then\n    goTo = 6\nelseif segment == 3 then\n    goTo = 10\nelse goTo = 13\n  end\nshowPage{id = goTo}\nend",
+        "text": "Дальше",
+        "id": 25,
+        "no_transition": true
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "lua_do": "function lua_do()\nscreamerCD = 5\nend",
+        "text": "КД на скримеры после отключки"
+      },
+      {
+        "id": 25,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal text = \"\"\npanic = panic or 1\ninShelter = inShelter or 0\n\nif exhausting < 20 then\n  text = \"Сердце Элли застучало так быстро и громко, что за его бешеным ритмом стали незаметны все панические мысли девушки. Она слушала его заворожённо, словно погружаясь в транс. Не было больше ничего вокруг, никаких эмоций и ощущений, только незамедляющееся биение, растворяющее в себе всё...<s>\n   \"\nelse text = \"Элли с трудом вдохнула и поняла, что не может сделать больше ни шагу. Она была готова упасть прямо на пол, лишь бы немного отдохнуть, сбросить сковавшую всё тело усталость. Но мышцы больше не слушались девушку, она даже не могла приподнять ставшие свинцовыми веки. Элли медленно проваливалась в небытие...<s>\n   \"\nend\n\ntext = text .. (inShelter  == 0 and \"Внезапно вернувшись в сознание, девушка с трудом продрала глаза. К своему удивлению она обнаружила себя стоящей в коридоре. Затёкшие ноги и руки сводило в болезненных судорогах – такой <s><s>\"отдых<s><s>\" явно не пошёл им на пользу.\" or \"Внезапно вернувшись в сознание, девушка с трудом разомкнула глаза и медленно выбралась из тряпичного гнезда.\")\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif panic > 4 then\n  exhaustingMin = exhaustingMin <plus> 1\npanic = 2\nelse \n  exhaustingMin = exhaustingMin <plus> 2\npanic = 1\nend\n\n\nsegment = segment or 1\n-- оставляет на месте то, что было в руках\n-- \nlocal tab = {\"cor1\", \"cor2\", \"cor3\", \"cor4\" } -- дополнение таблицы незапертыми комнатами\nfor k, v in pairs(room) do\n  if v.sec == segment and v.close == 0 then\n    aaTest = k\n    table.insert(tab, k)\n  end\nend\n\ninHands = inHands or \"free\"\n  if inHands ~= \"free\" then\n       local a = vars[inHands]\n       local randCor = ({\"cor1\", \"cor2\", \"cor3\", \"cor4\" })[math.random(4)]\n       a = a or {}\n       local b = (currentPosition ~= \"moving\" and currentPosition or randCor)\n       b = b == \"oven\" and \"ovenDoor\" or b\n       a.location = b -- leave at current place\n       aaaTest = b\n  end\n  inHands = \"free\"\n  weight = 0\n\n-- диверсии\nlocal d = 0\nlocal t = {}\nlocal r = \"nowhere\"\nfor k, v in pairs(room) do\n  if v.sec == segment and v.sabotage == 0 and v.close ~= 1 then\n    d = d <plus> 1\n    table.insert(t, k)\n  end\nend\n  if d == 0 then\n    atest = \"movement of items\"\n  elseif d == 1 then\n    r = t[1]\n    room[r].sabotage = 1\n    room[r].sabotageMessage = room[r].sabotageMessage or 0\n    room[r].sabotageMessage = room[r].sabotageMessage == 1 and 2 or room[r].sabotageMessage\n    atest = \"Sabotage in \" .. r .. \" is performed!\"\n  else\n    r = t[math.random(1, #t)]\n    room[r].sabotage = 1\natest = \"Sabotage in \" .. r .. \" is performed!\"\n  end\n\nif r == \"oven\" then -- burn all the items\n  room.oven.inFire = 1\n  bag.location = bag.location == r and \"burnt\" or bag.location\n  mop.location = mop.location == r and \"burnt\" or mop.location\n  axe.location = axe.location == r and \"burnt\" or axe.location\n  -- keys.location = keys.location == r and \"burnt\" or keys.location\n  idolTrue.location = idolTrue.location == r and \"burnt\" or idolTrue.location\nend  \n\nroom.water.dryFloor = room.water.dryFloor or 0\nif r == \"water\" then\nroom.water.water = 1\ncor3.water = 1\ncor2.water = 1\nroom.electro.water = 1\nroom.water.dryFloor = 0 -- a lot of water\nend\n\nif room.water.dryFloor == 1 then -- just a bit water\n  room.water.dryFloor = 2 -- no water\n  cor3.water = 0\n  cor2.water = 0\n  room.electro.water = 0\nend\n\ninHands = inHands or \"free\"\ncandle = candle or {}\ncandle.location = candle.location or \"magic\"\ncandle.stat = candle.stat or 2\nif inHands == \"candle\" then\ninHands = \"free\"\nweight = 0\ncandle.location = \"lost\"\ncandle.stat = 0 -- throughn away\nend\n\nend",
+        "calculate": true,
+        "id": 25,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Страница авторана.\nПереход на страницу отключки\nСкримеры на странице перехода и в комнатах, через диалог, там же подсчёт паники и переход в отключку",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 26,
+        "calculate": true,
+        "lua_do": "function lua_do()\nexhausting = exhausting or 5 -- физ. истощение\nexhaustingMin = exhaustingMin or 5 -- минимальное значение возможного истощения\npanic = panic or 1 -- текущая паника\nlocation = location or {} -- таблица с данными по локациям\nlocation.sectionsTab = {a = {1,2,3}, b = {4,5}, c = {6,7,8}, d = {9,10,11}, e = {12}}\nlocation.current =  location.current or 2\nsegment = segment or 1 -- текущий сегмент\nroom = room or {}\nroom.shelter = room.shelter or {}\nroom.oven = room.oven or {}\nroom.electro = room.electro or {}\nroom.drug = room.drug or {}\nroom.water = room.water or {}\nroom.store = room.store or {}\nroom.magic = room.magic or {}\n\nroom.shelter.sabotage = room.shelter.sabotage or 1\nroom.oven.sabotage = room.oven.sabotage or 0\nroom.electro.sabotage = room.electro.sabotage or 0\nroom.drug.sabotage = room.drug.sabotage or 0\nroom.water.sabotage = room.water.sabotage or 0\nroom.store.sabotage = room.store.sabotage or 0\nroom.magic.sabotage = room.magic.sabotage or 0\n\nroom.shelter.sabotageMessage = room.shelter.sabotageMessage or 0\nroom.oven.sabotageMessage = room.oven.sabotageMessage or 0\nroom.electro.sabotageMessage = room.electro.sabotageMessage or 0\nroom.drug.sabotageMessage = room.drug.sabotageMessage or 0\nroom.water.sabotageMessage = room.water.sabotageMessage or 0\nroom.store.sabotageMessage = room.store.sabotageMessage or 0\nroom.magic.sabotageMessage = room.magic.sabotageMessage or 0\n\nroom.shelter.close = room.shelter.close or 0\nroom.oven.close = room.oven.close or 1\nroom.electro.close = room.electro.close or 0\nroom.drug.close = room.drug.close or 1\nroom.water.close = room.water.close or 0\nroom.store.close = room.store.close or 0\nroom.magic.close = room.magic.close or 1\n\nroom.shelter.sec = 1\nroom.oven.sec = 1\nroom.electro.sec = 2\nroom.drug.sec = 3\nroom.water.sec = 3\nroom.store.sec = 4\nroom.magic.sec = 4\n\n\n\ncandle = candle or {}\ncandle.location = candle.location or \"magic\"\ncandle.stat = candle.stat or 2\n\nexhausting = exhausting < 20 and exhausting or 20\npanic = panic < 5 and panic or 5\n\nladder = ladder or {}\nladder.location = ladder.location or \"storeLocked\"\n\nidolTrue = idolTrue or {}\nidolTrue.location = idolTrue.location or \"hiden\"\n\nyellowPills = yellowPills or {}\nyellowPills.location = yellowPills.location or \"drugTable\"\n\nwhitePills = whitePills or {}\nwhitePills.location = whitePills.location or \"drugTable\"\n\ndoll = doll or {}\ndoll.location = doll.location or \"hiden\"\n\nfunction itemTextF(item) -- function itself\nreport = \"Start: <plus>\"\n  -- table with all the data should already be  generated elsewhere\n  if itemText and type(itemText) == \"table\" and itemText.CT and type(itemText.CT) == \"table\" and itemText.MT and type(itemText.MT) == \"table\" then -- check if all necessory tables do exist\n    if itemText.CT[item] and type(itemText.CT[item]) == \"table\" and itemText.MT[item] and type(itemText.MT[item]) == \"table\" then-- check if tables do contain fields for required item\n      local a = itemText.CT[item]\n      if not a[1] then\n        itemText.CT[item] = itemText.MT[item]\n        a = itemText.CT[item]\n      end\n      local b = math.random(#a)\n      local text = a[b]\n      table.remove(itemText.CT[item], b)\n      return text\n    else\n      return \"Error: wrong item\"\n    end\n  else\n    return \"Error: no initial tables\"\n  end\nend\n\n\nend\n",
+        "text": "Установка стартовых условий"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn exhausting > 19 \nend",
+        "super_calculate": false,
+        "id": 26,
+        "calculate": true,
+        "lua_do": "function lua_do()\n\n-- кажется, это уже реализовано на 25 странице\n\n  --if location.current == 2 then  -- если отключка в убежище, то возвращение в убежище\n  --else -- определить, есть ли в текущем сегменте незапертые комнаты с возможными диверсиями\n\n-- local div = 0 -- число возможных целей диверсии\n\n--for k, v in pairs(room) do\n--  if v.sec == segment and v.sabotage == 0 and v.close ~=1 then\n--    div = div <plus> 1\n--  end\n--end\n--atest = div\n  --end\n\ngoTo = 25\nend",
+        "text": "Для истощения"
+      },
+      {
+        "lua_if": "function lua_if()\nreturn panic > 4\nend",
+        "super_calculate": false,
+        "id": 26,
+        "calculate": true,
+        "lua_do": "function lua_do()\ngoTo = 25\nend",
+        "text": "Для паники"
+      },
+      {
+        "id": 26,
+        "text": "Переменные:\nexhausting - физ. истощение\nexhaustingMin - минимальное значение возможного истощения\npanic - текущая паника\nlocation = {} - таблица с данными по локациям\nlocation.current -- текущая позиция\nlocation.sectionsTab = {a = {1,2,3}, b = {4,5}, c = {6,7,8}, d = {9,10,11}, e = {12}}- по секторам коридора, к которому относится текущее положение\n 1 - 1й сектор, 2 - убежище, 3 - котельная, 4 -второй сектор коридора, 5 - щитовая, 6 - третий сектор коридора, 7- таблеточная, 8 - кухня, 9 - четвертый сектор коридора, 10 - кладовка, 11 - ритуальная, 12 - лестница\n\nmoveDirect - 1 для движения вперёд по коридору, 0 - назад\n\ngoFrom - страница, с которой совершается переход\ngoTo - страница, на которую совершается переход",
+        "comment": true,
+        "need": [
+          10000
+        ]
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Истощение: \" .. exhausting .. \"/20\"\nend",
+        "lua_if": "function lua_if()\nreturn g.current_id ~= 2 and g.current_id ~= 4 and g.current_id ~= 27\nend",
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn g.current_id ~= 2 and g.current_id ~= 4 and g.current_id ~= 27\nend",
+        "comment": true,
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn \"Паника: \" .. panic .. \"/5\"\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn exhaustingMin > 19\nend",
+        "super_calculate": false,
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\ng.achiv = g.achiv or {}\ndialog({\n  header = \"Пленница кошмара\",\n  text = \"Элли устала так сильно, что не могла даже открыть глаза. Гудящие от бесконечного истощения мышцы продолжали сокращаться помимо её воли, причиняя невыносимую боль. Девушка больше не контролировала собственное тело. Элли полностью погрузилась в кошмар, стала лишь марионеткой в руках чего-то неведомого и тёмного, не в силах вырваться из его холодных цепких объятий. Казалось, её заточение в этой новой безумной реальности продлится целую вечность...\",\n  answers = {\n     {text = \"Конец\",\npressListener = function()\ng.achiv.exhausted = 1 showPage{id = 1}  hideDialog()\n     end}\n      }\n       })\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n\naxe = axe or {}\naxe.location = axe.location or \"electro\"\nbag = bag or {}\nbag.location= bag.location or \"shelter\"\nmop = mop or {}\nmop.location = mop.location or \"store\"\nkeys = keys or {}\nkeys.location = keys.location or \"magic\"\nextinguisher = extinguisher or {}\nextinguisher.location = extinguisher.location or \"electro\"\nlom = lom or {}\nlom.location = lom.location or \"oven\"\n\nroom = room or {}\nroom.shelter = room.shelter or {}\nroom.shelter.light = room.shelter.light or 0\n\nscreamer = screamer or {} -- table with all the data\n-- screamer.names = {\"movingBag\", \"insectInEar\", \"rats\", \"slipOnLiquid\", \"childsCry\", \"childsCryBehindtheDoor\", \"soundsBehindTheDoor\", \"crazyDanko1\", \"crazyDanko2\", \"lightOff\", \"lightOffShelter\" \"misticSounds\",}\n\nscreamer.movingBag = screamer.movingBag or {\navail = (g.current_id ~= 24 and bag.location ~= \"inHands\" and bag.location == currentPosition and 1 or 0),\nchanceIncrease = 8, chance = 0, title = \"Мешок!\", text = \"Боковым взглядом Элли уловила какое-то движение, затем услышала негромкое чавкание. Повернувшись к источнику звука, девушка увидела, как еле-еле покачивается из стороны в сторону мешок на полу. Ало-красная жидкость обильно сочилась из него через ткань и быстро темнела на воздухе. Элли хотелось бежать как можно быстрее и как можно дальше, но она смогла сделать лишь несколько неуверенных шагов и остановилась, переводя сбившееся дыхание.\", panic = 1, ignoreCD = 0}\nscreamer.movingBag.avail = (g.current_id ~= 24 and (bag.location ~= \"inHands\" and bag.location == currentPosition) and 1) or 0\n\nscreamer.rats = screamer.rats or {avail = currentPosition == \"cor2\" and 1 or 0, chanceIncrease = 10, chance = 30, title = \"Крысы!\", text = \"Крысы, копошащиеся у стены вдруг разом навострили уши. Некоторые из них уже повернули головы в сторону Элли и теперь смотрели на неё красными немигающими глазами. Замерев на месте и боясь пошевелиться, девушка затаила дыхание. Самая большая крыса поднялась на задние лапки и повела усами, словно принюхиваясь. Наконец, она отвернулась от испуганной Элли, остальные члены стаи последовали её примеру.\", panic = 1, ignoreCD = 0}\nscreamer.rats.avail = currentPosition == \"cor2\" and g.current_id ~= 11 and 1 or 0\n\nscreamer.slipOnLiquid = screamer.slipOnLiquid or {avail = (vars[currentPosition] and  vars[currentPosition].bagTrace and vars[currentPosition].bagTrace == 1 and g.current_id == 24 and 1) or 0, chanceIncrease = 10, chance = 0, title = \"Скользко!\", text = \"Элли попыталась перешагнуть через участок размазанной по полу багровой жидкости, натёкшей из злосчастного мешка, но переоценила свои возможности. Нога, приземлившаяся прямо в центр лужицы, предательски заскользила вперёд. Потеряв равновесие, девушка опрокинулась назад, лишь чудом не ударившись со всего размаху головой об стену.\", panic = 1, ignoreCD = 0}\nscreamer.slipOnLiquid.avail = (vars[currentPosition] and  vars[currentPosition].bagTrace and vars[currentPosition].bagTrace == 1 and ((g.current_id == 24 or g.current_id == 5 or g.current_id == 6 or g.current_id == 10 or g.current_id == 13) and 1)) or 0\n\nscreamer.childsCry = screamer.childsCry or {avail = 1, chanceIncrease = 3, chance = 0, title = \"Детский плач!\", text = \"Прислушавшись, Элли уловила неразборчивый звук вдали. Детский плач. Заливистый, надрывный, он становился всё громче и отчётливее. То переходя в пронзительный писк, то срываясь в хриплое сипение, крик пронзал душу холодом и отчаянием. Крик оставленного, крик проклятого судьбой. Крик младенца, потерявшего мать.<s>\n   Плач исчез внезапно, но Элли ещё долго стояла, вслушиваясь в мёртвую тишину вокруг.\", panic = 1, ignoreCD = 0}\nscreamer.childsCry.avail = room.magic.sabotage == 1 and 1 or 0\n\nscreamer.childsCryBehindtheDoor = screamer.childsCryBehindtheDoor or {avail = (g.previous_id == 18 and 1 or 0), chanceIncrease = 0, chance = 1000, title = \"Детский крик!\",  text = \"Из-за двери раздался громкий вскрик. Последовавшие за ним всхлипывания не продлились и нескольких секунд, когда всё заглушил мощный удар, от которого задрожала неприступная на вид система укреплений. Ещё один пронзительный визг, скрежет металла. И тишина. <s>\n   Элли замерла, будто оглушённая, не в силах убежать на ватных ногах, и лишь бешено хватала ртом воздух.\", panic = 2, ignoreCD = 1}\nscreamer.childsCryBehindtheDoor.avail = g.current_id == 18 and 1 or 0\n\nscreamer.soundsBehindtheDoor = screamer.soundsBehindtheDoor or {avail = (g.previous_id == 18 and 1 or 0), chanceIncrease = 50, chance = 0, title = \"Странные звуки!\",  text = \"Неожиданно раздался скрежет и дверь заходила ходуном под натиском невидимой силы. Элли вздрогнула и поспешила отойти подальше.\", panic = 1, ignoreCD = 0}\nscreamer.soundsBehindtheDoor.avail = g.previous_id  == 18 and 1 or 0\n\n\nscreamer.crazyDanko1 = screamer.crazyDanko1 or {avail = (g.current_id == 11 and  1 or 0), chanceIncrease = 0, chance = 1000, title = \"Чья-то рука!\",  text = \"Элли всматривалась в беспросветную темноту за решёткой, когда из-за прутьев неожиданно высунулась костлявая сморщенная рука. Скрюченные пальцы с длинными нестриженными ногтями схватили бы девушку за нос, если бы она вовремя не отпрянула назад. Рука тут же скрылась, а из тьмы комнаты раздался безумный хохот.\", panic = 2, 0, ignoreCD = 1}\nscreamer.crazyDanko1.avail = (g.current_id == 11 and  1 or 0)\n\nscreamer.crazyDanko2 = screamer.crazyDanko2 or {avail = (g.current_id == 11 and  1 or 0), chanceIncrease = 20, chance = -20, title = \"Лицо за решёткой!\",  text = \"Худое морщинистое лицо появилось за решёткой так неожиданно, что Элли вскрикнула и чуть не упала, отшатнувшись назад и потеряв равновесие. Старик громко расхохотался.\", panic = 1, 0, ignoreCD = 0}\nscreamer.crazyDanko2.avail = (g.current_id == 11 and  1 or 0)\n\nscreamer.lightOff = screamer.lightOff or {avail = 1, chanceIncrease = ((room.shelter.light == 1 and currentLocation == \"shelter\" and 0) or (room.shelter.light == 2 and currentLocation == \"shelter\" and 0) or (room.electro.sabotage == 1 and 5) or 2), chance = 0, title = \"Свет погас!\", text = \"Неожиданно, тусклый свет ламп замерцал. Недолгие вспышки резали по глазам, выхватывая из пустоты неровные силуэты и причудливые тени. В тихом жужжании электричества и нервных щелчках включающихся и выключающихся ламп Элли послышались звуки тяжёлых шагов.<s>\n   Девушке показалось, что прошла целая вечность, но наконец освещение вновь стало ровным. Звуки шагов исчезли.\", panic = 1, ignoreCD = 0} \nscreamer.lightOff.avail = ((inHands == \"candle\" and 0) or (room.electro.sabotage ~= 1 and 0) or 1)\n\nscreamer.lightOffShelter = screamer.lightOffShelter or {avail = (g.previous_id == 9 and 1 or 0), chanceIncrease = 0, chance = 2000, title = \"Свет погас!\", text = \"Девушка невольно зажмурилась из-за неровного мерцания лампы. Словно только этого и ожидая, лампа в последний раз моргнула и выключилась окончательно. Элли осталась в кромешном мраке.\", panic = 1, ignoreCD = 1}\nscreamer.lightOffShelter.avail = (g.previous_id == 9 and 1 or 0)\n\nscreamer.insectInEar = screamer.insectInEar or {avail = (room.shelter.light > 0 and room.shelter.bag == 1 and room.shelter.bugs == 0 and g.previous_id == 9 and screamer.lightOffShelter.chance < 50 and 1 or 0), chanceIncrease = 10, chance = 1000, title = \"Насекомое!\", text = \"Элли пришла в себя и встала. Ей потребовалось несколько секунд, чтобы почувствовать неладное. Пока девушка отдыхала, одно из насекомых заползло ей в ухо и теперь, встревоженное движением, начало неистово перебирать лапками, стараясь закопаться поглубже.<s>\n   Сморщившись от отвращения и глотая слёзы, Элли суетливо пыталась извлечь незваного гостя. С неприятным хрустом лопнул хрупкий панцирь и девушка наконец смогла вытащить уже не сопротивляющуюся липкую массу.\", panic = 2, ignoreCD = 1} -- after the rest if there is no bag and insects are inside the shelter \nscreamer.insectInEar.avail = (bag.location ~= \"shelter\" and room.shelter.bugs == 0 and room.shelter.light > 0 and  g.previous_id == 9 and 1 or 0)\n\nscreamer.misticSounds = screamer.misticSounds or {avail = 1, chanceIncrease = 4, chance = 0,  title = \"Странные звуки!\", text = \"Негромкие шаркающие звуки позади заставили Элли резко обернуться. Никого.\", panic = 1, ignoreCD = 0}\n\nend",
+        "text": "screamers",
+        "id": 26,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "   Элли в панике навалилась на дверь всем телом и тут же скорчилась от боли, ударившись рёбрами о массивный засов, который не замечала до этого момента. С усилием отодвинув тяжёлую заслонку, девушка распахнула дверь и зажмурилась от тусклого, но непривычного для глаз жёлтого света, освещающего длинный пустой коридор.\n   В лицо ударил холодный ветерок, сметая спёртый воздух и возвращая Элли подобие уверенности. Девушка неуклюже развернулась и заглянула в комнату, из которой так отчаянно пыталась выбраться мгновением ранее. Ни души.\n   Погруженное в сумрак помещение было завалено хламом. На полу, недалеко от кучи тряпья, на которой очнулась Элли, в полузасохшей тёмной лужице валялся мешок, вокруг которого роилось несметное множество каких-то крупных насекомых. \"Хорошо, что не крысы...\" – с облегчением выдохнула девушка, хотя один вид копошащихся гадов вызывал у неё тошноту.",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "   Сама комната казалась Элли смутно знакомой и вызывала необъяснимое ощущение безопасности. Пошарив наугад рукой по стене возле двери, девушка быстро нащупала выключатель. Загоревшаяся одинокая лампа лишь едва разбавила темноту тусклым, неприятно мерцающим светом. По крайней мере теперь можно было внимательно осмотреть помещение.\n   Обычная спальня, только разгромленная. Легко угадывалось, какие обломки были когда-то кроватью. Несколько ржавых пружин наверняка остались от истлевшего матраца. Гнездо из тряпок с ворохом прогнивших досок – бывший комод, а на стене выше него остался почерневший след от большого зеркала.\n   А вот набитый чем-то мешок, стекающая с него бурая лужица и тьма насекомых явно появились здесь не так давно.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Зайти в комнату",
+        "lua_do": "function lua_do()\ngoTo = 7\ngoFrom = 5\ninShelter  = 1\n\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 24,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\ngoTo = 5\ninShelter = 0\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "   Элли окинула мешок брезгливым взглядом: трогать его совсем не хотелось, но и терпеть такое соседство было не лучше.\n   Подобрав несколько тряпок, девушка намотала их на руки наподобие рукавиц и осторожно приблизилась к рассаднику насекомых. Со всей возможной аккуратностью она подцепила мешок за самый краешек и попыталась поднять, но не тут-то было: слишком тяжёл оказался груз.\n   Пришлось ухватить его основательно обеими руками и волоком тянуть к двери. Мешок относительно легко заскользил по полу, оставляя за собой полосу из густой бордовой жидкости. Встрепенувшиеся было насекомые поспешно вернулись к облюбовавшейся луже, хотя некоторые проявили интерес и к свежеоставленному следу.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nbag = bag or {}\n\nbag.location = \"inHands\"\ninHands = \"bag\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "   Со шваброй наперевес Элли сделала несколько решительных шагов в сторону кучки насекомых. Не до конца осознавая, чего можно от них ожидать, девушка смело поволокла гадов в сторону выхода, радуясь, что можно не прикасаться к ним руками.\n   Насекомые никак не отреагировали на столь грубое вмешательство, лишь некоторые пытались скрыться от неминуемой участи. Выброшенные за дверь гады быстро разбегались во все стороны, но обратно в спальню никто из них не пробрался. Элли изрядно устала, вылавливая самых пугливых из всех углов и щелей, бесконечно открывая и закрывая на засов старую дверь, но это того стоило. Больше никаких проклятых насекомых, ни одного!",
+    "answers": [
+      {
+        "id": 30,
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\nroom = room or {}\nroom.shelter = room.shelter or {}\nexhausting = (exhausting or 5) <plus> 5\nroom.shelter.bugs = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "   Девушка с облегчением выпустила из рук начинающий натирать ладони мешок. Ей показалось, что даже дышать теперь стало легче.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 31,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "   Элли брезгливо посмотрела на мешок, вокруг которого уже успела образоваться лужа, и с тяжёлым вздохом ухватилась обеими руками за грубую ткань.",
+    "answers": [
+      {
+        "isBack": true,
+        "id": 32,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nweight = 2\nend",
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "   Яркий свет в комнате заставил Элли зажмуриться на несколько секунд.\n   ",
+    "answers": [
+      {
+        "comment": true,
+        "id": 33,
+        "text": "Нет смысла идти к баллону, когда в руках что-то есть",
+        "middle_answer": true,
+        "lua_if": "function lua_if()\n\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nreturn lom.location == \"oven\" and (inHands ~= \"free\" and inHands ~= \"whitePills\" and inHands ~= \"yellowPills\") and room.oven.inFire ~= 1\n\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.firstVizit = (room.oven.firstVizit or 0) <plus> 1\n\n--При диверсии — начинается пожар, наши внутри что-то было (кроме лома) сгорает. чтобы пройти нужен огнетушитель. После этого можно не очищать вентиляцию.\n--в печи с помощью тряпок и свечи можно разжечь огонь и сжечь мешки и статуэтку обезьяны\nend",
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "id": 33
+      },
+      {
+        "id": 33,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\n\nroom.oven.inFire = room.oven.inFire or 0\nroom.oven.can = room.oven.can or 0\nextinguisher = extinguisher or {}\nextinguisher.location = extinguisher.location or \"electro\"\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nmop = mop or {}\nmop.location = mop.location or \"store\"\nbag = bag or {}\nbag.location = bag.location or \"shelter\"\nlocal text = \"\"\n\n    if room.oven.inFire == 0 then\ntext = \"В тесной комнате с грязными полом было сыро и неуютно. Толстые трубы, проходящие через всю комнату, и капающая с них вода вызывали ощущение подвала.<s>\n   В дальнем от входа углу стоял высокий, в человеческий рост, газовый баллон красного цвета.\" .. \n   ((lom.location == \"oven\" and  room.oven.firstVizit == 1 and \" Там же валялся увесистый ломик. Элли уже собиралась подойти к нему, когда услышала тихий свистяще-шипящий звук. Она настороженно принюхалась, но ничего не почувствовала. Тем не менее, девушка была уверена, что источником звука является баллон с газом. <s><s>\"Это совсем меняет дело...<s><s>\", – встревоженно произнесла она вслух.\") or\n   (lom.location == \"oven\" and  room.oven.firstVizit > 1 and \" Там же валялся увесистый ломик. Звук утекающего газа никуда не исчез, хотя Элли и не надеялась на это.\") or \n    (lom.location == \"ovenDoor\" and \" На полу возле двери был аккуратно пристроен небольшой ломик.\" or \"\"))\n-- .. (bag.location == \"oven\" and \" Прямо у входа лежал мешок, через ткань которого медленно сочилась густая красно-бурая жидкость.\" or \"\")\n-- .. (mop.location == \"oven\" and \" У стены возле двери лежала упавшая швабра.\" or \"\")\n\n     elseif room.oven.inFire == 1 then\ntext = \"Ещё до того, как девушка открыла глаза, в её ноздри ударил едкий запах гари. Сквозь густой дым иногда просвечивали отблески пламени, хотя гореть в комнате было особо нечему.\" .. (extinguisher.location == \"inHands\" and \"<s>\n   Чтобы осмотреть то, что осталось от помещения, нужно сперва потушить утихающий огонь.\" or \"<s>\n   Пока не стихнет пламя и не развеется дым, сделать тут хоть что-нибудь не удастся.\")\n\n     else text = \"Маленькая комната после пожара выглядела удручающе. Разорванный взрывом баллон, видимо, повредил трубы, и из пробоин шипел пар. В такой влажности запах гари почти не чувствовался, и если бы не почерневшие стены, то было бы сложно догадаться о случившейся здесь катастрофе.\" ..\n(lom.location == \"oven\" and \" В дальнем углу лежал у небольшой лужи весь покрывшийся сажей ломик.\" or \"\")\n.. (lom.location == \"ovenDoor\" and \" На полу возле двери был аккуратно пристроен небольшой ломик.\" or \"\")\n-- .. (bag.location == \"oven\" and \" Прямо у входа лежал мешок, через ткань которого медленно сочилась густая красно-бурая жидкость.\" or \"\")\n-- .. (mop.location == \"oven\" and \" У стены возле двери лежала упавшая швабра.\" or \"\")\n     end\n text = text .. (extinguisher.location == \"used\" and \" В центре помещения валялся опустевший огнетушитель.\" or \"\")\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 37,
+        "text": "Подойти к баллону",
+        "lua_if": "function lua_if()\n\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nreturn lom.location == \"oven\" and (weight == 0 or inHands == \"whitePills\" or inHands == \"yellowPills\") and room.oven.inFire == 0\n\nend",
+        "lua_do": "function lua_do()\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      },
+      {
+        "id": 45,
+        "text": "Тушить пожар",
+        "lua_if": "function lua_if()\nextinguisher = extinguisher or {}\nextinguisher.location = extinguisher.location or  \"electro\"\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.inFire = room.oven.inFire or 0\n\nreturn room.oven.inFire == 1 and extinguisher.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\ninHands = \"free\"\nweight = 0\nextinguisher.location = \"used\"\nend"
+      },
+      {
+        "id": 24,
+        "text": "Выйти в коридор",
+        "lua_do": "function lua_do()\ngoTo = 5\ngoFrom = 33\n\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\n\nend"
+      },
+      {
+        "comment": false,
+        "id": 33,
+        "text": "Изменение room.oven.inFire",
+        "need": 1000,
+        "lua_do": "function lua_do()\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.inFire = (room.oven.inFire == 0 and 1) or (room.oven.inFire == 1 and 2) or 0\nend"
+      },
+      {
+        "id": 48,
+        "text": "Текст для мержа: сообщение о диверсии",
+        "lua_text": "function lua_text()\nlocal R = \"oven\"\nlocal text = \"\"\nif room[R].sabotageMessage == 2 then\ntext = \" Девушка чувствовала, что кто-то побывал в комнате совсем недавно.\"\nroom[R].sabotageMessage = 3\nend\n\n\nif room[R].sabotageMessage == 0 then\nroom[R].sabotageMessage = 1\nend\n\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 69,
+        "text": "Взять ломик",
+        "lua_if": "function lua_if()\n\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nreturn lom.location == \"oven\" and (weight == 0 or inHands == \"whitePills\" or inHands == \"yellowPills\") and room.oven.inFire == 2 and inHands == \"free\"\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "   Элли долго перебирала позвякивающие ключи в связке, пытаясь найти подходящий. Как назло, все они выглядели одинаково и девушке приходилось всовывать в замочную скважину каждый. Некоторые из них не подходили совсем, другие мягко погружались внутрь, вселяя в сердце Элли робкую надежду, но не проворачивались. Несколько раз девушка теряла воображаемую границу, отделяющую уже проверенные ключи от остальных, и тогда приходилось всё начинать сначала.\n   Спустя какое-то время подходящий ключ был всё-таки найден. ",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nroom = room or {}\n if g.previous_id == 8 then\nroom.oven.close = (room.oven.close == 1 and 0) or (room.oven.close == 0 and 1)\n elseif g.previous_id == 64 then\nroom.drug.close = (room.drug.close == 1 and 0) or (room.drug.close == 0 and 1)\nend\nend",
+        "id": 34
+      },
+      {
+        "id": 34,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nif g.previous_id == 8 then\nreturn (room.oven.close == 1 and \"С негромким щелчком он провернулся несколько раз, и Элли почувствовала, как исчезла невидимая сила, блокирующая дверь.\") or (room.oven.close == 0 and \"С неприятным скрежетом он провернулся наполовину и застрял, так что Элли пришлось немного прижать дверь рукой, чтобы закончить начатое и извлечь ключ.\")\nelseif g.previous_id == 64 then\nreturn (room.drug.close == 1 and \"С негромким щелчком он провернулся несколько раз, и Элли почувствовала, как исчезла невидимая сила, блокирующая дверь.\") or (room.drug.close == 0 and \"С неприятным скрежетом он провернулся наполовину и застрял, так что Элли пришлось немного прижать дверь рукой, чтобы закончить начатое и извлечь ключ.\")\nelse return \"\"\nend\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "   Элли взяла топор обеими руками, даже не представляя, как правильно его использовать. Она сделала несколько неуклюжих попыток замахнуться им над головой, но орудие лишь ухало мимо намеченной цели – участка двери, на котором располагался замок.\n   Сменив тактику, девушка перехватила топор и стала замахиваться с плеча. Так дело пошло бодрее. Снова и снова лезвие с гулким звуком впивалось в дерево и вырывало щепки. Позвякивал металл, когда сталь ударялась о сталь, и тогда Элли морщились от сильной отдачи.\n   Через некоторое время натруженные руки Элли с дрожью извлекли из распотрошённого полотна маленький замок. Мокрая насквозь от пота девушка удовлетворённо осматривала результат своих усилий.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nroom = room or {}\n if g.previous_id == 8 then\nroom.oven = room.oven or {}\nroom.oven.close = 2\n elseif g.previous_id == 64 then\nroom.drug.close = room.drug.close or 1\nroom.drug.close = 2\nend\n\nexhausting = exhausting <plus> 3\nend",
+        "id": 35
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "   Элли миллион раз видела в кино, как это делается, но всё же не была до конца уверена в разумности своей затеи. Девушка долго крутилась возле двери и примерялась к ней то одним, то другим боком, не в силах решиться на необходимое, но незнакомое действие.\n   Наконец, собравшись с силами, Элли отошла на несколько шагов назад. Короткий разбег. Удар. Девушка как резиновый мячик отскочила от жёсткой поверхности и рухнула на пол.\n   Ушибленное плечо тут же загудело, из глаз брызнули слёзы. О чём она только думала? Элли медленно поднялась на ноги и осмотрела поврежденную руку. Плечо покраснело и начало опухать – кажется скоро здесь выскочит знатный синяк.",
+    "answers": [
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nexhaustingMin = exhaustingMin <plus> 2\nroom.oven.failDoor = 1\nexhausting = exhausting <plus> 2\nend",
+        "id": 36
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "   Взвесив все риски, Элли решила во что бы то ни стало добраться до баллона и завладеть бесценным ломиком. Нужно было всего лишь пройти несколько метров, преодолев свои страх и усталость.\n   Первый шаг, второй... ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n--Старт серии страниц для прохода к баллону. 3 или 4 шага, на каждом можно поймать плюс к панике в зависимости от условий\n-- пыталась хоть раз войти со свечой\n-- усталости больше половины\n-- закружилась голова, вдруг газ ядовитый? — всегда\n-- у баллона можно взять ломик и уйти или попытаться закрыть газ — ничего не выходит, критический плюс к панике\n\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.tryEnterWithCandle = room.oven.tryEnterWithCandle or 0\n\nend",
+        "calculate": true,
+        "id": 37,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 37,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ncandleTrigger = candleTrigger or 0\nlocal text = candleTrigger == 0 and \"<s><s>\"Не так уж и страшно,<s><s>\" – подумала Элли. – <s><s>\"Раз уж он здесь стоит какое-то время, то, наверное, вполне безопасен.<s><s>\"\" or \"Элли внезапно поняла, что заполняющий комнату газ мог просочиться и в коридор. А она ходила там с горящей свечой! Наверное, только по счастливой случайности не произошло катастрофы. От этой мысли сердце девушки ушло в пятки, а ноги подкосились.\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "Выйти из комнаты",
+        "lua_do": "function lua_do()\ngoFrom = 37\ngoTo = 5\nend"
+      },
+      {
+        "id": 38,
+        "text": "Идти дальше",
+        "lua_do": "function lua_do()\npanic = panic <plus> (candleTrigger == 1 and 2 or 1)\nend"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "   Ещё несколько шагов вперёд. Свистящий звук усилился. Он, как назойливый комар, не давал забыть о незримой опасности.\n   \"Здесь нет ничего, что могло бы вызвать взрыв или пожар, – пыталась успокоить себя Элли. – Может быть, газ вообще негорючий. Может, он ядовитый?\"\n   Рассуждения вышли не самые обнадёживающие. И вот, судорожно перебирая в памяти всё известные ей газы, Элли уже стала отмечать у себя возможные признаки отравления. Закружилась голова, всё тело пропотело, к горлу подступила тошнота. Может быть это просто слабость и душный воздух?",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Выбежать из комнаты",
+        "lua_do": "function lua_do()\ngoFrom = 37\ngoTo = 5\nend"
+      },
+      {
+        "id": 39,
+        "text": "Идти дальше",
+        "lua_do": "function lua_do()\npanic = panic <plus> 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "   \"Всё в порядке, всё в порядке... – как мантру повторяла Элли, делая ещё несколько шагов вперёд. – И я в любой момент могу убежать отсюда\".\n   Она прислушалась к ощущениям собственного тела. ",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal text =\n(exhausting  > 13 and \"Уставшие ноги отозвались болезненной судорогой и девушка поняла что в таком состоянии она никуда не убежит. Нужно уходить сейчас, пока остались силы. Если ещё не поздно. Элли напряжённо оглянулась назад. Несколько пройденных шагов от двери сейчас казались бесконечно огромным расстоянием. Что-то внутри Элли дрогнуло и она застыла на месте.\" or \"Уставшие ноги пока не сводило судорогой, ладонь послушно сжалась в кулак. Уже неплохо. Да и комнатка совсем небольшая, от двери девушку отделяли всего несколько уже пройденных шагов. \")\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "Выбежать из комнаты",
+        "lua_do": "function lua_do()\ngoFrom = 37\ngoTo = 5\nend"
+      },
+      {
+        "id": 40,
+        "text": "Идти дальше"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "   Ещё один шаг. И ещё один, последний. Стоя у самого баллона, Элли теперь не могла думать о чём-то кроме напряжённого шипения. Она глубоко вдохнула и закашлялась. Пора действовать.",
+    "answers": [
+      {
+        "id": 41,
+        "text": "Попытаться закрыть баллон"
+      },
+      {
+        "id": 42,
+        "text": "Поднять ломик и бежать из комнаты",
+        "lua_if": "function lua_if()\nreturn inHands == \"free\"\nend"
+      },
+      {
+        "id": 73,
+        "text": "Выбросить таблетки",
+        "lua_if": "function lua_if()\nreturn inHands ~= \"free\"\nend",
+        "lua_do": "function lua_do()\ninHands = \"free\"\nvars[room.drug.wrightColour .. \"Pills\"] = vars[room.drug.wrightColour .. \"Pills\"] or {}\nvars[room.drug.wrightColour .. \"Pills\"].location = \"lost\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "   Элли неуверенно подалась вперёд, потеряла равновесие и чуть не упала прямо на баллон. Она снова закашлялась. Нужно скорее закрыть этот ужасный газ.\n   Вот и вентиль, в самом верху конструкции. Роста девушки не хватало, чтобы как следует его разглядеть. Элли протянула руку наверх и тут же её отдёрнула, ощутив неприятный холодок на коже.\n   После секундного замешательства и борьбы с инстинктом самосохранения, девушка повторила попытку. Проскользив по гладкому корпусу, пальцы Элли нащупали неровный, будто смятый выступ вентиля. Она попыталась провернуть кран. Ничего не вышло. Вспотевшие ладони соскальзывали с неподатливого механизма.\n   Девушка вновь и вновь тянулась ослабевшими руками вверх. Она до боли в суставах впивалась пальцами в холодный металл, заливаясь потом и слезами, задыхаясь от кашля. Нет, никак. Ей ни за что не справиться.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\npanic = 5\nend",
+        "text": "Дальше",
+        "comment": false,
+        "id": 25
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "   Наклоняться к полу, стоя на одеревеневших ногах, было непросто. Непросто было и зацепить дрожащими, мокрыми от пота пальцами тяжёлый ломик. И совсем невыносимы были попытки подняться с этой ношей в руках. Пыхтя, как тяжелоатлет, Элли рывком выпрямила спину и чуть не опрокинулась назад.\n   Едва не заплакав от облегчения, девушка кое-как побрела к выходу из комнаты, уже совсем не обращая внимания на шипящий у неё за спиной газ. Она сама не заметила, как вышла в коридор.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nlom = lom or {}\nlom.location = lom.location or 0\ninHands = \"lom\"\nlom.location = \"inHands\"\nweight = 1\nend\n"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "   Элли наклонилась, чтобы подобрать ломик. Его тяжесть сразу же неприятно отозвалась в уставших мышцах.",
+    "answers": [
+      {
+        "id": 43,
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\nweight = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "   Недолго думая, Элли пристроила ломик прямо на полу возле одной из стен. С пустыми руками она сразу почувствовала необычайную лёгкость.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "id": 44
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "   Элли никогда раньше не приходилось пользоваться огнетушителем, и предстоящее мероприятие вызвало у неё почти животный ужас. Девушка старалась успокоить себя тем, что самое опасное уже произошло без её участия. Что вообще сейчас могло пойти не так?\n   ",
+    "answers": [
+      {
+        "id": 45,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nextinguisher.wiped = extinguisher.wiped or 0\nlocal text = extinguisher.wiped == 0 and \n\"Элли навела длинный раструб огнетушителя на ближайший дымящийся участок пола и попыталась нажать единственный подвижный рычажок. Безуспешно. Девушке пришлось поднять тяжёлый груз на уровень глаз, чтобы увидеть предохранительное кольцо, блокирующее все её усилия.<s>\n   Негромко выругавшись, Элли выдернула кольцо и повторила попытку. Мощный поток холода вырвался наружу, обволакивая раскалённые поверхности и разгоняя серую дымку. Но порадоваться успеху девушка не успела: всё ощутимее обжигал холодом её голые руки стремительно замерзающий огнетушитель и удерживать его дальше становилось все труднее.<s>\n   Элли заметалась в ловушке между льдом и пламенем, не в силах бросить ценный груз, понимая, что второго шанса потушить огонь у неё не будет.\"\n  or\n\"Элли навела длинный раструб огнетушителя на ближайший дымящийся участок пола и попыталась нажать единственный подвижный рычажок. Безуспешно. Девушке пришлось поднять тяжёлый груз на уровень глаз, чтобы увидеть предохранительное кольцо, блокирующее все её усилия.<s>\n   Негромко выругавшись, Элли выдернула кольцо и повторила попытку. Мощный поток холода вырвался наружу, обволакивая раскалённые поверхности и разгоняя серую дымку. Девушка порадовалась, что успела обмотать руки тряпками: даже так стремительно охлаждающийся раструб до онемения обмораживал ладони, а уж что стало бы с незащищёнными руками, и думать было страшно.<s>\n   Элли показалось, что она провозилась целую вечность, прежде чем опустевший огнетушитель с гулким звуком упал на заиндевевший пол. К этому времени дым уже успел развеяться – должно быть, исправно сработала вентиляция. Еле держась на ногах от усталости, девушка окинула взглядом то, что осталось от комнаты.\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "id": 45,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nroom = room or {}\nroom.oven = room.oven or {}\nroom.oven.inFire = 2\n\nextinguisher = extinguisher or {}\nextinguisher.wiped = extinguisher.wiped or 0\n\nif extinguisher.wiped == 0 then\n  panic = 5\n  exhaustingMin = exhaustingMin <plus> 2\nelse exhausting = exhausting <plus> 2\nend\n\nend"
+      },
+      {
+        "id": 25,
+        "text": "Дальше",
+        "comment": false,
+        "lua_if": "function lua_if()\n-- переход на панику\nreturn panic > 4\nend"
+      },
+      {
+        "id": 33,
+        "text": "Дальше",
+        "lua_if": "function lua_if()\nreturn panic < 5\nend"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "   Элли взяла в руки швабру и порадовалась, что та совсем не тяжёлая.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 46,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "   Элли несколько неуклюже пристроила к стене возле двери старую швабру, и та начала медленно заваливаться.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 47,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Страница с предметами",
+    "answers": [
+      {
+        "id": 48,
+        "super_calculate": false,
+        "lua_do": "function lua_do() --For Items in hands\n-- need to write down those are already in the quest!!!\n\nitemText = itemText or {}\nitemText.MT = {}\nitemText.MT.doll = {\" Кукла в руке Элли неприятно зашелестела.\" , \" Пальцы, которыми Элли держала куклу, непроизвольно сжались.\"}\n\nitemText.MT.ladder = {\" С трудом выровняв лестницу, Элли опёрлась на неё и наконец смогла перевести дыхание.\", \" Оставив попытки поставить лестницу вертикально, Элли перехватила её двумя руками, уперев одним концом в стену.\",  \" Элли остановилась, борясь с желанием бросить тяжёлую лестницу прямо здесь и хоть немного отдохнуть.\"}\n\nitemText.MT.keys = {\" Элли вздрогнула, когда звякнули без видимой на то причины ключи на связке.\", \" Элли нервно перебирала пальцами ключи на связке.\", \" Перебирая пальцами ключи на связке, Элли больно поцарапалась острым выступом на одном из них.\"}\n\nitemText.MT.axe = {\" Топор неприятно оттягивал и без того уставшие руки девушки.\", \" Девушка с опаской взглянула на лезвие топора в своих руках.\", \" Рукоять топора в ладонях девушки не придавала ей уверенности.\"}\n\nitemText.MT.extinguisher = {\" Девушка облегчённо опустила тяжёлый огнетушитель на пол возле своих ног.\", \" Девушка попыталась поудобнее ухватить огнетушитель, но ей это так и не удалось.\", \" Проклиная тяжесть огнетушителя, девушка опасливо оглянулась.\"}\n\nitemText.MT.mop = {\" Девушка держала в руках старую швабру.\", \" Элли опёрлась на старую швабру, словно на трость.\", \" Девушка крепче сжала в ладони шероховатую швабру.\"}\n\nitemText.MT.bag = {\" Элли воспользовалась моментом, чтобы перевести дыхание и перехватить тяжеленный мешок поудобнее.\",\" Элли сделала несколько наклонов, чтобы размять затёкшую от тяжёлого мешка спину.\"}\n\nitemText.MT.candle = {\" Капля воска скатилась со свечи и несильно обожгла ладонь девушки.\", \" Пламя свечи в руках Элли задрожало от неизвестно откуда повеевшего ветерка.\",\" Элли несколько секунд всматривалась в слабое пламя свечи.\"}\n\nitemText.MT.lom = {\" Элли переложила увесистый ломик из одной ладони в другую и с облегчением встряхнула уставшей рукой\",\" Ломик в руках Элли придал ей уверенности.\", \" Ломик едва не выскользнул из вспотевшей ладони Элли и она ухватила его обеими руками.\"}\n\nitemText.MT.whitePills = {\" Элли пожалела, что не пересчитала таблетки, как только взяла их.\", \" Держать пригоршню таблеток в ладони было неудобно, но не класть же их на грязный пол.\", \"Элли на секунду задумалась, каким эффектом могли обладать другие таблетки.\"}\n\nidolTrue.location = idolTrue.location or \"hiden\"\nitemText.MT.idolTrue = {\" Элли казалось, что зажатая в её руке фигурка пульсирует в такт сердцебиения самой девушки.\", \" Элли держала найденную фигурку обезьяньей головы, стараясь не прикасаться к острым клыкам в открытой пасти.\", \" Элли почувствовала, как тёплая вязкая капля покатилась по поверхности зажатой в руках фигурки и размазалась в ладони девушки.\"}\n\nitemText.CT = itemText.CT or itemText.MT\n\nif yellowPills.location == \"inHands\" or whitePills.location == \"inHands\" then\n  local a = vars[room.drug.wrightColour .. \"Pills\"].number\n  if a == 3 then\n    itemText.MT.whitePills[1] = \" Элли крепче сжала в кулаке три оставшиеся таблетки.\"\n     itemText.CT.whitePills[1] = itemText.MT.whitePills[1]\n  elseif a == 2 then\n   itemText.MT.whitePills[1] = \" Элли разжала кулак и проверила, что таблеток осталось всего две.\"\n    itemText.CT.whitePills[1] = itemText.MT.whitePills[1]\n  elseif a == 1 then itemText.MT.whitePills[1] = \" На мгновение Элли показалось, что в зажатом кулаке ничего нет. Она спешно разжала его и успокоилась, заметив, что последняя таблетка всё ещё там.\"\n   itemText.CT.whitePills[1] = itemText.MT.whitePills[1]\nend\nend\nitemText.MT.yellowPills = itemText.MT.whitePills\nitemText.CT.yellowPills = itemText.MT.yellowPills\n\ncandle = candle or {location = \"magic\", stat = 2}\nif candle.stat == 1 then \nitemText.MT.candle = {}\nitemText.MT.candle[1] = \" Потухшая свеча медленно остывала в ладони Элли.\"\nitemText.CT.candle = itemText.MT.candle\nend\n\nfunction itemTextF(item) -- function itself\nreport = \"Start: <plus>\"\n  -- table with all the data should already be  generated elsewhere\n  if itemText and type(itemText) == \"table\" and itemText.CT and type(itemText.CT) == \"table\" and itemText.MT and type(itemText.MT) == \"table\" then -- check if all necessory tables do exist\n    if itemText.CT[item] and type(itemText.CT[item]) == \"table\" and itemText.MT[item] and type(itemText.MT[item]) == \"table\" then-- check if tables do contain fields for required item\n      local a = itemText.CT[item]\n      if not a[1] then\n        itemText.CT[item] = itemText.MT[item]\n        a = itemText.CT[item]\n      end\n      local b = math.random(#a)\n      local text = a[b]\n      table.remove(itemText.CT[item], b)\n      return text\n    else\n      return \"Error: wrong item\"\n    end\n  else\n    return \"Error: no initial tables\"\n  end\nend\nend",
+        "text": "Данные и функция для текста предметов в руках",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "id": 59,
+        "text": "Мержи описания предметов на локациях",
+        "run": [
+          59
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\n\nlocal a = 0\n\nitems = items or {\"axe\", \"bag\", \"mop\", \"keys\", \"extinguisher\", \"lom\", \"ladder\", \"candle\", \"doll\", \"idolTrue\"}\n\nfor k, v in pairs (items) do\n  if not vars[v] then vars[v] = {}\n  end\nend\naxe = axe or {}\naxe.location = axe.location or \"electro\"\nbag = bag or {}\nbag.location= bag.location or \"shelter\"\nmop = mop or {}\nmop.location = mop.location or \"store\"\nkeys = keys or {}\nkeys.location = keys.location or \"magic\"\nextinguisher = extinguisher or {}\nextinguisher.location = extinguisher.location or \"electro\"\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nladder = ladder or {}\nladder.location = ladder.location or \"electro\"\ndoll = doll or {}\ndoll.location = doll.location or \"hiden\"\nidolTrue = idolTrue or {}\nidolTrue.location = idolTrue.location or \"hiden\"\ncandle = candle or {}\ncandle.location = candle.location or \"magic\"\n\nfor k, v in pairs (items) do\n  if vars[v].location == currentPosition or vars[v].location == \"inHands\" then\n    a = a <plus> 1\n  end\nend\n\n-- добавить для всех предметов и их начальных локаций\na = (bag.location == \"shelter\" and currentPosition == \"shelter\") and a - 1 or a\na = (lom.location == \"oven\" and currentPosition == \"oven\") and a - 1 or a\na = (keys.location == \"magic\" and currentPosition == \"magic\") and a - 1 or a\na = (axe.position == \"electro\" and currentPosition == \"electro\") and a - 1 or a\na = (extinguisher.position == \"electro\" and currentPosition == \"electro\") and a - 1 or a\na = (mop.position == \"store\" and currentPosition == \"store\") and a - 1 or a\n-- a = (currentPosition == \"drug\" and whitePills.location ==\"drug) and a - 1 or a\n--a = (currentPosition == \"drugTable\"\" and \n\naAtest = a\n\nreturn false -- a > 0\nend",
+        "id": 5,
+        "text": "·   ·   ·   ",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nlocal text = \"\"\nif room[currentPosition] and room[currentPosition].sabotageMessage == 2 then\ntext = \" Девушка чувствовала, что кто-то побывал в комнате совсем недавно.\"\nroom[currentPosition].sabotageMessage = 3\nend\n\nreturn text\nend",
+        "id": 48,
+        "text": "Текст для мержа: сообщение о диверсии",
+        "lua_if": "function lua_if()\nreturn false\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\ninHands = inHands or \"free\"\nreturn inHands ~= \"free\"\nend",
+        "id": 48,
+        "text": "Текст для мержа: предметы в руках",
+        "lua_text": "function lua_text()\n\nfunction itemTextF(item) -- function itself\nreport = \"Start: <plus>\"\n  -- table with all the data should already be  generated elsewhere\n  if itemText and type(itemText) == \"table\" and itemText.CT and type(itemText.CT) == \"table\" and itemText.MT and type(itemText.MT) == \"table\" then -- check if all necessory tables do exist\n    if itemText.CT[item] and type(itemText.CT[item]) == \"table\" and itemText.MT[item] and type(itemText.MT[item]) == \"table\" then-- check if tables do contain fields for required item\n      local a = itemText.CT[item]\n      if not a[1] then\n        itemText.CT[item] = itemText.MT[item]\n        a = itemText.CT[item]\n      end\n      local b = math.random(#a)\n      local text = a[b]\n      table.remove(itemText.CT[item], b)\n      return text\n    else\n      return \"Error: wrong item\"\n    end\n  else\n    return \"Error: no initial tables\"\n  end\nend\n\n\nlocal text = itemTextF(inHands)\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 32,
+        "text": "Взять мешок с собой",
+        "lua_if": "function lua_if()\nbag = bag or {}\nbag.location = bag.location or \"shelter\"\n\nreturn bag.location == currentPosition and (inHands == \"free\" or not inHands) and currentPosition ~= \"shelter\"\nend",
+        "lua_do": "function lua_do()\nbag.location = \"inHands\"\ninHands = \"bag\"\nweight = 2\nend"
+      },
+      {
+        "id": 31,
+        "text": "Оставить мешок здесь",
+        "lua_if": "function lua_if()\nreturn inHands == \"bag\"\nend",
+        "lua_do": "function lua_do()\nbag.location = currentPosition\ninHands = \"free\"\nweight = 0\nend\n"
+      },
+      {
+        "id": 43,
+        "text": "Взять ломик с собой",
+        "lua_if": "function lua_if()\nlom = lom or {}\n\n\nlom.location = lom.location or \"oven\"\nreturn ( (lom.location ~= \"oven\" and lom.location == currentPosition) or (lom.location == \"ovenDoor\" and currentPosition == \"oven\") ) and (inHands == \"free\" or not inHands)\nend",
+        "lua_do": "function lua_do()\nlom.location = \"inHands\"\ninHands = \"lom\"\nweight = 1\nend"
+      },
+      {
+        "id": 44,
+        "text": "Оставить ломик здесь",
+        "lua_if": "function lua_if()\nlom = lom or {}\nlom.location = lom.location or \"oven\"\nreturn lom.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\ninHands = \"free\"\nlom.location = currentPosition == \"oven\" and \"ovenDoor\" or currentPosition\nweight = 0\nend"
+      },
+      {
+        "id": 46,
+        "text": "Взять швабру с собой",
+        "lua_if": "function lua_if()\nweight = weight or 0\nmop = mop or {}\nmop.location = mop.location or \"store\"\n\nreturn mop.location == currentPosition and weight == 0\nend",
+        "lua_do": "function lua_do()\ninHands = \"mop\"\nweight = 0.5\nmop = mop or {}\nmop.location = \"inHands\"\nend"
+      },
+      {
+        "id": 47,
+        "text": "Оставить швабру здесь",
+        "lua_if": "function lua_if()\nmop = mop or {}\nmop.location = mop.location or \"store\"\nreturn mop.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\nmop.location = currentPosition\ninHands = \"free\"\nweight = 0\nend"
+      },
+      {
+        "id": 50,
+        "text": "Взять связку ключей с собой",
+        "lua_if": "function lua_if()\nweight = weight or 0\n\nreturn keys.location == currentPosition and weight  == 0\nend",
+        "lua_do": "function lua_do()\ninHands = \"keys\"\nweight = 0.5\nkeys.location = \"inHands\"\nend"
+      },
+      {
+        "id": 51,
+        "text": "Оставить связку ключей здесь",
+        "lua_if": "function lua_if()\nreturn keys.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\nkeys.location = currentPosition\ninHands = \"free\"\nweight = 0\nend"
+      },
+      {
+        "id": 52,
+        "text": "Взять топор с собой",
+        "lua_if": "function lua_if()\nweight = weight or 0\n\nreturn ((currentPosition ~= \"electro\" and axe.location == currentPosition) or (currentPosition == \"electro\" and axe.location == \"electroFloor\")) and weight == 0\nend",
+        "lua_do": "function lua_do()\ninHands = \"axe\"\nweight = 1\naxe.location = \"inHands\"\nend"
+      },
+      {
+        "id": 53,
+        "text": "Оставить топор здесь",
+        "lua_if": "function lua_if()\nreturn axe.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\naxe.location = currentPosition == \"electro\" and \"electroFloor\" or currentPosition\ninHands = \"free\"\nweight = 0\nend"
+      },
+      {
+        "id": 54,
+        "text": "Взять огнетушитель с собой",
+        "lua_if": "function lua_if()\nweight = weight or 0\n\nreturn ((extinguisher.location == \"electroFloor\" and  currentPosition == \"electro\") or (currentPosition ~= \"electro\" and extinguisher.location == currentPosition )) and weight == 0\nend",
+        "lua_do": "function lua_do()\ninHands = \"extinguisher\"\nweight = 1\nextinguisher.location = \"inHands\"\nend"
+      },
+      {
+        "id": 55,
+        "text": "Оставить огнетушитель здесь",
+        "lua_if": "function lua_if()\nreturn extinguisher.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\nextinguisher.location = (currentPosition == \"electro\" and \"electroFloor\") or (currentPosition ~= \"electro\" and currentPosition)\ninHands = \"free\"\nweight = 0\nend"
+      },
+      {
+        "id": 57,
+        "text": "Взять лестницу с собой",
+        "lua_if": "function lua_if()\n\nreturn ladder.location == currentPosition and inHands == \"free\"\nend",
+        "lua_do": "function lua_do()\ninHands = \"ladder\"\nweight = 2\nladder.location = \"inHands\"\nend"
+      },
+      {
+        "id": 58,
+        "text": "Оставить лестницу здесь",
+        "lua_if": "function lua_if()\nreturn ladder.location == \"inHands\"\nend",
+        "lua_do": "function lua_do()\nladder.location =  currentPosition\ninHands = \"free\"\nweight = 0\nend"
+      },
+      {
+        "id": 70,
+        "text": "Проглотить таблетку",
+        "lua_if": "function lua_if()\nreturn whitePills.location == \"inHands\" or yellowPills.location == \"inHands\"\nend"
+      },
+      {
+        "id": 76,
+        "text": "Взять фигурку с собой",
+        "lua_if": "function lua_if()\n\nreturn currentPosition == idolTrue.location and inHands == \"free\" and weight == 0\nend",
+        "lua_do": "function lua_do()\nidolTrue.location = \"inHands\"\ninHands = \"idolTrue\"\nweight = 1\nend"
+      },
+      {
+        "id": 78,
+        "text": "Оставить фигурку здесь",
+        "lua_if": "function lua_if()\nreturn idolTrue.location == \"inHands\" \nend\n",
+        "lua_do": "function lua_do()\nidolTrue.location = currentPosition\ninHands = \"free\"\nweight = 0\nend"
+      },
+      {
+        "id": 81,
+        "text": "Выбросить свечу",
+        "lua_if": "function lua_if()\nreturn inHands == \"candle\"\nend"
+      },
+      {
+        "id": 83,
+        "text": "Взять куклу с собой",
+        "lua_if": "function lua_if()\n\nreturn doll.location == currentPosition and\ninHands == \"free\" and\nweight == 0\nend",
+        "lua_do": "function lua_do()\ndoll.location = \"inHands\"\ninHands = \"doll\"\nweight = 0.5\npanic = panic <plus> 1\nend"
+      },
+      {
+        "id": 84,
+        "text": "Оставить куклу здесь",
+        "lua_if": "function lua_if()\nreturn inHands == \"doll\"\nend",
+        "lua_do": "function lua_do()\ndoll.location = currentPosition\ninHands = \"free\"\nweight = 0\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 48,
+        "calculate": true,
+        "lua_do": "function lua_do()\nlocal a = 0\nif (bag.location == currentPosition and currentPosition ~= \"shelter\") or\n(lom.location ~= \"oven\" and lom.location == currentPosition) or\n(lom.location == \"ovenDoor\" and currentPosition == \"oven\") or\n(mop.location == currentPosition) or\n(keys.location == currentPosition) or\n(currentPosition ~= \"electro\" and axe.location == currentPosition) or\n(currentPosition == \"electro\" and axe.location == \"electroFloor\") or\n(extinguisher.location == \"electroFloor\" and  currentPosition == \"electro\") or (currentPosition ~= \"electro\" and extinguisher.location == currentPosition) or\n(ladder.location == currentPosition) or\n(currentPosition == idolTrue.location) or\n(doll.location == currentPosition ) or (currentPosition == \"magic\") or (whitePills.location == currentPosition) or\n(yellowPills.location == currentPosition)\nthen\na = a <plus> 1\nend\nitemAtCurrentLocation = a\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "lua_if": "function lua_if()\n\nreturn itemAtCurrentLocation > 0 and inHands ~= \"free\"\nend",
+        "middle_answer": true,
+        "text": "Невозможно взять что-либо ещё, пока руки заняты.",
+        "id": 48,
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Tests",
+    "answers": [
+      {
+        "id": 48,
+        "super_calculate": false,
+        "lua_do": "function lua_do() --For Items in hands\n-- need to write down those are already in the quest!!!\n\nitemText = itemText or {}\nitemText.MT = {}\nitemText.MT.keys = {\" Элли вздрогнула, когда звякнули без видимой на то причины ключи на связке.\", \" Элли нервно перебирала пальцами ключи на связке.\", \" Перебирая пальцами ключи на связке, Элли больно поцарапалась острым выступом на одном из них.\"}\nitemText.MT.axe = {\" Топор неприятно оттягивал и без того уставшие руки девушки.\", \" Девушка с опаской взглянула на лезвие топора в своих руках.\", \" Рукоять топора в ладонях девушки не придавала ей уверенности.\"}\nitemText.MT.extinguisher = {\" Девушка облегчённо опустила тяжёлый огнетушитель на пол возле своих ног.\", \" Девушка попыталась поудобнее ухватить огнетушитель, но ей это так и не удалось.\", \" Проклиная тяжесть огнетушителя, девушка опасливо оглянулась.\"}\nitemText.MT.mop = {\" Девушка держала в руках старую швабру.\", \" Элли опёрлась на старую швабру, словно на трость.\", \" Девушка крепче сжала в ладони шероховатую швабру.\"}\nitemText.MT.bag = {\" Элли воспользовалась моментом, чтобы перевести дыхание и перехватить тяжеленный мешок поудобнее.\",\" Элли сделала несколько наклонов, чтобы размять затёкшую от таскания мешка спину.\"}\nitemText.MT.candle = candle.stat == 2 and {\" Капля воска скатилась со свечи и несильно обожгла ладонь девушки.\", \" Пламя свечи в руках Элли задрожало от неизвестно откуда повеевшего ветерка.\",\" Элли несколько им секунд всматривалась в им слабое пламя им свечи.\"} or {\" Девушка удивлённо взглянула на потухший огарок свечи.\"}\nitemText.MT.lom = {\"Элли переложила увесистый ломик из одной ладони в другую и с облегчением встряхнула уставшей рукой\",\" Ломик в руках Элли придал ей уверенности.\", \" Ломик едва не выскользнул из вспотевшей ладони Элли и она ухватила его обеими руками.\"}\nitemText.CT = itemText.CT or itemText.MT\n\nfunction itemTextF(item) -- function itself\nreport = \"Start: <plus>\"\n  -- table with all the data should already be  generated elsewhere\n  if itemText and type(itemText) == \"table\" and itemText.CT and type(itemText.CT) == \"table\" and itemText.MT and type(itemText.MT) == \"table\" then -- check if all necessory tables do exist\n    if itemText.CT[item] and type(itemText.CT[item]) == \"table\" and itemText.MT[item] and type(itemText.MT[item]) == \"table\" then-- check if tables do contain fields for required item\n      local a = itemText.CT[item]\n      if not a[1] then\n        itemText.CT[item] = itemText.MT[item]\n        a = itemText.CT[item]\n      end\n      local b = math.random(#a)\n      local text = a[b]\n      table.remove(itemText.CT[item], b)\n      return text\n    else\n      return \"Error: wrong item\"\n    end\n  else\n    return \"Error: no initial tables\"\n  end\nend\nend",
+        "text": "Данные и функция для текста предметов в руках",
+        "calculate": true,
+        "merge": false
+      },
+      {
+        "lua_do": "function lua_do()\n-- local itm = \"lom\"\naAaTest = itemTextF(\"keys\")\nend",
+        "text": "Проверить",
+        "comment": false,
+        "id": 49
+      },
+      {
+        "id": 49,
+        "text": "Результат проверки: ",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn \"Результат проверки: <s>\n\" .. (aAaTest or \"\")\nend"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "   Элли наклонилась и подобрала связку ключей. Удивительно, как они вообще не затерялись в таком беспорядке.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 50,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "   Элли расчистила небольшой участок на полу и осторожно положила туда связку с ключами, надеясь, что сможет потом их тут отыскать.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 51,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "   Элли наклонилась и с трудом подняла тяжёлый топор. Долго ходить с таким грузом не выйдет. ",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 52,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "   Элли пристроила топор к стене и с облегчением размяла уставшие руки.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 53,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "   С горестью вспоминая, каким тяжёлым в прошлый раз ей показался огнетушитель, Элли наклонилась и подняла его.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 54,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "   Элли с облегчением выпустила тяжёлый груз из рук и он с гулким звуком завалился на пол.\n   \"Нужно бы с ним поосторожнее...\", – запоздало подумала девушка.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 55,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "   Элли обмотала корпус и раструб огнетушителя тряпками, просто на всякий случай.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nextinguisher.wiped = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "   Элли подошла к стене и с трудом приподняла приставную лестницу. Девушка не могла поверить, что сможет далеко уйти с такой тяжестью в руках.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "id": 57
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "   Элли прислонила лестницу к свободной стене и опасливо покосилась: не упадёт ли?",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "id": 58
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "Мержи описания предметов на локации (видимость постранично, кроме комнат первого сегмента)   ",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\n\nlocal text = \"\"\n\nif lom.location == currentPosition and currentPosition ~=\"oven\" and currentPosition ~= \"shelter\" then\ntext = text .. \" Возле одной из стен валялся небольшой ломик.\"\nend\n\nif bag.location == currentPosition and currentPosition ~= \"shelter\" then\ntext = text .. \" Здесь же лежал немного перекосившийся мешок, вокруг которого уже натекла небольшая лужица.\"\nend\n\nif mop.location == currentPosition and currentPosition ~= \"shelter\" then\n  text = text .. \" К стене возле двери была прислонена старая швабра.\"\nend\n\nif keys.location == currentPosition then\n  text = text .. \" В центре расчищенного от мусора участка лежала связка ключей на толстом ржавом кольце.\"\nend\n\nif (currentPosition ~= \"electro\" and axe.location == currentPosition) or (currentPosition == \"electro\" and axe.location == \"electroFloor\") then\n  text = text .. \" Стоящий у стены топор с длинной красной ручкой сильно выделялся на общем пыльно-сером фоне.\"\nend\n\nif currentPosition == idolTrue.location then\n  text = text .. \" В пыли на полу загадочно поблёскивала фигурка обезьяньей головы с рубиново-красными глазами.\"\nend\n\nif (currentPosition ~= \"electro\" and extinguisher.location == currentPosition) or (currentPosition == \"electro\" and extinguisher.location == \"electroFloor\") then\n  text = text .. (extinguisher.wiped == 0 and \" Обмотанный несколькими тряпками огнетушитель\" or \" Огнетушитель\") .. \" лежал всего в нескольких шагах от Элли.\"\nend\n\nif ladder.location == currentPosition then\n  text = text .. \" К одной из стен была прислонена невысокая лестница.\"\nend\n\nif doll.location == currentPosition then\n  text = text .. \" От лежащей рядом тряпичной куклы Элли испытывала подсознательную тревогу.\"\nend\n\n   if vars[currentPosition] and vars[currentPosition].bagTrace and vars[currentPosition].bagTrace == 1 then\n     text = text .. \" Следы вязкой красной жидкости, оставленные мешком, покрыли пол грязными разводами.\"\n   end\n\nif vars[currentPosition] then\n text = text .. ((g.current_id == 5 and \"<s>\n   Девушка чувствовала, что выход должен быть где-то в конце коридора.\") or (g.current_id == 13 and \"<s>\n   Девушка чувствовала, что она почти у цели.\") or \"<s>\n   Из-за неестественно тусклого освещения девушка с трудом могла разглядеть что-то, расположенное дальше, чем в нескольких метрах перед собой.\")\nend\n\nreturn text\nend",
+        "id": 5,
+        "text": "Динамическое описание состояния первой секции коридора (включая оставленные предметы)",
+        "lua_if": "function lua_if()\nroom.electro = room.electro or {}\nroom.electro.water = room.electro.water or 1\n\nreturn g.current_id == 5 or (g.current_id == 7 and room.shelter.lamp ~= 1) or g.current_id == 33 or g.current_id == 6 or g.current_id == 10 or (g.current_id == 12 and room.electro.water == 1) or g.current_id == 13 or g.current_id == 14 or g.current_id == 15 or g.current_id == 16 or g.current_id == 17\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "   Элли медленно направилась по высохшему полу к стене, стараясь обходить провода так далеко, как это только возможно в такой тесноте. Немного повозившись с креплением, девушка сняла с щита топор. Кто знает, для чего он может пригодится в этом месте...\n   Держа топор в одной руке, Элли быстро вернулась ко входу в комнату.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 60,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "   Элли медленно направилась по высохшему полу к стене, стараясь обходить провода так далеко, как это только возможно в такой тесноте. Немного повозившись с креплением, девушка сняла со щита огнетушитель. Старый, с облупившейся краской, Элли не была уверена, что он вообще работает. Однако весил он обнадёживающе много. Даже слишком много для её уставших рук.\n   Элли вернулась ко входу, стараясь привыкнуть к весу своей ноши.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 61,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "   Элли закрутила оба крана и вода перестала течь. Но на пол уже натекло такое количество, что сам по себе он не высохнет очень долго.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\nroom.water.water = 0\nend",
+        "text": "Дальше",
+        "id": 62,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "   Элли долго осматривала трубы, пытаясь найти какой-нибудь кран или вентиль. Она полезла под ванну. Вода текла по шее и спине, колени скользили на плитках, гул текущего потока оглушал. Девушке начало казаться, что если она не выберется отсюда немедленно, то непременно задохнётся. \n   Продолжая ощупывать трубы, Элли пробиралась всё глубже. После неосторожного движения она задела тыльной стороной ладони раскалённую трубу и вскрикнула от боли, отдёргивая руку. Возможно, только благодаря этому она нашла наконец два небольших крана. Девушка вслепую закрутила оба и с облегчением выползла из под ванны. Вода больше не текла.",
+    "answers": [
+      {
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\nroom.water.water = 2\nexhausting = exhausting <plus> 3\npanic = panic <plus> 1\nend",
+        "text": "Дальше",
+        "id": 63,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "    Дверь, к которой подошла девушка, ничем не отличалась от других. Некоторое время Элли просто стояла, словно ожидая, что её пригласят войти. ",
+    "answers": [
+      {
+        "id": 34,
+        "text": "Открыть дверь ключом",
+        "lua_if": "function lua_if()\nkeys = keys or {}\nkeys.location = keys.location or 0\nreturn (room.drug.close == 1 or room.drug.close == 0) and keys.location == \"inHands\"\nend",
+        "lua_text": "function lua_text()\nreturn room.drug.close == 1 and  \"Открыть дверь ключом\" or room.drug.close == 0 and \"Запереть дверь ключом\"\nend"
+      },
+      {
+        "id": 35,
+        "text": "Сломать дверь топором",
+        "lua_if": "function lua_if()\naxe = axe or {}\naxe.location = axe.location or 0\nreturn room.drug.close == 1 and axe.location == \"inHands\"\nend"
+      },
+      {
+        "id": 36,
+        "text": "Выломать дверь плечом",
+        "lua_if": "function lua_if()\naxe = axe or {}\naxe.location = axe.location or 0\nreturn room.drug.close == 1 and axe.location ~= \"inHands\" and room.drug.failDoor ~= 1\nend"
+      },
+      {
+        "lua_do": "function lua_do()\n\ngoTo = 15\ngoFrom = 64\n\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\n\nend",
+        "text": "Войти в комнату",
+        "lua_if": "function lua_if()\nreturn room.drug.close == 0 or room.drug.close == 2\nend",
+        "id": 24
+      },
+      {
+        "id": 10,
+        "text": "Отойти от двери",
+        "lua_do": "function lua_do()\nweight = weight or 0\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1\n  else\n    exhausting = exhausting <plus> 1\n  end\n\nend"
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nkeys = keys or {}\nkeys.location = keys.location or 0\nlocal text = (room.drug.close == 1 and keys.location ~= \"inHands\" and ( \"Наконец, девушка легонько подёргала ручку. Заперто.<s>\n   <s><s>\"Довольно хлипкая...<s><s>\" – оценила Элли состояние двери, решив для себя, что если не удастся отыскать ключ, то можно будет попробовать просто сломать её.\" .. (room.drug.failDoor == 1 and \".. Только не плечом.\" or \"\"))) or\n(room.drug.close == 1 and keys.location == \"inHands\" and \"Наконец, девушка легонько подёргала ручку. Заперто.<s>\n   <s><s>\"Хорошо, что есть ключи и не нужно пытаться использовать грубую силу...<s><s>\" – обрадовалась Элли.\") or\n(room.drug.close == 0 and \"Наконец, девушка потянула за ручку. Дверь открылась с неприятным скрипом и Элли замерла на пороге, сомневаясь, как кошка, действительно ли она хочет войти.\") or (room.drug.close == 2 and \"Проломленная дверь идеально дополняла общую атмосферу заброшенного коридора. Вид сдавшейся под натиском грубой силы конструкции поднял волну тревоги в душе Элли, напомнив о её полной беззащитности и ненадежности любых укрытий.\")\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "super_calculate": false,
+        "id": 8,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nroom = room or {}\nroom.drug = room.drug or {}\nroom.drug.close = room.drug.close or 1\npanic = (panic or 1) <plus> (room.drug.close == 2 and 1 or 0)\nend"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "   Элли осторожно взяла одну белую таблетку и осмотрела её со всех сторон, понюхала, взвесила на ладони. Не получив никакой полезной информации, девушка положила пилюлю на язык. Горько. Элли постаралась поскорее проглотить таблетку, однако без воды это было непросто.\n  ",
+    "answers": [
+      {
+        "id": 67,
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nif room.drug.wrightColour == \"yellow\" then\nexhaustingMin = (exhaustingMin - 4) > 0 and (exhaustingMin - 4) or 0\nexhausting = exhaustingMin\nroom.drug.sabotage = 1\npanic = 0\ndrugEffect = {type = \"panic\", time = 15}\nshowPage{id = 71}\nelse\nexhausting = (exhausting - 6) > 0 and (exhausting - 6) or 0\nexhaustingMin = exhaustingMin <plus> 1\ndrugEffect = {type = \"exhausting\", time = 30}\nshowPage {id = g.previous_id}\nend\nend",
+        "no_transition": true
+      },
+      {
+        "id": 65,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal text = room.drug.wrightColour == \"white\" and \" Поначалу Элли ничего не почувствовала. Однако уже через несколько минут она заметила, как приходят в тонус мышцы, а мысли становятся более собранными. Усталость отступала.<s>\n   Наслаждаясь обретённой лёгкостью, Элли легко подпрыгнула на месте, затем взмахнула руками. Ей казалось, что она может взлететь, но радость прервал болезненный удар: замечтавшись, девушка задела столик, отчего тот с грохотом опрокинулся. Звякнули металлические инструменты, зазвенело бьющееся стекло. Элли с горечью взглянула на чудо-таблетки, рассыпанные по полу вместе с мусором и осколками.\" or \" Поначалу Элли ничего не почувствовала. Однако уже через несколько минут она заметила, как расслабляются напряжённые мышцы, а панические мысли отступают. Удивительное спокойствие волнами накатывало на Элли, смывая тревогу и страх. Широко зевнув, девушка медленно провалилась в небытие...\"\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "   В конце тёмного прохода оказалась ",
+    "answers": [
+      {
+        "id": 66,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nfinalDoor = finalDoor or 0\nlocal text = finalDoor == 0 and \"дверь. Ни ручек, ни замочной скважины видно не было. Элли попыталась толкнуть дверь, но та не поддалась.<s>\n   Нужно найти что-то, чем можно проломить её.\" or \"проломленная дверь. Открыть её теперь не составило труда.\" \nreturn text .. \" Девушка чувствовала, что движется в верном направлении. До выхода из этого кошмара оставалось совсем чуть-чуть.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 87,
+        "text": "Пройти дальше",
+        "lua_if": "function lua_if()\nreturn finalDoor == 1\nend"
+      },
+      {
+        "id": 88,
+        "text": "Проломить дверь топором",
+        "lua_if": "function lua_if()\nreturn inHands == \"axe\"\nend",
+        "lua_do": "function lua_do()\nexhausting = exhausting <plus>1\nfinalDoor = 1\nend"
+      },
+      {
+        "id": 13,
+        "text": "Вернуться в коридор",
+        "lua_do": "function lua_do()\n\n  if drugEffect.type == \"exhausting\" then\n    drugEffect.time = drugEffect.time - 1 - (weight < 1 and 0 or weight)\n  else\n    exhausting = exhausting <plus> 1 <plus> (weight < 1 and 0 or weight)\n  end\nend"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "   Элли осторожно взяла одну жёлтую таблетку и осмотрела её со всех сторон, понюхала, взвесила на ладони. Не получив никакой полезной информации, девушка положила пилюлю на язык. Сладко. Пока Элли размышляла, как проглотить таблетку без воды, та медленно растворялась на языке. Уже уменьшившуюся в размерах таблетку проглотить оказалось легко.\n  ",
+    "answers": [
+      {
+        "id": 67,
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nif room.drug.wrightColour == \"white\" then\nexhaustingMin = exhaustingMin - 4\nexhausting = exhaustingMin\nroom.drug.sabotage = 1\npanic = 0\ndrugEffect = {type = \"panic\", time = 15}\nshowPage{id = 71}\nelse\nexhausting = exhausting - 6\nexhaustingMin = exhaustingMin <plus> 5\ndrugEffect = {type = \"exhausting\", time = 30}\nshowPage {id = g.previous_id}\nend\nend",
+        "no_transition": true
+      },
+      {
+        "id": 65,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal text = room.drug.wrightColour == \"yellow\" and \" Поначалу Элли ничего не почувствовала. Однако уже через несколько минут она заметила, как приходят в тонус мышцы, а мысли становятся более собранными. Усталость отступала.<s>\n   Наслаждаясь обретённой лёгкостью, Элли легко подпрыгнула на месте, затем взмахнула руками. Ей казалось, что она может взлететь, но радость прервал болезненный удар: замечтавшись, девушка задела столик, отчего тот с грохотом опрокинулся. Звякнули металлические инструменты, зазвенело бьющееся стекло. Элли с горечью взглянула на чудо-таблетки, рассыпанные по полу вместе с мусором и осколками.\" or \" Поначалу Элли ничего не почувствовала. Однако уже через несколько минут она заметила, как расслабляются напряжённые мышцы, а панические мысли отступают. Удивительное спокойствие волнами накатывало на Элли, смывая тревогу и страх. Широко зевнув, девушка медленно провалилась в небытие...\"\nreturn text\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "   Элли наклонилась к опрокинутому столику. Ощупывая пыльную поверхность, она почти сразу почувствовала болезненный укол: тонкий, почти невидимый осколок впился в ладонь, ещё через мгновение выступила кровь.\n   Вскрикнув скорее от неожиданности, чем от боли, девушка вскочила на ноги и осмотрела руку. Стекло пришлось осторожно извлечь второй рукой. Сама рана оказалась совсем пустяковой и кровь остановилась уже через несколько минут. Изрядно напуганная Элли пообещала себе больше никогда не лезть голыми руками туда, где может оказаться что-то острое.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "    Медленно приблизившись к ломику, Элли наклонилась и осторожно прикоснулась к нему. Он всё ещё был горячим, но, к счастью, не обжигающим, так что девушка смогла взять его в руки.",
+    "answers": [
+      {
+        "id": 33,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nlom = lom or {}\nlom.location = lom.location or 0\ninHands = \"lom\"\nlom.location = \"inHands\"\nweight = 1\nend\n"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": " Элли раскрыла вспотевшую ладонь, в которой сжимала найденные таблетки. ",
+    "answers": [
+      {
+        "id": 70,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal a = vars[room.drug.wrightColour .. \"Pills\"].number\nlocal text = (a > 3 and \"Она выбрала одну, откатившуюся от центра руки дальше остальных и отправила себе в рот.\") or (a == 3 and \"Она выбрала одну из последних трёх и отправила себе в рот.\" ) or (a == 2 and \"Она выбрала одну из последних двух и отправила себе в рот.\" ) or (a == 1 and \"Она отправила себе в рот последнюю и отряхнула руку.\" ) .. \" Сухая поверхность неприятно ободрала горло, но эффект того стоил – уже через несколько минут усталость отступила, а тело наполнила приятная лёгкость. О том, что будет, когда действие таблетки закончится, Элли старалась не думать.\"\nreturn text .. \"\"\nend",
+        "merge": true
+      },
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 70,
+        "backstepCount": 1
+      },
+      {
+        "super_calculate": false,
+        "id": 70,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nexhausting = (exhausting - 6) > 0 and (exhausting - 6) or 0\nexhaustingMin = exhaustingMin <plus> 1\nvars[room.drug.wrightColour .. \"Pills\"].number = vars[room.drug.wrightColour .. \"Pills\"].number - 1\n  if vars[room.drug.wrightColour .. \"Pills\"].number < 1 then\n  inHands = \"free\"\n  vars[room.drug.wrightColour .. \"Pills\"].location = \"lost\"\n  end\nend"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "   Когда Элли открыла глаза, она обнаружила себя лежащей на полу в комнате, где до этого обнаружила таблетки. Маленький столик был опрокинут, а его содержимое разбросано вокруг. Всё, кроме таблеток.\n   Поднявшись на ноги девушка ещё раз внимательно осмотрела пол, в надежде отыскать хоть что-нибудь, но всё было тщетно.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nroom.water.dryFloor = room.water.dryFloor or 0\nif room.water.dryFloor == 1 then -- just a bit water\n  room.water.dryFloor = 2 -- no water\n  cor3.water = 0\n  cor2.water = 0\n  room.electro.water = 0\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "   Не веря до конца в происходящее, Элли принялась за уборку. Девушка отыскала на полу забитое мусором и волосами сливное отверстие.\n   \"Кто додумался сделать его выше всего остального?\", – изумилась девушка, когда заметила, что решётка отверстия оказалась над уровнем воды. Элли со входом принялась орудовать шваброй, пытаясь выгнать оставшуюся воду. Девушку раздражала глупость ситуации и то, как надолго затянулся неприятный процесс. Когда всё было кончено, на влажном полу оставалось лишь несколько луж. Может быть, дальше всё высохнет само собой?",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\nroom.water.dryFloor = 1\nroom.water.water = 3\nend"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "   Как не жаль было Элли расставаться с ценной ношей, но сейчас свободные руки были важнее. Девушка разжала ладонь и тряхнула рукой, даже не взглянув на неё. Теперь можно было действовать.",
+    "answers": [
+      {
+        "id": 41,
+        "text": "Попытаться закрыть баллон"
+      },
+      {
+        "id": 42,
+        "text": "Поднять ломик и бежать из комнаты"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "   Массивная деревянная дверь, будто ворота средневекового замка, вызывала подсознательный трепет у Элли.",
+    "answers": [
+      {
+        "id": 75,
+        "text": "Выломать дверь плечом",
+        "lua_if": "function lua_if()\nroom.magic.door = room.magic.door or 0\nreturn room.magic.door == 0\nend"
+      },
+      {
+        "id": 17,
+        "text": "Войти в комнату",
+        "lua_if": "function lua_if()\nroom.magic.door = room.magic.door or 0\nreturn room.magic.door == 1\nend"
+      },
+      {
+        "id": 77,
+        "text": "Выломать дверь топором",
+        "lua_if": "function lua_if()\nroom.magic.door = room.magic.door or 0\nreturn room.magic.door == 0 and inHands == \"axe\"\nend"
+      },
+      {
+        "id": 74,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nroom.magic.door = room.magic.door or 0 -- прикрыто\nlocal text =  (room.magic.door == 0 and \" Девушка потянула кованную ручку на себя, но дверь не поддалась.\") or (room.magic.door == 1 and \" Девушка мягко толкнула дверь от себя и та со скрипом открылась.\") or \"\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 13,
+        "text": "Отойти от двери"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "   Элли оценила толщину досок, из которых была сделана дверь, и тяжело вздохнула. Стараясь не думать о неизбежных ушибах, девушка принялась ощупывать руками препятствие, выбирая слабое место. Как только она надавила у самого края, дверь скрипнула и отворилась вглубь помещения.\n   Элли выругалась: как могла она сразу не попытаться просто толкнуть эту дурацкую дверь от себя?",
+    "answers": [
+      {
+        "id": 74,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\n room.magic.door = 1\n exhausting = exhausting <plus> 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "   Поколебавшись, Элли наклонилась и подняла статуэтку. Та оказалась неожиданно тяжёлой и очень холодной. По спине девушки пробежали мурашки.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "id": 76
+      },
+      {
+        "super_calculate": false,
+        "id": 76,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\npanic = panic <plus> 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "   Элли оценила толщину досок, из которых была сделана дверь, и тяжело вздохнула. Взяв топор обеими руками, девушка занесла его над головой и вложила все силы в удар. За гулким стуком раздался скрип – от удара дверь медленно открылась вглубь помещения.\n   Элли выругалась: как могла она сразу не попытаться просто толкнуть эту дурацкую дверь от себя?",
+    "answers": [
+      {
+        "id": 74,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\n room.magic.door = 1\n exhausting = exhausting <plus> 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "   С необъяснимым трепетом Элли наклонилась, затаив дыхание, осторожно переложила статуэтку на пол и с облегчением выдохнула. ",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "id": 78
+      },
+      {
+        "super_calculate": false,
+        "id": 78,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\npanic = panic - 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "   Элли взглянула в раскрытый фолиант, лежащий у самых её ног. На одной странице было схематичное изображение внутренних органов человека. От одного взгляда на картинку девушке стало нехорошо. Она попыталась прочитать текст на второй странице, но ничего не вышло: буквы смазывались и расплывались перед глазами, вызывая лёгкое головокружение.",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "   Элли низко наклонилась и осторожно провела ладонью над пляшущим огоньком. Пламя приятно согревало успевшие замёрзнуть пальцы. Девушка подняла свечу с пола и выпрямилась. Теперь можно не бояться остаться в кромешной темноте. Но надолго ли такой свечи хватит?",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 81,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal text = (candle.stat == 2 and \" Элли затушила пальцами свечу и, поколебавшись, выбросила её на пол. <s><s>\"Грязнее тут уже не станет...<s><s>\", – решила девушка.\") or \" Поколебавшись, Элли выбросила затухшую свечу на пол. <s><s>\"Грязнее тут уже не станет...<s><s>\", – решила девушка.\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 81,
+        "isBack": true,
+        "text": "Дальше",
+        "backstepCount": 1,
+        "lua_do": "function lua_do()\ncandle = candle or {}\ncandle.location = candle.location or \"magic\" candle.stat = candle.stat or 2\n\ninHands = \"free\"\nweight = 0\ncandle.location = \"magic\"\ncandle.stat = 2 -- throughn away\nend"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "   Элли взяла куклу в руки, ощущая странное волнение. Что-то в ней было не так. Неуловимое предчувствие чего-то плохого пронеслось в голове девушки, когда её пальцы ощупывали найденный необычный предмет. Захотелось поскорее спрятать её в безопасном месте – Элли чувствовала, так будет лучше.\n   Кукла, видимо, была набита какой-то крупой. Три холодные металлические клёпки были неаккуратно примотаны красными нитками. Кое-где из-под ткани торчали острые соломенные прутья.\n   ",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\ndoll.location = \"inHands\"\ninHands = \"doll\"\nweight = 0.5\nend"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "   Элли пришлось преодолеть интуитивное нежелание прикасаться к загадочной кукле, чтобы наклониться и взять её в руки. Сразу после этого её сознание переполнилось необъяснимым чувством тревоги.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 83,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "   Элли аккуратно положила куклу, прислонив её к стене. Неприятные ощущения прекратились, как только девушка отошла на несколько шагов.",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Дальше",
+        "id": 83,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "   Элли знала, что должна сделать. Решиться было непросто, поэтому она действовала быстро – чтобы не передумать. Пришло время попрощаться с уютным местом отдыха.\n   Девушка завернула загадочную куклу ещё глубже в тряпки и поднесла свечу. Пламя быстро охватило ворох сухой ткани, заполняя комнату едким дымом.\n   У Элли закружилась голова. Девушка пыталась выбраться из комнаты, но не смогла справиться с засовом и медленно осела на пол. Последним, что она увидела перед тем, как её глаза навсегда закрылись, были два немигающих красных глаза.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец",
+        "lua_do": "function lua_do()\ng.achiv = g.achiv or {}\ng.achiv.ober = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "   Элли знала, что должна сделать. Решиться было непросто, поэтому она действовала быстро – чтобы не передумать. Пришло время попрощаться с уютным местом отдыха.\n   Девушка завернула статуэтку в тряпки и поднесла свечу. Пламя быстро охватило ворох сухой ткани, заполняя комнату дымом. Отойдя на безопасное расстояние, Элли наблюдала, как огонь медленно поглощает всё уменьшающуюся кучу, выплёвывая пепел.\n   Когда ворох обугленных остатков перестал дымиться, девушка нерешительно подошла поближе. Даже сквозь золу было видно, что с фигуркой ничего не случилось.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "   Пройдя дальше, Элли вышла на лестничную клетку. У площадки, на которой стояла девушка, лестница обрывалась: через зияющие провалы было видно уходящие в бесконечность витки неровной спирали.\n",
+    "answers": [
+      {
+        "id": 87,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nlocal text = ladder.location == \"stairs\" and \"<s>\n   Через пустоту между ступенями была перекинута приставная лестница, кажущаяся теперь слишком тонкой и ненадёжной.\" or \"\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 89,
+        "text": "Перекинуть лестницу через провал",
+        "lua_if": "function lua_if()\ninHands = inHands or \"free\"\nreturn inHands == \"ladder\"\nend",
+        "lua_do": "function lua_do()\nladder = ladder or {}\nladder.location = \"stairs\"\nend"
+      },
+      {
+        "lua_if": "function lua_if()\ninHands = inHands or \"free\"\nreturn inHands ~= \"ladder\"\nend",
+        "id": 87,
+        "lua_do": "function lua_do()\nladder = ladder or {}\nladder.location = \"stairs\"\nend",
+        "text": "Нужно что-то, что поможет перебраться через обрыв",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 13,
+        "text": "Вернуться в коридор"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "   Дверь оказалась совсем хрупкой: даже неуклюжие удары девушки проламывали древесное полотно насквозь. Элли даже не успела устать, когда от препятствия осталась лишь рама с острыми зазубренными краями.\n   Девушка просунула руку через огромную брешь, нащупала с обратной стороны щеколду и распахнула ставшую бесполезной дверь. Теперь можно пройти дальше.",
+    "answers": [
+      {
+        "id": 87,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "   Элли осторожно подошла к обрыву, волоча за собой лестницу. Девушка старалась не смотреть вниз и не думать лишний раз о том, что любое движение с таким неповоротливым грузом может привести к неисправимым последствиям.\n   Разрыв между площадкой и ступенями внизу был слишком большой, а до верхних не доставало всего полутора метров. Для устойчивости Элли встала на четвереньки и начала медленно выдвигать металлическую лестницу над пропастью. Чем дальше продвигался импровизированный мостик, тем тяжелее девушке было удерживать его в воздухе. \n   Вдруг, когда оставалось совсем чуть-чуть, её пальцы соскользнули с гладкой поверхности. Элли беспомощно наблюдала, как лестница поползла вниз.",
+    "answers": [
+      {
+        "id": 91,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "   Не обращая внимания на усталость, Элли со всех ног бросилась вперёд по коридору. Она и не думала, что может бежать так быстро. От непривычной нагрузки зашумело в ушах. Долго ли получится убегать? Удастся ли где-нибудь спрятаться? А может быть, опасности вообще нет, а преследование девушке только почудилось?",
+    "answers": [
+      {
+        "id": 99,
+        "text": "Остановиться и осмотреться"
+      },
+      {
+        "id": 100,
+        "text": "Попытаться спрятаться",
+        "lua_do": "function lua_do()\nexhausting = 14\nend"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "   Лишь чудом Элли смогла за доли секунды вывернуть падающую лестницу и та зацепилась за торчащие остатки ржавых перил. Дальний конец лестницы звякнул о бетонные ступени и Элли смогла немного передохнуть. Она зафиксировала конструкцию, уперев её в перила с обеих сторон, и недоверчиво осмотрела. Нужно было полностью обезуметь и потерять всякую надежду, чтобы попытаться двигаться дальше. Элли была именно в этом состоянии.\n   Она не смотрела вниз, не замечала, как дрожит и шатается от каждого движения хлипкая лестница, только ползла вперёд, остервенело цепляясь пальцами за скользкий металл. Элли не обернулась назад, когда выкарабкалась на устойчивую поверхность и поднялась на ноги. Казалось, что нет больше ни усталости, ни чувства страха. Девушка медленно побрела вверх по ступеням.",
+    "answers": [
+      {
+        "id": 92,
+        "text": "Дальше"
+      },
+      {
+        "super_calculate": false,
+        "id": 91,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nautorun = nil\ng.autorun = nil\nvars[\"autorun after\"] = nil\nend"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "   На следующей площадке лестница делала крутой поворот. Элли так и пошла бы дальше, если бы её взгляд не выхватил странный блик в темноте. Что это?\n   Большое зеркало в вычурной чёрной раме казалось до смешного неуместным здесь. Девушка узнала его. То самое зеркало, которое когда-то висело в спальне. Покрытое сеткой крупных трещин, но всё ещё достаточно крепкое, чтобы не рассыпаться на осколки.\n   Элли заглянула в зеркало и тут же отшатнулась в ужасе. То, что она увидела, не могло быть правдой.",
+    "answers": [
+      {
+        "id": 93,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "   Из-под трещин в тёмном отражении испуганно выглядывал сгорбленный силуэт. Морщинистое иссохшее лицо, обрамлённое седыми волосами, глаза с бесконечной усталостью во взгляде, дрожащие руки. Не так должны выглядеть девушки в семнадцать лет!\n   Элли поправила волосы, стараясь уловить в отражении хоть какой-то изъян, даже самое незначительное отличие от её собственного движения. Но нет, даже в дыхании и пульсации вен ощущалась пугающая точность. Неужели она на самом деле выглядит так? Но что стало с её молодостью?\n   Элли вспомнила, сколько безрассудных поступков совершила в семнадцать лет. Обручилась с едва знакомым юношей, чуть не умерла от малярии, пыталась свести счеты с жизнью, когда новоявленный жених пропал. Вспомнила беспросветную печаль, долгие годы одиночества и самоистязания. Вспомнила бесконечные кошмары, повторяющиеся из ночи в ночь. Элли вспомнила это разбитое зеркало и следующее за ним пробуждение.",
+    "answers": [
+      {
+        "id": 94,
+        "text": "Дальше",
+        "lua_do": "function lua_do()\n\ng.theme = \"https://i.ibb.co/s5FvRP9/ne-Spi-day.jpg\"\n\ng.background = \"https://i.ibb.co/s5FvRP9/ne-Spi-day.jpg\"\n\ng[\"invert text color\"] = 0\nend"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "   Элли проснулась. С хрипом хватая беззубым ртом тёплый воздух, она широко раскрыла глаза, тут же зажмурившись от яркого солнечного света, весело заглядывающего в белую комнату через распахнутые шторы на окне.\n   Опять этот сон. Седовласая женщина взглянула на до крови врезавшиеся в руки тугие кожаные ремни. Такие же оплетали всё тело Элли от шеи до щиколоток. \"Сильнее, чем обычно...\", – с досадой отметила она.\n    Старушка мотнула головой, услышав звук рядом с собой. Молодой человек в белом халате закашлял, привлекая её внимание.\n– Опять не могли уснуть всю ночь? – приторно улыбнувшись, спросил доктор.\n",
+    "answers": [
+      {
+        "id": 94,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nidolTrue = idolTrue or {}\nidolTrue.location = idolTrue.location or \"hiden\"\nreturn idolTrue.location ~= \"burnt\" and \"– Всю ночь не могла проснуться, – буркнула Элли, вспоминая свой кошмар и ощущая бесконечную усталость.<s>\n– Ну, приборы говорят обратное, – пробормотал врач, похлопывая папку с бумагами, и кивнул кому-то. – Такие показания да в вашем-то возрасте...<s>\n– Нет, нет, нет! Пожалуйста, не надо! – взмолилась женщина, беспомощно наблюдая, как кто-то в одно мгновение подключил капельницу к катетеру в её руке.<s>\n– Ну что вы, Элизабет! – добродушно улыбнулся доктор. – Сейчас мы попробуем морфин, вы наконец-то сможете отдохнуть.<s>\n   Слабость волной накатила на пожилую женщину и, уже проваливаясь в небытие, она услышала чьё-то тихое <s><s>\"Приятных снов!<s><s>\".\"\nor\n\"– Наконец-то смогла проснуться, – немного помедлив ответила Элли, чувствуя странное умиротворение, как будто что-то в этой безумной карусели кошмаров наконец-то изменилось.<s>\n– Ну, приборы тоже показали улучшение ближе к утру, – озадаченно пробормотал врач, похлопывая папку с бумагами, и покачал головой кому-то. – Мы уже собирались дать вам морфин...<s>\n  В глазах женщины вспыхнул ужас, но она больше ничего не сказала. За её спиной раздались шаги и хлопнула дверь.<s>\n– Ну, Элизабет, – замялся доктор, подтянув и без того тугой ремень на ноге старушки и пройдя к двери. – Доброго утра!\"\nend",
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "Конец",
+        "lua_do": "function lua_do()\ng.achiv = g.achiv or {}\ng.achiv.ordinar =  idolTrue.location == \"burnt\" and (g.achiv.ordinar or 0) or 1\ng.achiv.good = idolTrue.location ~= \"burnt\" and (g.achiv.good or 0) or 1\n\nif g.lightMode ~= 1 then\ng[\"invert text color\"] = 1\ng.background = \"https://i.ibb.co/6FbKsPx/ne-Spi-Page.jpg\"\ng.theme = \"https://i.ibb.co/q0tbnBs/ne-Spi-night.jpg\"\nelse\ng.background = nil\ng.theme = nil\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "   Открыто концовок: ",
+    "answers": [
+      {
+        "id": 95,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\ng.achiv = g.achiv or {}\ng.achiv.ordinar = g.achiv.ordinar or 0\ng.achiv.good = g.achiv.good or 0\ng.achiv.exhausted = g.achiv.exhausted or 0\ng.achiv.ober = g.achiv.ober or 0\ng.achiv.varvara = g.achiv.varvara or 0\n\nlocal a = g.achiv.ordinar <plus> g.achiv.good <plus> g.achiv.exhausted <plus> g.achiv.ober <plus> g.achiv.varvara\nreturn a .. \" из 5.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 95,
+        "text": "• Вы пока не открыли ни одной концовки!",
+        "comment": true,
+        "lua_if": "function lua_if()\ng.achiv = g.achiv or {}\ng.achiv.ordinar = g.achiv.ordinar or 0\ng.achiv.good = g.achiv.good or 0\ng.achiv.varvara = g.achiv.varvara or 0\ng.achiv.exhausted = g.achiv.exhausted or 0\ng.achiv.ober = g.achiv.ober or 0\n\nlocal a = g.achiv.ordinar <plus> g.achiv.good <plus> g.achiv.varvara <plus> g.achiv.exhausted <plus> g.achiv.ober\nreturn a == 0\nend"
+      },
+      {
+        "id": 95,
+        "text": "★ Новое утро",
+        "lua_if": "function lua_if()\ng.achiv = g.achiv or {}\ng.achiv.good = g.achiv.good or 0\nreturn g.achiv.good == 1\nend",
+        "comment": true
+      },
+      {
+        "id": 95,
+        "text": "★ Бесконечный сон",
+        "comment": true,
+        "lua_if": "function lua_if()\ng.achiv = g.achiv or {}\ng.achiv.ordinar = g.achiv.ordinar or 0\nreturn g.achiv.ordinar == 1\nend"
+      },
+      {
+        "id": 95,
+        "text": "★ Жертва любопытства",
+        "comment": true,
+        "lua_if": "function lua_if()\ng.achiv = g.achiv or {}\ng.achiv.varvara = g.achiv.varvara or 0\nreturn g.achiv.varvara == 1\nend"
+      },
+      {
+        "id": 95,
+        "text": "★ Пленница кошмара",
+        "lua_if": "function lua_if()\ng.achiv = g.achiv or {}\ng.achiv.exhausted = g.achiv.exhausted or 0\nreturn g.achiv.exhausted == 1\nend",
+        "comment": true
+      },
+      {
+        "id": 95,
+        "text": "★ Утраченный оберег",
+        "lua_if": "function lua_if()\ng.achiv = g.achiv or {}\ng.achiv.ober = g.achiv.ober or 0\nreturn g.achiv.ober == 1\nend",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу"
+      },
+      {
+        "comment": false,
+        "id": 95,
+        "text": "Новый ответ. введите текст",
+        "need": 1000,
+        "lua_do": "function lua_do()\ng.achiv = g.achiv or {}\ng.achiv.ordinar = 1\ng.achiv.good = 1\ng.achiv.exhausted = 1\ng.achiv.ober = 1\ng.achiv.varvara = 1\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "   Как только Элли попыталась вставить случайный ключ в замочную скважину, по ту сторону двери раздался жуткий грохот.\n",
+    "answers": [
+      {
+        "id": 96,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nvis96 = vis96 or 0\nlocal text = (vis96 == 0 and \"– Убирайся прочь, демон! – дрожащим голосом заявил старик. – Здесь нет твоей власти!\" or \"– Я тебя не боюсь... – дрожащим голосом прошептал старик. – Ты здесь не хозяин, даже тебе не открыть эту дверь.\") .. \"<s>\n   Девушка поняла, что пытаться что-то сделать теперь бессмысленно.\"\nreturn text\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Отойти от двери",
+        "lua_do": "function lua_do()\nvis96 = (vis96 or 0) <plus> 1\n\nend"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "   Элли даже не заметила, как её руки оказались пусты. Единственное, о чём она могла думать – это отдых здесь и сейчас.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "text": "   Элли осторожно присела и наклонила свечу над полом. Когда с неё накапала небольшая лужица расплавленного воска, девушка пристроила свечу там, как в подсвечнике. Элли сомневалась, что та долго простоит здесь, но можно попробовать успеть хоть что-нибудь. ",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "text": "   Элли замедлилась, а затем остановилась. Она задыхалась. Лицо заливал пот, мышцы гудели. Девушка сделала медленный вдох, затем выдохнула. Она уже собиралась оглянуться, чтобы удостовериться, что опасности нет, когда услышала сиплое дыхание за своей спиной.\n   Резко погас свет. Ноги Элли подкосились и она упала навзничь. Клубы морозного воздуха обожгли щёку девушки, на спину навалилось что-то неподъёмное. Элли хотела закричать, но вопль так и застыл в горле. Она задыхалась, не могла даже пошевелиться. Где-то рядом вспыхнули два красных глаза, но этого Элли уже не увидела...",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Конец",
+        "lua_do": "function lua_do()\ng.achiv = g.achiv or {}\ng.achiv.varvara = 1\nend"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "text": "   Добежав почти до конца коридора, Элли заметила пустой дверной проём. Девушка пулей влетела в него и оказалась в крохотной каморке, внутри которой не было ничего, кроме переполненной ванны.  Поколебавшись всего мгновение, Элли запрыгнула в ледяную воду. Громкий всплеск заглушил усиливающиеся звуки из коридора.\n   Сквозь слой воды девушка заметила мелькнувшую на потолке тень и постаралась замереть. Через несколько бесконечно долгих секунд тень исчезла, а шаркающие звуки, гулко усиливающиеся толщей воды, стали отдаляться. Уже задыхающаяся Элли рывком вынырнула и жадно вдохнула воздух. К её облегчению в комнате было пусто.\n   Девушка несколько минут вслушивалась в наступившую неестественную тишину, не веря, что опасность миновала, затем медленно выбралась из своего неуютного укрытия.",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "text": "   Элли осторожно положила куклу в своё гнёздышко и заботливо укрыла тряпкой, как одеялом.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 103,
+    "text": "Для корректного учёта страниц",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 3,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 4,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 5,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 6,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 7,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 8,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 9,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 10,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 12,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 13,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 14,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 15,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 16,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 17,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 19,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 20,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 21,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 22,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 23,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 24,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 25,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 26,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 27,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 28,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 29,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 30,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 32,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 33,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 34,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 35,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 36,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 37,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 38,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 39,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 40,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 41,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 42,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 43,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 44,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 45,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 46,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 47,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 48,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 49,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 50,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "text": "",
+    "answers": []
+  }
+]

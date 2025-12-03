@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор JSG написал еще 19552 слов в квесте \"ОП рабочая версия\"."
+      },
+      {
+        "targetbookid": "220697",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"ОП рабочая версия\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор pi pikachu написал еще 15893 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "220211",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор SoSvirid написал еще 15565 слов в квесте \"Ведьме лучше бежать\"."
+      },
+      {
+        "targetbookid": "220235",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ведьме лучше бежать\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор maksim написал еще 15416 слов в квесте \"Разлом. Монстры из другого мира\"."
+      },
+      {
+        "targetbookid": "216259",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Разлом. Монстры из другого мира\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Заря написал еще 15076 слов в квесте \"Забыть (,) нельзя (,) остаться\"."
+      },
+      {
+        "targetbookid": "199202",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Забыть (,) нельзя (,) остаться\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

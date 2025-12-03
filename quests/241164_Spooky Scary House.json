@@ -1,0 +1,1339 @@
+[
+  {
+    "id": 1,
+    "text": "You are in the big scary-looking house.\nTry to get out from it safely.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Deaths"
+      },
+      {
+        "id": 2,
+        "text": "Begin"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Deep night. You are standing in front of very big black house, looking like an estate. Big ceremonial doors are noisily openning and closing by wind blowing. You hear quiet shouts for help behind the house.\nAlso there is a big rare forest behind you, with owls, ghosts, dead souls and other scary, mystical creatures.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Go into the house"
+      },
+      {
+        "id": 41,
+        "text": "Go behind the house"
+      },
+      {
+        "id": 5,
+        "text": "Go into the forest behind you"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "1 [Ghostly forest]:Walk through the forest.\n\n2 [Secret book]:Read strange book.\n\n3 [Steel nerves]:Ignore everything in the hotel.\n\n4 [Boo!]:Reach end of the corridor.\n\n5 [Adverstisement's victim]:Answer phone call.\n\n6 [Helpless]:Fail maniac curing.\n\n7 [Crazy doctor]:Help maniac.\n\n8 [Stupid gravity]:Fall from height.\n\n9 [Cube-trap]:Open wrong door.\n\n10 [Successful escape]:Leave cube.\n\n11 [Film, film, film...]:Keep recording until the last.\n\n12 [Wrong action]:Save woman.\n\n13 [Unsaved human life]:Leave woman alone.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Back"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Everything inside looks scarier than outside: there are wrapped, black pictures of different writers and sculptors, dusty scones with burnt out candles. It looks like here lived a vampire (or maybe is still living). There is a door in the wall in front of you, stairs, swirling around a stack and going up and wooden hatch in a corner with word \"trap\" written on trapdoor with blood.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Open the door"
+      },
+      {
+        "id": 29,
+        "text": "Go up by stairs"
+      },
+      {
+        "id": 8,
+        "text": "Stand on the hatch"
+      },
+      {
+        "id": 35,
+        "text": "Go out"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "It looks like you never watched any horror films or you are just fearless, if you were not scared by ghosts, souls and other mystical creatures, and also scary things which may happen with you in this spooky forest. You entered the forest. Walked 8 meters across a little road in it. And..... died! Reason? You were catched by one of the ghosts, living in this forest, and he killed you by hanging you by your neck on noose, attached to a tree.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 1"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "When you openned the door, right in front of you, with loud scream, appeared a scary ghost. He is screaming 5 seconds more, and then got silent and asked: \"Scared?\".",
+    "answers": [
+      {
+        "id": 55,
+        "text": "\"Yes! It was very scary! I almost wet myself!\""
+      },
+      {
+        "id": 7,
+        "text": "\"l flinched, but it was not too scary...\""
+      },
+      {
+        "id": 7,
+        "text": "\"What? Pff... no! It was not scary at all! You need to learn to scare people harder!\""
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "\"Well, good! It is very hard to scare you. Okay.\",-ghost began rotating around you faster and faster, and you felt what your legs got off from the floor, and you flew up. The ghost flew out from the house with you and flew somewhere. After a long trip he flew into a window, and you landed on a floor. The ghost stopped rotating and disappeared. Looked around, you understood what you are staying in some hotel room. It looks like it is for you for free. It is a ghost's gift for you because of composure. You can do what you want!",
+    "answers": [
+      {
+        "id": 12,
+        "text": "Lie on the sofa"
+      },
+      {
+        "id": 13,
+        "text": "Read a book"
+      },
+      {
+        "id": 12,
+        "text": "Drink something in minibar"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Hatch openned under you and you began to fall down into some kind of basement.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Tensе"
+      },
+      {
+        "id": 10,
+        "text": "Relax"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Well, and why did you do it? Did not you know, how gravity works? You fell onto concrete floor, and gravity formed you into a bloody pancake.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 8"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "You fell onto concrete floor, but your relaxed body defensed this hit. You were hurted, but survived.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Look around"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "You are staying in an iron cube. There are three doors: in left, in front and in right of you. There are word \"simple numbers\" written with blood on a ceiling and a bloody handprint was in right of the word.",
+    "answers": [
+      {
+        "id": 19,
+        "text": "Try to escape"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Suddenly you heard some rustling under the bed.",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Look under the bed"
+      },
+      {
+        "id": 14,
+        "text": "Ignore it"
+      },
+      {
+        "id": 14,
+        "text": "Shout to it as not to rustle"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "There are three different books on a bookshelf. What do you want to read?",
+    "answers": [
+      {
+        "id": 12,
+        "text": "The Dark Tower"
+      },
+      {
+        "id": 12,
+        "text": "The Langoliers"
+      },
+      {
+        "id": 18,
+        "text": "1408"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Rustling ended, and suddenly in the bathroom a shower turned on.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "\"Hey, Who is here.\""
+      },
+      {
+        "id": 15,
+        "text": "Ignore it"
+      },
+      {
+        "id": 15,
+        "text": "Go to the bathroom"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Shower immidately turned off, but after ten minutes you heard woman's voice from the bedroom.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "\"What is happening? I am terrified! I want to home. I am... I...\""
+      },
+      {
+        "id": 16,
+        "text": "Ignore it"
+      },
+      {
+        "id": 16,
+        "text": "Stay silent and try not to make noise"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Suddenly everything around began to distort, float, fly and shimmer with colors of rainbow. You got off from the floor and began levitate in air, helplessly floundering, unable to control your flight. All things flied out from shelves. You and your voice began to distort too, your voice formed into then so squeaky, then so rude.",
+    "answers": [
+      {
+        "id": 17,
+        "text": "\"Aaahh! What the fuge?!\""
+      },
+      {
+        "id": 17,
+        "text": "\"Nooo! I do not want to die!\""
+      },
+      {
+        "id": 17,
+        "text": "\"Is this death? So i am ready.\""
+      },
+      {
+        "id": 17,
+        "text": "\"Please, say me what whole this is just a nightmare, and now i am sleeping in my bed at home.\""
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Next your eyes got black. You see nothing, even yourself. \"Everything ended, because you died.\",-thought you, but... no! You just lost consciousness. You woke..... err... nowhere? You did not know where are you. Everything around was black, but now you can see yourself. Suddenly someone said: \"System destroyed and can not be repaired!\", and black changed to blue. Around appeared strange white numbers, letters and over symbols, and now it looks like blue death screen on computers when some error happened. Later, the floor under you began wobbles harder and harder. You was deadly terrified and........ suddenly everything disappeared, and you too. You was not terrified more. You died, now for real. Maybe because of system error, or you just died by fear shock? I do not know, however it does not matter anymore...",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 3"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "After you read this book you greatly angered the local soul, what is living here, because now you know every his traps and tricks, what he has prepared for you. He did not stayed upset for long and just threw you out of the window.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 2"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "There are only three exits from this cube: doors. Every door has a sign with number. Where will you go?",
+    "answers": [
+      {
+        "id": 20,
+        "text": "13"
+      },
+      {
+        "id": 23,
+        "text": "14"
+      },
+      {
+        "id": 24,
+        "text": "15"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "There was a same cube with the previous one and with same three doors, but with another numbers on signs. Choose.",
+    "answers": [
+      {
+        "id": 25,
+        "text": "27"
+      },
+      {
+        "id": 21,
+        "text": "29"
+      },
+      {
+        "id": 26,
+        "text": "33"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "There are everything same behind the door, but with another numbers. Choose again.",
+    "answers": [
+      {
+        "id": 27,
+        "text": "57"
+      },
+      {
+        "id": 28,
+        "text": "60"
+      },
+      {
+        "id": 22,
+        "text": "61"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "You got out from this ridiculous cube and quit the house from back. An old hunter with musket is standing on a backyard near a door, from which you got out. He inspected you and shot before you said something.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 10"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "In a room behind the door something green began pouring from ceiling when you entered. It was acid. It turned you into uneatable green acid soup.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 9"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "In a room behind the door was nothing, but here was warm floor. Later, the floor becomes hot, so hot, what was impossible to stand on it anymore. You fried alive.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 9"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "In a room behind the door somewhere from walls got out a groundhog with a little hammer and began to beat you with it, then from where too got out one more groundhog with a same hammer and began to beat you too. Like that there are appeared thousand groundhogs. You got beaten to death.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 9"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "In a room behind the door was many dispensers. Arrows flew out from it and riddled you.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 9"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "In a room behind the door was not anything. Door closed right after you entered a room so you can not leave this room. You stayed here for a long time without food and water. Boredom! You died of starvation.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 9"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "In a room behind the door was no floor. You fell and broke yourself.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 9"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "You went up to second floor. Near you a door into the bedroom. Someone is crying inside. Other stairs can bring you to next, third floor.",
+    "answers": [
+      {
+        "id": 30,
+        "text": "Go upper"
+      },
+      {
+        "id": 61,
+        "text": "Go into the bedroom"
+      },
+      {
+        "id": 34,
+        "text": "Go back down"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "There is the dusty attic upstairs there is a big comfortable, but dusty armchair, a TV-box with old videorecorder, standing on a broken nightstand next to the armchair, and a telephone, standing on the nightstand too, near the TV. On a shelf above TV was three videocassettes.",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Watch something"
+      },
+      {
+        "id": 34,
+        "text": "Go down to first floor"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "You took all videocassettes from a shelf.",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Watch \"Hard Nut\""
+      },
+      {
+        "id": 32,
+        "text": "Watch \"Home Alone\""
+      },
+      {
+        "id": 33,
+        "text": "Watch an unnamed videocassette without a label"
+      },
+      {
+        "id": 30,
+        "text": "Put them back"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "You turned on a TV, inserted videocassette and began watching, but when you have watched a half of the film, some dead girl, dressed with white skirt comed out from TV! She openned videorecorder, pulled out videocassette, inserted third, unknown videocassette and comed back into TV!",
+    "answers": [
+      {
+        "id": 33,
+        "text": "\"What the...\""
+      },
+      {
+        "id": 33,
+        "text": "\"Okay, i have already watched that film.\""
+      },
+      {
+        "id": 33,
+        "text": "Let it be, but strangely look at this"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Film on this videocassette was so-o-o boring!, but short. After the film ends, the telephone near TV began ringing.",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Pick up the phone and answer the call"
+      },
+      {
+        "id": 34,
+        "text": "Put videocassette back and go down to first floor ingnoring this phone"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "You are again on first floor. There is a door in front, the hatch in a corner and stairs.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Open the door"
+      },
+      {
+        "id": 36,
+        "text": "Go up by stairs"
+      },
+      {
+        "id": 8,
+        "text": "Stand on the hatch"
+      },
+      {
+        "id": 35,
+        "text": "Go out"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "You went out the house now you are in the street alone at night.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Go into the house"
+      },
+      {
+        "id": 41,
+        "text": "Go behind the house"
+      },
+      {
+        "id": 5,
+        "text": "Go into the forest behind you"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "You went up to a second floor. Near you a door into a bedroom. Someone is crying inside. Other stairs can bring you to a next third floor.",
+    "answers": [
+      {
+        "id": 37,
+        "text": "Go upper"
+      },
+      {
+        "id": 40,
+        "text": "Go to the bedroom"
+      },
+      {
+        "id": 34,
+        "text": "Go back down"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "The telephone is still ringing at the attic.",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Pick up the phone and answer the call"
+      },
+      {
+        "id": 34,
+        "text": "Go down to the first floor ignoring this phone"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Some woman speak at the phone: \"Hello, my name is Maria. I from company Shitelecom. Do not you want to connect our mobile web?\".",
+    "answers": [
+      {
+        "id": 39,
+        "text": "\"No, thank you.\""
+      },
+      {
+        "id": 39,
+        "text": "\"Sorry, i am not owner of this house. I can not answer.\""
+      },
+      {
+        "id": 39,
+        "text": "\"Hm. Yes, i want. When you can come and connect?\""
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "\"Thanks for your reply. We will accommodate your concerns and by the way, seven days.\",-said woman, and after, you heard short beeps in the phone.",
+    "answers": [
+      {
+        "id": 40,
+        "text": "\"What seven days?\""
+      },
+      {
+        "id": 40,
+        "text": "\"Wait, i a bit did not understand. Maria?..\""
+      },
+      {
+        "id": 40,
+        "text": "\"Stop, wait. And when can you come to me?\""
+      },
+      {
+        "id": 40,
+        "text": "Just screw all this and put the phone back"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Think by yourself what you did this week, because when it ended, dead girl in white skirt comed back and snapped your neck.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 5"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "You came to a little backyard of this house. Some woman is sitting on the rock. She is recording herself with a camera and murmuring something into it.",
+    "answers": [
+      {
+        "id": 42,
+        "text": "Aproach to her and ask for help"
+      },
+      {
+        "id": 2,
+        "text": "Go back"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "\"Me and my boyfriend were recording a documentary film about the local witch and today at the evening he disappeared and i can not find him.\"-said woman, still recording herself.",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Help her"
+      },
+      {
+        "id": 2,
+        "text": "Screw her"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Woman agreed your help and you go into deepness of garden. You are going forward throught flowers. Woman is going behind you, recording everything with her camera and always describing her fear.",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Go further silently"
+      },
+      {
+        "id": 44,
+        "text": "Pull the camera from her"
+      },
+      {
+        "id": 44,
+        "text": "\"Why are you recording, if you so scared?\""
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "Suddenly someone from bushes grabbed woman and pulled into bushes. Woman dropped the camera by sudden and began shouting and asking you to record how it is dragging her.",
+    "answers": [
+      {
+        "id": 45,
+        "text": "Save the woman"
+      },
+      {
+        "id": 46,
+        "text": "Pick the camera and run behind woman, recording her"
+      },
+      {
+        "id": 49,
+        "text": "Screw her and go back"
+      },
+      {
+        "id": 49,
+        "text": "\"You are crazy! I am leaving!\""
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "\"Nooo! What have you done?! You have ruined my film!!!\"-screamed the saved woman and beat you to death with the camera. It is still recording!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 12"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Someone brought her to a big campfire and attach her to a stack above it.",
+    "answers": [
+      {
+        "id": 48,
+        "text": "Stand near and record"
+      },
+      {
+        "id": 47,
+        "text": "\"Hey, maybe you need help?\""
+      },
+      {
+        "id": 45,
+        "text": "Save the woman"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "\"No, no, no. Continue recording me!\"-answered woman, turning into kebab.",
+    "answers": [
+      {
+        "id": 48,
+        "text": "Stand near and record"
+      },
+      {
+        "id": 48,
+        "text": "\"Hm, okay.\""
+      },
+      {
+        "id": 45,
+        "text": "Save the woman"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Later this someone attached you too, to a stack above other campfire near. By some tip you recorded process of your burning, but camera with this video burnt in the campfire with you.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 11"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "And you have gone. Left the woman. You walked throught the garden and suddenly someone stuck syringe into your neck and you lost consciousness. You woke sitting on a metal chair, attached to it, with some iron plate on head, in some room. There is a TV-box before you.",
+    "answers": [
+      {
+        "id": 50,
+        "text": "Look around"
+      },
+      {
+        "id": 50,
+        "text": "Wriggle, trying to get free"
+      },
+      {
+        "id": 50,
+        "text": "Ask for someone"
+      },
+      {
+        "id": 50,
+        "text": "Just wait for what will happen further"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "Further... The TV turned on, and a broken scary doll appeared on the screen. \"Let's play the game!\"-she said.",
+    "answers": [
+      {
+        "id": 51,
+        "text": "\"Who are you?, and why you brought me here?!\""
+      },
+      {
+        "id": 51,
+        "text": "\"Okay, what game will we play?\""
+      },
+      {
+        "id": 51,
+        "text": "\"Er... I am a bit scared of you and my location, but let's play!..\""
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "\"You did not saved that woman. It means what you did not appreciate human life. Now we will know how much you appreciate your life.\"-said the doll.",
+    "answers": [
+      {
+        "id": 52,
+        "text": "\"Well, and how?\""
+      },
+      {
+        "id": 52,
+        "text": "\"What are you speaking about? You are mad!\""
+      },
+      {
+        "id": 52,
+        "text": "\"Okay, and where is the game?\""
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "\"In a minute the mechanism on your head will kill you! It may be taken down with a special key. Where is the key? He-he, i will give you a hint.\",-said the doll, and a picture with location of the key appeared on the screen.",
+    "answers": [
+      {
+        "id": 53,
+        "text": "Look at the screen"
+      },
+      {
+        "id": 54,
+        "text": "Keep wriggling, trying to get free"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "On the screen was immaginered a key... in your eye!",
+    "answers": [
+      {
+        "id": 54,
+        "text": "\"What??!\""
+      },
+      {
+        "id": 54,
+        "text": "Try to take it from your eye"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "Nothing done. Time's up. Iron plate collapsed and crashed your head.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 13"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "\"What? It is so easy to scare you? Hm. Interesting...\",-he said and flew away. You saw a long corridor behind him, so long what you can not see it's end.",
+    "answers": [
+      {
+        "id": 56,
+        "text": "Go through the corridor"
+      },
+      {
+        "id": 29,
+        "text": "Go up by stairs"
+      },
+      {
+        "id": 8,
+        "text": "Stand on the hatch"
+      },
+      {
+        "id": 35,
+        "text": "Go out"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "Walking through this corridor, you some times walked into cobweb and woke bats. So pretty scary. But for now you saw what walls in this corridor shrink as much as you go further.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Go back"
+      },
+      {
+        "id": 57,
+        "text": "Go further"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "After some time, corridor became so thin, what you must sneak to move on.",
+    "answers": [
+      {
+        "id": 58,
+        "text": "Sneak further"
+      },
+      {
+        "id": 4,
+        "text": "Go back, \"screw this thin corridor!\""
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "There was too thin hole at the end of this corridor, but somehow you was able to pass through it! You arrived to a tiny room. There is a some kind of panel. There are three buttons on it.",
+    "answers": [
+      {
+        "id": 59,
+        "text": "Press first button"
+      },
+      {
+        "id": 59,
+        "text": "Press second button"
+      },
+      {
+        "id": 60,
+        "text": "Press third button"
+      },
+      {
+        "id": 4,
+        "text": "Go... er... rightly sneak back through the hole"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "Nothing happened.",
+    "answers": [
+      {
+        "id": 59,
+        "text": "Press first button"
+      },
+      {
+        "id": 59,
+        "text": "Press second button"
+      },
+      {
+        "id": 60,
+        "text": "Press third button"
+      },
+      {
+        "id": 4,
+        "text": "Go... er... rightly sneak back through the hole"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "Right when you pressed the button, some tap on a panel picked up, and some spooky face got out the panel and looked at you. It was not too scary, bu-u-ut..... somehow your heart stopped, and after few seconds you died of infarct.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 4"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "There is some man in black jumper and with knives on fingers. He is sitting on a bed and crying, weaker closing face with hands, trying to not cut it with knives.",
+    "answers": [
+      {
+        "id": 62,
+        "text": "\"Hey! What happened?\""
+      },
+      {
+        "id": 29,
+        "text": "Go back"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "\"Today is the worst day in my life! I were fired from a job! My girlfriend left me, and today died my favorite dog! Oh, and i also need to scare people.\",-he said and cryed harder.",
+    "answers": [
+      {
+        "id": 63,
+        "text": "\"What happened with a job?\""
+      },
+      {
+        "id": 64,
+        "text": "\"Why your girlfriend left you?\""
+      },
+      {
+        "id": 65,
+        "text": "\"Tell about your dog.\""
+      },
+      {
+        "id": 29,
+        "text": "\"That sounds bad, but it is not my problem.\""
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "\"My boss is supporter of yellow jumpers, very lazy. He disliked me, because i did not wear yellow jumper, like everybody, but i like my black jumper. He got angry and fired me.\"",
+    "answers": [
+      {
+        "id": 66,
+        "text": "\"Idiot!\""
+      },
+      {
+        "id": 64,
+        "text": "\"Why your girlfriend left you?\""
+      },
+      {
+        "id": 65,
+        "text": "\"Tell about your dog.\""
+      },
+      {
+        "id": 29,
+        "text": "\"That sounds bad, but it is not my problem.\""
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "\"She found another! Toothless hockey player two meters height. Am i worse him?\"",
+    "answers": [
+      {
+        "id": 63,
+        "text": "\"What happened with a job?\""
+      },
+      {
+        "id": 66,
+        "text": "\"She do not apreciate you.\""
+      },
+      {
+        "id": 65,
+        "text": "\"Tell about your dog.\""
+      },
+      {
+        "id": 29,
+        "text": "\"That sounds bad, but it is not my problem.\""
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "\"It was dachshund. His name was Torpedo. He loved to chasing squirrels, and today in pursuit he was hit by a car.\"",
+    "answers": [
+      {
+        "id": 63,
+        "text": "\"What happened with a job?\""
+      },
+      {
+        "id": 64,
+        "text": "\"Why your girlfriend left you?\""
+      },
+      {
+        "id": 66,
+        "text": "\"That is a pity.\""
+      },
+      {
+        "id": 29,
+        "text": "\"That sounds bad, but it is not my problem.\""
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "\"Thank you for understanding. I do not know how to live now.\",-he said, wepting.",
+    "answers": [
+      {
+        "id": 67,
+        "text": "\"Can i help you?\""
+      },
+      {
+        "id": 29,
+        "text": "\"That is whole bad, but i do not care.\""
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "\"I once saw a film where people solve someone's problems through his slumbers. I can send you in my slumber. You will do something in it and cure me.\",-he said and looked at you hopefully.",
+    "answers": [
+      {
+        "id": 68,
+        "text": "\"Good idea! Let's try.\""
+      },
+      {
+        "id": 29,
+        "text": "Go back from this psycho"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "Man slept, and, after you too. You appeare on a beautiful meadow. There are three flowers in front of you. You want to pick up one.",
+    "answers": [
+      {
+        "id": 69,
+        "text": "Pick up rose"
+      },
+      {
+        "id": 69,
+        "text": "Pick up daisy"
+      },
+      {
+        "id": 76,
+        "text": "Pick up sunflower"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "After you picked flower up, you teleports to a zoo. There are three cages with animals inside and a sign with \"allowed to feed animals\" written on it in front of you. You have only this flower.",
+    "answers": [
+      {
+        "id": 70,
+        "text": "Feed with it a tiger"
+      },
+      {
+        "id": 70,
+        "text": "Feed with it a girrafe"
+      },
+      {
+        "id": 70,
+        "text": "Feed with it a sloth"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "Then, you again teleports to a restaurant under an open sky on the uppest floor of the highest skyscraper in Tokyo. Beautiful dressed waiter sits you at a table. There is a plate, fork and water glass of water with ice liing on a table in front of you.",
+    "answers": [
+      {
+        "id": 71,
+        "text": "Take plate"
+      },
+      {
+        "id": 71,
+        "text": "Take fork"
+      },
+      {
+        "id": 71,
+        "text": "Take glass"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "By some reason you filled with big hateness to picked item and want to destroy it.",
+    "answers": [
+      {
+        "id": 72,
+        "text": "Throw it out of skyscraper"
+      },
+      {
+        "id": 72,
+        "text": "Break it"
+      },
+      {
+        "id": 72,
+        "text": "Explode it with atomic bomb"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "You felt better, but after such difficult action you got hungry. Suddenly you teleports to a forest. It is beautiful: birds are singing, buterflies are flying around, somewhere you heard a cuckoo. There is a stall with food near you.",
+    "answers": [
+      {
+        "id": 73,
+        "text": "Buy taco"
+      },
+      {
+        "id": 73,
+        "text": "Buy cheburek"
+      },
+      {
+        "id": 73,
+        "text": "Buy hot dog"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "Bought food, you went to walk in the forest. Trees and bushes with green leaves. Berries and mushrooms. Sun lights. What you will do with your food?",
+    "answers": [
+      {
+        "id": 74,
+        "text": "Eat"
+      },
+      {
+        "id": 74,
+        "text": "Put into a hollow"
+      },
+      {
+        "id": 74,
+        "text": "Bury"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "You wake in the room, where you slept, and then, with wild shout wakes maniac too. He looks at himself from all sides and then says: \"I am still sad. I thought you will help me.\". He rushes up to you and cuts with your finger-knives.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 6"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "You felt better, but after such difficult action you got hungry. Suddenly you teleports to a forest. It is beautiful: birds are singing, buterflies are flying around, somewhere you heard a cuckoo. There is a stall with food near you.",
+    "answers": [
+      {
+        "id": 73,
+        "text": "Buy taco"
+      },
+      {
+        "id": 73,
+        "text": "Buy cheburek"
+      },
+      {
+        "id": 79,
+        "text": "Buy hot dog"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "After you picked flower up, you teleports to a zoo. There are three cages with animals inside and a sign with \"allowed to feed animals\" written on it in front of you. You have only this flower.",
+    "answers": [
+      {
+        "id": 70,
+        "text": "Feed with it a tiger"
+      },
+      {
+        "id": 70,
+        "text": "Feed with it a girrafe"
+      },
+      {
+        "id": 77,
+        "text": "Feed with it a sloth"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "Then, you again teleports to a restaurant under an open sky on the uppest floor of the highest skyscraper in Tokyo. Beautiful dressed waiter sits you at a table. There is a plate, fork and water glass of water with ice liing on a table in front of you.",
+    "answers": [
+      {
+        "id": 71,
+        "text": "Take plate"
+      },
+      {
+        "id": 71,
+        "text": "Take fork"
+      },
+      {
+        "id": 78,
+        "text": "Take glass"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "By some reason you filled with big hateness to picked item and want to destroy it.",
+    "answers": [
+      {
+        "id": 75,
+        "text": "Throw it out of skyscraper"
+      },
+      {
+        "id": 72,
+        "text": "Break it"
+      },
+      {
+        "id": 72,
+        "text": "Explode it with atomic bomb"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "Bought food, you went to walk in the forest. Trees and bushes with green leaves. Berries and mushrooms. Sun lights. What you will do with your food?",
+    "answers": [
+      {
+        "id": 74,
+        "text": "Eat"
+      },
+      {
+        "id": 80,
+        "text": "Put into a hollow"
+      },
+      {
+        "id": 74,
+        "text": "Bury"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "You wake in the room, where you slept, and then, maniac wakes too. He looks at himself from all sides and says: \"I feel better, thank you! Now i can kill humans again!\". His first victim was you.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Death 7"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 82,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 83,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 84,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 85,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 86,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 87,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 88,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 89,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 90,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 91,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 92,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 93,
+    "text": "",
+    "answers": []
+  }
+]

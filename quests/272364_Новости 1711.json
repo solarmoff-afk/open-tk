@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 33624.2 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор just  написал еще 27598.8 слов в квесте \"Приезд из парка и диалоги за столом после парка\"."
+      },
+      {
+        "targetbookid": "271744",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Приезд из парка и диалоги за столом после парка\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор elChem написал еще 20463.4 слов в квесте \"Приметы и предательства\"."
+      },
+      {
+        "targetbookid": "270280",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Приметы и предательства\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Irbis написал еще 17576.6 слов в квесте \"Аллария 2. Новое начало\"."
+      },
+      {
+        "targetbookid": "268794",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Аллария 2. Новое начало\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор zasranec написал еще 16102.4 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "268239",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

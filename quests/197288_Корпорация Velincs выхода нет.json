@@ -1,0 +1,4411 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Kotenbas (Буянбаев Жасулан)\nЖанр: Ужасы, Фантастика\nСекретная корпорация VELINCS, которая  занимается исследованием и разработкой биологического оружия уже долгое время перестала выходить на связь со внешним миром, и никаких признаков активности не вызывала. В целях безопасности, правительство решает полностью уничтожить и стереть этот проект и отправляет элитный отряд зачистки, чтобы они сделали всю грязную работу. ",
+    "answers": [
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://cdn1.radikalno.ru/uploads/2020/1/16/3ce252fd2664411bbaaec13d02c7f945-full.png",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://cdn1.radikalno.ru/uploads/2020/1/16/4d8343a0a9f0f17c06eea99d9a2d26f8-full.png",
+        "system": true
+      },
+      {
+        "id": 2,
+        "text": "Начать",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "initSounds": [
+          "fon1",
+          "https://wav-library.net/sounds/0-0-1-22724-20",
+          "shagi",
+          "https://wav-library.net/sounds/0-0-1-3884-20",
+          "udar",
+          "https://wav-library.net/sounds/0-0-1-4343-20",
+          "dver",
+          "https://wav-library.net/sounds/0-0-1-1972-20",
+          "gener",
+          "https://wav-library.net/sounds/0-0-1-4356-20",
+          "lomdver",
+          "https://wav-library.net/sounds/0-0-1-14708-20",
+          "rig",
+          "https://wav-library.net/sounds/0-0-1-19081-20",
+          "den",
+          "https://wav-library.net/sounds/0-0-1-715-20"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "text": "инит саунд"
+      },
+      {
+        "var_str_set": [
+          "global bg_music",
+          "fon1"
+        ],
+        "super_calculate": false,
+        "id": 1,
+        "calculate": true,
+        "text": "Фон муз"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Капитан Ширли: Так девочки, работаем быстро и чётко по плану. Нам нужно здесь полностью всё ликвидировать и установить взрывчатки по периметру, чтобы взорвать это место к чёртовой матери. Пленных собой не брать. Увидите кого-то не из наших — стрелять без раздумий. Вам всё ясно?\n\nОтряд: Да, сэр!\n\nОгромный лифт, в котором находился небольшой отряд солдат, медленно опускался вниз всё ниже и ниже, пока наконец не достиг до самого низа. После двери лифта с грохотом открылись, тем самым показывая не приятную картину. \nВ приёмном зале стоял жуткий погром, будто здесь прошёлся монстр, метя всё с пути. Свет отсутствовал и была плохая видемость в кромешной темноте. \n\nДэн: Что здесь, мать его, случилось?\n\nКапитан Ширли: Нам ничего не сообщили. Сказали только полностью зачистить и взорвать это место.\n\nТревис: Они явно что-то не договаривают.\n\nКапитан Ширли: Это не важно. Нам главное быстрее выполнить операцию и свалить отсюда.\n\nМарк: Похоже что-то не ладно с генератором — питании нет.\n\nКапитан Ширли: Да, в такой обстановке работать будет трудно. Как думаешь Марк, сможешь починить?\n\nМарк: Не могу сказать точно, надо сходить посмотреть и найти где неисправность.\n\nКапитан Ширли: Тогда делаем так: Дэн ты пойдёшь с Марком чинить генератор, а мы тут всё разведаем. Держитесь рядом и возвращайтесь как можно скорее — чёрт знает, что здесь произошло. Пока всё не выясним, лишний раз не рискуйте. Встретимся здесь же. Ладно, с богом. \n\nМарк и Дэн: Есть!",
+    "answers": [
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "shagi"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 3,
+        "text": "Идти с Дэном"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": " Вскоре отряд разделился на две группы и Марк с Дэном отправились чинить генератор. \n\nДэн: Ну и жуть! Не думал, что я окажусь одним из героев тех страшных фильмов.\n\nМарк: Не теряй голову. Всё пройдёт гладко, если мы будем держаться плана. Тем более в жизни как в фильмах никогда не бывает.\n\nДэн: Хех, мне бы твой оптимизм.\n Как думаешь, что это за место?\n\nМарк: Может какая та секретная лаборатория. Наверное, разрабатывали секретное оружие и всё такое.\n\nДэн: Так почему же никого нет?\n\nМарк: Слушай это не наше дело. Просто делай свою работу и не думай о лишнем. \n\nТак, мы пришли.",
+    "answers": [
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "dver"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 4,
+        "text": "К генератору "
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "В центре стоял огромный генератор, который судя по всему не работал.\n\nДэн: Жесть, он здоровенный. Как ты заставишь эту махину работать?\n\nМарк: Думаю, я понял, что тут не так. За пару минут справлюсь.\n\nДэн: Давай бро, я в тебя верю.\n",
+    "answers": [
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "gener"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 5,
+        "text": "Попробовать починить "
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "С громким рёвом генератор начал активно работать и всё здание быстро оживилось. \n\nДэн: О да, чувак ты крут. Теперь мне уже не очень стремно. \n\nМарк: Ладно, пошли обратно. Там наверное нас отряд зажд...\n\nВдруг, раздался сильный удар. \n",
+    "answers": [
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "lomdver"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 6,
+        "text": "Кто это?"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "И снова ещё удар. Что-то огромное усердно начало вламываться внутрь и дверьи быстро гнулись под градом удар, давая понять, что долго они не выдержут. ",
+    "answers": [
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "rig"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 7,
+        "text": "Дальше "
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "И вот за мгновение оно врывается внутрь. Марк и Дэн осталбенели от ими увиденного. Огромный кусок живого мясо, напоминающего по мелким признакам человека, в длину 2 метра, устремилось к ним, чтобы по скорее их растерзать.\nВ попытках защититься Марк и Дэн открыли огонь по тварью. Но пули не работали. \n",
+    "answers": [
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "den"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 8,
+        "text": "Дальше "
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Монстр без всяких усилий схватил Дэн и взяв его с двумя руками разорвал его на части.\n\nМарк: Бен, нет!\n",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Дальше ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": " Бросив части тела Дэна в сторону Монстр помчался к Марку и одной рукой взяв его за горло, поднял его вверх. От не хватки воздуха, Марк начал терять сознание. Это был момент смерти Марка и ничего уже не могло его спасти. Но Марк цепляясь за жизнь, не желал с этим смириться. Свободной рукой он схватил свой нож, и взмахнул со всей силой вверх.\n",
+    "answers": [
+      {
+        "var_str_set": [
+          "global play_sound_once",
+          "rig"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 10,
+        "text": "Ударить монстра ножом "
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": " Нож воткнулся прямо в глазное яблоко этой твари, Ревя от боли, монстр кинул Марка в сторону. От сильного удара об стену Марк отрубился.",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Дальше",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Марк: ммм... Голова... расскалывается... Так, стоп! Дэн! Эта тварь... Она без труда разорвала его... Бедняга. Что за чертовщина здесь творится. Мне нужно выбраться отсюда. ",
+    "answers": [
+      {
+        "var_add": [
+          "hp",
+          73,
+          "lut1 det",
+          10,
+          "lut1 itanol",
+          1,
+          "lut1 cley",
+          1,
+          "lut1 tkan",
+          1,
+          "lut2 oil",
+          2,
+          "lut2 sera",
+          1,
+          "lut2 det",
+          20,
+          "lut2 cley",
+          1,
+          "lut2 mikr",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 12,
+        "text": "Выбраться отсюда ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Общий коридор \n\nМарк: Чёрт! Чтобы выйти отсюда, мне нужно найти карту доступа 1 уровня. Надо разведать вокруг. \n",
+    "answers": [
+      {
+        "var_add": [
+          "zd1",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 34,
+        "text": "Выйти ",
+        "var_need": [
+          "k1",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "id": 16,
+        "text": " ",
+        "run": [
+          16
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Терминал ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Склад ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Комната персонала",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Труп",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Инвентарь ",
+    "answers": [
+      {
+        "var_max": [
+          "hp",
+          100
+        ],
+        "var_show": [
+          "hp"
+        ],
+        "comment": true,
+        "text_color": [
+          0.2,
+          1,
+          0.8
+        ],
+        "id": 16,
+        "text": "Здоровье:",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "var_max": [
+          "det",
+          100
+        ],
+        "var_show": [
+          "det"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/16/7f99cdecc7f4ae06fa459db8bb664d57-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 13,
+        "text": "Детали:\n",
+        "comment": true,
+        "right_answer": true
+      },
+      {
+        "var_max": [
+          "ammo",
+          90
+        ],
+        "var_show": [
+          "ammo"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 13,
+        "text": "Патроны\n",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/16/5be9bbfc812f33cbc59b938c8087036e-full.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "hp",
+          30
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 13,
+        "var_need": [
+          "aptek",
+          1
+        ],
+        "var_max": [
+          "hp",
+          100
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_sub": [
+          "aptek",
+          1
+        ],
+        "text": "Использовать аптечку ",
+        "instant": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/22/8f88917bf28fd81262d58b04650ecd85-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 15,
+        "text": "Craft "
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/22/993cdff4791007a36a348b4e3f595631-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "Сюжетные                \nПредметы             ",
+        "left_answer": true
+      },
+      {
+        "id": 12,
+        "text": "Назад",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Укажите команды для картинки",
+        "comment": true,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/cf7581638f8babe9b3b4fb808f77b50f-full.png"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "itanol",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/353138cceabba8684b81c54236821710-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "itanol",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/9879e81177097a7da26832fdb8bdae27-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "itanol",
+          3
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/f14c324b2cef7bb1da598e98a961df14-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/3890dea6117df950c723a13a0845d39b-full.png",
+        "var_need": [
+          "poroh",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/eade5fd7288cc2f8ff1e591b134f7ef4-full.png",
+        "var_need": [
+          "poroh",
+          2
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "tkan",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/d18a17e16b0f96475f6bad2b00a36832-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "cley",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/927d148c48c74119b204ab8eecb1c787-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/27ca70a82bd97c1b4a369f8d3f00189b-full.png",
+        "var_need": [
+          "tkan",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/03a3d68cd7db608cd88f5eff9b6335c9-full.png",
+        "var_need": [
+          "cley",
+          2
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "cley",
+          3
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/7530af620a6438f0cb4aecd4257d4f26-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "sera",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/1a70cd12ad4ff05cec449943f298abbe-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "sera",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/6731d3362c51c93cd3311ea80f4b5c5f-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/6fbe3ec6dc3aab95fec3f463521873d6-full.png",
+        "var_need": [
+          "mikr",
+          2
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/ddee090f68e242510798fcd393a1efa4-full.png",
+        "var_need": [
+          "mikr",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "oil",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/1ec596ebca4d951b6226da3383b30b06-full.png"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/2d422f519a78ac1832a3d55f5980474d-full.png",
+        "var_need": [
+          "oil",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/4fcd001d5ce673ae7a916552e6408d0f-full.png",
+        "var_need": [
+          "aptek",
+          3
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/522cc7d04c5bed3dec2ae8787e920136-full.png",
+        "var_need": [
+          "aptek",
+          2
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/4dce9d47eb26dacfad6261cda6b4ac67-full.png",
+        "var_need": [
+          "aptek",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "ch1",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/a1ac5455575f8a7980fbd62bedf92832-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/f55a881582fbc89e8bc5a19ade6cb0d5-full.png",
+        "var_need": [
+          "pz",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "ch2",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/283dfc878cffb443c5a6b132c8da0ef0-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/da7b0ac73e82626ead735474efc3e91b-full.png",
+        "var_need": [
+          "ammo",
+          1,
+          "ch2",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/8688480fa3ce7d7f1b598d297e7868eb-full.png",
+        "var_need": [
+          "ammo",
+          31,
+          "ch2",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/2df691cc6c488132c7a53f37d02101dd-full.png",
+        "var_need": [
+          "ammo",
+          61,
+          "ch2",
+          1
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "ch3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/4ea12a40cd16283a97e62ba739e292d2-full.png",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/300d364c5feb2ab1333e367716aa8742-full.png",
+        "var_need": [
+          "molotov",
+          1,
+          "ch3",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "molotov",
+          3,
+          "ch3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/00a71c2a8ac7af8a287e69eae26edc3c-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "var_need": [
+          "molotov",
+          1,
+          "ch3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/9f90cc3d6a5bc0bd215c5908b7bd609c-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 13,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/cca0e5d6a84b12aaff21cf5d9673a4c0-full.png",
+        "var_need": [
+          "sera",
+          3
+        ],
+        "text": "Укажите команды для картинки"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Задачи:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 14,
+        "text": "Найти карту доступа ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_no_more": [
+          "zd1",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.2,
+          1,
+          0.2
+        ],
+        "id": 14,
+        "text": "Найти карту доступа",
+        "var_need": [
+          "zd1",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 14,
+        "text": "Назад",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Создание предметов",
+    "answers": [
+      {
+        "var_max": [
+          "det",
+          100
+        ],
+        "var_show": [
+          "det"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/16/7f99cdecc7f4ae06fa459db8bb664d57-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 13,
+        "text": "Детали:\n",
+        "comment": true,
+        "right_answer": true
+      },
+      {
+        "var_max": [
+          "ammo",
+          90
+        ],
+        "var_show": [
+          "ammo"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 13,
+        "text": "Патроны\n",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/16/5be9bbfc812f33cbc59b938c8087036e-full.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "var_add": [
+          "i1",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "text": "Аптечка",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "var_add": [
+          "i2",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "var_need": [
+          "ch1",
+          1
+        ],
+        "text": "Плазменные резак",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "var_add": [
+          "i3",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "var_need": [
+          "ch2",
+          1
+        ],
+        "text": "Патроны ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "var_add": [
+          "i4",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "var_need": [
+          "ch3",
+          1
+        ],
+        "text": "Коктейль Молотова ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Рецепты ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Назад ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "comment": true,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/cf7581638f8babe9b3b4fb808f77b50f-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/353138cceabba8684b81c54236821710-full.png",
+        "var_need": [
+          "itanol",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/9879e81177097a7da26832fdb8bdae27-full.png",
+        "var_need": [
+          "itanol",
+          2
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/f14c324b2cef7bb1da598e98a961df14-full.png",
+        "var_need": [
+          "itanol",
+          3
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "var_need": [
+          "poroh",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/3890dea6117df950c723a13a0845d39b-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "var_need": [
+          "poroh",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/eade5fd7288cc2f8ff1e591b134f7ef4-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/d18a17e16b0f96475f6bad2b00a36832-full.png",
+        "var_need": [
+          "tkan",
+          2
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/927d148c48c74119b204ab8eecb1c787-full.png",
+        "var_need": [
+          "cley",
+          1
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/27ca70a82bd97c1b4a369f8d3f00189b-full.png",
+        "var_need": [
+          "tkan",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/03a3d68cd7db608cd88f5eff9b6335c9-full.png",
+        "var_need": [
+          "cley",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "cley",
+          3
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/7530af620a6438f0cb4aecd4257d4f26-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "sera",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/1a70cd12ad4ff05cec449943f298abbe-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "sera",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/6731d3362c51c93cd3311ea80f4b5c5f-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/6fbe3ec6dc3aab95fec3f463521873d6-full.png",
+        "var_need": [
+          "mikr",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/ddee090f68e242510798fcd393a1efa4-full.png",
+        "var_need": [
+          "mikr",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/1ec596ebca4d951b6226da3383b30b06-full.png",
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "oil",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/2d422f519a78ac1832a3d55f5980474d-full.png",
+        "var_need": [
+          "oil",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/4fcd001d5ce673ae7a916552e6408d0f-full.png",
+        "var_need": [
+          "aptek",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/522cc7d04c5bed3dec2ae8787e920136-full.png",
+        "var_need": [
+          "aptek",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/4dce9d47eb26dacfad6261cda6b4ac67-full.png",
+        "var_need": [
+          "aptek",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "ch1",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/a1ac5455575f8a7980fbd62bedf92832-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/f55a881582fbc89e8bc5a19ade6cb0d5-full.png",
+        "var_need": [
+          "pz",
+          1
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "comment": true,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/1bcaaa22973878272a09e63850a4c69c-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "ch2",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/283dfc878cffb443c5a6b132c8da0ef0-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/da7b0ac73e82626ead735474efc3e91b-full.png",
+        "var_need": [
+          "ammo",
+          1,
+          "ch2",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/8688480fa3ce7d7f1b598d297e7868eb-full.png",
+        "var_need": [
+          "ammo",
+          31,
+          "ch2",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/2df691cc6c488132c7a53f37d02101dd-full.png",
+        "var_need": [
+          "ammo",
+          61,
+          "ch2",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "var_need": [
+          "ch3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/4ea12a40cd16283a97e62ba739e292d2-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/300d364c5feb2ab1333e367716aa8742-full.png",
+        "var_need": [
+          "molotov",
+          1,
+          "ch3",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "molotov",
+          3,
+          "ch3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/00a71c2a8ac7af8a287e69eae26edc3c-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "molotov",
+          1,
+          "ch3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/9f90cc3d6a5bc0bd215c5908b7bd609c-full.png"
+      },
+      {
+        "comment": true,
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "sera",
+          3
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/cca0e5d6a84b12aaff21cf5d9673a4c0-full.png"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Геймплей режим",
+    "answers": [
+      {
+        "var_max": [
+          "hp",
+          100
+        ],
+        "var_show": [
+          "hp"
+        ],
+        "comment": true,
+        "text_color": [
+          0.2,
+          1,
+          0.8
+        ],
+        "id": 16,
+        "text": "Здоровье:",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Инвентарь ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Задачи ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/22/4f2d5d70025e1aa84dabe3e044180cef-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 16,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          ""
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/16/a7526992b28ee7df78bb76d3c91cbc94-full.png"
+      },
+      {
+        "comment": true,
+        "var_need": [
+          "hp",
+          76
+        ],
+        "id": 16,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/16/8736d23a24727d7665f6a0a2165077f6-full.png",
+        "text": "Укажите команды для картинки",
+        "var_no_more": [
+          "hp",
+          100
+        ]
+      },
+      {
+        "comment": true,
+        "var_need": [
+          "hp",
+          51
+        ],
+        "id": 16,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/16/4394ec8498998fcd721dc1ce6009969d-full.png",
+        "text": "Укажите команды для картинки",
+        "var_no_more": [
+          ""
+        ]
+      },
+      {
+        "comment": true,
+        "id": 16,
+        "var_need": [
+          "hp",
+          26
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/16/cd1bfa93be82da2288ccd5b24ee93cd7-full.png",
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "var_need": [
+          "hp",
+          1
+        ],
+        "id": 16,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/16/c2f4ef8792e9e060ab20226e8857dadd-full.png",
+        "text": "Укажите команды для картинки",
+        "var_no_more": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Создание предметов ",
+    "answers": [
+      {
+        "var_max": [
+          "det",
+          100
+        ],
+        "var_show": [
+          "det"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/16/7f99cdecc7f4ae06fa459db8bb664d57-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 13,
+        "text": "Детали:\n",
+        "comment": true,
+        "right_answer": true
+      },
+      {
+        "var_max": [
+          "ammo",
+          90
+        ],
+        "var_show": [
+          "ammo"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 13,
+        "text": "Патроны\n",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/16/5be9bbfc812f33cbc59b938c8087036e-full.png"
+        ],
+        "left_answer": true
+      },
+      {
+        "text": "Не хватает места ",
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 17,
+        "var_need": [
+          "i1",
+          1
+        ],
+        "var_equal": [
+          "aptek",
+          3
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "text": "Не хватает места ",
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 17,
+        "var_need": [
+          "i2",
+          1
+        ],
+        "var_equal": [
+          "pz",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "text": "Не хватает места ",
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 17,
+        "var_need": [
+          "i3",
+          1
+        ],
+        "var_equal": [
+          "ammo",
+          90
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "text": "Не хватает места ",
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 17,
+        "var_need": [
+          "i4",
+          1
+        ],
+        "var_equal": [
+          "molotov",
+          3
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "comment": true,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/cf7581638f8babe9b3b4fb808f77b50f-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/353138cceabba8684b81c54236821710-full.png",
+        "var_need": [
+          "itanol",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/9879e81177097a7da26832fdb8bdae27-full.png",
+        "var_need": [
+          "itanol",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/f14c324b2cef7bb1da598e98a961df14-full.png",
+        "var_need": [
+          "itanol",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "poroh",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/3890dea6117df950c723a13a0845d39b-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "poroh",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/eade5fd7288cc2f8ff1e591b134f7ef4-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/d18a17e16b0f96475f6bad2b00a36832-full.png",
+        "var_need": [
+          "tkan",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/927d148c48c74119b204ab8eecb1c787-full.png",
+        "var_need": [
+          "cley",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "tkan",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/27ca70a82bd97c1b4a369f8d3f00189b-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "cley",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/03a3d68cd7db608cd88f5eff9b6335c9-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/7530af620a6438f0cb4aecd4257d4f26-full.png",
+        "var_need": [
+          "cley",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/1a70cd12ad4ff05cec449943f298abbe-full.png",
+        "var_need": [
+          "sera",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/6731d3362c51c93cd3311ea80f4b5c5f-full.png",
+        "var_need": [
+          "sera",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "mikr",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/6fbe3ec6dc3aab95fec3f463521873d6-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "mikr",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/ddee090f68e242510798fcd393a1efa4-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/1ec596ebca4d951b6226da3383b30b06-full.png",
+        "var_need": [
+          "oil",
+          2
+        ],
+        "text": "Укажите команды для картинки"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "oil",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/2d422f519a78ac1832a3d55f5980474d-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "aptek",
+          3
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/4fcd001d5ce673ae7a916552e6408d0f-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "aptek",
+          2
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/522cc7d04c5bed3dec2ae8787e920136-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "aptek",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/4dce9d47eb26dacfad6261cda6b4ac67-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/a1ac5455575f8a7980fbd62bedf92832-full.png",
+        "var_need": [
+          "ch1",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "pz",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/f55a881582fbc89e8bc5a19ade6cb0d5-full.png"
+      },
+      {
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "comment": true,
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/1bcaaa22973878272a09e63850a4c69c-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/283dfc878cffb443c5a6b132c8da0ef0-full.png",
+        "var_need": [
+          "ch2",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "ammo",
+          1,
+          "ch2",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/da7b0ac73e82626ead735474efc3e91b-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "ammo",
+          31,
+          "ch2",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/8688480fa3ce7d7f1b598d297e7868eb-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "var_need": [
+          "ammo",
+          61,
+          "ch2",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/2df691cc6c488132c7a53f37d02101dd-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/4ea12a40cd16283a97e62ba739e292d2-full.png",
+        "var_need": [
+          "ch3",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "molotov",
+          1,
+          "ch3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/300d364c5feb2ab1333e367716aa8742-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/00a71c2a8ac7af8a287e69eae26edc3c-full.png",
+        "var_need": [
+          "molotov",
+          3,
+          "ch3",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/9f90cc3d6a5bc0bd215c5908b7bd609c-full.png",
+        "var_need": [
+          "molotov",
+          1,
+          "ch3",
+          1
+        ]
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "var_sub": [
+          "dis",
+          1,
+          "itanol",
+          1,
+          "tkan",
+          1,
+          "cley",
+          1,
+          "det",
+          10
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "instant": true,
+        "var_need": [
+          "i1",
+          1,
+          "itanol",
+          1,
+          "tkan",
+          1,
+          "cley",
+          1,
+          "det",
+          10
+        ],
+        "var_add": [
+          "aptek",
+          1
+        ],
+        "var_less": [
+          "aptek",
+          3
+        ],
+        "text": "Сделать Аптечка\n• 1 Этанол\n• 1 Ткань\n• 1 Клей\n• 10 Деталь"
+      },
+      {
+        "var_add": [
+          "pz",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_sub": [
+          "dis",
+          1,
+          "mikr",
+          1,
+          "cley",
+          1,
+          "sera",
+          1,
+          "oil",
+          2,
+          "det",
+          20
+        ],
+        "text": "Сделать Плазменный резак \n• 1 Микросхема \n• 2 Топливо \n• 1 Сера\n• 1 Клей\n• 20 Деталь",
+        "var_need": [
+          "i2",
+          1,
+          "mikr",
+          1,
+          "cley",
+          1,
+          "sera",
+          1,
+          "oil",
+          2,
+          "det",
+          20
+        ],
+        "var_less": [
+          "pz",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "ammo",
+          30
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_sub": [
+          "dis",
+          1,
+          "sera",
+          2,
+          "poroh",
+          1,
+          "det",
+          15
+        ],
+        "text": "Сделать Патроны\n• 1 Порох \n• 2 Сера\n• 15 Деталь",
+        "var_need": [
+          "i3",
+          1,
+          "sera",
+          2,
+          "poroh",
+          1,
+          "det",
+          15
+        ],
+        "var_less": [
+          "ammo",
+          90
+        ]
+      },
+      {
+        "var_add": [
+          "molotov",
+          1,
+          "tkan",
+          1,
+          "itanol",
+          1,
+          "oil",
+          2,
+          "det"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_sub": [
+          "dis",
+          1
+        ],
+        "text": "Сделать Коктейль Молотова \n• 2 Топливо \n• 1 Ткань\n• 1 Этал\n• 15 Деталь",
+        "var_need": [
+          "i4",
+          1,
+          "tkan",
+          1,
+          "itanol",
+          1,
+          "oil",
+          2,
+          "det",
+          15
+        ],
+        "var_less": [
+          "molotov",
+          3
+        ]
+      },
+      {
+        "var_max": [
+          "dis",
+          1
+        ],
+        "var_add": [
+          "dis",
+          1
+        ],
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "text": "Уничтожитель 1",
+        "var_need": [
+          "i1",
+          1,
+          "itanol",
+          1,
+          "tkan",
+          1,
+          "cley",
+          1,
+          "det",
+          10
+        ]
+      },
+      {
+        "var_max": [
+          "dis",
+          1
+        ],
+        "var_add": [
+          "dis",
+          1
+        ],
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "text": "Уничтожитель 2",
+        "var_need": [
+          "i2",
+          1,
+          "mikr",
+          1,
+          "cley",
+          1,
+          "sera",
+          1,
+          "oil",
+          2,
+          "det",
+          20
+        ]
+      },
+      {
+        "var_max": [
+          "dis",
+          1
+        ],
+        "var_add": [
+          "dis",
+          1
+        ],
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "text": "Уничтожитель 3",
+        "var_need": [
+          "i3",
+          1,
+          "sera",
+          2,
+          "poroh",
+          1,
+          "det",
+          15
+        ]
+      },
+      {
+        "var_max": [
+          "dis",
+          1
+        ],
+        "var_add": [
+          "dis",
+          1
+        ],
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "text": "Уничтожитель 4",
+        "var_need": [
+          "i4",
+          1,
+          "tkan",
+          1,
+          "itanol",
+          1,
+          "oil",
+          2,
+          "det",
+          15
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 17,
+        "text": "Не хватает элементов ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_no_more": [
+          "dis",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 17,
+        "text": "Назад",
+        "var_min": [
+          "i1",
+          0,
+          "i2",
+          0,
+          "i3",
+          0,
+          "i4",
+          0,
+          "dis",
+          0
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "forget": 17,
+        "isBack": true,
+        "var_sub": [
+          "i1",
+          1,
+          "i2",
+          1,
+          "i3",
+          1,
+          "i4",
+          1,
+          "dis",
+          1
+        ],
+        "backstepCount": 1
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "i3",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/b14eb73eb60304e9ddadf50640469ba3-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "i2",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/5963b5fb7479507e50b541884fa35e78-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "i1",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/12f7f953d7c5717ee0c59d11f549c068-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "введите команды для картинки",
+        "var_need": [
+          "i4",
+          1
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/17/c90d064979bff2d9d7585b7530e846bb-full.png"
+      },
+      {
+        "comment": true,
+        "id": 17,
+        "text": "Укажите команды для картинки",
+        "var_need": [
+          "sera",
+          3
+        ],
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/18/cca0e5d6a84b12aaff21cf5d9673a4c0-full.png"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Рецепты:",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 18,
+        "text": "Аптечка \n• 1 Этанол \n• 1 Ткань \n• 1 Клей\n• 10 Деталь ",
+        "comment": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 18,
+        "var_need": [
+          "ch1",
+          1
+        ],
+        "text": "Плазменный резак \n• 2 Топливо \n• 1 Микросхема \n• 1 Сера\n• 1 Клей\n• 20 Деталь ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 18,
+        "var_need": [
+          "ch2",
+          1
+        ],
+        "text": "Патроны \n• 1 Порох \n• 2 Сера\n• 15 Деталь",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 18,
+        "var_need": [
+          "ch3",
+          1
+        ],
+        "text": "Коктейль Молотова \n• 2 Топливо \n• 1 Ткань\n• Этанол \n• 15 Деталь",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Назад",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Сюжетные предметы ",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 19,
+        "var_need": [
+          "k1",
+          1
+        ],
+        "text": "Карта доступа 1 уровня ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "isBack": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "forget": 19,
+        "text": "Назад ",
+        "backstepCount": 1,
+        "id": 19
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Терминал ",
+    "answers": [
+      {
+        "var_not": [
+          "kluch",
+          1
+        ],
+        "launchtimer": [
+          "vz",
+          5
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 24,
+        "text": "Взломать ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "kluch",
+          1
+        ],
+        "id": 27,
+        "text": "Открыть ",
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Назад ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Склад",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 28,
+        "instant": true,
+        "var_need": [
+          "tew",
+          1
+        ],
+        "text": "Открыть "
+      },
+      {
+        "text": "Открыть ",
+        "var_not": [
+          "tew",
+          1
+        ],
+        "var_add": [
+          "tew",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 28,
+        "instant": true,
+        "var_need": [
+          "pz",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "var_not": [
+          "pz",
+          1,
+          "tew",
+          1
+        ],
+        "var_add": [
+          "pzneed",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 21,
+        "instant": true,
+        "text": "Открыть ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "text": "Нужен Плазменный резак ",
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 21,
+        "var_need": [
+          "pzneed",
+          1
+        ],
+        "var_equal": [
+          "pz",
+          0
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 12,
+        "text": "Назад",
+        "var_set": [
+          "pzneed",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Комната персонала ",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Открыть ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Назад",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Труп",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/22/68319fd0ef7a4866735da0903de37fac-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 25,
+        "text": "Обыскать",
+        "launchtimer": [
+          "lut1",
+          2
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Назад ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Взлом",
+    "answers": [
+      {
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 24,
+        "instant": true,
+        "timer": [
+          "vz",
+          0
+        ],
+        "text": " "
+      },
+      {
+        "var_add": [
+          "good",
+          1
+        ],
+        "text_color": [
+          0.5,
+          1,
+          0.5
+        ],
+        "id": 24,
+        "text": "●",
+        "left_answer": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "bad",
+          1
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 24,
+        "text": "X",
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          1
+        ],
+        "instant": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "good",
+          1
+        ],
+        "text_color": [
+          0.5,
+          1,
+          0.5
+        ],
+        "id": 24,
+        "text": "●",
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          2
+        ],
+        "instant": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "bad",
+          1
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 24,
+        "text": "X",
+        "left_answer": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          2
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "good",
+          1
+        ],
+        "text_color": [
+          0.5,
+          1,
+          0.5
+        ],
+        "id": 24,
+        "text": "●",
+        "left_answer": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          3
+        ],
+        "right_answer": true,
+        "instant": true
+      },
+      {
+        "var_add": [
+          "bad",
+          1
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 24,
+        "text": "X",
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          3
+        ],
+        "instant": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "good",
+          1
+        ],
+        "text_color": [
+          0.5,
+          1,
+          0.5
+        ],
+        "id": 24,
+        "text": "●",
+        "left_answer": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          4
+        ],
+        "right_answer": true,
+        "instant": true
+      },
+      {
+        "var_add": [
+          "bad",
+          1
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 24,
+        "text": "X",
+        "left_answer": true,
+        "var_not": [
+          "bad",
+          1,
+          "good",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "g1",
+          4
+        ],
+        "right_answer": true,
+        "instant": true
+      },
+      {
+        "var_not": [
+          "good",
+          4,
+          "bad",
+          1
+        ],
+        "var_add": [
+          "bad",
+          1
+        ],
+        "id": 24,
+        "text": " ",
+        "update": [
+          4,
+          1
+        ],
+        "comment": true
+      },
+      {
+        "var_not": [
+          "good",
+          4
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 24,
+        "text": "ОШИБКА",
+        "var_equal": [
+          "bad",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 24,
+        "text": "Рандомайзер ",
+        "var_random": [
+          "g1",
+          1,
+          4
+        ],
+        "calculate": true
+      },
+      {
+        "var_not": [
+          "good",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "bad",
+          1
+        ],
+        "id": 20,
+        "text": "Назад ",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_set": [
+          "bad",
+          0,
+          "g1",
+          0,
+          "good",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "good",
+          4
+        ],
+        "var_add": [
+          "kluch",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 20,
+        "text": "Взломано ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_set": [
+          "bad",
+          0,
+          "g1",
+          0,
+          "good",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Предметы ",
+    "answers": [
+      {
+        "var_not": [
+          "o",
+          1,
+          "a2",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "timer": [
+          "lut1",
+          0
+        ],
+        "text": "Обыск",
+        "instant": true,
+        "id": 25
+      },
+      {
+        "var_add": [
+          "o",
+          1,
+          "a2",
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "update": [
+          2,
+          1
+        ],
+        "var_max": [
+          "o",
+          1
+        ],
+        "super_calculate": false,
+        "comment": true,
+        "calculate": false,
+        "text": " ",
+        "var_mult": [
+          ""
+        ]
+      },
+      {
+        "var_show": [
+          "lut1 itanol"
+        ],
+        "var_add": [
+          "itanol",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "itanol",
+          3
+        ],
+        "var_sub": [
+          "lut1 itanol",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text": "Этанол ",
+        "var_need": [
+          "o",
+          1,
+          "lut1 itanol",
+          1
+        ],
+        "instant": true,
+        "id": 25
+      },
+      {
+        "var_show": [
+          "lut1 itanol"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 25,
+        "text": "Не хватает места \nЭтанол",
+        "instant": true,
+        "var_need": [
+          "o",
+          1,
+          "lut1 itanol",
+          1,
+          "itanol",
+          3
+        ]
+      },
+      {
+        "var_show": [
+          "lut1 cley"
+        ],
+        "var_add": [
+          "cley",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "cley",
+          3
+        ],
+        "var_sub": [
+          "lut1 cley",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text": "Клей ",
+        "var_need": [
+          "o",
+          1,
+          "lut1 cley",
+          1
+        ],
+        "instant": true,
+        "id": 25
+      },
+      {
+        "var_show": [
+          "lut1 cley"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 25,
+        "text": "Не хватает места \nКлей",
+        "instant": true,
+        "var_need": [
+          "o",
+          1,
+          "lut1 cley",
+          1,
+          "cley",
+          3
+        ]
+      },
+      {
+        "var_show": [
+          "lut1 tkan"
+        ],
+        "var_add": [
+          "tkan",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "tkan",
+          2
+        ],
+        "var_sub": [
+          "lut1 tkan",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text": "Ткань",
+        "var_need": [
+          "o",
+          1,
+          "lut1 tkan",
+          1
+        ],
+        "instant": true,
+        "id": 25
+      },
+      {
+        "var_show": [
+          "lut1 tkan"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 25,
+        "text": "Не хватает места \nТакнь",
+        "instant": true,
+        "var_need": [
+          "o",
+          1,
+          "tkan",
+          2,
+          "lut1 tkan",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "lut1 det"
+        ],
+        "var_add": [
+          "det",
+          10
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "det",
+          100
+        ],
+        "var_sub": [
+          "lut1 det",
+          10
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_need": [
+          "o",
+          1,
+          "lut1 det",
+          1
+        ],
+        "text": "Детали ",
+        "instant": true,
+        "id": 25
+      },
+      {
+        "var_show": [
+          "lut1 det"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 25,
+        "instant": true,
+        "var_need": [
+          "o",
+          1,
+          "det",
+          100,
+          "lut1 det",
+          1
+        ],
+        "text": "Не хватает места \nДетали "
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 25,
+        "text": "Пусто ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_no_more": [
+          "lut1 itanol",
+          0,
+          "lut1 tkan",
+          0,
+          "lut1 cley",
+          0,
+          "lut1 det",
+          0
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 12,
+        "text": "Назад",
+        "var_set": [
+          "o",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Пароль ",
+    "answers": [
+      {
+        "var_add": [
+          "par",
+          333,
+          "klick",
+          1
+        ],
+        "var_not": [
+          "klick",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 26,
+        "text": "1",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "text": "2",
+        "right_answer": true,
+        "var_add": [
+          "par",
+          245,
+          "klick",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 26,
+        "instant": true,
+        "var_not": [
+          "klick",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "var_add": [
+          "par",
+          200,
+          "klick",
+          1
+        ],
+        "var_not": [
+          "klick",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 26,
+        "text": "3",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "text": "4",
+        "right_answer": true,
+        "var_add": [
+          "par",
+          10000,
+          "klick",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 26,
+        "instant": true,
+        "var_not": [
+          "klick",
+          4
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 26,
+        "text": "Неправильный пароль ",
+        "var_not": [
+          "par",
+          1111
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "klick",
+          4
+        ],
+        "isBack": true,
+        "backstepCount": 1,
+        "var_set": [
+          "par",
+          0,
+          "klick",
+          0
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_equal": [
+          "par",
+          1111
+        ],
+        "id": 29,
+        "text": "Доступ открыт ",
+        "text_color": [
+          0.5,
+          1,
+          0.5
+        ],
+        "var_set": [
+          "par",
+          0,
+          "klick",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Терминал",
+    "answers": [
+      {
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Объявления ",
+        "middle_answer": true,
+        "var_set": [
+          "ter1",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Личное ",
+        "middle_answer": true,
+        "var_set": [
+          "ter1",
+          2
+        ]
+      },
+      {
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Карта ",
+        "middle_answer": true,
+        "var_set": [
+          "ter1",
+          3
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Выход ",
+        "middle_answer": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "isBack": true,
+        "backstepCount": 1,
+        "instant": true,
+        "forget": 27,
+        "var_set": [
+          "ter1",
+          0
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/54390175a76fa961bce204c61438447c-full.png"
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/76e190296542c52580a66f86fe58e803-full.png",
+        "var_equal": [
+          "ter1",
+          1
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/815b5d15721d3ae5f2c31e856a3b24d8-full.png",
+        "var_equal": [
+          "ter1",
+          3
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/e2d451d5e493500d5ea7c4271b6d0586-full.png",
+        "var_equal": [
+          "ter1",
+          2
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/21/64d833583ebec277a25aa213d7da56aa-full.png",
+        "var_equal": [
+          "ter1",
+          2
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/21/bca2dad2c36b6d01dcd994ab8e32bf24-full.png",
+        "var_equal": [
+          "ter1",
+          3
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/21/8bc6b53673544091c273cbbdfecc2fa0-full.png",
+        "var_equal": [
+          "ter1",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Склад ",
+    "answers": [
+      {
+        "var_not": [
+          "ghiu2",
+          1
+        ],
+        "var_add": [
+          "ghiu2",
+          1,
+          "sera",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 28,
+        "text": "Сера 1",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "instant": true
+      },
+      {
+        "var_not": [
+          "ghiu3",
+          1
+        ],
+        "var_add": [
+          "itanol",
+          1,
+          "ghiu3",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 28,
+        "text": "Этанол 1",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "instant": true
+      },
+      {
+        "var_not": [
+          "ghiu1",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 28,
+        "text": "Патроны 12",
+        "instant": true,
+        "var_set": [
+          "ghiu1",
+          1,
+          "ammo",
+          12
+        ]
+      },
+      {
+        "var_not": [
+          "ghiu1",
+          0,
+          "ghiu2",
+          0,
+          "ghiu3",
+          0
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 28,
+        "text": "Пусто",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "instant": true
+      },
+      {
+        "id": 21,
+        "text": "Назад ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Комната персонала ",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Рабочий стол ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "zap",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 29,
+        "instant": true,
+        "text": "Записка ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 29,
+        "text": "Новый ответ. введите текст",
+        "var_need": [
+          "zap",
+          1
+        ],
+        "var_no_more": [
+          "zap",
+          1
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 12,
+        "text": "Выйти ",
+        "forget": 29
+      },
+      {
+        "text": "Повторитель ",
+        "super_calculate": false,
+        "id": 29,
+        "calculate": true,
+        "var_need": [
+          "zap",
+          3
+        ],
+        "var_set": [
+          "zap",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Терминал",
+    "answers": [
+      {
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "Объявления ",
+        "id": 27,
+        "var_set": [
+          "ter1",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "Личное ",
+        "id": 27,
+        "var_set": [
+          "ter1",
+          2
+        ]
+      },
+      {
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "Карта ",
+        "id": 27,
+        "var_set": [
+          "ter1",
+          3
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "instant": true,
+        "id": 27,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "isBack": true,
+        "forget": 27,
+        "text": "Выход ",
+        "backstepCount": 1,
+        "var_set": [
+          "ter1",
+          0
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/54390175a76fa961bce204c61438447c-full.png"
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/76e190296542c52580a66f86fe58e803-full.png",
+        "var_equal": [
+          "ter1",
+          1
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/815b5d15721d3ae5f2c31e856a3b24d8-full.png",
+        "var_equal": [
+          "ter1",
+          3
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Укажите команды для картинки",
+        "url": "https://cdn1.radikalno.ru/uploads/2020/1/20/e2d451d5e493500d5ea7c4271b6d0586-full.png",
+        "var_equal": [
+          "ter1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Рабочий стол ",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/22/68319fd0ef7a4866735da0903de37fac-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 32,
+        "text": "Обыскать",
+        "launchtimer": [
+          "lut2",
+          3
+        ]
+      },
+      {
+        "isBack": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "forget": 31,
+        "text": "Назад ",
+        "id": 31,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Предметы ",
+    "answers": [
+      {
+        "instant": true,
+        "var_not": [
+          "desch1",
+          1
+        ],
+        "var_add": [
+          "ch1",
+          1,
+          "desch1",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 32,
+        "var_need": [
+          "o",
+          1
+        ],
+        "text": "Чертёж Плазменный резак ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_not": [
+          "desk1",
+          1
+        ],
+        "var_add": [
+          "k1",
+          1,
+          "desk1",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 32,
+        "instant": true,
+        "text": "Карта доступа 1 уровня ",
+        "var_need": [
+          "o",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "o",
+          1,
+          "a3",
+          1
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 32,
+        "text": "Обыск",
+        "timer": [
+          "lut2",
+          0
+        ],
+        "instant": true
+      },
+      {
+        "var_add": [
+          "o",
+          1,
+          "a3",
+          1
+        ],
+        "id": 32,
+        "instant": true,
+        "update": [
+          2,
+          1
+        ],
+        "var_max": [
+          "o",
+          1
+        ],
+        "super_calculate": false,
+        "calculate": false,
+        "comment": true,
+        "text": " "
+      },
+      {
+        "var_show": [
+          "lut2 oil"
+        ],
+        "var_add": [
+          "oil",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 32,
+        "var_sub": [
+          "lut2 oil",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text": "Топливо ",
+        "var_less": [
+          "oil",
+          2
+        ],
+        "var_need": [
+          "o",
+          1,
+          "lut2 oil",
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lut2 oil"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 32,
+        "instant": true,
+        "text": "Не хватает места \nТопливо ",
+        "var_need": [
+          "o",
+          1,
+          "lut2 oil",
+          1,
+          "oil",
+          2
+        ]
+      },
+      {
+        "var_show": [
+          "lut2 cley"
+        ],
+        "var_add": [
+          "cley",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 32,
+        "var_sub": [
+          "lut2 cley",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text": "Клей ",
+        "var_less": [
+          "cley",
+          3
+        ],
+        "var_need": [
+          "o",
+          1,
+          "lut2 cley",
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lut2 cley"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 32,
+        "instant": true,
+        "text": "Не хватает места \nКлей",
+        "var_need": [
+          "o",
+          1,
+          "lut2 cley",
+          1,
+          "cley",
+          3
+        ]
+      },
+      {
+        "var_show": [
+          "lut2 mikr"
+        ],
+        "var_add": [
+          "mikr",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 32,
+        "var_sub": [
+          "lut2 mikr",
+          1
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text": "Микросхема ",
+        "var_less": [
+          "mikr",
+          2
+        ],
+        "var_need": [
+          "o",
+          1,
+          "lut2 mikr",
+          1
+        ],
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lut2 mikr"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 32,
+        "var_need": [
+          "o",
+          1,
+          "mikr",
+          2,
+          "lut2 mikr",
+          1
+        ],
+        "text": "Не хватает места \nМикросхема ",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lut2 sera"
+        ],
+        "var_add": [
+          "sera",
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "var_less": [
+          "sera",
+          3
+        ],
+        "instant": true,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_sub": [
+          "lut2 sera",
+          1
+        ],
+        "id": 32,
+        "text": "Сера",
+        "var_need": [
+          "o",
+          1,
+          "lut2 sera",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "lut2 sera"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 32,
+        "var_need": [
+          "o",
+          1,
+          "sera",
+          3,
+          "lut2 sera",
+          1
+        ],
+        "text": "Не хватает места \nСера",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lut2 det"
+        ],
+        "var_add": [
+          "det",
+          20
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 32,
+        "var_sub": [
+          "lut2 det",
+          20
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_need": [
+          "o",
+          1,
+          "lut2 det",
+          1
+        ],
+        "var_less": [
+          "det",
+          100
+        ],
+        "text": "Детали ",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "lut1 det"
+        ],
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1
+        ],
+        "id": 32,
+        "var_need": [
+          "o",
+          1,
+          "det",
+          100,
+          "lut2 det",
+          1
+        ],
+        "instant": true,
+        "text": "Не хватает места \nДетали "
+      },
+      {
+        "var_not": [
+          "ch1",
+          0
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 29,
+        "text": "Пусто ",
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "var_no_more": [
+          "lut2 sera",
+          0,
+          "lut2 mikr",
+          0,
+          "lut2 cley",
+          0,
+          "lut2 det",
+          0,
+          "lut2 oil",
+          0
+        ]
+      },
+      {
+        "forget": 32,
+        "id": 32,
+        "bgAnswerImage": [
+          "https://cdn1.radikalno.ru/uploads/2020/1/21/d7c5beb6d85d6af8453704c58153e4ad-full.png"
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "backstepCount": 1,
+        "text": "Назад",
+        "isBack": true,
+        "var_set": [
+          "o",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Тумбочка ",
+    "answers": []
+  },
+  {
+    "id": 34,
+    "text": "Спасибо за прохождение! Этот квест ещё находится в разработке.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Создание предметов ",
+    "answers": []
+  },
+  {
+    "id": 36,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 37,
+    "text": "",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 39,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 40,
+    "text": "",
+    "answers": []
+  }
+]

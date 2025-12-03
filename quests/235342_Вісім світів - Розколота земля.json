@@ -1,0 +1,8580 @@
+[
+  {
+    "id": 1,
+    "text": "RPG квест, який розкриє історію одного з восьми світів — Розколотої землі. Обирайте свій стиль гри, пристосовуйтесь до особливостей ворогів, купуйте спорядження та різноманітні зілля, вивчайте заклинання та відкривайте нові здібності. Створіть свого власного персонажа, щоб повернути порядок Аврори\n\n!!! Увага!!!\nДля коректного відображення тексту поставте маленький шрифт. \nДля коректного балансу кольорів потрібно активувати нічний режим, адже гамму кольорів було підібрано саме для нього. Денний режим буде жахливо різати очі! ",
+    "answers": [
+      {
+        "id": 34,
+        "text": "Старт",
+        "var_str_set": [
+          "dificult",
+          "E"
+        ],
+        "var_set": [
+          "Ehp",
+          12,
+          "Eatk",
+          2,
+          "Php",
+          14,
+          "Pmaxhp",
+          15,
+          "Patk",
+          5,
+          "Pregen",
+          20,
+          "turn",
+          2,
+          "Emaxhp",
+          15,
+          "score",
+          0,
+          "Pevasion",
+          5,
+          "Eevasion",
+          2,
+          "r",
+          0,
+          "tactic",
+          10,
+          "Parmor",
+          0,
+          "points",
+          2,
+          "x",
+          15,
+          "y",
+          5,
+          "STR",
+          1,
+          "AGI",
+          1,
+          "INT",
+          1,
+          "STA",
+          1,
+          "xp",
+          0,
+          "xpneed",
+          40,
+          "lvl",
+          1,
+          "Pmp",
+          12,
+          "Pmaxmp",
+          1,
+          "Pstamina",
+          18,
+          "Pmaxstamina",
+          1,
+          "FQA",
+          0,
+          "move",
+          20,
+          "maxmove",
+          20,
+          "food",
+          70,
+          "maxfood",
+          100,
+          "ran",
+          200,
+          "Battle",
+          "Pgold",
+          15,
+          "reward",
+          0,
+          "xpget",
+          0,
+          "Earmor",
+          0,
+          "loc",
+          0,
+          "take",
+          0,
+          "Pmaxarmor",
+          0,
+          "RingHp",
+          0,
+          "Done",
+          0,
+          "Stake",
+          0,
+          "killed",
+          0
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Інформація "
+      },
+      {
+        "id": 1,
+        "text": "Шановний модератор! Я розумію, що немаю права вимагати в гравців увімкнути нічний режим, але саме в ньому відкривається в тричі більший арсенал всіх можливих кольорів, які б нерізали очі. Надіюсь на ваше розуміння! ",
+        "comment": true,
+        "var_equal": [
+          "test",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "                                        Інвентар\n\n \n",
+    "answers": [
+      {
+        "var_max": [
+          "Php",
+          "Pmaxhp"
+        ],
+        "var_show": [
+          "Php"
+        ],
+        "comment": true,
+        "text_color": [
+          0.1,
+          1,
+          0.1
+        ],
+        "id": 7,
+        "text": "Здоров'я: ",
+        "left_answer": true
+      },
+      {
+        "var_max": [
+          "Pmp",
+          "Pmaxmp"
+        ],
+        "var_show": [
+          "Pmp"
+        ],
+        "comment": true,
+        "text_color": [
+          0.2,
+          0.7,
+          0.8
+        ],
+        "id": 7,
+        "text": "Мана: ",
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "Parmor"
+        ],
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.8,
+          0.5
+        ],
+        "id": 7,
+        "text": "                                   Броня: ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "food"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.6,
+          0
+        ],
+        "id": 3,
+        "instant": true,
+        "left_answer": false,
+        "var_max": [
+          "food",
+          "maxfood"
+        ],
+        "right_answer": true,
+        "text": "                               Ситість:  "
+      },
+      {
+        "id": 41,
+        "text": "Записка\nМістить важливу інформацію"
+      },
+      {
+        "bg_color": [
+          0.5,
+          1,
+          1
+        ],
+        "var_add": [
+          "xp",
+          120
+        ],
+        "text_color": [
+          0.7,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Камень досвіду\n\"Пам'ять про минулих героїв\"\nВи отримуєте 120 одиниць досвіду",
+        "var_need": [
+          "global xpStone",
+          1
+        ],
+        "var_set": [
+          "global xpStone",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "weapon",
+          0,
+          "weaponDagger",
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "weaponD",
+          1
+        ],
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Кинжал\nШкода <plus>1",
+        "var_set": [
+          "weapon",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "weaponSpear",
+          1,
+          "weapon",
+          0
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "weaponD",
+          2
+        ],
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Спис\nШкода <plus> 2\nПерший удар - завдає  шкоду рівну вашій базовій шкоді до початку бою. Витрачає 4 одиниці енергії. ",
+        "var_set": [
+          "weapon",
+          3
+        ]
+      },
+      {
+        "var_add": [
+          "weaponD",
+          2
+        ],
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 2,
+        "instant": true,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "weapon",
+          0,
+          "weaponSword",
+          1
+        ],
+        "var_not": [
+          "weaponDagger",
+          2,
+          "weaponScycle",
+          2,
+          "weaponStuff",
+          2
+        ],
+        "text": "Сталевий меч\nШкода <plus>2",
+        "var_set": [
+          "weapon",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "weapon",
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "instant": true,
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 2,
+        "text": "Сталевий меч\nНадіто\nШкода <plus>2",
+        "var_sub": [
+          "weaponD",
+          2
+        ],
+        "var_set": [
+          "weapon",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "weapon",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "instant": true,
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 2,
+        "text": "Кинжал\nНадіто\nШкода <plus>1",
+        "var_sub": [
+          "weaponD",
+          1
+        ],
+        "var_set": [
+          "weapon",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_sub": [
+          "weaponD",
+          2
+        ],
+        "var_equal": [
+          "weapon",
+          3
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Спис\nНадіто\nШкода <plus>2",
+        "var_set": [
+          "weapon",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "Pmaxarmor",
+          1
+        ],
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 2,
+        "instant": true,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "helmet1",
+          1
+        ],
+        "var_not": [
+          "helmet2",
+          2,
+          "helmet3",
+          2
+        ],
+        "text": "Шкіряний шолом\nБроня <plus>1",
+        "var_set": [
+          "helmet1",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "helmet1",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "text": "Шкіряний шолом\nНадіто\nБроня <plus>1\n",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "var_sub": [
+          "Pmaxarmor",
+          1
+        ],
+        "var_set": [
+          "helmet1",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "helmet1",
+          2,
+          "helmet3",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          2
+        ],
+        "var_equal": [
+          "helmet2",
+          1
+        ],
+        "id": 2,
+        "text": "Мідний шолом\nБроня <plus>2",
+        "instant": true,
+        "var_set": [
+          "helmet2",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "helmet2",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_sub": [
+          "Pmaxarmor",
+          2
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "text": "Мідний шолом\nНадіто\nБроня <plus>2\n",
+        "var_set": [
+          "helmet2",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "helmet1",
+          2,
+          "helmet2",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          3
+        ],
+        "var_equal": [
+          "helmet3",
+          1
+        ],
+        "id": 2,
+        "text": "Залізний шолом\nБроня <plus>3",
+        "instant": true,
+        "var_set": [
+          "helmet3",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "helmet3",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "instant": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Залізний шолом\nНадіто\nБроня <plus>3\n",
+        "var_sub": [
+          "Pmaxarmor",
+          3
+        ],
+        "var_set": [
+          "helmet3",
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_not": [
+          "suit2",
+          2,
+          "suit3",
+          2
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          2
+        ],
+        "var_equal": [
+          "suit1",
+          1
+        ],
+        "id": 2,
+        "text": "Шкіряний нагрудник\nБроня <plus>2",
+        "instant": true,
+        "var_set": [
+          "suit1",
+          2
+        ]
+      },
+      {
+        "var_not": [
+          "suit1",
+          2,
+          "suit3",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          4
+        ],
+        "var_equal": [
+          "suit2",
+          1
+        ],
+        "id": 2,
+        "text": "Мідний нагрудник\nБроня <plus>4",
+        "instant": true,
+        "var_set": [
+          "suit2",
+          2
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_not": [
+          "suit1",
+          2,
+          "suit2",
+          2
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          6
+        ],
+        "var_equal": [
+          "suit3",
+          1
+        ],
+        "id": 2,
+        "text": "Залізний нагрудник\nБроня <plus>6",
+        "instant": true,
+        "var_set": [
+          "suit3",
+          2
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "text": "Шкіряний нагрудник\nНадіто\nБроня <plus>2\n",
+        "var_equal": [
+          "suit1",
+          2
+        ],
+        "id": 2,
+        "instant": true,
+        "var_sub": [
+          "Pmaxarmor",
+          2
+        ],
+        "var_set": [
+          "suit1",
+          1
+        ]
+      },
+      {
+        "var_equal": [
+          "suit2",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_sub": [
+          "Pmaxarmor",
+          4
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Мідний нагрудник\nНадіто\nБроня <plus>4",
+        "instant": true,
+        "var_set": [
+          "suit2",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "instant": true,
+        "var_equal": [
+          "suit3",
+          2
+        ],
+        "id": 2,
+        "var_sub": [
+          "Pmaxarmor",
+          6
+        ],
+        "text": "Залізний нагрудник\nНадіто\nБроня <plus>6\n",
+        "var_set": [
+          "suit3",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "boots2",
+          2,
+          "boots3",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          1
+        ],
+        "var_equal": [
+          "boots1",
+          1
+        ],
+        "id": 2,
+        "text": "Шкіряні чоботи\nБроня <plus>1",
+        "instant": true,
+        "var_set": [
+          "boots1",
+          2
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "text": "Шкіряні чоботи\nНадіто\nБроня <plus>1\n",
+        "var_equal": [
+          "boots1",
+          2
+        ],
+        "id": 2,
+        "instant": true,
+        "var_sub": [
+          "Pmaxarmor",
+          1
+        ],
+        "var_set": [
+          "boots1",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "boots1",
+          2,
+          "boots3",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          2
+        ],
+        "var_equal": [
+          "boots2",
+          1
+        ],
+        "id": 2,
+        "text": "Мідні чоботи\nБроня <plus>2",
+        "instant": true,
+        "var_set": [
+          "boots2",
+          2
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_not": [
+          "boots1",
+          2,
+          "boots2",
+          2
+        ],
+        "var_add": [
+          "Pmaxarmor",
+          3
+        ],
+        "var_equal": [
+          "boots3",
+          1
+        ],
+        "id": 2,
+        "text": "Залізні чоботи\nБроня <plus>3",
+        "instant": true,
+        "var_set": [
+          "boots3",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "boots2",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_sub": [
+          "Pmaxarmor",
+          2
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Мідні чоботи\nНадіто\nБроня <plus>2\n",
+        "instant": true,
+        "var_set": [
+          "boots2",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "instant": true,
+        "var_equal": [
+          "boots3",
+          2
+        ],
+        "id": 2,
+        "var_sub": [
+          "Pmaxarmor",
+          3
+        ],
+        "text": "Залізні чоботи\nНадіто\nБроня <plus>3\n",
+        "var_set": [
+          "boots3",
+          1
+        ]
+      },
+      {
+        "var_not": [
+          "ring2",
+          2,
+          "ring3",
+          2,
+          "ring4",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "maxmove",
+          5
+        ],
+        "var_equal": [
+          "ring1",
+          1
+        ],
+        "id": 2,
+        "text": "Перстень втоми\nБадьорість: <plus>5",
+        "instant": true,
+        "var_set": [
+          "ring1",
+          2
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_not": [
+          "ring1",
+          2,
+          "ring3",
+          2,
+          "ring4",
+          2
+        ],
+        "var_add": [
+          "maxfood",
+          30
+        ],
+        "var_equal": [
+          "ring2",
+          1
+        ],
+        "id": 2,
+        "text": "Перстень голоду\nМаксимальна ситість: <plus>30",
+        "instant": true,
+        "var_set": [
+          "ring2",
+          2
+        ]
+      },
+      {
+        "var_not": [
+          "ring1",
+          2,
+          "ring3",
+          2,
+          "ring4",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "ring3",
+          1
+        ],
+        "id": 2,
+        "text": "Перстень хвороби\nВи відновлюєте 10 одиниць здоров'я після битви",
+        "instant": true,
+        "var_set": [
+          "ring3",
+          2
+        ]
+      },
+      {
+        "var_equal": [
+          "ring1",
+          2
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "text": "Перстень втоми\nНадіто\nБадьорість: <plus>5\n",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "var_sub": [
+          "maxmove",
+          5
+        ],
+        "var_set": [
+          "ring1",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_sub": [
+          "maxfood",
+          30
+        ],
+        "var_equal": [
+          "ring2",
+          2
+        ],
+        "id": 2,
+        "text": "Перстень голоду\nНадіто\nМаксимальна ситість: <plus>30\n",
+        "instant": true,
+        "var_set": [
+          "ring2",
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "var_equal": [
+          "ring3",
+          2
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 2,
+        "text": "Перстень хвороби\nНадіто\nВи відновлюєте 10 одиниць здоров'я після бою",
+        "instant": true,
+        "var_set": [
+          "ring3",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "apples"
+        ],
+        "var_add": [
+          "food",
+          5,
+          "Php",
+          1
+        ],
+        "text_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "id": 2,
+        "var_sub": [
+          "apples",
+          1
+        ],
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "text": "Яблуко\nСитість: <plus>5\nЗдоров'я: <plus>1\nКількість: ",
+        "var_more": [
+          "apples",
+          0
+        ],
+        "instant": true
+      },
+      {
+        "var_show": [
+          "Stake"
+        ],
+        "var_add": [
+          "food",
+          50,
+          "Php",
+          5
+        ],
+        "text_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "id": 2,
+        "text": "Стейк\nСитість: <plus>50\nЗдоров'я: <plus>5\nКількість: ",
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "instant": true,
+        "var_more": [
+          "Stake",
+          0
+        ],
+        "var_sub": [
+          "Stake",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "potionHeal"
+        ],
+        "var_add": [
+          "Php",
+          55
+        ],
+        "text_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "id": 2,
+        "text": "Зілля лікування\nЗдоров'я: <plus>55\nКількість: ",
+        "bg_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "instant": true,
+        "var_more": [
+          "potionHeal",
+          0
+        ],
+        "var_sub": [
+          "potionHeal",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "potionMana"
+        ],
+        "var_add": [
+          "Pmp",
+          45
+        ],
+        "text_color": [
+          0.9,
+          0.9,
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "bg_color": [
+          0.8,
+          0.8,
+          1
+        ],
+        "var_sub": [
+          "potionMana",
+          1
+        ],
+        "var_more": [
+          "potionMana",
+          0
+        ],
+        "text": "Зілля мани\nМана: <plus>45\nКількість: "
+      },
+      {
+        "var_show": [
+          "potionStone"
+        ],
+        "comment": true,
+        "text_color": [
+          0.7,
+          0.8,
+          0.3
+        ],
+        "id": 2,
+        "text": "Зілля кам'яної шкіри\nБроня: <plus>2\nКількість: ",
+        "bg_color": [
+          0.7,
+          0.8,
+          0.3
+        ],
+        "var_add": [
+          "Parmor",
+          2
+        ],
+        "var_sub": [
+          "potionStone",
+          1
+        ],
+        "var_more": [
+          "potionStone",
+          0
+        ],
+        "instant": true
+      },
+      {
+        "var_show": [
+          "potionAntidot"
+        ],
+        "comment": true,
+        "text_color": [
+          0.7,
+          0.8,
+          0.3
+        ],
+        "id": 2,
+        "instant": true,
+        "bg_color": [
+          0.7,
+          0.8,
+          0.3
+        ],
+        "text": "Антидот\nПовністю виліковує від отрути\nКількість: ",
+        "var_more": [
+          "potionAntidot",
+          0
+        ],
+        "var_sub": [
+          "potionAntidot",
+          1
+        ],
+        "var_set": [
+          "Ppoison",
+          0
+        ]
+      },
+      {
+        "id": 7,
+        "instant": true,
+        "text": "                                       Назад"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "text": "Установка броні",
+        "var_set": [
+          "Parmor",
+          "Pmaxarmor"
+        ]
+      },
+      {
+        "var_max": [
+          "Php",
+          "Pmaxhp",
+          "Pmp",
+          "Pmaxmp",
+          "food",
+          "maxfood"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": "Небільше ліміту! ",
+        "calculate": true,
+        "super_calculate": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "]==================Карта===================[\n\n",
+    "answers": [
+      {
+        "var_max": [
+          "move",
+          "maxmove"
+        ],
+        "var_show": [
+          "move"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          0
+        ],
+        "id": 3,
+        "text": "Бадьорість: ",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "food"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.6,
+          0
+        ],
+        "id": 3,
+        "instant": true,
+        "left_answer": false,
+        "var_max": [
+          "food",
+          "maxfood"
+        ],
+        "right_answer": true,
+        "text": "Ситість:  "
+      },
+      {
+        "comment": true,
+        "id": 3,
+        "text": "                                  Координати",
+        "instant": true,
+        "left_answer": false
+      },
+      {
+        "var_show": [
+          "x"
+        ],
+        "comment": true,
+        "id": 3,
+        "instant": true,
+        "text": "                                        X: ",
+        "left_answer": false
+      },
+      {
+        "var_show": [
+          "y"
+        ],
+        "comment": true,
+        "id": 3,
+        "instant": true,
+        "text": "                                        Y: ",
+        "left_answer": false
+      },
+      {
+        "var_show": [
+          "location"
+        ],
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.8,
+          0.4
+        ],
+        "id": 3,
+        "instant": true,
+        "text": "                                 Локація:",
+        "left_answer": false
+      },
+      {
+        "right_answer": true,
+        "var_show": [
+          "dificult"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "id": 3,
+        "instant": true,
+        "text": "  Рівень небезпеки   ",
+        "left_answer": false
+      },
+      {
+        "var_show": [
+          "FQA",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "id": 3,
+        "instant": true,
+        "text": "  Частота нападів      ",
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          0.6,
+          0.6
+        ],
+        "id": 3,
+        "text": "                        Спровокувати напад",
+        "left_answer": false,
+        "bg_color": [
+          1,
+          0.6,
+          0.6
+        ],
+        "var_not": [
+          "loc",
+          10
+        ],
+        "var_equal": [
+          "Battle",
+          0
+        ],
+        "var_sub": [
+          "move",
+          2
+        ],
+        "var_more": [
+          "move",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "Battle",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 3,
+        "text": "Шанс нападу",
+        "run": [
+          16
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 18,
+        "text": "Відображення управління на карті",
+        "run": [
+          18
+        ],
+        "var_equal": [
+          "Battle",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 17,
+        "text": "Визначення локацій на карті ",
+        "run": [
+          17
+        ],
+        "var_equal": [
+          "ran",
+          300
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "Battle",
+          1
+        ],
+        "id": 3,
+        "text": "                                На вас напали! ",
+        "text_color": [
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "                          Підготуватись до бою",
+        "var_equal": [
+          "Battle",
+          1
+        ],
+        "var_set": [
+          "canRun",
+          -100,
+          "Pstamina",
+          "Pmaxstamina",
+          "mustRandom",
+          1,
+          "canStone",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "id": 3,
+        "var_sub": [
+          "food",
+          10
+        ],
+        "left_answer": true,
+        "bg_color": [
+          0.7,
+          1,
+          0.7
+        ],
+        "var_equal": [
+          "Battle",
+          0
+        ],
+        "var_more": [
+          "food",
+          5
+        ],
+        "instant": true,
+        "text": "Відпочити",
+        "var_set": [
+          "move",
+          "maxmove",
+          "canMeditate",
+          1,
+          "canTrain",
+          1,
+          "canBow",
+          1,
+          "canSpear",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "id": 3,
+        "instant": true,
+        "bg_color": [
+          0.7,
+          1,
+          0.7
+        ],
+        "var_need": [
+          "food",
+          15
+        ],
+        "var_equal": [
+          "Battle",
+          0
+        ],
+        "text": "Відновити сили",
+        "var_sub": [
+          "food",
+          15
+        ],
+        "right_answer": true,
+        "var_set": [
+          "Php",
+          "Pmaxhp",
+          "Pmp",
+          "Pmaxmp",
+          "canBow",
+          1,
+          "canSpear",
+          1,
+          "canMeditate",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "Pmp",
+          "INT"
+        ],
+        "text_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "id": 3,
+        "instant": true,
+        "right_answer": false,
+        "var_equal": [
+          "canMeditate",
+          1,
+          "Battle",
+          0,
+          "class",
+          3
+        ],
+        "bg_color": [
+          0.7,
+          1,
+          0.7
+        ],
+        "text": "                                    Медитувати",
+        "var_set": [
+          "canMeditate",
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "Php",
+          "STR"
+        ],
+        "text_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "id": 3,
+        "instant": true,
+        "bg_color": [
+          0.7,
+          1,
+          0.7
+        ],
+        "var_equal": [
+          "canTrain",
+          1,
+          "Battle",
+          0,
+          "class",
+          1
+        ],
+        "right_answer": false,
+        "text": "                                    Тренуватись",
+        "var_set": [
+          "canTrain",
+          0
+        ]
+      },
+      {
+        "id": 7,
+        "text": "                                Меню персонажа",
+        "instant": true,
+        "var_equal": [
+          "Battle",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0.8,
+          0.9,
+          0.8
+        ],
+        "var_equal": [
+          "x",
+          27,
+          "y",
+          3
+        ],
+        "id": 25,
+        "text": "Таверна",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          0.9,
+          0.8
+        ],
+        "var_equal": [
+          "x",
+          28,
+          "y",
+          2
+        ],
+        "id": 28,
+        "text": "Кузня",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          0.9,
+          0.8
+        ],
+        "var_equal": [
+          "x",
+          28,
+          "y",
+          4
+        ],
+        "id": 42,
+        "text": "Храм талантів",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.9,
+          0.9,
+          0.8
+        ],
+        "var_equal": [
+          "x",
+          13,
+          "y",
+          13
+        ],
+        "id": 29,
+        "text": "Гігантська яма",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.7,
+          0.9,
+          1
+        ],
+        "var_equal": [
+          "x",
+          14,
+          "y",
+          14
+        ],
+        "id": 35,
+        "text": "Каменюка з вибитим текстом",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.9,
+          0.9,
+          0.8
+        ],
+        "var_equal": [
+          "x",
+          18,
+          "y",
+          18
+        ],
+        "id": 30,
+        "text": "Обитель друїда",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.9,
+          0.9,
+          0.8
+        ],
+        "var_equal": [
+          "x",
+          3,
+          "y",
+          15
+        ],
+        "id": 39,
+        "text": "Склеп",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.7,
+          0.9,
+          1
+        ],
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 36,
+        "text": "Каменюка з вибитим текстом",
+        "var_equal": [
+          "x",
+          17,
+          "y",
+          17
+        ],
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0.7,
+          0.9,
+          1
+        ],
+        "var_equal": [
+          "x",
+          4,
+          "y",
+          15
+        ],
+        "id": 38,
+        "instant": true,
+        "text": "Каменюка з вибитим текстом",
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          0.8,
+          0.6,
+          0.8
+        ],
+        "var_equal": [
+          "x",
+          0,
+          "y",
+          0,
+          "obelisk1",
+          0
+        ],
+        "id": 37,
+        "instant": true,
+        "text": "Обеліск"
+      },
+      {
+        "bg_color": [
+          1,
+          0.6,
+          0.6
+        ],
+        "text_color": [
+          1,
+          0.4,
+          0.3
+        ],
+        "id": 1,
+        "text": "                      Померти від голоду",
+        "var_less": [
+          "food",
+          10
+        ],
+        "var_no_more": [
+          "move",
+          0
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Серверна",
+        "var_equal": [
+          "test",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": " ",
+    "answers": []
+  },
+  {
+    "id": 5,
+    "text": "Обрахкнок\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Оп",
+        "var_set": [
+          "dmg",
+          "Eatk"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_sub": [
+          "dmg",
+          "Parmor"
+        ]
+      },
+      {
+        "var_less": [
+          "dmg",
+          1
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "dmg",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "var_random": [
+          "r",
+          0,
+          100
+        ],
+        "calculate": true
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 5,
+        "var_sub": [
+          "Php",
+          "dmg"
+        ],
+        "text": "Новый ответ. введите текст",
+        "var_more": [
+          "r",
+          "Pevasion"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Рандомний шанс спела ворога",
+        "var_random": [
+          "randomSpell",
+          1,
+          100
+        ],
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "mobType",
+          6
+        ],
+        "var_less": [
+          "randomSpell",
+          45
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "id": 5,
+        "var_sub": [
+          "Pmp",
+          3
+        ],
+        "text": "Фея краде ману ",
+        "var_more": [
+          "r",
+          "Pevasion"
+        ]
+      },
+      {
+        "var_more": [
+          "r",
+          "Pevasion"
+        ],
+        "text": "Вампір краде хп",
+        "var_add": [
+          "Ehp",
+          "Eatk"
+        ],
+        "var_equal": [
+          "mobType",
+          12
+        ],
+        "var_less": [
+          "randomSpell",
+          70
+        ],
+        "calculate": true,
+        "id": 5,
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "Ehp",
+          "Eatk"
+        ],
+        "var_equal": [
+          "mobType",
+          333
+        ],
+        "id": 5,
+        "text": "Хардсону краде хп",
+        "var_more": [
+          "r",
+          "Pevasion",
+          "randomSpell",
+          80
+        ],
+        "calculate": true
+      },
+      {
+        "text": "Хардсон збільшує броню",
+        "var_add": [
+          "Earmor",
+          1
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "var_less": [
+          "randomSpell",
+          20
+        ],
+        "var_equal": [
+          "mobType",
+          333
+        ]
+      },
+      {
+        "super_calculate": false,
+        "var_add": [
+          "Ehp",
+          35
+        ],
+        "var_equal": [
+          "mobType",
+          222
+        ],
+        "id": 5,
+        "text": "Друїд лікується",
+        "var_less": [
+          "randomSpell",
+          35
+        ],
+        "calculate": true
+      },
+      {
+        "var_more": [
+          "randomSpell",
+          60
+        ],
+        "var_add": [
+          "Ppoison",
+          4
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Друїд накладає отруту",
+        "var_equal": [
+          "mobType",
+          222
+        ]
+      },
+      {
+        "var_equal": [
+          "mobType",
+          15
+        ],
+        "var_sub": [
+          "Parmor",
+          2
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Стрекоза понижує захист",
+        "var_more": [
+          "r",
+          "Pevasion",
+          "randomSpell",
+          30
+        ]
+      },
+      {
+        "var_more": [
+          "r",
+          "Pevasion",
+          "randomSpell",
+          80
+        ],
+        "var_equal": [
+          "mobType",
+          444
+        ],
+        "id": 5,
+        "text": "Медуза перетворює в камень",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0.8,
+          0.5,
+          0.5
+        ],
+        "text": "[Розлом броні] Стрекоза послаблює вашу броню на 2 одиниці",
+        "comment": true,
+        "var_equal": [
+          "mobType",
+          15
+        ],
+        "id": 5,
+        "calculate": false,
+        "var_more": [
+          "r",
+          "Pevasion",
+          "randomSpell",
+          30
+        ],
+        "super_calculate": false
+      },
+      {
+        "var_show": [
+          "Eatk",
+          " одиниць здоров'я"
+        ],
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.5,
+          0.5
+        ],
+        "var_less": [
+          "randomSpell",
+          70
+        ],
+        "text": "[Вампіризм] Вампір відновив ",
+        "super_calculate": false,
+        "var_more": [
+          "r",
+          "Pevasion"
+        ],
+        "calculate": false,
+        "var_equal": [
+          "mobType",
+          12
+        ],
+        "id": 5
+      },
+      {
+        "var_show": [
+          "Eatk",
+          " одиниць здоров'я "
+        ],
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.5,
+          0.5
+        ],
+        "id": 5,
+        "var_more": [
+          "r",
+          "Pevasion",
+          "randomSpell",
+          80
+        ],
+        "super_calculate": false,
+        "calculate": false,
+        "var_equal": [
+          "mobType",
+          333
+        ],
+        "text": "[Вампіризм] Хардсон відновив "
+      },
+      {
+        "var_equal": [
+          "mobType",
+          333
+        ],
+        "text": "[Кам'яна шкіра] Хардсон збільшив броню на 1 одиницю",
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.5,
+          0.5
+        ],
+        "var_less": [
+          "randomSpell",
+          20
+        ],
+        "calculate": false,
+        "id": 5,
+        "super_calculate": false
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.9,
+          0.5,
+          0.5
+        ],
+        "var_less": [
+          "randomSpell",
+          55
+        ],
+        "text": "[Крадіжка мани] Фея вкрала у вас 3 одинці мани! ",
+        "var_equal": [
+          "mobType",
+          6
+        ],
+        "super_calculate": false,
+        "calculate": false,
+        "var_more": [
+          "r",
+          "Pevasion"
+        ],
+        "id": 5
+      },
+      {
+        "var_equal": [
+          "mobType",
+          222
+        ],
+        "text": "[Лікування] Друїд лікується на 35 одиниць здоров'я! ",
+        "comment": true,
+        "text_color": [
+          0.5,
+          0.8,
+          0.5
+        ],
+        "var_less": [
+          "randomSpell",
+          35
+        ],
+        "calculate": false,
+        "id": 5,
+        "super_calculate": false
+      },
+      {
+        "text_color": [
+          0.9,
+          0.5,
+          0.5
+        ],
+        "text": "[Отруйний туман] Друїд накладає 4 одиниці отрути! ",
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "var_more": [
+          "randomSpell",
+          60
+        ],
+        "calculate": false,
+        "var_equal": [
+          "mobType",
+          222
+        ]
+      },
+      {
+        "text_color": [
+          0.5,
+          0.5,
+          1
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": false,
+        "text": "Ви уникнули атаки! ",
+        "var_no_more": [
+          "r",
+          "Pevasion"
+        ]
+      },
+      {
+        "calculate": true,
+        "var_more": [
+          "Epoison",
+          0
+        ],
+        "text_color": [
+          0,
+          0.6,
+          0
+        ],
+        "id": 5,
+        "text": "Отрута по ворогу",
+        "var_sub": [
+          "Ehp",
+          "Epoison",
+          "Epoison",
+          1
+        ],
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "take",
+          0,
+          "actions",
+          1,
+          "Done",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Спробувати узилитись",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_random": [
+          "r",
+          0,
+          100
+        ]
+      },
+      {
+        "var_sub": [
+          "Php",
+          "Eatk"
+        ],
+        "calculate": false,
+        "comment": true,
+        "text_color": [
+          0.8,
+          0,
+          0
+        ],
+        "id": 6,
+        "text": "Вам невдалось ухилитися! Ви отримуєте подвійну шкоду з ігноруванням броні та щитів",
+        "var_more": [
+          "r",
+          "PevasionX2"
+        ],
+        "super_calculate": false
+      },
+      {
+        "var_sub": [
+          "Php",
+          "Eatk"
+        ],
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "var_more": [
+          "r",
+          "PevasionX2"
+        ],
+        "text": "Перший урон"
+      },
+      {
+        "text": "Другий урон",
+        "super_calculate": false,
+        "id": 6,
+        "calculate": true,
+        "var_more": [
+          "r",
+          "PevasionX2"
+        ],
+        "var_sub": [
+          "Php",
+          "Eatk"
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0.5,
+          0.5,
+          1
+        ],
+        "id": 6,
+        "text": "Вы ухилились від атаки! ",
+        "var_no_more": [
+          "r",
+          "PevasionX2"
+        ]
+      },
+      {
+        "calculate": true,
+        "var_more": [
+          "Epoison",
+          0
+        ],
+        "text_color": [
+          0,
+          0.6,
+          0
+        ],
+        "id": 5,
+        "text": "Отрута по ворогу",
+        "var_sub": [
+          "Ehp",
+          "Epoison",
+          "Epoison",
+          1
+        ],
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "take",
+          0,
+          "actions",
+          1,
+          "Done",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "=================Персонаж=================",
+    "answers": [
+      {
+        "var_show": [
+          "name"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          0.7
+        ],
+        "id": 7,
+        "text": "Клас: ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "lvl"
+        ],
+        "comment": true,
+        "text_color": [
+          0.3,
+          0.6,
+          1
+        ],
+        "id": 7,
+        "text": "Рівень: ",
+        "right_answer": true,
+        "left_answer": false
+      },
+      {
+        "var_max": [
+          "xp",
+          "xpneed"
+        ],
+        "var_show": [
+          "xp"
+        ],
+        "comment": true,
+        "text_color": [
+          0.3,
+          0.6,
+          1
+        ],
+        "id": 7,
+        "text": "Досвід: ",
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "points"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          0.7
+        ],
+        "id": 7,
+        "text": "Не використані бали: ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "STR"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.2,
+          0.2
+        ],
+        "id": 7,
+        "text": "Сила: ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "AGI"
+        ],
+        "comment": true,
+        "text_color": [
+          0.7,
+          0.5,
+          0.7
+        ],
+        "id": 7,
+        "text": "Ловкість: ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "STA"
+        ],
+        "comment": true,
+        "text_color": [
+          0.4,
+          0.9,
+          0.4
+        ],
+        "id": 7,
+        "text": "Витривалість: ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "INT"
+        ],
+        "comment": true,
+        "text_color": [
+          0.4,
+          0.6,
+          0.9
+        ],
+        "id": 7,
+        "text": "Мудрість: ",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "MIND"
+        ],
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.9
+        ],
+        "id": 7,
+        "text": "Інтелект: ",
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 13,
+        "text": "Обрахунок статів",
+        "run": [
+          13
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1
+        ],
+        "right_answer": true,
+        "var_add": [
+          "STR",
+          1,
+          "Php",
+          5
+        ],
+        "text": "<plus>",
+        "id": 7,
+        "var_sub": [
+          "points",
+          1
+        ],
+        "instant": true,
+        "var_more": [
+          "points",
+          0
+        ]
+      },
+      {
+        "var_sub": [
+          "points",
+          1
+        ],
+        "right_answer": true,
+        "var_add": [
+          "AGI",
+          1,
+          "Pstamina",
+          7
+        ],
+        "var_more": [
+          "points",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "<plus>",
+        "bg_color": [
+          0,
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "points",
+          1
+        ],
+        "right_answer": true,
+        "var_add": [
+          "STA",
+          1,
+          "Php",
+          9,
+          "Pstamina",
+          4
+        ],
+        "text": "<plus>",
+        "id": 7,
+        "var_more": [
+          "points",
+          0
+        ],
+        "instant": true,
+        "bg_color": [
+          0,
+          1
+        ]
+      },
+      {
+        "var_sub": [
+          "points",
+          1
+        ],
+        "right_answer": true,
+        "var_add": [
+          "INT",
+          1,
+          "Pmp",
+          2
+        ],
+        "instant": true,
+        "id": 7,
+        "text": "<plus>",
+        "var_more": [
+          "points",
+          0
+        ],
+        "bg_color": [
+          0,
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1
+        ],
+        "right_answer": true,
+        "var_add": [
+          "MIND",
+          1,
+          "Pmp",
+          7
+        ],
+        "var_more": [
+          "points",
+          0
+        ],
+        "id": 7,
+        "var_sub": [
+          "points",
+          1
+        ],
+        "text": "<plus>",
+        "instant": true
+      },
+      {
+        "id": 7,
+        "text": "                            Характеристики",
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": "Показ характеристик персонажа",
+        "run": [
+          11
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 12,
+        "text": "Рівень",
+        "run": [
+          12
+        ],
+        "var_need": [
+          "xp",
+          "xpneed"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "                                    Інвентар",
+        "instant": true
+      },
+      {
+        "id": 3,
+        "text": "                                       Карта",
+        "instant": true
+      },
+      {
+        "var_show": [
+          "Pgold"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 7,
+        "text": "Золото: "
+      },
+      {
+        "var_equal": [
+          "test",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Cила",
+        "var_set": [
+          "STR",
+          30
+        ]
+      },
+      {
+        "var_equal": [
+          "test",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Ловкість",
+        "var_set": [
+          "AGI",
+          30
+        ]
+      },
+      {
+        "var_equal": [
+          "test",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Витривалість",
+        "var_set": [
+          "STA",
+          30
+        ]
+      },
+      {
+        "var_equal": [
+          "test",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "text": " Мудрість",
+        "var_set": [
+          "INT",
+          30
+        ]
+      },
+      {
+        "var_equal": [
+          "test",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Інтелект",
+        "var_set": [
+          "MIND",
+          30
+        ]
+      },
+      {
+        "var_equal": [
+          "test",
+          1
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "Очистити",
+        "var_set": [
+          "MIND",
+          1,
+          "STR",
+          1,
+          "INT",
+          1,
+          "AGI",
+          1,
+          "STA",
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Серверна",
+        "var_equal": [
+          "test",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Золото тест",
+        "var_add": [
+          "Pgold",
+          1000
+        ],
+        "var_equal": [
+          "test",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Монстрів убито: ",
+        "comment": true,
+        "var_show": [
+          "killed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Тут всі сили на оператори RUN\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Показ статів персонажа"
+      },
+      {
+        "id": 13,
+        "text": "Обрахунок статів персонажа відповідно до зарактеристик"
+      },
+      {
+        "id": 14,
+        "text": "Небільше та не менше ліміту"
+      },
+      {
+        "id": 15,
+        "text": "Динамічна зміна параметрів при прокачці"
+      },
+      {
+        "id": 12,
+        "text": "Обрахунок досвіду "
+      },
+      {
+        "id": 5,
+        "text": "Обрахунок ухиляння"
+      },
+      {
+        "id": 6,
+        "text": "Подвійне ухиляння"
+      },
+      {
+        "id": 16,
+        "text": "Визначення локацій на карті "
+      },
+      {
+        "id": 17,
+        "text": "Визначення шансу на напад"
+      },
+      {
+        "id": 18,
+        "text": "Управління на карті"
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "text": "Видати всі шоломи",
+        "var_set": [
+          "helmet1",
+          1,
+          "helmet2",
+          1,
+          "helmet3",
+          1,
+          "boots1",
+          1,
+          "boots2",
+          1,
+          "boots3",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "instant": true,
+        "text": "Видати зілля",
+        "var_set": [
+          "potionHeal",
+          2,
+          "potionStone",
+          2,
+          "potionMana",
+          2,
+          "potionAntidot",
+          2
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Підрахунок ПУСТИРЬ"
+      },
+      {
+        "id": 23,
+        "text": "Ухиляння ворога"
+      },
+      {
+        "id": 10,
+        "text": "Урон по ворогу магічний"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "                         Виберіть клас персонажа\n\n\n\n\n",
+    "answers": [
+      {
+        "var_str_set": [
+          "name",
+          "Воїн"
+        ],
+        "bg_color": [
+          1,
+          0.7,
+          0.7
+        ],
+        "var_add": [
+          "STR",
+          1,
+          "Pmaxhp",
+          5,
+          "Php",
+          5
+        ],
+        "text_color": [
+          1,
+          0.7,
+          0.7
+        ],
+        "id": 7,
+        "text": "                                          Воїн\n                                        Сила <plus>1\nТренування - відновлює здоров'я після відпочинку. Кількість відновленого здоров' я дорівнює показнику сили. ",
+        "instant": true,
+        "var_set": [
+          "class",
+          1
+        ]
+      },
+      {
+        "var_str_set": [
+          "name",
+          "Розбійник"
+        ],
+        "bg_color": [
+          0.9,
+          0.8,
+          0.9
+        ],
+        "var_add": [
+          "AGI",
+          1
+        ],
+        "text_color": [
+          0.9,
+          0.8,
+          0.9
+        ],
+        "id": 7,
+        "text": "                                     Розбійник\n                                    Ловкість <plus>1\nПостріл з лука - завдає шкоду противнику до початку бою. Кількість шкоди дорівнює показнику ловкості. ",
+        "instant": true,
+        "var_set": [
+          "class",
+          2
+        ]
+      },
+      {
+        "var_str_set": [
+          "name",
+          "Маг"
+        ],
+        "bg_color": [
+          0.7,
+          0.7,
+          1
+        ],
+        "var_add": [
+          "INT",
+          1
+        ],
+        "text_color": [
+          0.7,
+          0.7,
+          1
+        ],
+        "id": 7,
+        "text": "                                           Маг\n                                    Мудрість <plus>1\nМедитувати - відновлює ману після відпочинку. Кількість відновленої мани дорівнює показнику мудрості. ",
+        "instant": true,
+        "var_set": [
+          "class",
+          3
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "helmet1",
+          "helmet2",
+          "helmet3",
+          "suit1",
+          "suit2",
+          "suit3",
+          "boots1",
+          "boots2",
+          "boots3",
+          "weaponSword",
+          0
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "ліс"
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 9,
+        "calculate": true,
+        "text": "Подорож",
+        "var_set": [
+          "MIND",
+          1,
+          "apples",
+          0,
+          "Pmaxevasion",
+          4,
+          "mobType",
+          0,
+          "dmgM",
+          0,
+          "EarmorM",
+          0,
+          "Ppoison",
+          0,
+          "Epoison",
+          0,
+          "canMeditate",
+          1,
+          "canTrain",
+          1,
+          "canBow",
+          1,
+          "mustRandom",
+          0,
+          "ring2",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Обрахунок отримання магічного урону ворогом\n\n\n\n",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "var_sub": [
+          "dmgM",
+          "EarmorM"
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "var_less": [
+          "dmgM",
+          1
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "dmgM",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "var_sub": [
+          "Ehp",
+          "dmgM"
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": true
+      },
+      {
+        "calculate": true,
+        "var_sub": [
+          "Php",
+          "Ppoison",
+          "Ppoison",
+          1
+        ],
+        "text_color": [
+          0,
+          0.6,
+          0
+        ],
+        "id": 5,
+        "var_more": [
+          "Ppoison",
+          0
+        ],
+        "text": "Отрута по гравцю",
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "take",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Стати персонажа",
+    "answers": [
+      {
+        "var_max": [
+          "Php",
+          "Pmaxhp",
+          "Pmp",
+          "Pmaxmp",
+          "Pstamina",
+          "Pmaxstamina"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": "Небільше ліміту! ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "var_show": [
+          "Ppoison"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.6,
+          0
+        ],
+        "id": 20,
+        "text": "Отруєння: ",
+        "var_more": [
+          "Ppoison",
+          0
+        ]
+      },
+      {
+        "var_max": [
+          "Php",
+          "Pmaxhp"
+        ],
+        "var_show": [
+          "Php"
+        ],
+        "comment": true,
+        "text_color": [
+          0.1,
+          1,
+          0.1
+        ],
+        "id": 7,
+        "text": "Здоров'я: "
+      },
+      {
+        "var_show": [
+          "Patk"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.2,
+          0.2
+        ],
+        "id": 7,
+        "text": "Шкода: "
+      },
+      {
+        "var_max": [
+          "Pstamina",
+          "Pmaxstamina"
+        ],
+        "var_show": [
+          "Pstamina"
+        ],
+        "comment": true,
+        "text_color": [
+          0.3,
+          0.7,
+          0.3
+        ],
+        "id": 7,
+        "text": "Енергія: "
+      },
+      {
+        "var_max": [
+          "Pmp",
+          "Pmaxmp"
+        ],
+        "var_show": [
+          "Pmp"
+        ],
+        "comment": true,
+        "text_color": [
+          0.2,
+          0.7,
+          0.8
+        ],
+        "id": 7,
+        "text": "Мана: "
+      },
+      {
+        "var_show": [
+          "Pevasion",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0.5,
+          0.4,
+          0.7
+        ],
+        "id": 7,
+        "text": "Спритність: "
+      },
+      {
+        "var_show": [
+          "Parmor"
+        ],
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.8,
+          0.5
+        ],
+        "id": 7,
+        "text": "Броня: "
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "Php",
+          3
+        ],
+        "super_calculate": false,
+        "id": 20,
+        "calculate": true,
+        "var_equal": [
+          "RingHp",
+          1,
+          "turn",
+          1,
+          "Done",
+          0
+        ],
+        "var_set": [
+          "Done",
+          1
+        ]
+      },
+      {
+        "var_max": [
+          "Php",
+          "Pmaxhp",
+          "Pmp",
+          "Pmaxmp",
+          "Pstamina",
+          "Pmaxstamina"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": "Небільше ліміту! ",
+        "super_calculate": false,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Обрахунок досвіду\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_add": [
+          "lvl",
+          1,
+          "points",
+          1
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "var_sub": [
+          "xp",
+          "xpneed"
+        ],
+        "calculate": true,
+        "text": "Підняти рівень"
+      },
+      {
+        "var_div": [
+          "dummyXp",
+          100
+        ],
+        "var_set": [
+          "dummyXp",
+          "xpneed"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_mult": [
+          "dummyXp",
+          25
+        ]
+      },
+      {
+        "var_add": [
+          "xpneed",
+          "dummyXp"
+        ],
+        "super_calculate": false,
+        "id": 12,
+        "calculate": true,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Обрахунок статів до характеристик\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_mult": [
+          "op1",
+          4,
+          "op2",
+          9
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op1 = STR*4\nop2 = STA*9\nop3 = 0",
+        "var_set": [
+          "op1",
+          "STR",
+          "op2",
+          "STA",
+          "op3",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op3=op1<plus>op2",
+        "var_add": [
+          "op3",
+          "op1",
+          "op3",
+          "op2"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Максимальне здоровья",
+        "calculate": true,
+        "var_set": [
+          "Pmaxhp",
+          "op3"
+        ]
+      },
+      {
+        "var_mult": [
+          "op1",
+          7,
+          "op2",
+          3
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op1 = AGI*6\nop2 = STA*4",
+        "var_set": [
+          "op1",
+          "AGI",
+          "op2",
+          "STA",
+          "op3",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op3=op1<plus>op2",
+        "var_add": [
+          "op3",
+          "op1",
+          "op3",
+          "op2"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Енергія",
+        "calculate": true,
+        "var_set": [
+          "Pmaxstamina",
+          "op3"
+        ]
+      },
+      {
+        "var_add": [
+          "op3",
+          "op1",
+          "op3",
+          "op2"
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op1 = 3\nop2 = AGI\nop3 = op1<plus>op2",
+        "var_set": [
+          "op1",
+          3,
+          "op2",
+          "AGI",
+          "op3",
+          0
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Спритність %",
+        "calculate": true,
+        "var_set": [
+          "Pevasion",
+          "op3",
+          "Pmaxevasion",
+          "op3"
+        ]
+      },
+      {
+        "var_set": [
+          "op1",
+          "STR",
+          "op2",
+          0,
+          "op3",
+          0
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op1 = STR\nop2 = 0\nop1= op1*2",
+        "var_mult": [
+          "op1",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "op1",
+          "weaponD"
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "STR * 2 <plus> weapon"
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Шкода ",
+        "calculate": true,
+        "var_set": [
+          "Patk",
+          "op1"
+        ]
+      },
+      {
+        "var_set": [
+          "op1",
+          "INT",
+          "op2",
+          "MIND",
+          "op3",
+          0
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op1 = INT\nop2 = MIND\nop1= op1*4",
+        "var_mult": [
+          "op1",
+          2,
+          "op2",
+          7
+        ]
+      },
+      {
+        "var_add": [
+          "op3",
+          "op1",
+          "op3",
+          "op2"
+        ],
+        "super_calculate": false,
+        "id": 13,
+        "calculate": true,
+        "text": "op1 = INT\nop2 = MIND\nop3=INT<plus>MIND"
+      },
+      {
+        "super_calculate": false,
+        "id": 13,
+        "text": "Мана ",
+        "calculate": true,
+        "var_set": [
+          "Pmaxmp",
+          "op3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Ліміти\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_max": [
+          "Php",
+          "Pmaxhp",
+          "Pmp",
+          "Pmaxmp",
+          "Pstamina",
+          "Pmaxstamina"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": "Небільше ліміту! ",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "super_calculate": false,
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "calculate": true,
+        "var_min": [
+          "Php",
+          0,
+          "Pmp",
+          0,
+          "Pstamina",
+          0
+        ],
+        "text": "Неменше ліміту! "
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Динамічна зміна параметрів при прокачці\n\n\n\n\n\n",
+    "answers": [
+      {
+        "super_calculate": false,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 15,
+        "calculate": true,
+        "text": "Установка значень",
+        "var_set": [
+          "Php",
+          "Pmaxhp",
+          "Pmp",
+          "Pmaxmp",
+          "Pstamina",
+          "Pmaxstamina"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Визначення місць на карті\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_str_set": [
+          "location",
+          "пустир",
+          "dificult",
+          "низький"
+        ],
+        "var_less": [
+          "x",
+          17,
+          "y",
+          31
+        ],
+        "var_more": [
+          "x",
+          6,
+          "y",
+          5
+        ],
+        "super_calculate": false,
+        "id": 3,
+        "calculate": true,
+        "text": "Пустир",
+        "var_set": [
+          "FQA",
+          15,
+          "loc",
+          1
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "ліс",
+          "dificult",
+          "середній"
+        ],
+        "var_less": [
+          "x",
+          31,
+          "y",
+          25
+        ],
+        "var_more": [
+          "x",
+          16,
+          "y",
+          5
+        ],
+        "super_calculate": false,
+        "id": 3,
+        "text": "Ліс",
+        "calculate": true,
+        "var_set": [
+          "FQA",
+          30,
+          "loc",
+          2
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "підземелля",
+          "dificult",
+          "середній"
+        ],
+        "var_less": [
+          "x",
+          7,
+          "y",
+          31
+        ],
+        "text": "Підземелля",
+        "super_calculate": false,
+        "id": 3,
+        "var_more": [
+          "x",
+          -1,
+          "y",
+          22
+        ],
+        "calculate": true,
+        "var_set": [
+          "FQA",
+          80,
+          "loc",
+          3
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "кладовище",
+          "dificult",
+          "середній"
+        ],
+        "id": 3,
+        "text": " Кладовище",
+        "super_calculate": false,
+        "var_less": [
+          "x",
+          7,
+          "y",
+          23
+        ],
+        "var_more": [
+          "x",
+          -1,
+          "y",
+          5
+        ],
+        "calculate": true,
+        "var_set": [
+          "FQA",
+          55,
+          "loc",
+          4
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "місто «Стокхольм»",
+          "dificult",
+          "безпечно"
+        ],
+        "id": 3,
+        "var_need": [
+          "x",
+          25,
+          "y",
+          -1
+        ],
+        "super_calculate": false,
+        "var_less": [
+          "x",
+          31,
+          "y",
+          6
+        ],
+        "text": "Стокхольм",
+        "calculate": true,
+        "var_set": [
+          "FQA",
+          0,
+          "loc",
+          10
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "гори",
+          "dificult",
+          "смертельний"
+        ],
+        "id": 3,
+        "calculate": true,
+        "super_calculate": false,
+        "var_less": [
+          "x",
+          7,
+          "y",
+          6
+        ],
+        "var_more": [
+          "x",
+          -1,
+          "y",
+          -1
+        ],
+        "text": "Гори",
+        "var_set": [
+          "FQA",
+          10,
+          "loc",
+          5
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "розбита дорога",
+          "dificult",
+          "невідомо"
+        ],
+        "id": 3,
+        "calculate": true,
+        "super_calculate": false,
+        "var_less": [
+          "x",
+          25,
+          "y",
+          6
+        ],
+        "var_more": [
+          "x",
+          6,
+          "y",
+          -1
+        ],
+        "text": "Розбита дорога",
+        "var_set": [
+          "FQA",
+          5,
+          "loc",
+          6
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "болото",
+          "dificult",
+          "високий"
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "id": 3,
+        "text": "Болото",
+        "var_more": [
+          "x",
+          24,
+          "y",
+          24
+        ],
+        "var_set": [
+          "FQA",
+          50,
+          "loc",
+          7
+        ]
+      },
+      {
+        "var_str_set": [
+          "location",
+          "біля болота "
+        ],
+        "id": 3,
+        "calculate": true,
+        "super_calculate": false,
+        "var_less": [
+          "x",
+          25,
+          "y",
+          31
+        ],
+        "text": "Шось ",
+        "var_more": [
+          "x",
+          16,
+          "y",
+          24
+        ],
+        "var_set": [
+          "FQA",
+          0,
+          "loc",
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Обрахунок шансу на напад\n\n\n\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 17,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_random": [
+          "ran",
+          1,
+          100
+        ]
+      },
+      {
+        "var_set": [
+          "Battle",
+          1
+        ],
+        "super_calculate": false,
+        "id": 17,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_no_more": [
+          "ran",
+          "FQA"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Дій на карті\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "comment": false,
+        "id": 3,
+        "var_more": [
+          "move",
+          0
+        ],
+        "left_answer": false,
+        "text": "                                     Йти вперед",
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "y",
+          1
+        ],
+        "var_equal": [
+          "Battle",
+          0
+        ],
+        "var_less": [
+          "y",
+          30
+        ],
+        "var_sub": [
+          "move",
+          1
+        ],
+        "instant": true,
+        "var_set": [
+          "ran",
+          300
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "text": "Йти ліворуч",
+        "left_answer": true,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "Battle",
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "x",
+          1,
+          "move",
+          1
+        ],
+        "var_more": [
+          "x",
+          0,
+          "move",
+          0
+        ],
+        "var_set": [
+          "ran",
+          300
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "instant": true,
+        "text": "Йти праворуч",
+        "left_answer": false,
+        "var_add": [
+          "x",
+          1
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_less": [
+          "x",
+          30
+        ],
+        "var_equal": [
+          "Battle",
+          0
+        ],
+        "var_sub": [
+          "move",
+          1
+        ],
+        "var_more": [
+          "move",
+          0
+        ],
+        "right_answer": true,
+        "var_set": [
+          "ran",
+          300
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "instant": true,
+        "left_answer": false,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "text": "                                     Йти назад",
+        "var_equal": [
+          "Battle",
+          0
+        ],
+        "var_sub": [
+          "y",
+          1,
+          "move",
+          1
+        ],
+        "right_answer": false,
+        "var_more": [
+          "y",
+          0,
+          "move",
+          0
+        ],
+        "var_set": [
+          "ran",
+          300
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "                                  Зробіть ваш вибір\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_equal": [
+          "loc",
+          2
+        ],
+        "text": "Яка локації для битви? ",
+        "comment": false,
+        "super_calculate": false,
+        "id": 19,
+        "instant": true,
+        "calculate": true,
+        "var_set": [
+          "Battle",
+          2
+        ]
+      },
+      {
+        "super_calculate": false,
+        "calculate": true,
+        "comment": false,
+        "var_equal": [
+          "loc",
+          3
+        ],
+        "id": 19,
+        "text": "Яка локації для битви? ",
+        "instant": true,
+        "var_set": [
+          "Battle",
+          3
+        ]
+      },
+      {
+        "var_equal": [
+          "loc",
+          4
+        ],
+        "instant": true,
+        "comment": false,
+        "super_calculate": false,
+        "id": 19,
+        "calculate": true,
+        "text": "Яка локації для битви? ",
+        "var_set": [
+          "Battle",
+          4
+        ]
+      },
+      {
+        "super_calculate": false,
+        "text": "Яка локації для битви? ",
+        "comment": false,
+        "var_equal": [
+          "loc",
+          5
+        ],
+        "id": 19,
+        "instant": true,
+        "calculate": true,
+        "var_set": [
+          "Battle",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "loc",
+          6
+        ],
+        "calculate": true,
+        "comment": false,
+        "super_calculate": false,
+        "id": 19,
+        "text": "Яка локації для битви? ",
+        "instant": true,
+        "var_set": [
+          "Battle",
+          6
+        ]
+      },
+      {
+        "super_calculate": false,
+        "instant": true,
+        "comment": false,
+        "var_equal": [
+          "loc",
+          7
+        ],
+        "id": 19,
+        "calculate": true,
+        "text": "Яка локації для битви? ",
+        "var_set": [
+          "Battle",
+          7
+        ]
+      },
+      {
+        "var_equal": [
+          "loc",
+          10
+        ],
+        "text": "Яка локації для битви? ",
+        "comment": false,
+        "super_calculate": false,
+        "id": 19,
+        "instant": true,
+        "calculate": true,
+        "var_set": [
+          "Battle",
+          10
+        ]
+      },
+      {
+        "super_calculate": false,
+        "instant": true,
+        "comment": false,
+        "var_equal": [
+          "loc",
+          11
+        ],
+        "id": 19,
+        "calculate": true,
+        "text": "Яка локації для битви? ",
+        "var_set": [
+          "Battle",
+          11,
+          "mobType",
+          111
+        ]
+      },
+      {
+        "var_equal": [
+          "loc",
+          22
+        ],
+        "text": "Яка локації для битви? ",
+        "comment": false,
+        "super_calculate": false,
+        "id": 19,
+        "instant": true,
+        "calculate": true,
+        "var_set": [
+          "Battle",
+          22,
+          "mobType",
+          222
+        ]
+      },
+      {
+        "super_calculate": false,
+        "calculate": true,
+        "comment": false,
+        "var_equal": [
+          "loc",
+          33
+        ],
+        "id": 19,
+        "text": "Яка локації для битви? ",
+        "instant": true,
+        "var_set": [
+          "Battle",
+          33,
+          "mobType",
+          333
+        ]
+      },
+      {
+        "left_answer": true,
+        "var_set": [
+          "turn",
+          0,
+          "PevasionX2",
+          "Pevasion",
+          "random Spell",
+          0,
+          "canHeal",
+          1,
+          "canMana",
+          1,
+          "actions",
+          1,
+          "canAntidot",
+          1,
+          "powerHealM",
+          2
+        ],
+        "id": 20,
+        "text": "Прийняти бій",
+        "instant": true,
+        "var_mult": [
+          "PevasionX2",
+          2,
+          "powerHealM",
+          "INT"
+        ]
+      },
+      {
+        "var_show": [
+          "Pevasion",
+          "%)"
+        ],
+        "right_answer": true,
+        "var_random": [
+          "canRun",
+          0,
+          100
+        ],
+        "id": 19,
+        "text": "Втекти (шанс: ",
+        "var_equal": [
+          "canRun",
+          -100
+        ],
+        "instant": true
+      },
+      {
+        "var_not": [
+          "canRun",
+          -100
+        ],
+        "text": "                       Повернутись до карти",
+        "id": 3,
+        "var_need": [
+          "Pevasion",
+          "canRun"
+        ],
+        "instant": true,
+        "var_set": [
+          "Battle",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.8,
+          0.9
+        ],
+        "bg_color": [
+          0.9,
+          0.8,
+          0.9
+        ],
+        "instant": true,
+        "var_equal": [
+          "canBow",
+          1,
+          "class",
+          2
+        ],
+        "id": 19,
+        "text": "                              Вистрілити з лука\n                          [Випереджувальна дія] ",
+        "var_sub": [
+          "Ehp",
+          "AGI"
+        ],
+        "var_set": [
+          "canBow",
+          0,
+          "canRun",
+          200
+        ]
+      },
+      {
+        "var_equal": [
+          "canSpear",
+          1,
+          "weapon",
+          3
+        ],
+        "bg_color": [
+          0.9,
+          0.7,
+          0.7
+        ],
+        "var_sub": [
+          "Ehp",
+          "Patk"
+        ],
+        "text_color": [
+          0.9,
+          0.7,
+          0.8
+        ],
+        "id": 19,
+        "instant": true,
+        "text": "                           Перший удар списом\n                          [Випереджувальна дія] ",
+        "var_set": [
+          "canSpear",
+          0,
+          "canRun",
+          200
+        ]
+      },
+      {
+        "var_show": [
+          "potionStone"
+        ],
+        "var_add": [
+          "Parmor",
+          2
+        ],
+        "text_color": [
+          0.7,
+          0.8,
+          0.3
+        ],
+        "id": 19,
+        "instant": true,
+        "bg_color": [
+          0.7,
+          0.8,
+          0.3
+        ],
+        "text": "                         Зілля кам'яної шкіри\n                                  Броня: <plus>2\n                                  Кількість: ",
+        "var_equal": [
+          "canStone",
+          1
+        ],
+        "var_sub": [
+          "potionStone",
+          1
+        ],
+        "var_more": [
+          "potionStone",
+          0
+        ],
+        "comment": false,
+        "var_set": [
+          "canStone",
+          0
+        ]
+      },
+      {
+        "var_not": [
+          "canRun",
+          -100,
+          "canRun",
+          200
+        ],
+        "comment": true,
+        "text_color": [
+          1
+        ],
+        "id": 19,
+        "text": "                       Вам невдалось втекти! ",
+        "var_no_more": [
+          "Pevasion",
+          "canRun"
+        ]
+      },
+      {
+        "var_not": [
+          "canRun",
+          -100
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 19,
+        "text": "                       Вам вдалось втекти! ",
+        "var_need": [
+          "Pevasion",
+          "canRun"
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 19,
+        "text": "Підрахунок монстра",
+        "run": [
+          21
+        ],
+        "var_equal": [
+          "canRun",
+          -100,
+          "mustRandom",
+          1
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Debug",
+        "var_equal": [
+          "test",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Тут бій\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "E"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 20,
+        "text": " ",
+        "left_answer": false
+      },
+      {
+        "var_show": [
+          "Epoison"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0.6,
+          0
+        ],
+        "id": 20,
+        "text": "Отруєння: ",
+        "var_more": [
+          "Epoison",
+          0
+        ]
+      },
+      {
+        "var_max": [
+          "Ehp",
+          "Emaxhp"
+        ],
+        "var_show": [
+          "Ehp"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 20,
+        "text": "Здоров'я: "
+      },
+      {
+        "var_show": [
+          "Eatk"
+        ],
+        "comment": true,
+        "text_color": [
+          0.9,
+          0
+        ],
+        "id": 20,
+        "text": "Шкода: "
+      },
+      {
+        "var_show": [
+          "Eevasion",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0.7,
+          0.5,
+          0.7
+        ],
+        "id": 20,
+        "text": "Спритність: "
+      },
+      {
+        "var_show": [
+          "Earmor"
+        ],
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.8,
+          0.5
+        ],
+        "id": 7,
+        "text": "Броня: "
+      },
+      {
+        "var_show": [
+          "EarmorM"
+        ],
+        "comment": true,
+        "text_color": [
+          0.5,
+          0.8,
+          0.8
+        ],
+        "id": 7,
+        "text": "Магічна броня: "
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 23,
+        "text": "Обрахунок ухиляння і броні по монстру",
+        "run": [
+          23
+        ],
+        "var_equal": [
+          "take",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 6,
+        "text": "Обрахунок двойного ухиляння",
+        "run": [
+          6
+        ],
+        "var_equal": [
+          "take",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "text": "Обрахунок магічної шкоди ворогу",
+        "run": [
+          10
+        ],
+        "var_equal": [
+          "take",
+          4
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 20,
+        "text": "Обрахунок ухиляння і броні по персонажеві",
+        "run": [
+          5
+        ],
+        "var_equal": [
+          "take",
+          1
+        ]
+      },
+      {
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "var_sub": [
+          "Pstamina",
+          3
+        ],
+        "var_equal": [
+          "turn",
+          0
+        ],
+        "var_need": [
+          "Pstamina",
+          3
+        ],
+        "var_more": [
+          "Php",
+          0,
+          "Ehp",
+          0
+        ],
+        "text": "Удар\nЕнергія: 3",
+        "var_set": [
+          "turn",
+          1,
+          "take",
+          2
+        ]
+      },
+      {
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "var_need": [
+          "Pstamina",
+          7
+        ],
+        "var_equal": [
+          "turn",
+          0,
+          "weapon",
+          1
+        ],
+        "text": "Горизонтальний удар мечем\nЕнергія: 7",
+        "var_more": [
+          "Php",
+          0,
+          "Ehp",
+          0
+        ],
+        "var_sub": [
+          "Pstamina",
+          7
+        ],
+        "var_set": [
+          "turn",
+          1,
+          "take",
+          2,
+          "heavy",
+          1
+        ]
+      },
+      {
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "text": "Удар списом\nЕнергія: 4",
+        "var_equal": [
+          "turn",
+          0,
+          "weapon",
+          3
+        ],
+        "var_sub": [
+          "Pstamina",
+          4
+        ],
+        "var_more": [
+          "Php",
+          0,
+          "Ehp",
+          0
+        ],
+        "var_need": [
+          "Pstamina",
+          4
+        ],
+        "var_set": [
+          "turn",
+          1,
+          "take",
+          2
+        ]
+      },
+      {
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "var_need": [
+          "Pstamina",
+          3
+        ],
+        "var_equal": [
+          "turn",
+          0,
+          "weapon",
+          2
+        ],
+        "text": "Отруйний поріз\nЕнергія: 3",
+        "var_more": [
+          "Php",
+          0,
+          "Ehp",
+          0
+        ],
+        "var_sub": [
+          "Pstamina",
+          3
+        ],
+        "var_set": [
+          "turn",
+          1,
+          "take",
+          2,
+          "attackPoison",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "var_equal": [
+          "turn",
+          0
+        ],
+        "id": 20,
+        "text": "Відпочити",
+        "var_less": [
+          "Pstamina",
+          5
+        ],
+        "var_set": [
+          "Pstamina",
+          "Pmaxstamina",
+          "turn",
+          1
+        ]
+      },
+      {
+        "id": 24,
+        "instant": true,
+        "var_div": [
+          "powerArmor",
+          3
+        ],
+        "bg_color": [
+          0.8,
+          0.8,
+          1
+        ],
+        "var_equal": [
+          "turn",
+          0
+        ],
+        "var_mult": [
+          "powerHeal",
+          "INT",
+          "powerLight",
+          "INT",
+          "powerArrow",
+          "INT",
+          "powerFireball",
+          "INT"
+        ],
+        "var_more": [
+          "Php",
+          0
+        ],
+        "text": "Заклинання",
+        "var_set": [
+          "powerHeal",
+          3,
+          "powerArmor",
+          "INT",
+          "powerLight",
+          6,
+          "powerArrow",
+          2,
+          "powerFireball",
+          9,
+          "powerEvasion",
+          1,
+          "powerPoison",
+          "INT"
+        ]
+      },
+      {
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "var_sub": [
+          "Pstamina",
+          2
+        ],
+        "var_equal": [
+          "turn",
+          1
+        ],
+        "text": "Оборонятись\nЕнергія: 2",
+        "var_more": [
+          "Php",
+          0,
+          "Ehp",
+          0
+        ],
+        "var_need": [
+          "Pstamina",
+          2
+        ],
+        "var_set": [
+          "take",
+          1,
+          "turn",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "PevasionX2",
+          "%)                                        Енергія: 1 "
+        ],
+        "id": 20,
+        "text": "Ухилитися (Шанс ",
+        "bg_color": [
+          0.5,
+          1,
+          0.9
+        ],
+        "instant": true,
+        "var_equal": [
+          "turn",
+          1
+        ],
+        "var_sub": [
+          "Pstamina",
+          1
+        ],
+        "var_more": [
+          "Php",
+          0,
+          "Ehp",
+          0
+        ],
+        "var_need": [
+          "Pstamina",
+          1
+        ],
+        "var_set": [
+          "take",
+          3,
+          "turn",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          1
+        ],
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          1,
+          0.7,
+          0.7
+        ],
+        "var_more": [
+          "Php",
+          0,
+          "Ehp",
+          0
+        ],
+        "var_equal": [
+          "turn",
+          1
+        ],
+        "text": "Отримати додаткове пряме попадання (ігнорується будь-яка броня та спритність) ",
+        "var_sub": [
+          "Php",
+          "Eatk"
+        ],
+        "var_less": [
+          "Pstamina",
+          2
+        ],
+        "var_set": [
+          "turn",
+          0,
+          "take",
+          1
+        ]
+      },
+      {
+        "var_no_more": [
+          "Ehp",
+          0
+        ],
+        "bg_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "var_add": [
+          "Pmp",
+          1,
+          "killed",
+          1
+        ],
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 22,
+        "text": "Перемога",
+        "instant": true,
+        "var_set": [
+          "Battle",
+          0,
+          "Ppoison",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "var_set": [
+          "Battle",
+          0
+        ],
+        "text_color": [
+          1,
+          0
+        ],
+        "id": 1,
+        "text": "Смерть",
+        "instant": true,
+        "var_no_more": [
+          "Php",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 11,
+        "text": "Відображення персонажа",
+        "run": [
+          11
+        ]
+      },
+      {
+        "id": 20,
+        "var_show": [
+          "actions",
+          "/ 1 ) ==========="
+        ],
+        "comment": true,
+        "text": "=========== Додаткові дії ("
+      },
+      {
+        "var_show": [
+          "potionHeal"
+        ],
+        "var_add": [
+          "Php",
+          55
+        ],
+        "text_color": [
+          1,
+          0.9,
+          0.9
+        ],
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "var_equal": [
+          "canHeal",
+          1
+        ],
+        "var_sub": [
+          "potionHeal",
+          1,
+          "actions",
+          1
+        ],
+        "text": "Зілля лікування\nЗдоров'я: <plus>55\nКількість: ",
+        "var_more": [
+          "potionHeal",
+          0,
+          "actions",
+          0,
+          "Php",
+          0
+        ],
+        "var_set": [
+          "canHeal",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "potionMana"
+        ],
+        "var_add": [
+          "Pmp",
+          45
+        ],
+        "text_color": [
+          0.9,
+          0.9,
+          1
+        ],
+        "id": 20,
+        "var_sub": [
+          "potionMana",
+          1,
+          "actions",
+          1
+        ],
+        "bg_color": [
+          0.8,
+          0.8,
+          1
+        ],
+        "var_equal": [
+          "canMana",
+          1
+        ],
+        "text": "Зілля мани\nМана: <plus>45\nКількість: ",
+        "instant": true,
+        "var_more": [
+          "potionMana",
+          0,
+          "actions",
+          0
+        ],
+        "var_set": [
+          "canMana",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "potionAntidot"
+        ],
+        "text_color": [
+          0.9,
+          0.9,
+          0.7
+        ],
+        "id": 20,
+        "var_sub": [
+          "potionAntidot",
+          1,
+          "actions",
+          1
+        ],
+        "bg_color": [
+          0.8,
+          0.8,
+          0.6
+        ],
+        "var_equal": [
+          "canAntidot",
+          1
+        ],
+        "text": "Антидот\nПовністю виліковує від отрути\nКількість: ",
+        "instant": true,
+        "var_more": [
+          "potionAntidot",
+          0,
+          "actions",
+          0
+        ],
+        "var_set": [
+          "canAntidot",
+          0,
+          "Ppoison",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "powerHealM"
+        ],
+        "var_add": [
+          "Php",
+          "powerHealM"
+        ],
+        "text_color": [
+          0.7,
+          1,
+          0.7
+        ],
+        "id": 20,
+        "var_need": [
+          "Pmp",
+          5,
+          "INT",
+          2
+        ],
+        "bg_color": [
+          0.6,
+          0.9,
+          0.8
+        ],
+        "var_more": [
+          "actions",
+          0,
+          "Php",
+          0
+        ],
+        "instant": true,
+        "text": "Слабке лікування\nЦіна мани: 5\nЛікує: ",
+        "var_sub": [
+          "actions",
+          1,
+          "Pmp",
+          5
+        ]
+      },
+      {
+        "var_show": [
+          "dmg"
+        ],
+        "comment": true,
+        "var_equal": [
+          "turn",
+          0
+        ],
+        "id": 20,
+        "text": "\n\n\n\n\n\nШкоди отримано: "
+      },
+      {
+        "var_show": [
+          "dmg"
+        ],
+        "comment": true,
+        "var_equal": [
+          "turn",
+          1
+        ],
+        "id": 20,
+        "text": "\n\n\n\n\n\nФізичної шкоди нанесено: ",
+        "var_more": [
+          "dmg",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "dmgM"
+        ],
+        "comment": true,
+        "var_equal": [
+          "turn",
+          1
+        ],
+        "id": 20,
+        "text": "\n\n\n\n\n\nМагічної шкоди нанесено: ",
+        "var_more": [
+          "dmgM",
+          0
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "var_equal": [
+          "test",
+          1
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Дати стати",
+        "var_equal": [
+          "test",
+          1
+        ],
+        "var_set": [
+          "Pmaxhp",
+          1000,
+          "Php",
+          1000,
+          "Pmaxstamina",
+          200,
+          "Pevasion",
+          0
+        ]
+      },
+      {
+        "text": "Новый ответ. введите текст",
+        "super_calculate": false,
+        "id": 20,
+        "calculate": true,
+        "var_more": [
+          "Ehp",
+          "Emaxhp"
+        ],
+        "var_set": [
+          "Ehp",
+          "Emaxhp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Розрахунок монстра на ПУСТИР\n\n\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "var_random": [
+          "mobrandom",
+          1,
+          2
+        ],
+        "super_calculate": false,
+        "id": 19,
+        "calculate": true,
+        "text": "Розрахунок монстра ",
+        "var_set": [
+          "mobrandom",
+          0,
+          "EarmorM",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1,
+          0.5
+        ],
+        "id": 19,
+        "text": "Бездомний",
+        "var_str_set": [
+          "E",
+          "Бездомний"
+        ],
+        "super_calculate": false,
+        "var_random": [
+          "Ehp",
+          2,
+          4,
+          "Eatk",
+          1,
+          1,
+          "reward",
+          0,
+          1
+        ],
+        "calculate": true,
+        "var_equal": [
+          "mobrandom",
+          1,
+          "Battle",
+          10
+        ],
+        "var_set": [
+          "xpget",
+          2,
+          "Earmor",
+          -2,
+          "Eevasion",
+          0,
+          "mobType",
+          0
+        ]
+      },
+      {
+        "var_random": [
+          "mobrandom",
+          1,
+          2
+        ],
+        "text": "Розрахунок монстра ",
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 19,
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "mobrandom",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "Хробак",
+        "var_str_set": [
+          "E",
+          "Піщаний хробак"
+        ],
+        "super_calculate": false,
+        "var_random": [
+          "Ehp",
+          4,
+          11,
+          "Eatk",
+          1,
+          3,
+          "reward",
+          1,
+          3
+        ],
+        "calculate": true,
+        "var_equal": [
+          "mobrandom",
+          1,
+          "Battle",
+          1
+        ],
+        "var_set": [
+          "xpget",
+          8,
+          "Earmor",
+          0,
+          "Eevasion",
+          0,
+          "mobType",
+          1
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          9,
+          15,
+          "Eatk",
+          2,
+          5,
+          "reward",
+          2,
+          4
+        ],
+        "id": 19,
+        "text": "Дикар",
+        "var_str_set": [
+          "E",
+          "Дикар"
+        ],
+        "super_calculate": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "calculate": true,
+        "var_equal": [
+          "mobrandom",
+          2,
+          "Battle",
+          1
+        ],
+        "var_set": [
+          "xpget",
+          12,
+          "Eevasion",
+          0,
+          "Earmor",
+          0,
+          "mobType",
+          2
+        ]
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "super_calculate": false,
+        "var_random": [
+          "mobrandom",
+          1,
+          4
+        ],
+        "id": 19,
+        "calculate": true,
+        "text": "Розрахунок монстра ",
+        "var_set": [
+          "mobrandom",
+          0
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          20,
+          29,
+          "Eatk",
+          4,
+          9,
+          "reward",
+          4,
+          7
+        ],
+        "id": 19,
+        "text": "Вовк",
+        "var_str_set": [
+          "E",
+          "Вовк"
+        ],
+        "var_equal": [
+          "mobrandom",
+          1,
+          "Battle",
+          2
+        ],
+        "text_color": [
+          0.1,
+          0.7,
+          0.1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          19,
+          "Eevasion",
+          10,
+          "Earmor",
+          0,
+          "mobType",
+          3
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          30,
+          50,
+          "Eatk",
+          5,
+          6,
+          "reward",
+          2,
+          6
+        ],
+        "id": 19,
+        "text": "Живе дерево",
+        "var_str_set": [
+          "E",
+          "Живе дерево"
+        ],
+        "var_equal": [
+          "mobrandom",
+          2,
+          "Battle",
+          2
+        ],
+        "text_color": [
+          0.1,
+          0.7,
+          0.1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          25,
+          "Earmor",
+          3,
+          "Eevasion",
+          0,
+          "mobType",
+          4
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          36,
+          48,
+          "Eatk",
+          9,
+          14,
+          "reward",
+          5,
+          10
+        ],
+        "id": 19,
+        "text": "Вожак стада",
+        "var_str_set": [
+          "E",
+          "Вожак стада"
+        ],
+        "var_equal": [
+          "mobrandom",
+          3,
+          "Battle",
+          2
+        ],
+        "text_color": [
+          0.1,
+          0.7,
+          0.1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          35,
+          "Earmor",
+          0,
+          "Eevasion",
+          15,
+          "mobType",
+          5
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          14,
+          19,
+          "Eatk",
+          4,
+          8,
+          "reward",
+          3,
+          4
+        ],
+        "id": 19,
+        "text": "Фея",
+        "var_str_set": [
+          "E",
+          "Фея"
+        ],
+        "super_calculate": false,
+        "text_color": [
+          0.1,
+          0.7,
+          0.1
+        ],
+        "calculate": true,
+        "var_equal": [
+          "mobrandom",
+          4,
+          "Battle",
+          2
+        ],
+        "var_set": [
+          "xpget",
+          20,
+          "Earmor",
+          0,
+          "Eevasion",
+          20,
+          "mobType",
+          6,
+          "EarmorM",
+          2
+        ]
+      },
+      {
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "var_random": [
+          "mobrandom",
+          1,
+          3
+        ],
+        "super_calculate": false,
+        "id": 19,
+        "calculate": true,
+        "text": "Розрахунок монстра ",
+        "var_set": [
+          "mobrandom",
+          0
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          18,
+          29,
+          "Eatk",
+          7,
+          12,
+          "reward",
+          4,
+          8
+        ],
+        "id": 19,
+        "text": "Пацюк-мутант",
+        "var_str_set": [
+          "E",
+          "Пацюк-мутант"
+        ],
+        "var_equal": [
+          "mobrandom",
+          1,
+          "Battle",
+          3
+        ],
+        "text_color": [
+          0.9,
+          0.7,
+          0.1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          20,
+          "Earmor",
+          0,
+          "Eevasion",
+          10,
+          "mobType",
+          7
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          30,
+          35,
+          "Eatk",
+          5,
+          15,
+          "reward",
+          9,
+          16
+        ],
+        "id": 19,
+        "text": "Мімік",
+        "var_str_set": [
+          "E",
+          "Мімік"
+        ],
+        "var_equal": [
+          "mobrandom",
+          2,
+          "Battle",
+          3
+        ],
+        "text_color": [
+          0.9,
+          0.7,
+          0.1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          8,
+          "Earmor",
+          1,
+          "Eevasion",
+          0,
+          "mobType",
+          8
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          50,
+          70,
+          "Eatk",
+          9,
+          21,
+          "reward",
+          8,
+          16
+        ],
+        "id": 19,
+        "text": "Мінотавр",
+        "var_str_set": [
+          "E",
+          "Мінотавр"
+        ],
+        "var_equal": [
+          "mobrandom",
+          3,
+          "Battle",
+          3
+        ],
+        "text_color": [
+          0.9,
+          0.7,
+          0.1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          55,
+          "Earmor",
+          0,
+          "Eevasion",
+          0,
+          "mobType",
+          9
+        ]
+      },
+      {
+        "text_color": [
+          0
+        ],
+        "var_random": [
+          "mobrandom",
+          1,
+          3
+        ],
+        "super_calculate": false,
+        "id": 19,
+        "calculate": true,
+        "text": "Розрахунок монстра ",
+        "var_set": [
+          "mobrandom",
+          0
+        ]
+      },
+      {
+        "text_color": [
+          0
+        ],
+        "super_calculate": false,
+        "var_random": [
+          "mobrandom",
+          1,
+          3
+        ],
+        "id": 19,
+        "calculate": true,
+        "text": "Розрахунок монстра ",
+        "var_set": [
+          "mobrandom",
+          0
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          16,
+          21,
+          "Eatk",
+          6,
+          11,
+          "reward",
+          4,
+          6
+        ],
+        "id": 19,
+        "text": "Привид",
+        "var_str_set": [
+          "E",
+          "Привид"
+        ],
+        "var_equal": [
+          "mobrandom",
+          1,
+          "Battle",
+          4
+        ],
+        "text_color": [
+          0,
+          1,
+          0.7
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          21,
+          "Eevasion",
+          60,
+          "Earmor",
+          0,
+          "mobType",
+          10,
+          "EarmorM",
+          6
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          26,
+          36,
+          "Eatk",
+          4,
+          9,
+          "reward",
+          4,
+          7
+        ],
+        "id": 19,
+        "text": "Скелет",
+        "var_str_set": [
+          "E",
+          "Скелет"
+        ],
+        "super_calculate": false,
+        "text_color": [
+          0,
+          1,
+          0.7
+        ],
+        "calculate": true,
+        "var_equal": [
+          "mobrandom",
+          2,
+          "Battle",
+          4
+        ],
+        "var_set": [
+          "xpget",
+          24,
+          "Eevasion",
+          0,
+          "Earmor",
+          -3,
+          "mobType",
+          11
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          38,
+          54,
+          "Eatk",
+          6,
+          9,
+          "reward",
+          5,
+          9
+        ],
+        "id": 19,
+        "text": "Вампір",
+        "var_str_set": [
+          "E",
+          "Вампір"
+        ],
+        "var_equal": [
+          "mobrandom",
+          3,
+          "Battle",
+          4
+        ],
+        "text_color": [
+          0,
+          1,
+          0.7
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          55,
+          "Eevasion",
+          0,
+          "Earmor",
+          0,
+          "mobType",
+          12
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          85,
+          125,
+          "Eatk",
+          14,
+          21,
+          "reward",
+          6,
+          14
+        ],
+        "id": 19,
+        "text": "Кам'яний голем",
+        "var_str_set": [
+          "E",
+          "Кам'яний голем"
+        ],
+        "var_equal": [
+          "Battle",
+          5
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          155,
+          "Eevasion",
+          0,
+          "Earmor",
+          8,
+          "EarmorM",
+          12,
+          "mobType",
+          13
+        ]
+      },
+      {
+        "text_color": [
+          0
+        ],
+        "var_random": [
+          "mobrandom",
+          1,
+          3
+        ],
+        "super_calculate": false,
+        "id": 19,
+        "text": "Розрахунок монстра ",
+        "calculate": true,
+        "var_set": [
+          "mobrandom",
+          0
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          29,
+          34,
+          "Eatk",
+          11,
+          16,
+          "reward",
+          6,
+          11
+        ],
+        "id": 19,
+        "text": "Стрекоза",
+        "var_str_set": [
+          "E",
+          "Гігантська стрекоза"
+        ],
+        "var_equal": [
+          "Battle",
+          7,
+          "mobrandom",
+          1
+        ],
+        "text_color": [
+          0.9,
+          0.5,
+          0.7
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          40,
+          "Eevasion",
+          35,
+          "Earmor",
+          0,
+          "mobType",
+          15
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.5,
+          0.7
+        ],
+        "id": 19,
+        "text": "Болотна відьма",
+        "var_str_set": [
+          "E",
+          "Болотна відьма"
+        ],
+        "var_equal": [
+          "Battle",
+          7,
+          "mobrandom",
+          2
+        ],
+        "var_random": [
+          "Ehp",
+          45,
+          65,
+          "Eatk",
+          10,
+          20,
+          "reward",
+          8,
+          13
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          46,
+          "Eevasion",
+          0,
+          "Earmor",
+          0,
+          "EarmorM",
+          3,
+          "mobType",
+          16
+        ]
+      },
+      {
+        "var_random": [
+          "Ehp",
+          66,
+          97,
+          "Eatk",
+          15,
+          28,
+          "reward",
+          2,
+          4
+        ],
+        "id": 19,
+        "text": "Химера",
+        "var_str_set": [
+          "E",
+          "Химера"
+        ],
+        "var_equal": [
+          "Battle",
+          7,
+          "mobrandom",
+          3
+        ],
+        "text_color": [
+          0.9,
+          0.5,
+          0.7
+        ],
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          120,
+          "Eevasion",
+          5,
+          "Earmor",
+          5,
+          "EarmorM",
+          0,
+          "mobType",
+          17
+        ]
+      },
+      {
+        "var_str_set": [
+          "E",
+          "Потвора"
+        ],
+        "var_equal": [
+          "Battle",
+          6
+        ],
+        "text": "Потвора",
+        "super_calculate": false,
+        "id": 19,
+        "calculate": true,
+        "var_random": [
+          "Ehp",
+          6,
+          11,
+          "Eatk",
+          1,
+          4,
+          "reward",
+          0,
+          2
+        ],
+        "var_set": [
+          "xpget",
+          6,
+          "Eevasion",
+          0,
+          "Earmor",
+          -2,
+          "mobType",
+          14
+        ]
+      },
+      {
+        "var_str_set": [
+          "E",
+          "Дебелий Джонні"
+        ],
+        "var_equal": [
+          "Battle",
+          11
+        ],
+        "text": "Дебелий Джонні",
+        "text_color": [
+          1
+        ],
+        "id": 19,
+        "calculate": true,
+        "super_calculate": false,
+        "var_set": [
+          "xpget",
+          500,
+          "Eevasion",
+          0,
+          "Earmor",
+          5,
+          "EarmorM",
+          2,
+          "mobType",
+          111,
+          "Ehp",
+          115,
+          "Eatk",
+          22,
+          "reward",
+          50
+        ]
+      },
+      {
+        "var_str_set": [
+          "E",
+          "Лісовий Друїд"
+        ],
+        "text_color": [
+          1
+        ],
+        "super_calculate": false,
+        "var_equal": [
+          "Battle",
+          22
+        ],
+        "id": 19,
+        "text": "Лісовий Друїд",
+        "calculate": true,
+        "var_set": [
+          "xpget",
+          900,
+          "Eevasion",
+          0,
+          "Earmor",
+          0,
+          "EarmorM",
+          12,
+          "mobType",
+          222,
+          "Ehp",
+          200,
+          "Eatk",
+          35,
+          "reward",
+          120
+        ]
+      },
+      {
+        "var_str_set": [
+          "E",
+          "Сер Хардсон"
+        ],
+        "super_calculate": false,
+        "calculate": true,
+        "text_color": [
+          1
+        ],
+        "id": 19,
+        "text": "Сер Хардсон",
+        "var_equal": [
+          "Battle",
+          33
+        ],
+        "var_set": [
+          "xpget",
+          1500,
+          "Eevasion",
+          15,
+          "Earmor",
+          6,
+          "EarmorM",
+          5,
+          "mobType",
+          333,
+          "Ehp",
+          320,
+          "Eatk",
+          45,
+          "reward",
+          120
+        ]
+      },
+      {
+        "var_str_set": [
+          "E",
+          "Сер Хардсон"
+        ],
+        "text_color": [
+          1
+        ],
+        "var_equal": [
+          "Battle",
+          44
+        ],
+        "super_calculate": false,
+        "id": 19,
+        "calculate": true,
+        "text": "Медуза-Горгона",
+        "var_set": [
+          "xpget",
+          2700,
+          "Eevasion",
+          20,
+          "Earmor",
+          2,
+          "EarmorM",
+          2,
+          "mobType",
+          444,
+          "Ehp",
+          526,
+          "Eatk",
+          60,
+          "reward",
+          200
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 21,
+        "text": "Максималки",
+        "calculate": true,
+        "var_set": [
+          "Emaxhp",
+          "Ehp",
+          "mustRandom",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Ваша нагорода\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "reward",
+          " монет"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 22,
+        "text": "— "
+      },
+      {
+        "var_show": [
+          "xpget",
+          " досвіду"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          1,
+          1
+        ],
+        "id": 22,
+        "text": "— "
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.2,
+          1
+        ],
+        "id": 22,
+        "text": "— Перстень втоми",
+        "var_equal": [
+          "mobType",
+          111
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          0.2,
+          1
+        ],
+        "var_equal": [
+          "mobType",
+          111
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 22,
+        "text": "— Отримання каменю досвіду",
+        "calculate": true,
+        "var_set": [
+          "global xpStone",
+          1
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.2,
+          1
+        ],
+        "id": 22,
+        "text": "— Перстень голоду",
+        "var_equal": [
+          "mobType",
+          222
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0.2,
+          1
+        ],
+        "id": 22,
+        "text": "— Перстень хвороби",
+        "var_equal": [
+          "mobType",
+          333
+        ]
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "var_add": [
+          "Pgold",
+          "reward",
+          "xp",
+          "xpget"
+        ],
+        "id": 3,
+        "text": "                                   Забрати",
+        "var_set": [
+          "Pstamina",
+          "Pmaxstamina",
+          "Epoison",
+          0,
+          "Ppoison",
+          0
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 22,
+        "calculate": true,
+        "text": "Відновити броню і спритність",
+        "var_set": [
+          "Parmor",
+          "Pmaxarmor",
+          "Pevasion",
+          "Pmaxevasion"
+        ]
+      },
+      {
+        "text": "Перстень номер 1",
+        "super_calculate": false,
+        "id": 22,
+        "calculate": true,
+        "var_equal": [
+          "mobType",
+          111
+        ],
+        "var_set": [
+          "ring1",
+          1
+        ]
+      },
+      {
+        "text": "Перстень номер 2",
+        "super_calculate": false,
+        "id": 22,
+        "calculate": true,
+        "var_equal": [
+          "mobType",
+          222
+        ],
+        "var_set": [
+          "ring2",
+          1
+        ]
+      },
+      {
+        "text": "Перстень номер 3",
+        "super_calculate": false,
+        "id": 22,
+        "calculate": true,
+        "var_equal": [
+          "mobType",
+          333
+        ],
+        "var_set": [
+          "ring3",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "Php",
+          10
+        ],
+        "super_calculate": false,
+        "id": 22,
+        "text": "Перстень номер 3 дія",
+        "var_equal": [
+          "ring3",
+          2
+        ],
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Ухиляння і броня ворога\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_div": [
+          "op11",
+          2
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_set": [
+          "op11",
+          "AGI"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Dmg це Patk",
+        "calculate": true,
+        "var_set": [
+          "dmg",
+          "Patk"
+        ]
+      },
+      {
+        "var_add": [
+          "dmg",
+          "STR"
+        ],
+        "var_equal": [
+          "weaponSword",
+          2,
+          "heavy",
+          1
+        ],
+        "id": 5,
+        "calculate": true,
+        "super_calculate": false,
+        "text": "Dmg<plus>weaponSword"
+      },
+      {
+        "var_set": [
+          "dmg",
+          "AGI"
+        ],
+        "super_calculate": false,
+        "var_equal": [
+          "weaponDagger",
+          2,
+          "attackPoison",
+          1
+        ],
+        "id": 5,
+        "text": "Dmg<plus>weaponSword",
+        "calculate": true,
+        "var_mult": [
+          "dmg",
+          2
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "var_sub": [
+          "dmg",
+          "Earmor"
+        ],
+        "text": "Броня",
+        "calculate": true
+      },
+      {
+        "var_less": [
+          "dmg",
+          1
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "dmg",
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "var_random": [
+          "r",
+          1,
+          100
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "calculate": true,
+        "super_calculate": false,
+        "id": 5,
+        "var_sub": [
+          "Ehp",
+          "dmg"
+        ],
+        "text": "Новый ответ. введите текст",
+        "var_more": [
+          "r",
+          "Eevasion"
+        ]
+      },
+      {
+        "var_equal": [
+          "attackPoison",
+          1
+        ],
+        "var_add": [
+          "Epoison",
+          "op11"
+        ],
+        "super_calculate": false,
+        "id": 5,
+        "var_more": [
+          "r",
+          "Eevasion"
+        ],
+        "text": "Отруйний клинок отрута",
+        "calculate": true
+      },
+      {
+        "calculate": true,
+        "text": "Отрута по гравцю",
+        "super_calculate": false,
+        "id": 5,
+        "var_sub": [
+          "Php",
+          "Ppoison",
+          "Ppoison",
+          1
+        ],
+        "var_more": [
+          "Ppoison",
+          0
+        ],
+        "text_color": [
+          0,
+          0.6,
+          0
+        ]
+      },
+      {
+        "text_color": [
+          1,
+          0.5,
+          0.5
+        ],
+        "comment": true,
+        "super_calculate": false,
+        "id": 5,
+        "calculate": false,
+        "text": "Ворог уник атаки! ",
+        "var_no_more": [
+          "r",
+          "Eevasion"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "take",
+          0,
+          "attackPoison",
+          0,
+          "heavy",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "                             Ваші заклинання\nРозблокування заклинань на 2, 3, 4, 5, 6, 7, 10, 15, 20, 30 рівні мудрості\n\n\n\n\n\n\n",
+    "answers": [
+      {
+        "var_show": [
+          "powerHeal",
+          " здоров'я"
+        ],
+        "var_add": [
+          "Php",
+          "powerHeal"
+        ],
+        "text_color": [
+          0.7,
+          1,
+          0.7
+        ],
+        "id": 20,
+        "var_sub": [
+          "Pmp",
+          4
+        ],
+        "bg_color": [
+          0.7,
+          1,
+          0.7
+        ],
+        "instant": true,
+        "text": "Лікування\nЦіна мани: 4\nЛікує: ",
+        "var_need": [
+          "Pmp",
+          4,
+          "INT",
+          2
+        ],
+        "var_set": [
+          "turn",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "powerArrow",
+          " шкоди противнику"
+        ],
+        "text_color": [
+          0.5,
+          0.8,
+          0.9
+        ],
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          0.5,
+          0.7,
+          0.9
+        ],
+        "var_sub": [
+          "Pmp",
+          5
+        ],
+        "var_need": [
+          "Pmp",
+          5,
+          "INT",
+          3
+        ],
+        "text": "Магічна стріла\nЦіна мани: 5\nЗавдає: ",
+        "var_set": [
+          "turn",
+          1,
+          "take",
+          4,
+          "dmgM",
+          "powerArrow"
+        ]
+      },
+      {
+        "var_show": [
+          "powerArmor",
+          " броні"
+        ],
+        "var_add": [
+          "Parmor",
+          "powerArmor"
+        ],
+        "text_color": [
+          0.9,
+          0.7,
+          0.6
+        ],
+        "id": 20,
+        "text": "Кам'яна шкіра \nЦіна мани: 12\nДає: ",
+        "bg_color": [
+          0.9,
+          0.7,
+          0.6
+        ],
+        "instant": true,
+        "var_sub": [
+          "Pmp",
+          12
+        ],
+        "var_need": [
+          "Pmp",
+          12,
+          "INT",
+          4
+        ],
+        "var_set": [
+          "turn",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "powerArmor",
+          " броні противнику"
+        ],
+        "text_color": [
+          0.9,
+          0.7,
+          0.6
+        ],
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          0.9,
+          0.7,
+          0.6
+        ],
+        "text": "Розлом броні\nЦіна мани: 10\nПонижає: ",
+        "var_need": [
+          "Pmp",
+          10,
+          "INT",
+          4
+        ],
+        "var_sub": [
+          "Pmp",
+          10,
+          "Earmor",
+          "powerArmor",
+          "EarmorM",
+          "powerArmor"
+        ],
+        "var_set": [
+          "turn",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "Pevasion",
+          20
+        ],
+        "text_color": [
+          0.7,
+          0.8,
+          0.9
+        ],
+        "id": 20,
+        "var_sub": [
+          "Pmp",
+          12
+        ],
+        "bg_color": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "var_more": [
+          "powerEvasion",
+          0
+        ],
+        "instant": true,
+        "text": "Часткова невидимість\nЦіна мани: 12\nЗбільшує спритність на: 20%\nОдне використання на битву",
+        "var_need": [
+          "Pmp",
+          12,
+          "INT",
+          5
+        ],
+        "var_set": [
+          "turn",
+          1,
+          "powerEvasion",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "powerPoison"
+        ],
+        "var_add": [
+          "Epoison",
+          "powerPoison"
+        ],
+        "text_color": [
+          0,
+          0.7,
+          0
+        ],
+        "id": 20,
+        "var_need": [
+          "Pmp",
+          17,
+          "INT",
+          6
+        ],
+        "bg_color": [
+          0,
+          0.6,
+          0
+        ],
+        "instant": true,
+        "text": "Ядовитий туман\nЦіна мани: 17\nСпричиняє отруту: ",
+        "var_sub": [
+          "Pmp",
+          17
+        ],
+        "var_set": [
+          "turn",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "powerLight",
+          "шкоди противнику"
+        ],
+        "text_color": [
+          0.4,
+          0.7,
+          0.9
+        ],
+        "id": 20,
+        "text": "Блискавка\nЦіна мани: 20\nЗавдає: ",
+        "bg_color": [
+          0.4,
+          0.7,
+          0.9
+        ],
+        "instant": true,
+        "var_sub": [
+          "Pmp",
+          20
+        ],
+        "var_need": [
+          "Pmp",
+          20,
+          "INT",
+          7
+        ],
+        "var_set": [
+          "turn",
+          1,
+          "take",
+          4,
+          "dmgM",
+          "powerLight"
+        ]
+      },
+      {
+        "var_show": [
+          "powerFireball",
+          "шкоди противнику"
+        ],
+        "text_color": [
+          1,
+          0.6,
+          0.6
+        ],
+        "id": 20,
+        "instant": true,
+        "bg_color": [
+          1,
+          0.6,
+          0.6
+        ],
+        "text": "Фаєрбол\nЦіна мани: 35\nЗавдає: ",
+        "var_need": [
+          "Pmp",
+          35,
+          "INT",
+          10
+        ],
+        "var_sub": [
+          "Pmp",
+          35
+        ],
+        "var_set": [
+          "turn",
+          1,
+          "take",
+          4,
+          "dmgM",
+          "powerFireball"
+        ]
+      },
+      {
+        "id": 24,
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Шумна місцева таверна кипить роботою та клієнтами\n\n\n\n\n",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Послуги",
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "Товар",
+        "instant": true
+      },
+      {
+        "id": 3,
+        "text": "Назад",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "В таверні ви можете поїсти, щоб відновити ситість на максимум та відпочити, щоб відновити свою бадьорість невитрачаючи ситості.\n\n",
+    "answers": [
+      {
+        "var_max": [
+          "move",
+          "maxmove"
+        ],
+        "var_show": [
+          "move"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          0
+        ],
+        "id": 3,
+        "text": "Бадьорість: ",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "Pgold"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          0
+        ],
+        "id": 3,
+        "text": "Золото: ",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "food"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.6,
+          0
+        ],
+        "id": 3,
+        "instant": true,
+        "left_answer": false,
+        "var_max": [
+          "food",
+          "maxfood"
+        ],
+        "right_answer": true,
+        "text": "Ситість:  "
+      },
+      {
+        "var_sub": [
+          "Pgold",
+          15
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "text": "Поїсти\nЦіна: 15 монет",
+        "text_color": [
+          1,
+          1,
+          0.8
+        ],
+        "id": 26,
+        "var_need": [
+          "Pgold",
+          15
+        ],
+        "instant": true,
+        "var_set": [
+          "food",
+          "maxfood"
+        ]
+      },
+      {
+        "var_sub": [
+          "Pgold",
+          3
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "text": "Відпочити\nЦіна: 3 монет",
+        "text_color": [
+          1,
+          1,
+          0.8
+        ],
+        "id": 26,
+        "var_need": [
+          "Pgold",
+          3
+        ],
+        "instant": true,
+        "var_set": [
+          "move",
+          "maxmove"
+        ]
+      },
+      {
+        "backstepCount": 1,
+        "isBack": true,
+        "text": "Назад",
+        "id": 26,
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "В таверні можна купити запаси продуктів та різноманітні зілля в дорогу, за допомогою яких можна відновлювати ситість, лікуватись та поповнювати запас мани\n",
+    "answers": [
+      {
+        "var_show": [
+          "Pgold"
+        ],
+        "right_answer": true,
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          0
+        ],
+        "id": 3,
+        "text": "Золото: ",
+        "instant": true,
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "                                     Яблуко\n                              Ціна: 2 монети\n=========================================",
+        "right_answer": false,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "Pgold",
+          2
+        ],
+        "left_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "instant": true,
+        "var_add": [
+          "apples",
+          1
+        ],
+        "var_sub": [
+          "Pgold",
+          2
+        ],
+        "text": "Купити 1 штуку"
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "var_sub": [
+          "Pgold",
+          20
+        ],
+        "left_answer": false,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "instant": true,
+        "var_add": [
+          "apples",
+          10
+        ],
+        "text": "Купити 10 штук",
+        "right_answer": true,
+        "var_need": [
+          "Pgold",
+          20
+        ]
+      },
+      {
+        "id": 27,
+        "text": "=========================================",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "                             Зілля лікування\n                              Ціна: 10 монет\n=========================================",
+        "right_answer": false,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Купити 1 штуку",
+        "left_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "var_need": [
+          "Pgold",
+          10
+        ],
+        "var_add": [
+          "potionHeal",
+          1
+        ],
+        "var_sub": [
+          "Pgold",
+          10
+        ],
+        "instant": true
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "left_answer": false,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "right_answer": true,
+        "text": "Купити 10 штук",
+        "var_sub": [
+          "Pgold",
+          100
+        ],
+        "var_add": [
+          "potionHeal",
+          10
+        ],
+        "var_need": [
+          "Pgold",
+          100
+        ]
+      },
+      {
+        "id": 27,
+        "text": "=========================================",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "                                 Зілля мани\n                              Ціна: 10 монет\n=========================================",
+        "right_answer": false,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "text": "Купити 1 штуку",
+        "var_add": [
+          "potionMana",
+          1
+        ],
+        "var_sub": [
+          "Pgold",
+          10
+        ],
+        "var_need": [
+          "Pgold",
+          10
+        ]
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "Pgold",
+          100
+        ],
+        "left_answer": false,
+        "right_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "text": "Купити 10 штук",
+        "var_sub": [
+          "Pgold",
+          100
+        ],
+        "var_add": [
+          "potionMana",
+          10
+        ],
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "=========================================",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "                          Зілля кам'яної шкіри\n                              Ціна: 12 монет\n=========================================",
+        "right_answer": false,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "Pgold",
+          12
+        ],
+        "left_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "instant": true,
+        "var_add": [
+          "potionStone",
+          1
+        ],
+        "var_sub": [
+          "Pgold",
+          12
+        ],
+        "text": "Купити 1 штуку"
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Купити 10 штук",
+        "left_answer": false,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "var_need": [
+          "Pgold",
+          120
+        ],
+        "var_sub": [
+          "Pgold",
+          120
+        ],
+        "var_add": [
+          "potionStone",
+          10
+        ],
+        "instant": true,
+        "right_answer": true
+      },
+      {
+        "id": 27,
+        "text": "=========================================",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "                                   Антидот\n                              Ціна: 15 монет\n=========================================",
+        "right_answer": false,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Купити 1 штуку",
+        "left_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "var_need": [
+          "Pgold",
+          15
+        ],
+        "var_add": [
+          "potionAntidot",
+          1
+        ],
+        "var_sub": [
+          "Pgold",
+          15
+        ],
+        "instant": true
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "Pgold",
+          150
+        ],
+        "left_answer": false,
+        "right_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "text": "Купити 10 штук",
+        "var_sub": [
+          "Pgold",
+          150
+        ],
+        "var_add": [
+          "potionAntidot",
+          10
+        ],
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "=========================================",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "                                   Стейк\n                              Ціна: 20 монет\n=========================================",
+        "right_answer": false,
+        "left_answer": false
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "text": "Купити 1 штуку",
+        "var_add": [
+          "Stake",
+          1
+        ],
+        "var_sub": [
+          "Pgold",
+          20
+        ],
+        "var_need": [
+          "Pgold",
+          20
+        ]
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 27,
+        "text": "Купити 10 штук",
+        "left_answer": true,
+        "bg_color": [
+          0.8,
+          1,
+          0.8
+        ],
+        "var_need": [
+          "Pgold",
+          200
+        ],
+        "var_sub": [
+          "Pgold",
+          200
+        ],
+        "var_add": [
+          "Stake",
+          10
+        ],
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "=========================================",
+        "comment": true
+      },
+      {
+        "backstepCount": 1,
+        "isBack": true,
+        "text": "Назад",
+        "id": 27,
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "В кузні можна купити нові обладунки та зброю\n",
+    "answers": [
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "var_sub": [
+          "Pgold",
+          125
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "weaponSword",
+          0
+        ],
+        "instant": true,
+        "var_need": [
+          "Pgold",
+          125
+        ],
+        "text": "Сталевий меч\nШкода <plus> 2\nГоризонтальний удар - завдає додаткову шкоду рівну вашій силі, витрачаючи 7 одиниць енергії.\nЦіна: 125",
+        "var_set": [
+          "weaponSword",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "instant": true,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "weaponSpear",
+          0
+        ],
+        "var_sub": [
+          "Pgold",
+          125
+        ],
+        "text": "Спис\nШкода <plus> 2\nПерший удар - завдає  шкоду рівну вашій базовій шкоди до початку бою. Витрачає 4 одиниці енергії.\nЦіна: 125",
+        "var_need": [
+          "Pgold",
+          125
+        ],
+        "var_set": [
+          "weaponSpear",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "instant": true,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "weaponDagger",
+          0
+        ],
+        "var_sub": [
+          "Pgold",
+          100
+        ],
+        "text": "Кинжал\nШкода <plus> 1\nОтруйний поріз - завдає шкоду, яка рівна 200% вашої ловкості та накладає отруту, в розмірі 50% вашої ловкості.\nЦіна: 100",
+        "var_need": [
+          "Pgold",
+          100
+        ],
+        "var_set": [
+          "weaponDagger",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "instant": true,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "helmet1",
+          0
+        ],
+        "var_more": [
+          "Pgold",
+          49
+        ],
+        "var_sub": [
+          "Pgold",
+          50
+        ],
+        "text": "Шкіряний шолом\nБроня <plus>1\nЦіна: 50",
+        "var_set": [
+          "helmet1",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "var_more": [
+          "Pgold",
+          99
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "helmet2",
+          0
+        ],
+        "text": "Мідний шолом\nБроня <plus>2\nЦіна: 100",
+        "var_sub": [
+          "Pgold",
+          100
+        ],
+        "instant": true,
+        "var_set": [
+          "helmet2",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "var_need": [
+          "Pgold",
+          150
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "helmet3",
+          0
+        ],
+        "var_sub": [
+          "Pgold",
+          150
+        ],
+        "instant": true,
+        "text": "Залізний шолом\nБроня <plus>3\nЦіна: 150",
+        "var_set": [
+          "helmet3",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "var_need": [
+          "Pgold",
+          50
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "boots1",
+          0
+        ],
+        "instant": true,
+        "text": "Шкіряні чоботи\nБроня <plus>1\nЦіна: 50",
+        "var_sub": [
+          "Pgold",
+          50
+        ],
+        "var_set": [
+          "boots1",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "var_need": [
+          "Pgold",
+          100
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "boots2",
+          0
+        ],
+        "text": "Мідні чоботи\nБроня <plus>2\nЦіна: 100",
+        "var_sub": [
+          "Pgold",
+          100
+        ],
+        "instant": true,
+        "var_set": [
+          "boots2",
+          1
+        ]
+      },
+      {
+        "text_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": 28,
+        "var_need": [
+          "Pgold",
+          150
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_equal": [
+          "boots3",
+          0
+        ],
+        "var_sub": [
+          "Pgold",
+          150
+        ],
+        "instant": true,
+        "text": "Залізні чоботи\nБроня <plus>3\nЦіна: 150",
+        "var_set": [
+          "boots3",
+          1
+        ]
+      },
+      {
+        "var_need": [
+          "Pgold",
+          100
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "text": "Шкіряний нагрудник\nБроня <plus>2\nЦіна: 100",
+        "var_equal": [
+          "suit1",
+          0
+        ],
+        "id": 28,
+        "instant": true,
+        "var_sub": [
+          "Pgold",
+          100
+        ],
+        "var_set": [
+          "suit1",
+          1
+        ]
+      },
+      {
+        "instant": true,
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "var_need": [
+          "Pgold",
+          200
+        ],
+        "var_equal": [
+          "suit2",
+          0
+        ],
+        "id": 28,
+        "text": "Мідний нагрудник\nБроня <plus>4\nЦіна: 200",
+        "var_sub": [
+          "Pgold",
+          200
+        ],
+        "var_set": [
+          "suit2",
+          1
+        ]
+      },
+      {
+        "text": "Залізний нагрудник\nБроня <plus>6\nЦіна: 300",
+        "bg_color": [
+          1,
+          1,
+          0.8
+        ],
+        "instant": true,
+        "var_equal": [
+          "suit3",
+          0
+        ],
+        "id": 28,
+        "var_need": [
+          "Pgold",
+          300
+        ],
+        "var_sub": [
+          "Pgold",
+          300
+        ],
+        "var_set": [
+          "suit3",
+          1
+        ]
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "id": 28
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Гігантська яма слугує пристанищем для всіх дикарів та мучеників. Тут знайшов своє місце і Дебелий Джонні, крики страждання якого чути й до сих пір\n",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "text_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "id": 19,
+        "text": "Кинути виклик Дебелому Джонні",
+        "var_equal": [
+          "ring1",
+          0
+        ],
+        "var_set": [
+          "loc",
+          11,
+          "mustRandom",
+          1,
+          "canRun",
+          -100,
+          "Battle",
+          1
+        ]
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "id": 29
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Обплетений лісовим корінням та гілками кам'яний храм посеред лісу. Слугує місцем проживання для лісового друїда, володаря персня голоду. \n",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "instant": true,
+        "var_equal": [
+          "ring2",
+          0
+        ],
+        "id": 19,
+        "text": "Кинути виклик друїду",
+        "text_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "var_set": [
+          "loc",
+          22,
+          "mustRandom",
+          1,
+          "canRun",
+          -100,
+          "Battle",
+          1,
+          "canStone",
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Назад",
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Беріть техніку ближнього бою, яку ви хочете застосувати\n\n\n\n",
+    "answers": [
+      {
+        "id": 32,
+        "text": "Отруйний клинок\nЕнергія: "
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "id": 31
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 33,
+    "text": "Тут зібрані відповіді на всі можливі питання",
+    "answers": [
+      {
+        "id": 33,
+        "text": "                               ===Карта===",
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.6
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Бадьорість - дає можливість рухатись по карті та провокувати напади. Рух потребує 1 одиницю бадьорості, провокація 2 одиниці. Щоб відновити запас бадьорості потрібно відпочити. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "Ситість - дає можливість відпочивати та відновлювати сили. Відпочинок вартує 10 ситості, а відновлення сил 15. Якщо у вас закінчилась бадьорість та ситість, а також немає жодних предметів для відновлення ситості, ви програли. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "X, Y - показує ваше місце знаходження на карті. Вся карта це квадратна площа 30х30. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "Локація - відображає локацію, в якій ви зараз знаходитесь.\n\n\nРівень небезпеки - відображає шанс нападу на вас під час руху. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "Відпочити - повністю відновлює бадьорість. Потребує 10 ситості. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "Відновити сили - повністю відновлює здоров'я та ману. Потребує 15 ситості. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "                      ===Характеристики===",
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.6
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Сила - збільшує вашу шкоду, та трішки прибавляє здоров'я. \n\nЛовкість - збільшує вашу енергію, та трішки прибавляє спритність. \n\nВитривалість - збільшує ваше здоров' я, та трішки прибавляє енергію.\n\nМудрість - збільшує потужність заклятть, та трішки прибавляє мани, також відкриває нові заклинання.\n\nІнтелект - збільшує вашу ману.\n",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "                   ===Здібності та ефекти===",
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.6
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Велика кількість ворогів можуть застосовувати свої здібності під час бою. Ворожі здібності поділяються на пасивні та активні. Ворог може активувати лише одну активну , та необмежену кількість пасивних здібностей в один і той самий хід. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "Отрута - кожен хід завдає шкоду, рівну кількості отрути. ",
+        "comment": true
+      },
+      {
+        "id": 33,
+        "text": "                        ===Додаткові дії===",
+        "comment": true,
+        "text_color": [
+          0.6,
+          0.8,
+          0.6
+        ]
+      },
+      {
+        "id": 33,
+        "text": "Під час бою ви можете використати одну додаткову дію кожного свого ходу. Деякі дії можуть бути використані тільки один раз в бою, наприклад використання різноманітних зілль.",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "backstepCount": 1,
+        "text": "Назад",
+        "id": 33,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "<s>tЗ давніх давен, коли час та простір стали єдині, з'явилися 8 різних світів. Кожен світ мав свої особливості, свої закони та своїх \"творців\". Ніхто достеменно не знає хто вони чи звідки ці \"творці\" прийшли сюди. Та єдине було відомо. Їхня мета — забезпечити мир та процвітання.\n<s>tКожен світ був унікальним. Всюди були свої герої та злодії. Кожен володар мав власні амбіції, бажання та могутність. Завжди існували паралелі. Добро та зло. Любов та ненависть. Світло і темрява. Усюди панував мир та спокій. Це була ера Золотої Доби.\n<s>tОднак, лише єдиний зі світів не міг жити спокійно. Його жителям здавалось, що тодішні закони були занадто жорстокими та несправедливими. Аврора, чий \"творець\" була найсердечнішою та найдобрішою серед своїх братів, погрузла у війнах за ефемерний престол. Жага власного порядку затуманила розуми багатьох. І врешті решт, безсмертну та найсильнішу, я тоді вважалося, істоту, \"творця\" було скинуто. У цю криваву ніч, яку й досі жахаються навіть згадувати навіть \"творці\", наймогутніші серед повстанців забрали перстні Законів Аврори, що й керували плинністю цього світу. Голод. Втома. Хвороба. Смерть. Сон.\n<s>tУсі спроби повстанців змінити закони лише сильніше розгойдували і так хиткий баланс, створений найслабшим \"творцем\". А втрата перстня Сну, який Аврора забрала на останніх хвилинах життя з собою у вічний сон, породила Хаос...\n<s>tНе маючи останнього Закону, навіть найсильніші істоти так і не змогли приборкати силу перстнів Законів, а край цей стали називати Земля Розколу.\n<s>t\"Творці\", розуміючи, що далі баланс може похитнутися і в них, вирішили створити \"Месію\", що й забере усі перстні Законів та відновить баланс та мир на Аврорі.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Створити персонажа",
+        "var_set": [
+          "potionStone",
+          0,
+          "potionMana",
+          "potionHeal",
+          0,
+          "potionAntidot",
+          0
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "weapon",
+          0,
+          "weaponSword",
+          0,
+          "weaponDagger",
+          0,
+          "weaponD",
+          0,
+          "weaponSpear",
+          0
+        ]
+      },
+      {
+        "id": 34,
+        "text": "Новый ответ. введите текст",
+        "var_add": [
+          "Pgold",
+          900,
+          "xp",
+          900
+        ],
+        "var_equal": [
+          "test",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Каменюка з вибитим на ньому текстом. Зазвичай на них витесують найважливіші елементи історії, щоб навіть через кілька поколінь наші потомки знали через що ми пройшли",
+    "answers": [
+      {
+        "id": 35,
+        "text": "Дебелий Джонні був одним із найслабших серед очільників повстанців. Єдина причина чому йому дістався перстень, це армія дикарів та мучеників, яких він привів з собою на переворот. Джонні жив ареною, з ранку до ночі він любив трощити кістки дуелянтів та розпивати алкогольні напої. Йому неподобалось, що половину доби він був змушений спати, і ще частину дня відпочивати між боями. Він хотів вічно битись та пити, пити та битись, без жодних перерв. Тому він викрав саме кільце втоми. Джонні думав, що зламавши закон, він зможе здійснити свою мрію. Але, коли закон було знищено, кожна жива істота на Землі Розколу почала відчувати вічну втому. Скільки б Джонні невідпочивав, він завжди почувався втомленим, це його дратувало та сердило. Також, кожен дуелянт, з якими він раніше змагався, не мав сил навіть на 10-ти хвилинну боротьбу. Мрія Дебелого Джонні була примітивною та дитячою, і привела до вічної втоми в світі Аврори. ",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 35,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Каменюка з вибитим на ньому текстом. Зазвичай на них витесують найважливіші елементи історії, щоб навіть через кілька поколінь наші потомки знали через що ми пройшли",
+    "answers": [
+      {
+        "id": 36,
+        "text": "Лісовий Друїд був найбільш таємничою особою серед усіх очільників перевороту. Він ніколи невикривав свою особистість, та немав жодних зв'язків з іншими повстанцями. Друїд був ворожий до битв, тому свій вклад він робив за допомогою своїх навичок зцілення, які зіграли важливу роль на полі бою. Перстень, який йому дістався був перстнем голоду, зламавши закон він хотів забезпечити захист усім лісовим звірям, які потерпали від бажаючих набити шлунок. Проте, коли закон було зламано , Розколоту Землю полонив вічний голод. Жоден шлунок не міг бути задоволеним, скільки б їжі небуло зїдено. Це спричинило величезний наплив мисливців, які убивали всю лісову живність, аби прокормити себе. Таким чином в зелених зонах світу Аврори нестало жодного без захисного звіра, який небув би убитим руками голодних. Лісовий Друїд мав благородні наміри, але доля зіграла інакше... ",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "id": 36
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Обеліск на якому витесано частину мудрості законів Аврори. Кажуть, якщо збагнути суть написаного тексту, то можна отримати маленьку частку вкладеної в слова сили\n",
+    "answers": [
+      {
+        "id": 37,
+        "instant": true,
+        "comment": true,
+        "text": "Аврора створила 5 законів. Голод, втома, хвороба, смерть та сон. Кожна істота може страждати від нестачі їжі, і в той самий час отримувати задоволення та приплив сил від її споживання. Кожна істота може страждати від утоми, і в той самий час отримувати заряд бадьорості та гарного настрою від відпочинку. Кожна істота може підхопити жахливу хворобу, і в той час може вилікуватись від будь-якого недугу. Кожна істота може зустріти свій кінець, і в той час прожити насичене та яскраве життя. Кожна істота повинна виділяти час на сон, щоб кожен мав свій час занепаду та розквіту. "
+      },
+      {
+        "id": 37,
+        "text": "Отримати часточку сили (<plus>1 бал вміння) ",
+        "instant": true,
+        "var_set": [
+          "obelisk1",
+          1
+        ]
+      },
+      {
+        "id": 37,
+        "isBack": true,
+        "text": "Назад",
+        "backstepCount": 1,
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Каменюка з вибитим на ньому текстом. Зазвичай на них витесують найважливіші елементи історії, щоб навіть через кілька поколінь наші потомки знали через що ми пройшли",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Його прозвали владикою нежиті, після того, як його тіло сплюндрувала сила персня хвороби. Половина шкіри почорніла і обсипалась, все волосся повипадало, де-не-де видніються його кістки. Такими були наслідки володіння одного з перснів закону. Після знищення правила хвороби, жодна жива істота не могла вилікуватися від підхопленої хвороби. Діти, ще в ранньому віці безнадійно помирали від найпростішої застуди. Все частіше новонароджені з'являлись на світ з страшними, ніколи невіданими цим світом хворобами. Багато мучеників благали про смерть, хворіючи жахливими хворобами сотнями років.\n Він був найвідомішим у той час лікарем, та одним із найкращих фехтувальників своєї епохи. Взявши перстень він хотів припинити страждання, спричинені різноманітними хворобами, натомість прирік усіх на жахливу, довговічну муку.\n Сер Хардсон, так колись називали напівмертвого тепер, вампіра відлюдника. ",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 38,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Він закрився від зовнішнього світу, намагаючись знову і знову розкрити всі секрети персня та виправити свою жахливу помилку. Він уже зміг добитись здібності витягування життя з ворогів, за що його прозвали вампіром, тепер він шукає можливість передавання цього життя тим, хто цього потребує\n\n\n",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "var_equal": [
+          "ring3",
+          0
+        ],
+        "id": 19,
+        "text": "Кинути виклик Хардсону, Повелителю Нежиті",
+        "text_color": [
+          1,
+          0.8,
+          0.8
+        ],
+        "var_set": [
+          "loc",
+          33,
+          "mustRandom",
+          1,
+          "canRun",
+          -100,
+          "Battle",
+          1,
+          "canStone",
+          1
+        ]
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 39,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Список усіх ваших досягнень, всього в грі їх налічується 10\n",
+    "answers": [
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 40,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "\n\n ",
+    "answers": [
+      {
+        "id": 41,
+        "text": "Як тільки ты прокинешся, прямуй на схід по розбитій дорозі. Ты наткнешся на місто, яке носить назву \"Стокхольм\". Відшукай там таверну та поповни в ній свої запаси, інакше в тебе небуде шансів на виживання.\nКординати [X:27 Y:3] ",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 41,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Тут ви набуваєте талантів, за гроші звісно ж\n\n\n\n\n\n",
+    "answers": [
+      {
+        "bg_color": [
+          0.6,
+          1,
+          0.6
+        ],
+        "var_not": [
+          "RingHp",
+          1
+        ],
+        "text": "[Талант] \nЖага до життя\nВідновлює 3 ОЗ в хід\nЦіна: 250 монет",
+        "text_color": [
+          0.9,
+          1,
+          0.9
+        ],
+        "id": 42,
+        "var_sub": [
+          "Pgold",
+          250
+        ],
+        "var_need": [
+          "Pgold",
+          250
+        ],
+        "var_set": [
+          "RingHp",
+          1
+        ]
+      },
+      {
+        "isBack": true,
+        "text": "Назад",
+        "id": 28,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "",
+    "answers": []
+  }
+]

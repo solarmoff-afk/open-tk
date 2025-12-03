@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Black  написал еще 27204 слов в квесте \"Мисториал\"."
+      },
+      {
+        "targetbookid": "6478",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Мисториал\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Arxbemon\n написал еще 19746 слов в квесте \"Ангелы и Демоны\"."
+      },
+      {
+        "targetbookid": "162137",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ангелы и Демоны\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор [EG] написал еще 18462 слов в квесте \"Элита\"."
+      },
+      {
+        "targetbookid": "71525",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Элита\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ~CoffeeCat написал еще 18361 слов в квесте \"Ромашковый чай\"."
+      },
+      {
+        "targetbookid": "179180",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ромашковый чай\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Guinea pig написал еще 18240 слов в квесте \"Only hate, no more.\"."
+      },
+      {
+        "targetbookid": "163219",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Only hate, no more.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

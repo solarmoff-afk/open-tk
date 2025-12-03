@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор RedBerry написал еще 145705 слов в квесте \"Проклятие шахматиста\"."
+      },
+      {
+        "targetbookid": "241383",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Проклятие шахматиста\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор 135792468sani написал еще 118298 слов в квесте \"Skyrim сборник(для автора) \"."
+      },
+      {
+        "targetbookid": "241886",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Skyrim сборник(для автора) \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Verssi написал еще 112284 слов в квесте \"Дорога в Геверн\"."
+      },
+      {
+        "targetbookid": "238481",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Дорога в Геверн\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Airlie написал еще 108912 слов в квесте \"История одной ящерки \"."
+      },
+      {
+        "targetbookid": "241037",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"История одной ящерки \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Nest_48_\n написал еще 108497 слов в квесте \"Пачка Доритос\"."
+      },
+      {
+        "targetbookid": "238042",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Пачка Доритос\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

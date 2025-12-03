@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Мёртвая написал еще 23576 слов в квесте \"Найдешь меня во время бури? \"."
+      },
+      {
+        "targetbookid": "167628",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Найдешь меня во время бури? \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Makasin\n написал еще 23551 слов в квесте \"S.T.A.L.K.E.R. В поисках Смерти\"."
+      },
+      {
+        "targetbookid": "167303",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"S.T.A.L.K.E.R. В поисках Смерти\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 23396 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Kvestopisci написал еще 23136 слов в квесте \"Вершитель судеб\"."
+      },
+      {
+        "targetbookid": "178000",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Вершитель судеб\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mikasa_Akkerman написал еще 21437 слов в квесте \"На полпути к могиле\"."
+      },
+      {
+        "targetbookid": "177473",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"На полпути к могиле\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

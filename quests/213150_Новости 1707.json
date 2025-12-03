@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ирина М. написал еще 33444 слов в квесте \"Магическая академия\"."
+      },
+      {
+        "targetbookid": "212171",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Магическая академия\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор AntiHero написал еще 17229 слов в квесте \"Эпидемия\"."
+      },
+      {
+        "targetbookid": "188137",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Эпидемия\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Miss FANTASTY написал еще 16815 слов в квесте \"ЗВЕЗДЫ СОШЛИСЬ\"."
+      },
+      {
+        "targetbookid": "209875",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"ЗВЕЗДЫ СОШЛИСЬ\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Э. Пирс написал еще 16800 слов в квесте \"Предатель\"."
+      },
+      {
+        "targetbookid": "210572",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Предатель\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Jooly написал еще 16704 слов в квесте \"Эффект бабочки\"."
+      },
+      {
+        "targetbookid": "178384",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Эффект бабочки\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

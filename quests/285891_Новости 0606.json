@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sargeras написал еще 18132 слов в квесте \"Ойкумена\"."
+      },
+      {
+        "targetbookid": "277951",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ойкумена\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Zabor написал еще 13007 слов в квесте \"Континент\"."
+      },
+      {
+        "targetbookid": "280202",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Континент\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор  написал еще 12988 слов в квесте \"Robodate sim\"."
+      },
+      {
+        "targetbookid": "285043",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Robodate sim\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор B1ack_Wh1te написал еще 12979 слов в квесте \"Мисториал, ты ли это?\"."
+      },
+      {
+        "targetbookid": "246674",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Мисториал, ты ли это?\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Paradoz написал еще 12961 слов в квесте \"The Elder Scrolls Quest AW7\"."
+      },
+      {
+        "targetbookid": "263393",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"The Elder Scrolls Quest AW7\"."
+      }
+    ]
+  }
+]

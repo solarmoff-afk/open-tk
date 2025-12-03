@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Зивигард  написал еще 217974 слов в квесте \"S.T.A.L.K.E.R.\nГолос Зоны \"."
+      },
+      {
+        "targetbookid": "253071",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"S.T.A.L.K.E.R.\nГолос Зоны \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор  написал еще 133761 слов в квесте \"          \"."
+      },
+      {
+        "targetbookid": "241940",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"          \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 112341 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Mey_Igarasi написал еще 107870 слов в квесте \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "targetbookid": "239805",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"По следам Danganronpa. 1 глава\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Фантом написал еще 98158 слов в квесте \"Они среди нас\"."
+      },
+      {
+        "targetbookid": "231374",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Они среди нас\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

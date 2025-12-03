@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Alex Guch написал еще 381792 слов в квесте \"Фантастические странствия\"."
+      },
+      {
+        "targetbookid": "205206",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Фантастические странствия\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Annie написал еще 145687 слов в квесте \"Что скрывает город\"."
+      },
+      {
+        "targetbookid": "230820",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Что скрывает город\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Hamster44 написал еще 130282 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "217165",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Lili Shatol написал еще 127433 слов в квесте \"Наши души темнеют\"."
+      },
+      {
+        "targetbookid": "235740",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наши души темнеют\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор *В£дЬмОчК@* написал еще 124830 слов в квесте \"Судьбою предназначенные.\"."
+      },
+      {
+        "targetbookid": "228064",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Судьбою предназначенные.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

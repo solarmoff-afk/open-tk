@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Miriam Mills написал еще 21104 слов в квесте \"Другая\"."
+      },
+      {
+        "targetbookid": "191457",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Другая\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Enjdufzz написал еще 19092 слов в квесте \"Я убью тебя среди плеяд\"."
+      },
+      {
+        "targetbookid": "192740",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Я убью тебя среди плеяд\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор bettsbeta написал еще 18023 слов в квесте \"\n\nВнедрение \n\"."
+      },
+      {
+        "targetbookid": "174624",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"\n\nВнедрение \n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ДМар написал еще 17072 слов в квесте \"Сводные\"."
+      },
+      {
+        "targetbookid": "194514",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Сводные\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор *В£дЬмОчК@* написал еще 16772 слов в квесте \"Дух внутри меня\"."
+      },
+      {
+        "targetbookid": "185625",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Дух внутри меня\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

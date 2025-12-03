@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "text": "Автор SirVladPro<s>r\n<s>r\nАртефакты это необычная гринд игра. Здесь у вас не выйдет пройти игру всегда экипируя найденые вещи. Помните, вы должны собирать артефакты так, что бы комбинируя их вы могли получить наибольшую эффективность. А теперь когда вы узнали, что вас ждет, я могу пожелать вам удачи.",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\ng.money=0\nkaf=1\nstats={}\npg5=1\ng.pg5=pg5\nkrit=1\nk={10,25,5,1,1,1}\nname_stats={\"Атака\",\"Здоровье\",\"Защита\",\"Крит_ш\",\"Крит_ур\",\"Скорость\",\"Уровень\"}\nname_artifact={\"Меч\",\"Шлем\",\"Щит\",\"Перчатки\",\"Нагрудник\",\"Сапоги\"}\nartifact_1={10,0,0,0,0,0,1}\nartifact_2={0,25,0,0,0,0,1}\nartifact_3={0,0,5,0,0,0,1}\nartifact_4={1,0,0,0,0,0,1}\nartifact_5={0,0,1,0,0,0,1}\nartifact_6={0,0,0,0,0,1,1}\nartifact_7={0,0,0,0,0,0,1}\nfor i=1,12 do\nstats[i]=0\nend\nbistrota=0.5\nend",
+        "instant": true,
+        "id": 3,
+        "text": "Начать"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 3,
+    "text": "Подземелье артефактов",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Персонаж",
+        "middle_answer": true,
+        "instant": true
+      },
+      {
+        "right_answer": true,
+        "lua_do": "function lua_do()\nif (pg5<g.pg5<plus>1) and (g.pg5<1000) then\npg5=pg5<plus>1\nend\nend",
+        "text": "Добавить сложность",
+        "instant": true,
+        "id": 3
+      },
+      {
+        "right_answer": false,
+        "instant": true,
+        "lua_do": "function lua_do()\nif pg5>1 then\npg5=pg5-1\nend\nend",
+        "text": "Убавить сложность",
+        "id": 3,
+        "left_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn \"Войти в подземелье №\" .. pg5\nend",
+        "lua_do": "function lua_do()\nkrit=1\nwin=6\nartifact_7={0,0,0,0,0,0}\n\nfor i=1, 6 do\nstats[i]=artifact_1[i]<plus>artifact_2[i]<plus>artifact_3[i]<plus>artifact_4[i]<plus>artifact_5[i]<plus>artifact_6[i]\nend\n\nsp={0,0}\nstats[8]=25*pg5<plus>math.floor(25*pg5*pg5/20)\nstats[9]=5*pg5<plus>math.floor(5*pg5*pg5/20)\nstats[7]=10*pg5<plus>math.floor(10*pg5*pg5/20)\nstats[12]=pg5<plus>math.floor(pg5*pg5/20)\n\nnac=pg5*0.2\nend",
+        "text": "Войти",
+        "instant": true,
+        "id": 5
+      },
+      {
+        "right_answer": false,
+        "lua_text": "function lua_text()\ni=(15<plus>0.2*pg5)/100\nreturn \"1★ \" .. math.round(((1-i)^5)*10000)/100 .. \"%<s>\n2★ \" .. math.round((5*i*(1-i)^4)*10000)/100 .. \"%<s>\n3★ \" .. math.round((10*i^2*(1-i)^3)*10000)/100 .. \"%<s>\n4★ \" .. math.round((10*i^3*(1-i)^2)*10000)/100 .. \"%<s>\n5★ \" .. math.round((5*i^4*(1-i))*10000)/100 .. \"%<s>\n6★ \" .. math.round((i^5)*10000)/100 .. \"%\"\nend",
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": false,
+        "comment": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Ваш персонаж и список надетых на нем артефактов.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Назад",
+        "instant": true
+      },
+      {
+        "right_answer": false,
+        "comment": true,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "middle_answer": true,
+        "lua_text": "function lua_text()\nfor i=1, 6 do\nstats[i]=artifact_1[i]<plus>artifact_2[i]<plus>artifact_3[i]<plus>artifact_4[i]<plus>artifact_5[i]<plus>artifact_6[i]\nend\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. stats[i]\nend\nreturn \"Общие характеристики\" .. x\nend"
+      },
+      {
+        "comment": true,
+        "id": 4,
+        "text": "Меч",
+        "lua_text": "function lua_text()\n\nx1=\" \"\nfor i=1, 6 do\nif artifact_1[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_1[i]\nend\nreturn name_artifact[1] .. \"<s>\nУр \" .. artifact_1[7] .. \"<s>\n\" .. x1 .. x\nend",
+        "left_answer": true
+      },
+      {
+        "lua_text": "function lua_text()\nx1=\" \"\nfor i=1, 6 do\nif artifact_3[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_3[i]\nend\nreturn name_artifact[3] .. \"<s>\nУр \" .. artifact_3[7] .. \"<s>\n\" .. x1 .. x\nend",
+        "id": 4,
+        "text": "Щит",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "comment": true,
+        "id": 4,
+        "text": "Нагрудник",
+        "lua_text": "function lua_text()\nx1=\" \"\nfor i=1, 6 do\nif artifact_5[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_5[i]\nend\nreturn name_artifact[5] .. \"<s>\nУр \" .. artifact_5[7] .. \"<s>\n\" .. x1 .. x\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 4,
+        "text": "Шлем",
+        "lua_text": "function lua_text()\nx1=\" \"\nfor i=1, 6 do\nif artifact_2[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_2[i]\nend\nreturn name_artifact[2] .. \"<s>\nУр \" .. artifact_2[7] .. \"<s>\n\" .. x1 .. x\nend"
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 4,
+        "text": "Перчатки",
+        "lua_text": "function lua_text()\nx1=\" \"\nfor i=1, 6 do\nif artifact_4[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_4[i]\nend\nreturn name_artifact[4] .. \"<s>\nУр \" .. artifact_4[7] .. \"<s>\n\" .. x1 .. x\nend"
+      },
+      {
+        "right_answer": true,
+        "comment": true,
+        "id": 4,
+        "text": "Сапоги",
+        "lua_text": "function lua_text()\nx1=\" \"\nfor i=1, 6 do\nif artifact_6[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_6[i]\nend\nreturn name_artifact[6] .. \"<s>\nУр \" .. artifact_6[7].. \"<s>\n\" .. x1 .. x\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Идёт бой",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\nV=\"Вы\"\nfor i=1, 6 do\nV=V .. \"<s>\n\" .. name_stats[i] .. \" \" .. stats[i]\nend\nV=V .. \"<s>\n<s>\nПротивник\"\nfor i=7, 12 do\n V=V .. \"<s>\n\" .. name_stats[i-6] .. \" \" .. stats[i]\nend\nreturn V\nend",
+        "lua_do": "function lua_do()\n\nif stats[8]==-100000 then\nstats[8]=stats[1]\nkaf=-1\nend\n\nif stats[2]>0 and stats[8]>0 then\n\nif kaf==-1 then\nstats[7]=stats[7]*2\nstats[12]=stats[12]*2\nend\n\n\n\nkrit=1\nE=math.random(1,100)\nif E<=stats[4] then\nkrit=1<plus>(stats[5]<plus>50)/100\nend\nif sp[1]<plus>sp[2]==0 then\n  sp[1]=sp[1]<plus>stats[6]\n  sp[2]=sp[2]<plus>stats[12]\nend\n  if sp[1]>=sp[2] then\n    if stats[9]<stats[1]*krit then\n        stats[8]=stats[8]-(math.floor(stats[1]*krit*kaf)-stats[9])\n           if stats[8]<=0 then\n               stats[8]=0\n               x1=1\n           end\n        else\nstats[8]=stats[8]-1\n      end\n    x=1\n  else\n   if stats[3]<stats[7] then\n    \n        stats[2]=stats[2]-(stats[7]-stats[3])\n           if stats[2]<=0 then\n               stats[2]=0\n               x1=2\n           end\n        else\nstats[2]=stats[2]-1\n      end\n    x=2\n     end\nif x==2 then \n   sp[1]=sp[1]<plus>stats[6]\nelse\n   sp[2]=sp[2]<plus>stats[12]\nend\nend\n\nend",
+        "text": "Новый ответ. введите текст",
+        "update": [
+          "bistrota"
+        ],
+        "id": 5
+      },
+      {
+        "lua_do": "function lua_do()\nif kaf==-1 then\nkaf=1\ng.money=g.money<plus>stats[8]\nend\nend",
+        "isBack": true,
+        "lua_if": "function lua_if()\nif stats[2]==0 then\nreturn true\nend\nend",
+        "instant": true,
+        "id": 5,
+        "text": "Поражение",
+        "backstepCount": 1,
+        "lua_text": "function lua_text()\nif kaf==-1 then\nreturn \"Получено \" .. stats[8] .. \" монет\"\nelse\nreturn \"Поражение\"\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif stats[8]==0 then\nreturn true\nend\nend",
+        "id": 5,
+        "lua_do": "function lua_do()\nkaf=1\n\nif g.pg5==nil then\ng.pg5=1\nend\n\nif g.pg5<pg5 then\ng.pg5=pg5\nend\n\nx=math.random(1,6)\ntype_artifact=x\nif x==1 then\n  artifact_7[x]=10*pg5\nend\n\nif x==2 then\n  artifact_7[x]=25*pg5\nend\n\nif x==3 then\n  artifact_7[x]=5*pg5\nend\n\nif x==4 then\n  x1=math.random(4,5)\n  artifact_7[x1]=pg5\nend\n\nif x==5 then\n  x1=math.random(1,3)\n    if x1==1 then\n       artifact_7[x1]=10*pg5\n    end\n    if x1==2 then\n      artifact_7[x1]=25*pg5\n   end\n   if x1==3 then\n     artifact_7[x1]=5*pg5\n   end\nend\n\nif x==6 then\n  artifact_7[x]=pg5\nend\n\nfor i=1, 6 do\n  if artifact_7[i]==0 then\n\n     x=math.random(1,100)\n    if x<=15<plus>nac then\n      artifact_7[i]=math.random(math.round(k[i]*pg5/2),math.round(k[i]*pg5))\n    end\n  end\nend\n\nartifact_7[7]=pg5\nend",
+        "instant": true,
+        "text": "Победа",
+        "go_to": [
+          "win"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Что делать с новым артефактом?",
+    "answers": [
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\n\nx1=\" \"\nfor i=1, 6 do\nif artifact_7[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_7[i]\nend\nreturn \"Новый артефакт<s>\n<s>\n\" .. name_artifact[type_artifact] .. \"<s>\nУр \" .. artifact_7[7] .. \"<s>\n\" .. x1 .. x\n\nend",
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "lua_text": "function lua_text()\n\nif type_artifact==1 then\nx1=\" \"\nfor i=1, 6 do\nif artifact_1[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_1[i]\nend\nreturn \"Старый артефакт <s>\n<s>\n\" .. name_artifact[type_artifact] .. \"<s>\nУр \" .. artifact_1[7] .. \"<s>\n\" .. x1 .. x\nend\n\nif type_artifact==2 then\nx1=\" \"\nfor i=1, 6 do\nif artifact_2[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_2[i]\nend\nreturn \"Старый артефакт <s>\n<s>\n\" .. name_artifact[type_artifact] .. \"<s>\nУр \" .. artifact_2[7] .. \"<s>\n\" .. x1 .. x\nend\n\nif type_artifact==3 then\nx1=\" \"\nfor i=1, 6 do\nif artifact_3[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_3[i]\nend\nreturn \"Старый артефакт <s>\n<s>\n\" .. name_artifact[type_artifact] .. \"<s>\nУр \" .. artifact_3[7] .. \"<s>\n\" .. x1 .. x\nend\n\nif type_artifact==4 then\nx1=\" \"\nfor i=1, 6 do\nif artifact_4[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_4[i]\nend\nreturn \"Старый артефакт <s>\n<s>\n\" .. name_artifact[type_artifact] .. \"<s>\nУр \" .. artifact_4[7] .. \"<s>\n\" .. x1 .. x\nend\n\nif type_artifact==5 then\nx1=\" \"\nfor i=1, 6 do\nif artifact_5[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_5[i]\nend\nreturn \"Старый артефакт <s>\n<s>\n\" .. name_artifact[type_artifact] .. \"<s>\nУр \" .. artifact_5[7].. \"<s>\n\" .. x1 .. x\nend\n\nif type_artifact==6 then\nx1=\" \"\nfor i=1, 6 do\nif artifact_6[i]>0 then\nx1=x1 .. \"★\"\nend\nend\n\nx=\"\"\nfor i=1, 6 do\nx= x .. \"<s>\n\" .. name_stats[i] .. \" \" .. artifact_6[i]\nend\nreturn \"Старый артефакт <s>\n<s>\n\" .. name_artifact[type_artifact] .. \"<s>\nУр \" .. artifact_6[7].. \"<s>\n\" .. x1 .. x\nend\n\nend",
+        "id": 6,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "instant": true,
+        "id": 3,
+        "text": "Заменить артефакт",
+        "lua_do": "function lua_do()\n\nif type_artifact==1 then\nfor i=1, 7 do\nartifact_1[i]=artifact_7[i]\nend\nend\n\nif type_artifact==2 then\nfor i=1, 7 do\nartifact_2[i]=artifact_7[i]\nend\nend\n\nif type_artifact==3 then\nfor i=1, 7 do\nartifact_3[i]=artifact_7[i]\nend\nend\n\nif type_artifact==4 then\nfor i=1, 7 do\nartifact_4[i]=artifact_7[i]\nend\nend\n\nif type_artifact==5 then\nfor i=1, 7 do\nartifact_5[i]=artifact_7[i]\nend\nend\n\nif type_artifact==6 then\nfor i=1, 7 do\nartifact_6[i]=artifact_7[i]\nend\nend\n\nend",
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "id": 3,
+        "text": "Оставить старый",
+        "instant": true,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": []
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "text": "В этом квесте вы будете беседовать со своим Альтер Эго, но немного спятившим. После нажатия кнопки «Начать беседу» вы попадёте на страницу с текстовым полем и двумя кнопками. Вводите текст в поле и нажимайте кнопку «Ввести текст». Ваше Альтер Эго будет вам что-то отвечать, исключительно словами из вашего лексикона. Иногда его ответы будут понятны и к месту, а иногда загадочны и странны.<s>r\n<s>r\nВесь диалог записывается. Последние реплики идут сверху.<s>r\n<s>r\nЕсли захотите вернуться на первую страницу и начать диалог загово, нажмите кнопку «Начать заново». Вы можете сохранить уже созданный словарь, а можете начать с нуля.<s>r\n<s>r\nP. S. Если хотите, чтобы большие буквы всегда отображались правильно, соблюдайте два условия: ограничивайтесь одним предложением в диалоге и не начинайте его с имени собственного.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать беседу.",
+        "lua_if": "function lua_if()\nreturn not g.words\nend",
+        "lua_do": "function lua_do()\n    g.words = {}\n    currentDialog = \"\"\nend"
+      },
+      {
+        "id": 2,
+        "text": "Начать беседу с новым словарём.",
+        "lua_if": "function lua_if()\nreturn g.words\nend",
+        "lua_do": "function lua_do()\n    g.words = {}\n    currentDialog = \"\"\nend"
+      },
+      {
+        "id": 2,
+        "text": "Начать новую беседу, сохранив старый словарь.",
+        "lua_if": "function lua_if()\nreturn g.words\nend",
+        "lua_do": "function lua_do()\n    currentDialog = \"\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Текущий диалог:<s>r\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "placeholder",
+        "url": "https://1.bp.blogspot.com/-kiudEVLQ-jY/XfdgtbelUcI/AAAAAAAABVY/LmNJxydC094jtnYS0ZSZW5mYIvpmWaAwgCLcBGAsYHQ/s1600/karaulka.jpg"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    images.placeholder.isVisible = false\n    inputBox = native.newTextBox(canvas.width / 2, canvas.height / 3, 1, 1)\n    inputBox.isEditable = true\n    canvasGroup:insert(inputBox)\n\n    -- Загрузка библиотеки виджетов\n    widget = require(\"widget\")\n    enterButton = widget.newButton{x = canvas.width / 4, y = canvas.height * 0.75, width = canvas.width / 3.3, height = canvas.height / 10, label = \"Ввести текст\", shape = \"roundedRect\", fillColor = {default={0.8, 0.3, 0.2, 1}, over={0.8, 0.3, 0.2, 1}}, strokeColor = {default={0.6, 0.2, 0.1, 1}, over={0.6, 0.2, 0.1, 1}}, strokeWidth = 4, labelColor = {default={0, 0, 0}, over={0, 0, 0}}, emboss = true, onPress = function()\n            currentDialog = \"Вы: \"..inputBox.text..\"<s>\n\"..currentDialog\n            local currentText = utf8.lower(utf8.sub(inputBox.text, 1, 1))..utf8.sub(inputBox.text, 2, #inputBox.text)\n            for val in utf8.gmatch(currentText, \"%w<plus>\") do\n                local doubleWord = false\n                for i, val1 in ipairs(g.words) do\n                    if val1 == val then doubleWord = true end\n                end\n                if not doubleWord then table.insert(g.words, val) end\n            end\n            if #g.words == 0 then\n                message(\"Вы не ввели ни одного слова!\")\n                return\n            end\n            local phraseLength = #g.words >= 20 and math.random(1, 20) or math.random(1, #g.words)\n            local currentPhrase = \"\"\n            for i = 1, phraseLength do\n                currentPhrase = currentPhrase..g.words[math.random(1, #g.words)]\n                if math.random(1, 10) < 3 and i < phraseLength then\n                    currentPhrase = currentPhrase..({\",\", \" —\", \";\", \":\"})[math.random(1, 4)]\n                end\n                if i < phraseLength then currentPhrase = currentPhrase..\" \" end\n                \n            end\n            currentPhrase = currentPhrase..({\".\", \"?\", \"!\", \"?!\", \"...\"})[math.random(1, 5)]..\"<s>\n\"\n            currentPhrase = \"Альтер Эго: \"..utf8.upper(utf8.sub(currentPhrase, 1, 1))..utf8.sub(currentPhrase, 2, #currentPhrase)\n            currentDialog = currentPhrase..currentDialog\n            display.remove(inputBox)\n            showPage{id = g.current_id}\n        end}\n    clearButton = widget.newButton{x = canvas.width * 0.75, y = canvas.height * 0.75, width = canvas.width / 3.3, height = canvas.height / 10, label = \"Начать заново\", shape = \"roundedRect\", fillColor = {default={0.8, 0.3, 0.2, 1}, over={0.8, 0.3, 0.2, 1}}, strokeColor = {default={0.6, 0.2, 0.1, 1}, over={0.6, 0.2, 0.1, 1}}, strokeWidth = 4, labelColor = {default={0, 0, 0}, over={0, 0, 0}}, emboss = true, onPress = function()\n            display.remove(inputBox)\n            showPage{id = 1}\n        end}\n\n    transition.to(inputBox, {delay = 1500, time = 1500, transition = easing.outCubic, width = canvas.width * 0.9, height = canvas.height / 2, onComplete = function()\n        transition.scaleTo(enterButton, {transition = easing.outElastic, xScale = 1.3, yScale = 1.3, onComplete = function()\n             transition.scaleTo(clearButton, {transition = easing.outElastic, xScale = 1.3, yScale = 1.3})\n         end})\n    end})\n    canvasGroup:insert(enterButton)\n    canvasGroup:insert(clearButton)\nend",
+        "calculate": false,
+        "text": "Обработка данных.",
+        "id": 2
+      },
+      {
+        "id": 2,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn currentDialog\nend",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "",
+    "answers": []
+  }
+]

@@ -1,0 +1,10138 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Falos\nP. S. Помогали \"SinisterSailors\" \n\nЖанр: Приключение, Фэнтези.\n\n В начале, была лишь тьма, весь Азерот поглотила чума и только самые могучие Маги смогли очистить осквернённую землю. Но никто так и не выяснил, в чем причина этой эпидемии.\nГоды шли, а от чумы так и не избавились окончательно.\n Это история о Гробовщике который пользовался большим спросом у соседних деревень своими услугами.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "_____________\n________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "Начать",
+        "id": 3
+      },
+      {
+        "id": 1,
+        "text": "______________________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "text": "• Достижения.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 5,
+        "text": "• От автора.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://b.radikal.ru/b36/1909/46/f4a74d510769.jpg",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "\nhttps://b.radikal.ru/b36/1909/46/f4a74d510769.jpg",
+        "system": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ваши достижения:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "need_ever": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 112,
+        "text": "[ Выбиватель долгов ]",
+        "need": [
+          107
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "need_ever": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 113,
+        "text": "[ Щедрая душа ]",
+        "need": [
+          111
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "need_ever": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 200,
+        "text": "[ Травник ]",
+        "need": [
+          180
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "         ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Выберите Главу:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 13,
+        "text": "Глава I",
+        "blackout": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "blackout": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "Глава II",
+        "need": [
+          199
+        ],
+        "id": 201
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "начало",
+    "answers": []
+  },
+  {
+    "id": 5,
+    "text": "Совет:\nСобирайте обсолютно все предметы, ваш инвентарь безграничен. Также квест лучше проходить по порядку, с каждой страницы собирать максимум, ведь второй раз на эту страницу вы можете не попасть, и если вы что то упустите, прохождение квеста будет невозможным!\n\nАвтор:\nЕсли я замечу что людям нравится, обязательно выпущу вторую часть квеста, сюжет уже придумал. Прошу прощения за краткость квеста, я очень ленивый... Планировал растянуть ее на 500 страниц, и да, знаю книга полна дырок, и багов. Сюжетные дыры будут исправлены во второй части, а на баги попрошу не обращать внимания. Если честно, моя первая публикация.\n",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 1,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Доступные бонусы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 6,
+        "text": "— Бонусы будут доступны только со второй главы!",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "    ",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "middle_answer": true,
+        "text": "Эта функция еще в разработке.",
+        "id": 7
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "blackout": true,
+        "middle_answer": true,
+        "text": "ERROR#",
+        "id": 1,
+        "text_color": [
+          1,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "rc",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "таьвбвбв",
+    "answers": []
+  },
+  {
+    "id": 10,
+    "text": "лабчьвьвьв",
+    "answers": []
+  },
+  {
+    "id": 11,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 11,
+        "text": "Колдуны обладают большим запасом энергии, а так же, их магия считается самой могучей во всем Азероте.",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Характеристики:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Здоровье: 100",
+        "comment": true
+      },
+      {
+        "id": 11,
+        "text": "Энергия: 500",
+        "comment": true
+      },
+      {
+        "id": 11,
+        "text": "Защита от магии: Средняя",
+        "comment": true
+      },
+      {
+        "id": 11,
+        "text": "Предметы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Старая Книга",
+        "comment": true
+      },
+      {
+        "id": 11,
+        "text": "Зелье Маны х5",
+        "comment": true
+      },
+      {
+        "id": 16,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "повдвб",
+    "answers": []
+  },
+  {
+    "id": 13,
+    "text": " Вы — Гробовщик, многие годы копаете ямы для покойников и охраняете их покой, тем самым зарабатывая себе на жизнь. У вас есть личный дом, его внешний вид оставляет желать лучшего..\nВы поселились подальше от деревень, возле кладбища, возможно потому, что вы не можете терпеть общество? Наверное. ",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "hp",
+          100
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 17,
+        "text": "[ Далее ]"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "еаа",
+    "answers": []
+  },
+  {
+    "id": 15,
+    "text": "      ",
+    "answers": []
+  },
+  {
+    "id": 16,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 17,
+    "text": " Вы проснулись в своем доме.\nНемного приоткрыв глаза, вы разглядываете новые прогнившие дости на потолке.\nВремя сказывается на состоянии вашего дома, следует сделать ремонт, пока Ваше жилище не обрушилось. ",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "eng",
+          100
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 18,
+        "text": "[ Встать ]"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Как только Вы начали подниматься с кровати, в голову ударил скрип вашей кровати, Вы зажмурились и оглянули дом. ",
+    "answers": [
+      {
+        "id": 19,
+        "text": "[ Осмотреть ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": " Осмотревшись вы лишний раз убедились в надобности ремонта.\n Вся мебель сгнила, а окно справа от вас полностью покрыто пылью. Шкаф выглядит еще более менее живым, в отличии от стола, на котором лежит тетрадь и куча книг с чернилами, там вы обычно записываете заказы.Тумбочка выглядит полностью прогнившей, рядом с кроватью стоит ваш личный сундук.",
+    "answers": [
+      {
+        "id": 20,
+        "text": "[ Далее ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 20,
+        "text": "Комната на втором этаже.",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 26,
+        "text": "[ Подойти к Двери ]",
+        "middle_answer": true
+      },
+      {
+        "id": 25,
+        "text": "[ Подойти к Окну ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 22,
+        "text": "[ Осмотреть Стол ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "syn",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 23,
+        "text": "[ Открыть Сундук ]",
+        "var_set": [
+          "syn",
+          5
+        ],
+        "var_no_more": [
+          "syn",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "Sh",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 21,
+        "text": "[ Осмотреть Шкаф ]",
+        "var_no_more": [
+          "Sh",
+          5
+        ],
+        "var_set": [
+          "Sh",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "tym",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 24,
+        "text": "[ Осмотреть Тумбочку ]",
+        "var_no_more": [
+          "tym",
+          5
+        ],
+        "var_set": [
+          "tym",
+          5
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zhp",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "          ",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Вы открыли шкаф:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 21,
+        "text": "Вам не удалось найти ничего ценного, старая поношенная одежда, которая уже похожа на тряпки, у вас нет желания одевать ее.",
+        "comment": true
+      },
+      {
+        "id": 21,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Вы подошли к столу:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 41,
+        "text": "[ Посмотреть список дел ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "var_add": [
+          "sv",
+          5
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 22,
+        "text": "• Оловянный Подсвечник",
+        "var_no_more": [
+          "delsv",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delsv",
+          5
+        ],
+        "instant": true,
+        "var_mult": [
+          "delsv",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "gven",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 22,
+        "instant": true,
+        "var_no_more": [
+          "delgven",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delgven",
+          5
+        ],
+        "text": "• Книга рецептов семьи Гвен",
+        "var_set": [
+          "delgven",
+          5
+        ]
+      },
+      {
+        "id": 21,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Вы открыли сундук:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 23,
+        "text": "Сундук довольно прочный, хоть и выглядит таким же гнилым как и все в этом доме. Внутри сундука вы нашли:",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "money",
+          58
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 23,
+        "instant": true,
+        "var_no_more": [
+          "delm2",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delm2",
+          5
+        ],
+        "text": "• Монеты [58]",
+        "var_set": [
+          "delm2",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "zeng",
+          3
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 23,
+        "instant": true,
+        "var_no_more": [
+          "delze",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delze",
+          5
+        ],
+        "text": "• Зелье Энергии [3]",
+        "var_set": [
+          "delze",
+          5
+        ]
+      },
+      {
+        "id": 21,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "        ",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Вы осматриваете тумбочку:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 24,
+        "text": "Старая и дряхлая дверца, может сломаться вместе с ручкой, в этом гнилом ящике вы нашли:",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "zhp",
+          2
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 24,
+        "instant": true,
+        "var_no_more": [
+          "delz1",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delz1",
+          5
+        ],
+        "text": "• Зелье Здоровья [2]",
+        "var_set": [
+          "delz1",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "money",
+          24
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 24,
+        "instant": true,
+        "var_no_more": [
+          "delm1",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delm1",
+          5
+        ],
+        "text": "• Монеты [24]",
+        "var_set": [
+          "delm1",
+          5
+        ]
+      },
+      {
+        "id": 24,
+        "text": "___________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "        ",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Вы подошли к окну:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 25,
+        "text": "Заглянув в окно, вам открылся вид на задний двор, видна часть кладбища и лес.\nСтарый и прогнивший забор...\nМрачные деревья и совсем не светит солнце, скорее всего будет дождь.",
+        "comment": true
+      },
+      {
+        "id": 21,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "        ",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Вы подошли к двери:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 26,
+        "text": "Да, да, такая же гнилая дверь, если на нее облакотиться она не выдержит.\nДверь ведет сразу к спуску на первый этаж, в гостиницу.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 43,
+        "text": "[ Спустится ]",
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 20,
+        "text": "[ Назад ]",
+        "right_answer": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "                                Ваш инвентарь:",
+    "answers": [
+      {
+        "var_show": [
+          "hp",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Здоровье:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "eng",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Энергия:",
+        "right_answer": true
+      },
+      {
+        "id": 27,
+        "var_show": [
+          "money",
+          "монет."
+        ],
+        "comment": true,
+        "text": "У вас"
+      },
+      {
+        "id": 27,
+        "text": "Одежда:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "• Темная Роба с капюшоном [ Надето ]",
+        "instant": true
+      },
+      {
+        "id": 27,
+        "text": "Зелья:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "• Зелье Здоровья",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zhp",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Предметы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "text": "• Ржавый ключ",
+        "var_need": [
+          "klyu",
+          1
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "sv",
+          5
+        ],
+        "instant": true,
+        "text": "• Оловянный Подсвечник"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "var_need": [
+          "yad",
+          1
+        ],
+        "text": "• Пробирка с Ядом"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "flfool",
+          1
+        ],
+        "instant": true,
+        "text": "• Полная Фляга"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "fl",
+          1
+        ],
+        "instant": true,
+        "text": "• Фляга"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "var_need": [
+          "in",
+          1
+        ],
+        "text": "• Статуэтка Инноса"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "kin",
+          1
+        ],
+        "instant": true,
+        "text": "• Кинжал"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "kis",
+          1
+        ],
+        "instant": true,
+        "text": "• Пробирка с кислотой"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "lamp",
+          5
+        ],
+        "instant": true,
+        "text": "• Керосиновая Лампа"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "var_need": [
+          "ve",
+          1
+        ],
+        "text": "• Ведро"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "var_need": [
+          "ko",
+          1
+        ],
+        "text": "• Корзина"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "var_need": [
+          "tr",
+          1
+        ],
+        "text": "• Тюк болотной травы",
+        "instant": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "instant": true,
+        "text": "• Книга рецептов семьи Гвен",
+        "var_need": [
+          "gven",
+          1
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Магические предметы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 27,
+        "text": "___________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "middle_answer": true,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 27,
+        "text": "[ Назад ]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 28,
+        "text": "Ваши вещи:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 28,
+        "text": "• Темная Роба с капюшоном [ Надето ]",
+        "instant": true
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 27,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 29,
+        "text": "Ваши предметы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 27,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 30,
+        "text": "Ваши зелья:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "var_need": [
+          "zeng",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 27,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Прочие предметы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 27,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "    ",
+    "answers": []
+  },
+  {
+    "id": 33,
+    "text": "     ",
+    "answers": []
+  },
+  {
+    "id": 34,
+    "text": "       ",
+    "answers": []
+  },
+  {
+    "id": 35,
+    "text": "      ",
+    "answers": []
+  },
+  {
+    "id": 36,
+    "text": "v.      ",
+    "answers": []
+  },
+  {
+    "id": 37,
+    "text": "      ",
+    "answers": []
+  },
+  {
+    "id": 38,
+    "text": "       ",
+    "answers": []
+  },
+  {
+    "id": 39,
+    "text": "       ",
+    "answers": []
+  },
+  {
+    "id": 40,
+    "text": "         ",
+    "answers": []
+  },
+  {
+    "id": 41,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 41,
+        "text": "Список:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 41,
+        "text": "• Заказать два гроба у Скорохода.",
+        "comment": true
+      },
+      {
+        "id": 41,
+        "text": "• Забрать долг у Могрина",
+        "comment": true
+      },
+      {
+        "id": 41,
+        "text": "• Выкопать две могилы",
+        "comment": true
+      },
+      {
+        "id": 41,
+        "text": "• Навестить семью Гвен",
+        "comment": true
+      },
+      {
+        "id": 21,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "      ",
+    "answers": []
+  },
+  {
+    "id": 43,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 43,
+        "text": "Гостиница:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 20,
+        "text": "[ Поднятся в комнату ]",
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 49,
+        "text": "[ Зайти в комнату ]",
+        "var_no_more": [
+          "osmkom",
+          5
+        ]
+      },
+      {
+        "id": 48,
+        "text": "[ Зайти в подвал ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 45,
+        "text": "[ Осмотреть камин ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "p",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 46,
+        "text": "[ Осмотреть полки ]",
+        "var_no_more": [
+          "p",
+          5
+        ],
+        "var_set": [
+          "p",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "s",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 47,
+        "text": "[ Осмотреть серванд ]",
+        "var_set": [
+          "s",
+          5
+        ],
+        "var_no_more": [
+          "s",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "K",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 50,
+        "text": "[ Осмотреть картину ]",
+        "var_no_more": [
+          "K",
+          5
+        ],
+        "var_set": [
+          "K",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 51,
+        "text": "[ Выйти на улицу ]",
+        "middle_answer": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zhp",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 44,
+        "text": "Готовка:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 44,
+        "text": "Для готовки Вам требуется разжечь камин и поставить воду.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 61,
+        "text": "[ Приготовить ]"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 45
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 45,
+        "text": "Вы осматриваете камин:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 45,
+        "text": "Старый кирпичный камин, вокруг виднеются глиняные осколки и мусор.",
+        "comment": true
+      },
+      {
+        "id": 53,
+        "text": "[ Разжечь камин ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 46,
+        "text": "Вы осматриваете полки:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 46,
+        "text": "Обычные полки, на удивление еще держуться, на них Вы не нашли ничего ценного, фляги для алхимии и много пыли.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 47,
+        "text": "Вы заглянули в серванд:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 47,
+        "text": "Серванд слегка разбит, так же как и его содержимое, много стекла и...",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "lamp",
+          5
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 47,
+        "text": "• Керосиновая Лампа",
+        "var_no_more": [
+          "dellamp",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "dellamp",
+          5
+        ],
+        "instant": true,
+        "var_set": [
+          "dellamp",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "money",
+          32
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 47,
+        "instant": true,
+        "var_no_more": [
+          "delm3",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delm3",
+          5
+        ],
+        "text": "• Монеты [32]",
+        "var_set": [
+          "delm3",
+          5
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 48,
+        "text": "Подвал:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 48,
+        "text": "Спустившись в подвал вы обратили внимание на большой дряхлый сундук.\nВокруг много хлама и старая сломанная мебель.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 62,
+        "text": "[ Далее ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "        ",
+    "answers": [
+      {
+        "id": 49,
+        "text": "Комната:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 49,
+        "text": "Еще одна комната, вы давно сюда не заходили, и даже начали забывать что в ней было, в самой комнате бардак.",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Искать чтонибудь ]",
+        "id": 77
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 50,
+        "text": "Семейная картина:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 50,
+        "text": "Картина сильно выцвела, на ней изображена счастливая семья, ваша семья. Жена Марта и ваш сын Генри.\n\nВы больше не хотите подходить к этой картине.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 43
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 51,
+        "text": "Двор:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 51,
+        "text": "Вы вышли из дома, на улице идет сильный ливень. Деревня будет в пару милях отсюда.",
+        "comment": true
+      },
+      {
+        "id": 71,
+        "text": "[ Отправится в лес ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 71,
+        "text": "[ Заглянуть в сарай ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 71,
+        "text": "[ Заглянуть на кладбище ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 74,
+        "text": "[ Отправится в деревню ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 52,
+        "text": "Поставить воду:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 52,
+        "text": "Требуется набрать воду в котел.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 45
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 53,
+        "text": "Разжечь камин:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 53,
+        "text": "Камин в плохом состоянии что бы пользоваться им.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 45
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "    ",
+    "answers": []
+  },
+  {
+    "id": 55,
+    "text": "     ",
+    "answers": []
+  },
+  {
+    "id": 56,
+    "text": "     ",
+    "answers": []
+  },
+  {
+    "id": 57,
+    "text": "      ",
+    "answers": [
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "text": "Зелье Здоровья:",
+        "id": 57
+      },
+      {
+        "id": 57,
+        "text": "Настойка из целебных трав, выпив ее, герой восстановит свои жизненные силы.\n\n<plus>25%",
+        "comment": true
+      },
+      {
+        "id": 57,
+        "text": "Здоровье:",
+        "comment": true,
+        "var_show": [
+          "hp",
+          "%"
+        ]
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_add": [
+          "hp",
+          25
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 57,
+        "instant": true,
+        "left_answer": true,
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_more": [
+          "hp",
+          100
+        ],
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "var_sub": [
+          "zhp",
+          1
+        ],
+        "text": "[ Применить ]"
+      },
+      {
+        "right_answer": true,
+        "backstepCount": 1,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 57,
+        "text": "[ Назад ]",
+        "isBack": true,
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 57,
+        "text": "У вас нет зелья.",
+        "left_answer": true,
+        "var_no_more": [
+          "zhp",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 57,
+        "var_need": [
+          "hp",
+          100
+        ],
+        "text": "Не требуется.",
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "      ",
+    "answers": [
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "comment": true,
+        "middle_answer": true,
+        "text": "Зелье Энергии",
+        "id": 58
+      },
+      {
+        "id": 58,
+        "text": "Настойка из восточных трав, ходят слухи что это зелье восстанавливает энергию.\n\n<plus>25%",
+        "comment": true
+      },
+      {
+        "id": 58,
+        "text": "Энергия:",
+        "comment": true,
+        "var_show": [
+          "eng",
+          "%"
+        ]
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_add": [
+          "eng",
+          25
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "var_less": [
+          "eng",
+          100
+        ],
+        "text": "[ Применить ]",
+        "left_answer": true,
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "id": 58,
+        "var_need": [
+          "zeng",
+          1
+        ],
+        "var_sub": [
+          "zeng",
+          1
+        ],
+        "instant": true
+      },
+      {
+        "right_answer": true,
+        "backstepCount": 1,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 58,
+        "text": "[ Назад ]",
+        "isBack": true,
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "comment": true,
+        "id": 57,
+        "text": "У вас нет зелья.",
+        "left_answer": true,
+        "var_no_more": [
+          "zeng",
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "id": 57,
+        "var_need": [
+          "eng",
+          100
+        ],
+        "text": "Не требуется.",
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 59,
+        "text": "Оловянный Подсвечник",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 59,
+        "text": "Квест предмет.",
+        "comment": true
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 31,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 60,
+        "text": "Керосиновая Лампа",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 60,
+        "text": "Квест предмет.",
+        "comment": true
+      },
+      {
+        "id": 28,
+        "text": "____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 31,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 62,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 62,
+        "text": "Подвал:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 63,
+        "text": "[ Осмотреть сундук ]",
+        "var_set": [
+          "syn2",
+          5
+        ],
+        "var_no_more": [
+          "syn2",
+          5
+        ]
+      },
+      {
+        "id": 64,
+        "text": "[ Осмотреть кучу хлама ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 65,
+        "text": "[ Осмотреть старую мебель ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 43,
+        "text": "[ Вернутся ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 63,
+        "text": "Сундук:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 63,
+        "text": "У Вас не получается открыть сундук, видимо вы его когда то заперли, и естественно не помните где в этом свинарнике лежит ключ, благо сундук еле держиться, пару ударов и Вы его откроете, ну, или сломаете...",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "syn2",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 67,
+        "text": "[ Ломать ]",
+        "var_sub": [
+          "hp",
+          25
+        ],
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 62,
+        "text": "[ Искать ключ ]",
+        "right_answer": true,
+        "var_no_more": [
+          "klyu",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "syn2",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Открыть ]",
+        "left_answer": true,
+        "right_answer": true,
+        "var_need": [
+          "klyu",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_sub": [
+          "klyu",
+          1
+        ],
+        "id": 80
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 64,
+        "text": "Вы осматриваете кучу мусора в углу подвала:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_add": [
+          "fl",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 64,
+        "instant": true,
+        "var_no_more": [
+          "delfl",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delfl",
+          5
+        ],
+        "text": "• Фляга",
+        "var_mult": [
+          "delfl",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "zhp",
+          2
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 64,
+        "instant": true,
+        "var_no_more": [
+          "delzhp6",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delzhp6",
+          5
+        ],
+        "text": "• Зелье Здоровья [2]",
+        "var_mult": [
+          "delzhp6",
+          5
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 62,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 65,
+        "text": "Вы осматриваете старую мебель:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 66,
+        "text": "[ Осмотреть небольшие тумбы ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 68,
+        "text": "[ Осмотреть старый книжный шкаф ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 69,
+        "text": "[ Осмотреть маленькую шкатулку ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 70,
+        "text": "[ Осмотреть гнилой стол ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 62,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 66,
+        "text": "Вы осматриваете небольшие тумбы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 66,
+        "text": "Они все пустые, странно...",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 65,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 67,
+        "text": "Вы решили сломать сундук:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 67,
+        "text": "После нескольких пинков, сундук сломался, вместе с ним разбились колбы с кислотой, кислота расплавила остальные лежащие в сундуке вещи и небольшую область вашего пола. Затем кислотная жидкость начала испарятся и кислотные пары попали вам в легкие. Неудача.\n\nЗдоровье: -25%",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 62,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 68,
+        "text": "Вы осматриваете старый книжный шкаф:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 68,
+        "text": "Вы не нашли ничего кроме обычных старых книг. Вы осмотрели каждую, но в них нет никакой ценности.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 65,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 69,
+        "text": "Вы осматриваете маленькую шкатулку:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 69,
+        "text": "Ох... кажется именно эту шкатулку Вы искали месяц назад, в ней должны лежать 250 монет. Эти деньги Вы должны были отдать Ролману, но, к счастью, он умер.",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "money",
+          250
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 69,
+        "text": "• Монеты [250]",
+        "var_no_more": [
+          "delm4",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delm4",
+          5
+        ],
+        "instant": true,
+        "var_mult": [
+          "delm4",
+          5
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 65,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 70,
+        "text": "Вы осматриваете гнилой стол:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 70,
+        "text": "На столе лежит много побитой посуды и в середину стола воткнут кинжал.",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "kin",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 62,
+        "instant": true,
+        "var_no_more": [
+          "delkin",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delkin",
+          5
+        ],
+        "text": "• Кинжал",
+        "var_mult": [
+          "delkin",
+          5
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 62,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 71,
+        "text": "У вас нет времени на это, вам нужно направится в деревню.",
+        "comment": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 51,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "Вы решились пройти мимо разбойников, спокойном шагом начинаете идти по тропинке. Из леса выбегает гловарь разбойников, весь израненый, рука обглодана до костей, броня будто рассплавлена какой то жидкостью.\n— Бегите! — Крикнул главарь разбойников и после чего упал на колени и камнем плюхнулся лицом в грязь. Разбойники были готовы бежать, но заметили вас, идущим спакойным шагом по тропинке и остолбенели.\n— Пощады, милорд. Мы не виноваты!",
+    "answers": [
+      {
+        "id": 75,
+        "text": "- Что?!",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "Вы решили переждать и не показываться на глаза разбойникам. Через некоторое время, из леса выбегает их гловарь, весь израненый.\n— Бегите! — Крикнул главарь и упал на колени, после чего камнем плюхнулся лицом в грязь.\nРазбойники остолбеневши стояли несколько секунд, в ужасе достали оружие и с криками побежали в лес.",
+    "answers": [
+      {
+        "id": 81,
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text": "[ Осмотреть главаря ]",
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 79,
+        "text": "[ Пойти в лес ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 83,
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text": "[ Продолжить путь в деревню ]",
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "Вы долгое время шли по тропинке, полностью промокнув. По пути вы заметили банду разбойников. На вид это не застава, разбойники выглядят напуганными и смотрят в сторону леса.",
+    "answers": [
+      {
+        "id": 72,
+        "text": "[ Продолжить идти ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 73,
+        "text": "[ Подождать ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "Разбойники дико перепуганы и видимо спутали вас с кем то. После того как вы задали вопрос, разбойники вскочили и по побежали в сторону леса.",
+    "answers": [
+      {
+        "id": 76,
+        "text": "[ Осмотреть главаря ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 79,
+        "text": "[ Пойти в лес ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 83,
+        "text": "[ Продолжить путь в деревню ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "Вы подошли ближе к трупу, видимо он умер, из него исходят какие то пары зеленого цвета и жудкая вонь. Вещи превращаются в жидкость, а само тело испаряется, оставляя только кости.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Обыскать труп ]",
+        "id": 82
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 77,
+        "text": "Комната:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 77,
+        "text": "Выбитые окна, поломанные стулья и столы, перевернутые шкафы и тумбы, словно здесь уже кто-то что-то искал.",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 78,
+        "text": "[ Осмотреть все ]",
+        "middle_answer": true
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 49
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "         ",
+    "answers": [
+      {
+        "id": 78,
+        "text": "Комната:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_add": [
+          "in",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 78,
+        "instant": true,
+        "var_no_more": [
+          "delin",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delin",
+          5
+        ],
+        "text": "• Статуэтка Инноса",
+        "var_mult": [
+          "delin",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "klyu",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 78,
+        "instant": true,
+        "var_no_more": [
+          "delklyu",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delklyu",
+          5
+        ],
+        "text": "• Ржавый ключ",
+        "var_mult": [
+          "delklyu",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "ko",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 78,
+        "instant": true,
+        "var_no_more": [
+          "delko",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delko",
+          5
+        ],
+        "text": "• Корзина",
+        "var_mult": [
+          "delko",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "ve",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 78,
+        "instant": true,
+        "var_no_more": [
+          "delve",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delve",
+          5
+        ],
+        "text": "• Ведро",
+        "var_mult": [
+          "delve",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "yad",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 78,
+        "instant": true,
+        "var_no_more": [
+          "delyad",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delyad",
+          5
+        ],
+        "text": "• Пробирка с Ядом",
+        "var_mult": [
+          "delyad",
+          5
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "osmkom",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 43,
+        "text": "[ Назад ]",
+        "middle_answer": true,
+        "var_mult": [
+          "osmkom",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "Что то напугало разбойников, и этот труп...\nВходить в лес слишком опасно.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 75,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "       ",
+    "answers": [
+      {
+        "id": 80,
+        "text": "Сундук:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 80,
+        "text": "Как только вы открыли сундук, ключ сломался в серцевине замка.",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "kis",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 80,
+        "instant": true,
+        "var_no_more": [
+          "delkis",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delkis",
+          5
+        ],
+        "text": "• Пробирка с кислотой",
+        "var_mult": [
+          "delkis",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "money",
+          100
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 80,
+        "instant": true,
+        "var_no_more": [
+          "delm5",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delm5",
+          5
+        ],
+        "text": "• Монеты [100]",
+        "var_mult": [
+          "delm5",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "zhp",
+          2
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 80,
+        "instant": true,
+        "var_no_more": [
+          "delzhp5",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delzhp5",
+          5
+        ],
+        "text": "• Зелье Энергии [2]",
+        "var_mult": [
+          "delzhp5",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "tr",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 80,
+        "instant": true,
+        "var_no_more": [
+          "deltr",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "deltr",
+          5
+        ],
+        "text": "• Тюк болотной травы",
+        "var_mult": [
+          "deltr",
+          5
+        ]
+      },
+      {
+        "id": 20,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 62,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "Вы подошли ближе к трупу, видимо он умер, из него исхожят какие то пары зеленого цвета и жудкая вонь. Вещи превращаются в жидкость, а само тело испаряется, оставляя только кости.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Обыскать труп ]",
+        "id": 84
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 82,
+        "text": "Труп разбойника:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 82,
+        "text": "Нет смысла что-то искать, вещи словно расплавились вместе с одеждой. Оружия рядом не лежит, скорее всего он потерял его в лесу.",
+        "comment": true
+      },
+      {
+        "id": 82,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 75,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "По пути в деревню вы наткнулись на табличку. На ней написано что впереди застава, но скорее всего, застава уже гниет в лесу. Рядом лежит труп, в голове полный колчан стрел.",
+    "answers": [
+      {
+        "id": 85,
+        "text": "[ Далее ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 91,
+        "text": "[ Осмотреть труп ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 84,
+        "text": "Труп разбойника:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 84,
+        "text": "Нет смысла что то искать, вещи словно рассплавились вместе с одеждой. Оружия рядом не лежит, скорее всего он потерял его в лесу.",
+        "comment": true
+      },
+      {
+        "id": 82,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 73,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "Вы дошли до ворот деревни, врата охраняет стража, вас должны пропустить без пропуска, так как вся деревня вас знает. Стражники выглядят так будто ждут начала боя.",
+    "answers": [
+      {
+        "id": 86,
+        "text": "[ Подойти к стражникам ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "Стража обратила на вас внимание и явно не собирается открывать ворота.\n— Стоять, в Стархольм сейчас приказано никого не впускать и не выпускать!\n",
+    "answers": [
+      {
+        "id": 88,
+        "text": "— Чего вы боитесь?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 90,
+        "text": "— Меня ждет семья Гвен!",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 89,
+        "text": "— Может за пару монет вы сделаете исключение? [100]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 83,
+        "text": "[ Вернутся на заставу ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "— Думаешь я в это поверю?! Еще скажи что ты всех перебил. Их там человек 8, нашей стражи не справится. Нужно ждать помощи от города, а наш гонец, видимо, забыл куда его отправили.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 96,
+        "text": "— Проходил я мимо заставы, ваш Ёжик не справился с поручением. Вот ваша записка.",
+        "var_need": [
+          "zps",
+          1
+        ]
+      },
+      {
+        "id": 86,
+        "text": "— Понял...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "— Эти проклятые разбойники... перекрыли тропину, никого не пропускают, вон она, их застава, как только откроем ворота, закрыть уже не успеем...",
+    "answers": [
+      {
+        "id": 87,
+        "text": "— Застава кормит червей.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 86,
+        "text": "— Понял...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "Ты хочешь что бы я поставил под угрозу Стархольм за 100 монет?!? Как только открою ворота, набегут эти черти и вырежут всю деревню.",
+    "answers": [
+      {
+        "id": 86,
+        "text": "— Понял...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "Подождут твои трупы, жизни людей, живых людей, сейчас гораздо важнее. Пока возле деревни эта застава, я не открою ворота!",
+    "answers": [
+      {
+        "id": 86,
+        "text": "— Понял...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 91,
+        "text": "Труп гонца:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 91,
+        "text": "В штанах трупа вы нашли записку и некоторые вещи, записка гласит о запросе помощи у города, гонец не справился со своим заданием. ",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "zps",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 91,
+        "text": "• Записка о запросе помощи",
+        "var_no_more": [
+          "delzps",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delzps",
+          5
+        ],
+        "instant": true,
+        "var_set": [
+          "delzps",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "zhp",
+          2
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 91,
+        "text": "• Зелье Здоровья [2]",
+        "var_no_more": [
+          "delzhp10",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "delzhp10",
+          5
+        ],
+        "instant": true,
+        "var_set": [
+          "delzhp10",
+          5
+        ]
+      },
+      {
+        "var_add": [
+          "money",
+          100
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 91,
+        "text": "• Монеты [100]",
+        "var_no_more": [
+          "delm7",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_set": [
+          "delm7",
+          5
+        ],
+        "instant": true,
+        "var_mult": [
+          "delm7",
+          5
+        ]
+      },
+      {
+        "id": 91,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 83,
+        "text": "[ Назад ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 92,
+        "text": "Центр Стархольма:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 125,
+        "text": "[ Войти в Таверну ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 126,
+        "text": "[ Пойти на правую улицу ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 127,
+        "text": "[ Пойти на левую улицу ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 97,
+        "text": "[ Вернуться ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 97,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "— Кхех, добрый день, Калдин. Честно говоря, я немного удивлен, видеть тебя здесь, неужели пришел за зельями? Ах-хах. Мне казалось ты лучше меня умеешь их варить, или уже годы не те, чтобы в лес за травами ходить? Ахахах...",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 122,
+        "text": "— В лесу творится что то не ладное...",
+        "var_no_more": [
+          "travial",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 123,
+        "text": "— Хватит болтать, покажи свой товар.",
+        "var_no_more": [
+          "travial",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 179,
+        "var_need": [
+          "travial",
+          5
+        ],
+        "text": "— Я принес тебе травы."
+      },
+      {
+        "id": 97,
+        "text": "[ Выйти ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "— Хэй... Дружище, рад тебя видеть. Ты по делу или решил навестить меня?",
+    "answers": [
+      {
+        "id": 121,
+        "text": "— Ну естественно за гробами, зачем ты мне еще нужен...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 95,
+        "text": "Кузница:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 95,
+        "text": "Вы зашли в Кузницу своего старого друга Могрина, который задолжал вам не малые деньги. Судя по всему он чем-то занят.",
+        "comment": true
+      },
+      {
+        "id": 98,
+        "text": "[ Позвать ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "— Ух... Чтож, раз ты прошел через заставу, куда она делась? Ладно, это не важно, проходи.",
+    "answers": [
+      {
+        "id": 96,
+        "text": "— Записка о запросе помощи [ Удалено ]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Войти в деревню ]",
+        "id": 97
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 97,
+        "text": "Стархольм:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 92,
+        "text": "[ Направиться в центр ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 93,
+        "text": "[ Зайти в лавку Алхимика ]",
+        "var_no_more": [
+          "alhi",
+          5
+        ]
+      },
+      {
+        "id": 94,
+        "text": "[ Зайти к Скороходу ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 95,
+        "text": "[ Зайти в Кузницу ]",
+        "var_no_more": [
+          "mogrin",
+          5
+        ]
+      },
+      {
+        "id": 114,
+        "text": "[ Зайти к Коллекционеру ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 218,
+        "text": "[ Подойти к загадочному парню ]",
+        "var_need": [
+          "tr",
+          1
+        ]
+      },
+      {
+        "id": 97,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zhp",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "text": "— Хэй.. Калдин, дружище, я так рад тебя видеть, говорят возле Стархольма стояла застава... Как ты...",
+    "answers": [
+      {
+        "id": 99,
+        "text": "— Где деньги?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 100,
+        "text": "— Над чем работаешь?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 101,
+        "text": "— На удивление всех разбойников кто то перебил, или что то...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "dolg",
+          1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 111,
+        "text": "[ Выйти из кузни и забыть про деньги ]",
+        "var_set": [
+          "mogrin",
+          5
+        ],
+        "var_mult": [
+          "mogrin",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "text": "— Какие деньги? А... Ох... деньги... Ну ты же понимаешь какой у нас Кароль, а налоги наши видел? Это тебе хорошо, живешь там у себя на кладбище, как отшельник...",
+    "answers": [
+      {
+        "id": 102,
+        "text": "— Мне это не интересно, где мои деньги?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "text": "— Ух... Король приказал сделать кучу мечей, на войну собирается, славо богу доспехи делает другой кузнец, из города. Мне за это платят какие-то копейки, я скоро разорюсь!",
+    "answers": [
+      {
+        "id": 98,
+        "text": "— Понятно.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "text": "— М-да, ну... случается чудо всё таки, Иннос все видит. По делом негодяям.",
+    "answers": [
+      {
+        "id": 106,
+        "text": "— Это конечно верно... Но может стоит и нам боятся того, что убило разбойников?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "text": "— Слушай, я сейчас не могу тебе их отдать, у меня заказы на мечи, король собирает армию, дел не в проворот, нужно скупать сталь, все деньги уходят просто в никуда, хоть король и оплачивает каждый меч, на обычных путешественниках я сдираю гораздо больше. А ведь с королем не по торгуешься.",
+    "answers": [
+      {
+        "id": 103,
+        "text": "— О, Иннос, просто отдай мне эти чертовы деньги!",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 98,
+        "text": "— Ладно, заберу позже, когда у тебя появится прибыль побольше.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "text": "— Ну как же ты не поймешь, Калдин, у меня семья, дети, еще эта война на западе, ну не могу я, не могу!",
+    "answers": [
+      {
+        "id": 105,
+        "text": "— Это твои проблемы, долги нужно возвращать.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 98,
+        "text": "— Тьфу, что бы я тебе еще раз денег занял... Хорошо, зайду позже.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "text": "— Он был в капюшоне, лицо какое то грязное, особо не разглядел, Роба еще такая, черная, как у тебя.",
+    "answers": [
+      {
+        "id": 105,
+        "text": "— Понятно.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "text": "— Я понимаю, самому не ловко, но умоляю, давай я верну все через месяц. У меня тяжелый период, еще и связку стали украли, средь белого дня...",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "money",
+          250
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 107,
+        "text": "— Могрин, либо деньги, либо у Скорохода придется заказывать на один гроб больше!",
+        "var_set": [
+          "mogrin",
+          5
+        ],
+        "var_mult": [
+          "mogrin",
+          5
+        ]
+      },
+      {
+        "id": 108,
+        "text": "— Можно подробнее на счет связки стали?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 98,
+        "text": "— Уф.. Ладно, вернусь позже.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "text": "— Не знаю, я в лес не хожу, а Стархольм хорошо защищён. Купи себе на всякий случай оружие, знаю, ты туда за травами ходишь.",
+    "answers": [
+      {
+        "id": 109,
+        "text": "— Я им не умею пользоваться.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "text": "— Тьфу, какой ты безсердечный, забирай свои деньги и уходи прочь!",
+    "answers": [
+      {
+        "id": 107,
+        "text": "— Вы получили достижение:\n \"Выбиватель Долгов\"\n\n— Монеты [<plus>250]",
+        "comment": true
+      },
+      {
+        "id": 97,
+        "text": "— Удачи.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "text": "— Да какой-то мужик в робе, подошел к кузне, прям перед моими глазами взял связку стали будто она весит пару грамм, выбежал из Южных ворот и побежал в сторону леса.",
+    "answers": [
+      {
+        "id": 104,
+        "text": "— Как выглядел этот парень?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "text": "— Ну... тут я уже не смогу ничем помочь, это тебе в город нужно или возьмись за старое, думаю ты еще не на столько стар.",
+    "answers": [
+      {
+        "id": 110,
+        "text": "— Мне нужен мой Гремуар, а в том свинарнике, невозможно ничего найти.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "text": "— Ну ладно, я должен работать... Навести Ватраса.",
+    "answers": [
+      {
+        "id": 97,
+        "text": "— Хорошо, удачи.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "text": "— Спасибо за понимание, дружище, удачи!",
+    "answers": [
+      {
+        "id": 111,
+        "text": "— Вы получили достижение:\n \"Щедрая Душа\"!",
+        "comment": true
+      },
+      {
+        "id": 97,
+        "text": "— Я еще вернусь...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 112,
+        "text": "Вы забрали свои деньги, не смотря на ситуацию вашего друга.",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 2,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 113,
+        "text": "Вы поступили благородно и решили не забирать последние деньги у нуждающегося друга.",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "text": "— Добро пожаловать! Прошу вашему вниманию мою величайшую коллекцию, Ох-хо-хо...\nСмотрите и ничего не трогайте.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 115,
+        "var_need": [
+          "in",
+          1
+        ],
+        "text": "— Вас интересует статуэтка Инноса?"
+      },
+      {
+        "id": 116,
+        "text": "— У вас случайно нет в коллекции Гремуаров?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 117,
+        "text": "— Хочу предложить свои услуги в поисках редких предметов...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 97,
+        "text": "[ Выйти ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "text": "— . . ., ЧТО?! Откуда она у вас?! \nЯ готов забрать ее за 1000 монет! А если вы мне принесете статуэтку Белиара, я дам вам 3000 монет!",
+    "answers": [
+      {
+        "id": 118,
+        "text": "— Нет, статуэтка останется у меня.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 119,
+        "var_sub": [
+          "in",
+          1
+        ],
+        "text": "— Забирай."
+      },
+      {
+        "id": 120,
+        "text": "— Для чего нужны эти статуэтки?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "text": "— Хм... вы знаете что это не обычные книжки?\nОни обладают большой силой и древними знаниями разной магии. Если бы они у меня были, стража бы отобрала их у меня с руками. Да и вам бы я Гремуар ни за какие деньги не отдал!",
+    "answers": [
+      {
+        "id": 114,
+        "text": "— Понятно...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "text": "— Хм... Отлично, я буду платить вам за каждую редкую вещь которую вы найдете. Чем старее вещь, тем больше ее цена!",
+    "answers": [
+      {
+        "id": 114,
+        "text": "— По рукам.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "text": "— Ох... Как жаль... Зачем она вам? Приходите если передумаете.",
+    "answers": [
+      {
+        "id": 114,
+        "text": "— Хорошо.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "text": "— Бугагага. Вот, держите, ваши 1000 монет! Буду надеяться что вам удастся отыскать и статуэтку Белиара.",
+    "answers": [
+      {
+        "id": 119,
+        "text": "— Статуэтка Инноса [ Удалено ]\n\n— Монеты [<plus>1000]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "money",
+          1000
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 97,
+        "text": "— Еще увидимся."
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "text": "— Ну... как вам обьяснить... Её можно поставить, и она будет стоять, красоваться, все будут смотреть, завидовать, у них такой нет, а статуэтки очень редкие...\nЕще говорят они обладают какой то силой, но мне это не интересно.",
+    "answers": [
+      {
+        "id": 114,
+        "text": "— Понятно.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "text": "— Ахах, я так и думал, ну.. с гробами нужно будет подождать, у Лесника Ральфа напряг с досками. Уж не знаю почему он так тянет, сходил бы к нему да спросил.",
+    "answers": [
+      {
+        "id": 97,
+        "text": "— Придется...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "text": "— В лесу? Странно... Хм... Ну, значит моего помощника можно уже не ждать, как и моих трав, черт. Сам я туда теперь не сунусь. Что же делать?",
+    "answers": [
+      {
+        "id": 124,
+        "text": "— Хм, мне всё равно в лес придется отправляться, если по пути смогу найти, обязательно принесу.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "text": "— Пхапхпхпх, извини братишка, но мой помощник так и не вернулся из леса, у меня нет трав, что бы варить зелья.",
+    "answers": [
+      {
+        "id": 93,
+        "text": "— Ясно.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "text": "— Воу, Калдин решил помочь мне, ахахах... Ну, раз так, я заплачу тебе когда принесешь их.",
+    "answers": [
+      {
+        "id": 93,
+        "text": "— Ну естественно заплатишь, куда ты денешься.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 125,
+        "text": "Таверна:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 125,
+        "text": "Таверна лучшее место для сбора информации. Главное не нарваться на неприятности.",
+        "comment": true
+      },
+      {
+        "id": 128,
+        "text": "[ Подойти к хозяину Таверны ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 129,
+        "text": "[ Сесть к Ральфу ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 131,
+        "text": "[ Сесть к Халфору ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 92,
+        "text": "[ Выйти ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 126,
+        "text": "Правая часть Стархольма:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 143,
+        "text": "[ Зайти к семье Гвен ]",
+        "var_no_more": [
+          "gven777",
+          5
+        ]
+      },
+      {
+        "id": 156,
+        "text": "[ Зайти к Ватрасу ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 166,
+        "text": "[ Осмотреть фонтан ]",
+        "var_no_more": [
+          "fontan",
+          5
+        ]
+      },
+      {
+        "id": 92,
+        "text": "[ Вернуться в центр ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 97,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zhp",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 127,
+        "text": "Левая часть Стархольма:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 186,
+        "text": "[ Зайти на лесопилку ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 92,
+        "text": "[ Вернуться в центр ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 97,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zhp",
+          1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "text": "— М? Я тебя здесь раньше не видел. Пиво сегодня будет дороже чем обычно, я в плохом настроении.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 136,
+        "text": "— У тебя что то случилось?",
+        "var_no_more": [
+          "tavernamiss",
+          5
+        ]
+      },
+      {
+        "id": 137,
+        "text": "— Мне нужна информация.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 125,
+        "text": "— Удачи.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "text": "— Калдин?! Я думал ты умер.. Э.. Тоесть...Эх... \nЧего ты хочешь?",
+    "answers": [
+      {
+        "id": 130,
+        "text": "— Всмысле ты думал что я умер?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 132,
+        "text": "— Пришел поторопить тебя с досками.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "text": "— Ты же живешь рядом с лесом, а я точно знаю что там поселились Сектанты! Странно что они тебя не убили, ты же их видел? Не так ли? Уверен что видел.",
+    "answers": [
+      {
+        "id": 133,
+        "text": "— Не видел я никаких сектантов.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "text": "— Эй, старик, чего ты хочешь?",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 144,
+        "var_need": [
+          "halfor",
+          5
+        ],
+        "text": "— Мне сказали ты хороший строитель."
+      },
+      {
+        "id": 125,
+        "text": "— Ничего...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "text": "— Вы конечно извините, но я в лес, больше не сунусь!",
+    "answers": [
+      {
+        "id": 135,
+        "text": "— В чем дело?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "text": "— Врешь! Ты не мог их не видеть, никто мне не верит. Может ты один из них?! Роба у тебя весьма похожа...",
+    "answers": [
+      {
+        "id": 134,
+        "text": "— Не знаю о чем ты.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "text": "— Тьфу, уходи, иначе я позову стражу. Тут вам меня не поймать!",
+    "answers": [
+      {
+        "id": 125,
+        "text": "— ...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "text": "— В этих проклятых сектантах! Повторяю последний раз, про доски можете забыть!",
+    "answers": [
+      {
+        "id": 125,
+        "text": "— ...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "text": "— Разбойники, их застава стоит около деревни и не дают каравану с моим хмелем дойти до деревни, страдает мой бизнес!",
+    "answers": [
+      {
+        "id": 142,
+        "text": "— Я проходил через заставу, она мертва.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "text": "— Хех, так и думал, ну ты же понимаешь что это будет стоить тебе денег? Думаю 10 монет за каждую информацию.",
+    "answers": [
+      {
+        "id": 137,
+        "text": "Монеты:",
+        "comment": true,
+        "var_show": [
+          "money"
+        ]
+      },
+      {
+        "id": 138,
+        "text": "— Что ты знаешь про сектантов?\n[ -10 Монет ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 141,
+        "text": "— Мне нужны доски.\n[ -10 Монет ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 139,
+        "text": "— Кто бы мне мог помочь в ремонте дома?\n[ -10 Монет ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 140,
+        "text": "— Где бы достать магические предметы?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 125,
+        "text": "— Я узнал что хотел.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "text": "— Бред все это, поверь мне, Ральф просто ленится работать.",
+    "answers": [
+      {
+        "id": 138,
+        "text": "— Монеты [-10]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 137,
+        "var_sub": [
+          "money",
+          10
+        ],
+        "text": "— Хм..."
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "text": "— Спроси у Халфора, он этим занимается, вот он, за четвёртым столиком.",
+    "answers": [
+      {
+        "id": 138,
+        "text": "— Монеты [-10]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "halfor",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 137,
+        "var_sub": [
+          "money",
+          10
+        ],
+        "text": "— Спасибо.",
+        "var_set": [
+          "halfor",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "text": "— Уф.. Этого я не знаю, по этому деньги с тебя я брать не буду.",
+    "answers": [
+      {
+        "id": 137,
+        "text": "— Ясно...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "text": "— Пх, сходи да наруби, с Ральфом что то не так, вечно бубнит про каких то сектантов. Говорит в лесу обосновались сектанты, охотятся за ним, мне кажется его просто белка укусила.",
+    "answers": [
+      {
+        "id": 138,
+        "text": "— Монеты [-10]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 137,
+        "var_sub": [
+          "money",
+          10
+        ],
+        "text": "— Понятно."
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "text": "— Серьезно? Это хорошая новость, думаю караван скоро прибудет. Вот тебе 100 монет за информацию. ",
+    "answers": [
+      {
+        "id": 142,
+        "text": "— Монеты [<plus>100]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "money",
+          100
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 125,
+        "text": "— Благодарю.",
+        "var_mult": [
+          "tavernamiss",
+          5
+        ],
+        "var_set": [
+          "tavernamiss",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 143,
+        "text": "Дом семьи Гвен:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 148,
+        "text": "[ Постучать ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "text": "— Хех, да, я такой... Хехехе, но вынужден тебе отказать, у меня нет материалов. Ральф не хочет идти в лес, я вот сижу и думаю, может самому пойти да нарубить...",
+    "answers": [
+      {
+        "id": 145,
+        "text": "— Говорят там Сектанты.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 146,
+        "text": "— Я бы мог пойти с тобой.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 125,
+        "text": "— Ладно, я пойду.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "text": "— Гмх, бред, не слушай этого Алкаша.",
+    "answers": [
+      {
+        "id": 144,
+        "text": "[ Сменить тему ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "text": "— Ха, ладно, как только будешь готов, буду ждать тебя у входа в лесу.",
+    "answers": [
+      {
+        "id": 144,
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text": "— Хорошо.",
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 147,
+        "text": "Заброшенный Дом:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 154,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "text": "Вам открыла Тётя Мэй.\n— Ох, Калдин, почему так поздно, заходи...",
+    "answers": [
+      {
+        "id": 158,
+        "text": "[ Зайти в дом ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 211,
+        "text": "— Я нашел вашу книгу, которую вы мне когда то давали.",
+        "var_need": [
+          "gven",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 149,
+        "text": "Ферма:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 149,
+        "text": "Обычная ферма какого то крестьянина, возможно фермеры что то знают. Но здесь никого не видно.",
+        "comment": true
+      },
+      {
+        "id": 150,
+        "text": "[ Походить по полю ]"
+      },
+      {
+        "id": 151,
+        "text": "[ Зайти в сарай ]"
+      },
+      {
+        "id": 152,
+        "text": "[ Зайти в мельницу ]"
+      },
+      {
+        "id": 153,
+        "text": "[ Зайти в амбар ]"
+      },
+      {
+        "id": 126,
+        "text": "[ Вернуться ]"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 150,
+        "text": "Поле:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 150,
+        "text": "На поле работает крестьянин, видимо рыхлит землю.",
+        "comment": true
+      },
+      {
+        "id": 155,
+        "text": "— Хэй..."
+      },
+      {
+        "id": 149,
+        "text": "[ Вернуться ]"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 151,
+        "text": "Сарай:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 151,
+        "text": "Никого нет, много кала и сена.",
+        "comment": true
+      },
+      {
+        "id": 149,
+        "text": "[ Вернуться ]"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 152,
+        "text": "Мельница:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 152,
+        "text": "Заперто.",
+        "comment": true
+      },
+      {
+        "id": 149,
+        "text": "[ Вернуться ]"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 153,
+        "text": "Амбар:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 153,
+        "text": "Заперто.",
+        "comment": true
+      },
+      {
+        "id": 149,
+        "text": "[ Вернуться ]"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 155,
+    "text": "— Я занят. Отстань!",
+    "answers": [
+      {
+        "id": 150,
+        "text": "— Извини."
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "text": "Ух. Темно, от этого сумасшедшего старика можно ожидать что угодно, мне нужен свет.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 157,
+        "var_need": [
+          "sv",
+          5
+        ],
+        "text": "[ Использовать оловяный подсвечник ]"
+      },
+      {
+        "id": 126,
+        "text": "[ Выйти ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "text": "Отлично, у вас появилось хоть какое то освещение, осталось найти Ватраса.",
+    "answers": [
+      {
+        "id": 162,
+        "text": "[ Осмотреть камин ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "text": "— Присаживайся. Ох.. что за несчастье... сколько смертей.. Муж умер так рано... Я совсем одна осталась... Ты все приготовил? ",
+    "answers": [
+      {
+        "id": 159,
+        "text": "— Не совсем, есть проблемы.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "text": "— Ух, пожалуйста, поторопись, вот тебе деньги за услуги и за гробы.",
+    "answers": [
+      {
+        "id": 159,
+        "text": "— Монеты [ <plus>3000 ]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 126,
+        "text": "— Всего хорошего Тётя Мэй.",
+        "var_mult": [
+          "gven777",
+          5
+        ],
+        "var_set": [
+          "gven777",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "text": "Через некоторое время, из подвала донеслись стуки. Какой то шорох ползет по ступенькам немного посапывая. Затем подался какой-то вой, дверная ручка из подвала затреслась, вот-вот оттуда кто-то или что-то вылезет! ",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 167,
+        "instant": true,
+        "text": "[ Ждать ]"
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "yad",
+          1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 165,
+        "instant": true,
+        "text": "[ Бросить пробирку с Ядом ]",
+        "var_sub": [
+          "yad",
+          1
+        ]
+      },
+      {
+        "id": 126,
+        "text": "[ Выбежать из дома ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "text": "— ТЫ!! УБИРАЙСЯ ПРОЧЬ, ЧЕРТ, НЕТ, СТОЙ, ДАВАЙ ВОССТАНОВИ МОЮ РУКУ.",
+    "answers": [
+      {
+        "id": 182,
+        "text": "— Я потерял свой Гремуар...Упс.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 162,
+        "text": "Камин:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 162,
+        "text": "Возле камина лежат дрова, думаю стоит разжечь камин.",
+        "comment": true
+      },
+      {
+        "id": 162,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 163,
+        "instant": true,
+        "text": "[ Закинуть дров ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 162,
+        "text": "Камин:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 163,
+        "text": "Вы закинули дрова в камин, используйте подсвечник что бы разжечь.",
+        "comment": true
+      },
+      {
+        "id": 162,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 164,
+        "var_sub": [
+          "sv",
+          5
+        ],
+        "text": "[ Разжечь ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "text": "В комнате стало на много светлее, но Ватраса вы так и не нашли. Неужели он в подвале... ",
+    "answers": [
+      {
+        "id": 160,
+        "text": "[ Осмотреться ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "text": "Вы бросили пробирку в сторону подвала, сильный таксичный яд, проплавил немного пол, тварь вытянула руку и наступила ею в яд.\n— ЧЕРТ, ЧТО ЭТА ЗА ХРЕНЬ! — послышался голос из темноты, который так похож на голос Ватраса.",
+    "answers": [
+      {
+        "id": 161,
+        "text": "— Оу, Ватрас, рад тебя видеть...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 166,
+        "text": "Фонтан:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "flfool",
+          1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 185,
+        "text": "[ Набрать воды в Флягу ]",
+        "instant": true,
+        "var_sub": [
+          "fl",
+          1
+        ]
+      },
+      {
+        "id": 166,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 126
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "text": "Вы молча стояли и наблюдали как какая-то тварь ползет по полу, в вашу сторону, когда оно выползло на свет, вы заметили пропитое лицо Ватраса.",
+    "answers": [
+      {
+        "id": 168,
+        "text": "— Черт, Ватрас, ты меня напугал!",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "text": "— О, Калдин, это ты? — Сказал Ватрас поднимаясь с пола.\nТы уж извини, ненавижу лесницы. Годы уже не те.\nТы чего хотел?",
+    "answers": [
+      {
+        "id": 169,
+        "text": "— Пришел навестить своего друга.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "text": "— Никогда в это не поверю, говори зачем пришел. Думаю у тебя много вопросов...",
+    "answers": [
+      {
+        "id": 170,
+        "text": "— Почему ты сидишь в темноте?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 172,
+        "text": "— Ты знаешь о сектантах?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 171,
+        "text": "— Дай мне свой Гремуар.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 173,
+        "text": "— Займи немного монет.",
+        "var_no_more": [
+          "vdolg",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 178,
+        "text": "[ Закончить диолог ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "text": "— Я два дня сидел в подвале, готовил одно зелье, вот вылез посмотреть что за говнюк лазает у меня дома.",
+    "answers": [
+      {
+        "id": 174,
+        "text": "— Что за зелье?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "text": "— Ахахах, Может тебе еще и мой дом отдать? Неужели ты потерял свой Гремуар? Ахахах. Как ты так умудрился, Калдин потерял свой Гремуар, Ахахахах... Думаю про магию можешь забыть, ахахах, ты же понимаешь какие они редкие, они дороже жизни всех в этой деревне, ахахах.",
+    "answers": [
+      {
+        "id": 169,
+        "text": "— . . .",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "text": "— Нет, я не выхожу из дома.",
+    "answers": [
+      {
+        "id": 175,
+        "text": "— Где ты берешь травы?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "text": "— Не ну это уже наглость, Калдин, я тебя конечно уважаю как Мага, но это перебор, держи 250 монет и хватит с тебя.",
+    "answers": [
+      {
+        "id": 173,
+        "text": "— Монеты [ <plus>250 ]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "money",
+          250
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 169,
+        "text": "— Хех, спасибо и на этом.",
+        "var_set": [
+          "vdolg",
+          5
+        ],
+        "var_mult": [
+          "vdolg",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "text": "— Пха, тебе скажи, и ты захочешь.",
+    "answers": [
+      {
+        "id": 169,
+        "text": "— Ты не изменился.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "text": "— У меня полный подвал трав, насобирал месяц назад, вот и ходить не нужно, магией восстанавливаю им качество.",
+    "answers": [
+      {
+        "id": 169,
+        "text": "— Разумно.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 177,
+        "text": "— Не мог бы ты выделить пару трав для Алхимика?",
+        "var_no_more": [
+          "travi",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "text": "— Вот и договорились, забирай.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 169,
+        "text": "[ Сменить тему ]",
+        "var_set": [
+          "travial",
+          5
+        ],
+        "var_mult": [
+          "travial",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "text": "— Для этого еврея?! Никогда! Если ты так хочешь, могу продать. С тебя 500 монет.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 176,
+        "text": "— Тьфу, кто еще из вас еврей, давай сюда травы. [ Монеты -500 ]",
+        "var_set": [
+          "travi",
+          5
+        ],
+        "var_mult": [
+          "travi",
+          5
+        ]
+      },
+      {
+        "id": 169,
+        "text": "— Я передумал.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "text": "— Ладно, бывай, полезу-ка назвал, в подвал.",
+    "answers": [
+      {
+        "id": 126,
+        "text": "— Удачи.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "text": "— Ты ходил в лес?! Там что нибудь было? А, не важно, раз ты жив, значит там безопасно. Следует и мне завтра сходить.",
+    "answers": [
+      {
+        "id": 180,
+        "text": "— Ну... Вообщето...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "text": "— Не медли, давай скорее сюда травы.",
+    "answers": [
+      {
+        "id": 180,
+        "text": "— Получено достижение [ Травник ]",
+        "comment": true
+      },
+      {
+        "id": 181,
+        "text": "— Держи",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "text": "— Так, вот твои 250 монет, как и договаривались.\nВсе, уходи, у меня много дел.",
+    "answers": [
+      {
+        "id": 181,
+        "text": "— Монеты [ <plus>250 ]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "money",
+          250
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 97,
+        "text": "— Э...",
+        "var_set": [
+          "alhi",
+          5
+        ],
+        "var_mult": [
+          "alhi",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "text": "— ТЫ! КУСОК КОЗЬЕГО ГОВНА, ДАЙ МНЕ ЗЕЛЬЕ ЗДОРОВЬЯ.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 183,
+        "var_sub": [
+          "zhp",
+          1
+        ],
+        "text": "[ Дать Зелье ]"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "text": "— Уф, а как я рад тебя видеть, ты не представляешь. Убирайся.",
+    "answers": [
+      {
+        "id": 183,
+        "text": "— Зелье Здоровья -1",
+        "comment": true
+      },
+      {
+        "id": 184,
+        "text": "— Ой да ладно тебе, подумаешь руку рассплавило немного...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "text": "— Я СКАЗАЛ УБИРАЙСЯ!",
+    "answers": [
+      {
+        "id": 126,
+        "text": "— Да понял я, все, ухожу.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 185,
+        "text": "Фонтан:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 185,
+        "text": "Вы набрали полную флягу.",
+        "comment": true
+      },
+      {
+        "id": 166,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 126
+      },
+      {
+        "var_set": [
+          "fontan",
+          5
+        ],
+        "super_calculate": false,
+        "id": 185,
+        "calculate": true,
+        "text": "fff",
+        "var_mult": [
+          "fontan",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 186,
+        "text": "Лесопилка Ральфа:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 188,
+        "text": "[ Подойти к Халфору ]",
+        "need": [
+          146
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 189,
+        "text": "[ Осмотреть Лесопилку ]",
+        "var_no_more": [
+          "deltop",
+          5
+        ]
+      },
+      {
+        "id": 127,
+        "text": "[ Вернуться ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "text": "В Торговой части находится много лавок, каждая из них продает разные предметы, глаза разбегаются, но вам нужна только одна.",
+    "answers": [
+      {
+        "id": 190,
+        "text": "[ Продуктовый прилавок ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 127,
+        "text": "[ Вернуться ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "text": "— Ха, вот и ты, ты наверное все еще думаешь о сектантах. Старик, успакойся, скоро мы туда зайдем и ты сам во всем убедишься.",
+    "answers": [
+      {
+        "id": 191,
+        "text": "— Не знаю... Мне кажется, разбойников с заставы убили именно они..",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 193,
+        "text": "— Я не думаю об этом.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 189,
+        "text": "Лесопилка:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 189,
+        "text": "Вам удалось найти топор лесника.",
+        "comment": true
+      },
+      {
+        "var_add": [
+          "top",
+          5
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 189,
+        "instant": true,
+        "var_no_more": [
+          "topor",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "topor",
+          5
+        ],
+        "text": "• Топор",
+        "var_set": [
+          "topor",
+          5
+        ]
+      },
+      {
+        "id": 189,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 186,
+        "text": "[ Назад ]",
+        "var_mult": [
+          "deltop",
+          5
+        ],
+        "var_set": [
+          "deltop",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "text": "— Добрый день, что будете брать?     ",
+    "answers": [
+      {
+        "id": 192,
+        "text": "— Мне нужен запас еды, с собой, на 5 дней.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "text": "— И ты туда же! Если ты боишься, то можешь со мной не идти, я сам нарублю эти чертовы деревья и тебе цена будет намного выше!",
+    "answers": [
+      {
+        "id": 193,
+        "text": "— Черт, я не боюсь, идем.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "text": "— Ого, большой заказ, я вам пол прилавка продам. Хм.. сейчас посчитаем... С вас 600 монет. Думаю вам нужно будет куда-то это положить, к счастью, у меня есть походный рюкзак, я вам его отдам за 150 монет. В сумме с вас 750.",
+    "answers": [
+      {
+        "id": 192,
+        "text": "Монеты:",
+        "comment": true,
+        "var_show": [
+          "money"
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "edja",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 197,
+        "var_sub": [
+          "money",
+          750
+        ],
+        "text": "— Давай сюда.",
+        "var_set": [
+          "edja",
+          5
+        ]
+      },
+      {
+        "id": 195,
+        "text": "— У меня нет столько денег.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "text": "— Отлично, тогда нужно для начала собрать вещи, и именно ты, этим займешься. Я планирую разбить там лагерь, палатка у меня есть, еда на мне, с тебя требуется только Лампа, Полная Фляга лично для меня и Топор. Ну и если ты так сильно боишься этих СЕКТАНТОВ, можешь нарядиться в кольчугу.",
+    "answers": [
+      {
+        "var_not": [
+          "top"
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 198,
+        "text": "— Я готов отправляться.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "id": 186,
+        "text": "— Я начну собирать вещи.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "text": "",
+    "answers": [
+      {
+        "id": 196,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "text": "— Очень жаль.",
+    "answers": [
+      {
+        "id": 127,
+        "text": "[ Вернуть в левую часть Стархольма ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 197,
+    "text": "— С вами выгодно иметь дело. Удачи сэр.",
+    "answers": [
+      {
+        "id": 127,
+        "text": "[ Вернуть в левую часть Стархольма ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "text": "— Отлично, отправляемся. \nВ этот момент Вы задумались о своем Гремуаре, возможно, Вы оставили его у себя в шкафу, за старой одеждой.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Следовать за Халфором ]",
+        "blackout": true,
+        "id": 199
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 199,
+        "text": "Конец первой главы!",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 199,
+        "text": "— Разблокировано: \"Глава II\"",
+        "comment": true
+      },
+      {
+        "id": 201,
+        "text": "[ Продолжить ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 1,
+        "text": "[ В начало ]",
+        "blackout": true,
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "text": "     ",
+    "answers": [
+      {
+        "id": 200,
+        "text": "Вы выполнили задание с травами.",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Назад ]",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "text": "Долгое время вы с Халфором не могли определиться с местом, где можно разбить лагерь. Вы часто бывали в этом лесу, но вас не покидает чувство, что этот лес вам совсем не знаком, вы не узнаете поляны, деревья, начинаете заново ориентироваться в новой местности.\nХалфор: — Все, я устал, здесь и разобьем лагерь..",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 202,
+        "text": "[ Основать лагерь ]",
+        "middle_answer": true
+      },
+      {
+        "super_calculate": false,
+        "id": 201,
+        "calculate": true,
+        "text": "Food",
+        "var_set": [
+          "food",
+          16
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 201,
+        "calculate": true,
+        "text": "Water",
+        "var_set": [
+          "water",
+          8
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 201,
+        "calculate": true,
+        "text": "Wood",
+        "var_set": [
+          "wood",
+          0
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 201,
+        "calculate": true,
+        "text": "time",
+        "var_set": [
+          "time",
+          720
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 201,
+        "calculate": true,
+        "text": "Health",
+        "var_set": [
+          "hp",
+          100
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 201,
+        "calculate": true,
+        "text": "ENG",
+        "var_set": [
+          "eng",
+          100
+        ]
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "text": "     ",
+    "answers": [
+      {
+        "var_showtime": [
+          "time"
+        ],
+        "id": 202,
+        "text": "До ночи осталось:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "wood",
+          "/ 5000."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Древесина:",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "food",
+          "Кг."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы еды:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "water",
+          "Л."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы воды:",
+        "right_answer": true
+      },
+      {
+        "id": 202,
+        "text": "Лагерь:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 203,
+        "text": "Поговорить с Халфором »",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 204,
+        "text": "Ресурсы »",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 205,
+        "text": "Палатка »",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 202,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "text": "— Так, в деревню мы бегать не будем, будем брать еду и воду от природы, пока не нарубим деревьев, назад не вернемся, можешь начинать, а я пока что займусь Лагерем. ",
+    "answers": [
+      {
+        "id": 202,
+        "text": "— . . .",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "text": "    ",
+    "answers": [
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "До ночи осталось:",
+        "var_showtime": [
+          "time"
+        ],
+        "id": 202
+      },
+      {
+        "var_show": [
+          "wood",
+          "/ 5000."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Древесина:",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "food",
+          "Кг."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы еды:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "water",
+          "Л."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы воды:",
+        "right_answer": true
+      },
+      {
+        "id": 204,
+        "text": "Ресурсы:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 204,
+        "text": "Скоро ночь.",
+        "comment": true,
+        "var_no_more": [
+          "time",
+          0
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 208,
+        "var_sub": [
+          "time",
+          60
+        ],
+        "text": "Отправиться за водой »\n[ -1 час ]",
+        "var_need": [
+          "time",
+          60
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 209,
+        "var_need": [
+          "time",
+          120
+        ],
+        "text": "Отправиться за едой »\n[ -2 часа ]",
+        "var_sub": [
+          "time",
+          120
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 210,
+        "var_sub": [
+          "time",
+          60
+        ],
+        "text": "Отправиться за древесиной »\n[ -1 час ]",
+        "var_need": [
+          "time",
+          60
+        ]
+      },
+      {
+        "id": 202,
+        "text": "« Назад",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 202,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "text": "     ",
+    "answers": [
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "До ночи осталось:",
+        "var_showtime": [
+          "time"
+        ],
+        "id": 202
+      },
+      {
+        "var_show": [
+          "wood",
+          "/ 5000."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Древесина:",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "food",
+          "Кг."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы еды:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "water",
+          "Л."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы воды:",
+        "right_answer": true
+      },
+      {
+        "id": 205,
+        "text": "Палатка:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 207,
+        "text": "Спать »",
+        "blackout": true
+      },
+      {
+        "id": 202,
+        "text": "« Назад",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 202,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "text": "— Слушай, я ходил в лес за дровами, и видел тебя, я тебя звал, почему ты не откликнуться? Побежал ты через лес, будто тебе 16, я начал бежать за тобой и зацепился за чей-то труп, похоже это наш местный алхимик, жалкое зрелище, его обглодало какое-то животное, по этому будь осторожен, завтра склепаю нам копья.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 206,
+        "text": "— ER#RO<amp>R8%#<amp>",
+        "instant": true,
+        "var_need": [
+          "ER",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_mult": [
+          "ER",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 206,
+        "text": "— Они не помогут...",
+        "var_no_more": [
+          "ER",
+          5
+        ],
+        "var_set": [
+          "ER",
+          5
+        ]
+      },
+      {
+        "var_mult": [
+          "kill",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "instant": true,
+        "text_color": [
+          1,
+          0,
+          0
+        ],
+        "id": 206,
+        "text": "— E$#<amp>RRO¿%R#",
+        "var_need": [
+          "ER2",
+          5
+        ],
+        "var_set": [
+          "kill",
+          5
+        ]
+      },
+      {
+        "var_mult": [
+          "ER2",
+          5
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "id": 206,
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "var_less": [
+          "ER2",
+          5
+        ],
+        "var_need": [
+          "ER",
+          5
+        ],
+        "text": "— Что?!",
+        "var_set": [
+          "ER2",
+          5
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 213,
+        "var_need": [
+          "kill",
+          5
+        ],
+        "text": "[ Задушить Халфора ]"
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "text": "— Эй, ты спишь? Посиди со мной у костра, есть тема для разговора.",
+    "answers": [
+      {
+        "id": 206,
+        "text": "[ Присоедениться ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 212,
+        "text": "[ Продолжить спать ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "text": "Вы отошли к реке что бы набрать воду, у вас должно быть с собой ведро.",
+    "answers": [
+      {
+        "var_show": [
+          "hp",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Здоровье:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "eng",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Энергия:",
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "water",
+          "Л."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы воды:",
+        "right_answer": true
+      },
+      {
+        "id": 210,
+        "text": "Не хватает Энергии.",
+        "comment": true,
+        "var_no_more": [
+          "eng",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "eng",
+          10,
+          "ve",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "water",
+          5
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 208,
+        "text": "[ Набирать ]",
+        "var_sub": [
+          "eng",
+          20
+        ],
+        "instant": true
+      },
+      {
+        "id": 204,
+        "text": "« Вернутся",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "comment": true,
+        "middle_answer": true,
+        "text": "До ночи осталось:",
+        "var_showtime": [
+          "time"
+        ],
+        "id": 202
+      },
+      {
+        "id": 202,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "text": "Вы отошли от лагеря что бы собрать еду. У вас должна быть с собой корзина.",
+    "answers": [
+      {
+        "var_show": [
+          "hp",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Здоровье:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "eng",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Энергия:",
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "food",
+          "Кг."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Запасы еды:",
+        "left_answer": true
+      },
+      {
+        "id": 210,
+        "text": "Не хватает Энергии.",
+        "comment": true,
+        "var_no_more": [
+          "eng",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "eng",
+          10,
+          "ko",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "food",
+          3
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 209,
+        "text": "[ Собирать ]",
+        "var_sub": [
+          "eng",
+          10
+        ],
+        "instant": true
+      },
+      {
+        "id": 204,
+        "text": "« Вернутся",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "var_showtime": [
+          "time"
+        ],
+        "id": 202,
+        "text": "До ночи осталось:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 202,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "text": "Вы отошли недалеко от лагеря что бы нарубить древесины. У вас должен быть с собой топор.",
+    "answers": [
+      {
+        "var_show": [
+          "hp",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Здоровье:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "eng",
+          "%"
+        ],
+        "comment": true,
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 27,
+        "text": "Энергия:",
+        "right_answer": true
+      },
+      {
+        "var_show": [
+          "wood",
+          "/ 5000."
+        ],
+        "comment": true,
+        "id": 202,
+        "text": "Древесина:",
+        "middle_answer": true
+      },
+      {
+        "id": 210,
+        "text": "Не хватает Энергии.",
+        "comment": true,
+        "var_no_more": [
+          "eng",
+          0
+        ]
+      },
+      {
+        "var_need": [
+          "eng",
+          10,
+          "topor",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_add": [
+          "wood",
+          1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 210,
+        "var_sub": [
+          "eng",
+          10
+        ],
+        "instant": true,
+        "text": "[ Рубить ]"
+      },
+      {
+        "id": 204,
+        "text": "« Вернутся",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "var_showtime": [
+          "time"
+        ],
+        "id": 202,
+        "text": "До ночи осталось:",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 202,
+        "text": "_____________________________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 27,
+        "text": "[ Инвентарь ]",
+        "middle_answer": true
+      },
+      {
+        "var_show": [
+          "zhp"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 57,
+        "text": "• Зелье Здоровья",
+        "var_need": [
+          "zhp",
+          1
+        ],
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ]
+      },
+      {
+        "var_show": [
+          "zeng"
+        ],
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 58,
+        "text": "• Зелье Энергии",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "var_need": [
+          "zeng",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "text": "— Ох, Калдин, я и забыла про нее, она тебе пригодилась?",
+    "answers": [
+      {
+        "id": 211,
+        "text": "— Книга рецептов семьи Гвен [ Удалено ]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 148,
+        "text": "— Да... Вафляной суп из лягушек был весьма вкусный.",
+        "var_sub": [
+          "gven",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 212,
+        "text": "Конец.",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 212,
+        "text": "Вы не встретили рассвета. Видимо на вас ночью напали.",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 1,
+        "text": "[ В начало ]",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "text": "Как только вы набросились на Халфора, он тут же потерял сознание. Вы обхватили руками его шею, и начали давить что есть силы.",
+    "answers": [
+      {
+        "id": 214,
+        "text": "— Что за черт?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "text": "Халфор мертв. Из за деревьев показалась группа сектантов. Они медленно начали подходить к вам. У одного из них был Гремуар. Вы прекрасно осознавали, что от магии вам не убежать. Что делать?!",
+    "answers": [
+      {
+        "id": 215,
+        "text": "[ Всё равно бежать ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "text": "Вы быстро вскочили с колен, не оглядываясь побежали в сторону деревни и уронили керосиновую лампу. Перед вами поднялись мертвецы и перегородили вам путь.",
+    "answers": [
+      {
+        "id": 216,
+        "text": "[ Бежать в сторону своего дома ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 217,
+        "text": "[ Бросить пробирку с кислотой ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "text": "Вы бежали пока совсем не повалились с ног. Сектанты уже за спиной. Это конец. Вас убьют.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 223,
+        "text": "— Каштан.",
+        "need": [
+          225
+        ]
+      },
+      {
+        "id": 226,
+        "text": "[ Посмотреть назад ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "text": "Вы бросили пробирку в толпу мертвецов, их начало разьедать и они были не в состоянии двигаться, сектанты догоняли, а перед вами восстала еще одна толпа мертвых.",
+    "answers": [
+      {
+        "id": 217,
+        "text": "— Пробирка с кислотой [ Удалено ]",
+        "comment": true
+      },
+      {
+        "id": 216,
+        "text": "[ Бежать в сторону своего дома ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "text": "Этот милый парень был одет в странное одеяние, на ногах были розовые тапочки, синие штаны и голое тело, на котором были выцарапаны какие то символы, на голове странная магическая шляпа, радужного цвета.\n— Хихихи, тебя привествует Алишер. Я чувствую в тебе могучую силу, отец. Ты пахнешь ирисками и трупами. Я знаю что тебе нужно, я все знаю. Великие духи света шепчут мне, чтобы я больше не ел мыло... Но это не значит что у тебя нет того, что мне нужно, Калдин.",
+    "answers": [
+      {
+        "id": 219,
+        "text": "— У меня только хозяйственное мыло.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 222,
+        "text": "— Кто ты?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 220,
+        "text": "— Что у тебя за одеяние?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 221,
+        "text": "— Откуда ты знаешь мое имя?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": 97,
+        "text": "— Мне пора.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "text": "— О, мне вовсе не нужно мыло, я хочу от тебя волшебную капусту, она вкусно пахнееет.. Я чую, она рядом... дай мне ее, скорее. Взамен я найду для тебя то, что тебе необходимо.",
+    "answers": [
+      {
+        "id": 225,
+        "text": "— Э, ты про болотную траву? Забирай.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "text": "— Хихихи, это одеяние счастья, особенно мои тапочки, всегда когда я снимаю одну тапочку, у меня остается еще одна тапочка. Один раз я их потерял, а оказалось что они у меня в руках.",
+    "answers": [
+      {
+        "id": 224,
+        "text": "— С тобой все хорошо?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "text": "— Я всевидящий, я все видел, рождение этого мира, рождение тебя, я наблюдал за тобой, помню те моменты как ты вылупился из яйца, твоя мама улетела, оставила тебя обсолютно одного, и начался сильный ветер, но ты не умел плавать, мне было тебя так жалко, но я мог только верить в то, что ты справишься, в итоге тебя продали.",
+    "answers": [
+      {
+        "id": 218,
+        "text": "— Что ты несешь?",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "text": "—Оо... мы с тобой еще не раз встретимся, мое имя тебе нельзя знать, они следят за мной.. Невозможно предсказать то, что они сделают, но одно могу сказать точно, не верь маленьким феям, это такие синие гномики, мерзкие и противные, их можно найти возле ворот, все время там околачиваются, будто что то сторожат, я как то пытался пройти через ворота, скорее всего эти ворота служат телепортом в их логово, но я еще туда не пробрался, по этому не знаю что там.\nНо можешь быть уверен в том, что я тебе друг.",
+    "answers": [
+      {
+        "id": 218,
+        "text": "— О боже...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "text": "— Каштан друг. Великие тапочки судьбы нашептали мне, что ириска просит помощи. Я обещал что мы еще встретимся и вуаля, мы здесь, кажется, горох уже падает на птичку, а червяк в офисе. Следуй знакам судьбы и ты обретешь мешок цемента. Вот в чем смысл болотной травы.",
+    "answers": [
+      {
+        "id": 227,
+        "text": "— Черт, тебя еще не хватало, беги.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "text": "— Со мной все отлично, я себя чувствую счастливее всех людей на этом корабле.",
+    "answers": [
+      {
+        "id": 218,
+        "text": "— Ъеъ.",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "text": "— Каштан, дружище, еще встретимся, всему свое время, я появлюсь в самый необходимый момент, как только луна прорастет и горошины начнут катиться за птицей...",
+    "answers": [
+      {
+        "id": 225,
+        "text": "— Тюк болотной травы [ Удалено ]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "id": 97,
+        "var_sub": [
+          "tr",
+          1
+        ],
+        "text": "... Хватит."
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "text": "    ",
+    "answers": [
+      {
+        "id": 226,
+        "text": "Конец.",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "id": 226,
+        "text": "Вас убили сектанты.",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "[ В начало ]",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "text": "— Бегать удел смертных, а я парю по ветру, и в конце концов обретая гармонию, спускаюсь с небес, как ящик гвоздей. Я обещал найти то, что тебе нужно.\nВот твоя книжка. Хихихи.",
+    "answers": [
+      {
+        "id": 228,
+        "text": "— Этого не может быть...",
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "text": "— Хихи, Каштан. — сказал таинственный незнакомец после чего глупо побежал к дереву и спрятался за него.",
+    "answers": [
+      {
+        "id": 228,
+        "text": "— Проклятый гремуар Калдина [ Получено ]",
+        "comment": true
+      },
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "— Мертвые, взываю вас о помощи.",
+        "blackout": true,
+        "id": 229
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "text": "В скоре, весь лес был заполнен криками сектантов, эти недоучки и понятия не имели о вашей силе. С этой книгой, вы способны одним взглядом поднять мертвого из под земли, ваша сила в области некромантии безгранична, вы видели все глазами мертвых, их не упакоянные души наполняли вас темной энергией. Сектанты не смогли вам противостоять и каждый из них усвоял свой урок. Теперь они просто пополнили ряды вашей армии. Кроме некромантии, вы владеете черной магией, но вам нужен посох.\nВскоре после резни в лесу, вы вернулись к своему старому и гнилому дому. Что делать дальше, решать вам.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          -1,
+          -1
+        ],
+        "text_color": [
+          0,
+          1,
+          0
+        ],
+        "middle_answer": true,
+        "text": "[ Конец ]",
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "text": "",
+    "answers": []
+  }
+]

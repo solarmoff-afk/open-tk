@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "text": "Hey there! You're reading now my quest.... Тьфу, кароч сюжет: ТИ йоВЛаИШса нЕглАмотним цилабуком....",
+    "answers": [
+      {
+        "id": 2,
+        "text": "А можно я не буду безграмотным школьником?"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ну ок... Можн и так мне не принципиально. Ты работаешь переводчиком и отлично знаешь английский. А один из твоих друзей англичанин... Или же ты разговариваешь со своим боссом-англичанином... Кароч не важно, важно то что ТЫ РАЗГОВАРИВАЕШЬ С АГЛИЧАНИНОМ",
+    "answers": [
+      {
+        "id": 3,
+        "text": "И что в этом такого интересного?"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Ну... То что этим англичанином является человек который прочитал все мои квесты жанра безумие.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Тьфу, не интересно"
+      },
+      {
+        "id": 6,
+        "text": "Ооооооо я понял намёк"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Ну так пошел ты nothing",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Не понял шутку"
+      },
+      {
+        "id": 1,
+        "text": "Crying"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "(Слово nothing читается по русски как нафин, что совсем не напоминает слово нафиг)",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Я hate тебя"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "нУ чО пОцИкИ пОгНалИИ????",
+    "answers": [
+      {
+        "id": 7,
+        "text": "ПаХнАлЫ"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Hello friend, im glad to see u.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Hey brother"
+      },
+      {
+        "id": 9,
+        "text": "Hi friend, im so glad to see u too!!!!!!!!11"
+      },
+      {
+        "id": 10,
+        "text": "Im fine thx."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "U not my brother",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Oh sorry... Mistake, i mean BEST FRIEND"
+      },
+      {
+        "id": 16,
+        "text": "Oh.... God i mean \"friend\". U dont understand me?"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "How are u?",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Im fine, thx."
+      },
+      {
+        "id": 17,
+        "text": "Im good, thx."
+      },
+      {
+        "id": 19,
+        "text": "Im terrible."
+      },
+      {
+        "id": 20,
+        "text": "No! How are u?!?!"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "What? xD",
+    "answers": [
+      {
+        "id": 11,
+        "text": "iM fInE tHxxxxx!!!!!"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Seriosly?! XD",
+    "answers": [
+      {
+        "id": 12,
+        "text": "I. AM. SO. FINE. THX. U. SO. MUCHHH..."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Lol guy, u so weird XD",
+    "answers": [
+      {
+        "id": 13,
+        "text": "LoL"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Do u weird ugly buddy???",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Yes, im fine!"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Looooooooollll",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Die"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "      ",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Die by одиночество"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Oh... Sorry... Im hate u :'(",
+    "answers": [
+      {
+        "id": 15,
+        "text": "What?"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Its cool! Lets go to the cinema",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Go"
+      },
+      {
+        "id": 16,
+        "text": "Nope"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "   ",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Die by sad"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Why? Hey friend, dont be sad. Can I help u?",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Nope.."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "In fine, thx",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Me too."
+      },
+      {
+        "id": 19,
+        "text": "But... Im not."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Coming soon.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Go пацаны back. Че else мы can сделать?"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 23,
+    "text": "",
+    "answers": []
+  }
+]

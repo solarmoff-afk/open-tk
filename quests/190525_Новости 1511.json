@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Ваша Умница написал еще 20365 слов в квесте \"Поверить на слова.\"."
+      },
+      {
+        "targetbookid": "120640",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Поверить на слова.\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ankylosaurus написал еще 18187 слов в квесте \"Квест-лаборатория\"."
+      },
+      {
+        "targetbookid": "123330",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Квест-лаборатория\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор GazZzon написал еще 18155 слов в квесте \"Горизонт\"."
+      },
+      {
+        "targetbookid": "115225",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Горизонт\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Samofy написал еще 17448 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "164443",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Potato \n написал еще 17388 слов в квесте \"Нефелим:Вызов брошен\"."
+      },
+      {
+        "targetbookid": "154353",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Нефелим:Вызов брошен\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор AntiHero написал еще 24821 слов в квесте \"Выбор капитана\"."
+      },
+      {
+        "targetbookid": "93724",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Выбор капитана\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор The DORRT написал еще 21207 слов в квесте \"Свинцовый остров\"."
+      },
+      {
+        "targetbookid": "85891",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Свинцовый остров\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Allegoriy написал еще 20167 слов в квесте \"Спасти Сказочника\"."
+      },
+      {
+        "targetbookid": "116538",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Спасти Сказочника\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор RiugoKacudo написал еще 19933 слов в квесте \"《Тирания Аделя》\"."
+      },
+      {
+        "targetbookid": "91777",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"《Тирания Аделя》\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 18881 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

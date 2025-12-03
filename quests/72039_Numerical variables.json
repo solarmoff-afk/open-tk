@@ -1,0 +1,1093 @@
+[
+  {
+    "id": 1,
+    "text": "Genre: manual<s>r\nAuthor: elChem (Artem Strelnikov)<s>r\n<s>r\nThe basic concept of numerical variables application is given in this manual.\n\n   *   *   *\n\nDear authors! Please, adress your questions to our VK or Discord, links are below.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "[Start Reading]"
+      },
+      {
+        "id": 23,
+        "text": "[Achievements]"
+      },
+      {
+        "id": 1,
+        "text": "Discord",
+        "comment": false,
+        "url": "https://discord.com/invite/8DaZ3YHKk8"
+      },
+      {
+        "id": 1,
+        "text": "VK",
+        "comment": false,
+        "url": "https://vk.com/text_quest_shaba"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "   It is the system of variables that may replace almost all other operators and provides authors an opportunity to create really interesting and complex structure of the stories.\n   What may be used this instrument for? The answer is: for everything! Indicating the character's lifebar, the quantity of various items or being the auxiliary mechanism variables are indispensable.\n   The basic principles of variables use and main features of them will be discussed further.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "< Basic Principles >"
+      },
+      {
+        "id": 4,
+        "text": "< Operators of Actions >"
+      },
+      {
+        "id": 5,
+        "text": "< Operators of Conditions >"
+      },
+      {
+        "id": 6,
+        "text": "< Operators of Demonstration >"
+      },
+      {
+        "id": 26,
+        "text": "< Calculation mode >"
+      },
+      {
+        "id": 7,
+        "text": "[See an example]"
+      },
+      {
+        "id": 1,
+        "text": "[Return to the first Page]"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "   Work of variables is based on operators, which provide interaction between the author and the program. Several operators serve to change the value of variables, others are responsible for the demonstration or for the conditions and limitations.\n   These operators are to be placed in answer field and act only on the answer they are connect with. Common structure of variable operator is as follows:\n\nvar smth [\"name\",argument]\n\nwhere \"var smth\" is the desired operator, \"name\" is the name of variable it acts on, \"argument\" is the number or the name of other variable which value is taken for calculation.\n   Please note, that every variable name should have quotation-marks. Square brackets and commas as spacers are needed for a correct work of an operator, no other symbols are permitted.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "[How to Use Operators]"
+      },
+      {
+        "id": 3,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   This series of operators allows to change the current value of variables. Placed on the answer they will act only after the reader choose it.\n   Operators of action are listed bellow:\n\nvar set [\"name\",argument] – sets a value of argument for the variable \"name\";\n\nvar add [\"name\",argument] – adds a value of argument to the variable \"name\" value;\n\nvar sub [\"name\",argument] – subtracts a value of argument from the variable \"name\" value;\n\nvar mult [\"name\",argument] – multiplies the variable \"name\" value by a value of argument;\n\nvar random [\"name\",argumentMin,argumentMax] – sets a random value for the variable \"name\" in the domain from argumentMin to argumentMax;\n\nvar str set [\"name\",\"text\"] – sets a text fragment \"text\" as a value of variable \"name\";\n\nvar str copy [\"name1\",\"name2\"] – sets a value of string variable \"name1\" for the variable \"name2\".",
+    "answers": [
+      {
+        "id": 4,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   Operators of this kind can either be the requestion for availability of the answer or the limitation of variables change.\n   There are following operators for these tasks:\n\nvar equal [\"name\",argument] – the answer is available only if variable \"name\" has the same value as argument ( = );\n\nvar not [\"name\",argument] – the answer is available only if variable \"name\" value is different from argument ( ≠ );\n\nvar more [\"name\",argument] – the answer is available only if variable \"name\" value is more than argument ( > );\n\nvar less [\"name\",argument] – the answer is available only if variable \"name\" value is less than argument ( < );\n\nvar need [\"name\",argument] – the answer is available only if variable \"name\" value isn't less than the argument ( ≥ );\n\nvar no more [\"name\",argument] – the answer is available only if variable \"name\" value doesn't exceed the argument ( ≤ ).\n\nvar max [\"name\",argument] – any change of variable \"name\" value is limited and can't become more than argument;\n\nvar min [\"name\",argument] – any change of variable \"name\" value is limited and can't become less than argument.",
+    "answers": [
+      {
+        "id": 5,
+        "text": "[Back]",
+        "backstepCount": 1,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "   These constructions can be used to demonstrate the value of variables to the reader. It may be usefull to make such informing answers inactive by the operator of the same name.\n\nvar show [\"name\"] – adds the current value of the variable to the end of the answer;\n\nvar show [\"name\",\"text\"] – adds the current value of the variable to the end of the answer and places \"text\" (without quotation-marks) after it;\n\nvar show [\"name\"] and var max [\"name\",argument] placed together – add the current value of the variable \"name\" and argument to the end of the answer in the form \"X/argument\";\n\nvar showtime [\"name\"] – add the current value of variable in the form \"X hours Y minutes\" to the end of the answer considering the value as a number of minutes.",
+    "answers": [
+      {
+        "id": 6,
+        "text": "[Back]",
+        "backstepCount": 1,
+        "isBack": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "   Eventually a giant Gigakrysa (an exotic type of rats, probably) has appeared in front of you. It doesn't look very friendly and you are prepearing for battle. ",
+    "answers": [
+      {
+        "id": 7,
+        "text": "<s>r\n   You are lucky to have with you ...",
+        "merge": true,
+        "var_equal": [
+          "weapon",
+          0
+        ]
+      },
+      {
+        "var_equal": [
+          "weapon",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "... Ninja-style Wakizashi of Deadly Sharpness",
+        "var_set": [
+          "weapon",
+          1,
+          "mind",
+          3,
+          "maxd",
+          4
+        ]
+      },
+      {
+        "var_equal": [
+          "weapon",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "... Enormous Lead Sword",
+        "var_set": [
+          "weapon",
+          2,
+          "mind",
+          1,
+          "maxd",
+          6
+        ]
+      },
+      {
+        "instant": true,
+        "var_equal": [
+          "weapon",
+          0
+        ],
+        "id": 7,
+        "text": "... Elegant Platinum Lance",
+        "need": 100,
+        "var_set": [
+          "weapon",
+          3,
+          "mind",
+          3,
+          "maxd",
+          5
+        ]
+      },
+      {
+        "var_equal": [
+          "weapon",
+          0
+        ],
+        "id": 7,
+        "instant": true,
+        "text": "... Magic Tattoo of Incredible Might on hand",
+        "var_set": [
+          "weapon",
+          4,
+          "mind",
+          2,
+          "maxd",
+          2
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          1
+        ],
+        "id": 7,
+        "text": "\n   You are lucky to have a Wakizashi of Deadly Sharpness with you.\n   It looks like a tiny katana of japanese samurai but it is really sharp and dangerous.\n• base damage: 3–4;\n• unlocks special abilities.",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          2
+        ],
+        "id": 7,
+        "text": "\n   You are lucky to have an Enormous Lead Sword with you.\n   It is so incredibly large so it seems to be a dummy. No one knows how you handle with it because anyone who saw it is dead.\n• base damage: 1–6;\n• unlocks special \"combo-mode\".",
+        "merge": true
+      },
+      {
+        "id": 7,
+        "text": "... Elegant Platinum Lance.\nIt looks absolutely luxuriously and even a bit saucily. No one knows how dangerous it is becouse it is too beautiful to use it as intended.\n• base damage: 3–5;\n• has a chance to avoid enemy attack (33%);\n• has a chance to miss (20%);",
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          3
+        ]
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          4
+        ],
+        "id": 7,
+        "text": "\n   You are lucky to have a Magic Tattoo of Incredible Might on your hand.\n   It is not a piece of art, but it endues you with a magical power. In fact, it looks just disgusting, but you should deal with it.\n• base damage: 2;\n• has a chance to recover health;\n• has a chance to incease base damage.\n",
+        "merge": true
+      },
+      {
+        "text": "Actually, not this one.",
+        "id": 7,
+        "var_more": [
+          "weapon",
+          0
+        ],
+        "instant": true,
+        "var_set": [
+          "weapon",
+          0
+        ]
+      },
+      {
+        "text": "Definitely, this one.",
+        "id": 9,
+        "var_more": [
+          "weapon",
+          0
+        ],
+        "instant": false,
+        "var_set": [
+          "hp",
+          15,
+          "hpe",
+          30,
+          "rmin",
+          2,
+          "rmax",
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "   To place the variables operator on the answer you need to open an \"edit answer\" tool and then to type in the desired operator. If you need more than one operator on the answer you should save the first one and then reiterate with enother.\n   In order to make one operator act on several variables you need to write it in the format:\n\nvar smth [\"name1\",argument1,\"name2\",argument2, ... , \"nameX\",argumentX]\n\n   To delete the operator you may write:\nvar smth []\n\n   Note that all variables automatically have a zero value before any operator of action has changed it.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "[Back]"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "   Realizing yourself as a hero of an old RPG you fight the monster.",
+    "answers": [
+      {
+        "var_show": [
+          "hp",
+          "points;"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": "\nYour Health:",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "hpe",
+          "points;"
+        ],
+        "comment": true,
+        "id": 9,
+        "text": "\nEnemy Health:",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          1
+        ],
+        "id": 9,
+        "text": "\nYour base damage: 3–4 .",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          2
+        ],
+        "id": 9,
+        "text": "\nYour base damage: 1–6 .",
+        "merge": true
+      },
+      {
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          3
+        ],
+        "id": 9,
+        "text": "\nYour base damage: 3–5 .",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "mind",
+          "."
+        ],
+        "comment": true,
+        "var_equal": [
+          "weapon",
+          4
+        ],
+        "id": 9,
+        "text": "\nYour base damage:",
+        "merge": true
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "hpe",
+          0,
+          "weapon",
+          3
+        ],
+        "var_equal": [
+          "weapon",
+          4
+        ],
+        "id": 16,
+        "text": "[Magic attack]\n• deals 1 base damage\n• has a 50% chance to increase base damage\n• has a 20% chance to double base damage\n• has 33% chance to recover 5 Health points",
+        "var_sub": [
+          "hp",
+          "rat",
+          "hpe",
+          "hero"
+        ],
+        "var_random": [
+          "inc",
+          1,
+          2,
+          "dou",
+          1,
+          5,
+          "rec",
+          1,
+          5,
+          "rat",
+          "rmin",
+          "rmax",
+          "hero",
+          "mind",
+          "maxd"
+        ]
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "hpe",
+          0,
+          "weapon",
+          4
+        ],
+        "var_random": [
+          "rat",
+          "rmin",
+          "rmax",
+          "hero",
+          "mind",
+          "maxd"
+        ],
+        "id": 10,
+        "text": "[Boring but effective attack]\n• deals 1 base damage",
+        "var_sub": [
+          "hp",
+          "rat",
+          "hpe",
+          "hero"
+        ]
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "hpe",
+          0,
+          "weapon",
+          3
+        ],
+        "var_random": [
+          "rat",
+          "rmin",
+          "rmax",
+          "hero",
+          "mind",
+          "maxd",
+          "miss",
+          1,
+          3,
+          "double",
+          1,
+          3
+        ],
+        "id": 11,
+        "text": "[Impressive acrobatic attack]\n• deals 2.5 base damage\n• has a 33% chance to miss\n• has a  33% chance to gain double damage",
+        "var_mult": [
+          "hero",
+          2.5
+        ]
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ],
+        "var_random": [
+          "rat",
+          "rmin",
+          "rmax",
+          "hero",
+          "mind",
+          "maxd",
+          "miss",
+          1,
+          2
+        ],
+        "id": 12,
+        "text": "[Attack with a powerful stroke]\n• deals 2 base damage\n• has a 50% chance to miss\n• gains no damage in case of success",
+        "var_mult": [
+          "hero",
+          2
+        ]
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ],
+        "var_equal": [
+          "weapon",
+          1
+        ],
+        "id": 13,
+        "var_sub": [
+          "hpe",
+          6,
+          "rmin",
+          1,
+          "rmax",
+          1
+        ],
+        "need": -13,
+        "text": "[Cut off the enemy tail like a ninja]\n• deals 6 damage\n• weakens enemy attacks\n"
+      },
+      {
+        "var_not": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ],
+        "var_equal": [
+          "weapon",
+          1
+        ],
+        "var_less": [
+          "hp",
+          7,
+          "hpe",
+          7
+        ],
+        "text": "[Decisive blow of the samurai]\n• available when both you and the enemy have no more than 6 Health points\n• kills the enemy trully epically",
+        "id": 14
+      },
+      {
+        "id": 15,
+        "text": "[Start a powerful combo]\n• starts a special combo",
+        "var_not": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ],
+        "var_equal": [
+          "weapon",
+          2
+        ]
+      },
+      {
+        "id": 24,
+        "text": "You are defeated!",
+        "var_equal": [
+          "hp",
+          0
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Victory!",
+        "var_not": [
+          "hp",
+          0
+        ],
+        "var_equal": [
+          "hpe",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "   You perform \"Boring but effective attack\" and Gygakrysa also strikes you.",
+    "answers": [
+      {
+        "var_show": [
+          "hero",
+          "damage to the enemy."
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "\n   Your attack deals",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "rat",
+          "damage to you."
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "\n   Enemy attack deals",
+        "merge": true
+      },
+      {
+        "id": 9,
+        "text": "[Continue battle]",
+        "var_min": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "   Trying to perform an \"Impressive acrobatic attack\" against Gygakrysa you ",
+    "answers": [
+      {
+        "comment": true,
+        "var_equal": [
+          "1",
+          1
+        ],
+        "id": 11,
+        "text": "fall down and can't strike enemy.",
+        "merge": true
+      },
+      {
+        "var_not": [
+          "miss",
+          3
+        ],
+        "id": 11,
+        "calculate": true,
+        "var_sub": [
+          "hpe",
+          "hero"
+        ],
+        "text": "... successfully strike your enemy."
+      },
+      {
+        "var_show": [
+          "hero",
+          "damage."
+        ],
+        "comment": true,
+        "id": 10,
+        "text": "successfully strike your enemy.\n   Your attack deals",
+        "var_not": [
+          "miss",
+          3
+        ],
+        "merge": true
+      },
+      {
+        "var_sub": [
+          "hp",
+          "rat"
+        ],
+        "var_equal": [
+          "double",
+          3
+        ],
+        "id": 11,
+        "text": "Taking advantage of your ridicule movements Gygakrysa strikes you twice dealing double damage.",
+        "calculate": true,
+        "var_mult": [
+          "rat",
+          2
+        ]
+      },
+      {
+        "var_not": [
+          "double",
+          3
+        ],
+        "id": 11,
+        "text": "Gygakrysa isn't impressed by your performance and strikes you.",
+        "var_sub": [
+          "hp",
+          "rat"
+        ],
+        "calculate": true
+      },
+      {
+        "id": 9,
+        "text": "[Continue battle]",
+        "var_min": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ]
+      },
+      {
+        "var_show": [
+          "double"
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "double:",
+        "need": 100
+      },
+      {
+        "id": 11,
+        "text": "<s>r\n   Taking advantage of your ridicule movements Gygakrysa strikes you twice dealing double damage.",
+        "var_equal": [
+          "double",
+          3
+        ],
+        "merge": true
+      },
+      {
+        "id": 11,
+        "text": "\n   Gygakrysa isn't impressed by your performance and strikes you.",
+        "var_not": [
+          "double",
+          3
+        ],
+        "merge": true
+      },
+      {
+        "var_show": [
+          "rat",
+          "damage to you."
+        ],
+        "comment": true,
+        "id": 11,
+        "text": "\n   Enemy attack deals",
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "   You lift your arm far above the head in an incredible stroke and put all your might in an awkward attemp.",
+    "answers": [
+      {
+        "var_equal": [
+          "miss",
+          1
+        ],
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "hpe",
+          "hero"
+        ],
+        "text": "You are lucky enough to succeed and the enemy can't strike you back being shocked."
+      },
+      {
+        "var_equal": [
+          "miss",
+          2
+        ],
+        "id": 12,
+        "calculate": true,
+        "var_sub": [
+          "hp",
+          "rat"
+        ],
+        "text": "Unfortunately, the enemy turns up just behind you and you miss."
+      },
+      {
+        "var_show": [
+          "hero",
+          " damage to Gygakrysa."
+        ],
+        "comment": true,
+        "var_equal": [
+          "miss",
+          1
+        ],
+        "id": 12,
+        "text": " You are lucky enough to succeed and the enemy can't strike you back being shocked.\n   Your attack deals",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "rat",
+          "damage to you."
+        ],
+        "comment": true,
+        "var_equal": [
+          "miss",
+          2
+        ],
+        "id": 12,
+        "text": " Unfortunately, the enemy turns up just behind you and you miss.\n   Enemy attack deals",
+        "merge": true
+      },
+      {
+        "id": 9,
+        "text": "[Continue battle]",
+        "var_min": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "   You menacingly say something indistinct in Japanese and then roll over your enemy back. Quick sweep of wakizashi blade detaches the tail of Gygakrysa and weakens the monster.",
+    "answers": [
+      {
+        "id": 13,
+        "text": "\n   Your attack deals 6 damage to the enemy.",
+        "comment": true,
+        "merge": true
+      },
+      {
+        "id": 9,
+        "text": "[Continue battle]",
+        "var_min": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "   For just a moment you motionlessly look at your enemy but at the next second you frantically throw into the fight.\n   It was a fight to the death.\n   When the cloud of dust has finally settled you scabbard your wakizashi and take a last look at remains of giant monster. A gust of wind has lifted thousands of sakura petals into the air and you slowly go away from the battlefield.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Victory!\n[Return to the first page like a hero]"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   An excellent idea has came to you and you decide to start a mortal combo against your enemy.\n   You realize, that any mistake you make will become the last one for you, but the right order of the blows will defeate the monster.\n\n       GYGAKRYSA",
+    "answers": [
+      {
+        "id": 18,
+        "text": "[Blow from the right shoulder]"
+      },
+      {
+        "id": 19,
+        "text": "[Blow from the left shoulder]"
+      },
+      {
+        "id": 17,
+        "text": "[Downswing blow]"
+      },
+      {
+        "id": 9,
+        "text": "[Continue battle]"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "   You concentate your magic power and strike a monster with it. Unfortunately, you are not powerful enough to defend yourself from a counterattack.\n",
+    "answers": [
+      {
+        "var_show": [
+          "hero",
+          "damage to the enemy."
+        ],
+        "comment": true,
+        "id": 16,
+        "text": "   Your attack deals",
+        "merge": true
+      },
+      {
+        "var_show": [
+          "rat",
+          "damage to you."
+        ],
+        "comment": true,
+        "id": 16,
+        "text": "\n   Enemy attack deals",
+        "merge": true
+      },
+      {
+        "var_add": [
+          "mind",
+          1,
+          "maxd",
+          1
+        ],
+        "var_equal": [
+          "inc",
+          2
+        ],
+        "id": 16,
+        "text": "You feel the fit of magic energy and increase your base damage by 1.",
+        "calculate": true
+      },
+      {
+        "var_equal": [
+          "dou",
+          5
+        ],
+        "id": 16,
+        "text": "You feel the fit of magic energy and double your base damage.",
+        "calculate": true,
+        "var_mult": [
+          "mind",
+          2,
+          "maxd",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "hp",
+          5
+        ],
+        "var_equal": [
+          "rec",
+          3
+        ],
+        "id": 16,
+        "text": "\n   You feel the fit of magic energy and recover 5 Health points.",
+        "calculate": true
+      },
+      {
+        "id": 9,
+        "text": "[Continue battle]",
+        "var_min": [
+          "hp",
+          0,
+          "hpe",
+          0
+        ]
+      },
+      {
+        "id": 16,
+        "text": "\n   You feel the fit of magic energy and increase your base damage by 1.",
+        "merge": true,
+        "var_equal": [
+          "inc",
+          2
+        ]
+      },
+      {
+        "id": 16,
+        "text": "\n   You feel the fit of magic energy and double your base damage.",
+        "merge": true,
+        "var_equal": [
+          "dou",
+          5
+        ]
+      },
+      {
+        "id": 16,
+        "text": "\n   You feel the fit of magic energy and recover 5 Health points.",
+        "var_equal": [
+          "rec",
+          3
+        ],
+        "merge": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "   You perform a downswing blow.\n\n   Gygakrysa recieve a damage.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "[Blow from the right shoulder]"
+      },
+      {
+        "id": 20,
+        "text": "[Blow from the left shoulder]"
+      },
+      {
+        "id": 22,
+        "text": "[Downswing blow]"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "   You perform the blow from the right shoulder, but this movement leaves your neck unprotected. Gygakrysa embraces the opportunity and strikes it in a fast lunge.\n\n   You recieve a critical damage!\n\n   You die!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Return to the first page]"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "   You perform the blow from the left shoulder, but this movement leaves all your body unprotected. Gygakrysa embraces the opportunity and strikes in a fast lunge.\n\n   You recieve a critical damage!\n\n   You die!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Return to the first page]"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "   You perform the blow from the left shoulder, but this movement leaves all your body unprotected. Gygakrysa embraces the opportunity and strikes in a fast lunge.\n\n   You recieve a critical damage!\n\n   You die!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Return to the first page]"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "   You perform the blow from the right shoulder, but this movement leaves your neck unprotected. Gygakrysa embraces the opportunity and strikes it in a fast lunge.\n\n   You recieve a critical damage!\n\n   You die!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Return to the first page]"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "   You perform a downswing blow.\n\n   Gygakrysa recieve a damage!\n\n   Gygakrysa dies!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Victory!\n[Return to the first page like a hero]"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "   Here you can see your rewards and achievements.",
+    "answers": [
+      {
+        "need_ever": true,
+        "comment": true,
+        "id": 23,
+        "text": "★ You have defeated the Giant Gygakrysa.",
+        "need": 25
+      },
+      {
+        "need_ever": true,
+        "comment": true,
+        "id": 23,
+        "text": "★ You have defeated the Giant Gygakrysa with a Mortal Combo.",
+        "need": 22
+      },
+      {
+        "need_ever": true,
+        "comment": true,
+        "id": 23,
+        "text": "★ You have defeated the Giant Gygakrysa with the Decieving Blow of the Samurai.",
+        "need": 14
+      },
+      {
+        "need_ever": true,
+        "comment": true,
+        "id": 23,
+        "text": "‡ You failed the mortal combo and died.",
+        "need": [
+          18,
+          19,
+          20,
+          21
+        ],
+        "need_sometimes": true
+      },
+      {
+        "need_ever": true,
+        "comment": true,
+        "id": 23,
+        "text": "‡ You have lost the battle against Gygakrysa.",
+        "need": 24
+      },
+      {
+        "id": 1,
+        "text": "[Back]"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "   You have lost this battle, but you can try one more time.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Return to the first page]"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "   You have defeated the monster, congratulations!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "[Return to the first page]"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "   As it was noticed before, all calculations with variables are performed only after the reader choose the answer which contains theese operators. But there is an opportunity to avoid this limitation by means of operator \"calculate\".\n   Placed on the answer this operator transforms it into a calculation-type answer, which has several features: this answer becomes invisible for the reader and all operators on it work automatically just after the page is loaded as if the reader has choosen this answer. It may be used for a construction of complex series of calculations hidden from the reader.\n   The sequence of calculations starts from the upper \"calculate\"-answer, so you can easily tune an order of priority for each situation by simple shift of answers position. To switch on this mode you should enter:\n  calculate\ninto an answer field and in the same way you can disable it.",
+    "answers": [
+      {
+        "id": 26,
+        "text": "[Back]",
+        "isBack": true,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 28,
+    "text": "",
+    "answers": []
+  }
+]

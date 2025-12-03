@@ -1,0 +1,829 @@
+[
+  {
+    "id": 1,
+    "text": "    Версия 6.2\n\n    Этот квест содержит демо примеров кода из серии уроков Анкилозавра Анкилозавровича «Lua-кухня: разжёвано с любовью».\n    Примеры сгруппированы по урокам, которые выходят в группе Анкилозавра Анкилозавровича «Заметки юрского периода», а также дублируются в основной группе «Текстовые Квесты: играй и пиши».",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 10,
+        "text": "Разрешения копирования для всех. Установка страницы автообновления функций и её первый запуск.",
+        "calculate": true,
+        "var_set": [
+          "global allowCopy",
+          1,
+          "global reloadFunctions",
+          10
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Lua в ТК от простого к сложному"
+      },
+      {
+        "id": 2,
+        "text": "Урок 8: создание динамических текстов."
+      },
+      {
+        "id": 7,
+        "text": "Урок 9: создание базы данных."
+      },
+      {
+        "id": 12,
+        "text": "Урок 10: объекты."
+      },
+      {
+        "id": 14,
+        "text": "Урок 11, 12. Работа с полотном. Игра «Супер Марио».",
+        "contentList": [
+          "https://1.bp.blogspot.com/-W1G19EOEZ1s/XbgwGXpANDI/AAAAAAAABL0/N4hOMnViFmE8cUL4dmVIL8O6AIbrkLYAgCLcBGAsYHQ/s1600/Mario.png https://1.bp.blogspot.com/-i7yWozlWNQI/Xcq7L4EoO8I/AAAAAAAABOA/5ptYqq2hC8ocofduUlbmLl-o4MPXZpIrwCLcBGAsYHQ/s1600/molot.png",
+          1
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Урок 13. Работа с полотном. Создание графического инвентаря. Подготовка изображений."
+      },
+      {
+        "id": 20,
+        "text": "Многостраничный инвентарь"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "На восьмом уроке мы приступили к решению практических квестовых задач средствами Lua.",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Задача: создание динамических текстов."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Сложный выбор ожидает тебя, о читатель! Кого пошлёшь ты на такую низкую и неблагодарную миссию, как требование выкупа за похищенного царевича?\n\nАрагорна, сына ли Араторнова? Или, быть может, Леголаса, Трандуилова отпрыска? Или главного хранителя Кольца Фродо Бэггинса? Выбирай же, не медли!",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Арагорна, сына Араторна.",
+        "lua_do": "function lua_do()\n    actor = \"Арагорн, сын Араторна\"\nend"
+      },
+      {
+        "id": 4,
+        "text": "Леголаса, сына Трандуила.",
+        "lua_do": "function lua_do()\n    actor = \"Леголас, сын Трандуила\"\nend"
+      },
+      {
+        "id": 4,
+        "text": "Фродо Бэггинса.",
+        "lua_do": "function lua_do()\n    actor = \"Фродо Бэггинс\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Сколько же дерзнёшь запросить ты, о ",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Текст ответа будет сформирован автоматически",
+        "lua_text": "function lua_text()\n    return actor..\", у венценосного отца за жизнь единственного наследника? В какой степени алчность растлила твоё сердце?! Какова мера ожесточения твоей совести? Насколько потерял ты образ человеческий, приняв подобие звериное?\"\nend",
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "10 000 древних рун.",
+        "lua_do": "function lua_do()\n    money = 10000\nend"
+      },
+      {
+        "id": 5,
+        "text": "1 000 древних рун.",
+        "lua_do": "function lua_do()\n    money = 1000\nend"
+      },
+      {
+        "id": 5,
+        "text": "100 древних рун.",
+        "lua_do": "function lua_do()\n    money = 100\nend"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Какими словами ты, о ",
+    "answers": [
+      {
+        "id": 5,
+        "text": "Текст ответа будет сформирован автоматически",
+        "lua_text": "function lua_text()\n    return actor..\", обратишься к безутешной королевской чете, у которой ты со своими прихвостнями украл невинного отрока?\"\nend",
+        "merge": true
+      },
+      {
+        "id": 6,
+        "text": "Вежливыми.",
+        "lua_do": "function lua_do()\n    address = \"О Ваше Величество, я, \"..actor..\", имею честь приветствовать Вас.<s>\n<s>\nЗажатый тисками жизненных обстоятельств, я вынужден был пойти на шаг, которым не горжусь.<s>\n<s>\nВаша семья может вновь воссоединиться, если до заката \"..money..\" древних рун окажется в пещере Грома, что в Урочище Тяжёлых Мечей.<s>\n<s>\n\"\nend"
+      },
+      {
+        "id": 6,
+        "text": "Сухими.",
+        "lua_do": "function lua_do()\n    address = \"Ваше Величество. Имею честь представиться: \"..actor..\".<s>\n<s>\nЕсли хотите вновь увидеть своего сына, \"..money..\" древних рун должны к закату лежать в Урочище Тяжелых Мечей в пещере Грома. Честь имею.<s>\n<s>\n\"\nend"
+      },
+      {
+        "id": 6,
+        "text": "Наглыми.",
+        "lua_do": "function lua_do()\n    address = \"Значит, слушай сюда, Твоё Величество… Э, стражу убрал резко, иначе своего щенка живым не увидишь! Мои кореша позаботятся!<s>\n<s>\nЧтоб ты знал, я — \"..actor..\", я тут на районе рулю, если что. Хочешь пацана вернуть, — \"..money..\" древних рун должны лежать к закату в пещере Грома. Где она, сам знаешь! Покедова, папаша!<s>\n<s>\n\"\nend"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Великолепный тронный зал освещали тысячи свечей, придворные были облачены в великолепные одежды, доспехи стражи сверкали отполированной до зеркального блеска сталью.\n\nНа троне восседала венценосная чета. Лица их были печальны: уже второй день шёл с того момента, когда их единственный наследник и любимый сын Гарольд был похищен из под самого носа стражи и гувернанток — похоже, дело не обошлось без магии.\n\nХодили слухи о некоем Братстве Кольца, орудующем последнее время в этих краях. Слухи были обрывочны и сомнительны, но сегодня один из этих головорезов дерзнул самолично заявиться во дворец.\n\nИ только лишь то, что, по его словам, он знал, где находится царевич, спасло его шею от пеньковой веревки.\n\nВойдя в тронный зал, наглец обратился к правителю:\n\n",
+    "answers": [
+      {
+        "id": 6,
+        "text": "Текст ответа будет сформирован автоматически.",
+        "lua_text": "function lua_text()\n    return \"— \"..address..\"Царь погрузился в глубокую задумчивость.\"\nend",
+        "merge": true
+      },
+      {
+        "id": 3,
+        "text": "Начать снова."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "На этой странице заполняется внутриигровая база данных.",
+    "answers": [
+      {
+        "id": 7,
+        "text": "Создание базы данных.",
+        "calculate": true,
+        "lua_do": "function lua_do()\n    db = {\n        weapons = {\n            AK_74 = {\n                weight = 3.3,\n                magazine = 30,\n                cartridge = \"5,45x39\",\n                damage = 14,\n                firingRate = 600\n            }\n        },\n        characters = {\n            privateRyan = {\n                name = \"Рядовой Райан\",\n                age = 20,\n                hp = 35,\n                attack = 14,\n                weapon = \"AK_74\"\n            }\n        }\n    }\nend"
+      },
+      {
+        "id": 7,
+        "text": "Текст ответа будет сформирован автоматически.",
+        "lua_text": "function lua_text()\n    return \"Скорострельность оружия рядового Райана равна \"..db.weapons[db.characters.privateRyan.weapon].firingRate\nend",
+        "no_transition": true
+      },
+      {
+        "id": 8,
+        "text": "Изменить показатель скорострельности оружия AK-74 на 800.",
+        "lua_do": "function lua_do()\n    db.weapons.AK_74.firingRate = 800\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Здесь мы можем наблюдать изменённый показатель скорострельности оружия рядового Райана.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Текст ответа будет сформирован автоматически.",
+        "lua_text": "function lua_text()\n    return \"Скорострельность оружия рядового Райана равна \"..db.weapons[db.characters.privateRyan.weapon].firingRate\nend",
+        "no_transition": true
+      },
+      {
+        "isBack": true,
+        "text": "Вернуться назад.",
+        "id": 8,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "На этой странице реализован пример из урока №10. Работа с методом Поршня sleep.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n    Porshen = {}\n    function Porshen.sleep(sleepTime, awakeTime)\n        if tonumber(os.date(\"%H\")) > sleepTime and tonumber(os.date(\"%H\")) > awakeTime then\n             return \"Не будите! Я только спать лёг!\"\n        elseif tonumber(os.date(\"%H\")) < sleepTime and tonumber(os.date(\"%H\")) < awakeTime then\n            return \"Отстаньте! Ещё вставать рано!\"\n        else\n            return \"Я бодр, и свеж, и полон надежд!\"\n        end\n    end\nend",
+        "calculate": true,
+        "id": 9,
+        "text": "Объявление функции."
+      },
+      {
+        "id": 9,
+        "text": "Вывод текста.",
+        "lua_text": "function lua_text()\n    return Porshen.sleep(20, 6)\nend",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "text": "Назад.",
+        "id": 9,
+        "backstepCount": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Эта страница используется для объявления функций. При каждом заходе в квест все калькулейты этой страницы будут обновляться.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 10,
+        "text": "Функции инвентаря",
+        "calculate": true,
+        "lua_do": "function lua_do()\n    function pagePrepare(storage, size, index)\n        pageSize = size or 10\n        pageIndex = index or 1\n        local idList = {}\n        for key in pairs(storage) do\n            table.insert(idList, key)\n        end\n        table.sort(idList)\n        return idList\n    end\n\n    function useItem(character, item)\n        if character.equipment[item].slot then\n            message(\"Предмет экипирован\")\n            for key, val in pairs(character.equipment[item].modifications) do\n                character.chars[key] = character.chars[key] <plus> val\n            end\n            if character.equipment[item].count > 1 then\n                character.slots[character.equipment[item].slot] = character.equipment[item]\n                character.equipment[item].count = character.equipment[item].count - 1\n            else\n                character.slots[character.equipment[item].slot] = character.equipment[item]\n                character.equipment[item] = nil\n                idList = pagePrepare(character.equipment, pageSize, 1)\n            end\n        else\n            for key, val in pairs(character.equipment[item].modifications) do\n                local modValue = character.chars[key] <plus> val > character.charsMax[key] and character.charsMax[key] - character.chars[key] or (character.chars[key] <plus> val < character.charsMin[key] and character.charsMin[key] - character.chars[key] or val)\n                if character.chars[key] >= character.charsMax[key] or character.chars[key] <= character.charsMin[key] then\n                    modValue = 0\n                end\n                character.chars[key] = character.chars[key] <plus> modValue\n                \n                if character.equipment[item].time then\n                    local function onTimeElapsed(event)\n                        event.source.params.character.chars[key] = event.source.params.character.chars[key] - event.source.params.value\n                    end\n                    \n                    local timerProp = timer.performWithDelay(character.equipment[item].time * 1000, onTimeElapsed)\n                    timerProp.params = {character = character, item = item, value = modValue}\n                end\n            end\n\n            if character.equipment[item].time then\n                timer.performWithDelay(character.equipment[item].time * 1000,\n                function(event)\n                    if g.userInQuest == 1 then\n                        message(\"Действие \"..character.equipment[item].name..\" закончилось.\")\n                    end\n                end)\n            end\n\n            if character.equipment[item].count > 1 then\n                character.equipment[item].count = character.equipment[item].count - 1\n            else\n                character.equipment[item] = nil\n                idList = pagePrepare(character.equipment, pageSize, 1)\n            end\n        end\n    end\n\n    function removeItem(character, slot)\n        for key, val in pairs(character.slots[slot].modifications) do\n            character.chars[key] = character.chars[key] - val\n        end\n\n        if character.equipment[character.slots[slot].id] then\n            character.equipment[character.slots[slot].id].count = character.equipment[character.slots[slot].id].count <plus> 1\n            character.slots[slot] = \"empty\"\n        else\n            character.equipment[character.slots[slot].id] = character.slots[slot]\n            character.slots[slot] = \"empty\"\n            idList = pagePrepare(character.equipment, pageSize, 1)\n        end\n    end\n\n    function getChar(character, char)\n        return character.chars[char] > character.charsMax[char] and character.charsMax[char] or (character.chars[char] < character.charsMin[char] and character.charsMin[char] or character.chars[char])\n    end\n\n    function upperFirstLetter(str)\n        return utf8.upper(utf8.sub(str, 1, 1))..utf8.sub(str, 2)\n    end\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n    message(\"Все функции обновлены\")\nend",
+        "calculate": true,
+        "id": 10,
+        "text": "Сообщение об обновлении функций"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Пустышка",
+    "answers": []
+  },
+  {
+    "id": 12,
+    "text": "На уроке № 10 мы начали изучать объекты.",
+    "answers": [
+      {
+        "id": 9,
+        "text": "Метод Поршня sleep."
+      },
+      {
+        "id": 13,
+        "text": "Поршень подтягивается на турнике."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "На этой странице реализован метод подтягивания Поршнем. Урок № 10.",
+    "answers": [
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n    Porshen = {weight = 80, strength = 350}\n    function Porshen.pullUp(self)\n        return math.round(self.strength / self.weight)\n    end\nend",
+        "calculate": true,
+        "id": 13,
+        "text": "Создание объекта."
+      },
+      {
+        "id": 13,
+        "text": "Подтянуться.",
+        "lua_text": "function lua_text()\n    return \"Поршень подтянулся \"..Porshen.pullUp(Porshen)..\" раз.\"\nend",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "text": "Назад.",
+        "backstepCount": 1,
+        "id": 13
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Передвигайте Марио по экрану.",
+    "answers": [
+      {
+        "id": 14,
+        "text": "background",
+        "url": "https://1.bp.blogspot.com/-kAIP0miu9Ow/Xbg1VEYO-vI/AAAAAAAABME/bNnSgzmCWJw2vtWD2c0dogBycV3_M6qHQCEwYBhgL/s1000/background.jpg"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    images.background.alpha = 0\n    transition.fadeIn(images.background, {time = 2000})\n    actor = display.newImage(\"https://1.bp.blogspot.com/-W1G19EOEZ1s/XbgwGXpANDI/AAAAAAAABL0/N4hOMnViFmE8cUL4dmVIL8O6AIbrkLYAgCLcBGAsYHQ/s1600/Mario.png\")\n    actor.width = canvas.width / 18\n    actor.height = canvas.width / 18\n    actor.x = canvas.width / 20\n    actor.y = canvas.width / 36 * -1\n\n    transition.moveTo(actor, {y = canvas.height / 1.38, delay = 2000, time = 2200, transition = easing.outBounce})\n    \n    actor:addEventListener(\"tap\", function() message(\"Попрошу без рук, пожалуйста!\") end)\nend",
+        "text": "Подготовка элементов.",
+        "id": 14,
+        "calculate": false
+      },
+      {
+        "no_transition": true,
+        "lua_do": "function lua_do()\n    transition.scaleTo(actor, {xScale = -1, time = 10})\n    transition.moveBy(actor, {x = canvas.width / 6 * -1})\n    transition.to(actor, {y = canvas.height / 1.6, transition = easing.outQuad, time = 250, onComplete = function()\n        transition.to(actor, {y = canvas.height / 1.38, transition = easing.inQuad, time = 250})\n    end})\nend",
+        "text": "Влево",
+        "id": 14,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "id": 14,
+        "text": "Вправо",
+        "lua_do": "function lua_do()\n    transition.scaleTo(actor, {xScale = 1, time = 10})\n    transition.moveBy(actor, {x = canvas.width / 6})\n    transition.to(actor, {y = canvas.height / 1.6, transition = easing.outQuad, time = 250, onComplete = function()\n        transition.to(actor, {y = canvas.height / 1.38, transition = easing.inQuad, time = 250})\n    end})\nend",
+        "no_transition": true
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Работа с графическим инвентарём.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Укажите команды для картинки",
+        "url": "https://1.bp.blogspot.com/-Zw-vu1VXr6c/XcpqKJvW4uI/AAAAAAAABN0/e-wlaNy5Ya4rHQH9UiQaACyumy0I8_HXgCLcBGAsYHQ/s1600/2019_11_12_121217.png"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    local function touchListener(event)\n        if event.phase == \"began\" then\n            display.currentStage:setFocus(event.target)\n            event.target.touchOffsetX = event.x - event.target.x\n            event.target.touchOffsetY = event.y - event.target.y\n        elseif event.phase == \"moved\" then\n            event.target.x = event.x - event.target.touchOffsetX\n            event.target.y = event.y - event.target.touchOffsetY\n        elseif event.phase == \"ended\" or event.phase == \"cancelled\" then\n            display.currentStage:setFocus(nil)\n            if event.target.x >= startPointX - event.target.width / 2 then\n                event.target.x = startPointX <plus> math.round((event.target.x - startPointX) / unit) * unit\n                event.target.y = startPointY <plus> math.round((event.target.y - startPointY) / unit) * unit\n                if event.target.x >= startPointX <plus> unit * 5 then\n                   event.target.x = startPointX <plus> unit * 5\n                end\n                 if event.target.y >= startPointY <plus> unit * 3 then\n                   event.target.y = startPointY <plus> unit * 3\n                end\n                if event.target.y <= startPointY then\n                    event.target.y = startPointY\n                end\n            end\n        end\n        return true\n    end\n\n    startPointX = canvas.width / 2.2\n    startPointY = canvas.height / 4.8\n    unit = canvas.width / 13.5\n\n    hammer = display.newImage(\"https://1.bp.blogspot.com/-i7yWozlWNQI/Xcq7L4EoO8I/AAAAAAAABOA/5ptYqq2hC8ocofduUlbmLl-o4MPXZpIrwCLcBGAsYHQ/s1600/molot.png\")\n    \n    hammer.x = startPointX <plus> unit * 5\n    hammer.y = startPointY <plus> unit * 3\n    hammer.width = canvas.width / 16\n    hammer.height = canvas.width / 16\n    hammer:addEventListener(\"touch\", touchListener)\n\n  --  rightArmSensor = display.newRect(canvasGroup, canvas.width / 5.6, canvas.height / 3.8, canvas.width / 15, canvas.width / 15)\nend",
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "id": 15
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Работа с графическим инвентарём.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "background",
+        "url": "https://1.bp.blogspot.com/-Zw-vu1VXr6c/XcpqKJvW4uI/AAAAAAAABN0/e-wlaNy5Ya4rHQH9UiQaACyumy0I8_HXgCLcBGAsYHQ/s1600/2019_11_12_121217.png"
+      },
+      {
+        "id": 16,
+        "text": "hammer",
+        "url": "https://1.bp.blogspot.com/-i7yWozlWNQI/Xcq7L4EoO8I/AAAAAAAABOA/5ptYqq2hC8ocofduUlbmLl-o4MPXZpIrwCLcBGAsYHQ/s1600/molot.png"
+      },
+      {
+        "id": 16,
+        "text": "shield",
+        "url": "https://1.bp.blogspot.com/-ezQ5v-I_tdc/Xcu_3uH998I/AAAAAAAABOM/m3gIf4wkUTI2X0iDps-gqkba6xpUEsWfwCLcBGAsYHQ/s1600/shield.png"
+      },
+      {
+        "id": 16,
+        "text": "armour",
+        "url": "https://1.bp.blogspot.com/-rz1jjMlrFTc/XcvBfqXF-WI/AAAAAAAABOY/VjF1CQdYfhQz_acMwPskZ6ILRZrTFKUXwCLcBGAsYHQ/s1600/armour.png"
+      },
+      {
+        "id": 16,
+        "text": "pendant",
+        "url": "https://1.bp.blogspot.com/-ofhD_zb8PIs/XcvDutOQfbI/AAAAAAAABOk/E2DnETafsbAWkbMqE37dpqnRQoOonMI9QCLcBGAsYHQ/s1600/pendant.png"
+      },
+      {
+        "id": 16,
+        "text": "cloak",
+        "url": "https://1.bp.blogspot.com/-E3IZGzeyCns/XcvGGPsAKpI/AAAAAAAABOw/wYbH26qlxkA1eu73PpjAu9zUdH3vsfguACLcBGAsYHQ/s1600/cloak.png"
+      },
+      {
+        "id": 16,
+        "text": "boots",
+        "url": "https://1.bp.blogspot.com/-9ugqWeYoF8s/XcvitzA--tI/AAAAAAAABPU/RXQf9_8HE3kYDzF6P3P1iOoFQNI0kxgyACLcBGAsYHQ/s1600/boots.png"
+      },
+      {
+        "id": 16,
+        "text": "ring",
+        "url": "https://1.bp.blogspot.com/-U6leqcPJG8Q/Xcvk7eTBPpI/AAAAAAAABPo/FNlFZU2JLf0ki2b61E6GoPpfPZ4IIbttgCLcBGAsYHQ/s1600/ring.png"
+      },
+      {
+        "id": 16,
+        "text": "stone",
+        "url": "https://1.bp.blogspot.com/-aDdMir48wXg/XcvmqZhGvMI/AAAAAAAABQE/sMJMDhNdFHsqCiwYupRi283YXnBywov1QCLcBGAsYHQ/s1600/stone.png"
+      },
+      {
+        "id": 16,
+        "text": "horn",
+        "url": "https://1.bp.blogspot.com/-GmbuRu--WF0/XcvnsdZXf2I/AAAAAAAABQQ/lhMtUJMqoscKYPLNSwj9KJujEFjoauG4wCLcBGAsYHQ/s1600/horn.png"
+      },
+      {
+        "super_calculate": true,
+        "id": 16,
+        "calculate": false,
+        "lua_do": "function lua_do()\n    function hideImages(imagesID)\n\n        -- Проверка корректности переданных данных\n        if type(imagesID) ~= \"table\" then return false end\n        for _, val in ipairs(imagesID) do\n            if not(type(val) == \"string\" and images[val]) then return false end\n        end\n\n        -- Цикл скрытия картинок\n        for _, val in ipairs(imagesID) do\n            images[val].isVisible = false\n        end\n\n        -- Возврат значения true, говорящего о том, что все картинки, имена которых были переданы функции успешно скрыты\n        return true\n    end\n\n    succesfulHiding = hideImages{\"hammer\", \"shield\", \"armour\", \"pendant\", \"cloak\", \"boots\", \"ring\", \"stone\", \"horn\"}\nend",
+        "text": "Работа с изображениями."
+      },
+      {
+        "comment": true,
+        "id": 16,
+        "instant": false,
+        "text": "Скрытие картинок прошло успешно.",
+        "lua_if": "function lua_if()\n    return succesfulHiding\nend"
+      },
+      {
+        "comment": true,
+        "id": 16,
+        "text": "При скрытии картинок произошёл сбой. Проверьте, правильно ли оформлен конструктор таблицы, все ли элементы в ней имеют текстовое значение и нет ли в них опечаток.",
+        "lua_if": "function lua_if()\n    return not succesfulHiding\nend",
+        "instant": false
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Работа с графическим инвентарём.",
+    "answers": [
+      {
+        "id": 16,
+        "text": "background",
+        "url": "https://1.bp.blogspot.com/-Zw-vu1VXr6c/XcpqKJvW4uI/AAAAAAAABN0/e-wlaNy5Ya4rHQH9UiQaACyumy0I8_HXgCLcBGAsYHQ/s1600/2019_11_12_121217.png"
+      },
+      {
+        "id": 16,
+        "text": "hammer",
+        "url": "https://1.bp.blogspot.com/-i7yWozlWNQI/Xcq7L4EoO8I/AAAAAAAABOA/5ptYqq2hC8ocofduUlbmLl-o4MPXZpIrwCLcBGAsYHQ/s1600/molot.png"
+      },
+      {
+        "id": 16,
+        "text": "shield",
+        "url": "https://1.bp.blogspot.com/-ezQ5v-I_tdc/Xcu_3uH998I/AAAAAAAABOM/m3gIf4wkUTI2X0iDps-gqkba6xpUEsWfwCLcBGAsYHQ/s1600/shield.png"
+      },
+      {
+        "id": 16,
+        "text": "armour",
+        "url": "https://1.bp.blogspot.com/-rz1jjMlrFTc/XcvBfqXF-WI/AAAAAAAABOY/VjF1CQdYfhQz_acMwPskZ6ILRZrTFKUXwCLcBGAsYHQ/s1600/armour.png"
+      },
+      {
+        "id": 16,
+        "text": "pendant",
+        "url": "https://1.bp.blogspot.com/-ofhD_zb8PIs/XcvDutOQfbI/AAAAAAAABOk/E2DnETafsbAWkbMqE37dpqnRQoOonMI9QCLcBGAsYHQ/s1600/pendant.png"
+      },
+      {
+        "id": 16,
+        "text": "cloak",
+        "url": "https://1.bp.blogspot.com/-E3IZGzeyCns/XcvGGPsAKpI/AAAAAAAABOw/wYbH26qlxkA1eu73PpjAu9zUdH3vsfguACLcBGAsYHQ/s1600/cloak.png"
+      },
+      {
+        "id": 16,
+        "text": "boots",
+        "url": "https://1.bp.blogspot.com/-9ugqWeYoF8s/XcvitzA--tI/AAAAAAAABPU/RXQf9_8HE3kYDzF6P3P1iOoFQNI0kxgyACLcBGAsYHQ/s1600/boots.png"
+      },
+      {
+        "id": 16,
+        "text": "ring",
+        "url": "https://1.bp.blogspot.com/-U6leqcPJG8Q/Xcvk7eTBPpI/AAAAAAAABPo/FNlFZU2JLf0ki2b61E6GoPpfPZ4IIbttgCLcBGAsYHQ/s1600/ring.png"
+      },
+      {
+        "id": 16,
+        "text": "stone",
+        "url": "https://1.bp.blogspot.com/-aDdMir48wXg/XcvmqZhGvMI/AAAAAAAABQE/sMJMDhNdFHsqCiwYupRi283YXnBywov1QCLcBGAsYHQ/s1600/stone.png"
+      },
+      {
+        "id": 16,
+        "text": "horn",
+        "url": "https://1.bp.blogspot.com/-GmbuRu--WF0/XcvnsdZXf2I/AAAAAAAABQQ/lhMtUJMqoscKYPLNSwj9KJujEFjoauG4wCLcBGAsYHQ/s1600/horn.png"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n    function hideImages(imagesID)\n\n        -- Проверка корректности переданных данных\n        if type(imagesID) ~= \"table\" then return false end\n        for _, val in ipairs(imagesID) do\n            if not(type(val) == \"string\" and images[val]) then return false end\n        end\n\n        -- Цикл скрытия картинок\n        for _, val in ipairs(imagesID) do\n            images[val].isVisible = false\n        end\n\n        -- Возврат значения true, говорящего о том, что все картинки, имена которых были переданы функции успешно скрыты.\n        return true\n    end\n\n    succesfulHiding = hideImages{\"hammer\", \"shield\", \"armour\", \"pendant\", \"cloak\", \"boots\", \"ring\", \"stone\", \"horn\"}\n\n    -- Создаём единицу размера, которая будет автоматически масштабироваться в соответствии с размером полотна.\n    unit = canvas.width / 1000\n\n    -- Создаём таблицу, в которой будут храниться данные о положении и размерах ячеек.\n    cells = {\n        bag = {\n            {\n                {x = 453, y = 125, width = 64, height = 64},\n                {x = 527, y = 125, width = 64, height = 64},\n                {x = 602, y = 125, width = 64, height = 64},\n                {x = 676, y = 125, width = 64, height = 64},\n                {x = 751, y = 125, width = 64, height = 64},\n                {x = 825, y = 125, width = 64, height = 64}\n           },\n           {\n                {x = 453, y = 199, width = 64, height = 64},\n                {x = 527, y = 199, width = 64, height = 64},\n                {x = 602, y = 199, width = 64, height = 64},\n                {x = 676, y = 199, width = 64, height = 64},\n                {x = 751, y = 199, width = 64, height = 64},\n                {x = 825, y = 199, width = 64, height = 64}\n           },\n           {\n                {x = 453, y = 274, width = 64, height = 64},\n                {x = 527, y = 274, width = 64, height = 64},\n                {x = 602, y = 274, width = 64, height = 64},\n                {x = 676, y = 274, width = 64, height = 64},\n                {x = 751, y = 274, width = 64, height = 64},\n                {x = 825, y = 274, width = 64, height = 64}\n            },\n            {\n                {x = 453, y = 348, width = 64, height = 64},\n                {x = 527, y = 348, width = 64, height = 64},\n                {x = 602, y = 348, width = 64, height = 64},\n                {x = 676, y = 348, width = 64, height = 64},\n                {x = 751, y = 348, width = 64, height = 64},\n                {x = 825, y = 348, width = 64, height = 64}\n           }\n        },\n        equipment = {\n            rightShoulder = {x = 180, y = 160, width = 64, height = 64},\n            leftShoulder = {x = 327, y = 160, width = 64, height = 64},\n            corpus = {x = 253, y = 170, width = 64, height = 64},\n            rightHand = {x = 180, y = 234, width = 64, height = 64},\n            leftHand = {x = 327, y = 234, width = 64, height = 64},\n            hips = {x = 253, y = 244, width = 64, height = 64},\n            rightShin = {x = 180, y = 307, width = 64, height = 64},\n            leftShin = {x = 327, y = 307, width = 64, height = 64},\n            foots = {x = 253, y = 347, width = 64, height = 64}\n        }\n    }\n\n    -- Функция, размещающая предмет в указанную ячейку.\n    function locateItem(unit, name, row, cell)\n\n        -- Проверка, имеется ли переданное имя в таблице images\n        local nameIsOK\n        for key in pairs(images) do\n            if key == name then nameIsOK = true end\n        end\n        if not nameIsOK then\n            return false, \"Функции locateItem передано имя картинки, которого нет в таблице images!\"\n        end\n\n        -- Проверка остальных аргументов, передаваемых функции\n        if type(unit) ~= \"number\" or type(row) ~= \"number\" or type(cell) ~= \"number\" or row < 1 or row > 4 or cell < 1 or cell > 6 then\n            return false, \"Функции locateItem передано некорректное значение аргументов unit, row или cell!\"\n        end\n\n        -- Размещение элементов на полотне\n        item = display.newImage(images[name].url)\n        item.x = cells.bag[row][cell].x * unit\n        item.y = cells.bag[row][cell].y * unit\n        item.width = cells.bag[row][cell].width * unit\n        item.height = cells.bag[row][cell].height * unit\n\n        -- Возврат экранного объекта.\n        return item\n    end\n\n    hammer = locateItem(unit, \"hammer\", 1, 1)\n    shield = locateItem(unit, \"shield\", 1, 2)\n    armour = locateItem(unit, \"armour\", 1, 3)\n    pendant = locateItem(unit, \"pendant\", 1, 4)\n    cloak = locateItem(unit, \"cloak\", 1, 5)\n    boots = locateItem(unit, \"boots\", 1, 6)\n    ring = locateItem(unit, \"ring\", 2, 1)\n    stone = locateItem(unit, \"stone\", 2, 2)\n    horn = locateItem(unit, \"horn\", 2, 3)\nend",
+        "calculate": false,
+        "text": "Работа с изображениями.",
+        "id": 16
+      },
+      {
+        "comment": true,
+        "id": 16,
+        "text": "Скрытие картинок прошло успешно.",
+        "lua_if": "function lua_if()\n    return succesfulHiding and g.isAuthor\nend",
+        "instant": false
+      },
+      {
+        "lua_if": "function lua_if()\n    return not succesfulHiding and g.isAuthor\nend",
+        "id": 16,
+        "text": "При скрытии картинок произошёл сбой. Проверьте, правильно ли оформлен конструктор таблицы, все ли элементы в ней имеют текстовое значение и нет ли в них опечаток.",
+        "instant": false,
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "На первую страницу."
+      },
+      {
+        "id": 18,
+        "text": "Новый ответ. введите текст",
+        "lua_if": "function lua_if()\nsuccess, report = locateItem(unit, \"hammer\", 3, 6)\nreturn not success\nend",
+        "lua_text": "function lua_text()\nreturn report\nend"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Пустышка.",
+    "answers": []
+  },
+  {
+    "id": 19,
+    "text": "Пустышка.",
+    "answers": []
+  },
+  {
+    "id": 20,
+    "text": "На этой странице создаётся персонаж, с которым будет производиться последующая работа.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Создать персонажа.",
+        "lua_do": "function lua_do()\n    personage = {\n        name = \"Главный герой\",\n        chars = {\n            str = 8,\n            dex = 12,\n            con = 9,\n            int = 7,\n            wis = 11,\n            cha = 16,\n            hp = 13,\n            att = 12,\n            def = 13,\n            damage = 2\n        },\n        charsMax = {\n            str = 20,\n            dex = 20,\n            con = 20,\n            int = 20,\n            wis = 20,\n            cha = 20,\n            hp = 20,\n            att = 20,\n            def = 20,\n            damage = 30\n        },\n        charsMin = {\n            str = 1,\n            dex = 1,\n            con = 1,\n            int = 1,\n            wis = 1,\n            cha = 1,\n            hp = 1,\n            att = 1,\n            def = 1,\n            damage = 1\n        },\n        slots = {\n            head = \"empty\",\n            cloak = \"empty\",\n            shoulders = \"empty\",\n            leftHand = \"empty\",\n            rightHand = \"empty\",\n            body = \"empty\",\n            belt = \"empty\",\n            hips = \"empty\",\n            legs = \"empty\",\n            finger = \"empty\"\n        },\n        equipment = {\n        }\n    }\nend"
+      },
+      {
+        "super_calculate": false,
+        "id": 10,
+        "calculate": false,
+        "run": [
+          10
+        ],
+        "text": "Инициализация библиотеки функций"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "На этой странице заполняется базовый инвентарь. Он может быть дополнен на любой странице квеста.",
+    "answers": [
+      {
+        "id": 22,
+        "text": "Заполнить инвентарь.",
+        "lua_if": "function lua_if()\n    return not idList\nend",
+        "lua_do": "function lua_do()\n    personage.equipment.longSword = {\n        id = \"longSword\",\n        name = \"меч\",\n        description = \"Длинный меч. Увеличивает урон героя на 6 и уменьшает его ловкость на 1. Экипируется в слот правой руки\",\n        slot = \"rightHand\",\n        count = 2,\n        modifications = {\n            damage = 4,\n            dex = -1\n        }\n    }\n    personage.equipment.healing = {\n        id = \"healing\",\n        name = \"лекарство\",\n        description = \"Пузырёк с целительным зельем. Увеличивает единицы здоровья героя на 7 единиц. Не требует слота для экипировки. Предмет одноразового использования\",\n        count = 3,\n        modifications = {\n            hp = 7\n        }\n    }\n    personage.equipment.shield = {\n        id = \"shield\",\n        name = \"щит\",\n        description = \"Круглый щит. Увеличивает защиту героя на 4 и уменьшает его ловкость на 1. Экипируется в слот левой руки\",\n        slot = \"leftHand\",\n        count = 1,\n        modifications = {\n            def = 4,\n            dex = -1\n        }\n    }\n    personage.equipment.cuirass = {\n        id = \"cuirass\",\n        name = \"кираса\",\n        description = \"Стальная кираса. Увеличивает защиту героя на 5 и уменьшает его ловкость на 2. Экипируется в слот туловища\",\n        slot = \"body\",\n        count = 1,\n        modifications = {\n            def = 5,\n            dex = -2\n        }\n    }\n    personage.equipment.powerDrink = {\n        id = \"powerDrink\",\n        name = \"энергетик\",\n        description = \"Одноразовый напиток силы. На две минуты увеличивает силу героя на 4.\",\n        count = 2,\n        time = 120,\n        modifications = {\n            str = 4\n        }\n    }\n    personage.equipment.freddysGlow = {\n        id = \"freddysGlow\",\n        name = \"Перчатка Фредди\",\n        description = \"Устрашающее оружие какого-то маньяка. Экипируется в слот правой руки. Добавляет 3 пункта урона, но снижает харизму на 2.\",\n        slot = \"rightHand\",\n        count = 1,\n        modifications = {\n            damage = 3,\n            cha = -2\n        }\n    }\n    personage.equipment.rustyMachete = {\n        id = \"rustyMachete\",\n        name = \"ржавое мачете\",\n        description = \"Найдено на дне Кристального озера. Экипируется в слот правой руки. Добавляет 4 пункта урона.\",\n        slot = \"rightHand\",\n        count = 1,\n        modifications = {\n            damage = 4\n        }\n    }\n    personage.equipment.jestersMask = {\n        id = \"jestersMask\",\n        name = \"Маска Шута\",\n        description = \"Поговаривают, что шут, носивший её, убил своего короля. Экипируется в слот головы. Увеличивает харизму на 4 пункта, но уменьшает интеллект на 2.\",\n        slot = \"head\",\n        count = 1,\n        modifications = {\n            cha = 4,\n            int = -2\n        }\n    }\n    personage.equipment.pilatsMantle = {\n        id = \"pilatsMantle\",\n        name = \"Белый плащ с кровавым подбоем\",\n        description = \"Безупречно выполненный плащ подчёркивает статус владельца. Экипируется в слот для плаща. Повышает мудрость и харизму на 3.\",\n        slot = \"cloak\",\n        count = 1,\n        modifications = {\n            wis = 3,\n            cha = 3\n        }\n    }\n    personage.equipment.evelynsRing = {\n        id = \"evelynsRing\",\n        name = \"Перстень Великого Мастера Ивлина\",\n        description = \"Перстень с крупным чёрным камнем. По слухам, принадлежал самому колдуну Ивлину и до сих пор хранит часть его могущества. Увеличивает интеллект, мудрость и харизму на 5, снижает очки выносливости и защиты на 5.\",\n        slot = \"finger\",\n        count = 1,\n        modifications = {\n            con = -5,\n            int = 5,\n            wis = 5,\n            cha = 5,\n            def = -5\n        }\n    }\n    personage.equipment.inqusitorsCloak = {\n        id = \"evelynsRing\",\n        name = \"Плащ Инквизитора\",\n        description = \"Тяжёлый серый плащ святого рыцаря инквизиции. Обладателя такового стараются обходить стороной. Увеличивает выносливость на 2, увеличивает защиту на 4, уменьшает харизму на 4.\",\n        slot = \"cloak\",\n        count = 1,\n        modifications = {\n            con = 2,\n            cha = -4,\n            def = 4\n        }\n    }\n    personage.equipment.oldBenRob = {\n        id = \"oldBenRob\",\n        name = \"Плащ Старого Бена\",\n        description = \"Потрёпанная отшельническая роба. Очень мешает вести переговоры, потому что голос в голове постоянно говорит «Используй силу!» Экипируется в слот плаща. Мудрость <plus>5, ловкость <plus>3, харизма -2.\",\n        slot = \"cloak\",\n        count = 1,\n        modifications = {\n            dex = 3,\n            wis = 3,\n            cha = -2\n        }\n    }\n    personage.equipment.sprintersPotion = {\n        id = \"sprintersPotion\",\n        name = \"зелье спринтера\",\n        description = \"Маленькая бутылочка с оранжевой жидкостью. Одноразового применения. Не требует слота. На 2 минуты повышает ловкость на 4 и снижает силу и выносливость на 2.\",\n        count = 5,\n        time = 120,\n        modifications = {\n            str = -2,\n            dex = 4,\n            con = -2\n        }\n    }\n    personage.equipment.marathonPotion = {\n        id = \"marathonPotion\",\n        name = \"зелье марафонца\",\n        description = \"На вкус как куриный бульон. Одноразового применения. Не требует слота. На 2 минуты повышает выносливость и силу на 2, снижает ловкость на 3.\",\n        count = 2,\n        time = 120,\n        modifications = {\n            str = 2,\n            dex = -3,\n            con = 2\n        }\n    }\n    personage.equipment.oldBensSwill = {\n        id = \"oldBensSwill\",\n        name = \"Бормотуха Старика Бена\",\n        description = \"Нужно быть отчаянным человеком, чтобы решиться выпить это пойло. Одноразового применения. Не требует слота. На 3 минуты повышает силу, ловкость, интеллект и мудрость на 2, но снижает выносливость и харизму на 4.\",\n        count = 1,\n        time = 180,\n        modifications = {\n            str = 2,\n            dex = 2,\n            con = -4,\n            int = 2,\n            wis = 2,\n            cha = - 4\n        }\n    }\n    personage.equipment.damascusSword = {\n        id = \"damascusSword\",\n        name = \"меч из дамасской стали\",\n        description = \"Клинок искуссной работы, отлично сохранившийся до наших дней. Прекрасно сбалансирован и удобен в бою.<s>\nПо преданию, некогда принадлежал воину, известному под именем «Рыцарь, Лишённый Наследства». Этот герой прославился во многих битвах, сражаясь за беззащитных и угнетённых, являя высокую доблесть и воинское искусство. Легенды гласят, что часть мастерства, заточённая в клинке, дарует обладателю оного толику тогомогущества, которым обладал этот таинственный воин.<s>\nЭкиперуется в слот правой руки.<s>\nЛовкость <plus>5, Выносливость <plus>3, Мудрость <plus>4, Харизма <plus>7, Урон <plus>6.\",\n        slot = \"rightHand\",\n        count = 1,\n        modifications = {\n            dex = 5,\n            con = 3,\n            wis = 4,\n            cha = 7,\n            damage = 6\n        }\n    }\n    personage.equipment.diamondBlade = {\n        id = \"diamondBlade\",\n        name = \"алмазный клинок\",\n        description = \"Клинок, высеченный древними гномами из цельного алмаза. Способен поробить даже самую прочную броню. Довольно тяжёлый и не очень удобный в бою меч, но является одним из самых прочных и острых клинков в мире.<s>\nЭкипируется в слот правой руки. <s>\nВыносливость -3, Мудрость <plus>3, Харизма <plus>9, Защита -5, Урон <plus>12\",\n        slot = \"rightHand\",\n        count = 1,\n        modifications = {\n            con = -3,\n            wis = 3,\n            cha = 9,\n            def = -5,\n            damage = 12\n        }\n    }\n    personage.equipment.deepditchBelt = {\n        id = \"deepditchBelt\",\n        name = \"глубоканаваный пояс\",\n        description = \"Простая веревка, найденая в канаве городских трущоб. Выглядит нелепо, но хоть штаны не спадают. Экипируется в слот пояса. Ловкость <plus>2, интеллект -1, харизма -1, защита <plus>1\",\n        slot = \"belt\",\n        count = 1,\n        modifications = {\n            dex = 2,\n            int = -1,\n            cha = -1,\n            def = 1\n        }\n    }\n    personage.equipment.ultradarkGlasses = {\n        id = \"ultradarkGlasses\",\n        name = \"ультратёмные очки\",\n        description = \"Очки из сверхпрочного и сверхтёмного стекла. Выглядят нереально круто, но в них очень плохо видно окружающий мир. Экипируются в слот головы. Ловкость -3, харизма <plus>6, защита <plus>1\",\n        slot = \"head\",\n        count = 1,\n        modifications = {\n            dex = -3,\n            cha = 6,\n            def = 1\n        }\n    }\n    personage.equipment.goldenFish = {\n        id = \"goldenFish\",\n        name = \"золотая рыбка\",\n        description = \"Жареная до золотой корочки рыбка. Исполняет только одно желание — поесть. Не требует слота. Восстанавливает 5 единиц здоровья, увеличивает навсегда выносливость на 1.\",\n        count = 2,\n        modifications = {\n            con = 1,\n            hp = 5\n        }\n    }\n    personage.equipment.aurigasDiamond = {\n        id = \"aurigasDiamond\",\n        name = \"жемчужина Ауриги\",\n        description = \"Этот осколок странного предмета из другого мира больше всего похож на часть огромной жемчужины. Неизвестный мастер переделал его в круглый щит с необычными свойствами. Добавляет 7 пунктов защиты и 2 пункта силы, снижает ловкость на 2 пункта\",\n        slot = \"leftHand\",\n        count = 1,\n        modifications = {\n            str = 2,\n            dex = -2,\n            def = 7\n        }\n    }\n    personage.equipment.ritualDagger = {\n        id = \"ritualDagger\",\n        name = \"ритуальный кинжал\",\n        description = \"Экипируется а слот правой руки. Небольшой костяной кинжал с резной рукоятью. В крупных бороздах виднеются потемневшие следы крови. Добавляет 2 пункта к урону и 2 пункта к ловкости\",\n        slot = \"rightHand\",\n        count = 1,\n        modifications = {\n            dex = -2,\n            damage = 2\n        }\n    }\n    personage.equipment.evilHiter = {\n        id = \"evilHiter\",\n        name = \"победитель нечисти\",\n        description = \"Древний клинок эльфийской работы, которым за всю историю убили немало демонических тварей. Тот кто держит его в руках чувствует уверенность в себе и необычайный прилив сил. Экипируется в слот правой руки. <plus>7 урон, <plus>2 мудрость и -2 харизма\",\n        slot = \"rightHand\",\n        count = 1,\n        modifications = {\n            wis = 2,\n            cha = -2,\n            damage = 7\n        }\n    }\n    personage.equipment.travelersFurCape = {\n        id = \"travelersFurCape\",\n        name = \"меховая накидка путника\",\n        description = \"Невзрачная, неопрятная, но практичная и тёплая накидка путника. Экипируется в слот плаща. Добавляет по 2 пункта ловкости и выносливости, а также 4 пункта к очкам жизни, но отнимает 3 пункта харизмы.\",\n        slot = \"cloak\",\n        count = 1,\n        modifications = {\n            dex = 2,\n            con = 2,\n            cha = -3,\n            hp = 4\n        }\n    }\n    personage.equipment.amazonBelt = {\n        id = \"amazonBelt\",\n        name = \"пояс амазонки\",\n        description = \"<plus>3 к ловкости, <plus> 5 к харизме. Принято считать, что этот небольшой отрез ткани — юбка.\",\n        slot = \"belt\",\n        count = 1,\n        modifications = {\n            dex = 3,\n            cha = 5\n        }\n    }\n    idList = pagePrepare(personage.equipment, 10, 1)\nend"
+      },
+      {
+        "id": 24,
+        "text": "Перейти в интерфейс героя",
+        "lua_if": "function lua_if()\n    return idList\nend"
+      },
+      {
+        "id": 22,
+        "text": "Перейти в инвентарь",
+        "lua_if": "function lua_if()\n    return idList\nend",
+        "lua_do": "function lua_do()\n    idList = pagePrepare(personage.equipment, 10, 1)\nend"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Страница инвентаря.",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 9]\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 9]\nend",
+        "id": 23,
+        "text": "Ответ #1",
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 9]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 9]].count, 1, 2)\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 8]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 8]].count)\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 8]\nend",
+        "id": 23,
+        "text": "Ответ #2",
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 8]\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 7]\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 7]\nend",
+        "id": 23,
+        "text": "Ответ #3",
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 7]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 7]].count)\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 6]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 6]].count)\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 6]\nend",
+        "id": 23,
+        "text": "Ответ #4",
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 6]\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 5]\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 5]\nend",
+        "id": 23,
+        "text": "Ответ #5",
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 5]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 5]].count)\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 4]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 4]].count)\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 4]\nend",
+        "id": 23,
+        "text": "Ответ #6",
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 4]\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 3]\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 3]\nend",
+        "id": 23,
+        "text": "Ответ #7",
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 3]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 3]].count)\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 2]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 2]].count)\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 2]\nend",
+        "id": 23,
+        "text": "Ответ #8",
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 2]\nend",
+        "left_answer": false
+      },
+      {
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex - 1]\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex - 1]\nend",
+        "id": 23,
+        "text": "Ответ #9",
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex - 1]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex - 1]].count)\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_text": "function lua_text()\n    return upperFirstLetter(personage.equipment[idList[pageSize * pageIndex]].name..\" — \"..personage.equipment[idList[pageSize * pageIndex]].count)\nend",
+        "lua_do": "function lua_do()\n    itemID = idList[pageSize * pageIndex]\nend",
+        "id": 23,
+        "text": "Ответ #10",
+        "lua_if": "function lua_if()\nreturn idList[pageSize * pageIndex]\nend",
+        "left_answer": false
+      },
+      {
+        "id": 22,
+        "text": "____________________",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nreturn pageIndex > 1\nend",
+        "lua_do": "function lua_do()\n    pageIndex = pageIndex - 1\nend",
+        "text": "Предыдущая страница",
+        "id": 22,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "lua_if": "function lua_if()\nreturn pageIndex < math.ceil(#idList / pageSize)\nend",
+        "id": 22,
+        "text": "Следующая страница",
+        "lua_do": "function lua_do()\n    pageIndex = pageIndex <plus> 1\nend"
+      },
+      {
+        "backstepCount": 1,
+        "middle_answer": true,
+        "forget": 22,
+        "text": "Назад",
+        "isBack": true,
+        "id": 22
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "empty",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Описание предмета",
+        "lua_text": "function lua_text()\nreturn \"Наименование предмета: \"..personage.equipment[itemID].name..\"<s>\n<s>\nОписание предмета: \"..personage.equipment[itemID].description\nend",
+        "merge": true
+      },
+      {
+        "backstepCount": 1,
+        "lua_if": "function lua_if()\n    return personage.equipment[itemID].slot and type(personage.slots[personage.equipment[itemID].slot]) == \"string\"\nend",
+        "isBack": true,
+        "id": 23,
+        "text": "Надеть (взять) предмет",
+        "lua_do": "function lua_do()\n    useItem(personage, itemID)\nend",
+        "forget": 23
+      },
+      {
+        "id": 23,
+        "text": "Нельзя взять предмет: слот занят. Сначала необходимо снять текущий предмет в интерфейсе героя.",
+        "comment": true,
+        "lua_if": "function lua_if()\n    return personage.equipment[itemID].slot and type(personage.slots[personage.equipment[itemID].slot]) == \"table\"\nend"
+      },
+      {
+        "isBack": true,
+        "lua_if": "function lua_if()\n    return not personage.equipment[itemID].slot\nend",
+        "lua_do": "function lua_do()\n    useItem(personage, itemID)\nend",
+        "backstepCount": 1,
+        "text": "Использовать предмет",
+        "forget": 23,
+        "id": 23
+      },
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Вернуться к списку предметов",
+        "forget": 23,
+        "id": 23
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Интерфейс героя.\n\n",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Список экипировки",
+        "lua_text": "function lua_text()\n    return\n    \"Характеристики героя:<s>\n<s>\nСила — \"..getChar(personage, \"str\")..\n    \";<s>\nЛовкость — \"..getChar(personage, \"dex\")..\n    \";<s>\nВыносливость — \"..getChar(personage, \"con\")..\n    \";<s>\nИнтеллект — \"..getChar(personage, \"int\")..\n    \";<s>\nМудрость — \"..getChar(personage, \"wis\")..\n    \";<s>\nХаризма — \"..getChar(personage, \"cha\")..\n    \";<s>\nАтака — \"..getChar(personage, \"att\")..\n    \";<s>\nЗащита — \"..getChar(personage, \"def\")..\n    \";<s>\nУрон — \"..getChar(personage, \"damage\")..\n    \";<s>\nОчки жизни — \"..getChar(personage, \"hp\")..\n    \"<s>\n<s>\nЭкипировка героя:<s>\n<s>\n\"..\n    \"Голова: \"..(type(personage.slots.head) == \"string\" and \"пусто\" or personage.slots.head.name)..\n    \";<s>\nПлечи: \"..(type(personage.slots.shoulders) == \"string\" and \"пусто\" or personage.slots.shoulders.name)..\n    \";<s>\nПлащ: \"..(type(personage.slots.cloak) == \"string\" and \"пусто\" or personage.slots.cloak.name)..\n    \";<s>\nТуловище: \"..(type(personage.slots.body) == \"string\" and \"пусто\" or personage.slots.body.name)..\n    \";<s>\nПравая рука: \"..(type(personage.slots.rightHand) == \"string\" and \"пусто\" or personage.slots.rightHand.name)..\n    \";<s>\nЛевая рука: \"..(type(personage.slots.leftHand) == \"string\" and \"пусто\" or personage.slots.leftHand.name)..\n    \";<s>\nПояс: \"..(type(personage.slots.belt) == \"string\" and \"пусто\" or personage.slots.belt.name)..\n    \";<s>\nБёдра: \"..(type(personage.slots.hips) == \"string\" and \"пусто\" or personage.slots.hips.name)..\n    \";<s>\nНоги: \"..(type(personage.slots.legs) == \"string\" and \"пусто\" or personage.slots.legs.name)..\n    \";<s>\nПалец: \"..(type(personage.slots.finger) == \"string\" and \"пусто\" or personage.slots.finger.name)\nend",
+        "merge": true
+      },
+      {
+        "lua_if": "function lua_if()\n    return type(personage.slots.head) == \"table\"\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"head\")\nend",
+        "text": "Очистить слот головы",
+        "id": 24,
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.head.name\nend"
+      },
+      {
+        "lua_if": "function lua_if()\n    return type(personage.slots.shoulders) == \"table\"\nend",
+        "id": 24,
+        "text": "Очистить слот плечей",
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.shoulders.name\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"shoulders\")\nend"
+      },
+      {
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.cloak.name\nend",
+        "id": 24,
+        "text": "Очистить слот плаща",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"cloak\")\nend",
+        "lua_if": "function lua_if()\n    return type(personage.slots.cloak) == \"table\"\nend"
+      },
+      {
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.body.name\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"body\")\nend",
+        "text": "Очистить слот туловища",
+        "lua_if": "function lua_if()\n    return type(personage.slots.body) == \"table\"\nend",
+        "id": 24
+      },
+      {
+        "lua_if": "function lua_if()\n    return type(personage.slots.rightHand) == \"table\"\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"rightHand\")\nend",
+        "text": "Очистить слот правой руки",
+        "id": 24,
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.rightHand.name\nend"
+      },
+      {
+        "lua_if": "function lua_if()\n    return type(personage.slots.leftHand) == \"table\"\nend",
+        "id": 24,
+        "text": "Очистить слот левой руки",
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.leftHand.name\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"leftHand\")\nend"
+      },
+      {
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.belt.name\nend",
+        "id": 24,
+        "text": "Очистить слот пояса",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"belt\")\nend",
+        "lua_if": "function lua_if()\n    return type(personage.slots.belt) == \"table\"\nend"
+      },
+      {
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.hips.name\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"hips\")\nend",
+        "text": "Очистить слот бёдер",
+        "lua_if": "function lua_if()\n    return type(personage.slots.hips) == \"table\"\nend",
+        "id": 24
+      },
+      {
+        "lua_if": "function lua_if()\n    return type(personage.slots.legs) == \"table\"\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"legs\")\nend",
+        "text": "Очистить слот ног",
+        "id": 24,
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.legs.name\nend"
+      },
+      {
+        "lua_if": "function lua_if()\n    return type(personage.slots.finger) == \"table\"\nend",
+        "id": 24,
+        "text": "Очистить слот пальца",
+        "lua_text": "function lua_text()\n    return \"Снять \"..personage.slots.finger.name\nend",
+        "lua_do": "function lua_do()\n    removeItem(personage, \"finger\")\nend"
+      },
+      {
+        "id": 24,
+        "text": "_______________",
+        "comment": true
+      },
+      {
+        "isBack": true,
+        "backstepCount": 1,
+        "text": "Вернуться",
+        "forget": 24,
+        "id": 24
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "",
+    "answers": [
+      {
+        "id": 25,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "",
+    "answers": []
+  }
+]

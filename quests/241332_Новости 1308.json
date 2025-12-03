@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор D.Karter написал еще 252865 слов в квесте \"Приключения одного мажора\"."
+      },
+      {
+        "targetbookid": "240401",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Приключения одного мажора\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор 92，102，22，12，13. написал еще 235309 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "241072",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Nicolette написал еще 232172 слов в квесте \"Мёртвый мир\"."
+      },
+      {
+        "targetbookid": "240609",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Мёртвый мир\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор vasilina написал еще 155784 слов в квесте \"Школьная жизнь\"."
+      },
+      {
+        "targetbookid": "232748",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Школьная жизнь\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Waffle написал еще 139680 слов в квесте \"Тёмные дни\"."
+      },
+      {
+        "targetbookid": "239163",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тёмные дни\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

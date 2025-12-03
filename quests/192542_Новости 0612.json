@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 20333 слов в квесте \"Летучий Мыш и Горностай. Обыкновенное убийство\"."
+      },
+      {
+        "targetbookid": "999",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Летучий Мыш и Горностай. Обыкновенное убийство\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Охотник\n написал еще 18398 слов в квесте \"Огненное лето\"."
+      },
+      {
+        "targetbookid": "185743",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Огненное лето\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Veronika написал еще 17521 слов в квесте \"Принцесса тьмы (Автор VeraVik)\"."
+      },
+      {
+        "targetbookid": "188638",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Принцесса тьмы (Автор VeraVik)\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор dannskoy\n написал еще 17261 слов в квесте \"Тяжкое время: часть первая\"."
+      },
+      {
+        "targetbookid": "155456",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тяжкое время: часть первая\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор ViciousClerk\n написал еще 17161 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "165439",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

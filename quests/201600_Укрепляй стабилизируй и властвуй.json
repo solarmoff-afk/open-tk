@@ -1,0 +1,3857 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Shadow\nЖанр: симулятор стратегии\nАннотация: Укрепи свою власть, подружись с народом, стабилизируй государство и добейся высокой репутации среди других.\nPS: Если хочешь выбрать другую \"нацию\" сбрось прогресс в боковом меню на первой странице. Также квест расчитан на прохождение с телефона.",
+    "answers": [
+      {
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nreturn true\nend",
+        "id": 2,
+        "text": "Играть-Легко",
+        "var_not": [
+          "global nation",
+          ""
+        ],
+        "lua_do": "function lua_do()\nvalue={}\nvalue.plumbing=50\nvalue.game=50\nvalue.education=50\nvalue.radio=50\nvalue.sniper=200\nvalue.infantry=150\ninflation=0\nradio=0\nplumbing=0\neducation=0\ngame=0\nprofit=0\nmoney=500\nb=100\nv=0\npeoplerespect=20\nreputation=80\nsniper=0\nfights=0\ninfantry=0\nstability=0\ninfantrylvl=0\npashal=0\npashal=\"\"\nsniperlvl=0\ndefencesoldiers=0\ninfantrydamage=5\ninfantrydefence=2\nsniperdamage=10\nnemo=0\nsniperdefence=1\nif g.nation==\"Империя\" then\npeoplerespect=peoplerespect*0.5\nelseif g.nation==\"Гильдия\" then\nmoney=money*1.4\nelseif g.nation==\"Коалиция\" then\nreputation=reputation*1.4\nelseif g.nation==\"Республика\" then \npeoplerespect=peoplerespect*1.4\nend\nend"
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_do": "function lua_do()\nvalue={}\nvalue.plumbing=50\nvalue.game=50\nvalue.education=50\nvalue.radio=50\nvalue.sniper=200\nvalue.infantry=150\ninflation=0\nfights=0\nradio=0\nplumbing=0\neducation=0\ngame=0\nprofit=0\nmoney=350\nb=100\nv=0\npeoplerespect=10\nreputation=60\nsniper=0\ninfantry=0\nstability=0\ninfantrylvl=0\npashal=0\npashal=\"\"\nsniperlvl=0\nnemo=0\ndefencesoldiers=0\ninfantrydamage=5\ninfantrydefence=2\nsniperdamage=10\nsniperdefence=1\nif g.nation==\"Империя\" then\npeoplerespect=peoplerespect*0.5\nelseif g.nation==\"Гильдия\" then\nmoney=money*1.4\nelseif g.nation==\"Коалиция\" then\nreputation=reputation*1.4\nelseif g.nation==\"Республика\" then \npeoplerespect=peoplerespect*1.4\nend\nend",
+        "text": "Играть-Нормально",
+        "var_not": [
+          "global nation",
+          ""
+        ],
+        "id": 2
+      },
+      {
+        "bg_color": [
+          1,
+          0.2,
+          0.2
+        ],
+        "lua_do": "function lua_do()\nvalue={}\nvalue.plumbing=50\nvalue.game=50\nvalue.education=50\nvalue.radio=50\nvalue.sniper=200\nvalue.infantry=150\ninflation=0\nradio=0\nplumbing=0\neducation=0\ngame=0\nprofit=0\nmoney=150\nb=100\nv=0\npeoplerespect=0\nreputation=30\nfights=0\nsniper=0\ninfantry=0\npashal=0\npashal=\"\"\nstability=0\ninfantrylvl=0\nsniperlvl=0\ndefencesoldiers=0\ninfantrydamage=5\ninfantrydefence=2\nsniperdamage=10\nnemo=0\nsniperdefence=1\nif g.nation==\"Империя\" then\npeoplerespect=peoplerespect*0.5\nelseif g.nation==\"Гильдия\" then\nmoney=money*1.4\nelseif g.nation==\"Коалиция\" then\nreputation=reputation*1.4\nelseif g.nation==\"Республика\" then \npeoplerespect=peoplerespect*1.4\nend\nend",
+        "text": "Играть-Сложно",
+        "var_not": [
+          "global nation",
+          ""
+        ],
+        "id": 2
+      },
+      {
+        "id": 1,
+        "text": "Начать",
+        "lua_do": "function lua_do()\n   dialog ({header = \"Выберите государство которому вы будете служить:\", \n   text = \"У Империи мощная армия, у Гильдии большее финансирование, Коалиция предоставит большее уважение, а Республика приветствуется народом\", \n   answers = {{text = \"Империя\",\nbackground={0.9,0.1,0.1},\n   pressListener = function () \n   g.nation=\"Империя\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n{text = \"Гильдия\",\nbackground={0.9,0.9,0.1},\n   pressListener = function () \n   g.nation=\"Гильдия\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n{text = \"Коалиция\",\nbackground={0.9,0.1,0.9},\n   pressListener = function () \n   g.nation=\"Коалиция\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n{text = \"Республика\",\nbackground={0.1,0.9,0.1},\n   pressListener = function () \n   g.nation=\"Республика\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n}})\n   end",
+        "var_equal": [
+          "global nation",
+          "..."
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 1,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_set": [
+          "global fullscreen",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "",
+        "system": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "                         Общая статистика:",
+    "answers": [
+      {
+        "var_show": [
+          "Empire",
+          "%"
+        ],
+        "comment": false,
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0,
+          "reputation",
+          0
+        ],
+        "left_answer": true,
+        "bg_color": [
+          1,
+          0.2,
+          0.2
+        ],
+        "text": "Отношения с Империей:",
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          5,
+          "reputation",
+          1
+        ],
+        "lua_do": "function lua_do()\nlocal expNum = native.showAlert(\"Совет: Отношения с государствами\", \"Данные ответы отображают отношения других государств с вашим. От 0 до 20- агрессивные враждебные отношения. От 20 до 40- незначительная вражда. От 40 до 60- нейтральные отношения. От 60 до 80- мирные отношения. От 80 до 100- дружеские отношения, союз. Внимание:!Не нажимайте на данные ответы, иначе вы будете терять стабильность, расположение народа и уважение! \", {\"ОК\"})\nend"
+      },
+      {
+        "var_show": [
+          "Guild",
+          "%"
+        ],
+        "comment": false,
+        "id": 2,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4,
+          "reputation",
+          2
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0,
+          "reputation",
+          0
+        ],
+        "right_answer": true,
+        "instant": true,
+        "text": "Отношения с Гильдией:",
+        "lua_do": "function lua_do()\nlocal expNum = native.showAlert(\"Совет: Отношения с государствами\", \"Данные ответы отображают отношения других государств с вашим. От 0 до 20- агрессивные враждебные отношения. От 20 до 40- незначительная вражда. От 40 до 60- нейтральные отношения. От 60 до 80- мирные отношения. От 80 до 100- дружеские отношения, союз. Внимание:!Не нажимайте на данные ответы, иначе вы будете терять стабильность, расположение народа и уважение! \", {\"ОК\"})\nend",
+        "bg_color": [
+          1,
+          1,
+          0.5
+        ]
+      },
+      {
+        "var_show": [
+          "Coalition",
+          "%"
+        ],
+        "comment": false,
+        "id": 2,
+        "instant": true,
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0,
+          "reputation",
+          0
+        ],
+        "left_answer": true,
+        "bg_color": [
+          1,
+          0.5,
+          1
+        ],
+        "text": "Отношения с Коалицией:",
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          3,
+          "repetition",
+          3
+        ],
+        "lua_do": "function lua_do()\nlocal expNum = native.showAlert(\"Совет: Отношения с государствами\", \"Данные ответы отображают отношения других государств с вашим. От 0 до 20- агрессивные враждебные отношения. От 20 до 40- незначительная вражда. От 40 до 60- нейтральные отношения. От 60 до 80- мирные отношения. От 80 до 100- дружеские отношения, союз. Внимание:!Не нажимайте на данные ответы, иначе вы будете терять стабильность, расположение народа и уважение! \", {\"ОК\"})\nend"
+      },
+      {
+        "var_show": [
+          "Republic",
+          "%"
+        ],
+        "comment": false,
+        "id": 2,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          2,
+          "reputation",
+          4
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0,
+          "reputation",
+          0
+        ],
+        "right_answer": true,
+        "text": "Отношения с Республикой:",
+        "instant": true,
+        "lua_do": "function lua_do()\nlocal expNum = native.showAlert(\"Совет: Отношения с государствами\", \"Данные ответы отображают отношения других государств с вашим. От 0 до 20- агрессивные враждебные отношения. От 20 до 40- незначительная вражда. От 40 до 60- нейтральные отношения. От 60 до 80- мирные отношения. От 80 до 100- дружеские отношения, союз. Внимание:!Не нажимайте на данные ответы, иначе вы будете терять стабильность, расположение народа и уважение! \", {\"ОК\"})\nend",
+        "bg_color": [
+          0.5,
+          1,
+          0.5
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Военные действия",
+        "var_not": [
+          "sell",
+          "close"
+        ],
+        "bg_color": [
+          1,
+          0.3,
+          0.2
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Финансы",
+        "bg_color": [
+          1,
+          1,
+          0.5
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          0.5,
+          1
+        ],
+        "lua_do": "function lua_do()\nif inflation>=1 then \ninflation=inflation-1\nelseif plumbing>=100 then \nstability=stability<plus>0.8\npeoplerespect=peoplerespect<plus>1\nelseif radio>=100 then \nstability=stability<plus>1\npeoplerespect=peoplerespect<plus>2\nelseif education>=100 then \nstability=stability<plus>1.2\npeoplerespect=peoplerespect<plus>3\nelseif game>=100 then \nstability=stability<plus>1.5\npeoplerespect=peoplerespect<plus>4\nend\nend",
+        "widget_show": [
+          "stability",
+          "stability",
+          "respect",
+          "peoplerespect",
+          "reputation",
+          "reputation",
+          "money",
+          "money"
+        ],
+        "id": 4,
+        "text": "Власть",
+        "update": [
+          1
+        ],
+        "var_not": [
+          "sell",
+          "close"
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Народ",
+        "var_not": [
+          "sell",
+          "close"
+        ],
+        "bg_color": [
+          0.5,
+          1,
+          0.5
+        ]
+      },
+      {
+        "var_str_set": [
+          "global switch_page_sound",
+          "клик"
+        ],
+        "id": 2,
+        "comment": true,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif peoplerespect>=100 then\npeoplerespect=100\nelseif reputation>=100 then\nreputation=100\nelseif stability>=100 then\nstability=100\nelseif g.nation==\"Империя\" then\nEmpire=100\nelseif g.nation==\"Гильдия\" then\nGuild=100\nelseif g.nation==\"Коалиция\" then\nCoalition=100\nelseif g.nation==\"Республика\" then\nRepublic=100\nend\nend",
+        "calculate": false,
+        "update": [
+          1
+        ],
+        "text": "   "
+      },
+      {
+        "lua_do": "function lua_do()\nif inflation>=1 then \ninflation=inflation-1\nelseif plumbing>=100 then \nstability=stability<plus>0.8\npeoplerespect=peoplerespect<plus>1\nelseif radio>=100 then \nstability=stability<plus>1\npeoplerespect=peoplerespect<plus>2\nelseif education>=100 then \nstability=stability<plus>1.2\npeoplerespect=peoplerespect<plus>3\nelseif game>=100 then \nstability=stability<plus>1.5\npeoplerespect=peoplerespect<plus>4\nend\nend",
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "calculate": false,
+        "update": [
+          1
+        ],
+        "text": "     "
+      },
+      {
+        "id": 2,
+        "text": "Укажите команды для картинки",
+        "url": "https://a.radikal.ru/a28/2002/64/6bef99f1c663.jpg"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do() \nif money<50 and stability<=0 then\n   dialog ({header = \"Failed\", \n   text = \"Твой доход равен нулю, денег на вклады нет это конец игры, чтобы выбрать другую нацию сбрось прогресс в боковом меню\", \n   answers = {{text = \"В начало\",\n   pressListener = function () \n   showPage {id = 1, transition = \"instant\"}\n   hideDialog () end}}})\n   end\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nclose=0\nclose=\"close\"\nopen=0\nopen=\"open\"\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "calculate": true,
+        "lua_do": "function lua_do()\nif stability>=100 and reputation>=0 and peoplerespect>=100 then\nshowPage{id=13}\nend\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Чтобы заслужить расположение народа надо ему помочь:",
+    "answers": [
+      {
+        "comment": false,
+        "id": 3,
+        "text": "Сантехника 1↑",
+        "var_no_more": [
+          "plumbing",
+          34
+        ],
+        "bg_color": [
+          1,
+          1,
+          0.5
+        ],
+        "lua_if": "function lua_if()\nif money>=value.plumbing<plus>inflation\nthen\nreturn true\nend\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.plumbing<plus>inflation)\ninflation=inflation<plus>2\nend",
+        "left_answer": true,
+        "var_add": [
+          "plumbing",
+          35
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "instant": true,
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "left_answer": true,
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ],
+        "text": "Сантехника 1↑ ✓",
+        "var_need": [
+          "plumbing",
+          35
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "text": "Сантехника 2↑ ",
+        "var_no_more": [
+          "plumbing",
+          69
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.plumbing<plus>inflation<plus>10\nthen\nreturn true\nend\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.plumbing<plus>inflation<plus>10)\ninflation=inflation<plus>6\nend",
+        "var_add": [
+          "plumbing",
+          35
+        ],
+        "var_need": [
+          "plumbing",
+          35
+        ],
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "instant": true,
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "text": "Сантехника 2↑ ✓",
+        "middle_answer": true,
+        "var_need": [
+          "plumbing",
+          70
+        ],
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "plumbing",
+          35
+        ],
+        "id": 3,
+        "text": "Сантехника 3↑",
+        "var_no_more": [
+          "plumbing",
+          99
+        ],
+        "var_max": [
+          "plumbing",
+          100
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.plumbing<plus>inflation<plus>20\nthen\nreturn true\nend\nend",
+        "instant": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.plumbing<plus>inflation<plus>20)\ninflation=inflation<plus>10\nend",
+        "comment": false,
+        "right_answer": true,
+        "var_need": [
+          "plumbing",
+          70
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "instant": true,
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "text": "Сантехника 3↑ ✓",
+        "right_answer": true,
+        "var_need": [
+          "plumbing",
+          100
+        ],
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "text": "Радио и ТВ 1↑",
+        "left_answer": true,
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.radio<plus>inflation\nthen\nreturn true\nend\nend",
+        "var_add": [
+          "radio",
+          35
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.radio<plus>inflation)\ninflation=inflation<plus>2\nend",
+        "var_no_more": [
+          "radio",
+          34
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "var_need": [
+          "radio",
+          35
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "left_answer": true,
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ],
+        "instant": true,
+        "text": "Радио и ТВ 1↑ ✓"
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "text": "Радио и ТВ 2↑",
+        "var_no_more": [
+          "radio",
+          69
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.radio<plus>inflation<plus>10\nthen\nreturn true\nend\nend",
+        "var_need": [
+          "radio",
+          35
+        ],
+        "var_add": [
+          "radio",
+          35
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.radio<plus>inflation<plus>10)\ninflation=inflation<plus>6\nend",
+        "id": 3
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "instant": true,
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "var_need": [
+          "radio",
+          70
+        ],
+        "text": "Радио и ТВ 2↑ ✓",
+        "id": 3,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "text": "Радио и ТВ 3↑",
+        "var_no_more": [
+          "radio",
+          99
+        ],
+        "var_max": [
+          "radio",
+          100
+        ],
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif money>=value.radio<plus>inflation<plus>20\nthen\nreturn true\nend\nend",
+        "var_need": [
+          "radio",
+          70
+        ],
+        "var_add": [
+          "radio",
+          35
+        ],
+        "instant": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.radio<plus>inflation<plus>20)\ninflation=inflation<plus>10\nend",
+        "bg_color": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "instant": true,
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "right_answer": true,
+        "var_need": [
+          "radio",
+          100
+        ],
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "text": "Радио и ТВ 3↑ ✓",
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "  ",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nmoney=money-(value.education<plus>inflation)\ninflation=inflation<plus>2\nend",
+        "text": "Образование 1↑",
+        "left_answer": true,
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.education<plus>inflation\nthen\nreturn true\nend\nend",
+        "id": 3,
+        "var_no_more": [
+          "education",
+          24
+        ],
+        "instant": true,
+        "var_add": [
+          "education",
+          25
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "var_need": [
+          "education",
+          25
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "left_answer": true,
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ],
+        "text": "Образование 1↑",
+        "instant": true
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "instant": true,
+        "var_no_more": [
+          "education",
+          49
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.education<plus>inflation<plus>10\nthen\nreturn true\nend\nend",
+        "text": "Школы и университеты 1↑",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.education<plus>inflation<plus>10)\ninflation=inflation<plus>6\nend",
+        "var_need": [
+          "education",
+          25
+        ],
+        "var_add": [
+          "education",
+          25
+        ]
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "var_need": [
+          "education",
+          50
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "text": "Школы и университеты 1↑",
+        "id": 3,
+        "instant": true,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "education",
+          25
+        ],
+        "id": 3,
+        "instant": true,
+        "var_no_more": [
+          "education",
+          74
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.education<plus>inflation<plus>20\nthen\nreturn true\nend\nend",
+        "text": "Театры и музеи 1↑",
+        "comment": false,
+        "right_answer": true,
+        "lua_do": "function lua_do()\nmoney=money-(value.education<plus>inflation<plus>20)\ninflation=inflation<plus>10\nend",
+        "var_need": [
+          "education",
+          50
+        ]
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "var_need": [
+          "education",
+          75
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "right_answer": true,
+        "text": "Театры и музеи 1↑",
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "instant": true,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "var_add": [
+          "education",
+          25
+        ],
+        "id": 3,
+        "instant": true,
+        "var_no_more": [
+          "education",
+          99
+        ],
+        "var_max": [
+          "education",
+          100
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.education<plus>inflation<plus>30\nthen\nreturn true\nend\nend",
+        "text": "Образование 2↑",
+        "middle_answer": true,
+        "comment": false,
+        "lua_do": "function lua_do()\nmoney=money-(value.education<plus>inflation<plus>30)\ninflation=inflation<plus>15\nend",
+        "var_need": [
+          "education",
+          75
+        ]
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "var_need": [
+          "education",
+          100
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "text": "Образование 2↑",
+        "id": 3,
+        "instant": true,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "   ",
+        "comment": true
+      },
+      {
+        "comment": false,
+        "lua_do": "function lua_do()\nmoney=money-(value.game<plus>inflation)\ninflation=inflation<plus>2\nend",
+        "text": "Развлечения 1↑",
+        "left_answer": true,
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.game<plus>inflation\nthen\nreturn true\nend\nend",
+        "id": 3,
+        "var_no_more": [
+          "game",
+          34
+        ],
+        "var_add": [
+          "game",
+          35
+        ],
+        "instant": true
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "var_need": [
+          "game",
+          35
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "left_answer": true,
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ],
+        "text": "Развлечения 1↑ ✓",
+        "instant": true
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "text": "Кинотеатры и клубы 1↑",
+        "var_no_more": [
+          "game",
+          69
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.game<plus>inflation<plus>10\nthen\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nmoney=money-(value.game<plus>inflation<plus>10)\ninflation=inflation<plus>6\nend",
+        "middle_answer": true,
+        "var_add": [
+          "game",
+          35
+        ],
+        "var_need": [
+          "game",
+          35
+        ],
+        "instant": true
+      },
+      {
+        "id": 3,
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "comment": false,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ],
+        "middle_answer": true,
+        "var_need": [
+          "game",
+          70
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "text": "Кинотеатры и клубы 1↑ ✓"
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "text": "Развлечения 2↑",
+        "var_no_more": [
+          "game",
+          99
+        ],
+        "var_max": [
+          "game",
+          100
+        ],
+        "bg_color": [
+          1,
+          1,
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=value.game<plus>inflation<plus>20\nthen\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nmoney=money-(value.game<plus>inflation<plus>20)\ninflation=inflation<plus>2\nend",
+        "right_answer": true,
+        "var_add": [
+          "game",
+          35
+        ],
+        "var_need": [
+          "game",
+          70
+        ],
+        "instant": true
+      },
+      {
+        "comment": false,
+        "id": 3,
+        "var_need": [
+          "game",
+          100
+        ],
+        "var_min": [
+          "peoplerespect",
+          0,
+          "stability",
+          0
+        ],
+        "bg_color": [
+          0,
+          1,
+          0
+        ],
+        "text": "Развлечения 2↑ ✓",
+        "right_answer": true,
+        "instant": true,
+        "var_sub": [
+          "peoplerespect",
+          1,
+          "stability",
+          4
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Назад",
+        "bg_color": [
+          0,
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "widget_show": [
+          "сантехника",
+          "plumbing",
+          "радио и ТВ",
+          "radio",
+          "образование",
+          "education",
+          "развлечения",
+          "game"
+        ],
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nif inflation>=1 then \ninflation=inflation-1\nif plumbing>=100 then \nstability=stability<plus>0.2\nif radio>=100 then \nstability=stability<plus>0.1\nif education>=100 then \nstability=stability<plus>0.2\nif game>=100 then \nstability=stability<plus>0.3\nend\nend\nend\nend\nend\nend"
+      },
+      {
+        "id": 3,
+        "text": "Укажите команды для картинки",
+        "url": "https://d.radikal.ru/d20/2002/d6/4cc46ac46240.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Дря укрепления своей власти можно использовать разные методы... Выбери правильно!",
+    "answers": [
+      {
+        "bg_color": [
+          0.2,
+          1,
+          0.2
+        ],
+        "comment": false,
+        "id": 4,
+        "text": "Выступить с речью в народе",
+        "lua_do": "function lua_do()\nif politic==1 then \nstability=stability<plus>0.1\nlocalexpNum= native.showAlert (\"Успех\", \"Народу понравилась ваша речь и они временно успокоились\", {\"✓\"})\nelse\nstability=stability-0.05\nlocalexpNum = native.showAlert (\"Провал\", \"Речь не удовлетворила народ и они не успокоились\", {\"×\"})\nend\nend"
+      },
+      {
+        "bg_color": [
+          0,
+          0.5,
+          0
+        ],
+        "comment": false,
+        "id": 4,
+        "text": "Денежно помочь народу (100)",
+        "lua_do": "function lua_do()\nif politic==2 then \nstability=stability<plus>0.2\nlocalexpNum= native.showAlert (\"Успех\", \"Народ был удовлетворен денежной помощью и временно успокоился\", {\"✓\"})\nelse\nstability=stability-0.1\nlocalexpNum = native.showAlert (\"Провал\", \"Они стали слишком распущенными!\", {\"×\"})\nend\nend",
+        "lua_if": "function lua_if()\nif money>=100 then\nreturn true\nend\nend"
+      },
+      {
+        "bg_color": [
+          0.3,
+          0.2,
+          0
+        ],
+        "comment": false,
+        "id": 4,
+        "text": "Понизить зарплату",
+        "lua_do": "function lua_do()\nif politic==3 then \nstability=stability<plus>0.3\nlocalexpNum= native.showAlert (\"Успех\", \"Народ усвоил урок и перестал бунтовать\", {\"✓\"})\nelse\nstability=stability-0.15\nlocalexpNum = native.showAlert (\"Провал\", \"Это уже слишком\", {\"×\"})\nend\nend"
+      },
+      {
+        "bg_color": [
+          0.7,
+          0.4,
+          0
+        ],
+        "comment": false,
+        "id": 4,
+        "text": "Поддерживать власть с помощью полиции",
+        "lua_do": "function lua_do()\nif politic==4 then \nstability=stability<plus>0.4\nlocalexpNum= native.showAlert (\"Успех\", \"Полиция поддерживает порядок и народ ею доволен\", {\"✓\"})\nelse\nstability=stability-0.2\nlocalexpNum = native.showAlert (\"Провал\", \"Даже так не успокоить?!\", {\"×\"})\nend\nend"
+      },
+      {
+        "bg_color": [
+          1,
+          0.3,
+          0
+        ],
+        "comment": false,
+        "id": 4,
+        "text": "Ужесточить меры надзора полиции",
+        "lua_do": "function lua_do()\nif politic==5 then \nstability=stability<plus>0.5\nlocalexpNum= native.showAlert (\"Успех\", \"Люди поняли что с власть лучше не шутить\", {\"✓\"})\nelse\nstability=stability-0.25\nlocalexpNum = native.showAlert (\"Провал\", \"Никак не успокоятся, надо попробовать что-нибудь другое\", {\"×\"})\nend\nend"
+      },
+      {
+        "bg_color": [
+          1,
+          0.2,
+          0.2
+        ],
+        "comment": false,
+        "id": 4,
+        "text": "Ввести войска в города",
+        "lua_do": "function lua_do()\nif politic==6 then \nstability=stability<plus>0.6\nlocalexpNum= native.showAlert (\"Успех\", \"Силу понимают все!\", {\"✓\"})\nelse\nstability=stability-0.3\nlocalexpNum = native.showAlert (\"Провал\", \"Может попробовать мягче?\", {\"×\"})\nend\nend"
+      },
+      {
+        "id": 2,
+        "text": "Назад",
+        "bg_color": [
+          1,
+          0.5,
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 4,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "var_random": [
+          "politic",
+          1,
+          6
+        ]
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do() \nif stability<0 then\n   dialog ({header = \"Failed\", \n   text = \"Стабильность приняла отрицательное значение, ты не справился с заданием\", \n   answers = {{text = \"В начало\",\n   pressListener = function () \n   showPage {id = 1, transition = \"instant\"}\n   hideDialog () end}}})\n   end\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 3,
+        "calculate": true
+      },
+      {
+        "id": 4,
+        "text": "Укажите команды для картинки",
+        "url": "https://polit-technolog.ru/wp-content/uploads/2019/10/providers_10447_92024814_1720a8d3e5bb47d259af76d82ecf10d7.jpg"
+      },
+      {
+        "lua_do": "function lua_do()\nif inflation>=1 then \ninflation=inflation-1\nelseif plumbing>=100 then \nstability=stability<plus>0.8\npeoplerespect=peoplerespect<plus>1\nelseif radio>=100 then \nstability=stability<plus>1\npeoplerespect=peoplerespect<plus>2\nelseif education>=100 then \nstability=stability<plus>1.2\npeoplerespect=peoplerespect<plus>3\nelseif game>=100 then \nstability=stability<plus>1.5\npeoplerespect=peoplerespect<plus>4\nend\nend",
+        "comment": true,
+        "super_calculate": false,
+        "id": 2,
+        "text": "     ",
+        "update": [
+          1
+        ],
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Война нелегкое и ответственное дело, если будешь со всеми воевать и что самое главное побеждать то тебя будут уважать, также уважение можно заработать помогоя другим государстввам.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Назад",
+        "update": [
+          3
+        ],
+        "lua_do": "function lua_do()\nif inflation>=1 then \ninflation=inflation-1\nelseif plumbing>=100 then \nstability=stability<plus>0.8\npeoplerespect=peoplerespect<plus>1\nelseif radio>=100 then \nstability=stability<plus>1\npeoplerespect=peoplerespect<plus>2\nelseif education>=100 then \nstability=stability<plus>1.2\npeoplerespect=peoplerespect<plus>3\nelseif game>=100 then \nstability=stability<plus>1.5\npeoplerespect=peoplerespect<plus>4\nend\nend"
+      },
+      {
+        "id": 9,
+        "text": "Найм солдат"
+      },
+      {
+        "id": 10,
+        "text": "Помощь от других государств"
+      },
+      {
+        "comment": false,
+        "id": 5,
+        "text": "Купить улучшение для \"Пехота\"",
+        "lua_if": "function lua_if()\nif money>=value.infantry then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nmoney=money-value.infantry\ninfantrylvl=infantrylvl<plus>1\ninfantrydamage=infantrydamage<plus>1\nif infantrylvl>=2 then\ninfantrydefence=infantrydefence<plus>1\nend\nend"
+      },
+      {
+        "comment": false,
+        "id": 5,
+        "text": "Купить улучшение для \"Снайперы\"",
+        "lua_if": "function lua_if()\nif money>=value.sniper then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nmoney=money-value.sniper\nsniperlvl=sniperlvl<plus>1\nsniperdamage=sniperdamage<plus>1\nif sniperlvl>=3 then\nsniperdefence=sniperdefence<plus>1\nend\nend"
+      },
+      {
+        "bg_color": [
+          1,
+          0.3
+        ],
+        "comment": false,
+        "id": 5,
+        "text": "Урон Пехоты:",
+        "var_show": [
+          "infantrydamage"
+        ],
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          1,
+          0.3
+        ],
+        "comment": false,
+        "id": 5,
+        "text": "Защита Пехоты:",
+        "var_show": [
+          "infantrydefence"
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 5,
+        "text": "Урон Снайперов:",
+        "bg_color": [
+          1,
+          0.3
+        ],
+        "var_show": [
+          "sniperdamage"
+        ]
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "id": 5,
+        "text": "Защита Снайперов:",
+        "bg_color": [
+          1,
+          0.3
+        ],
+        "var_show": [
+          "sniperdefence"
+        ]
+      },
+      {
+        "var_random": [
+          "ataka",
+          0,
+          5
+        ],
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif ataka==2 then \nshowPage {id=11}\nfights=fights<plus>1\npehotavraga=math.round(math.random(infantry*0.5, infantry*1.5))\nsnaipervraga=math.round(math.random(sniper*0.5, sniper*1.5))\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 5,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 5,
+        "calculate": true,
+        "widget_show": [
+          "снайперы",
+          "sniper",
+          "пехота",
+          "infantry"
+        ],
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Здесь вы можете потерять или же приумножить свои деньги. Можно вложится в легальные предприятия или же рискуя репутацией вложится в нелегальные предприятия, у которых больше коэффициент \"выигрыша\". Легальный заработок открывается если у тебя более 50 долларов, нелегальный более 500 долларов.\nPS: если вы во что-то вложились то надо подождать пока пройдет время и вам откроются разделы Народ, Военные действия и Власть.",
+    "answers": [
+      {
+        "bg_color": [
+          0.5,
+          1,
+          0.5
+        ],
+        "id": 7,
+        "var_need": [
+          "money",
+          50
+        ],
+        "text": "Легальный заработок",
+        "var_no_more": [
+          "money",
+          1000
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Нелегальный заработок",
+        "bg_color": [
+          1,
+          0.3
+        ],
+        "var_need": [
+          "money",
+          500
+        ]
+      },
+      {
+        "bg_color": [
+          1,
+          1,
+          0.5
+        ],
+        "id": 2,
+        "text": "Назад",
+        "update": [
+          3
+        ],
+        "lua_do": "function lua_do()\nif inflation>=1 then \ninflation=inflation-1\nelseif plumbing>=100 then \nstability=stability<plus>0.8\npeoplerespect=peoplerespect<plus>1\nelseif radio>=100 then \nstability=stability<plus>1\npeoplerespect=peoplerespect<plus>2\nelseif education>=100 then \nstability=stability<plus>1.2\npeoplerespect=peoplerespect<plus>3\nelseif game>=100 then \nstability=stability<plus>1.5\npeoplerespect=peoplerespect<plus>4\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Вы можете использовать свои деньги попробовав вложиться в законное дело, если оно провалится вы потеряете свои деньги:",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          1,
+          0.5
+        ],
+        "comment": false,
+        "lua_do": "function lua_do()\nmoney=money-50\nsell=\"close\" \n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>55\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n   {text = \"Вложить больше денег (-50)\", \n   pressListener = function () \nmoney=money-50\n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>150\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () \n   end}}})\nshowPage {id = g.current_id, transition = \"instant\"}\nhideDialog () \n   end}}})\nend",
+        "text": "Вышедши из ВУЗа молодой человек решил открыть свой строительный бизнес, ему нужны инвесторы. При успехе вы получите назад свои деньги с прибавкой в 10%. (-50)",
+        "lua_if": "function lua_if()\nif money>=100 then\nreturn true\nend\nend",
+        "id": 7
+      },
+      {
+        "bg_color": [
+          0.8,
+          1,
+          0.5
+        ],
+        "comment": false,
+        "lua_do": "function lua_do()\nsell=\"close\"\nmoney=money-80\nif tf >=3 then \n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>92\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n   {text = \"Вложить больше денег (-80)\", \n   pressListener = function () \nmoney=money-80\n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>200\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () \n   end}}})\nshowPage {id = g.current_id, transition = \"instant\"}\nhideDialog () \n   end}}})\nend\nend",
+        "text": "Молодая компания решила расширится и ей нужны инвесторы, если у них все получится ты получиш деньги назад <plus>15%, если же не получится ты потеряешь свои деньги.(-80)\n\n",
+        "lua_if": "function lua_if()\nif money>=160 then\nreturn true\nend\nend",
+        "id": 7
+      },
+      {
+        "id": 6,
+        "text": "Назад",
+        "bg_color": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 7,
+        "calculate": true,
+        "var_random": [
+          "tf",
+          1,
+          10
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 7,
+        "text": "Укажите команды для картинки",
+        "url": "https://melmagazine.com/wp-content/uploads/2019/07/Stonks_Meme.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "При неудаче в нелегальном предприятии ты потеряешь и деньги и уважение, будь очень осторожен!   ",
+    "answers": [
+      {
+        "bg_color": [
+          1,
+          0.4
+        ],
+        "comment": false,
+        "lua_do": "function lua_do()\nmoney=money-100\nsell=\"close\"\nif tf>=5 then \n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>135\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n   {text = \"Вложить больше денег (-100)\", \n   pressListener = function () \nmoney=money-100\n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>300\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () \n   end}}})\nshowPage {id = g.current_id, transition = \"instant\"}\nhideDialog () \n   end}}})\nelseif \ntf<=4 then \nsell=\"open\"\nreputation=reputation-10\nfunction lua_do()\nlocal expNum = native.showAlert (\"Провал\", \"Вы потеряли репутацию и деньги\", {\"ОК\"})\nend\nend\nend",
+        "text": "Местная бандитская группировка основывает подпольный магазин оружия, если их не поймают вы получите свои деньги назад <plus>35%, но если их поймают вы потеряете свои деньги и репутацию.",
+        "id": 8,
+        "lua_if": "function lua_if()\nif money>=200 and reputation>=10 then\nreturn true\nend\nend"
+      },
+      {
+        "bg_color": [
+          1
+        ],
+        "comment": false,
+        "lua_do": "function lua_do()\nmoney=money-160\nsell=\"close\"\nif tf >=7 then\n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>240\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () end}, \n   {text = \"Вложить больше денег (-80)\", \n   pressListener = function () \nmoney=money-160\n   dialog ({header = \"Успех\", \n   text = \"Дело в которое вы вложились успешно развивается\", \n   answers = {{text = \"Забрать свои деньги\",\n   pressListener = function () \n   money=money<plus>600\nsell=\"open\"\n   showPage {id = g.current_id, transition = \"instant\"}\n   hideDialog () \n   end}}})\nshowPage {id = g.current_id, transition = \"instant\"}\nhideDialog () \n   end}}})\nelseif \ntf<=6 then\nsell=\"open\"\nreputation=reputation-20\nlocal expNum = native.showAlert (\"Провал\", \"Вы потеряли деньги и репутацию\", {\"ОК\"})\nend\nend",
+        "text": "Местная бандитская группировка организует поставку и продажу наркотиков и им нужны инвесторы, если у них все получится ты получиш деньги назад <plus>50%, если же не получится ты потеряешь свои деньги и немного репутации.(-160)",
+        "id": 8,
+        "lua_if": "function lua_if()\nif money>=320 and reputation>=20 then\nreturn true\nend\nend"
+      },
+      {
+        "id": 6,
+        "text": "Назад",
+        "bg_color": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 7,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_random": [
+          "tf",
+          1,
+          10
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Укажите команды для картинки",
+        "url": "https://a.radikal.ru/a41/2002/99/4587648abc9e.jpg\n\n"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Здесь можно нанять солдат разного типа:",
+    "answers": [
+      {
+        "var_show": [
+          "infantrylvl"
+        ],
+        "var_add": [
+          "infantry",
+          50
+        ],
+        "text": "Пехота (50солдат 100$)ур:",
+        "id": 9,
+        "var_sub": [
+          "money",
+          100
+        ],
+        "var_need": [
+          "money",
+          100
+        ],
+        "comment": false
+      },
+      {
+        "var_show": [
+          "infantrylvl"
+        ],
+        "var_add": [
+          "infantry",
+          100
+        ],
+        "text": "Пехота(100 солдат 180$)ур:",
+        "id": 9,
+        "var_sub": [
+          "money",
+          180
+        ],
+        "var_need": [
+          "money",
+          180
+        ],
+        "comment": false
+      },
+      {
+        "var_show": [
+          "sniperlvl"
+        ],
+        "var_add": [
+          "sniper",
+          10
+        ],
+        "text": "Снайперы(10солдат 50$)ур:",
+        "id": 9,
+        "var_sub": [
+          "money",
+          50
+        ],
+        "var_need": [
+          "money",
+          50
+        ],
+        "comment": false
+      },
+      {
+        "var_show": [
+          "sniperlvl"
+        ],
+        "var_add": [
+          "sniper",
+          20
+        ],
+        "text": "Снайперы(20солдат 90$)ур:",
+        "id": 9,
+        "var_sub": [
+          "money",
+          90
+        ],
+        "var_need": [
+          "money",
+          90
+        ],
+        "comment": false
+      },
+      {
+        "id": 5,
+        "text": "Назад"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Другие государства тоже могут помогать тебе, а ты им.",
+    "answers": [
+      {
+        "comment": false,
+        "id": 10,
+        "var_sub": [
+          "sniper",
+          50
+        ],
+        "var_max": [
+          "Guild",
+          100
+        ],
+        "bg_color": [
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==1 then\nreturn true\nend\nend",
+        "text": "Гильдии нужно 50 снайперов (дать)",
+        "var_add": [
+          "Guild",
+          40
+        ],
+        "var_need": [
+          "sniper",
+          50
+        ]
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "var_need": [
+          "infantry",
+          50
+        ],
+        "var_max": [
+          "Guild",
+          100
+        ],
+        "bg_color": [
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==2 then\nreturn true\nend\nend",
+        "text": "Гильдия попросила у вас 50 пехотинцев (дать)",
+        "var_add": [
+          "Guild",
+          20
+        ],
+        "var_sub": [
+          "infantry",
+          50
+        ]
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "var_need": [
+          "sniper",
+          50
+        ],
+        "var_max": [
+          "Empire",
+          100
+        ],
+        "bg_color": [
+          1,
+          0.2
+        ],
+        "lua_if": "function lua_if()\nif help==3 then\nreturn true\nend\nend",
+        "var_sub": [
+          "sniper",
+          50
+        ],
+        "var_add": [
+          "Empire",
+          40
+        ],
+        "text": "Империи нужно 50 снайперов (дать)"
+      },
+      {
+        "var_add": [
+          "Empire",
+          20
+        ],
+        "id": 10,
+        "text": "Империя попросила у вас 50 пехотинцев (дать)",
+        "var_max": [
+          "Empire",
+          100
+        ],
+        "bg_color": [
+          1,
+          0.2
+        ],
+        "lua_if": "function lua_if()\nif help==4 then\nreturn true\nend\nend",
+        "var_need": [
+          "infantry",
+          50
+        ],
+        "comment": false,
+        "var_sub": [
+          "infantry",
+          50
+        ]
+      },
+      {
+        "var_add": [
+          "Coalition",
+          40
+        ],
+        "text_color": [
+          0,
+          0,
+          0
+        ],
+        "id": 10,
+        "var_need": [
+          "sniper",
+          50
+        ],
+        "var_max": [
+          "Coalition",
+          100
+        ],
+        "bg_color": [
+          1,
+          0,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==5 then\nreturn true\nend\nend",
+        "text": "Коалиции нужно 50 снайперов (дать)",
+        "comment": false,
+        "var_sub": [
+          "sniper",
+          50
+        ]
+      },
+      {
+        "comment": false,
+        "id": 10,
+        "var_need": [
+          "infantry",
+          50
+        ],
+        "var_max": [
+          "Coalition",
+          100
+        ],
+        "bg_color": [
+          1,
+          0,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==6 then\nreturn true\nend\nend",
+        "text": "Коалиция попросила у вас 50 пехотинцев (дать)",
+        "var_add": [
+          "Coalition",
+          20
+        ],
+        "var_sub": [
+          "infantry",
+          50
+        ]
+      },
+      {
+        "var_add": [
+          "Republic",
+          40
+        ],
+        "text_color": [
+          0
+        ],
+        "id": 10,
+        "text": "Республике нужно 50 снайперов (дать)",
+        "var_max": [
+          "Republic",
+          100
+        ],
+        "bg_color": [
+          0,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==7 then\nreturn true\nend\nend",
+        "var_sub": [
+          "sniper",
+          50
+        ],
+        "comment": false,
+        "var_need": [
+          "sniper",
+          50
+        ]
+      },
+      {
+        "var_add": [
+          "Republic",
+          20
+        ],
+        "id": 10,
+        "text": "Республика попросила у вас 50 пехотинцев (дать)",
+        "var_max": [
+          "Republic",
+          100
+        ],
+        "bg_color": [
+          0,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==8 then\nreturn true\nend\nend",
+        "var_need": [
+          "infantry",
+          50
+        ],
+        "comment": false,
+        "var_sub": [
+          "infantry",
+          50
+        ]
+      },
+      {
+        "bg_color": [
+          0,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==9 then\nreturn true\nend\nend",
+        "id": 10,
+        "text": "Вам отправили 10 снайперов (взять)",
+        "var_add": [
+          "sniper",
+          10
+        ],
+        "comment": false
+      },
+      {
+        "bg_color": [
+          0,
+          1
+        ],
+        "lua_if": "function lua_if()\nif help==10 then\nreturn true\nend\nend",
+        "id": 10,
+        "text": "Вам отправили 50 пехотинцев (взять)",
+        "comment": false,
+        "var_add": [
+          "infantry",
+          50
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Назад",
+        "bg_color": [
+          0,
+          0.5,
+          1
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "var_random": [
+          "help",
+          1,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "На вас напали:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 11,
+        "text": "Кол-во пехотинцев врага:",
+        "left_answer": true
+      },
+      {
+        "id": 11,
+        "text": " ",
+        "comment": true,
+        "var_show": [
+          "pehotavraga",
+          "ч."
+        ]
+      },
+      {
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 11,
+        "text": "Кол-во снайперов врага:",
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "snaipervraga",
+          "ч."
+        ],
+        "comment": true,
+        "id": 11,
+        "text": " ",
+        "bg_color": [
+          0
+        ]
+      },
+      {
+        "bg_color": [],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 11,
+        "text": "Ваши войска:",
+        "left_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn sniper<plus>infantry\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif infantry>=1 then\nreturn true\nend\nend",
+        "right_answer": false,
+        "comment": false,
+        "middle_answer": false,
+        "lua_do": "function lua_do()\ninfantry=infantry-1\ndefencesoldiers=defencesoldiers<plus>1\nend",
+        "text": "Отправить 1 пехотинцев на оборону",
+        "id": 11,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "lua_if": "function lua_if()\nif infantry>=10 then\nreturn true\nend\nend",
+        "middle_answer": false,
+        "text": "Отправить 10 пехотинцев на оборону",
+        "lua_do": "function lua_do()\ninfantry=infantry-10\ndefencesoldiers=defencesoldiers<plus>10\nend\n",
+        "id": 11
+      },
+      {
+        "right_answer": false,
+        "comment": false,
+        "lua_if": "function lua_if()\nif infantry>=20 then\nreturn true\nend\nend",
+        "id": 11,
+        "text": "Отправить 20 пехотинцев на оборону",
+        "lua_do": "function lua_do()\ninfantry=infantry-20\ndefencesoldiers=defencesoldiers<plus>20\nend",
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nif infantry>=50 then\nreturn true\nend\nend",
+        "id": 11,
+        "text": "Отправить 50 пехотинцев на оборону",
+        "lua_do": "function lua_do()\ninfantry=infantry-50\ndefencesoldiers=defencesoldiers<plus>50\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "lua_if": "function lua_if()\nif infantry>=100 then\nreturn true\nend\nend",
+        "middle_answer": false,
+        "text": "Отправить 100 пехотинцев на оборону",
+        "lua_do": "function lua_do()\ninfantry=infantry-100\ndefencesoldiers=defencesoldiers<plus>100\nend",
+        "id": 11
+      },
+      {
+        "right_answer": false,
+        "comment": false,
+        "lua_if": "function lua_if()\nif sniper>=1 then\nreturn true\nend\nend",
+        "id": 11,
+        "text": "Отправить 1 снайперов на оборону",
+        "lua_do": "function lua_do()\nsniper=sniper-1\ndefencesoldiers=defencesoldiers<plus>1\nend",
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nif sniper>=10 then\nreturn true\nend\nend",
+        "id": 11,
+        "text": "Отправить 10 снайперов на оборону",
+        "lua_do": "function lua_do()\nsniper=sniper-10\ndefencesoldiers=defencesoldiers<plus>10\nend",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "lua_if": "function lua_if()\nif sniper>=20 then\nreturn true\nend\nend",
+        "middle_answer": false,
+        "text": "Отправить 20 снайперов на оборону",
+        "lua_do": "function lua_do()\nsniper=sniper-20\ndefencesoldiers=defencesoldiers<plus>20\nend",
+        "id": 11
+      },
+      {
+        "right_answer": false,
+        "comment": false,
+        "lua_if": "function lua_if()\nif sniper>=50 then\nreturn true\nend\nend",
+        "id": 11,
+        "text": "Отправить 50 снайперов на оборону",
+        "lua_do": "function lua_do()\nsniper=sniper-50\ndefencesoldiers=defencesoldiers<plus>50\nend",
+        "middle_answer": true
+      },
+      {
+        "super_calculate": false,
+        "id": 11,
+        "calculate": true,
+        "lua_do": "function lua_do()\nif infantry<plus>sniper<=0 and defencesoldiers<=0 then\ndialog ({header = \"Поражение\", \n   text = \"Из-за отсутствия армии ты проиграл сражение\", \n   answers = {{text = \"Ок\",\n   pressListener = function () \n   showPage {id = 5, transition = \"instant\"}\n   hideDialog ()\n   end}}})\nif reputation>=10 then\nreputation=reputation-10\nend\nend\nend",
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nmenuses=pehotavraga*infantrydamage<plus>snaipervraga*sniperdamage\npluses=sniper*sniperdamage<plus>infantry*infantrydamage\nmenuses=menuses-pluses\nif menuses<=0 then \ndead=defencesoldiers*-menuses\nend\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 11
+      },
+      {
+        "id": 12,
+        "text": "Начать оборону",
+        "comment": false,
+        "lua_do": "function lua_do()\ndefencesoldiers=defencesoldiers-dead\nend"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Итоги обороны:",
+    "answers": [
+      {
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 12,
+        "text": "В живых солдат осталось:",
+        "left_answer": true
+      },
+      {
+        "id": 12,
+        "text": " ",
+        "comment": true,
+        "var_show": [
+          "defencesoldiers"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif defencesoldiers~=0 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\ninfantry=infantry<plus>defencesoldiers\ndefencesoldiers=defencesoldiers-defencesoldiers\nreputation=reputation<plus>10\nend",
+        "text": "Вернуть солдат как пехотинцев",
+        "id": 5,
+        "comment": false
+      },
+      {
+        "lua_if": "function lua_if()\nif defencesoldiers~=0 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nsniper=sniper<plus>defencesoldiers\ndefencesoldiers=defencesoldiers-defencesoldiers\nreputation=reputation<plus>10\nend",
+        "text": "Вернуть солдат как снайперов",
+        "id": 5,
+        "comment": false
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif defencesoldiers<=0 then \nshowPage{id=5}\nend\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 12
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Вторая часть это продолжение вашей истории, что будет дальше? Решать вам!",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Далее",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Вы можете выбрать что делать далее, (необходимо обязательно переприсягнуть любому государству) уйти в отставку или продолжить свою карьеру.",
+    "answers": [
+      {
+        "var_str_set": [
+          "global nation2",
+          "Империи"
+        ],
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1
+        ],
+        "id": 14,
+        "text": "Переприсягнуть Империи",
+        "answerImage": [
+          "https://b.radikal.ru/b06/2003/03/daf3f4dd7b73.png"
+        ]
+      },
+      {
+        "var_str_set": [
+          "global nation2",
+          "Гильдии"
+        ],
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 14,
+        "text": "\nПереприсягнуть Гильдии",
+        "answerImage": [
+          "https://b.radikal.ru/b37/2003/21/b905920e48da.png"
+        ]
+      },
+      {
+        "var_str_set": [
+          "global nation2",
+          "Республики"
+        ],
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          0,
+          1
+        ],
+        "id": 14,
+        "text": "\nПереприсягнуть Республике",
+        "answerImage": [
+          "https://a.radikal.ru/a19/2003/f5/1cee5e23ae94.png"
+        ]
+      },
+      {
+        "var_str_set": [
+          "global nation2",
+          "Коалиции"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          0,
+          1
+        ],
+        "id": 14,
+        "text": "\nПереприсягнуть Коалиции\n",
+        "answerImage": [
+          "https://b.radikal.ru/b35/2003/08/fc2a80db3dc9.png"
+        ]
+      },
+      {
+        "lua_do": "function lua_do()\nusername=\"\"\nuserage=0\nreputation=0\nend",
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nif g.nation2~=nil then\nreturn true\nend\nend",
+        "text_color": [
+          0.5,
+          0.3
+        ],
+        "id": 15,
+        "text": "\nУйти в отставку\n",
+        "middle_answer": true,
+        "answerImage": [
+          "https://a.radikal.ru/a00/2003/f5/25a9e5cd177d.png"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif g.nation2~=nil then\nreturn true\nend\nend",
+        "id": 16,
+        "comment": false,
+        "text_color": [
+          1
+        ],
+        "middle_answer": true,
+        "text": "Продолжить\nвоенную \nкарьеру",
+        "lua_do": "function lua_do()\nrang=0\nrang=\"Генерал-майор\"\npoints={}\npoints.power=0\npoints.xp=0\npoints.knows=0\nstars=0\nstars=\"★\"\nsoldiers=100\nmission=0\nmsoldiers=0\nmkristals=0\nkristals=4\nmgold=0\ngold=100\nmargentum=0\nargentum=10000\nxp=0\na=0\nemparior=0\nc=0\na=\"\"\nvo=10\nvg=100\nend",
+        "answerImage": [
+          "https://d.radikal.ru/d17/2003/2d/2b40237aa279.png"
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 14,
+        "calculate": true,
+        "lua_do": "function lua_do()\nfor k in pairs(vars) do\n    vars[k] = nil\nend\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 15,
+        "text": "Новый ответ. введите текст",
+        "lua_do": "function lua_do()\nimages.nemo.isVisible=false\ninputText = native.newTextBox(canvas.width / 2, canvas.height / 2, canvas.width / 1.2, canvas.height / 4)\ncanvasGroup:insert (inputText)\ninputText.isEditable = true\ninputText.placeholder = \"Введите имя и фамилию своего персонажа\"\nend",
+        "calculate": true
+      },
+      {
+        "id": 15,
+        "text": "nemo",
+        "url": "https://preview.free3d.com/img-dev/2013/04/1763983548324250645/icpeo7xx-900.jpg"
+      },
+      {
+        "id": 17,
+        "text": "Подтвердить данные",
+        "lua_if": "function lua_if()\nreturn true \nend",
+        "lua_do": "function lua_do()\nusername= inputText.text\ndisplay.remove(inputText)\nend\n"
+      },
+      {
+        "super_calculate": false,
+        "id": 15,
+        "calculate": true,
+        "lua_do": "function lua_do()\nhp=100\nhph=0\nmoney=200000\nprofit=0\nmood=100\ngame=0\nend",
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Ваш ранг: ",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\nreturn (rang)\nend",
+        "text_color": [
+          1
+        ],
+        "id": 16,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "lua_text": "function lua_text()\nreturn (stars)\nend",
+        "right_answer": false,
+        "comment": true,
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c34/2003/58/b84e299587e9.jpg"
+        ],
+        "id": 16,
+        "text": "★★★★★★★★★★★",
+        "middle_answer": true,
+        "left_answer": false
+      },
+      {
+        "comment": true,
+        "text_color": [],
+        "id": 16,
+        "text": "*Чтобы повысить ранг необходимо набрать 10 звёзд\n*Чтобы получить звезду необходимо набрать 10 очков опыта",
+        "middle_answer": true,
+        "merge": false
+      },
+      {
+        "var_show": [
+          "xp",
+          " очков опыта"
+        ],
+        "comment": true,
+        "text_color": [
+          0
+        ],
+        "id": 16,
+        "text": "У вас: ",
+        "right_answer": true,
+        "left_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c34/2003/58/b84e299587e9.jpg"
+        ],
+        "bg_color": [],
+        "comment": true,
+        "text_color": [],
+        "middle_answer": false,
+        "text": "\n\nПолучить задание:\n\n",
+        "id": 16,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a23/2003/9b/21a9f1d25b2f.png"
+        ],
+        "bg_color": [
+          0,
+          0,
+          1
+        ],
+        "middle_answer": false,
+        "text": "\n\n\n\n",
+        "id": 25,
+        "left_answer": false
+      },
+      {
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c34/2003/58/b84e299587e9.jpg"
+        ],
+        "id": 16,
+        "text": "\n\nНанять солдат:\n\n",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "id": 28,
+        "text": "\n\n\n\n",
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ],
+        "right_answer": true
+      },
+      {
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c34/2003/58/b84e299587e9.jpg"
+        ],
+        "id": 16,
+        "text": "\n\nОбменник:\n\n",
+        "comment": true,
+        "left_answer": true
+      },
+      {
+        "id": 29,
+        "text": "\n\n\n\n",
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d21/2004/fb/fbbc51a85032.jpg"
+        ],
+        "right_answer": true
+      },
+      {
+        "id": 27,
+        "text": "Посмотреть отчёт",
+        "lua_if": "function lua_if()\nif msoldiers~=0 and msoldiers~=nil then\nreturn true\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nif rang==\"Генерал-майор\" and stars==\"★★★★★★★★★★\" then\nstars=\"★\"\nrang=\"Генерал-лейтенант\"\nelseif rang==\"Генерал-лейтенант\" and stars==\"★★★★★★★★★★\" then\nstars=\"★\"\nrang=\"Генерал-полковник\"\nelseif rang==\"Генерал-полковник\" and stars==\"★★★★★★★★★★\" then\nstars=\"★\"\nrang=\"Генерал армии\"\nelseif rang==\"Генерал армии\" and stars==\"★★★★★★★★★★\" then\nstars=\"★\"\nrang=\"Маршал \"..(g.nation2)\nelseif xp==10 then\nstars=stars..\"★\"\nxp=xp-10\nend\nend",
+        "calculate": false,
+        "id": 16,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\ngoing={}\ngoing [1]={\"Твои солдаты встретили противника и уничтожили его (-10солдат)\",\"Твои солдаты нашли заброшенный город (<plus>10золота, <plus>1кристал света)\",\"Твои солдаты наткнулись на черную дыру корабль повреждён (-50солдат)\",\"Твои солдаты встретили беженцев которые присоединились к ним (<plus>20солдат)\",\"Твои солдаты наткнулись на грузовой корабль (<plus>250серебра)\",\"Твои солдаты достигли места назначения и справились с заданием\"}\ngoing [2]={\"Твои солдаты встретили противника и уничтожили его (-20солдат)\",\"Твои солдаты нашли заброшенный город (<plus>30золота, <plus>2кристал света)\",\"Твои соодаты наткнулись на черную дыру корабль повреждён (-100солдат)\",\"Твои солдаты встретили беженцев которые присоединились к ним (<plus>40солдат)\",\"Твои солдаты наткнулись на грузовой корабль (<plus>500серебра)\",\"Твои солдаты достигли места назначения и справились с заданием\"}\ngoing [3]={\"Твои солдаты встретили противника и уничтожили его (-40солдат)\",\"Твои солдаты нашли заброшенный город (<plus>50золота, <plus>5кристал света)\",\"Твои соодаты наткнулись на черную дыру корабль повреждён (-200солдат)\",\"Твои солдаты встретили беженцев которые присоединились к ним (<plus>80солдат)\",\"Твои солдаты наткнулись на грузовой корабль (<plus>2500серебра)\",\"Твои солдаты достигли места назначения и справились с заданием\"}\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 16,
+        "calculate": true
+      },
+      {
+        "super_calculate": true,
+        "id": 16,
+        "widget_show": [
+          "серебро",
+          "argentum",
+          "золото",
+          "gold",
+          "солдаты",
+          "soldiers",
+          "кристаллы",
+          "kristals"
+        ],
+        "text": "Новый ответ. введите текст",
+        "calculate": false
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif soldiers<=0 then\nsoldiers=0\nend\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 16
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif rang==\"Маршал \"..(g.nation2) and stars==\"★★★★★★★★★★\" \nthen emparior=1\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 16,
+        "calculate": true
+      },
+      {
+        "id": 30,
+        "text": "Отправится к императору ",
+        "lua_if": "function lua_if()\nif emparior==1 then\nreturn true\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Глва вторая: Отставка\n\n\n   Введенные вами данные будут использоваться по ходу игры, удачи в жизни.",
+    "answers": [
+      {
+        "id": 17,
+        "text": "Ваше имя и фамилия:",
+        "comment": true,
+        "var_show": [
+          "username"
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Изменить Ф.И.О",
+        "comment": false
+      },
+      {
+        "id": 19,
+        "text": "Продолжить",
+        "lua_if": "function lua_if()\nif username~=\"\" and username~=0 and userage>=30 and userage<=40 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nmenu=1\nreputation=55\nyear=3000\nmonth=1\nday=1\nmood=100\nhp=100\nhph=0\ngame=0\nprofit=0\nmoney=1000000\npeople=0\nend"
+      },
+      {
+        "comment": false,
+        "var_random": [
+          "userage",
+          30,
+          40
+        ],
+        "id": 17,
+        "instant": true,
+        "text": "Сгенерировать случайный возраст от 30 до 40"
+      },
+      {
+        "id": 17,
+        "text": "Возраст:",
+        "comment": true,
+        "var_show": [
+          "userage"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Ваши показателии и данные:",
+    "answers": [
+      {
+        "left_answer": true,
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 18,
+        "text": "Жизненные\nпоказатели:",
+        "middle_answer": true,
+        "no_transition": true
+      },
+      {
+        "right_answer": true,
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 18,
+        "text": "Жизненные\nпоказатели:",
+        "middle_answer": true,
+        "no_transition": true
+      },
+      {
+        "var_show": [
+          "hp",
+          "%"
+        ],
+        "comment": false,
+        "id": 18,
+        "text": "Хп:",
+        "no_transition": true,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "left_answer": true,
+        "middle_answer": false,
+        "right_answer": false,
+        "answerImage": [
+          "https://d.radikal.ru/d18/2003/a4/261722dea905.png"
+        ]
+      },
+      {
+        "var_show": [
+          "hph",
+          "%<plus>"
+        ],
+        "text_color": [],
+        "id": 18,
+        "text": "Реген:",
+        "no_transition": true,
+        "bg_color": [
+          1,
+          1,
+          1
+        ],
+        "left_answer": false,
+        "middle_answer": false,
+        "right_answer": true,
+        "answerImage": [
+          "https://c.radikal.ru/c28/2003/e0/43d83aea91c3.png"
+        ]
+      },
+      {
+        "left_answer": true,
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 18,
+        "text": "Финансы и \nбухгалтерия:",
+        "middle_answer": true,
+        "no_transition": true
+      },
+      {
+        "right_answer": true,
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 18,
+        "text": "Финансы и\nбухгалтерия:",
+        "middle_answer": true,
+        "no_transition": true
+      },
+      {
+        "no_transition": true,
+        "right_answer": false,
+        "left_answer": true,
+        "text_color": [],
+        "id": 18,
+        "text": "Деньги:",
+        "var_show": [
+          "money",
+          "$"
+        ],
+        "answerImage": [
+          "https://c.radikal.ru/c19/2003/26/0039119a2542.png"
+        ]
+      },
+      {
+        "var_show": [
+          "profit",
+          "$<plus>"
+        ],
+        "no_transition": true,
+        "text_color": [],
+        "id": 18,
+        "text": "Доход:",
+        "right_answer": true,
+        "answerImage": [
+          "https://c.radikal.ru/c21/2003/f6/9fe4f5aee179.png"
+        ]
+      },
+      {
+        "bg_color": [
+          0
+        ],
+        "right_answer": true,
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 18,
+        "text": "  Эмоциальное\nсостояние:",
+        "middle_answer": true,
+        "no_transition": true
+      },
+      {
+        "no_transition": true,
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 18,
+        "text": "  Эмоциональное\nсостояние:",
+        "middle_answer": true,
+        "left_answer": true
+      },
+      {
+        "var_show": [
+          "mood",
+          "%"
+        ],
+        "no_transition": true,
+        "text_color": [],
+        "id": 18,
+        "text": "Настроение:\n(В процентах)",
+        "left_answer": true,
+        "answerImage": [
+          "https://c.radikal.ru/c36/2003/da/3f2c8ea57e62.png"
+        ]
+      },
+      {
+        "var_show": [
+          "games",
+          "%<plus>"
+        ],
+        "no_transition": true,
+        "text_color": [],
+        "id": 18,
+        "text": "Бонус к\nнастроению:",
+        "right_answer": true,
+        "answerImage": [
+          "https://c.radikal.ru/c14/2003/02/f59f1994001e.png"
+        ]
+      },
+      {
+        "bg_color": [
+          0
+        ],
+        "text": "Назад\n⟨⟨⟨⟨⟨⟨⟨⟨",
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 19,
+        "instant": true,
+        "middle_answer": true,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "bg_color": [
+          0
+        ],
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "Назад\n⟩⟩⟩⟩⟩⟩⟩⟩",
+        "middle_answer": true,
+        "instant": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Главный раздел:",
+    "answers": [
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨",
+        "no_transition": false,
+        "bg_color": [],
+        "left_answer": true,
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nif \nmenu==1 \nthen \nmenu=4\nelseif\nmenu==4\nthen \nmenu=3\nelseif\nmenu==3 \nthen \nmenu=2\nelseif\nmenu==2\nthen \nmenu=1\nend\nend",
+        "instant": false
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "⟩⟩⟩⟩⟩⟩⟩⟩",
+        "no_transition": false,
+        "bg_color": [],
+        "left_answer": false,
+        "right_answer": true,
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nif \nmenu==1 \nthen \nmenu=2\nelseif\nmenu==2\nthen \nmenu=3\nelseif\nmenu==3\nthen \nmenu=4\nelseif\nmenu==4\nthen\nmenu=1\nend\nend",
+        "instant": false
+      },
+      {
+        "lua_if": "function lua_if()\nif menu==1 and userage<=45 then\nreturn true\nend\nend",
+        "id": 19,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d33/2003/57/457a1e104fc1.png"
+        ]
+      },
+      {
+        "lua_if": "function lua_if()\nif menu==1 and userage>=46 then\nreturn true\nend\nend",
+        "id": 19,
+        "text": " \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c14/2003/f5/dd69083664e2.png"
+        ]
+      },
+      {
+        "comment": true,
+        "id": 19,
+        "text": "     \n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d04/2003/62/b6a636240941.png"
+        ],
+        "lua_if": "function lua_if()\nif menu==2 then\nreturn true\nend\nend"
+      },
+      {
+        "comment": true,
+        "id": 19,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d18/2003/a4/261722dea905.png"
+        ],
+        "lua_if": "function lua_if()\nif menu==3 then\nreturn true\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif menu==4 then\nreturn true\nend\nend",
+        "id": 19,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a14/2003/bb/f38d8ec8f6fd.png"
+        ]
+      },
+      {
+        "var_show": [
+          "userage"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "Возраст:\n",
+        "left_answer": true,
+        "bg_color": [
+          0
+        ],
+        "lua_if": "function lua_if()\nif menu==1 then\nreturn true\nend\nend",
+        "id": 19,
+        "no_transition": true
+      },
+      {
+        "var_show": [
+          "reputation"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "Репутация:\n",
+        "no_transition": true,
+        "right_answer": true,
+        "lua_if": "function lua_if()\nif menu==1 then\nreturn true\nend\nend",
+        "id": 19,
+        "bg_color": [
+          0
+        ]
+      },
+      {
+        "var_str_set": [
+          "global switch_page_sound",
+          0
+        ],
+        "bg_color": [
+          1,
+          1
+        ],
+        "lua_if": "function lua_if()\nif menu==2 then\nreturn true\nend\nend",
+        "text_color": [],
+        "id": 20,
+        "text": "Развлечения",
+        "comment": false,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0.7
+        ],
+        "lua_if": "function lua_if()\nif menu==3 then\nreturn true\nend\nend",
+        "text_color": [
+          0
+        ],
+        "id": 21,
+        "text": "Здоровье",
+        "middle_answer": true
+      },
+      {
+        "bg_color": [],
+        "lua_if": "function lua_if()\nif menu==4 then\nreturn true\nend\nend",
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "text": "Имущество"
+      },
+      {
+        "bg_color": [],
+        "lua_if": "function lua_if()\nif menu==1 then\nreturn true\nend\nend",
+        "text_color": [],
+        "id": 18,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n",
+        "middle_answer": true,
+        "answerImage": [
+          "https://b.radikal.ru/b16/2003/2e/1bf7170add8d.png"
+        ]
+      },
+      {
+        "comment": false,
+        "text_color": [
+          0,
+          0.4,
+          0.4
+        ],
+        "id": 19,
+        "text": "\n\n\n",
+        "left_answer": true,
+        "right_answer": true,
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d41/2003/e0/de9301ec6eff.png"
+        ],
+        "lua_if": "function lua_if()\nif menu==1 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nday=day<plus>1\nmoney=money<plus>10000\nend"
+      },
+      {
+        "bg_color": [
+          1,
+          1
+        ],
+        "comment": false,
+        "text_color": [
+          0
+        ],
+        "id": 19,
+        "text": "Дата:",
+        "instant": true,
+        "lua_text": "function lua_text()\nreturn \"Дата: \"..year..\".\"..month..\".\"..day\nend"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nprofit=10000\nmood=mood-5\nif day==31 then\nmonth=month<plus>1 \nday=1\nelseif month==13 then\nyear=year<plus>1 \nuserage=userage<plus>1\nmonth=1\nelseif mood<=0 then\nhp=hp-5\nend\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 19
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif hp<=0 or userage>=100 then\nshowPage {id=24}\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 19,
+        "calculate": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Развлечения помогают поддерживать жизненые силы, они являются одним из главных аспектов жизнедеятельности.",
+    "answers": [
+      {
+        "id": 20,
+        "text": "  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c03/2003/88/837e27974c22.png"
+        ]
+      },
+      {
+        "text": "Общение с друзьями",
+        "bg_color": [
+          1,
+          1
+        ],
+        "comment": false,
+        "text_color": [],
+        "id": 20,
+        "instant": true,
+        "lua_do": "function lua_do() \nif mood<100\nthen\nmood=mood<plus>1\nelseif mood==100 then\nlocal expNum = native.showAlert(\"Настроение\", \"Ваше настроение достигло максимального значения\", {\"✓\"}) \nend\nend",
+        "left_answer": true
+      },
+      {
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "lua_do": "function lua_do() \nif mood<100\nthen\nmoney=money-200\nmood=mood<plus>20\nelseif mood==100 then\nlocal expNum = native.showAlert(\"Настроение\", \"Ваше настроение достигло максимального значения\", {\"✓\"}) \nend\nend",
+        "instant": true,
+        "bg_color": [
+          0
+        ],
+        "lua_if": "function lua_if()\nif money>=200 then\nreturn true\nend\nend",
+        "right_answer": true,
+        "id": 20,
+        "text": "Аттракционы"
+      },
+      {
+        "id": 20,
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1
+        ],
+        "lua_do": "function lua_do() \nif mood<100\nthen\nmoney=money-500\nmood=mood<plus>50\nelseif mood==100 then\nlocal expNum = native.showAlert(\"Настроение\", \"Ваше настроение достигло максимального значения\", {\"✓\"})\nend\nend",
+        "text": "Кинотеатр и опера",
+        "lua_if": "function lua_if()\nif money>=500 then\nreturn true\nend\nend",
+        "left_answer": true
+      },
+      {
+        "lua_if": "function lua_if()\nif money>=1000 then \nreturn true\nend\nend",
+        "right_answer": true,
+        "comment": false,
+        "text_color": [
+          0
+        ],
+        "id": 20,
+        "text": "Путешествие",
+        "bg_color": [
+          1,
+          1
+        ],
+        "lua_do": "function lua_do() \nif mood<100\nthen\nmoney=money-1000\nmood=mood<plus>100\nelseif mood==100 then\nlocal expNum = native.showAlert(\"Настроение\", \"Ваше настроение достигло максимального значения\", {\"✓\"}) \nend\nend"
+      },
+      {
+        "bg_color": [
+          0
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.3,
+          0.3
+        ],
+        "middle_answer": true,
+        "text": "*Общение с друзьями даёт <plus>1 к радости\nАттракционы дают <plus>20 к радости и стоят 200$\nКинотеатр и опера дают <plus>50 к радости и стоят 500$\nПутешествие даёт <plus>100 к радости и стоит 1000$",
+        "id": 20
+      },
+      {
+        "var_str_set": [
+          "global switch_page_sound",
+          "клик"
+        ],
+        "bg_color": [
+          0
+        ],
+        "text_color": [
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "Назад\n⟨⟨⟨⟨⟨⟨⟨⟨",
+        "id": 19,
+        "left_answer": true
+      },
+      {
+        "var_str_set": [
+          "global switch_page_sound",
+          "клик"
+        ],
+        "right_answer": true,
+        "text_color": [
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "Назад\n⟩⟩⟩⟩⟩⟩⟩⟩",
+        "id": 19,
+        "bg_color": [
+          0
+        ]
+      },
+      {
+        "super_calculate": false,
+        "id": 20,
+        "calculate": true,
+        "lua_do": "function lua_do()\n    local widget = require(\"widget\")\n    widget.setTheme( \"widget_theme_ios\" )\n    local progressView = widget.newProgressView(\n        {\n            left = 20,\n            top = 100,\n            width = 1000,\n            isAnimated = true\n        }\n    )\n    progressView:setProgress((mood/100))\nif mood>=100 then\nmood=100\nend\nend",
+        "text": "widget.setTheme( \"widget_theme_android\" "
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Надо следить за здоровьем в любом возрасте.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "comment": true,
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c28/2003/e0/43d83aea91c3.png"
+        ]
+      },
+      {
+        "id": 21,
+        "bg_color": [
+          0.6
+        ],
+        "comment": false,
+        "text_color": [
+          0
+        ],
+        "lua_do": "function lua_do()\nhp=hp<plus>1\nend",
+        "text": "Поесть дома",
+        "lua_if": "function lua_if()\nif hp<100 then\nreturn true\nend\nend",
+        "left_answer": true
+      },
+      {
+        "bg_color": [
+          0
+        ],
+        "right_answer": true,
+        "comment": false,
+        "text_color": [
+          0.7
+        ],
+        "id": 21,
+        "text": "Сходить в ресторан (200$)",
+        "lua_if": "function lua_if()\nif hp<100 and money>=200 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nhp=hp<plus>10\nmoney=money-200\nend"
+      },
+      {
+        "middle_answer": true,
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          0.7
+        ],
+        "lua_do": "function lua_do()\nhp=hp<plus>50\nmoney=money-500\nend",
+        "text": "Позаниматься дома физкультурой (500$)",
+        "lua_if": "function lua_if()\nif hp<100 and money>=500 then\nreturn true\nend\nend",
+        "id": 21
+      },
+      {
+        "bg_color": [
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif one~=1 and money>=100000 then \nreturn true\nend\nend",
+        "text_color": [
+          0
+        ],
+        "id": 22,
+        "text": "Слетать на \"Кримор\" (100000$)",
+        "middle_answer": true,
+        "comment": false
+      },
+      {
+        "id": 21,
+        "text": "*Поесть дома: <plus>1 к здоровью\n*Сходить в ресторан: <plus>10 к здоровью -200$\n*Позаниматься дома физкультурой: <plus>50 к здоровью -500$",
+        "comment": true,
+        "text_color": [
+          0.8,
+          0.8
+        ]
+      },
+      {
+        "bg_color": [
+          0
+        ],
+        "comment": false,
+        "text_color": [
+          0.7
+        ],
+        "middle_answer": true,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨",
+        "id": 19,
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "text_color": [
+          0.7
+        ],
+        "id": 19,
+        "text": "⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩",
+        "bg_color": [
+          0
+        ],
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Вы прилетели на Кримор, это планета с эффектом моментальнного исцеление и придачи сил. Раньше об этой планете знала только Империя и лечила здесь своих солдат, но потом его захватила Гильдия и открыла для всех, не бесплатно конечно. И вот вы побывали на этой легендарной планете! \nЗдоровье=100, Счастье=100, Репутация=70",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Вернутся домой",
+        "lua_do": "function lua_do()\nhp=100\nmood=100\nif reputation<=70 then\nreputation=70\nend\nend"
+      },
+      {
+        "comment": false,
+        "lua_if": "function lua_if()\nif one~=1 then\nreturn true\nend\nend",
+        "id": 22,
+        "text": "★",
+        "lua_do": "function lua_do()\npashal=pashal..\"★\"\none=0\none=1\nend",
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Здесь можно купить имущество:",
+    "answers": [
+      {
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "~~~~~Техника~~~~~",
+        "id": 23,
+        "no_transition": true
+      },
+      {
+        "text": "Купить развед-систему (200000$)",
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "var_sub": [
+          "money",
+          200000
+        ],
+        "lua_if": "function lua_if()\nif money>=200000 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nrs=1\nmoney=money-200000\nend"
+      },
+      {
+        "comment": true,
+        "bg_color": [],
+        "lua_if": "function lua_if()\nif money<200000 then\nreturn true\nend\nend",
+        "text_color": [],
+        "id": 23,
+        "text": "Купить развед-систему\n(Нехватка денег)\n(200000$)",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nrs=1\nend"
+      },
+      {
+        "text": "Купить корабль класса А-3 (800000$)",
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "var_sub": [
+          "money",
+          800000
+        ],
+        "lua_if": "function lua_if()\nif money>=800000 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nAthree=1\nmoney=money-800000\nend"
+      },
+      {
+        "comment": true,
+        "bg_color": [],
+        "lua_if": "function lua_if()\nif money<800000 then\nreturn true\nend\nend",
+        "text_color": [],
+        "id": 23,
+        "text": "Купить корабль класса А-3\n(Нехватка денег)\n(800000$)",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nAthree=1\nend"
+      },
+      {
+        "text": "Купить лайнер Alice-2 (1200000$)",
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "var_sub": [
+          "money",
+          1200000
+        ],
+        "lua_if": "function lua_if()\nif money>=1200000 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nAlisethu=1\nmoney=money-1200000\nend"
+      },
+      {
+        "comment": true,
+        "bg_color": [],
+        "lua_if": "function lua_if()\nif money<1200000 then\nreturn true\nend\nend",
+        "text_color": [],
+        "id": 23,
+        "text": "Купить лайнер Alice-2\n(Нехватка денег)\n(1200000$)",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nAlisethu=1\nend"
+      },
+      {
+        "text": "Купить танкер класса \"Альфа\" (2000000$)",
+        "bg_color": [],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "var_sub": [
+          "money",
+          2000000
+        ],
+        "lua_if": "function lua_if()\nif money>=2000000 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nAlfa=1\nmoney=money-2000000\nend"
+      },
+      {
+        "comment": true,
+        "bg_color": [],
+        "lua_if": "function lua_if()\nif money<2000000 then\nreturn true\nend\nend",
+        "text_color": [],
+        "id": 23,
+        "text": "Купить танкер класса \"Альфа\"\n(Нехватка денег)\n(2000000$)",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nAlfa=1\nend"
+      },
+      {
+        "middle_answer": true,
+        "bg_color": [
+          1,
+          1
+        ],
+        "comment": false,
+        "text_color": [
+          1
+        ],
+        "lua_do": "function lua_do()\na=0\na=people*(math.random(8,12)/10)\nif a>=people then\npeople=0\nlocal expNum = native.showAlert(\"Поражение\", \"Враг оказался сильнее вы потеряли всех своих людей\", {\"ОК\"})\nelseif a<people then\npeople=people-(people*0.3)\nmoney=money<plus>math.random(100000,1000000)\nlocal expNum = native.showAlert(\"Победа\", \"Вы победили\", {\"ОК\"})\nend\nend",
+        "text": "Отправить корабль на миссию",
+        "lua_if": "function lua_if()\nif people>=100 then\nreturn true\nend\nend",
+        "id": 23
+      },
+      {
+        "bg_color": [
+          1,
+          1
+        ],
+        "comment": true,
+        "text_color": [],
+        "id": 23,
+        "text": "Отправить корабль на миссию\n(Нехватка команды)\n(100)",
+        "lua_if": "function lua_if()\nif people<100 then\nreturn true\nend\nend",
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          0.3
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "middle_answer": true,
+        "text": "~~~~~Команда~~~~~",
+        "id": 23
+      },
+      {
+        "bg_color": [
+          0,
+          0.3
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "text": "Нанять 100 человек (100000$)",
+        "lua_do": "function lua_do()\npeople=people<plus>100\nmoney=money-100000\nend",
+        "lua_if": "function lua_if()\nif money>=100000 then\nreturn true\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif money<100000 then\nreturn true\nend\nend",
+        "id": 23,
+        "text": "Нанять 100 человек (100000$)\n(Нехватка денег)",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          0.3
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "text": "Нанять 500 человек (500000$)",
+        "lua_do": "function lua_do()\npeople=people<plus>500\nmoney=money-500000\nend",
+        "lua_if": "function lua_if()\nif money>=500000 then\nreturn true\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif money<500000 then\nreturn true\nend\nend",
+        "id": 23,
+        "text": "Нанять 500 человек (500000$)\n(Нехватка денег)",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [
+          0,
+          0.3
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          1,
+          1
+        ],
+        "id": 23,
+        "text": "Нанять 1000 человек (1000000$)",
+        "lua_do": "function lua_do()\npeople=people<plus>1000\nmoney=money-1000000\nend",
+        "lua_if": "function lua_if()\nif money>=1000000 then\nreturn true\nend\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif money<1000000 then\nreturn true\nend\nend",
+        "id": 23,
+        "text": "Нанять 1000 человек (1000000$)\n(Нехватка денег)",
+        "comment": true,
+        "middle_answer": true
+      },
+      {
+        "bg_color": [],
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "Назад",
+        "middle_answer": true,
+        "left_answer": true
+      },
+      {
+        "bg_color": [],
+        "text_color": [
+          1,
+          1
+        ],
+        "id": 19,
+        "text": "Назад",
+        "right_answer": true,
+        "middle_answer": true
+      },
+      {
+        "comment": false,
+        "middle_answer": true,
+        "text": "Перемотка года\n(Если скучно можно промотать год)",
+        "lua_do": "function lua_do()\nyear=year<plus>1\nmoney=money<plus>1000000\nmood=30\nhp=30\nend",
+        "id": 23
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Конец, можете вернуться и попробовать ещё раз пройти режим \"Уйти в отставку\" или же \"Продолжить военную карьеру\"",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Попробовать ещё раз"
+      },
+      {
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d10/2003/b3/34bcf0dbbb44.png"
+        ],
+        "id": 24,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "lua_if": "function lua_if()\nif pashal==\"★\" then\nreturn true\nend\nend",
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d10/2003/b3/34bcf0dbbb44.png"
+        ],
+        "id": 24,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "lua_if": "function lua_if()\nif pashal==\"★★\" then\nreturn true\nend\nend",
+        "comment": true
+      },
+      {
+        "bgAnswerImage": [
+          "https://d.radikal.ru/d10/2003/b3/34bcf0dbbb44.png"
+        ],
+        "id": 24,
+        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "lua_if": "function lua_if()\nif pashal==\"★★★\" then\nreturn true\nend\nend",
+        "comment": true
+      },
+      {
+        "id": 1,
+        "text": "Начать сначала (С выбором нации)",
+        "lua_do": "function lua_do()\ng.nation=nil\nend"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Выберите сложность задания:",
+    "answers": [
+      {
+        "comment": false,
+        "bg_color": [
+          0,
+          0.7
+        ],
+        "lua_if": "function lua_if()\nif mission==0 and soldiers>=100 then\nreturn true\nend\nend",
+        "text_color": [],
+        "id": 26,
+        "text": "Легко",
+        "lua_do": "function lua_do()\nsoldiers=soldiers-100\nmission=0\nmission=\"easy\"\nend",
+        "middle_answer": true
+      },
+      {
+        "id": 26,
+        "bg_color": [
+          0.9,
+          0.9
+        ],
+        "comment": false,
+        "text_color": [
+          0
+        ],
+        "lua_do": "function lua_do()\nsoldiers=soldiers-500\nmission=0\nmission=\"normal\"\nend",
+        "text": "Нормально",
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nif mission==0 and soldiers>=500 then\nreturn true\nend\nend"
+      },
+      {
+        "id": 26,
+        "bg_color": [
+          0.8
+        ],
+        "comment": false,
+        "text_color": [],
+        "lua_do": "function lua_do()\nsoldiers=soldiers-1000\nmission=0\nmission=\"hard\"\nend",
+        "text": "Сложно",
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nif mission==0 and soldiers>=1000 then\nreturn true\nend\nend"
+      },
+      {
+        "id": 16,
+        "text": "Назад",
+        "right_answer": true,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Вы отправили ",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn msoldiers..\" солдат на это задание. Вам будет приходить отчёт о их миссии\"\nend",
+        "merge": true
+      },
+      {
+        "id": 25,
+        "text": "⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨⟨"
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif mission==\"easy\" then \nmsoldiers=100\nelseif mission==\"normal\" then \nmsoldiers=500\nelseif mission==\"hard\" then \nmsoldiers=1000\nend\nend",
+        "calculate": true,
+        "text": "Новый ответ. введите текст",
+        "id": 26
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Вот отчёт о их действиях:",
+    "answers": [
+      {
+        "var_show": [
+          "msoldiers"
+        ],
+        "comment": true,
+        "id": 27,
+        "text": "Солдат осталось:",
+        "bgAnswerImage": [
+          "https://c.radikal.ru/c34/2003/58/b84e299587e9.jpg"
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "comment": true,
+        "lua_text": "function lua_text()\nreturn a\nend"
+      },
+      {
+        "id": 16,
+        "text": "Назад"
+      },
+      {
+        "var_str_set": [
+          "b",
+          "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ————                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "
+        ],
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif mission==\"easy\" then\ntimer.performWithDelay(5000,function()\nlocal level= going[1]\n    local result=level[math.random(#level)]\na=a..b.. result\nc=result\nend)\nelseif mission==\"normal\" then\ntimer.performWithDelay(5000,function()\nlocal level= going[2]\n    local result=level[math.random(#level)]\na=a..b.. result\nc=result\nend)\nelseif mission==\"hard\" then\ntimer.performWithDelay(5000,function()\nlocal level= going[3]\n    local result=level[math.random(#level)]\na=a..b.. result\nc=result\nend)\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "id": 27
+      },
+      {
+        "super_calculate": false,
+        "lua_do": "function lua_do()\nif c==\"Твои солдаты встретили противника и уничтожили его (-10солдат)\" then \nmsoldiers=msoldiers-10\nelseif c==\"Твои солдаты нашли заброшенный город (<plus>10золота, <plus>1кристал света)\" then \nmgold=mgold<plus>10\nmkristals=mkristals<plus>1\nelseif c==\"Твои соодаты наткнулись на черную дыру корабль повреждён (-50солдат)\" then\nmsoldiers=msoldiers-50\nelseif c==\"Твои солдаты встретили беженцев которые присоединились к ним (<plus>20солдат)\" then \nmsoldiers=msoldiers<plus>20\nelseif c==\"Твои солдаты наткнулись на грузовой корабль (<plus>250серебра)\" then\nmargentum=margentum<plus>250\n\nelseif c==\"Твои солдаты встретили противника и уничтожили его (-20солдат)\" then \nmsoldiers=msoldiers-20\nelseif c==\"Твои солдаты нашли заброшенный город (<plus>30золота, <plus>2кристал света)\" then \nmgold=mgold<plus>30\nmkristals=mkristals<plus>2\nelseif c==\"Твои соодаты наткнулись на черную дыру корабль повреждён (-100солдат)\" then\nmsoldiers=msoldiers-100\nelseif c==\"Твои солдаты встретили беженцев которые присоединились к ним (<plus>40солдат)\" then \nmsoldiers=msoldiers<plus>40\nelseif c==\"Твои солдаты наткнулись на грузовой корабль (<plus>500серебра)\" then\nmargentum=margentum<plus>500\n\nelseif c==\"Твои солдаты встретили противника и уничтожили его (-20солдат)\" then \nmsoldiers=msoldiers-20\nelseif c==\"Твои солдаты нашли заброшенный город (<plus>50золота, <plus>5кристал света)\" then \nmgold=mgold<plus>50\nmkristals=mkristals<plus>5\nelseif c==\"Твои соодаты наткнулись на черную дыру корабль повреждён (-200солдат)\" then\nmsoldiers=msoldiers-200\nelseif c==\"Твои солдаты встретили беженцев которые присоединились к ним (<plus>80солдат)\" then \nmsoldiers=msoldiers<plus>80\nelseif c==\"Твои солдаты наткнулись на грузовой корабль (<plus>2500серебра)\" then\nmargentum=margentum<plus>2500\n\nend\nend",
+        "text": "Новый ответ. введите текст",
+        "id": 27,
+        "calculate": true
+      },
+      {
+        "super_calculate": false,
+        "id": 27,
+        "calculate": true,
+        "lua_do": "function lua_do()\nif msoldiers<=0 then\n   dialog ({header = \"Поражение\", \n   text = \"Ты потерял всех солдат, миссия провалена\", \n   answers = {{text = \"✓\",\n   pressListener = function () \nmsoldiers=0\nmission=0\nb=0\na=0\nc=0\n   showPage {id = 16, transition = \"instant\"}\n   hideDialog () end}}})\n   end\nend",
+        "text": "  "
+      },
+      {
+        "super_calculate": true,
+        "id": 27,
+        "calculate": false,
+        "widget_show": [
+          "серебро",
+          "margentum",
+          "золото",
+          "mgold",
+          "солдаты",
+          "msoldiers",
+          "кристаллы",
+          "mkristals"
+        ],
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "super_calculate": false,
+        "id": 27,
+        "text": "Новый ответ. введите текст",
+        "calculate": true,
+        "lua_do": "function lua_do()\nif c==\"Твои солдаты достигли места назначения и справились с заданием\" then\n   dialog ({header = \"Победа\", \n   text = \"Твои солдаты выполнили миссию\", \n   answers = {{text = \"✓\",\n   pressListener = function () \n   gold=gold<plus>mgold\n   argentum=argentum<plus>margentum\n   soldiers=soldiers<plus>msoldiers\n   kristals=kristals<plus>mkristals\n   msoldiers=0\n   b=0\n   c=0\na=0\nif mission==\"easy\" then xp=xp<plus>1\nshowPage {id = 16, transition = \"instant\"}\nelseif mission==\"normal\" then xp=xp<plus>2\nmission=0\nshowPage {id = 16, transition = \"instant\"}\nelseif mission==\"hard\" then xp=xp<plus>3\nmission=0\nshowPage {id = 16, transition = \"instant\"}\nmission=0\nend\n   hideDialog () end}}})\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Здесь вы можете нанять солдат:",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          0.4
+        ],
+        "id": 28,
+        "text": "Нанять 100 солдат\n(100золота)\n",
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif gold>=100 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nsoldiers=soldiers<plus>100\ngold=gold-100\nend"
+      },
+      {
+        "comment": true,
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif gold<100 then\nreturn true\nend\nend",
+        "text_color": [
+          1,
+          0.4
+        ],
+        "id": 28,
+        "text": "Нанять 100 солдат\n(100золота)\nНеобходимо 100 золота",
+        "middle_answer": true,
+        "answerImage": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          0.4
+        ],
+        "id": 28,
+        "text": "Нанять 200 солдат\n(200золота)\n",
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif gold>=200 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nsoldiers=soldiers<plus>200\ngold=gold-200\nend"
+      },
+      {
+        "comment": true,
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif gold<200 then\nreturn true\nend\nend",
+        "text_color": [
+          1,
+          0.4
+        ],
+        "id": 28,
+        "text": "Нанять 200 солдат\n(200золота)\nНеобходимо 200 золота",
+        "middle_answer": true,
+        "answerImage": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          0.4
+        ],
+        "middle_answer": true,
+        "text": "Нанять 500 солдат\n(500золота)\n",
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif gold>=500 then\nreturn true\nend\nend",
+        "id": 28,
+        "lua_do": "function lua_do()\nsoldiers=soldiers<plus>500\ngold=gold-500\nend"
+      },
+      {
+        "comment": true,
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif gold<500 then\nreturn true\nend\nend",
+        "text_color": [
+          1,
+          0.4
+        ],
+        "id": 28,
+        "text": "Нанять 500 солдат\n(500золота)\nНеобходимо 500 золота",
+        "middle_answer": true,
+        "answerImage": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          0.4
+        ],
+        "id": 28,
+        "text": "Нанять 1000 солдат\n(1000золота)\n",
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif gold>=1000 then\nreturn true\nend\nend",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nsoldiers=soldiers<plus>1000\ngold=gold-1000\nend"
+      },
+      {
+        "lua_if": "function lua_if()\nif gold<1000 then\nreturn true\nend\nend",
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "comment": true,
+        "text_color": [
+          1,
+          0.4
+        ],
+        "id": 28,
+        "text": "Нанять 1000 солдат\n(1000золота)\nНеобходимо 1000 золота",
+        "middle_answer": true,
+        "answerImage": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://d.radikal.ru/d40/2003/eb/a6bc0edfee4c.png"
+        ],
+        "comment": false,
+        "text_color": [
+          1,
+          0.4
+        ],
+        "middle_answer": true,
+        "text": "Потратить звезду чтобы получить 10000 солдат",
+        "bg_color": [
+          0,
+          0,
+          0.6
+        ],
+        "lua_if": "function lua_if()\nif stars==\"★★\" or stars==\"★★★\" or stars==\"★★★★\" or stars==\"★★★★★\" or stars==\"★★★★★★\" or stars==\"★★★★★★★\" or stars==\"★★★★★★★★\" or stars==\"★★★★★★★★★\" or stars==\"★★★★★★★★★★\"then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nif stars==\"★★\" \nthen stars=\"★\" \nelseif stars==\"★★★\" \nthen stars=\"★★\" \nelseif stars==\"★★★★\" \nthen stars=\"★★★\"\nelseif stars==\"★★★★★\" \nthen stars=\"★★★★\" \nelseif stars==\"★★★★★★\" \nthen stars=\"★★★★★\" \nelseif stars==\"★★★★★★★\" \nthen stars=\"★★★★★★\"\nelseif stars==\"★★★★★★★★\" \nthen stars=\"★★★★★★★\" \nelseif stars==\"★★★★★★★★★\" \nthen stars=\"★★★★★★★★\" \nend\nend",
+        "id": 28
+      },
+      {
+        "id": 16,
+        "text": "Назад",
+        "right_answer": true,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Это обменник серебра на золото, его можно улучшать чтобы обмен был более выгодным.   ",
+    "answers": [
+      {
+        "comment": false,
+        "var_show": [
+          "vo",
+          "кристалов)"
+        ],
+        "lua_if": "function lua_if()\nif kristals>=vo then\nreturn true\nend\nend",
+        "bg_color": [
+          1,
+          0.7
+        ],
+        "id": 29,
+        "text": "Улучшить обменник (",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nvo=vo<plus>5\nvg=vg<plus>50\nkristals=kristals-vo\nend"
+      },
+      {
+        "var_show": [
+          "vo",
+          "кристалов"
+        ],
+        "comment": true,
+        "lua_if": "function lua_if()\nif kristals<vo then\nreturn true\nend\nend",
+        "id": 29,
+        "text": "Чтобы улучшить обменник необходимо ",
+        "middle_answer": true,
+        "bg_color": [
+          1,
+          0.7
+        ]
+      },
+      {
+        "comment": false,
+        "bg_color": [
+          1,
+          0.7
+        ],
+        "lua_text": "function lua_text()\nreturn \"Обменять 1000 серебра на \"..vg..\" золота\"\nend",
+        "id": 29,
+        "lua_do": "function lua_do()\nargentum=argentum-1000\ngold=gold<plus>vg\nend",
+        "text": "    ",
+        "middle_answer": true,
+        "lua_if": "function lua_if()\nif argentum>=1000 then\nreturn true\nend\nend"
+      },
+      {
+        "id": 16,
+        "text": "Назад",
+        "right_answer": true,
+        "left_answer": true
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Вы прилетели к Императору, в разговоре он активно хвалил вас за преданность государству. Вы не заметили как пришли в комнату напоминающую подвал в котором вы когда то пытали врагов государства. Неожиданно вы заметили что император стоял уже позади вас за металлической дверью.\n—Прости, по другому никак...\nИз стен и потолка выехали трубы из которых начал валить ядовитый газ.",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Ничего не делать и принять свою смерть",
+        "blackout": true
+      },
+      {
+        "id": 32,
+        "text": "Снять военный пиджак и закрыть лицо",
+        "blackout": true
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Вы оставались преданным императору до самой смерти. Несмотря на непонятное предательство в официальных данных вы погибли защищая границы ",
+    "answers": [
+      {
+        "id": 31,
+        "text": "Новый ответ. введите текст",
+        "lua_text": "function lua_text()\nreturn (g.nation2)\nend",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "..."
+      },
+      {
+        "comment": false,
+        "id": 32,
+        "text": "★",
+        "lua_do": "function lua_do()\nlj=0\npashal=pashal..\"★\"\nend",
+        "lua_if": "function lua_if()\nif lj==1 then\nreturn true\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Вы очнулись в медицинском отделении, рядом стоял Император.\n—Ты достойный и преданный солдат, теперь я знаю кому передам власть.\nВы закрыли глаза и заснули. \n...\nСпустя пять лет вы стали Императором и у вас началась новая жизнь.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "..."
+      },
+      {
+        "lua_if": "function lua_if()\nif hj==1 then\nreturn true\nend\nend",
+        "lua_do": "function lua_do()\nhj=0\npashal=pashal..\"★\"\nend",
+        "text": "★",
+        "id": 32,
+        "comment": false
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "",
+    "answers": []
+  }
+]

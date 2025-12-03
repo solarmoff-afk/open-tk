@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Alex Guch написал еще 745947 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "248777",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор DeadDragon14 написал еще 135250 слов в квесте \"В заточении\"."
+      },
+      {
+        "targetbookid": "253614",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"В заточении\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 117977 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "248757",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Shtopor написал еще 111393 слов в квесте \"S.T.A.L.K.E.R.\nСекреты холмов\"."
+      },
+      {
+        "targetbookid": "253230",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"S.T.A.L.K.E.R.\nСекреты холмов\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Patriot написал еще 102062 слов в квесте \" S.T.A.L.K.E.R. В поисках Стрелка\"."
+      },
+      {
+        "targetbookid": "217153",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \" S.T.A.L.K.E.R. В поисках Стрелка\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

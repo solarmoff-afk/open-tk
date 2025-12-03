@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Артём Тихий написал еще 35337.4 слов в квесте \"Ледяной ветер\"."
+      },
+      {
+        "targetbookid": "140587",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ледяной ветер\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Waffle написал еще 33432.6 слов в квесте \"Тёмные дни\"."
+      },
+      {
+        "targetbookid": "239163",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тёмные дни\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Froga написал еще 20837 слов в квесте \"Ночь в лесу\"."
+      },
+      {
+        "targetbookid": "267171",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ночь в лесу\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Monkey написал еще 20002 слов в квесте \"Щелкунчик\"."
+      },
+      {
+        "targetbookid": "270755",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Щелкунчик\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор игорь написал еще 18194.4 слов в квесте \"Энеотис\"."
+      },
+      {
+        "targetbookid": "256134",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Энеотис\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

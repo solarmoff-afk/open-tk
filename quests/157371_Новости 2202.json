@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 21201 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор AneLu написал еще 16927 слов в квесте \"Школа магов\"."
+      },
+      {
+        "targetbookid": "154590",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Школа магов\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Iryna_067 написал еще 15605 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "154870",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Nika написал еще 15598 слов в квесте \"Николь\"."
+      },
+      {
+        "targetbookid": "153804",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Николь\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Yulia Oayder  написал еще 15259 слов в квесте \"Возвращение к истокам\"."
+      },
+      {
+        "targetbookid": "154825",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Возвращение к истокам\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

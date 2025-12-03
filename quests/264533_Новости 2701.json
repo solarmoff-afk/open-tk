@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 119429 слов в квесте \"Жертвы прогресса\"."
+      },
+      {
+        "targetbookid": "777",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Жертвы прогресса\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор HeSLHoG написал еще 101686 слов в квесте \"КВП. Свет во тьме\"."
+      },
+      {
+        "targetbookid": "264309",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"КВП. Свет во тьме\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Дарит Улыбки. написал еще 81231 слов в квесте \"Баджи не смей умирать!\"."
+      },
+      {
+        "targetbookid": "247707",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Баджи не смей умирать!\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор moon написал еще 79417 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "239776",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор MobileGamer написал еще 79117 слов в квесте \"Ужасы царства снов\"."
+      },
+      {
+        "targetbookid": "242244",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ужасы царства снов\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

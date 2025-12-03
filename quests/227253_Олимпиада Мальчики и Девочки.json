@@ -1,0 +1,1549 @@
+[
+  {
+    "id": 1,
+    "text": "   Школьная Олимпиада знаний, на которой мальчишки соревнуются против девчонок. Выбери свою роль и приведи свою команду к победе. Покажи противоположной команде где зимуют раки!\n   Заготовлено два пула вопросов для каждой команды. При прохождении выпадают случайные из них. Вопросы на смекалку, но никто не запрещает пользоваться интернетом. ",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Начать"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "   — Олимпиада состоит из вопрос-ответов по школьным дисциплинам. Команда мальчиков и команда девочек бьются за право получить стипендию и медальку \"Я тут самый умный\".\n\n   Выберите команду:",
+    "answers": [
+      {
+        "id": 3,
+        "text": "Мальчики",
+        "left_answer": true
+      },
+      {
+        "id": 4,
+        "text": "Девочки",
+        "right_answer": true
+      },
+      {
+        "super_calculate": false,
+        "id": 2,
+        "text": "   ",
+        "calculate": true,
+        "var_set": [
+          "point",
+          0,
+          "warpoint",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "   — И вот первый вопрос: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 3,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random(2)\nend"
+      },
+      {
+        "text": "каково состояние кота Шрёдингера в момент мысленного испытания Шрёдингера? ",
+        "super_calculate": false,
+        "id": 3,
+        "calculate": false,
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "id": 5,
+        "text": "Жив",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 5,
+        "text": "Мёртв",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 6,
+        "text": "И жив, и мёртв",
+        "left_answer": true
+      },
+      {
+        "id": 5,
+        "text": "Такого кота нет",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "text": "сколько месяцев в году содержат 28 дней? ",
+        "super_calculate": false,
+        "id": 3,
+        "calculate": false,
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "merge": true
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 6,
+        "text": "12",
+        "left_answer": true
+      },
+      {
+        "id": 5,
+        "text": "6",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "id": 5,
+        "text": "2",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 5,
+        "text": "1",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "   — И вот первый вопрос: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 4,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random(2)\nend"
+      },
+      {
+        "id": 4,
+        "text": "что такое виадук? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 20,
+        "text": "Мост",
+        "left_answer": true
+      },
+      {
+        "id": 19,
+        "text": "Животное",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Растение",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 19,
+        "text": "Драгоценность",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "text": "какая более точная цифра продолжительности одного года? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "id": 19,
+        "text": "364.5",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 19,
+        "text": "364.75",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 20,
+        "text": "365.25",
+        "left_answer": true
+      },
+      {
+        "id": 19,
+        "text": "365.5",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "   — Это неправильный ответ... Команда мальчиков не зарабатывает балл. А что же с командой девочек? Они ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос. Пока что ничья в их противостоянии команд.\" \n   end\nreturn text.. \" Что ж, продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 5,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "id": 8,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "   — Это правильный ответ! Команда мальчиков зарабатывает один балл. Что же с командой девочек? Они ",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос. Это может привести их к поражению. Посмотрим, что будет потом в итоге.\" \n   end\nreturn text.. \" Что ж, продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 6,
+        "calculate": false,
+        "text": "Новый ответ. введите текст",
+        "merge": true
+      },
+      {
+        "id": 8,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "   — Это неправильный ответ... Команда мальчиков не зарабатывает один балл. Что же с командой девочек? Они ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл. \" .. ({\"Девочки предлагают мальчикам ответить неправильно на следующий вопрос, а взамен они приготовят для них вкусный борщ. Как же поступит команда мальчиков, узнаем в следующем ходу.\", \"Девочки прихорашиваются для мальчиков, чтобы ослепить их своей красотой. Кажется, что один из команды мальчишек уже поддался на их уловки!\"}) [math.random(2)]\n     warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос. Наверняка это их проявление заботы и переживания за мальчишек.\" \n      if point == 2 and warpoint == 0 then\n         text = text .. \" Кажется, что победа команды мальчиков уже неоспорима.\"\n      elseif point == warpoint then\n         text = text .. \" Пока что счёт идёт равный для обеих команд.\"\n      elseif point > warpoint then\n         text = text .. \" Команда мальчишек на один балл впереди, но всё ещё может измениться.\" \n      end\n   end\nreturn text.. \" Что ж, продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 7,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "   — Второй вопрос: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 8,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random (2)\nend",
+        "text": "   "
+      },
+      {
+        "id": 8,
+        "text": "кто спит с открытыми глазами? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Лошади",
+        "left_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Зайцы",
+        "left_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Воробьи",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 9,
+        "text": "Рыбы"
+      },
+      {
+        "id": 8,
+        "text": "где зимуют раки? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Уплывают в тёплые моря",
+        "left_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 9,
+        "text": "В своём месте обитания"
+      },
+      {
+        "id": 7,
+        "text": "Уползают повыше в горы, чтобы свистеть с них",
+        "left_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Улетают в тёплые края, цепляясь за гусей",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "   — Это правильный ответ! Команда мальчиков зарабатывает один балл. Что же с командой девочек? Они ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл. \" .. ({\"Девочки предлагают мальчикам ответить неправильно на следующий вопрос, а взамен они приготовят для них вкусный борщ. Как же поступит команда мальчиков, узнаем в следующем ходу.\", \"Девочки прихорашиваются для мальчиков, чтобы ослепить их своей красотой. Кажется, что один из команды мальчишек уже поддался на их уловки!\"}) [math.random(2)]\n     warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос. Как неосмотрительно с их стороны.\" \n      if point == 2 and warpoint == 0 then\n         text = text .. \" Кажется, что победа команды мальчиков уже неоспорима.\"\n      elseif point == warpoint then\n         text = text .. \" Пока что счёт идёт равный для обеих команд.\"\n      elseif point > warpoint then\n         text = text .. \" Команда мальчишек на один балл впереди, но всё ещё может измениться.\" \n      end\n   end\nreturn text.. \" Что ж, продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 9,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 10,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "   — Третий вопрос: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 10,
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random(2)\nend",
+        "text": "  "
+      },
+      {
+        "id": 10,
+        "text": "уличный термометр показывает температуру на улице в 15 градусов, а сколько градусов покажут два таких термометра?",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 12,
+        "text": "15",
+        "left_answer": true
+      },
+      {
+        "id": 11,
+        "text": "30",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "text": "22.5",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 11,
+        "text": "7.5",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "text": "какое существо жуёт пищу желудком?",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Кошки",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Собаки",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 12,
+        "text": "Раки",
+        "left_answer": true
+      },
+      {
+        "id": 11,
+        "text": "Куры",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "   — Это неправильный ответ... Команда мальчиков не зарабатывает один балл. Что же с командой девочек? Они ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл. \" .. ({\"Девочки посылают воздушные поцелуи команде мальчиков. Несколько из них упали в обморок от передозировки романтики. Нужно вернуть их в чувства, чтобы продолжить схватку.\", \"Девочки что-то нашептали мальчикам на ушко, отчего те теперь не в состоянии продолжать игру. Нужно вернуть их в чувства, чтобы продолжить схватку.\"}) [math.random(2)]\n     warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос. Как неосмотрительно с их стороны.\" \n      if point == 3 and warpoint == 0 then\n         text = text .. \" Победа команды мальчиков уже неоспорима, но играем до конца!\"\n      elseif point == warpoint then\n         text = text .. \" И счёт идёт равный для обеих команд. Вот это напряжение! Одна ошибка способна привести к поражению.\"\n      elseif point > warpoint then\n         text = text .. \" Команда мальчишек лидирует, но всё ещё может измениться.\" \n      elseif point < warpoint then \n         text = text .. \" Команда девчонок лидирует, но всё ещё может измениться.\"\n      end\n   end\nreturn text.. \" И-и-и, продолжаем!\" \nend",
+        "super_calculate": false,
+        "id": 11,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 14,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "   — Это правильный ответ! Команда мальчиков зарабатывает один балл. Что же с командой девочек? Они ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл. \" .. ({\"Девочки посылают воздушные поцелуи команде мальчиков. Несколько из них упали в обморок от передозировки романтики в крови. Нужно вернуть их в чувства, чтобы продолжить схватку.\", \"Девочки что-то нашептали мальчикам на ушко, отчего те теперь не в состоянии продолжать игру. Нужно вернуть их в чувства, чтобы продолжить схватку.\"}) [math.random(2)]\n     warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос. Как неосмотрительно с их стороны.\" \n      if point == 3 and warpoint == 0 then\n         text = text .. \" Победа команды мальчиков уже неоспорима, но играем до конца!\"\n      elseif point == warpoint then\n         text = text .. \" И счёт идёт равный для обеих команд. Вот это напряжение! Одна ошибка способна привести к поражению.\"\n      elseif point > warpoint then\n         text = text .. \" Команда мальчишек лидирует, но всё ещё может измениться.\" \n      elseif point < warpoint then \n         text = text .. \" Команда девчонок лидирует, но всё ещё может измениться.\"\n      end\n   end\nreturn text.. \" И-и-и, продолжаем!\" \nend",
+        "super_calculate": false,
+        "id": 12,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 14,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "   — Это неправильный ответ... Команда мальчиков не зарабатывает ещё один балл. Что же с командой девочек? Они ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл. \" .. ({\"Девочки уже планируют, куда пойти с мальчиками после Олимпиады.\", \"Девочки мило улыбаются и машут руками мальчикам. Наверняка тут есть какая-то тайна...\"}) [math.random(2)]\n     warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос. Вот это поворот!\" \n      if point == 4 and warpoint == 0 then\n         text = text .. \" Сможет ли команда девочек набрать хоть один балл? Или это намеренный проигрышь?\"\n      elseif point == warpoint then\n         text = text .. \" Вот это невероятная схватка! Ошибка в ответе на следующий вопрос решит, кто именно проиграет.\"\n      elseif point > warpoint then\n         text = text .. \" Команда мальчишек лидирует. Для победы им нужно только ещё раз ответить правильно на следующий вопрос.\" \n      elseif point < warpoint then \n         text = text .. \" Команда девчонок лидирует. Им стоит лишь ответить верно, чтобы принести поражение команде мальчишек.\"\n      end\n   end\nreturn text.. \" Внимание, последний вопрос!\" \nend",
+        "super_calculate": false,
+        "id": 15,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 16,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "   — Четвёртый вопрос из пяти: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 14,
+        "text": "  ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random (2)\nend"
+      },
+      {
+        "id": 14,
+        "text": "какие часы показывают правильное время только два раза в сутки? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Наручные",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 13,
+        "text": "Песочные",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Солнечные",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 15,
+        "text": "Сломанные"
+      },
+      {
+        "text": "что теряет космонавт на время полётов? ",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 14,
+        "calculate": false,
+        "super_calculate": false,
+        "merge": true
+      },
+      {
+        "id": 13,
+        "text": "Сознание",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 13,
+        "text": "Сон",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 15,
+        "text": "Вес",
+        "left_answer": true
+      },
+      {
+        "id": 13,
+        "text": "Память",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "   — Это правильный ответ! Команда мальчиков зарабатывает один балл. Что же с командой девочек? Они ",
+    "answers": [
+      {
+        "comment": false,
+        "lua_text": "function lua_text()\n   warpoint = warpoint or 0\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл. \" .. ({\"Девочки уже планируют, куда пойти с мальчиками после Олимпиады.\", \"Девочки мило улыбаются и машут руками мальчикам.\"}) [math.random(2)]\n     warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос. Вот это поворот!\" \n      if point == 4 and warpoint == 0 then\n         text = text .. \" Сможет ли команда девочек набрать хоть один балл? Или это намеренный проигрышь?\"\n      elseif point == warpoint then\n         text = text .. \" Вот это невероятная схватка! Ошибка в ответе на следующий вопрос решит, кто именно проиграет.\"\n      elseif point > warpoint then\n         text = text .. \" Команда мальчишек лидирует. Для победы им нужно только ещё раз ответить правильно на следующий вопрос.\" \n      elseif point < warpoint then \n         text = text .. \" Команда девчонок лидирует. Им стоит лишь ответить верно, чтобы принести поражение команде мальчишек.\"\n      end\n   end\nreturn text.. \" Внимание, последний вопрос!\" \nend",
+        "super_calculate": false,
+        "id": 15,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 16,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "   — ",
+    "answers": [
+      {
+        "comment": false,
+        "super_calculate": false,
+        "lua_do": "function lua_do()\n   a1 = math.random (2)\nend",
+        "calculate": true,
+        "id": 16,
+        "text": "  "
+      },
+      {
+        "comment": false,
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 16,
+        "text": "Что из перечисленного изобрели раньше? ",
+        "merge": true
+      },
+      {
+        "comment": false,
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 17,
+        "text": "Противогаз",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 18,
+        "text": "Часы",
+        "comment": false
+      },
+      {
+        "comment": false,
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 17,
+        "text": "Термометр",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 17,
+        "text": "Телефон"
+      },
+      {
+        "calculate": false,
+        "comment": false,
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 16,
+        "text": "Сколько прапрабабушек может быть у человека? ",
+        "super_calculate": false,
+        "merge": true
+      },
+      {
+        "comment": false,
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 17,
+        "text": "2",
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 17,
+        "text": "4"
+      },
+      {
+        "comment": false,
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 18,
+        "text": "8",
+        "var_add": [
+          "point",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "comment": false,
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 17,
+        "text": "12"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "   — И это неверный ответ... Что же в команде девочек? ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "   ",
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"Они правильно ответили на свой вопрос и заработали балл.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"Они тоже неправильно ответили на вопрос.\" \n   end\n   if point == warpoint then\n      text = text .. \" Невероятная игра, где победитель так и не был выявлен! Что ж, остаётся надеяться, что в следующий раз всё же будет нанесено поражение одной из сторон.\" \n   elseif (point-1) > warpoint then \n      text = text .. \" С большим отрывом победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\" \n   elseif point > warpoint then \n      text = text .. \" С отрывом в один балл победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\"\n   elseif point < (warpoint-1) then \n      text = text .. \" С большим отрывом победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\" \n   elseif point < warpoint then \n      text = text .. \" С отрывом в один балл победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\"\n   end\nreturn text .. \" Спасибо, что участвовали в Олимпиаде!\" \nend",
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "Конец Олимпиады",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "   — И это верный ответ! Что же в команде девочек? ",
+    "answers": [
+      {
+        "id": 18,
+        "text": "   ",
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"Они тоже правильно ответили на свой вопрос и заработали балл.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"Они неправильно ответили на вопрос.\" \n   end\n   if point == warpoint then\n      text = text .. \" Невероятная игра, где победитель так и не был выявлен! Что ж, остаётся надеяться, что в следующий раз всё же будет нанесено поражение одной из сторон.\" \n   elseif (point-1) > warpoint then \n      text = text .. \" С большим отрывом победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\" \n   elseif point > warpoint then \n      text = text .. \" С отрывом в один балл победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\"\n   elseif point < (warpoint-1) then \n      text = text .. \" С большим отрывом победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\" \n   elseif point < warpoint then \n      text = text .. \" С отрывом в один балл победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\"\n   end\nreturn text .. \" Спасибо, что участвовали в Олимпиаде!\" \nend",
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "Конец Олимпиады",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "   — Это неправильный ответ... Команда девочек не зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл, хотя могли бы дать фору команде девочек на старте.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос. Посмотрим, что будет дальше.\" \n   end\nreturn text.. \" Продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 19,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 21,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "   — Это правильный ответ! Команда девочек зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос. Наверняка это фора с их стороны на старте. Посмотрим, что будет дальше.\" \n   end\nreturn text.. \" Продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 20,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 21,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "   — Второй вопрос: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 21,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random (2)\nend"
+      },
+      {
+        "id": 21,
+        "text": "сколько полей-квадратиков на шахматной доске? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "16",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 22,
+        "text": "32",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 22,
+        "text": "48",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 23,
+        "text": "64"
+      },
+      {
+        "id": 21,
+        "text": "сколько чёрных полей-квадратиков на шахматной доске? ",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "merge": true
+      },
+      {
+        "id": 22,
+        "text": "16",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 23,
+        "text": "32"
+      },
+      {
+        "id": 22,
+        "text": "48",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 22,
+        "text": "64",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "   — Это неправильный ответ... Команда девочек не зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл.\" .. ({\" Мальчики сыпят комплиментами и всячески отвлекают команду девочек от схватки.\", \"Мальчики целуют руки девочкам и поют дифирамбы, чтобы отвлечь их от текущего сражения за звание ''самого умного''.\"}) [math.random(2)]\n      warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос.\"\n      if point == warpoint then\n         text = text .. \" В текущей ситуации баллы команд равны. \"\n      elseif point > warpoint then\n         text = text .. \" Команда девочек находится ближе к победе, чем мальчишки.\" \n      elseif point < warpoint then\n         text = text .. \" Команда мальчишек находится ближе к победе, чем девчонки.\" \n      end\n   end\nreturn text.. \" Продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 22,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "   — Это правильный ответ! Команда девочек зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл.\" .. ({\" Мальчики сыпят комплиментами и всячески отвлекают команду девочек от схватки.\", \"Мальчики целуют руки девочкам и поют дифирамбы, чтобы отвлечь их от текущего сражения за звание ''самого умного''.\"}) [math.random(2)]\n      warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос.\"\n      if point == warpoint then\n         text = text .. \" В текущей ситуации баллы команд равны. \"\n      elseif point > warpoint then\n         text = text .. \" Команда девочек находится ближе к победе, чем мальчишки.\" \n      elseif point < warpoint then\n         text = text .. \" Команда мальчишек находится ближе к победе, чем девчонки.\" \n      end\n   end\nreturn text.. \" Продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 23,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 24,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "   — Третий вопрос: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 24,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random (2)\nend"
+      },
+      {
+        "id": 24,
+        "text": "сколько ног у улитки? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 25,
+        "text": "0",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 26,
+        "text": "1"
+      },
+      {
+        "id": 25,
+        "text": "4",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 25,
+        "text": "8",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 24,
+        "text": "почему рак не свистит на горе? ",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "merge": true
+      },
+      {
+        "id": 25,
+        "text": "Ждёт подходящего момента",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 25,
+        "text": "Нет на это настроения",
+        "left_answer": false
+      },
+      {
+        "right_answer": false,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 26,
+        "text": "Живёт в реке, а не на горе",
+        "left_answer": true
+      },
+      {
+        "id": 25,
+        "text": "Потерял свой свисток",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "   — Это неправильный ответ... Команда девочек зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл.\" .. ({\" Мальчики приглашают девочек на танцы, хотя сейчас проходит Олимпиада и, как бы, совсем не вовремя.\", \"Мальчики предлагают закончить на ничьей и пойти по домам. Не все девочки согласны, поэтому продолжаем схватку команд.\"}) [math.random(2)]\n      warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос.\"\n      if point == warpoint then\n         text = text .. \" Обе команды заработали одинаковое количество баллов. \"\n      elseif point > warpoint then\n         text = text .. \" Команда девочек стремится к победе, оставляя мальчишек позади.\" \n      elseif point < warpoint then\n         text = text .. \" Команда мальчишек стремится к победе, оставляя девочек позади.\" \n      end\n   end\nreturn text.. \" Продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 25,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 27,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "   — Это правильный ответ! Команда девочек зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл.\" .. ({\" Мальчики приглашают девочек на танцы, хотя сейчас проходит Олимпиада и, как бы, совсем не вовремя.\", \"Мальчики предлагают закончить на ничьей и пойти по домам. Не все девочки согласны, поэтому продолжаем схватку команд.\"}) [math.random(2)]\n      warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос.\"\n      if point == warpoint then\n         text = text .. \" Обе команды заработали одинаковое количество баллов. \"\n      elseif point > warpoint then\n         text = text .. \" Команда девочек стремится к победе, оставляя мальчишек позади.\" \n      elseif point < warpoint then\n         text = text .. \" Команда мальчишек стремится к победе, оставляя девочек позади.\" \n      end\n   end\nreturn text.. \" Продолжим?\" \nend",
+        "super_calculate": false,
+        "id": 26,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 27,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "   — Четвёртый вопрос из пяти: ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 27,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random (2)\nend"
+      },
+      {
+        "id": 27,
+        "text": "что точно нельзя добавлять в борщ? ",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "merge": true
+      },
+      {
+        "id": 28,
+        "text": "Соль",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 28,
+        "text": "Перец",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Укроп",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "right_answer": true,
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 29,
+        "text": "Сода"
+      },
+      {
+        "id": 27,
+        "text": "сколько должно вариться яйцо в кипятке для его приготовления \"вкрутую\"? ",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "merge": true
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 29,
+        "text": "Около 10 минут",
+        "left_answer": true
+      },
+      {
+        "id": 28,
+        "text": "Около 5 минут",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Около 1 минуты",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 28,
+        "text": "Менее 5 секунд",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "   — Это неправильный ответ... Команда девочек зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"правильно ответили на свой вопрос и заработали один балл.\" .. ({\" Мальчики носят девочек на руках и восхваляют их красоту. Могут ли они вообще думать про Олимпиаду?\", \"Мальчики показывают смешные сценки из КВН, а девочки смеются до коликов в животе. Одну из участниц пришлось заменить.\"}) [math.random(2)]\n      warpoint = warpoint <plus> 1\n   else\n     text = \"тоже неправильно ответили на вопрос.\"\n      if point == warpoint then\n         text = text .. \" Сейчас счёт равный, но следующий вопрос выяаит победителя. \"\n      elseif point > warpoint then\n         text = text .. \" Команда девочек победит, если правильно ответит на следующий вопрос.\" \n      elseif point < warpoint then\n         text = text .. \" Команда мальчиков победит, если правильно ответит на следующий вопрос.\" \n      end\n   end\nreturn text.. \" И-и-и, последний вопрос... \" \nend",
+        "super_calculate": false,
+        "id": 28,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 30,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "   — Это правильный ответ! Команда девочек зарабатывает один балл. Что же с командой мальчиков? Они ",
+    "answers": [
+      {
+        "comment": true,
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(4) ~= 1 then\n     text = \"тоже правильно ответили на свой вопрос и заработали один балл.\" .. ({\" Мальчики носят девочек на руках и восхваляют их красоту. Могут ли они вообще думать про Олимпиаду?\", \"Мальчики показывают смешные сценки из КВН, а девочки смеются до коликов в животе. Одну из участниц пришлось заменить.\"}) [math.random(2)]\n      warpoint = warpoint <plus> 1\n   else\n     text = \"неправильно ответили на вопрос.\"\n      if point == warpoint then\n         text = text .. \" Сейчас счёт равный, но следующий вопрос выяаит победителя. \"\n      elseif point > warpoint then\n         text = text .. \" Команда девочек победит, если правильно ответит на следующий вопрос.\" \n      elseif point < warpoint then\n         text = text .. \" Команда мальчиков победит, если правильно ответит на следующий вопрос.\" \n      end\n   end\nreturn text.. \" И-и-и, последний вопрос... \" \nend",
+        "super_calculate": false,
+        "id": 29,
+        "calculate": false,
+        "text": "   ",
+        "merge": true
+      },
+      {
+        "id": 30,
+        "text": "Дальше"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "   — ",
+    "answers": [
+      {
+        "super_calculate": false,
+        "id": 30,
+        "text": "   ",
+        "calculate": true,
+        "lua_do": "function lua_do()\n   a1 = math.random (2)\nend"
+      },
+      {
+        "id": 30,
+        "text": "Какой пятый океан был официально добавлен на карту мира? ",
+        "merge": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 31,
+        "text": "Магелановский",
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 31,
+        "text": "Восточный",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          1
+        ],
+        "id": 32,
+        "text": "Южный",
+        "left_answer": true
+      },
+      {
+        "id": 31,
+        "text": "Тектонический",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          1
+        ]
+      },
+      {
+        "id": 30,
+        "text": "Что может одновременно идти и лежать, стоять и висеть?",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "merge": true
+      },
+      {
+        "var_add": [
+          "point",
+          1
+        ],
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "id": 32,
+        "text": "Часы",
+        "left_answer": true
+      },
+      {
+        "id": 31,
+        "text": "Лошадь",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      },
+      {
+        "id": 31,
+        "text": "Человек",
+        "var_equal": [
+          "a1",
+          2
+        ],
+        "left_answer": true
+      },
+      {
+        "id": 31,
+        "text": "Поезд",
+        "right_answer": true,
+        "var_equal": [
+          "a1",
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "   — И это неверный ответ... Что же в команде мальчиков? ",
+    "answers": [
+      {
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"Они ответили верно на свой вопрос и заработали балл.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"Они неправильно ответили на вопрос.\" \n   end\n   if point == warpoint then\n      text = text .. \" Невероятная игра, где победитель так и не был выявлен! Что ж, остаётся надеяться, что в следующий раз всё же будет нанесено поражение одной из сторон.\" \n   elseif (point-1) > warpoint then \n      text = text .. \" С большим отрывом победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\" \n   elseif point > warpoint then \n      text = text .. \" С отрывом в один балл победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\"\n   elseif point < (warpoint-1) then \n      text = text .. \" С большим отрывом победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\" \n   elseif point < warpoint then \n      text = text .. \" С отрывом в один балл победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\"\n   end\nreturn text .. \" Спасибо, что участвовали в Олимпиаде!\" \nend",
+        "id": 31,
+        "text": "   ",
+        "comment": false,
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "Конец Олимпиады",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "   — И это верный ответ! Что же в команде мальчиков? ",
+    "answers": [
+      {
+        "comment": false,
+        "id": 32,
+        "text": "   ",
+        "lua_text": "function lua_text()\n   local text = \"\" \n   if math.random(5) ~= 1 then\n     text = \"Они тоже правильно ответили на свой вопрос и заработали балл.\"\n     warpoint = warpoint <plus> 1\n   else\n     text = \"Они неправильно ответили на вопрос.\" \n   end\n   if point == warpoint then\n      text = text .. \" Невероятная игра, где победитель так и не был выявлен! Что ж, остаётся надеяться, что в следующий раз всё же будет нанесено поражение одной из сторон.\" \n   elseif (point-1) > warpoint then \n      text = text .. \" С большим отрывом победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\" \n   elseif point > warpoint then \n      text = text .. \" С отрывом в один балл победила команда девочек! Они молодцы, и получают в награду звание ''Я тут самая умная''.\"\n   elseif point < (warpoint-1) then \n      text = text .. \" С большим отрывом победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\" \n   elseif point < warpoint then \n      text = text .. \" С отрывом в один балл победила команда мальчиков! Они молодцы, и получают в награду звание ''Я тут самый умный''.\"\n   end\nreturn text .. \" Спасибо, что участвовали в Олимпиаде!\" \nend",
+        "merge": true
+      },
+      {
+        "id": 1,
+        "text": "Конец Олимпиады",
+        "middle_answer": true
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "",
+    "answers": []
+  }
+]

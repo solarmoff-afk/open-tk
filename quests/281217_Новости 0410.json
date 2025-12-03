@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 17880 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор GM Sstep написал еще 13120 слов в квесте \"Falaut Equestria Project \"Radiance\"\"."
+      },
+      {
+        "targetbookid": "277575",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Falaut Equestria Project \"Radiance\"\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Last написал еще 13104 слов в квесте \":)\"."
+      },
+      {
+        "targetbookid": "242971",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \":)\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Charlie Park написал еще 13102 слов в квесте \"Эллингриум: иной мир\n\"."
+      },
+      {
+        "targetbookid": "261026",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Эллингриум: иной мир\n\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Elizabeth Veshnivets написал еще 13093 слов в квесте \"На поражение.\"."
+      },
+      {
+        "targetbookid": "261081",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"На поражение.\"."
+      }
+    ]
+  }
+]

@@ -1,0 +1,1153 @@
+[
+  {
+    "id": 1,
+    "text": "Жанр: Безумие.\n\nПриветствую в Rebirth версии Игры Шута!\nРаз сыграв в неё, вы не выйдете оттуда, ведь она БЕСКОНЕЧНА!",
+    "answers": [
+      {
+        "id": 2,
+        "text": "   > install JesterGame",
+        "var_set": [
+          "ip",
+          0,
+          "soul",
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "text": "",
+        "bgImg": "https://i.ibb.co/0ZTYY45/Screenshot-20230621-160546-Samsung-Internet.jpg",
+        "system": true
+      },
+      {
+        "id": 1,
+        "text": "",
+        "pageImg": "https://i.ibb.co/0ZTYY45/Screenshot-20230621-160546-Samsung-Internet.jpg",
+        "system": true
+      },
+      {
+        "id": 60,
+        "text": "   > otherInfo.show()"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Рядом со мной стоит стена.\nНа ней нарисованы две шестёрки.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "600"
+      },
+      {
+        "id": 2,
+        "text": "Минус 666"
+      },
+      {
+        "id": 6,
+        "text": "Минус 732"
+      },
+      {
+        "id": 4,
+        "text": "Эй, Шут! Это что за дела?"
+      },
+      {
+        "id": 5,
+        "text": "Эй, откройся!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "МММ... ДУМАЮ, НЕТ. ОТДАМ ЕЁ ТЕБЕ. ХА-ХА-ХА.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Принять дар!"
+      },
+      {
+        "id": 9,
+        "text": "Тут какой-то подвох..."
+      },
+      {
+        "id": 20,
+        "text": "У меня уже есть своя. Пора бы из неё выйти",
+        "need": 19
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "ТАКИЕ ДЕЛА. ХА-ХА-ХА.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Дельные?"
+      },
+      {
+        "id": 2,
+        "text": "Деловые?"
+      },
+      {
+        "id": 2,
+        "text": "Деликатные?"
+      },
+      {
+        "id": 29,
+        "text": "Делочивтылятвные?"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Эй, октройся!\nЭй, откройся\nЭй, откройс\nЭй, открой\nЭй, откро\nЭй, откр\nЭй, отк\nЭй, от",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Эй о"
+      },
+      {
+        "id": 2,
+        "text": "Эй,о"
+      },
+      {
+        "id": 6,
+        "text": "Эй, о"
+      },
+      {
+        "id": 2,
+        "text": "Эй,"
+      },
+      {
+        "id": 2,
+        "text": "Эй"
+      },
+      {
+        "id": 7,
+        "text": " "
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "ПРАВИЛЬНО! ХОТЯ... НЕТ. ЭТО МОЯ ИГРА!",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Смириться"
+      },
+      {
+        "id": 3,
+        "text": "Твоя игра, значит? А она тебе нужна?"
+      },
+      {
+        "id": 7,
+        "text": " "
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "...",
+    "answers": [
+      {
+        "id": 2,
+        "text": ".."
+      },
+      {
+        "id": 2,
+        "text": "."
+      },
+      {
+        "id": 2,
+        "text": "...."
+      },
+      {
+        "id": 2,
+        "text": "....."
+      },
+      {
+        "id": 4,
+        "text": "Эй, Шут! Что за дела?"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Что вы будете делать с игрой?",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Играть"
+      },
+      {
+        "id": 37,
+        "text": "Удалить"
+      },
+      {
+        "id": 17,
+        "text": "Продать чёрту"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "ЧТО ТЫ СКАЗАЛ? ПОДВОХ?\nДА, ТУТ ЕСТЬ ПОДВОХ. ХА-ХА-ХА.",
+    "answers": [
+      {
+        "id": 10,
+        "text": "Подвох"
+      },
+      {
+        "id": 10,
+        "text": "Вохпод"
+      },
+      {
+        "id": 10,
+        "text": "ховдоП"
+      },
+      {
+        "id": 10,
+        "text": "2CP5BPWQWTILFUF62GCQ===="
+      },
+      {
+        "id": 11,
+        "text": "0J/QvtC00LLQvtGF"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "СЛИШКОМ ПРОСТО. ХА-ХА-ХА.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Что именно?"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "ЧТО ЭТО?",
+    "answers": [
+      {
+        "id": 12,
+        "text": "IJQXGZJTGI======"
+      },
+      {
+        "id": 13,
+        "text": "QmFzZTY0"
+      },
+      {
+        "id": 12,
+        "text": ".. -. - . .-. -. .- - .. --- -. .- .-.. / -- --- .-. ... . / -.-. --- -.. ."
+      },
+      {
+        "id": 12,
+        "text": "01000010 01101001 01101110 01100001 01110010 01111001"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "НЕПРАВИЛЬНО. ХА-ХА-ХА.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Нет, правильно."
+      },
+      {
+        "id": 2,
+        "text": "Так уж и быть, неправильно..."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "ПРАВИЛЬНО! МОЛОДЕЦ! СЫГРАЕМ?",
+    "answers": [
+      {
+        "id": 14,
+        "text": "Давай!"
+      },
+      {
+        "id": 2,
+        "text": "Не хочется чего-то..."
+      },
+      {
+        "id": 7,
+        "text": "Не отвечать"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Вам выпали 1, 6, 4, 3 и 3.",
+    "answers": [
+      {
+        "id": 15,
+        "text": "Перебрасываю первые три."
+      },
+      {
+        "id": 16,
+        "text": "Перебрасываю последние три."
+      },
+      {
+        "id": 17,
+        "text": "К чёрту!"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Вам выпали 3, 1, 6, 3 и 3.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Перебросить первые два"
+      },
+      {
+        "id": 19,
+        "text": "Перебросить второй и третий"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Вам выпали 1, 6, 2, 5, 5.",
+    "answers": [
+      {
+        "id": 18,
+        "text": "Перебросить первые три"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Вы сидите в приёмной у главного черта.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "К чёрту черта!"
+      },
+      {
+        "id": 22,
+        "text": "Ждать"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Вы проиграли.",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Шут! Что за дела?"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Вам выпали 3, 3, 3, 3 и 3.\n\nДЖЕКПОТ! ПОЗДРАВЛЯЮ И ДАРЮ ТЕБЕ КЛОН ИГРЫ ШУТА!",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Играть"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "   > fin JesterGame\n   Process \"JesterGame\" is successfully finished.\n\nВы вышли из игры Шута.\nНо не можете преодолеть притяжение зайти обратно...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Зайти"
+      },
+      {
+        "id": 27,
+        "text": "Зайти в Текстовые Квесты"
+      },
+      {
+        "id": 28,
+        "text": "Быстро нажать Crtl Alt Del"
+      },
+      {
+        "id": 30,
+        "text": "Пояндексить что-нибудь, пока притяжение не затянуло вас в игру",
+        "var_set": [
+          "right",
+          0,
+          "right2",
+          0
+        ],
+        "var_equal": [
+          "soul",
+          0
+        ]
+      },
+      {
+        "id": 36,
+        "text": "Нажать Win J G!",
+        "need": 35
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "К главному черту привели другого черта по имени Вася.\nВася убил главного черта карандашом, лежавшим на столе и сам стал главным чертом.",
+    "answers": [
+      {
+        "id": 21,
+        "text": "Но тут..."
+      },
+      {
+        "id": 24,
+        "text": "Пойти на приём к Васе"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Вас наконец-то позвал к себе главный чёрт по имени Вася.",
+    "answers": [
+      {
+        "id": 24,
+        "text": "Поцеловать Васю"
+      },
+      {
+        "id": 21,
+        "text": "К чёрту Васю!"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Шут поцеловал вас.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Поцеловать в ответ."
+      },
+      {
+        "id": 25,
+        "text": "К чёрту Шута!"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Вы всегда любили его и стыдились в этом признаться...\nНо после вашего поцелуя чёрт превратился в Шута.",
+    "answers": [
+      {
+        "id": 23,
+        "text": "Что ты здесь делаешь?! И где мой Вася?"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Шут отстранился от вас и пошёл к Самому главному чёрту на приём. Вы пошли за ним.\n\nВ кабинете у Самого главного черта было темно. Шут включил свет.\n\nИ тут вы увидели Самого главного ч... Шута.\n\nВсе черты вдруг превратились в Шутов и расцеловали вас до потери сознания.\n\nКонда вы очнулись, то увидели перед собой...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Что же я увидел?"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Кости... А вы думали, что игральные.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Тут вы теряете сознание из-за шока..."
+      },
+      {
+        "id": 61,
+        "text": "Тут вы не теряете сознание из-за шока..."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Вы читали квесты и наткнулись на один любопытный под названием \"Игра Шута: Rebirth\".",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Читать!"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "ХЕХ, В ЭТОТ РАЗ WTM ЗАМЕНЁН ДРУГОЙ ПРОГРАММОЙ.\nА ПОКА ОТПРАВЛЯЙСЯ В МОЮ ИГРУ.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Под гипнозом вы заходите в игру Шута..."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "ИМЕННО ТАК! ТЫ ПЕРВЫЙ, КТО ОБ ЭТОМ ДОГАДАЛСЯ. В ПОДАРОК ДЕРЖИ КОСТИ!",
+    "answers": [
+      {
+        "id": 26,
+        "text": "Принять дар"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "\n\n\n                       / / /    ЯНДЕКСЕР    <s><s> <s><s> <s><s>\n",
+    "answers": [
+      {
+        "id": 31,
+        "text": "W",
+        "var_add": [
+          "right",
+          1
+        ]
+      },
+      {
+        "id": 31,
+        "text": "G"
+      },
+      {
+        "id": 31,
+        "text": "F"
+      },
+      {
+        "id": 31,
+        "text": "M"
+      },
+      {
+        "id": 31,
+        "text": "J",
+        "var_add": [
+          "right2",
+          1
+        ]
+      },
+      {
+        "id": 31,
+        "text": "T"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "\n\n\n                       / / /    ЯНДЕКСЕР    <s><s> <s><s> <s><s>\n",
+    "answers": [
+      {
+        "id": 32,
+        "text": "W"
+      },
+      {
+        "id": 32,
+        "text": "G",
+        "var_add": [
+          "right2",
+          1
+        ]
+      },
+      {
+        "id": 32,
+        "text": "F"
+      },
+      {
+        "id": 32,
+        "text": "M"
+      },
+      {
+        "id": 32,
+        "text": "J"
+      },
+      {
+        "id": 32,
+        "text": "T",
+        "var_add": [
+          "right",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "\n\n\n                       / / /    ЯНДЕКСЕР    <s><s> <s><s> <s><s>\n",
+    "answers": [
+      {
+        "id": 33,
+        "text": "W"
+      },
+      {
+        "id": 33,
+        "text": "G"
+      },
+      {
+        "id": 33,
+        "text": "F",
+        "var_add": [
+          "right2",
+          1
+        ]
+      },
+      {
+        "id": 33,
+        "text": "M",
+        "var_add": [
+          "right",
+          1
+        ]
+      },
+      {
+        "id": 33,
+        "text": "J"
+      },
+      {
+        "id": 33,
+        "text": "T"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "\n\n\n                       / / /    ЯНДЕКСЕР    <s><s> <s><s> <s><s>\n\n   <plus> — — — — — — — — — — <plus>\n   | Выполняется поиск...   |\n   <plus> — — — — — — — — — — <plus>",
+    "answers": [
+      {
+        "id": 34,
+        "text": "Ждать",
+        "var_no_more": [
+          "right",
+          2,
+          "right2",
+          2
+        ]
+      },
+      {
+        "id": 35,
+        "text": "Ждать",
+        "var_need": [
+          "right",
+          3
+        ]
+      },
+      {
+        "id": 53,
+        "text": "Ждать",
+        "var_need": [
+          "right2",
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Яндексер не выдал ничего полезного.\nМеня уже затягивает в игру Шута...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Открыть игру"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Диспетчер задач (Windows Task Manager) — это небольшая системная программа, которая показывает процессы компьютера, а также позволяет ими управлять.\n\nЧаще всего Диспетчер задач используется для того, чтобы выключить зависшую программу. Но еще он нужен для диагностики компьютера.\n\nАналоги WTM:\n1. В популярной сейчас Rebirth версии игры Шута используется JGTM, который открывается с помощью сочетания клавиш Win <plus> J <plus> G.\n\nДальше вы прочитать вы не смогли, так как игра вас окончательно затянула...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Открыть игру Шута"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "   ШУТ ПРИВЕТСТВУЕТ ВАС В ТЕРМИНАЛЕ.\n\n   ВВЕДИТЕ ПАРОЛЬ, ЧТОБЫ ПРОДОЛЖИТЬ.",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Skc="
+      },
+      {
+        "id": 38,
+        "text": "JesterGame"
+      },
+      {
+        "id": 38,
+        "text": "Игра Шута"
+      },
+      {
+        "id": 41,
+        "text": "SmVzdGVyR2FtZTogUmViaXJ0aA=="
+      },
+      {
+        "id": 38,
+        "text": "JJSXG5DFOJDWC3LFHIQFEZLCNFZHI2A="
+      },
+      {
+        "id": 38,
+        "text": "start JesterGame"
+      },
+      {
+        "id": 38,
+        "text": "0LHQtdGB0YHQvNGL0YHQu9C40YbQsA=="
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "   > fin JesterGame\n   Process \"JesterGame\" is successfully finished.\n   > del JesterGame\n   SystemError JG01: JesterGame can't be deleted.\n   JesterGameError JG01: raise JG01(\"ХА-ХА-ХА.\") in JesterGame; ХА-ХА-ХА.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS93: no such file or directory called JesterGame.\n   SystemError SYS08: an error has repeated 10 times.\n\n   Restarting the computer...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "   ПАРОЛЬ НЕПРАВИЛЬНЫЙ.\n\n   ИДЁТ ЗАПУСК ПРОЦЕССА JesterGame.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ждать"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "   КОНТРОЛЬНЫЙ ВОПРОС НОМЕР 1.\n\n   КАК ЗОВУТ ШУТА?",
+    "answers": [
+      {
+        "id": 38,
+        "text": "Шут"
+      },
+      {
+        "id": 38,
+        "text": "Игрок"
+      },
+      {
+        "id": 38,
+        "text": "Квестописец"
+      },
+      {
+        "id": 38,
+        "text": "Как зовут Шута?"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "   ХОРОШО.\n\n   ДОСТУП К ТЕРМИНАЛУ ОТКРЫТ. ",
+    "answers": [
+      {
+        "id": 42,
+        "text": "Далее"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "   ПРАВИЛЬНЫЙ ПАРОЛЬ.\n\n   ЖЕЛАЕТЕ ЛИ ВЫ ОТВЕЧАТЬ НА КОНТРОЛЬНЫЕ ВОПРОСЫ?",
+    "answers": [
+      {
+        "id": 39,
+        "text": "Да"
+      },
+      {
+        "id": 40,
+        "text": "Нет"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "   ВВЕДИТЕ КОМАНДУ.",
+    "answers": [
+      {
+        "id": 37,
+        "text": "   > fin JesterGame"
+      },
+      {
+        "id": 43,
+        "text": "   > fin system32"
+      },
+      {
+        "id": 2,
+        "text": "   > goto JesterGame"
+      },
+      {
+        "id": 44,
+        "text": "   > goto system32"
+      },
+      {
+        "id": 45,
+        "text": "   > del JesterScript"
+      },
+      {
+        "id": 46,
+        "text": "   > del killing"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "   > fin system32\n   SystemError OFL02: no such opened file or directory  system32.\n   Restarting the computer...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "   > goto system32\n   SystemError GTE01: can't open system32 because it's already opened.\n   Restarting the computer...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "   > del JesterScript\n   SystemError OFL01: raise OFL01 in killing.\n   Restarting the computer...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "   > del killing\n   Successfully deleted this file.\n   > del JesterScript\n   Successfully deleted this file.",
+    "answers": [
+      {
+        "id": 47,
+        "text": "Win J G"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": " — JesterGameError JGE41: can't load the Jester's script. —",
+    "answers": [
+      {
+        "id": 37,
+        "text": "   > fin JesterGame"
+      },
+      {
+        "id": 48,
+        "text": "   > show JesterGameError.basiclist()"
+      },
+      {
+        "id": 49,
+        "text": "   > JesterGame.gameScript.remove()"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "   > show JesterGameError.basiclist()\n   ExampleSystemError JG01: JesterGame can't be deleted.\n   ExampleError JGE02: can't load the game script.\n   ExampleError JGE03: can't start the game because some files are missing.\n   ExampleError JGE41: can't load the Jester's script.\n",
+    "answers": [
+      {
+        "id": 50,
+        "text": "Win J G"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "   > JesterGame.gameScript.remove()\n   JesterGameError JGE02: can't load the game script.\n   SystemError SYS04: raise SYS04 in gameScript in JesterGame.\n   Restarting the computer...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": " — JesterGameError JGE41: can't load the Jester's script. —",
+    "answers": [
+      {
+        "id": 37,
+        "text": "   > fin JesterGame"
+      },
+      {
+        "id": 52,
+        "text": "   > sleep JesterGame"
+      },
+      {
+        "id": 51,
+        "text": "   > goto JesterGame",
+        "var_equal": [
+          "ip",
+          0
+        ]
+      },
+      {
+        "id": 58,
+        "text": "   > goto JesterGame",
+        "var_equal": [
+          "ip",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "   > goto JesterGame\n   JesterGameError JGE82: the game can't function anymore.\n   Loading JesterGameFiles from jgf.com...\n   JesterGameFiles are successfully loaded.\n   Starting JesterGame...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "   > sleep JesterGame\n   JesterGameError JGE82: the game can't function anymore.\n   Loading JesterGameFiles from jgf.com...\n   JesterGameFiles are successfully loaded.\n   Starting JesterGame...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Выполнен переход на сайт jgf.com.\n\nПриветствуем на сайте для установки игры Шута!\nНажмите на кнопку с изображением □ для выхода в меню.\n\nВы нажали на кнопку. Куда дальше?",
+    "answers": [
+      {
+        "id": 54,
+        "text": "Установка игры"
+      },
+      {
+        "id": 55,
+        "text": "Гайд по удалению игры"
+      },
+      {
+        "id": 56,
+        "text": "Контакты с создателем игры"
+      },
+      {
+        "id": 57,
+        "text": "Нежелательные устройства"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "Для начала требуется перезагрузка вашего компьютера.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Хорошо"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "Удалить игру Шута нельзя. ХА-ХА-ХА.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Блин... я не могу сдержаться от того, чтобы в неё поиграть... *запустить игру*"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "Создатель игры — Шут.\nТелефон Шута: -666-666-666.\nЭлектронная почта Шута: jestermail.jgjmail.com",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Тем временем меня всё больше затягивает в игру..."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "Введите айпи нежелательного устройства:",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Ввести свой айпи... и зайти в игру Шута!",
+        "var_set": [
+          "ip",
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "   > goto JesterGame\n   JesterGameError JGE82: the game can't function anymore.\n   Loading JesterGameFiles from jgf.com...\n   JesterGameFiles can't be loaded.\n   JesterGameError JGE96: can't load the data.\n   JesterGameError JGE82: the game can't function anymore.\n   Loading JesterGameFiles from jgf.com...\n   JesterGameFiles can't be loaded.\n   JesterGameError JGE96: can't load the data.\n   JesterGameError JGE82: the game can't function anymore.\n   Loading JesterGameFiles from jgf.com...\n   JesterGameFiles can't be loaded.\n   JesterGameError JGE96: can't load the data.\n   JesterGameError JGE82: the game can't function anymore.\n   Loading JesterGameFiles from jgf.com...\n   JesterGameFiles can't be loaded.\n   JesterGameError JGE96: can't load the data.\n   JesterGameError JGE82: the game can't function anymore.\n   Loading JesterGameFiles from jgf.com...\n   JesterGameFiles can't be loaded.\n   JesterGameError JGE96: can't load the data.\n   SystemError JG65: the game can't be opened.\n   Deleting JesterGame...\n   JesterGame is successfully deleted.",
+    "answers": [
+      {
+        "id": 59,
+        "text": "Что?!"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "Наконец-то я её прошёл...\n\nС такой мыслью я выключил компьютер и пошёл спать.",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Хэппи энд",
+        "var_equal": [
+          "soul",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "   > otherInfo.show()\n   1. В квесте есть только одна концовка, которая ведёт на главную страницу.\n   2. Квест целиком и полностью вдохновлён Игрой Шута.\n   3. Это первый квест автора, так что не бейте)\n   4. Все команды и терминал, а также Яндексер — плоды фантазии автора.\n   5. Приятного времяпровождения!",
+    "answers": [
+      {
+        "id": 1,
+        "text": "   > goto mainPage"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "Но чуть позже всё-таки теряете.\n\nВы очнулись в какой-то комнате.\nТут Шут включает свет и подходит к вам.",
+    "answers": [
+      {
+        "id": 62,
+        "text": "Где выход из игры?"
+      },
+      {
+        "id": 63,
+        "text": "Дай мне игру!"
+      },
+      {
+        "id": 7,
+        "text": "Молчать"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "ЕГО НЕТ. ХА-ХА-ХА.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Смириться"
+      },
+      {
+        "id": 65,
+        "text": "Ты врёшь!",
+        "var_str_set": [
+          "count",
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "ТАК УЖ И БЫТЬ.",
+    "answers": [
+      {
+        "id": 8,
+        "text": "Спасибо!"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "Я СОГЛАСЕН.\nДАЙ МНЕ СВОЮ ДУШУ.",
+    "answers": [
+      {
+        "id": 66,
+        "text": "Дать душу",
+        "var_add": [
+          "soul",
+          0
+        ],
+        "var_set": [
+          "soul",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Не-не-не. Лучше с душой."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "Я ТЕБЕ ГОВОРЮ, ЕГО НЕТ.",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Смириться",
+        "var_no_more": [
+          "count",
+          5
+        ]
+      },
+      {
+        "id": 65,
+        "text": "Ты врёшь!",
+        "var_add": [
+          "count",
+          1
+        ],
+        "var_no_more": [
+          "count",
+          9
+        ]
+      },
+      {
+        "id": 64,
+        "text": "Я готов продать тебе душу за выход из игры!",
+        "var_need": [
+          "count",
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "И тут внезапно высветилось окошко, что я прошёл игру! Ураааааа!!!\n\nЯ закрыл её и выключил компьютер.\n\nНо не смог уснуть, вспомнив, что за это я отдал душу Шуту...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Вернуться в игру и взять свою душу назад!"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "Я восстановил игру и забрал у Шута свою душу.\nЗато теперь опять надо выход искать...",
+    "answers": [
+      {
+        "id": 2,
+        "text": "Эх..."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "",
+    "answers": []
+  }
+]

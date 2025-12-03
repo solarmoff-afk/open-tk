@@ -1,0 +1,766 @@
+[
+  {
+    "id": 1,
+    "text": "Автор: Ярослав Зверев\n\nЗлые снеговики захватили все светящиеся камни, и теперь Новый год в опасности. Вступите в бой снежками, спасите светящиеся камни и создайте столько гирлянд, сколько сможете!",
+    "answers": [
+      {
+        "lua_do": "function lua_do()\ng.start()\nend",
+        "text": "Начать",
+        "id": 15
+      },
+      {
+        "id": 12,
+        "text": "Переменные при старте",
+        "run": [
+          12
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Картинки",
+        "need": [
+          999
+        ]
+      },
+      {
+        "contentList": [
+          "https://b.radikal.host/2022/12/29/sketch-1672248764399.jpg https://i.ibb.co/2PB49B6/imgs-touch-4-copy-300x341.png https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png"
+        ],
+        "super_calculate": true,
+        "id": 1,
+        "calculate": false,
+        "text": "Новый ответ. введите текст"
+      },
+      {
+        "id": 1,
+        "text": "снеговик",
+        "url": "https://i.ibb.co/2PB49B6/imgs-touch-4-copy-300x341.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Сама игра со снеговиками",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Общие функции",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Снеговик и снежки",
+        "run": [
+          3
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Стены",
+        "run": [
+          5
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Ползунок, отбивающий снежки",
+        "run": [
+          6
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Начисление и отображение очков",
+        "run": [
+          7
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 2,
+        "text": "Главная функция",
+        "calculate": false,
+        "lua_do": "function lua_do()\ndrawSnowBg()\n\nphysics = require(\"physics\")\nphysics.start()\nphysics.setGravity(0, 0)\n\nif countSnowmans == 1 then\n  drawSnowman(0.5*canvas.width, 0.3*canvas.width, frequency)\nelse\n  drawSnowman(0.25*canvas.width, 0.3*canvas.width, frequency)\n  drawSnowman(0.75*canvas.width, 0.35*canvas.width, frequency <plus> math.random(-300, 300))\nend\n\ndrawWalls()\ndrawSlider()\n\ndrawDisplayPoints()\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Снеговик и снежки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 3,
+        "text": "Снеговик",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawSnowman(x, y, frequency)\n--создание снеговика\n  local snowman = drawImage(\"https://i.ibb.co/2PB49B6/imgs-touch-4-copy-300x341.png\", x, y)\n  snowman.xScale = 0.3*canvas.width/snowman.width\n  snowman.yScale = snowman.xScale\n  physics.addBody(snowman, \"static\", {density = 1, friction = 0.1, bounce = 0.1})\n\n--столкновение снежков со снеговиком\n  snowman:addEventListener (\"collision\",\n  function(event)\n    if event.phase == \"ended\" then\n      if event.other.notFirstCollision then\n        addPoints(event.other.x, event.other.y, 1)\n        event.other:removeSelf()\n      else\n        event.other.notFirstCollision = true\n      end\n    end\n  end)\n\n--генерация снежков\n  timer.performWithDelay(frequency,   \n  function(event)\n    if not(snowman and snowman.removeSelf) then\n      timer.cancel(event.source)\n      return true\n    end\n    local snowball = display.newCircle(canvasGroup, snowman.x, snowman.y <plus> snowman.contentHeight/2, 0.05*canvas.width)\n    snowball.fill = {\n      type = \"gradient\",\n      color1 = {1, 1, 1},\n      color2 = {0.8, 0.8, 0.8},\n      direction = \"right\"\n    }\n    physics.addBody(snowball, \"dynamic\", {density = 0.1, friction = 0.1, bounce = 0.9})\n    snowball:applyLinearImpulse (math.random(-canvas.width/72, canvas.width/72), 3*canvas.height/152, snowball.x, snowball.y)\n\n--столкновение снежков\n snowball:addEventListener (\"collision\",\n    function(event)\n      if event.phase == \"began\" then\n        if event.other.notFirstCollision then\n          --addPoints(event.other.x, event.other.y, 1)\n          event.other:removeSelf()\n        end\n      end\n    end)\n  end, 0)\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Общие функции",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawImage(url, x, y)\n  local img = display.newImage(url)\n  if not img then\n    img = display.newImage(canvasGroup, nameForImages(url), system.TemporaryDirectory, x, y)\n  else\n    img.x, img.y = x, y\n  end\n  return img\nend\nend",
+        "text": "Картинка",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawSnowBg()\n  local bg = display.newRect(canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\n  bg.fill = {\n    type = \"gradient\",\n    color1 = {0.9, 0.95, 1},\n    color2 = {0.75, 0.8, 0.85},\n    direction = \"left\"\n  } \nend\nend",
+        "text": "Снежный фон",
+        "id": 4,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawExit(listener)\n  local exit = drawImage(\"https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png\", 0.9*canvas.width, 0.07*canvas.width)\n  exit.width = 0.07*canvas.width\n  exit.height = exit.width\n  exit.listener = listener\n  exit:addEventListener(\"tap\", listener)\nend\nend",
+        "text": "Крестик закрытия"
+      },
+      {
+        "super_calculate": true,
+        "id": 4,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction remove(obj)\n  if obj and obj.removeSelf then\n    obj:removeSelf()\n  end\nend\nend",
+        "text": "Удалить что-то с проверкой"
+      },
+      {
+        "id": 20,
+        "text": "Заголовок",
+        "run": [
+          20
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Кнопка с текстом",
+        "run": [
+          21
+        ]
+      },
+      {
+        "id": 29,
+        "text": "Уровни",
+        "run": [
+          29
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Стены",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawWall(x)\n  local wall = display.newRect(canvasGroup, x, canvas.height*0.5, 0.015*canvas.width, canvas.height)\n  wall.fill = {\n    type = \"gradient\",\n    color1 = {0.9, 0.95, 1},\n    color2 = {0.75, 0.8, 0.85},\n    direction = \"right\"\n  }\n  physics.addBody(wall, \"static\", {density = 1, friction = 0.1, bounce = 0.1})\nend\nend",
+        "text": "Одна стена",
+        "id": 5,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawWalls()\n--боковые стены\n  drawWall(0)\n  drawWall(canvas.width)\n\n--нижняя стена, от которой игрок отбивает снежки\n  local wall = display.newRect(canvasGroup, canvas.width/2, canvas.height, canvas.width, 0.015*canvas.width)\n  wall.fill = {\n    type = \"gradient\",\n    color1 = {0.9, 0.95, 1},\n    color2 = {0.75, 0.8, 0.85},\n    direction = \"left\"\n  }\n  physics.addBody(wall, \"static\", {density = 1, friction = 0.1, bounce = 0.1})\n  wall:addEventListener (\"collision\",\n    function(event)\n      if event.phase == \"ended\" then\n          addPoints(event.other.x, event.other.y, -1)\n          event.other:removeSelf()\n      end\n    end)\nend\nend",
+        "text": "Все стены",
+        "id": 5,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Ползунок, отбивающий снежки",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 6,
+        "text": "   ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawSlider()\n  local height = canvas.width*0.1\n  local y = canvas.height - 2*height\n\n  local rect = display.newRoundedRect(canvasGroup, canvas.width/2, y, height*3.33, height, height/6)\n  rect.fill = {0.6}\n  physics.addBody(rect, \"static\", {density = 1, friction = 0.1, bounce = 0.1})\n\n--передвижение слайдера\n  rect:addEventListener(\"touch\", \n  function(event)\n    local rect = event.target\n    if event.phase == \"began\" then\n      display.getCurrentStage(): setFocus(rect)     \n      rect.touchOffsetX = event.x - rect.x\n      rect.touchOffsetY = event.y - rect.y\n    elseif event.phase == \"moved\" and rect.touchOffsetX then\n      rect.x = math.min(canvas.width - rect.width/2, math.max(rect.width/2, event.x - rect.touchOffsetX))\n    elseif (event.phase == \"ended\" or event.phase == \"cancelled\") and rect.touchOffsetX then            \n      display.getCurrentStage():setFocus(nil)\n    end\n    return true\n  end)\n\n\n  local strip = display.newRoundedRect(canvasGroup, canvas.width/2, y, canvas.width - rect.width, rect.height/4, height)\n  strip.fill = {0.7, 0.5}\n\n  rect:toFront()\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Начисление и отображение очков",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Эффект добавления/снятия очков",
+        "lua_do": "function lua_do()\nfunction addPoints(x, y, count)\n  local color = (count >= 0) and {121/255, 186/255, 9/255} or {0.9, 0.3, 0.3}\n  local text = display.newText{\n    parent = canvasGroup,\n    text = ((count >= 0) and \"<plus>\" or \"\") .. count,\n    fontSize = 1.5*g.fontSize,\n    x = x,\n    y = y\n  }\n  text:setFillColor(unpack(color))\n\n  timer.performWithDelay(1000, \n  function(event)\n    if text and text.removeSelf then\n      text:removeSelf()\n    end\n  end)\n\n  points = math.max(0, points <plus> count)\n  if points == maxPoints then\n    g.lvl = g.lvl <plus> 1\n    generateRewardLvl(difficulty)\n    g.red, g.green, g.blue = g.red <plus> red, g.green <plus> green, g.blue <plus> blue\n    showPage{id = 8}\n  end\n  displayPoints.text = points .. \"/\" .. maxPoints\nend\nend",
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 7,
+        "text": "Отображение очков",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawDisplayPoints()\n  displayPoints = display.newText{\n    parent = canvasGroup,\n    text = points .. \"/\" .. maxPoints,\n    fontSize = 1.5*g.fontSize\n  }\n  displayPoints.x = canvas.width*0.95 - displayPoints.width/2\n  displayPoints.y = canvas.width*0.05 <plus> displayPoints.height/2\n  displayPoints.fill = {0}\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Экран победы",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Общие функции",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Количество разноцветных шариков",
+        "run": [
+          17
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Анимация появления с задержкой",
+        "run": [
+          26
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "text": "    ",
+        "calculate": false,
+        "lua_do": "function lua_do()\ndrawSnowBg()\ncurY = 0.1*canvas.width\nindent = 0.025*canvas.height\nradius = 0.045*canvas.width\ndelay = 1000\nstep = 0\n\nanimAppear(drawTitle(\"Победа!\", 3, {0,0.6,0}))\n\ncurY = curY <plus> indent*2\nanimAppear(drawTitle(\"Вы получили:\"))\n\nlocal balls = display.newGroup()\ncanvasGroup:insert(balls)\ndrawCountBalls(balls)\nanimAppear(balls)\n\nlocal text = display.newText{\n  parent = canvasGroup,\n  text = \"Продолжить\",\n  fontSize = 1.5*g.fontSize\n}\nlocal textHeight = text.height\ntext:removeSelf()\n\nlocal snowman = drawImage(\"https://i.ibb.co/2PB49B6/imgs-touch-4-copy-300x341.png\", canvas.width/2, curY)\nsnowman.yScale = math.min(0.9*canvas.width,(canvas.height - curY - textHeight*1.15 - 3*indent))/snowman.height\nsnowman.xScale = snowman.yScale\nsnowman.y =  snowman.y <plus> snowman.contentHeight/2 <plus> indent\ncurY = snowman.y <plus> snowman.contentHeight/2 <plus> indent*2\n\ndrawButton(\"На склад\", 0.225*canvas.width, function()\n  showPage{id = 11, transition = \"instant\"}\nend)\n\ndrawButton(\"Продолжить\", 0.725*canvas.width, function()\n  showPage{id = 15, transition = \"instant\"}\nend)\nend"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Мастерская",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Общие функции",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Количество разноцветных шариков",
+        "run": [
+          17
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Места под шарики (составление гирлянды)",
+        "run": [
+          18
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Слайдер",
+        "run": [
+          19
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Собрать информацию о гирлянде",
+        "run": [
+          22
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Расчёт радиуса и отступа, чтобы всё на экране поместилось и было нормально",
+        "run": [
+          27
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\ndrawSnowBg()\nred, green, blue = g.red, g.green, g.blue\ncurY = 0.1*canvas.width\n\ncalculateSizes()\n\ndrawTitle(texts[1])\n\ndrawCountBalls()\nlights = {}\ninfo = info or {}\nlightsInfo = info.lights or {}\ndrawPlaceForLights()\n\nsizeSlider = 2000\n\ndrawTitle(texts[2])\ntimeSlider = drawSlider{\n  x = canvas.width/2,\n  width = 0.8*canvas.width,\n  value = info.time and (info.time - 25)/sizeSlider or 0.5\n}\ndrawTitle(texts[3])\ndelaySlider = drawSlider{\n  x = canvas.width/2,\n  width = 0.8*canvas.width,\n  value = info.delay and info.delay/sizeSlider or 0.5\n}\ndrawTitle(texts[4])\noffsetSlider = drawSlider{\n  x = canvas.width/2,\n  width = 0.8*canvas.width,\n  value = info.offset and info.offset/sizeSlider or 0\n}\n\ndrawButton(\"Сохранить\", canvas.width*0.25, \nfunction()\n  if #lightsInfo > 0 then\n    g.storage[idLights] = getInfo()\n    g.red, g.green, g.blue = red, green, blue\n    showPage{id = 11, transition = \"instant\"}\n  else\n    message(\"Добавьте в гирлянду хотя бы один шар\")\n  end\nend)\n\ndrawButton(\"Запустить\", canvas.width*0.75,\nfunction()\n  if #lightsInfo > 0 then\n    info = getInfo()\n    prevId = 9\n    showPage{id = 14, transition = \"instant\"}\n  else\n    message(\"Добавьте в гирлянду хотя бы один шар\")\n  end\nend)\n\ndrawExit(function()\n  showPage{id = 11, transition = \"instant\"}\nend)\nend",
+        "text": "    ",
+        "id": 9,
+        "calculate": false
+      },
+      {
+        "comment": false,
+        "id": 9,
+        "text": "Скопировать",
+        "need": [
+          999
+        ],
+        "lua_do": "function lua_do()\npasteboard.copy(\"string\", utf8.gsub(\n  utf8.gsub(\n    json.encode(getInfo()), \n    \"%[\", \n    \"{\"), \n  \"%]\", \n  \"}\")\n)\nend"
+      },
+      {
+        "comment": false,
+        "id": 9,
+        "text": "Добавить шариков",
+        "need": [
+          999
+        ],
+        "lua_do": "function lua_do()\ng.red, g.green, g.blue = g.red <plus> 5, g.green <plus> 5, g.blue <plus> 5\ng.image_part_of_screen = 2\nend"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Картинки",
+    "answers": [
+      {
+        "id": 10,
+        "text": "домик",
+        "url": "https://i.ibb.co/Y0DP06Y/3263505-copy-400x400.png"
+      },
+      {
+        "id": 1,
+        "text": "снеговик",
+        "url": "https://i.ibb.co/2PB49B6/imgs-touch-4-copy-300x341.png"
+      },
+      {
+        "id": 10,
+        "text": "крестик (для закрытия)",
+        "url": "https://images.vfl.ru/ii/1611421811/7dcf8a61/33069602.png"
+      },
+      {
+        "id": 3,
+        "text": "Красно-жёлтое:",
+        "comment": true,
+        "text_color": [
+          1,
+          0.4,
+          0.2
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Красный шар с полосками:\nhttps://images.vfl.ru/ii/1607284345/b5ffdb91/32574118.png\n\nКрасный шар с завитками:\nhttps://images.vfl.ru/ii/1607284576/7892f650/32574189.png\n\nЖёлтый шар:\nhttps://images.vfl.ru/ii/1607284593/a0227a87/32574199.png\n\nКрасная шишка:\nhttps://images.vfl.ru/ii/1607284611/212117cc/32574204.png\n\nЖёлтая шишка:\nhttps://images.vfl.ru/ii/1607284622/e8b975b8/32574207.png\n\nКрасный колокольчик:\nhttps://images.vfl.ru/ii/1607284634/159c84fc/32574210.png",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Новое:",
+        "comment": true,
+        "text_color": [
+          1,
+          0.4,
+          0.2
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Снежинка синяя:\nhttps://images.vfl.ru/ii/1609174335/60c953a7/32798366.png\n\nСказка о ёлке:\nhttps://images.vfl.ru/ii/1609174354/daa9b737/32798369.png\n\nОранжевые цветочки:\nhttps://images.vfl.ru/ii/1609174372/ef3fc855/32798370.png\n\nФиолетовый с узорами:\nhttps://images.vfl.ru/ii/1609174388/0e65c786/32798380.png\n\nСнеговик:\nhttps://images.vfl.ru/ii/1609174410/35997641/32798383.png\n\nСнежинка красная:\nhttps://images.vfl.ru/ii/1609174423/64db14e2/32798384.png\n\nРозовый текстурный:\nhttps://images.vfl.ru/ii/1609174437/05bc6a26/32798396.png\n\nФиолетовый с волнами\nhttps://images.vfl.ru/ii/1609174449/b40620c3/32798397.png\n\nКрасная фигура:\nhttps://images.vfl.ru/ii/1609174462/a0c2be0c/32798398.png\n\nСиний:\nhttps://images.vfl.ru/ii/1609277905/f68456d0/32810870.png\n",
+        "comment": true
+      },
+      {
+        "id": 2,
+        "text": "Декорации:",
+        "comment": true,
+        "text_color": [
+          1,
+          0.4,
+          0.2
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Подарок:\nhttps://images.vfl.ru/ii/1607670206/edb33c69/32623173.png\n\nМишура:\nhttps://images.vfl.ru/ii/1607670225/e992ccf5/32623175.png\n\nЗвезда:\nhttps://images.vfl.ru/ii/1607670248/17266b0c/32623178.png",
+        "comment": true
+      },
+      {
+        "id": 3,
+        "text": "Кнопка",
+        "url": "https://images.vfl.ru/ii/1607539935/53d6a959/32608113.png"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Выбор гирлянды",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Общие функции",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Прокрутка (скролл)",
+        "run": [
+          24
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Гирлянды",
+        "run": [
+          23
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Всплывающее меню",
+        "run": [
+          25
+        ]
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\n--local lgbt = {lights = {{1, 0, 0}, {1,0.8,0}, {1,1,0}, {0,1,0}, {0.5,0.7,1}, {0,0,1}, {0.8,0,1}}, time = 1500, delay = 1500}\n--g.storage = {lgbt, lgbt, lgbt, lgbt, lgbt, lgbt, lgbt, lgbt}\n\ncurY = 0.1*canvas.width\nindent = 0.025*canvas.height\nradius = 0.045*canvas.width\nstrokeWidth = canvas.width*0.005\ndrawSnowBg()\n\ndrawButton(\"Создать гирлянду\", canvas.width/2, \nfunction()\n  idLights = #g.storage <plus> 1\n  info = {}\n  showPage{id = 9, transition = \"instant\"}\nend, true)\n\nif #g.storage > 0 then\n  drawTitle(\"Нажмите на гирлянду, чтобы появилось меню с действиями\")\n  drawScrollView()\n  drawStorageLights()\nend\n\ndrawExit(function()\n  --генерация нового уровня\n  showPage{id = 15, transition = \"instant\"}\nend)\nend",
+        "text": "    ",
+        "id": 11,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Переменные при старте",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction g.start()\n  g.fullscreen = 1\n  g.noScroll = 1\n  g.red = g.red or 0\n  g.green = g.green or 0\n  g.blue = g.blue or 0\n  g.storage = g.storage or {}\n  g.lvl = g.lvl or 1\nend\nend",
+        "calculate": false,
+        "text": "    ",
+        "id": 12
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Иконки домиков",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 13,
+        "text": "Один дом",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawHomeIcon(x, y, info, maxHeight)\n  local frame = display.newRoundedRect(canvasGroup, x, y, canvas.width*0.4, canvas.width*0.4, canvas.width*0.05)\n  frame.fill = {0.8, 0.7, 0.3}\n\n  local home = drawImage(\"https://i.ibb.co/Y0DP06Y/3263505-copy-400x400.png\", x, y)\n  home.xScale = frame.width*0.85/home.width\n  home.yScale = home.xScale\n\n  local text = display.newText{\n    parent = canvasGroup,\n    text = info.name,\n    fontSize = 1.25*g.fontSize,\n    x = x,\n    y = y - frame.height/2,\n    width = canvas.width/2,\n    height = maxHeight,\n    align = \"center\"\n  }\n  text.y = text.y - text.height/2\n  text.fill = {0}\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawHousesIcons()\n  local x = -1\n  local y = 1\n  local width = canvas.width*0.4\n  local testText = display.newText{\n    parent = canvasGroup,\n    text = \"Тест\",\n    fontSize = 1.25*g.fontSize,\n  } \n  local maxHeight = testText.height\n  testText:removeSelf()\n  local indent = (canvas.width - 2*width)/3 <plus> maxHeight/2\n\n  --[[local widget = require(\"widget\")\n  local topScroll = canvas.width*0.2\n  local scrollView = widget.newScrollView{\n    top = topScroll,\n    left = -canvas.parent.width*0.02,\n    width = canvas.width,\n    height = canvas.height - topScroll,\n    scrollWidth = canvas.width,\n    scrollHeight = canvas.width - topScroll,\n    hideBackground = true,\n    horizontalScrollDisabled = true\n  }\n  canvas.parent:insert(scrollView)]]\n\n  for i = 1, #g.houses do\n    drawHomeIcon(\n      canvas.width/2 <plus> x*canvas.width/4,\n      topScroll <plus> (y-0.5)*width <plus> (y)*indent,\n      g.houses[i],\n      maxHeight\n    )\n    y = y <plus> (i%2 == 0 and 1 or 0)\n    x = -x\n  end\nend\nend",
+        "calculate": false,
+        "text": "Все дома",
+        "id": 13
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Сам дом с гирляндами",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Общие функции",
+        "run": [
+          4
+        ]
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 15,
+        "text": "Отрисовка ёлки и декораций",
+        "need": [
+          999
+        ],
+        "calculate": false
+      },
+      {
+        "comment": false,
+        "super_calculate": false,
+        "id": 16,
+        "text": "Гирлянда",
+        "run": [
+          16
+        ],
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nbg = drawImage(\"https://b.radikal.host/2022/12/29/sketch-1672248764399.jpg\", canvas.width/2, canvas.height/2)\nlocal xs = canvas.width/bg.width\nlocal ys = canvas.height/bg.height\nbg.xScale = math.max (xs, ys)\nbg.yScale = bg.xScale\nbg.y = bg.y - (bg.contentHeight - canvas.height) /2\n\nlocal rect = display.newRect(canvasGroup, canvas.width/2, canvas.height/2, canvas.width, canvas.height)\nrect.fill = {0, 0.4}\nrect.fill.blendMode = \"multiply\"\n\ndrawLights(info)\nif not info.offset then\n  rect.alpha = 0\n  animPulsate2(rect)\nend\n\ndrawExit(function()\n  showPage{id = prevId, transition = \"instant\"}\nend)\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 14
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Меню уровня",
+    "answers": [
+      {
+        "id": 4,
+        "text": "Общие функции",
+        "run": [
+          4
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Выбор сложности",
+        "run": [
+          28
+        ]
+      },
+      {
+        "super_calculate": true,
+        "id": 8,
+        "calculate": false,
+        "lua_do": "function lua_do()\nred, green, blue = 3, 5, 4\ndrawSnowBg()\ncurY = 0.1*canvas.width\nindent = 0.025*canvas.height\nradius = 0.05*canvas.width\ndelay = 1000\nstep = 0\n\npoints = 0\nmaxPoints = 10\n\ndrawTitle(\"Уровень \".. g.lvl, 2, {0})\n\ncurY = curY <plus> indent\n--drawTitle(\"Заработайте \" .. maxPoints .. \" очков\")\n\ndrawTitle(\"Выберите уровень сложности\")\n\nlocal text = display.newText{\n  parent = canvasGroup,\n  text = \"Продолжить\",\n  fontSize = 1.5*g.fontSize\n}\nlocal textHeight = text.height\ntext:removeSelf()\n\ndifficulty = difficulty or 1\ncurY = curY <plus> textHeight/1.5\ndrawChangeDifficulty()\n\nlocal snowman = drawImage(\"https://i.ibb.co/2PB49B6/imgs-touch-4-copy-300x341.png\", canvas.width/2, curY)\nsnowman.yScale = math.min(0.9*canvas.width,(canvas.height - curY - textHeight*1.15 - 3*indent))/snowman.height\nsnowman.xScale = snowman.yScale\nsnowman.y =  snowman.y <plus> snowman.contentHeight/2 <plus> indent\ncurY = snowman.y <plus> snowman.contentHeight/2 <plus> indent*2\n\ndrawButton(\" Вперёд! \", 0.5*canvas.width, function()\n  generateTaskLvl(difficulty)\n  points = 0\n  showPage{id = 2, transition = \"instant\"}\nend)\n\n--[[drawExit(function()\n  showPage{id = 11, transition = \"instant\"}\nend)]] \nend",
+        "text": "    "
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Гирлянда",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 16,
+        "text": "Гирлянда",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawLights(info)\n  local indent = 0\n  local curLight = 1\n  local group = {}\n  for i = 1, #info.lights do\n    group[i] = display.newGroup()\n    canvasGroup:insert(group[i])\n  end\n\n  for y = 0.4*bg.contentHeight, 0.87*bg.contentHeight, 0.074*bg.contentHeight do\n    indent = indent <plus> 0.05*bg.contentWidth\n    for x = canvas.width/2 - indent, canvas.width/2 <plus> indent, 0.15*bg.contentWidth do\n\n      local light = display.newCircle(group[curLight], x, (bg.y - bg.contentHeight/2) <plus> y, 0.02*bg.contentWidth)\n      light.fill = info.lights[curLight]\n      light.fill.blendMode = \"add\"\n      if curLight == #info.lights then\n        curLight = 1\n      else\n        curLight = curLight <plus> 1\n      end\n\n    end\n  end\n\n  time = info.time\n  delay = info.delay\n  local i = 1\n  if info.offset then\n    timer.performWithDelay (info.offset, function()\n      if group and group[i] and group[i].removeSelf then\n        animPulsate(group[i])\n      end\n      i = i <plus> 1\n    end, #info.lights)\n  else\n    for i = 1, #info.lights do\n      animPulsate(group[i])\n    end\n  end\nend\nend"
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction animPulsate(obj)\n  transition.fadeOut(obj, {\n    delay = delay,\n    time = time,\n    onComplete = \n      function(obj)\n        transition.fadeIn(obj, {\n          time = time,\n          delay = delay,\n          onComplete = animPulsate\n        })\n      end\n  })\nend\nend",
+        "calculate": false,
+        "text": "Анимация пульсации",
+        "id": 16
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction animPulsate2(obj)\n  transition.fadeIn(obj, {\n    delay = delay,\n    time = time,\n    onComplete = \n      function(obj)\n        transition.fadeOut(obj, {\n          time = time,\n          delay = delay,\n          onComplete = animPulsate2\n        })\n      end\n  })\nend\nend",
+        "text": "Анимация пульсации",
+        "id": 16,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Количество разноцветных шариков",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawCountBalls(group)\n  drawOneCountBalls (0.25*canvas.width, \"red\", {1,0,0}, group)\n  drawOneCountBalls (0.5*canvas.width, \"green\", {0,1,0}, group)\n  drawOneCountBalls (0.75*canvas.width, \"blue\", {0,0,1}, group)\n  curY = curY <plus> 2*radius <plus> indent\nend\nend",
+        "text": "   ",
+        "id": 17,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawOneCountBalls(x, name, color, group)\n  local indent = 0.025*canvas.width\n  local circle = display.newCircle(group or canvasGroup, x, curY, radius)\n  circle.y = circle.y <plus> circle.height/2\n  circle.fill = color\n\n  local text = display.newText{\n    parent = group or canvasGroup,\n    text = vars[name],\n    fontSize = 1.5*g.fontSize,\n    y = circle.y\n  }\n  text.fill = {0}\n  circle.x = x <plus> text.width/2 <plus> indent\n  text.x = circle.x - (text.width <plus> circle.width)/2 - indent\n\n--для отображения шариков на. экране победа. Там touch не нужен\n  if group then\n    return true\n  end\n\n  circle.text = text\n  circle.color = color\n  circle.name = name\n\n  function circle.touch(event)\n    local circle = event.target\n    --circle передвигается куда угодно, а newCircle остаётся на месте\n\n    if vars[circle.name] > 0 then\n\n    if event.phase == \"began\" then\n      local newCircle = display.newCircle(canvasGroup, circle.x, circle.y, circle.width/2)\n      newCircle.fill = circle.color\n      newCircle.color = circle.color\n      newCircle.text = circle.text\n      newCircle.name = circle.name\n      newCircle.touch = circle.touch\nnewCircle:addEventListener(\"touch\", newCircle.touch)\n      display.getCurrentStage(): setFocus(circle)     \n      circle.touchOffsetX = event.x - circle.x\n      circle.touchOffsetY = event.y - circle.y\n      vars[circle.name] = vars[circle.name] - 1\n      circle.text.text = vars[circle.name]\n\n    elseif event.phase == \"moved\" and circle.touchOffsetX then\n      circle.x = event.x - (circle.touchOffsetX or 0)\n      circle.y = event.y - (circle.touchOffsetY or 0)\n\n    elseif (event.phase == \"ended\" or event.phase == \"cancelled\") and circle.touchOffsetX then\n      display.getCurrentStage(): setFocus(nil)\n      afterTouch(circle)\n    end\n\n    end\n\n    return true\n  end\n  circle:addEventListener(\"touch\", circle.touch)\nend\nend",
+        "text": "Один шарик",
+        "id": 17,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 17,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction afterTouch(circle)\n  circle:removeEventListener (\"touch\", circle.touch)\n  local function middle(a, b)\n    return math.min(1, (a<plus>b)/1.5)\n  end\n\n  --перенесли шарик куда надо\n  if circle.y >= (placeForLightsY - circle.width/2) and circle.y <= (placeForLightsY <plus> circle.width/2) then\n    local i = math.min(7, math.max(1, math.round(circle.x/(canvas.width/8))))\n   \n    if lights[i] then\n      lightsInfo[i] = {\n        middle(lightsInfo[i][1], circle.color[1]), \n        middle(lightsInfo[i][2], circle.color[2]),\n        middle(lightsInfo[i][3], circle.color[3])\n      }\n      lights[i].fill = lightsInfo[i]\n      circle:removeSelf()\n    elseif i == 1 or lights[i-1] then\n      circle.x, circle.y = canvas.width*i/8, placeForLightsY\n      lights[i] = circle\n      lightsInfo[i] = circle.color\n    else\n      message(\"Заполняйте гирлянду по порядку\")\n      vars[circle.name] = vars[circle.name] <plus> 1\n      circle.text.text = vars[circle.name]\n      circle:removeSelf()\n    end\n\n  --перенесли шарик куда-то совсем не туда\n  else\n    vars[circle.name] = vars[circle.name] <plus> 1\n    circle.text.text = vars[circle.name]\n    circle:removeSelf()\n  end\nend\nend",
+        "text": "Анализ перетаскивания"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Места под шарики (составление гирлянды)",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawPlaceForLights()\n  for i = 1, 7 do\n    local circleFrame = display.newCircle(canvasGroup, canvas.width*i/8, curY, radius)\n    circleFrame.y = circleFrame.y <plus> circleFrame.height/2\n    circleFrame.fill = {0, 0}\n    circleFrame.strokeWidth = canvas.width*0.005\n    circleFrame.stroke = {0.3}\n\n   if lightsInfo and lightsInfo[i] then\n     local circle = display.newCircle(canvasGroup, circleFrame.x, circleFrame.y, radius)\n     circle.fill = lightsInfo[i]\n     circle.color = lightsInfo[i]\n     lights[i] = circle\n   end\n\n    local line = display.newLine(canvasGroup, canvas.width*i/8 <plus> circleFrame.width/2, circleFrame.y, canvas.width*(i<plus>1)/8 - circleFrame.width/2, circleFrame.y)\n    line.strokeWidth = canvas.width*0.005\n    line.stroke = {0.3}\n  end\n  placeForLightsY = curY <plus> radius\n  curY = curY <plus> 2*radius <plus> indent\nend\nend",
+        "text": "   ",
+        "id": 18,
+        "calculate": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Слайдер",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawSlider(options)\n    options = options or {}\n    options.x = options.x or 50*sw\n    options.y = options.y or curY or 50*sw\n    options.width = options.width or 80*swx\n    options.height = options.height or radius/2\n    options.lineColor = options.lineColor or {0.5}\n    options.circleColor = options.circleColor or {0, 0, 1}\n    options.value = options.value or 0\n    options.progressLineColor = options.progressLineColor or {0, 0, 1}\n    options.listener = options.listener or function() end\n \n    local group = display.newGroup()\n    group.x, group.y = options.x, options.y <plus> 2*options.height - indent/2\n    group.anchorX, group.anchorY = 0.5*options.width, 0.6*options.height\n \n    local line = display.newRect(group, 0, 0, options.width, options.height)\n    line.fill = options.lineColor\n \n    local progressLine\n \n    local progressWidth = options.value * line.width\n    local circle = display.newCircle(group, -line.width*0.5 <plus> progressWidth, 0, options.height * 2)\n    circle.fill = options.circleColor\n \n    progressLine = display.newRect(group, -line.width*0.5 <plus> 0.5*progressWidth, 0, progressWidth, line.height)\n    progressLine.fill = options.progressLineColor\n \n    circle:toFront()\n\n    circle:addEventListener(\"touch\", function(event)\n        local circle = event.target\n        if event.phase == \"began\" then\n            display.getCurrentStage():setFocus(circle)\n          circle.touchOffsetX = event.x - circle.x\n        elseif event.phase == \"moved\" and circle.touchOffsetX then\n          circle.x = math.min(line.x <plus> line.width/2, math.max(line.x - line.width/2, event.x - circle.touchOffsetX))\n          progressLine.width = circle.x <plus> 0.5*line.width\n          progressLine.x = -line.width*0.5 <plus> 0.5*progressLine.width\n        elseif (event.phase == \"ended\" or event.phase == \"cancelled\") and circle.touchOffsetX then\n            display.getCurrentStage():setFocus(nil)\n        end\n        options.listener(event)\n        return true\n    end)\n    line:addEventListener(\"tap\", \n    function(event)\n      circle.x = event.x - group.x\n      progressLine.width = circle.x <plus> 0.5*line.width\n      progressLine.x = -line.width*0.5 <plus> 0.5*progressLine.width\n      options.listener(event)\n      return true\n    end)\n \n    function group.getValue()\n        local percent = progressLine.width / line.width\n        return percent < 0 and 0 or percent > 1 and 1 or percent\n    end\n   \n    curY = curY <plus> circle.height <plus> indent\n    return group\nend\nend",
+        "calculate": false,
+        "text": "   ",
+        "id": 19
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Заголовок",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 20,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawTitle(text, k, color)\n  k = k or 1\n  local title = display.newText{\n    parent = canvasGroup,\n    text = text,\n    fontSize = g.fontSize*k,\n    x = canvas.width/2,\n    y = curY,\n    width = canvas.width*0.9,\n    align = \"center\"\n  }\n  title.fill = color or {0}\n  title.anchorY = 0\n  curY = curY <plus> title.height <plus> indent\n  return title\nend\nend",
+        "text": "   "
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Кнопка с текстом",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawButton(text, x, listener, addY)\n  local text = display.newText{\n    parent = canvasGroup,\n    text = text,\n    fontSize = 1.5*g.fontSize,\n    x = x,\n    y = curY,\n  }\n  text.y = text.y <plus> text.height/2\n  text.fill = {1}\n  local rect = display.newRoundedRect(canvasGroup, text.x, text.y, text.width*1.2, text.height*1.15, text.height/3)\n  rect.fill = {0, 0, 1}\n  rect.listener = listener\n  rect:addEventListener(\"tap\",\n  function(event)\n    animTap(event.target)\n    event.target.listener()\n  end)\n  text:toFront()\n  if addY then\n    curY = curY <plus> rect.height <plus> indent\n  end\nend\nend",
+        "text": "Кнопка",
+        "id": 21,
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction animTap(obj)\n  obj.isHitTestable = false\n  transition.to (obj, {\n    time = 35,\n    xScale = 0.8*obj.xScale,\n    yScale = 0.8*obj.yScale,\n    onComplete = function()\n      if obj and obj.removeSelf then\n        transition.to (obj, {\n        time = 15,\n        xScale = 1.25*obj.xScale,\n        yScale = 1.25*obj.yScale,\n        onComplete = function()\n          obj.isHitTestable = true\n        end\n        })\n      end\n    end}) \n  end\nend",
+        "calculate": false,
+        "text": "Анимация нажатия на кнопку",
+        "id": 21
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Собрать информацию о гирлянде",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 22,
+        "text": "   ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction getInfo()\n  local info = {}\n  info.lights = lightsInfo\n  local s = sizeSlider\n  info.time = 25 <plus> timeSlider.getValue()*s\n\n  info.delay = delaySlider.getValue()*s\n\n  info.offset = offsetSlider.getValue()*s\n  if info.offset == 0 then\n    info.offset = nil\n  end\n  return info\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Гирлянды",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawStorageLights()\n  local groupLights = {}\n  local curLightY = 0\n  for i = 1, #g.storage do\n    curLightY = curLightY <plus> radius <plus> strokeWidth\n    groupLights[i] = display.newGroup()\n    groupLights[i].y = curLightY\n    scrollView:insert (groupLights[i])\n    local lights = g.storage[i].lights\n    local number = display.newText{\n        parent = groupLights[i],\n        text = i,\n        fontSize = 1.5*g.fontSize,\n        x = 0.06*canvas.width,\n        y = 0,\n    }\n    number.fill = {0}\n    for curLight = 1, #lights do      \n      \n      local circle = display.newCircle(groupLights[i], 0.05*scrollView.width <plus> 0.9*scrollView.width*curLight/8, 0, radius)\n      circle.fill = lights[curLight]\n      circle.strokeWidth = strokeWidth\n      circle.stroke = {0.3}\n\n      local line = display.newLine(groupLights[i], circle.x <plus> circle.width/2, circle.y, circle.x <plus> 0.9*scrollView.width/8 - circle.width/2, circle.y)\n      line.strokeWidth = strokeWidth\n      line.stroke = {0.3}\n\n    end\n    groupLights[i].id = i\n    groupLights[i]:addEventListener (\"tap\",\n    function(event)\n      drawMenuLights(event.target)\n    end)\n    curLightY = curLightY <plus> radius <plus> indent <plus> strokeWidth\n  end\nend\nend",
+        "calculate": false,
+        "text": "    ",
+        "id": 23
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Прокрутка (скролл)",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 24,
+        "text": "    ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawScrollView()\n  local widget = require(\"widget\")\n  local options = {\n    width = canvas.width,\n    height = canvas.height*0.975 - curY,\n    scrollHeight = #g.storage*2*(radius <plus> strokeWidth) <plus> (#g.storage - 1)*indent,\n    horizontalScrollDisabled = true,\n    top = curY,\n    left = -canvas.parent.width*0.02,\n    hideBackground = true\n  }\n  options.scrollWidth = options.width\n  scrollView = widget.newScrollView(options)\n  canvas.parent:insert(scrollView)\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Всплывающее меню",
+    "answers": [
+      {
+        "comment": true,
+        "super_calculate": true,
+        "id": 25,
+        "text": "Меню",
+        "lua_do": "function lua_do()\nfunction drawMenuLights(group)\n  local text = display.newText{\n    parent = canvasGroup,\n    text = \"Включить\",\n    fontSize = 1.5*g.fontSize,\n  }\n  local textWidth = text.width\n  local textHeight = text.height\n  text:removeSelf()\n\n  local t = {}\n  t[1] = {name = \"Удалить\", listener = function()\n    for i = group.id, #g.storage - 1 do\n      g.storage[i] = table.copy2(g.storage[i<plus>1])\n    end\n    g.storage[#g.storage] = nil\n    showPage{id = 11, transition = \"instant\"}\n  end}\n\n  t[2] = {name = \"Включить\", listener = function()\n    info = g.storage[group.id]\n    prevId = 11\n    showPage{id = 14, transition = \"instant\"}\n  end}\n\n  t[3] = {name = \"Изменить\", listener = function()\n    idLights = group.id\n    info = table.copy2(g.storage[idLights])\n    showPage{id = 9, transition = \"instant\"}\n  end}\n\n  remove(menuLights)\n  menuLights = display.newGroup()\n  group:insert(menuLights)\n  group:toFront()\n  menuLights.x = canvas.width*0.95 - textWidth*1.05/2\n  if group.y < 3*textHeight then\n    menuLights.sign = 1\n    t[1], t[3] = t[3], t[1] \n  else\n    menuLights.sign = -1\n  end\n  curButtonY = 0\n\n  for i = 1, 3 do\n    drawButtonMenuLights (t[i].name, textWidth, t[i].listener)\n  end\n  \nend\nend",
+        "calculate": false
+      },
+      {
+        "super_calculate": true,
+        "id": 25,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction drawButtonMenuLights(text, textWidth, listener)\n  local text = display.newText{\n    parent = menuLights,\n    text = text,\n    fontSize = 1.5*g.fontSize,\n    y = curButtonY\n  }\n  text.fill = {1}\n  local rect = display.newRect(menuLights, text.x, text.y, textWidth*1.2, text.height*1.15)\n  rect.y = rect.y <plus> menuLights.sign*rect.height/2\n  text.y = rect.y\n  rect.fill = {0, 0, 1}\n  rect.listener = listener\n  rect:addEventListener(\"tap\",\n  function(event)\n    animTap(event.target)\n    event.target.listener()\n  end)\n  text:toFront()\n  curButtonY = curButtonY <plus> menuLights.sign*rect.height\nend\nend",
+        "text": "Одна кнопка меню"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Анимация появления с задержкой",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 26,
+        "text": "   ",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction animAppear(obj)\n  obj.alpha = 0\n  transition.fadeIn(obj, {delay = delay*step, time = delay} )\n  step = step <plus> 1\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Расчёт радиуса и отступа, чтобы всё на экране поместилось и было нормально",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 27,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction calculateSizes()\n  texts = {\"Перетаскивайте шарики на гирлянду, чтобы собрать последовательность ламп. Перетаскивайте несколько шариков на одну лампу, чтобы смешивать цвета.\", \"Период затухания\", \"Время между затуханием и вспышкой\", \"Задержка между соседними лампочками\"}\nlocal allText = \"\"\nfor i = 1, #texts do\n  allText = allText .. \"<s>\n\".. texts[i]\nend\nallText = utf8.sub(allText, 2, #allText)\n\nlocal text = display.newText{\n  parent = canvasGroup,\n  text = allText,\n  fontSize = g.fontSize,\n  width = 0.9*canvas.width,\n  align = \"center\",\n  x = canvas.width/2\n}\ntext.y = text.y <plus> text.height/2\nlocal textHeight = text.height\ntext:removeSelf()\n\nlocal text = display.newText{\n  parent = canvasGroup,\n  text = \"Запустить\",\n  fontSize = 1.5*g.fontSize,\n  x = canvas.width/2\n}\ntext.y = text.y <plus> text.height/2\ntextHeight = textHeight <plus> text.height*1.15\ntext:removeSelf()\n\nindent = 0.01*canvas.height\nradius = math.min((canvas.height - textHeight - curY - indent*10)/10, 0.05*canvas.width)\nindent = (canvas.height - textHeight - curY - radius*10)/10\nend\nend",
+        "text": "    "
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Выбор сложности",
+    "answers": [
+      {
+        "super_calculate": true,
+        "lua_do": "function lua_do()\nfunction drawChangeDifficulty()\n  local names = {\"Лёгкий\", \"Средний\", \"Высокий\", \"Хардкор\"}\n  local colors = {{0, 1, 0}, {1, 1, 0}, {1, 0.6, 0}, {1, 0, 0}}\n  local textHeight\n  local lights = {}\n  for i = 1, 4 do\n    local circleFrame = display.newCircle(canvasGroup, canvas.width*i/5, curY, radius)\n    circleFrame.y = circleFrame.y <plus> circleFrame.height/2\n    circleFrame.strokeWidth = canvas.width*0.005\n    circleFrame.stroke = {0.3}\n    lights[i] = circleFrame\n    circleFrame.lights = lights\n    circleFrame.id = i\n    circleFrame:addEventListener (\"tap\", \n    function(event)\n      local circle = event.target\n      circle.lights[difficulty].fill = {0,0}\n      difficulty = circle.id\n      circle.fill = colors[difficulty]\n    end)\n\n    if difficulty == i then\n      circleFrame.fill = colors[i]\n    else\n      circleFrame.fill = {0, 0}\n    end\n    circleFrame.isHitTestable = true\n\n    if i < 4 then\n      local line = display.newLine(canvasGroup, canvas.width*i/5 <plus> circleFrame.width/2, circleFrame.y, canvas.width*(i<plus>1)/5 - circleFrame.width/2, circleFrame.y)\n      line.strokeWidth = canvas.width*0.005\n      line.stroke = {0.3}\n    end\n\n    local sign = 1\n    if i%2 == 0 then\n      sign = -1\n    end\n    local text = display.newText{\n      parent = canvasGroup,\n      text = names[i],\n      fontSize = g.fontSize,\n      x = circleFrame.x,\n      y = circleFrame.y <plus> sign*radius\n    }\n    text.y = text.y <plus> sign*text.height/2\n    text.fill = {0}\n    textHeight = text.height\n  end\n  curY = curY <plus> 2*radius <plus> indent <plus> 2*textHeight\nend\nend",
+        "calculate": false,
+        "text": "    ",
+        "id": 28
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Уровни",
+    "answers": [
+      {
+        "super_calculate": true,
+        "id": 29,
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction generateTaskLvl(difficulty)\n  countSnowmans = 1\n  if difficulty == 1 then\n    frequency = math.random(1400, 1700)\n    maxPoints = math.random(10, 20)\n\n  elseif difficulty == 2 then\n    if math.random(4) == 1 then\n      countSnowmans = 2\n    end\n    frequency = math.random(1200, 1500)\n    maxPoints = math.random(15, 25)\n\n  elseif difficulty == 3 then\n    countSnowmans = math.random(1, 2)\n    frequency = math.random(1000, 1300)\n    maxPoints = math.random(20, 30)\n\n  elseif difficulty == 4 then\n    if math.random(4) <= 3 then\n      countSnowmans = 2\n    end\n    frequency = math.random(800, 1100)\n    maxPoints = math.random(25, 35)\n  end\nend\nend",
+        "text": "Генерация задания в уровне"
+      },
+      {
+        "super_calculate": true,
+        "id": 29,
+        "text": "Генерация вознаграждения от сложности",
+        "calculate": false,
+        "lua_do": "function lua_do()\nfunction generateRewardLvl(difficulty)\n  local start, finish = difficulty, difficulty*2\n  red, green, blue = math.random(start, finish), math.random(start, finish), math.random(start, finish)\nend\nend"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "",
+    "answers": []
+  }
+]

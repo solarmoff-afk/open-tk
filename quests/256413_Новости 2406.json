@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Любопытство губительно написал еще 189772 слов в квесте \"Тайна Вараниса\"."
+      },
+      {
+        "targetbookid": "255975",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Тайна Вараниса\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Godgiven написал еще 125395 слов в квесте \"Снежная Соната\"."
+      },
+      {
+        "targetbookid": "252827",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Снежная Соната\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор игорь написал еще 96240 слов в квесте \"Энеотис\"."
+      },
+      {
+        "targetbookid": "256134",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Энеотис\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Stalkernytii написал еще 90281 слов в квесте \"S.T.A.L.K.E.R Первый сталкер\"."
+      },
+      {
+        "targetbookid": "248093",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"S.T.A.L.K.E.R Первый сталкер\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Frost написал еще 90100 слов в квесте \"new_book\"."
+      },
+      {
+        "targetbookid": "242923",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"new_book\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

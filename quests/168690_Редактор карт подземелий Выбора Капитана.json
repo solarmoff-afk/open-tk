@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "text": "\nДобро пожаловать в редактор карт подземелий квеста \"Выбора Капитана\". Здесь Вы сможете смоделировать собственную карту и выложить ее в группу. Лучшие подземелья будут добавлены в квест!",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a03/1802/ac/be3dae29cb5e.png"
+        ],
+        "id": 3,
+        "text": "Начать",
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nobnovil = 0\ng.image_part_of_screen = 0.75\nend"
+      },
+      {
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a03/1802/ac/be3dae29cb5e.png"
+        ],
+        "middle_answer": true,
+        "lua_do": "function lua_do()\nobnovil = 0\ng.image_part_of_screen = 0.75\nend",
+        "text": "Начать в режиме автора",
+        "need": 10000,
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "\nЗагрузка изображений",
+    "answers": [
+      {
+        "lua_if": "function lua_if()\nreturn obnovil == 1\nend",
+        "middle_answer": true,
+        "text": "К редактору",
+        "id": 3,
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a03/1802/ac/be3dae29cb5e.png"
+        ]
+      },
+      {
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a03/1802/ac/be3dae29cb5e.png"
+        ],
+        "middle_answer": true,
+        "id": 2,
+        "text": "Обновить",
+        "lua_do": "function lua_do()\nfor i=1,10 do\nimages[\"tile\"..i].alpha = 0\nend\nobnovil = 1\nend",
+        "no_transition": false
+      },
+      {
+        "id": 2,
+        "text": "tile1",
+        "url": "http://188.120.236.127/images/koloda8/kva1_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile2",
+        "url": "http://188.120.236.127/images/koloda8/kva2_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile3",
+        "url": "http://188.120.236.127/images/koloda8/kva3_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile4",
+        "url": "http://188.120.236.127/images/koloda8/kva4_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile5",
+        "url": "http://188.120.236.127/images/koloda8/kva5_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile6",
+        "url": "http://188.120.236.127/images/koloda8/kva6_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile7",
+        "url": "http://188.120.236.127/images/koloda8/kva7_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile8",
+        "url": "http://188.120.236.127/images/koloda8/kva8_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile9",
+        "url": "http://188.120.236.127/images/koloda8/kva9_1.jpg"
+      },
+      {
+        "id": 2,
+        "text": "tile10",
+        "url": "http://188.120.236.127/images/koloda8/kva10_1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "\nПравила работы с редактором:\n\nДля начала нужно обновить карту. Карта состоит из квадратов (6х4). Чтобы изменить тип квадрата, нужно нажать прямо на него:\n\n— серая плитка (пол)\n— черный камень (стена)\n— сундук (награда, оптимальное количество 1-2 на карту)\n— проход с исходящей стрелкой (вход на карту, здесь генерируется герой, может быть только один)\n— проход со входящей в него стрелкой (выход с карты, может быть только один)\n— череп (опасность, случайное событие)\n— жаровня (освещение, изначально вся карта закрыта черным туманом, жаровни, как и герой, открывают участок карты 3х3)\n— зеркало (получение проклятых медальонов)\n— рычаг (убирает все решетки, может быть только один)\n— решетка (непроходимая клетка, убирается при нажатии героем на рычаг)\n\nПосле создания карты Вы можете отправить скриншот в группу автора, где она будет оценена и, возможно, добавлена в игру.",
+    "answers": [
+      {
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a03/1802/ac/be3dae29cb5e.png"
+        ],
+        "middle_answer": true,
+        "id": 3,
+        "text": "Обновить карту",
+        "lua_do": "function lua_do()\nimages.bg.alpha = 0\nmap = \n{{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1}}\n\n\nfor i = 1,4 do\nfor j = 1,6 do\nfor tile= 10,1,-1 do\nlocal kvadr = display.newImage(\"http://188.120.236.127/images/koloda8/kva\"..tile..\"_1.jpg\")\nkvadr.width = canvas.width /6 \nkvadr.height = kvadr.width \nkvadr.x = kvadr.width*(j-0.5) \nkvadr.y = kvadr.height*(i-0.5) <plus>0.1*canvas.width\nkvadr:addEventListener(\"tap\",function()\nkvadr:toBack()\nmap[i][j] = map[i][j] <plus> 1\nif map[i][j] > 10 then\nmap[i][j] = 1\nend\nreturn true\nend)\nend\nend\nend\nend\n",
+        "no_transition": true
+      },
+      {
+        "bgAnswerImage": [
+          "https://a.radikal.ru/a03/1802/ac/be3dae29cb5e.png"
+        ],
+        "middle_answer": true,
+        "text": "Блог автора",
+        "id": 3,
+        "url": "https://vk.com/club158953704"
+      },
+      {
+        "id": 3,
+        "lua_do": "function lua_do()\nlocal text = \"{\"\nfor i = 1,4 do\ntext = text..\"{\"\nfor j = 1,6 do\ntext = text..map[i][j]..\",\"\nend\ntext = text:sub(1,text:len()-1)\ntext = text..\"},\"\nend\ntext = text:sub(1,text:len()-1)\ntext = text..\"}\"\nprint (text)\nend",
+        "text": "напечатать код карты\n(только для автора)",
+        "need": 10000,
+        "no_transition": true
+      },
+      {
+        "id": 3,
+        "text": "bg",
+        "url": "http://188.120.236.127/images/koloda8/kva9_1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 6,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 7,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 8,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 9,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 10,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 11,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 12,
+    "text": "",
+    "answers": []
+  }
+]

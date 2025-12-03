@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор elChem написал еще 331386 слов в квесте \"Испытание. Зов тьмы\"."
+      },
+      {
+        "targetbookid": "30500",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Испытание. Зов тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Катрин Фель\n написал еще 128399 слов в квесте \"Двуликий замок\"."
+      },
+      {
+        "targetbookid": "242297",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Двуликий замок\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Фантом написал еще 116285 слов в квесте \"Невеста хищника \"."
+      },
+      {
+        "targetbookid": "256190",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Невеста хищника \"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Postnik написал еще 91591 слов в квесте \"MIDEN\"."
+      },
+      {
+        "targetbookid": "261436",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"MIDEN\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Джефф написал еще 82255 слов в квесте \"Семь грехов.\"."
+      },
+      {
+        "targetbookid": "230597",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Семь грехов.\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

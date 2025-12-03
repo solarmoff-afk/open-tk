@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 20474 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Феликс Рушиев написал еще 18957 слов в квесте \"Проэкт \"myworld\"\"."
+      },
+      {
+        "targetbookid": "212151",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Проэкт \"myworld\"\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Феникс написал еще 18523 слов в квесте \"Ручка любви\"."
+      },
+      {
+        "targetbookid": "202505",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ручка любви\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Valdis  написал еще 17363 слов в квесте \"L'empire\"."
+      },
+      {
+        "targetbookid": "148086",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"L'empire\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор maksim написал еще 16936 слов в квесте \"S.T.A.L.K.E.R. Выживание \"."
+      },
+      {
+        "targetbookid": "210686",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"S.T.A.L.K.E.R. Выживание \"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]

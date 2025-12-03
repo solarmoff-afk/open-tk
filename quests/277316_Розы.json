@@ -1,0 +1,333 @@
+[
+  {
+    "id": 1,
+    "text": "Вы герой который только встал на пути славы и богатства ...Ваша цель сделать вас знаменитостым героем и завоевать даму/юношу  вашего сердца...\n",
+    "answers": [
+      {
+        "id": 2,
+        "text": "  ",
+        "lua_render": "function lua_render()\nrect.x = 500\nrect.y = 1228\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.5\nrocket.yScale = rocket.xScale rocket.x = 200\nrocket.y = 1228\nend",
+        "answerIcon": [
+          "https://i.postimg.cc/kGx5krhq/IMG-1715073072990-1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "   ",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/jS1QLNGZ/IMG-1715343473747.png"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*3.5\nrocket.yScale = rocket.xScale rocket.x = 230\nrocket.y = 90\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/DZRXdCXS/IMG-1715343473747-1.png"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*3.5\nrocket.yScale = rocket.xScale rocket.x = 200\nrocket.y = 250\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/VNBMbNZS/IMG-1715494460807-1.png"
+        ],
+        "comment": true,
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*3.5\nrocket.yScale = rocket.xScale rocket.x = 174\nrocket.y = 370\nend"
+      },
+      {
+        "id": 2,
+        "text": "1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/T15VCN3K/49-20240510151258.png"
+        ],
+        "text": "   ",
+        "var_equal": [
+          "х1",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.x = 850\nrect.y = 250\nrect.width = 240\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*4\nrocket.yScale = rocket.xScale rocket.x = 850\nrocket.y = 250\nend",
+        "var_set": [
+          "х1",
+          0
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/CKdzGB11/49-20240510151224.png"
+        ],
+        "instant": true,
+        "var_equal": [
+          "х1",
+          0
+        ],
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = 850\nrect.y = 250\nrect.width = 240\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*4\nrocket.yScale = rocket.xScale rocket.x = 850\nrocket.y = 250\nend",
+        "var_set": [
+          "х1",
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "text": "2",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/T15VCN3K/49-20240510151258.png"
+        ],
+        "text": "   ",
+        "var_equal": [
+          "х2",
+          1
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.x = 850\nrect.y = 370\nrect.width = 240\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*4\nrocket.yScale = rocket.xScale rocket.x = 850\nrocket.y = 370\nend",
+        "var_set": [
+          "х2",
+          0
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/CKdzGB11/49-20240510151224.png"
+        ],
+        "text": "   ",
+        "var_equal": [
+          "х2",
+          0
+        ],
+        "id": 2,
+        "instant": true,
+        "lua_render": "function lua_render()\nrect.x = 850\nrect.y = 370\nrect.width = 240\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*4\nrocket.yScale = rocket.xScale rocket.x = 850\nrocket.y = 370\nend",
+        "var_set": [
+          "х2",
+          1
+        ]
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/T15VCN3K/49-20240510151258.png"
+        ],
+        "instant": true,
+        "var_equal": [
+          "х3",
+          1
+        ],
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = 850\nrect.y = 515\nrect.width = 240\nrect.height = 80\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*4\nrocket.yScale = rocket.xScale rocket.x = 850\nrocket.y = 515\nend",
+        "var_set": [
+          "х3",
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "text": "3",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/WzMVBNTv/49-20240511091235.png"
+        ],
+        "id": 3,
+        "instant": true,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = 500\nrect.y = 1200\nrect.width = 500\nrect.height = 140\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*6\nrocket.yScale = rocket.xScale rocket.x = 500\nrocket.y = 1200\nend"
+      },
+      {
+        "id": 2,
+        "text": "0",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "    ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale\nrocket.x = 140\nrocket.y = 200\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "  ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale rocket.x = 650\nrocket.y = 200\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale rocket.x = 1180\nrocket.y = 200\nend"
+      },
+      {
+        "id": 2,
+        "text": "1",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "    ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale\nrocket.x = 130\nrocket.y = 470\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "  ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale rocket.x = 650\nrocket.y = 470\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale rocket.x = 1180\nrocket.y = 470\nend"
+      },
+      {
+        "id": 2,
+        "text": "2",
+        "calculate": true,
+        "super_calculate": false
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "    ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale\nrocket.x = 130\nrocket.y = 620\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "  ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale rocket.x = 650\nrocket.y = 620\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nV3GZ7DR/49-20240510155508.png"
+        ],
+        "comment": true,
+        "var_equal": [
+          "1"
+        ],
+        "id": 2,
+        "text": "   ",
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*11\nrocket.yScale = rocket.xScale rocket.x = 1180\nrocket.y = 620\nend"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "        ",
+    "answers": [
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/pLZsFqg8/IMG-1715931796054.png"
+        ],
+        "comment": true,
+        "id": 3,
+        "text": "   ",
+        "var_need": [
+          "т",
+          1
+        ],
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.8\nrocket.yScale = rocket.xScale rocket.x = 250\nrocket.y = 150\nend"
+      },
+      {
+        "answerIcon": [
+          "https://i.postimg.cc/nzcqqQWs/IMG-1715507504211-2.png"
+        ],
+        "comment": true,
+        "id": 3,
+        "text": "   ",
+        "var_need": [
+          "т",
+          2
+        ],
+        "lua_render": "function lua_render()\nrect.x = -300\nrect.y = -500\nrect.shadow:setFillColor(1, 1, 1, 0)\nrect.alpha = 0.1\nlocal rocket = rect.icon rocket.rotation = 0 \nrocket.xScale = rocket.xScale*2.8\nrocket.yScale = rocket.xScale rocket.x = 790\nrocket.y = 200\nend"
+      },
+      {
+        "id": 4,
+        "text": "Новый ответ. введите текст"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "",
+    "answers": []
+  },
+  {
+    "id": 5,
+    "text": "",
+    "answers": []
+  }
+]

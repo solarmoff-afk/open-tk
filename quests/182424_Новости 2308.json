@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Новости об активности авторов.\nДанная сводка составляется автоматически и обновляется один раз в неделю.",
+    "answers": [
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Kvestopisci написал еще 31215 слов в квесте \"Вершитель судеб\"."
+      },
+      {
+        "targetbookid": "178000",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Вершитель судеб\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор Sincerely написал еще 30519 слов в квесте \"Ошейник\"."
+      },
+      {
+        "targetbookid": "118910",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Ошейник\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор elChem написал еще 29092 слов в квесте \"Испытание. Зов тьмы\"."
+      },
+      {
+        "targetbookid": "50462",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Испытание. Зов тьмы\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор JSG написал еще 20630 слов в квесте \"Наследница\"."
+      },
+      {
+        "targetbookid": "144307",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Наследница\"."
+      },
+      {
+        "id": 1,
+        "comment": true,
+        "text": "Автор К и м и к о  написал еще 20449 слов в квесте \"Радуга\n\"."
+      },
+      {
+        "targetbookid": "177649",
+        "id": 1,
+        "middle_answer": true,
+        "text": "Смотреть \"Радуга\n\"."
+      },
+      {
+        "id": 1,
+        "text": "calc",
+        "calculate": true,
+        "var_str_set": [
+          "global background",
+          "https://b.radikal.ru/b35/1805/89/b9358e836608.jpg",
+          "global theme",
+          "https://b.radikal.ru/b19/1805/9f/85132f2e4f41.jpg"
+        ]
+      }
+    ]
+  }
+]
